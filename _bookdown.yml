@@ -1,0 +1,28 @@
+#geometry: "left=2.5cm, right=2.5cm, top=1.5cm, bottom=1.5cm"
+#fontsize: 11pt
+#linestretch: 1
+#toc-depth: 1
+#lof: True
+#lot: True
+
+language:
+  ui:
+    chapter_name: "Capítulo "
+  label:
+    fig: 'Gráfico '
+    tab: 'Tabla '
+    eq: 'Ecuación '
+    refs : 'Referencias'
+
+rmd_subdir: ["caps"]
+
+
+book_filename: "clases-arg"
+output_dir: "_clases-arg"
+delete_rmd: True
+delete_merged_file: True
+
+
+clean: ["R-packages.bib", "\_bookdown_files", "\_main"]
+
+

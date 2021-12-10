@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>1.2 Workflow | Libro de Cocina para el Análisis de las Clases Sociales en Argentina</title>
+  <meta name="description" content="Manual introductorio para el estudio de la estructura social en Argentina" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="1.2 Workflow | Libro de Cocina para el Análisis de las Clases Sociales en Argentina" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Manual introductorio para el estudio de la estructura social en Argentina" />
+  <meta name="github-repo" content="nsacco/libroESA" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="1.2 Workflow | Libro de Cocina para el Análisis de las Clases Sociales en Argentina" />
+  
+  <meta name="twitter:description" content="Manual introductorio para el estudio de la estructura social en Argentina" />
+  
+
+<meta name="author" content="Nicolás Sacco" />
+<meta name="author" content="José Rodríguez de la Fuente" />
+<meta name="author" content="Sofia Jaime" />
+
+
+<meta name="date" content="2021-12-10" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="introducción-a-r-y-rstudio.html"/>
+<link rel="next" href="r-markdown.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/vembedr-0.1.4/css/vembedr.css" rel="stylesheet" />
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Manual para el Análisis de la Estructura Social Argentina Actual</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefacio</a></li>
+<li class="chapter" data-level="" data-path="agradecimientos.html"><a href="agradecimientos.html"><i class="fa fa-check"></i>Agradecimientos</a></li>
+<li class="part"><span><b>I Introducción</b></span></li>
+<li class="chapter" data-level="1" data-path="recetas.html"><a href="recetas.html"><i class="fa fa-check"></i><b>1</b> Las recetas</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="introducción-a-r-y-rstudio.html"><a href="introducción-a-r-y-rstudio.html"><i class="fa fa-check"></i><b>1.1</b> Introducción a R y RStudio</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="introducción-a-r-y-rstudio.html"><a href="introducción-a-r-y-rstudio.html#el-entorno-de-r"><i class="fa fa-check"></i><b>1.1.1</b> El entorno de R</a></li>
+<li class="chapter" data-level="1.1.2" data-path="introducción-a-r-y-rstudio.html"><a href="introducción-a-r-y-rstudio.html#aplicar-estadística-en-r"><i class="fa fa-check"></i><b>1.1.2</b> Aplicar estadística en R</a></li>
+<li class="chapter" data-level="1.1.3" data-path="introducción-a-r-y-rstudio.html"><a href="introducción-a-r-y-rstudio.html#descargar-e-instalar-r"><i class="fa fa-check"></i><b>1.1.3</b> Descargar e instalar R</a></li>
+<li class="chapter" data-level="1.1.4" data-path="introducción-a-r-y-rstudio.html"><a href="introducción-a-r-y-rstudio.html#rstudio"><i class="fa fa-check"></i><b>1.1.4</b> RStudio</a></li>
+<li class="chapter" data-level="1.1.5" data-path="introducción-a-r-y-rstudio.html"><a href="introducción-a-r-y-rstudio.html#descargar-e-instalar-rstudio"><i class="fa fa-check"></i><b>1.1.5</b> Descargar e instalar RStudio</a></li>
+<li class="chapter" data-level="1.1.6" data-path="introducción-a-r-y-rstudio.html"><a href="introducción-a-r-y-rstudio.html#las-partes-de-rstudio"><i class="fa fa-check"></i><b>1.1.6</b> Las partes de RStudio</a></li>
+<li class="chapter" data-level="1.1.7" data-path="introducción-a-r-y-rstudio.html"><a href="introducción-a-r-y-rstudio.html#rstudio-1"><i class="fa fa-check"></i><b>1.1.7</b> RStudio</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="workflow.html"><a href="workflow.html"><i class="fa fa-check"></i><b>1.2</b> Workflow</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="workflow.html"><a href="workflow.html#proyectos-r-studio"><i class="fa fa-check"></i><b>1.2.1</b> Proyectos R Studio</a></li>
+<li class="chapter" data-level="1.2.2" data-path="workflow.html"><a href="workflow.html#organización"><i class="fa fa-check"></i><b>1.2.2</b> Organización</a></li>
+<li class="chapter" data-level="1.2.3" data-path="workflow.html"><a href="workflow.html#utilidad"><i class="fa fa-check"></i><b>1.2.3</b> Utilidad</a></li>
+<li class="chapter" data-level="1.2.4" data-path="workflow.html"><a href="workflow.html#crear-un-proyecto-de-rstudio"><i class="fa fa-check"></i><b>1.2.4</b> Crear un Proyecto de RStudio</a></li>
+<li class="chapter" data-level="1.2.5" data-path="workflow.html"><a href="workflow.html#crear-un-archivo-de-r"><i class="fa fa-check"></i><b>1.2.5</b> Crear un archivo de R</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="r-markdown.html"><a href="r-markdown.html"><i class="fa fa-check"></i><b>1.3</b> R Markdown</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="r-markdown.html"><a href="r-markdown.html#agregar-texto"><i class="fa fa-check"></i><b>1.3.1</b> Agregar texto</a></li>
+<li class="chapter" data-level="1.3.2" data-path="r-markdown.html"><a href="r-markdown.html#listas"><i class="fa fa-check"></i><b>1.3.2</b> Listas</a></li>
+<li class="chapter" data-level="1.3.3" data-path="r-markdown.html"><a href="r-markdown.html#editar-texto"><i class="fa fa-check"></i><b>1.3.3</b> Editar texto</a></li>
+<li class="chapter" data-level="1.3.4" data-path="r-markdown.html"><a href="r-markdown.html#insertar-imágenes"><i class="fa fa-check"></i><b>1.3.4</b> Insertar imágenes</a></li>
+<li class="chapter" data-level="1.3.5" data-path="r-markdown.html"><a href="r-markdown.html#enlaces"><i class="fa fa-check"></i><b>1.3.5</b> Enlaces</a></li>
+<li class="chapter" data-level="1.3.6" data-path="r-markdown.html"><a href="r-markdown.html#tips-para-escribir-código-en-r"><i class="fa fa-check"></i><b>1.3.6</b> Tips para escribir código en R</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="primeros-pasos-en-r.html"><a href="primeros-pasos-en-r.html"><i class="fa fa-check"></i><b>1.4</b> Primeros pasos en R</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="primeros-pasos-en-r.html"><a href="primeros-pasos-en-r.html#funciones-y-comandos-elementales"><i class="fa fa-check"></i><b>1.4.1</b> Funciones y comandos elementales</a></li>
+<li class="chapter" data-level="1.4.2" data-path="primeros-pasos-en-r.html"><a href="primeros-pasos-en-r.html#valores-y-vectores"><i class="fa fa-check"></i><b>1.4.2</b> Valores y vectores</a></li>
+<li class="chapter" data-level="1.4.3" data-path="primeros-pasos-en-r.html"><a href="primeros-pasos-en-r.html#matrices-y-listas"><i class="fa fa-check"></i><b>1.4.3</b> Matrices y listas</a></li>
+<li class="chapter" data-level="1.4.4" data-path="primeros-pasos-en-r.html"><a href="primeros-pasos-en-r.html#filtrado-subsetting"><i class="fa fa-check"></i><b>1.4.4</b> Filtrado (Subsetting)</a></li>
+<li class="chapter" data-level="1.4.5" data-path="primeros-pasos-en-r.html"><a href="primeros-pasos-en-r.html#cargar-datos-en-r"><i class="fa fa-check"></i><b>1.4.5</b> Cargar datos en R</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="recursos.html"><a href="recursos.html"><i class="fa fa-check"></i><b>1.5</b> Otros recursos de consulta</a></li>
+</ul></li>
+<li class="part"><span><b>II Aspectos teóricos</b></span></li>
+<li class="chapter" data-level="2" data-path="estructura1.html"><a href="estructura1.html"><i class="fa fa-check"></i><b>2</b> La estructura social en la Argentina actual</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="analisis1.html"><a href="analisis1.html"><i class="fa fa-check"></i><b>2.1</b> Del análisis de las clases sociales a la teoría de la estratificación social</a></li>
+<li class="chapter" data-level="2.2" data-path="marx.html"><a href="marx.html"><i class="fa fa-check"></i><b>2.2</b> Marx, Weber y el funcionalismo</a></li>
+<li class="chapter" data-level="2.3" data-path="esperanza.html"><a href="esperanza.html"><i class="fa fa-check"></i><b>2.3</b> La esperanza de vida de la teoría: debates contemporáneos</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="esperanza.html"><a href="esperanza.html#la-grieta-de-los-ochenta"><i class="fa fa-check"></i><b>2.3.1</b> La grieta de los ochenta</a></li>
+<li class="chapter" data-level="2.3.2" data-path="esperanza.html"><a href="esperanza.html#nuevos-debateshacia-una-operacionalización-más-refinada-de-los-conceptos"><i class="fa fa-check"></i><b>2.3.2</b> Nuevos debates…¿Hacia una operacionalización más refinada de los conceptos?</a></li>
+<li class="chapter" data-level="2.3.3" data-path="esperanza.html"><a href="esperanza.html#la-muerte-de-la-clases"><i class="fa fa-check"></i><b>2.3.3</b> La muerte de la clases</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="cuestion.html"><a href="cuestion.html"><i class="fa fa-check"></i><b>2.4</b> La cuestión en América Latina y en la Argentina</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="cuestion.html"><a href="cuestion.html#nuevos-aires"><i class="fa fa-check"></i><b>2.4.1</b> Nuevos aires</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="debate.html"><a href="debate.html"><i class="fa fa-check"></i><b>2.5</b> Debates recientes. La práctica de la investigación y la experiencia de especialistas.</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="debate.html"><a href="debate.html#campos-de-aplicación"><i class="fa fa-check"></i><b>2.5.1</b> Campos de aplicación</a></li>
+<li class="chapter" data-level="2.5.2" data-path="debate.html"><a href="debate.html#entrevista-con-gabriela-benza"><i class="fa fa-check"></i><b>2.5.2</b> Entrevista con Gabriela Benza</a></li>
+<li class="chapter" data-level="2.5.3" data-path="debate.html"><a href="debate.html#entrevista-con-eduardo-chávez-molina"><i class="fa fa-check"></i><b>2.5.3</b> Entrevista con Eduardo Chávez Molina</a></li>
+<li class="chapter" data-level="2.5.4" data-path="debate.html"><a href="debate.html#entrevista-con-ezequiel-adamovsky"><i class="fa fa-check"></i><b>2.5.4</b> Entrevista con Ezequiel Adamovsky</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Libro de Cocina para el Análisis de las Clases Sociales en Argentina</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="workflow" class="section level2" number="1.2">
+<h2><span class="header-section-number">1.2</span> Workflow</h2>
+<p>Esta sección trata sobre el flujo de trabajo (<em>workflow</em>) en <code>RStudio</code>. Existen muchas cosas sobre el trabajo en R que la gente encuentra confusas. Sin embargo, hay formas en las que puede simplificar este problema: sistematizando una buena práctica del flujo de trabajo desde el principio.</p>
+<div id="proyectos-r-studio" class="section level3" number="1.2.1">
+<h3><span class="header-section-number">1.2.1</span> Proyectos R Studio</h3>
+<p>Una de las cuestiones más comunes que generan dificultades en <strong><code>R</code></strong>, es que no provee las facilidades de un software estadístico estándar con el cual apuntar y hacer ‘clic’ dentro de la misma interfaz. Específicamente se dificulta el acceso a los archivos y el guardado utilizando rutas de archivo, en especial cuando esas rutas (“paths”) son extensas.</p>
+<p>La forma más sencilla de minimizar esta dificultad es trabajar con lo que se llama un documento de tipo <strong>Proyecto de RStudio</strong>. Este es el primer paso a seguir: usar los archivos de proyecto de <code>RStudio</code>. Antes que nada, ¿Qué es un archivo de proyecto de <code>RStudio</code>?</p>
+<ul>
+<li>Es un archivo creado por <code>RStudio</code> que tiene una extensión de .Rproj, y esencialmente lo que hace es almacenar información sobre la carpeta que lo contiene. Así que para guardar este archivo de proyecto dentro de una carpeta en particular, hay que tener en cuenta que dentro del proyecto se guardará información sobre la carpeta que se encuentra en su sistema de archivos, y también guardará información sobre el estado anterior del proyecto. Cuando se genera un archivo de proyecto, primero se abrirá en <code>RStudio</code> y de este modo se podrá acceder a la información sobre la carpeta en la que se encuentra almacenado este proyecto.</li>
+</ul>
+</div>
+<div id="organización" class="section level3" number="1.2.2">
+<h3><span class="header-section-number">1.2.2</span> Organización</h3>
+<p>Una de los aspectos clave es que, al trabajar con archivos de proyecto, es necesario organizarse. Una forma sencilla de trabajar con <code>RStudio</code> es tener un proceso pre-establecido por el que pasar cada vez que se inicie un nuevo proyecto en <code>RStudio</code>. El proceso que se sugiere en este libro consiste en:</p>
+<ol style="list-style-type: decimal">
+<li><p>Crear un nuevo proyecto de <code>RStudio</code>, por el cual se generará una carpeta dentro del directorio local.</p></li>
+<li><p>Luego, dentro de esa carpeta crear una sub-carpeta llamada ‘datos.’ Ahí es donde se guardarán todos los archivos de datos relacionados con el proyecto.</p></li>
+<li><p>También, crear una carpeta llamada ‘r_docs’ que es donde se guardan todos los documentos de <strong><code>R</code></strong> y de <code>RStudio</code>.</p></li>
+<li><p>En caso que haya imágenes o medios asociados con el proyecto, se aconseja generar una carpeta llamada ‘imágenes.’</p></li>
+</ol>
+<p>En resumen, siguiendo el tipo de organización aquí propuesta, hay un directorio donde se guardan todos los proyectos de R Studio. Tal como se aclaró antes: la información del proyecto se almacena dentro de una carpeta, donde a su vez hay tres carpetas más: una donde se encuentran los archivos de datos, otra donde guardar todos los documentos de <strong><code>R</code></strong> y <code>RStudio</code>, y una última carpeta para las imágenes. Además, dentro de esa carpeta grande habrá un archivo de ‘RStudio project,’ con el nombre que el usuario le haya asignado.</p>
+</div>
+<div id="utilidad" class="section level3" number="1.2.3">
+<h3><span class="header-section-number">1.2.3</span> Utilidad</h3>
+<p>¿Por qué este procedimiento de organización del flujo de trabajo es útil? Porque respetando la estructura de las carpetas, es posible encontrar los archivos de manera sencilla, optimizando tiempo y espacio. Esta estructura se puede ver en la ruta del archivo, que será similar a /Usuarios/Nombreusuario/Documentos/RProjects…etc. Esta es una ruta a un archivo de datos que se almacena en el disco duro, en la unidad correspondiente, que puede ser C o U, por ejemplo.</p>
+<p><strong>Desventaja 1</strong></p>
+<p>Dentro de una carpeta llamada ‘Usuarios,’ ingresando a una carpeta denominada “tunombre” (aquí cada uno puede colocar su propio nombre de usuario), dentro de la carpeta llamada “Documentos” y luego, dentro de otra carpeta se encuentra el nuevo proyecto creado. En esta última, finalmente, está la subcarpeta de “datos.” Por lo tanto, cada vez que se desee acceder a ese archivo de datos, tanto para cargarlo como guardarlo, se debe llamar a esa gran cadena de texto, que es la ruta al archivo, lo cual puede resultar complicado.</p>
+<p><strong>Desventaja 2</strong></p>
+<p>Si se cambia de computadora donde fue creado un archivo de <strong><code>R</code></strong> a otra que no tenga el sistema de archivos que se ha descrito en este libro, entonces se debe reescribir todo el código de <strong><code>R</code></strong> para poder acceder al archivo deseado. Esto se debe a que podría estar guardado en una ubicación diferente a la de mi archivo local. Al usar un proyecto de <code>RStudio</code> puedo usar lo que se conoce como “rutas relativas.” También, hay un camino mucho más corto que implica colocar dos puntos y una barra al inicio de la ruta. Los puntos representan la carpeta del proyecto que se encuentra en una ubicación diferente a la del archivo que se está editando. Dondequiera que esa carpeta esté almacenada, no es necesario saberlo porque el proyecto de <code>RStudio</code> se redirige automáticamente allí cuando se implementan los puntos. Todo lo que hay que hacer es poner los puntos seguidos de una barra, luego el nombre de la carpeta de datos y de nuevo barra, seguido el nombre del archivo al que se intenta acceder. Por ejemplo, ../nombrecarpeta/nombrearchivo.rmd</p>
+<p>Ahora se presenta un segundo ejemplo utilizando la estructura de carpetas aquí propuesta. Si se almacenan los archivos de <code>RStudio</code> dentro de una carpeta llamada “docs_r,” es necesario salir de la misma y luego volver a “mis_datos.” Eso es lo que los puntos dobles hacen: subir de nivel. En concreto, las acciones que lleva a cabo son salir de ‘docs_r’ e ir a la carpeta de datos. Sin embargo, cuando hay muchos archivos, esto puede resultar un poco engorroso.</p>
+</div>
+<div id="crear-un-proyecto-de-rstudio" class="section level3" number="1.2.4">
+<h3><span class="header-section-number">1.2.4</span> Crear un Proyecto de RStudio</h3>
+<ul>
+<li><p>Lo primero es seleccionar un directorio en alguna carpeta local del ordenador.</p></li>
+<li><p>Luego abrir <code>RStudio</code> e ir al menú “Archivo,” hacer clic en “Nuevo proyecto” y así se obtendrá un cuadro de diálogo. Se puede crear un nuevo directorio con el proyecto o si ya existe un directorio que se pueda convertir en un proyecto de <code>RStudio</code>, también se puede seleccionar un directorio existente.</p></li>
+<li><p>En siguiente paso es seleccionar en la opción superior para generar un proyecto, y luego crear el proyecto nuevo como un subdirectorio.</p></li>
+<li><p>Lo siguiente es buscar dónde guardar este proyecto. Si se desea mantener todos los proyectos juntos es necesario crear una carpeta llamada, por ejemplo, “proyectosr” donde colocar todos los proyectos de <strong><code>R</code></strong>. Como nombre del directorio se solicita el nombre del archivo de proyecto de <code>RStudio</code>, en este caso puede llamarse “primer_proyecto.”</p></li>
+<li><p>Como resultado, a pesar de que nada parece cambiar, en la pestaña de archivos (margen inferior), se notifica que uno se encuentra en la carpeta o directorio seleccionados. En este caso, dentro de la carpeta de todos los proyectos de <strong><code>R</code></strong> y, a su vez, en la carpeta llamada “primer_proyecto” que es como se ha nombrado a este proyecto. Se puede navegar dentro del proyecto desde aquí.</p></li>
+</ul>
+<p><strong>Recordatorio</strong></p>
+<ul>
+<li><strong><code>R</code></strong> distingue entre mayúsculas y minúsculas, por lo que siempre es recomendable escribir todo en minúsculas.</li>
+</ul>
+</div>
+<div id="crear-un-archivo-de-r" class="section level3" number="1.2.5">
+<h3><span class="header-section-number">1.2.5</span> Crear un archivo de R</h3>
+<p>Lo siguiente es crear un documento en el que se quiere trabajar. En este libro se usa el ejemplo de un archivo de <code>RMarkdown</code>, aunque existen otros tipos de archivos de <strong><code>R</code></strong>. Uno de los más utilizados es el R script, equivalente a una sintaxis de <strong>SPSS</strong> o <em>do-file</em> de <strong>STATA</strong>.</p>
+<ul>
+<li><p>Crear un nuevo archivo de tipo <code>R Markdown</code>. Al seleccionar sobre el botón de crear archivo (margen superior izquierdo, identificado con el signo “+” en color verde), aparecerá una ventana. Allí, se coloca el título al documento, que se puede llamar “primer_documento,” y también el nombre del autor. No es necesario poner el nombre del autor, se puede dejar ese espacio en blanco. Y por último, se selecciona el “Formato de salida,” que crea el archivo de R Markdown.</p></li>
+<li><p>Es posible ver que en el nuevo documento de R Markdown ya hay texto, que es un ejemplo de documento, el cual se puede borrar en su totalidad y cargar la información que se desee. En un documento de R Markdown, las áreas grises son lo que se conoce como “fragmentos de código” o <em>chunks</em>. Allí es donde se dan instrucciones a <strong><code>R</code></strong>, como comandos o fórmulas, sobre las que trabaja el programa.</p></li>
+<li><p>Fuera, en el área blanca, se puede escribir texto. Se presenta un ejemplo simple, en el que se inserta un fragmento de código de varias maneras.</p></li>
+</ul>
+<p>También hay atajos de teclado que puedes usar:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="workflow.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="sc">*</span> Insert code chunk <span class="cf">in</span> PC<span class="sc">:</span> Ctrl<span class="sc">+</span>Alt<span class="sc">+</span>I</span>
+<span id="cb1-2"><a href="workflow.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="sc">*</span> Insert code chunk <span class="cf">in</span> Max<span class="sc">/</span>Linux<span class="sc">:</span> Cmd<span class="sc">+</span>Option<span class="sc">+</span>I</span></code></pre></div>
+<p><strong>En resumen</strong>, cuando haya un nuevo proyecto en el que se esté trabajando, se recomienda generar un nuevo archivo de proyecto en <code>RStudio</code>. Dentro de esa carpeta, generar otra carpeta donde almacenar los datos (que aquí se ha llamado “r_docs”), como los documentos de R Markdown o R script.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="introducción-a-r-y-rstudio.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="r-markdown.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["clases-arg.pdf", "clases-arg.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

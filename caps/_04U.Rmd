@@ -1,0 +1,551 @@
+# (PART) Variables {-}  
+
+# Las características económicas de la población {#ocupacion}
+
+En este capítulo hacemos foco en las variables económicas que se investigaron, de manera no siempre uniforme, en las fuentes que vimos en los dos capítulos anteriores. Además retomamos el muy discutido tópico de los clasificadores de ocupación y su comparabilidad. Presentaremos las distintas variables que son constitutivas para el estudio y la construcción de esquemas para la medición de las clases y la estratificación social, haciendo hincapié en limitaciones y los recaudos que deben considerarse en el uso de las mismas. Principalmente revisaremos y analizaremos aquellas variables relevadas en los operativos del **INDEC** que nos convocan: censos y EPH.
+
+Exploraremos las siguientes preguntas:  
+- ¿Qué variables son necesarias considerar para estudiar empíricamente las clases sociales?  
+- ¿Cuáles son las limitaciones que se presentan en la utilización de dichas variables a la hora de trabajar con censos o encuestas de hogares?  
+- ¿Cómo fueron medidas las variables a lo largo del tiempo en el sistema estadístico argentino?  
+- ¿Cuáles son las ventajas y desventajas en el uso de las distintas clasificaciones (CNO, CIUO)?  
+- ¿Qué metodologías existen para armonizar los distintos clasificadores ocupacionales?  
+
+Al completar el capítulo se espera que los lectores puedan:
+
+- Identificar las principales variables utilizadas en la construcción de esquemas de clases sociales.
+- Reconocer los distintos esquemas clasificatorios de la variable **ocupación**.
+- Reconocer las principales limitaciones que se presentan cuando se quieren hacer estudios de tipo longitudinales y se requiere la armonización de distintas clasificaciones que sufrieron cambios en el tiempo. 
+
+Para una mayor comprensión del capítulo recomendamos la lectura de los siguientes documentos: 
+
+- Chávez Molina, E., Bernasconi, F., &amp; Rodríguez de la Fuente, J. [-@ChavezMolina.etal2020]. "Propuesta de correspondencias entre CNO y CIUO. Sintaxis para SPSS, Stata y R. Herramientas Para La Investigación Social." Serie: Cuadernos de Métodos y Técnicas de La Investigación Social ¿Cómo Se Hace?, 6. [Link de descarga](http://iigg.sociales.uba.ar/2020/09/30/his-6-propuesta-de-correspondencias-entre-cno-y-ciuo-sintaxis-para-spss-stata-y-r/?fbclid=IwAR3RvLDs7H8wYHDqUooZMEI74HIDS6MXT3YbEjstG44yt0DB9tFj0VwlT9A)  
+
+- INDEC. [-@INDEC2000a]. Utilización de clasificadores de ocupación en las bases de datos de la encuesta permanente de hogares. [Link de descarga](https://www.indec.gob.ar/dbindec/EPH_Clasif_Ocup_hasta_CNO_2001.doc)  
+
+- INDEC. [-@INDEC2018]. Clasificador Nacional de Ocupaciones. Definiciones conceptuales. [Link de descarga](https://www.indec.gob.ar/ftp/cuadros/menusuperior/clasificadores/definiciones_conceptuales_cno.pdf)  
+
+- Sacco, N., &amp; Riveiro, M. [-@Sacco2016b]. "La Clasificación de Ocupaciones en el Sistema Estadístico Nacional". _Estudios Del Trabajo_, 51, 28. [Link de descarga](https://aset.org.ar/ojs/revista/article/view/24)  
+
+- INDEC. [-@INDEC2018a]. CNO. Clasificador Nacional de Ocupaciones. Versión 2017. [Link de descarga](https://www.indec.gob.ar/ftp/cuadros/menusuperior/clasificadores/CNO_2017.pdf)
+
+- INDEC. [-@INDEC2018b]. CNO. Correspondencias entre el CNO-17 y la CIUO-08. [Link de descarga](https://www.indec.gob.ar/ftp/cuadros/menusuperior/clasificadores/correspondencias_cno2017_ciuo2008.pdf) 
+ 
+- OIT. [-@OIT2008]. Clasificación Internacional Uniforme de Ocupaciones (CIUO-08) – Marco conceptual. OIT. [Link de descarga](https://www.ilo.org/public/spanish/bureau/stat/isco/docs/annex1.pdf) 
+
+- OIT. [-@OIT2008a]. Resolución sobre la actualización de la Clasificación Internacional Uniforme
+de Ocupaciones. OIT. [Link de descarga](https://www.ilo.org/public/spanish/bureau/stat/isco/docs/resol08.pdf)
+
+- Torrado, S. [-@Torrado1993a]. El nuevo ‘Clasificador Nacional de Ocupaciones del INDEC: Una fractura irreparable en el sistema estadístico nacional. _Estudios del Trabajo_, 5, 85–120.
+
+## Algunas consideraciones previas {#consideraciones} 
+
+### Comprender las reglas del juego
+
+Si nuestra idea es abordar la estructura socioeconómica, debemos tener en cuenta varias cuestiones antes de ponernos a trabajar. En el [Capítulo 2](#estructura1) hemos estudiado numerosas perspectivas teóricas que se han desarrollado tanto a nivel internacional como a nivel local en Argentina. Lo cierto es que debemos contar con una perspectiva que se adecúe a nuestra pregunta de investigación y a nuestros objetivos. Luego, definir la metodología de nuestro estudio es crucial para poder organizar las técnicas de investigación que implementaremos. Partiendo de esta base, lo siguiente sería remitirnos a las fuentes de datos que utilizaremos, según su accesibilidad y pertinencia. Una vez que contamos con los datos, seleccionaremos las variables que nos sirvan para ponernos a “jugar” con su caracterización. Podemos elaborar sistemas de clases, construir nuevas variables, pensar en diferentes maneras de caracterizar a la estructura social y más. Todo ello con un mismo fin: analizar la sociedad a nivel macro.
+
+En esta unidad elaboramos una descripción de las variables económicas que se han investigado en las fuentes, prestando especial atención a las variables socio-ocupacionales porque han sido los principales insumos en el estudio de clases sociales, en especial, la ocupación. Definimos su importancia, para qué ha servido en los estudios de Argentina, cómo tratarla y qué limitaciones podemos encontrar a la hora de implementarla. Además, presentamos otras variables que son de nuestro interés para construir esquemas de medición de clases sociales.
+
+### La estratificación como perspectiva de análisis
+
+La estratificación es un proceso inherente a las sociedades modernas, que tiene que ver con la complejización de la actividad productiva. Las consecuencias de este fenómeno son relativas a la desigualdad de nuestras sociedades, lo cual ha despertado el interés de muchos cientistas sociales. Su estudio nos permite conocer los procesos de movilidad social inter e intra-generacionales y la configuración de la sociedad en grupos diferenciados. Lo cierto es que los recursos se distribuyen de manera desigual entre los miembros de nuestras sociedades, y esto genera distinciones entre ellos según la posición que ocupan.  
+
+Estudiar la estratificación implica seleccionar los indicadores y variables que contribuirán a la explicación sobre este proceso de diferenciación y diversificación social. Existe una larga tradición de tomar la educación, la ocupación y los ingresos como las tres principales patas de la investigación en estratificación [@Fujihara2020]. La combinación de estas tres variables se conoce como estatus socio-económico [@Sno.Ganzeboom2017]. Al respecto, la ocupación ha tomado el papel principal peso, convirtiéndose en el “mejor indicador” [@Blau.Duncan1967] del estatus socio-económico.  
+
+En resumen, observar con los lentes de estratificación a la sociedad implica asumir que la diversificación de la actividad económica ha traído consigo la distinción en grupos según su tarea y posicionamiento en la sociedad, lo cual, a su vez, significa concebir una sociedad desigual, con mayor o menor apertura al “movimiento” de las personas dentro de este entramado de relaciones (ya sea “hacia arriba” o “hacia abajo”) en el proceso de movilidad. Pero, ¿cómo medimos el proceso de estratificación?
+
+### Indicadores de la estratificación social
+
+La investigación que aspira a comprender los cambios en la estructura social y su medición, se ha nutrido de dos grandes tipos de clasificación. Es decir que, a grandes rasgos, la investigación de la estructura social se ha bifurcado en estudios de clase o en estudios de estatus social. Si bien se parecen, no son lo mismo. Las clases sociales son categorías clasificatorias que se definen como variables discretas. Presentan a la sociedad como un conjunto de grupos que no necesariamente se encuentran ordenados de una manera particular. En cambio, el estatus social organiza a la sociedad según su carácter jerárquico. En este sentido, los grupos se diferencian por tener mayor o menor estatus con respecto a otros, es decir, en relación con los demás individuos. Esta aproximación está caracterizada por utilizar medidas continuas para ordenar a la sociedad. Las medidas empíricas de ordenamiento de la sociedad se diferencian en: escalas de prestigio ocupacional, índices de estatus socio-económico y sistemas de clases. Las primeras dos son medidas continuas mientras que la última consta de una clasificación en categorías discretas.   
+
+¿Por qué la ocupación es tan importante? Debemos entender la relevancia de la fuerza de trabajo para conocer sus implicancias en nuestras sociedades actuales.  
+
+### La fuerza de trabajo y las características económicas de la población
+
+La actividad económica es vital para cualquier sociedad. Cómo se organizan las personas alrededor de las actividades productivas y los procesos de estratificación asociados con la diferenciación social del trabajo son características fundamentales en nuestras sociedades. El estudio de la dinámica de la fuerza de trabajo es relevante para los científicos sociales en diversos aspectos: contribuye al debate sobre distintos temas de políticas públicas, y además puede responder preguntas fundamentales que interesan a los investigadores sobre estratificación.
+
+La relación entre la población que contribuye a los procesos productivos en el mercado de trabajo y el resto, clasifica a las personas de acuerdo a su condición de actividad. La diferenciación entre los atributos de las personas económicamente activas de las inactivas permite el conocimiento de las características ocupacionales de los que participan en el mercado de trabajo. Para estudiar la actividad, los investigadores han desarrollado algunos conceptos como la Población Económicamente Activa (PEA) que aquí nos competen.
+
+## Las variables socio-ocupacionales
+
+Las variables económicas de la población no han sido siempre las mismas, desde el censo de 1947 hasta el censo 2010, observándose una ampliación en la información recabada, según el número de variables a las que se hace referencia [@Sacco2015]. Como vimos en el [capítulo 4](#fuentes2), si comparamos los censos a partir del de 1980 hasta el último, realizado en 2010, veremos cómo se ha diversificado la manera de medir la actividad económica en Argentina. Por su parte, las diferentes variables que ofrece la **EPH** son similares a las del censo pero con algunas variaciones. Todas las variables aquí incluidas se encuentran disponibles en la base de Personas de la **EPH**.  
+
+```{r fig.cap= "Principales variables socio-ocupacionales de la EPH", fig.align='center', out.width = '80%', echo=FALSE, eval = knitr::is_html_output()}
+knitr::include_graphics("imagenes/t3_u4.png")
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, eval = !knitr::is_html_output()}
+variables_eph <- data.frame(c1 = c("Condición de actividad", "Categoría ocupacional",
+                                   "Ocupación", "Rama de actividad", "Tamaño del establecimiento"),
+                            c2 = c("Población activida o inactiva", 
+                                   "Estatus jerárquico en el empleo", "Código de ocupación",
+                                   "Sector industrial de la ocupación", 
+                                   "Tamaño del establecimiento del trabajo"),
+                            c3 = c("ESTADO", "CAT_OCUP", 
+                                   "PP04D_COD (ocupación actual) / PP11D_COD (ocupación anterior)",
+                                   "PP04B_COD (ocupación actual) / PP11B_COD (ocupación anterior)",
+                                   "PP04C / PP04c_99"),
+                            c4 = c("Ocupado / Desocupado / Inactivo / Menor de 10 años",
+                                   "Patrón / Cuenta propia / Empleado / Trabajador familiar",
+                                   "Ver Clasificador Nacional de Ocupaciones (CNO)", 
+                                   "Ver Clasificador de Actividades Económicas para Encuestas Socio-demográficas del Mercosur (CAES - MERCOSUR)", "Numérica"))
+                                   
+variables_eph %>% 
+  flextable() %>% 
+  set_table_properties(width = 1, layout = "autofit") %>% 
+  set_header_labels(c1 = "Variable", c2 = "Descripción", c3 = "Etiqueta", c4 = "Categorías") %>% 
+  bold(part = "header") %>% 
+  set_caption("Principales variables socio-ocupacionales de la EPH") %>% 
+  add_footer_row(values = "Fuente: elaboración propia", colwidths = 4) %>% 
+  fontsize(part = "all", size = 10) 
+
+```
+
+
+Ahora que sabemos cuál es la información que nuestras principales fuentes de datos contienen, describiremos de manera detallada cada una de ellas.
+
+### Condición de actividad  
+
+Las estadísticas de empleo distinguen dos grandes grupos de la población en edad laboral. El primero, es la población económicamente inactiva (**PNEA**), que incluye a todos aquellos que voluntariamente no trabajan o no trabajaban por pago o ganancia. El segundo es la población económicamente activa (**PEA**), que agrupa a aquellos que sí trabajan o trabajaban por pago o ganancia, como así también a aquellos que no tienen o tenían trabajo pero se encuentran o encontraban buscando activamente un empleo. Es decir, que en esta construcción los investigadores asumieron que la pérdida de empleo y la incapacidad de encontrar empleo representaba una falla en los mecanismos de asignación de los mercados de trabajo. En base a estos conceptos, los investigadores construyen las tasas de actividad, desempleo y empleo. El volumen, estructura y características de la **PEA**, en relación a sus características económicas, justifica su estudio para la demografía, la sociología y otras disciplinas.
+
+La ONU define a la **condición de actividad** como aquello que “permite distinguir entre personas económicamente activas y no económicamente activas. El estado de actividad es la relación actual o habitual de cada persona con la actividad económica durante un período determinado" [@ONU1997, p. 6]. Para estudiarla es necesario obtener datos de las personas con edad de trabajo, es decir, aquellos definidos como en edad laboral, que en Argentina es entre 15 y 65 años.  
+
+Si bien límite de edad suele no ser uniforme de acuerdo a la fuentes, esta variable comúnmente presenta las categorías de *ocupado*, *desocupado* e *inactivo*, nos permite un primer recorte de nuestro objeto de estudio. Como veremos más adelante, desde la **condición de actividad** podremos diferenciar a la población ocupada, desocupada, activa o inactiva. 
+
+### Ocupación
+
+Para todas aquellas líneas de investigación que reconocen en la división del trabajo el núcleo de la desigualdad social, la clasificación de las ocupaciones constituye la columna vertebral de muchas, sino de la mayoría de las indagaciones sobre estratificación social [@Crompton2008; @Barozet2007]. La **ocupación** compone un eje central de los estudios de mercados de trabajo y de la propia Sociología de las Ocupaciones. Su medición supone un conjunto de decisiones teóricas, metodológicas y operativas, que pocas veces tienen en los manuales la claridad y el espacio que merecen.
+
+#### La Clasificación de Ocupaciones ^[Este texto está tomado parcialmente de @Sacco2016b]
+
+Los sistemas clasificatorios de ocupaciones son herramientas que permiten ubicar las ocupaciones de los y las encuestadas en grupos pre-definidos de acuerdo a las definiciones de cada clasificador. Los clasificadores de ocupación difieren no sólo con respecto del nivel de detalle y títulos ocupacionales específicos incluidos, sino también con respecto a su lógica. Por ejemplo, algunas clasificaciones distinguen estados de empleo dentro de las ocupaciones y otras no lo hacen. Algunas están fuertemente orientadas a distinguir situaciones en la industria y otras no. Algunos clasificadores se adaptan a las características particulares de los mercados de trabajo y otras reproducen estructuras ocupacionales de los países desarrollados. Estas diferencias reflejan, en cierta medida, la estructura ocupacional de las sociedades, pero también la historia e intenciones de las instituciones que las han desarrollado.
+
+A nivel general, se pueden apreciar estas definiciones en las discusiones plasmadas en la actualización que lleva a la **Clasificación Internacional Uniforme de Ocupaciones** (CIUO) [@Budlender2003; @Hoffmann1999], o bien, a nivel local, las discusiones y producciones en torno al **Clasificador Nacional de Ocupaciones**, previas a su implantación [@Elizalde1987; @INDEC1990; @INDEC1991] y posteriores [@Elizalde1993; @Torrado1993; @Torrado1993a]. Dada la complejidad intrínseca de la variable ocupación, así como de la exigencia explicativa que se le reclama, no es de extrañar que su medición y comparabilidad (a nivel transversal interno como a nivel regional e internacional) haya sido difícil de lograr. Diversas razones se dieron para esto.  
+
+Las clasificaciones de ocupación tienden a diferir tanto a nivel nacional como en el tiempo. Cada sistema estadístico nacional busca establecer una clasificación que capte de la mejor forma posible las particularidades de la estructura ocupacional de su país, que, por definición, no está exenta de cambios, especialmente desde el punto de vista del desarrollo tecnológico. En segundo lugar, existe una amplia disparidad entre la lógica y el contenido de los clasificadores de ocupación al aplicarse al análisis de datos concretos; esto en parte muestra las diferencias en los intereses teóricos por detrás de los sistemas clasificatorios, pero también es resultado de la falta de coordinación tanto de la investigación social como de los procesos estadísticos planificados a largo plazo por las instituciones gubernamentales [@Ganzeboom1996].
+
+#### La Clasificación Internacional Uniforme de Ocupaciones (CIUO) de la OIT
+
+La **Organización Internacional del Trabajo** (OIT) de la ONU ha elaborado la **CIUO** por primera vez en 1958, con revisiones en 1968, 1988 y 2008 para tratar de solucionar estos problemas ([ver página web de la OIT](https://www.ilo.org/public/spanish/bureau/stat/isco/)). Uno de los principales objetivos de la **CIUO** es proporcionar a los INES (institutos nacionales estadísticos) un punto de partida para organizar sus clasificaciones nacionales. Sin embargo, estas revisiones periódicas de la OIT hacen necesaria a su vez otras revisiones dentro cada uno de los INES.
+
+La **Clasificación Internacional Uniforme de Ocupaciones** (**CIUO**) es una clasificación de la Organización Internacional del Trabajo. Es una herramienta para organizar los empleos en grupos, según las tareas de cada empleo.
+
+Existen varias versiones de la **CIUO**. La primera es la **CIUO-58**, y data del año 1957. La segunda es la **CIUO-68**, que fue adoptada en 1966. La tercera versión, la **CIUO-88**, fue adoptada por la Decimocuarta Conferencia Internacional de Estadísticos del Trabajo en 1987. La cuarta y última es de diciembre del 2007 y se conoce como la **CIUO-08**. Los principios básicos y la estructura de la clasificación se mantuvieron pero se mejoraron algunas áreas.
+
+La **CIUO-08** ofrece 436 grupos ocupacionales organizados en una jerarquía de cuatro dígito, comenzando por el nivel más agregado que trae como resultado a 10 grupos principales, seguidos de 43 sub-grupos principales, 130 grupos menores y todo el resto son grupos unitarios [@OIT, 2012]. La versión más reciente de la CIUO ha incorporado algunos títulos ocupacionales que no estaban presente en las anteriores, por ejemplo, "ayudantes de cocina". La ventaja de esta estructura es que permite codificar ocupaciones con un nivel de detalle a cuatro dígitos, lo que significa que si buscamos mayor detalle, necesitaremos más cantidad de dígitos del código CIUO.
+
+Los grupos principales a mayor nivel de agregación, es decir, a un dígito son:  
+0 Ocupaciones de las Fuerzas Armadas  
+1 Gerentes  
+2 Profesionales  
+3 Técnicos y Profesionales Asociados  
+4 Trabajadores de Apoyo Administrativo  
+5 Trabajadores de Servicios y Ventas  
+6 Trabajadores calificados agrícolas, forestales y pesqueros  
+7 Trabajadores artesanos y afines  
+8 Operadores y ensambladores de planta y maquinaria  
+9 Ocupaciones Elementales  
+
+La mayor información sobre las ocupaciones está incluida en los siguientes grupos. Tomando los grupos principales ("Gerentes", con código 1000) se provee un ejemplo de un sub-grupo principal como es "Jefes ejecutivos, altos funcionarios y legisladores (11)”; un grupo menor como “Legisladores y Altos funcionarios (111)” y en el nivel de mayor detalle, tenemos al grupo unitario de “Oficiales de Alto Gobierno (1112)”. La estructura funciona como un set de cajas de diferente tamaño: las más pequeñas (grupos unitarios) están incluidas dentro de las más grandes y esto queda claro según el número de dígitos utilizado.
+
+La característica por la cual se diferencian los grupos de la **CIUO-O8** es la calificación requerida para el trabajo. Por ejemplo, al diferenciar "Profesionales (2)" de "Técnicos y Profesionales Asociados (3)". Además, hay una separación entre quienes operan con máquinas y aquellos que no, en el caso de "Trabajadores artesanos y afines (7)" y "Operadores y ensambladores de planta y máquinaria (8)".
+
+Si bien el mínimo común denominador de todas las clasificaciones son los títulos ocupacionales, la forma en la que se define la medición de la ocupación varía en cada clasificador, incluso desde la propia definición de ocupación. Por un lado, en la **CIUO-08**, “se entiende por ocupación, un conjunto de empleos cuyas principales tareas y cometidos se caracterizan por un alto grado de similitud”, y define al empleo como un “conjunto de tareas y cometidos desempeñados por una persona, o que se prevé que ésta desempeñe, para un empleador particular, incluido el empleo por cuenta propia” [@OIT2008]. Se trata de una definición vinculada a la clasificación de grupos de tareas y responsabilidades muy similares.
+
+Para facilitar comparaciones entre naciones, las recomendaciones internacionales sugieren utilizar la clasificación de ocupaciones de acuerdo a normas de clasificación nacionales que puedan establecer su homologación con la última revisión de la **CIUO** mediante una doble codificación o mediante una correspondencia de los grupos detallados de la clasificación nacional con los de la clasificación de la OIT. Adicionalmente, especifican que los países deberían codificar los datos ocupacionales que hayan reunido al nivel más bajo posible que apoye la información recibida. Para facilitar una codificación detallada y exacta, sería útil que en el cuestionario se preguntara el título ocupacional de cada persona activa y se pidiera una breve descripción de las tareas y funciones realizadas en el empleo [@ONUOIT2010, pp. 179-180].
+
+#### Clasificador Nacional de Ocupaciones (CNO) del INDEC Argentina
+
+El **CNO (Clasificador Nacional de Ocupaciones)** es un sistema de clasificación de ocupaciones. Podemos definirlo como una herramienta que agrupa diferentes ocupaciones de acuerdo a un criterio preestablecido [@ChavezMolina.etal2020].
+
+El **CNO-01** (definido actualmente como CNO-17) define a las ocupaciones, que son la “unidad de análisis" del clasificador, como la “forma concreta de la división singular del trabajo y de su sistema de relaciones dentro de las unidades productivas” y como “los procesos de trabajo parciales o individuales existentes en ellas” [@INDEC2005, pp. 16]. Esta definición de ocupación se distingue de la que provee la **CIUO**, siendo que ambas poseen marcos conceptuales diferentes, pero un mismo objetivo, clasificar ocupaciones. 
+
+La estructura del **CNO-17** se compone de 5 dígitos, que contienen 4 dimensiones de análisis: 
+
+*1° y 2° dígito: Carácter Ocupacional  
+*3° dígito: Jerarquía Ocupacional  
+*4° dígito: Tecnología Ocupacional  
+*5° dígito: Calificación Ocupacional Carácter  
+
+##### Carácter Ocupacional
+
+Clasifica la ocupación en base al producto que se genera en el proceso de trabajo, más allá de la rama de actividad del establecimiento donde se realice la actividad laboral.
+
+El primer dígito señala los 10 grandes grupos ocupacionales que van del 0 al 9. Esos grupos luego se desagregan con un segundo dígito en otros subgrupos de carácter más específico.
+
+A continuación, presentamos los 10 grandes grupos ocupacionales de mayor nivel de agregación, es decir a un dígito de codificación. Además, mostramos un ejemplo de la clasificación a dos dígitos, dentro del primer grupo "Ocupaciones de dirección".
+
+  0 Ocupaciones de dirección.  
+	00 Funcionarios del poder ejecutivo nacional, provincial, municipal y/o departamental.  
+	01 Funcionarios del poder legislativo nacional, provincial, municipal y/o departamental.  
+	02 Funcionarios del poder judicial, federal, nacional, provincial, municipal y/o departamental.   
+	03 Directivos de organismos, empresas e instituciones estatales.  
+	04 Directivos de instituciones sociales.  
+	05 Directivos de pequeñas y microempresas.  
+	06 Directivos de medianas empresas privadas productoras de bienes y servicios.  
+	07 Directivos de grandes empresas privadas productoras de bienes y servicios.  
+
+1 Ocupaciones de gestión administrativa, de planificación, de control de gestión y jurídico-legal.  
+
+2 Ocupaciones de gestión presupuestaria, contable y financiera.  
+
+3 Ocupaciones de comercialización, de transporte, de almacenaje y de telecomunicaciones.  
+
+4 Ocupaciones de servicios sociales básicos.  
+
+5 Ocupaciones de servicios varios.  
+
+6 Ocupaciones agropecuarias, forestales, de la pesca y de la caza.  
+
+7 Ocupaciones de la producción extractiva, energética, de construcción e infraestructura.  
+
+8 Ocupaciones de la producción artesanal, industrial y de reparación de bienes de consumo.
+
+9 Ocupaciones auxiliares de la producción de bienes y de la prestación de servicios.  
+
+##### Jerarquía Ocupacional 
+
+Clasifica la ocupación según la jerarquía que ocupa en la organización del proceso de trabajo. Reconoce cuatro categorías que se traducen en los siguientes valores:
+
+0. Dirección     
+1. Cuenta propia   
+2. Jefes  
+3. Trabajadores asalariados Tecnología  
+
+##### Tecnología Ocupacional
+
+La tecnología ocupacional clasifica la ocupación de acuerdo al tipo de tecnología utilizada en el proceso de trabajo específico. Las categorías y valores para esta dimensión son las siguientes:
+
+1. Sin operación de máquina  
+2. Operación de maquinaria y equipos electromecánicos   
+3. Operación de sistemas y equipos informatizados  
+
+Debe realizarse la siguiente aclaración: en el caso de los directores, jefes y patrones, el valor siempre es 0 (cero). La dimensión de la tecnología ocupacional no es contemplada para estos casos por una cuestión de comparabilidad con el CNO-91.
+
+##### Calificación Ocupacional
+
+Clasifica la ocupación según la complejidad del proceso de trabajo específico, considerando los conocimientos y las competencias necesarias para su ejecución. Las categorías y valores para esta dimensión son:
+
+1. Profesionales  
+2. Técnicos  
+3. Operativo  
+4. No calificado  
+
+Es importante realizar la distinción entre calificación de la ocupación y calificación requerida para la ocupación. La primera es la calificación del proceso de trabajo que involucra a dicha ocupación y la segunda es el nivel de formación necesario para acceder a cierta ocupación. En este caso, el 5º dígito del **CNO-17** hace referencia a la primera de las acepciones.
+
+Ilustramos, con un ejemplo, la clasificación en su mayor nivel de desagregación, a 5 dígitos, mostrando en el siguiente cuadro realizado por Chávez Molina et al. [-@ChavezMolina.etal2020] el código ocupacional de los "Jefes de la producción industrial y artesanal con calificación profesional (80201)".
+
+
+```{r, echo = F, warning = F, message = F, fig.cap = 'Jefes de la producción industrial y artesanal con calificación profesional (80201)', fig.width = 0.2, fig.height = 0.5, fig.asp=0.50, out.width = "80%", fig.align = "center", eval = knitr::is_html_output()}
+knitr::include_graphics("imagenes/t5_u4.png")
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, eval = !knitr::is_html_output()}
+
+cno_tabla <- data.frame(c1 = c("1° y 2°", "3°", "4°", "5°"),
+                        c2 = c("Carácter", "Jerarquía", "Tecnología", "Calificación"),
+                        c3 = c("80", "2", "0", "1"),
+                        c4 = c("Ocupaciones de la producción industrial y artesanal", "Jefes", 
+                               "No corresponde", "Profesionales")
+)
+   
+cno_tabla %>% 
+  flextable() %>% 
+  set_table_properties(width = 1, layout = "autofit") %>% 
+  set_header_labels(c1 = "Dígitos", c2 = "Dimensión", c3 = "Dígitos CNO", c4 = "Detalle dígitos") %>% 
+  bold(part = "header") %>% 
+  set_caption("CNO 80.2.0.1: Jefes de la producción industrial y artesanal con calificación profesional") %>% 
+  add_footer_row(values = "Fuente: Chávez Molina et al. (2020)", colwidths = 4) %>% 
+  fontsize(part = "all", size = 10)                            
+
+```
+
+
+Dentro del grupo 80201 se encuentran ocupaciones tales como "Jefe de planta industrial" y "Jefe de laboratorio". El primer dígito, señala al grupo 8, que define tareas vinculadas a la producción de bienes, ya sea industrial o artesanal. Incluyendo un mayor nivel de detalle a dos dígitos, el grupo 80, alude a ocupaciones relativas a la transformación de materias primas para la elaboración de bienes industriales o artesanales, tanto bienes finales como intermedios. El 3º dígito permite establecer que la ocupación se inserta en una posición de jefatura. Al 4º código de la tecnología siempre se le adjudica el valor de 0 en los casos de patrones, directores y jefes. Por último, el 5º dígito describe que esta ocupación presenta una calificación profesional.
+
+#### Compatibilidad entre la CNO y la CIUO
+
+Distinguiendo los censos modernos de población en Argentina -de 1960 a 2010-, el código ocupacional empleado en el censo de 1960 era compatible a nivel de 4 dígitos con la **CIUO** en su versión de 1958 mientras que en el censo de 1970 se utilizó la **CIUO-1968** a nivel de 3 dígitos. En el censo de 1980 la variable ocupación fue codificada por el Código Ocupacional (CO) que permitía homologar sus códigos a nivel de 1 o 2 dígitos en algunas ocupaciones con la **CIUO-68**.
+
+En parte gracias a debates llevados a cabo durante el periodo intercensal 1980-1991, se propusieron procedimientos clasificatorios alternativos de codificación de esta variable en los censos de población llevados a cabo por el **INDEC**. Siguiendo las recomendaciones internacionales que sugerían a los institutos de estadística construir sus propios clasificadores para adaptarlos a las particularidades de los mercados de trabajo en cada país, el **CNO** fue elaborado por el **INDEC** actualizando el CO de la **EPH**, cuyas distintas versiones previas (con mayores niveles de agregación) fueron utilizadas desde la aplicación de la encuesta, a principios de la década del setenta. De esta forma, desde el censo de 1991 se aplicó el **CNO** sucesivamente en los censo del 2001 y 2010, en distintas versiones y a distintos niveles de apertura.
+
+Esta estabilidad del clasificador ha posibilitado el desarrollo de una serie de investigaciones desde el **INDEC**, por ejemplo, los documentos de la Serie Estructura Ocupacional del Programa de Medición y Análisis de la Estructura Ocupacional, y su utilización en investigaciones académicas, realizadas con información proveniente de la **EPH** y la Encuesta Anual de Hogares Urbanos. Sin embargo, el clasificador no ha pasado a ser parte un insumo habitual para la generación de datos ocupacionales primarios por fuera del **INDEC**, limitando así su aceptación por fuera del Sistema Estadístico Nacional (SEN).
+
+Con el **CNO** se contó por primera vez en la historia del SEN con el mismo sistema clasificatorio de las ocupaciones en tres relevamientos censales sucesivos y en la **EPH**. En las primeras versiones del **CNO** (o CO-EPH), su máxima apertura permitía un empalme con la **CIUO** a 2 dígitos, cuya homogeneización, si bien no perfecta, era razonablemente directa [@INDEC2000]. Una vez actualizando el sistema clasificatorio, la versión a 3 dígitos aplicada tanto en la encuesta como en el censo de 1991, los empalmes entre la **CIUO** se volvieron irrealizables más allá del segundo dígito [@INDEC1998]. Esto implicó niveles de comparabilidad con la **CIUO** limitados a mayor grado de des-agregación de la información.
+
+El **CNO-91** empleó 3 dígitos para la codificación de ocupaciones, mientras que en el 2001 se utilizó una versión a 5 dígitos. Por su parte, la información recabada por el censo de 2010 sólo computó el nombre de la ocupación, sin preguntar por la tarea, lo que supuso codificar sólo al nivel de 1 dígito (carácter) del **CNO**, produciendo una ruptura de la serie comenzada en 1991 a mayores niveles de des-agregación.
+
+No sólo se observó un cambio en la cantidad de dígitos de cada codificador aplicado, sino también en la información que cada uno otorga. Por ejemplo, si bien en el censo de 1980 sólo se codificó a un dígito, la propia estructura y lógica de la **CIUO** permite comparaciones con otros codificadores (dado que es un sistema clasificatorio muy dependiente de la calificación) mientras que en el 2010 el nivel de agregación no dice mucho más que una denominación, sin poder realizar diferenciación social interna alguna de cada una de ellas, tales como las que provee la calificación de las tareas.
+
+##### Debates de clasificación  
+
+Las modificaciones a nivel interno con el clasificador del censo de 1980 dieron lugar a encendidos debates sobre la conveniencia de modificar o no las nomenclaturas estadísticas. Uno de los argumentos de Torrado [-@Torrado1993a] fue que con el **CNO-91** (aplicado para el censo de 1991) las tareas que relevó el censo no fueron codificadas, perdiéndose de esta forma el dato sobre la ocupación y las tareas. El contra-argumento del equipo encargado de elaborar el **CNO-91** [@Elizalde1993] era que ningún sistema clasificatorio admitía contar con el dato sobre la ocupación recogido por el censo, sino que todos permiten reemplazarlo por la denominación del subgrupo al nivel menor de agregación en el que es clasificada.
+
+Torrado [-@Torrado1993a] también objetaba que la aplicación del **CNO-91** producía una ruptura de comparabilidad con los nomencladores nacionales precedentes y con los nomencladores internacionales. A su vez, que el **CNO-91** requería para su codificación de información adicional a la ocupación mientras que la **CIUO** sólo requería la respuesta a la pregunta sobre “Ocupación principal” para poder asignar una ocupación individual a un grupo dado del nomenclador (es decir, el criterio organizador de la clasificación era unidimensional). El **CNO-91**, por el contrario, para la definición de sus categorías se requería información sobre variables económicas adicionales a la ocupación (tales como categoría ocupacional, rama de actividad, tamaño del establecimiento de los patrones). Esto implicó que la aplicación del **CNO**, en rigor, sólo fuera posible en el caso de fuentes que investiguen todas las variables adicionales a la ocupación (prácticamente, ninguna salvo la **EPH**). Significó además que en la utilización del **CNO** se introdujera complicaciones en las tareas de codificación en el censo, ya de por sí complejas con los nomencladores anteriores.
+
+Torrado [-@Torrado1993a] sostenía que la aplicación de este sistema clasificatorio traería consigo un aumento considerable tanto de los costos de procesamiento del censo como de los inevitables errores de codificación y falta de oportunidad de las publicaciones de estos datos. Lo sucedido __a posteriori__ en el censo de 1991 y el de 2001 no hizo más que confirmar algunas de estas advertencias. En efecto, tanto en el censo de 1991 como en el censo de 2001, los tabulados y bases de datos publicados con esta información fueron de poco detalle (salvo en bases de datos no oficiales) y divulgadas relativamente con poca oportunidad y, por ende, de dudosa calidad, a pesar de que, por ejemplo, en la medición y clasificación de las ocupaciones en el censo de 2001, se utilizó, por primera vez, un sistema informático que permitió la codificación automática de más del 55% de las declaraciones sobre ocupación y en el que se codificaron el total de las declaraciones sobre esta variable relevadas por el censo. De hecho, ante la falta de recursos humanos, en el censo de 1991 las tareas de codificación de las ocupaciones fueron muestreadas.
+
+Esto parece (a falta de publicaciones oficiales) no haber sucedido en el censo de 2010. Si bien el clasificador utilizado tanto en el censo 2001 como en el 2010 es el mismo, no fueron iguales las decisiones en lo que refiere al tratamiento y difusión de los datos. El nivel de apertura de las ocupaciones en el censo 2010 no es informativo acerca de las tareas, ya que el nombre de la ocupación sólo muestra el carácter ocupacional, vinculado con el objeto o servicio que produce el proceso de trabajo del que forma parte la ocupación clasificada. A pesar de que esta decisión política y técnica no guarde relación directa con el **CNO** como instrumento, conlleva implicancias indirectas particulares: otros sistemas clasificatorios a nivel de un dígito, por ejemplo la **CIUO**, si bien en escaso grado de detalle, remiten, en su nivel más agregado, tanto las tareas como a la calificación ocupacional. Adicionalmente, los censos de 1991 y 2001 mostraron distintos tipos de límites a la captación de la condición de actividad, por ende, afectando a todas las variables relativas a las características económicas de población.
+
+La aplicación del **CNO** en el censo de 1991 introdujo no sólo un cambio en el sistema clasificatorio con respecto al utilizado sobre todo en 1980 (también en 1960 y 1970), sino que hubo variaciones en su definición, la forma de medición, el diseño de la cédula, la lectura y procesamiento posterior de la información. A diferencia del censo de 2001, el censo de 1980 y el censo de 1991 preguntaron directamente por la tarea y ocupación. En el 2001, en cambio, se dividió la pregunta en dos: por un lado, se indagó el nombre de la ocupación, y, por el otro, la tarea.
+
+##### Métodos de correspondencia entre el CNO y la CIUO  
+
+En los casos en los que se necesita realizar comparaciones entre información encontrada en distintas encuestas nacionales o con relevamientos internacionales, es necesario trabajar con un esquema clasificatorio de la ocupación que sea común. En este sentido, internacionalmente, la **CIUO** (en sus distintas versiones) funciona como "lenguaje común" en términos de la medición ocupacional. Una de las recomendaciones de la **OIT**, además de la construcción de instrumentos de medición ocupacional propios para cada situación nacional, es la elaboración de equivalencias entre el clasificador nacional y la **CIUO**. 
+
+De este modo a partir de la información brindada por **INDEC** [@INDEC2018b; @ChavezMolina.etal2020] es posible realizar esta conversión a nivel de dos dígitos de la **CIUO**. Siguiendo la metodología propuesta por el organismo estadístico, la mayor parte de los códigos del CNO presentan su equivalencia a dos dígitos de la **CIUO**, mientras que para algunos códigos específicos es necesario recurrir a la variable **rama de actividad** para poder hallar la correspondencia.
+
+Para una propuesta mejorada de la metodología de **INDEC**, junto con las sintaxis para `SPSS`, `R` y `STATA`, puede consultarse @ChavezMolina.etal2020.
+
+### Rama de Actividad
+
+La **Rama de Actividad** describe al sector industrial al que pertenece el establecimiento dentro del cual la persona ejerce o ejerció su empleo. Es decir, la unidad productiva en la cual las personas trabajan. A diferencia de otras variables económicas o socio-ocupacionales, la **rama de actividad** permite realizar diferenciaciones horizontales, no jerárquicas, a partir de la inserción de los trabajadores en las unidades productivas.
+
+Tanto en la **EPH** como en el censo, se ha utilizado la codificación disponible según la “Clasificación Industrial Internacional Uniforme de Actividades Económicas” (**CIIU**) de las Naciones Unidas [-@ONU2009a]. Para 1991, 2001 y 2010 esta variable no presenta modificaciones sustanciales por lo que, en términos generales, los datos disponibles, son comparables.
+
+En el censo de 1980, fue codificada según la “Clasificación Industrial Internacional Uniforme de Actividades Económicas” (**CIIU**) de las Naciones Unidas (Revisión 2-1968), hasta el nivel de ramas específicas (dos dígitos). Para 1991 y 2001 esta variable no presentó modificaciones sustanciales. Más información puede encontrarse en este [link](https://www.indec.gob.ar/micro_sitios/clanae/default.asp).
+
+En la **EPH** entre 1974, su primera onda, hasta 1980 inclusive, se han utilizado los tres primeros dígitos de la **CIIU**, Revisión 2, aunque la codificación original consta de hasta 5 dígitos a su nivel más detallado. A partir del año 1997, se ha utilizado la “Clasificación Nacional de Actividades Económicas” (ClaNAE-97) con un detalle a cinco dígitos. Más tarde, desde 2011, la **EPH** distingue las ramas de actividad según la “Clasificación de Actividades Económicas para Encuestas Sociodemográficas del Mercosur” (**CAES Mercosur 1.0**), utilizando los 5 dígitos del código. Así mismo, esta última versión del CAES es totalmente compatible con el **CIIU** en su revisión 4.
+
+```{r fig.cap= "Ejemplo clasificación de Actividades Profesionales, Científicas y Técnicas - CAES 1.0 [@INDEC2011d]", fig.align='center', out.width = '80%', echo=FALSE, eval = knitr::is_html_output()}
+knitr::include_graphics("imagenes/caes10.png")
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, eval = !knitr::is_html_output()}
+
+caes_tabla <- data.frame(c1 = c("M", "69",	"6900",	"70",	"7000",	"71",	"7100",	"72",	"7200",
+                                "73",	"7301",	"7302",	"74",	"7400",	"75",	"7500"),
+                         c2 = c("ACTIVIDADES PROFESIONALES, CIENTÍFICAS Y TÉCNICAS",	
+                                "ACTIVIDADES JURÍDICAS Y DE CONTABILIDAD",	
+                                "Actividades jurídicas y de contabilidad",
+                                "ACTIVIDADES DE SERVICIO DE CONSULTORÍA EN GESTIÓN EMPRESARIAL",
+                                "Actividades de servicios de consultoría en gestión empresarial",
+                                "SERVICIOS DE ARQUITECTURA E INGENIERÍA; ENSAYOS Y ANÁLISIS TÉCNICOS",
+                                "Servicios de arquitectura e ingeniería; ensayos y análisis técnicos",
+                                "INVESTIGACIÓN Y DESARROLLO",
+                                "Investigación y desarrollo",
+                                "PUBLICIDAD E INVESTIGACIÓN DE MERCADOS",
+                                "Actividades publicitarias",
+                                "Investigación de mercados y encuestas de opinión pública",
+                                "OTRAS ACTIVIDADES PROFESIONALES, CIENTÍFICAS Y TÉCNICAS",
+                                "Otras actividades profesionales, científicas y técnicas",
+                                "ACTIVIDADES VETERINARIAS",
+                                "Actividades veterinarias"),
+                         c3 = c("1", "2", "4", "2", "4", "2", "4", "2", "4", "2", "4", "4", "2",
+                                "4", "2", "4")
+)
+
+caes_tabla %>% 
+  flextable() %>% 
+  set_table_properties(width = 1, layout = "autofit") %>% 
+  set_header_labels(c1 = "Código", c2 = "Descripción", c3 = "Cantidad de dígitos") %>% 
+  bold(part = "header") %>% 
+  set_caption("Ejemplo clasificación de Actividades Profesionales, Científicas y Técnicas - CAES 1.0") %>%   add_footer_row(values = "Fuente: INDEC (2011)", colwidths = 3) %>% 
+  fontsize(part = "all", size = 10)                            
+```
+
+En el siguiente cuadro podemos ver todas las clasificaciones que se han ido implementando para codificar las ramas de actividad económica.
+
+```{r fig.cap= "Clasificadores de la rama de actividad", fig.align='center', out.width = '80%', echo=FALSE, eval = knitr::is_html_output()}
+knitr::include_graphics("imagenes/t4_u4.png")
+```
+
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, eval = !knitr::is_html_output()}
+
+caes_tabla2 <- data.frame(c1 = c("CIIU Revisión 2", "CIIU Revisión 3", "CAES Mercosur (CIIU Revisión 3)",
+                                 "ClaNAE-97", "CAES 2000 Mercosur (CIIU Revisión 4)",
+                                 "CAES - Mercosur 1.0 Versión Argentina"),
+                          c2 = c("1974-1989", "", "", "1997", "2000-2010", "2011-2020"),
+                          c3 = c("1980", "1991", "2001", "", "2010", "")
+)
+
+caes_tabla2 %>% 
+  flextable() %>% 
+  set_table_properties(width = 1, layout = "autofit") %>% 
+  set_header_labels(c1 = "Clasificación Rama de Actividad", c2 = "EPH", c3 = "Censos") %>% 
+  bold(part = "header") %>% 
+  set_caption("Clasificadores de la rama de actividad") %>%   
+  add_footer_row(values = "Fuente: elaboración propia", colwidths = 3) %>% 
+  fontsize(part = "all", size = 10)                            
+```
+
+
+
+### Categoría de Ocupación
+
+Esta variable es de vital importancia para la construcción de esquemas de estratificación ya que permite discriminar a la población en función de su posicionamiento en las relaciones de producción y a partir del origen de sus ingresos. Por un lado diferencia a aquellos que compran fuerza de trabajo y son dueños o controladores de los medios de producción (**empleadores** o **patrones**), y aquellos que deben vender su fuerza de trabajo para recibir un salario (**asalariados** u **obreros**). Entre estas situaciones contrapuestas, nos encontramos con los **trabajadores por cuenta propia** o **independientes** que no venden su fuerza de trabajo a una única persona ni son empleadores de fuerza de trabajo ajena.
+
+Otras situaciones que suele distinguir la **categoría ocupacional** es a los **trabajadores familiares no remunerados**.
+
+### Sector de Actividad
+
+Permite distinguir a la población trabajadora según si el establecimiento en el que realiza su actividad es estatal o privado. Algunas encuestas, a su vez, discriminan también al sector doméstico, las organizaciones no gubernamentales (ONGs) o a las cooperativas de trabajo.  
+
+### Tamaño del Establecimiento
+
+Esta variable se utiliza generalmente para realizar cortes dentro de la estratificación social que permitan observar procesos de heterogeneidad productiva o segmentación de mercados. Utilizando como línea de corte, generalmente, a los 5 o 10 ocupados, la variable permite discriminar a las micro-empresas de aquellos establecimientos medianos o grandes. Por otro lado, la variable de **tamaño del establecimiento** ha sido comúnmente señalada como *proxy* de nivel de productividad [@Tokman1987].
+
+### Supervisión  
+
+La **supervisión** del trabajo de otros es un indicador muy utilizado dentro del enfoque neo-marxista o neo-weberiano de las clases sociales, en donde se busca diferenciar aquellas posiciones "contradictorias" a partir de las cuales si bien se hace referencia a trabajadores asalariados, tienen poder de dirección (con mayores o menores niveles de autonomía) en el trabajo de otros.
+
+En algunas encuestas está dimensión es relevada directamente, acompañada de otras preguntas que pueden recabar información sobre la cantidad de personas supervisadas o las características de dicha actividad de supervisión. En la **EPH**, una aproximación a dicha cuestión puede realizarse a través de la varible **ocupación** medida a través del **CNO**. El tercer dígito de dicho código, que permite establecer la *jerarquía ocupacional* posibilita diferenciar a aquellas ocupaciones de ejecución directa de las de jefatura. Estas últimas implican aquellos trabajos en donde se organiza, supervisa y controlan procesos y personas comprometidas en su ejecución.
+
+## Explorando las variables socio-ocupacionales en la EPH {#eph4} 
+
+Paquetes que utilizaremos en este subcapítulo:
+```{r, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(eph)
+library(foreign)
+```
+
+En este apartado aplicaremos lo aprendido en punto anterior y exploraremos las distintas variables revisadas a partir de la **EPH**. Lo que nos interesa es identificarlas, saber qué nombre tienen y como se presentan sus categorías. Al mismo tiempo, revisaremos algunas de las cuestiones aprendidas en el [Capítulo 3](#fuentes). Aprovecharemos a utilizar la base del segundo trimestre de la **EPH** de 2015, ya que en la misma, excepcionalmente, la ocupación fue codificada tanto a partir del **CNO-01** como de la **CIUO-08**. De esta forma, por un lado descargaremos a través del paquete __```eph```__ y añadiremos la variable de ocupación descargando la información adicional desde la página de **INDEC**.
+
+En primer lugar descargamos la base: 
+
+```{r, message=FALSE, warning=FALSE}
+eph_ind_215 <- get_microdata(year = 2015, trimester = 2, type = "individual")
+```
+
+Como la codificación de la variable ocupación a partir de la **CIUO** se encuentra en un archivo aparte, debemos acceder al sitio de INDEC para descargarlo.
+
+```{r fig.cap= "Ejemplo clasificación de Actividades Profesionales, Científicas y Técnicas - CAES 1.0 [@INDEC2011d]", fig.align='center', out.width = '80%', echo=FALSE}
+knitr::include_graphics("imagenes/indec_ciuo.png")
+```
+
+Luego de descargado el archivo, descomprimiremos el ```.rar``` y utilizaremos el archivo eph_ciuo_215.dbf. A continuación abriremos dicho archivo y "pegaremos" la variable **PP04D_CIUO** en la base **eph_ind_215**. Utilizaremos las variables **CODUSU** (identificador de vivienda), **NRO_HOGAR** (identificador del hogar) y **COMPONENTE** (identificador de miembro del hogar) como ID para emparejar ambas bases. 
+
+```{r, message=FALSE, warning=FALSE}
+library(foreign)
+eph_ciuo_215 <- read.dbf("bases/eph_ciuo_215.dbf") #carga de base CIUO
+eph_ciuo_215 <- eph_ciuo_215 %>% 
+	select(CODUSU, NRO_HOGAR, COMPONENTE, PP04D_CIUO) #selecciono las variables que necesito retener
+
+eph_ind_215 <- eph_ind_215 %>% 
+	left_join(eph_ciuo_215, by = c("CODUSU", "NRO_HOGAR", "COMPONENTE")) #Pego la variable CIUO a la base eph_ind_215
+
+```
+
+Ahora podemos etiquetar la base utilizando el comando ```organize_labels``` del paquete __```eph```__:
+
+```{r, message=FALSE, warning=FALSE}
+eph_ind_215 <- organize_labels(eph_ind_215, type = "individual")
+
+eph_ind_215$CODUSU <- as.character(eph_ind_215$CODUSU) #Es necesario convertir a "character" para futuras operaciones. Esto se hace porque el comando "organize_labels" le cambia el formato a la variables.
+```
+
+¡Listo! La base está preparada para ser explorada.  
+
+### Condición de actividad  
+
+En la **EPH** la variable que mide la **condición de actividad** puede ser encontrada bajo el nombre "ESTADO". Exploraremos las distintas categorías y frecuencias de casos que presenta para dicho trimestre. 
+
+```{r, message=FALSE, warning=FALSE}
+table(eph_ind_215$ESTADO)
+```
+Como puede observarse las categorías son *entrevista individual no realizada*, *ocupado*, *desocupado*, *inactivo* y *menor de 10 años*. En el caso de que pretendamos seleccionar únicamente a la población económicamente activa, deberemos filtrar las categorías 1 (ocupado) y 2 (desocupado). En este caso nos quedaríamos con 25848 registros.
+
+```{r, message=FALSE, warning=FALSE}
+eph_2015_PEA <- eph_ind_215 %>% 
+	filter(ESTADO == 1 | ESTADO == 2)
+
+nrow(eph_2015_PEA)
+```
+
+### Ocupación
+
+Como presentaremos en la próxima unidad, la ocupación es la variable central en la construcción de esquemas de estratificación y clases sociales. En el caso de la EPH, los censos (posteriores a 1991) y las diversas encuestas que produce el **INDEC**, en las que se releva información ocupacional, suelen codificar dicha variable a través del **CNO**.
+
+La **EPH** recaba la ocupación tanto para la población ocupada como desocupada, relevando para este último grupo el dato de la última ocupación realizada, en el caso que hubiera existido. Mientras que el primer dato se guarda en la variable *PP04D_COD*, la última ocupación de los desocupados puede encontrarse en la variable *PP11D_COD*. Con el comando ```table``` podemos visualizar todos los códigos existentes en la base y su frecuencia absoluta.
+
+```{r, message=FALSE, warning=FALSE}
+table(eph_ind_215$PP04D_COD)
+```
+
+Por otro lado, el paquete __```eph```__ mediante la función ```organize_CNO``` nos agrega 4 columnas a la base en donde se clasifica cada componente del CNO: carácter, jerarquía, tecnología y calificación ocupacional. A continuación revisamos dicho comando y solicitaremos las frecuencias, por ejemplo, de la calificación.
+
+```{r, message=FALSE, warning=FALSE}
+eph_ind_215 <- organize_cno(base = eph_ind_215)
+
+table(eph_ind_215$CALIFICACION)
+```
+
+Por su parte en la variable *PP04D_CIUO* encontraremos a la ocupación codificada según el **CIUO**.  
+
+```{r, message=FALSE, warning=FALSE}
+table(eph_ind_215$PP04D_CIUO)
+```
+
+A través del paquete __```modest```__ y el comando ```mfv``` (most frequent value) calcularemos la moda de dichas variables, es decir, la ocupación más repetida en el relevamiento.  
+
+```{r, message=FALSE, warning=FALSE}
+modeest::mfv(eph_ind_215$PP04D_CIUO, na.rm = TRUE)
+```
+
+El código 4110 designa a los **oficinistas generales**
+
+### Rama de actividad  
+
+Al igual que para el caso de la ocupación, la rama de actividad es computada tanto para la población ocupada como la desocupada. En los relevamientos previos a 2011 y posteriores a 2016, en el primer caso acudimos a la variable *PP04B_COD* mientras que en el segundo a la *PP11B_COD*. Para los relevamiento entre 2011 y 2015, dichas variables fueron nombradas sin el sufijo *_COD* y con el sufijo *_CAES*. 
+
+Echamos un vistazo a la distribución de la población ocupada según la rama de actividad.
+
+```{r, message=FALSE, warning=FALSE}
+table(eph_ind_215$PP04B_CAES)
+```
+
+Del mismo modo que con la ocupación, el paquete __```eph```__ mediante la función ```organize_CAES``` nos agrega 8 columnas a la base en donde se clasifican distintas cuestiones: versión de la CAES, código de sección y división, etiqueta de sección y división y clasificación de ramas de actividad agregadas. A continuación revisamos dicho comando y solicitaremos las frecuencias de las ramas agregadas.
+
+```{r, message=FALSE, warning=FALSE}
+eph_ind_215$PP04B_COD <- as.character(eph_ind_215$PP04B_COD) #esta linea de comando corrige un error derivado del auto-etiquetamiento de las categorías.
+eph_ind_215 <- organize_caes(base = eph_ind_215)
+
+table(eph_ind_215$caes_eph_label)
+```
+
+### Categoría de ocupación  
+
+La categoría de ocupación es una variable que también es de vital importancia en la construcción de clasificaciones. La misma puede encontrarse bajo el nombre de *CAT_OCUP*. A continuación exploramos sus categorías.
+
+```{r, message=FALSE, warning=FALSE}
+table(eph_ind_215$CAT_OCUP)
+```
+
+
+### Sector de actividad  
+
+En la **EPH** el sector de actividad puede encontrarse en la variable *PP04A*.
+
+```{r, message=FALSE, warning=FALSE}
+table(eph_ind_215$PP04A)
+```
+
+
+### Tamaño del establecimiento  
+
+La medición del tamaño del establecimiento se encuentra distribuida en dos variables: *PP04C* y *PP04C99*. La primera permite captar en forma detallada el tamaño del establecimiento donde trabaja la persona en diferentes rangos, mientras que la segunda permite recuperar, mediante una clasificación más acotada, aquel dato que en la primera variable figuraba como "Ns/Nc". A continuación exploramos ambas variables en forma cruzada.
+
+```{r, message=FALSE, warning=FALSE}
+table(eph_ind_215$PP04C, eph_ind_215$PP04C99)
+```
+
+Al igual que en el caso de la ocupación y la rama de actividad, para aquellas personas desocupadas que han trabajado alguna vez en el pasado, el tamaño del establecimiento puede ser identificado en las variables *PP11C* y *PP11C99*.
+
+### Supervisión 
+
+Si bien la supervisión no es una variable medida directamente en la **EPH**, podemos aproximarnos a dicha noción a través del **CNO**. En su tercer dígito mide la jerarquía ocupacional. Sin embargo, para extraer dicha información es necesario "partir" el código ocupacional, reteniendo el tercer dígito. A través de __```R```__, realizaremos la operación utilizando la función ```str_sub``` del paquete __```stringr```__, indicando que dígitos queremos retener. En este caso debemos señalar que queremos retener únicamente el tercer dígito (que empiece en el 3 y termine en el 3) y se lo asignaremos a una nueva variable llamada "cno_jerarquia".
+
+```{r, message=FALSE, warning=FALSE}
+eph_ind_215$cno_jerarquia <- str_sub(eph_ind_215$PP04D_COD, start = 3, end = 3)
+
+eph_ind_215 %>% 
+	filter(cno_jerarquia == 2) %>% 
+	nrow()
+```
+Conociendo que el código 2 es el que hace referencia a la jefatura, si filtramos los resultados podemos decir que existen 619 casos que supervisan las tareas de otras personas.  
+
+```{r, message=FALSE, warning=FALSE, include=FALSE}
+rm(eph_ciuo_215)
+```

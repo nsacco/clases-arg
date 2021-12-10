@@ -1,0 +1,486 @@
+# (PART) Fuentes de datos {-}
+
+# Encuestas de hogares {#fuentes}  
+
+Este capítulo tiene como propósito presentar a la **Encuesta Permanente de Hogares** (EPH), elaborada por el [Instituto Nacional de Estadísticas y Censos](www.indec.gob.ar){target="_blank"} (INDEC), en tanto herramienta central para el estudio de la estructura de clases en Argentina. Asimismo, introducimos otras encuestas de hogares alternativas para el estudio de las clases sociales y su vínculo con ciertos tópicos de la desigualdad social.
+
+Abordaremos las siguientes preguntas:
+
+- ¿Cuáles son las principales características que presenta la EPH?
+- ¿Qué elementos presenta para el estudio de la estructura de clases argentina? 
+- ¿Cuáles son las limitaciones que debemos considerar? ¿Qué cambios ha presentado a lo largo del tiempo?
+- ¿Cuáles son las principales variables para el análisis de clase? 
+- ¿Qué formas existen para acceder a los micro-datos?
+- ¿Qué ventajas presenta cada forma de acceso? 
+- ¿Por qué es necesario considerar otras fuentes de información a la hora de analizar las clases sociales?
+
+Al completar este capítulo se espera que les lectores puedan:
+
+1. Identificar las principales características, ventajas y desventajas en el uso de la EPH para el estudio de la estructura de clases en Argentina.
+2. Aprender a localizar la información necesaria, incorporando distintos métodos de acceso a la misma (descarga de microdatos desde la web de INDEC y uso de paquete __```eph```__ para __`R`__).
+3. Conocer otras fuentes de información existentes para el estudio de las clases sociales y diversas facetas de la desigualdad.
+4. Incorporar las herramientas para abrir los micro-datos de EPH en `RStudio` y realizar exploraciones preliminares.
+
+Para una mayor comprensión del capítulo recomendamos la lectura de los siguientes documentos:
+
+INDEC. [-@INDEC2020]. Encuesta Permanente de Hogares. Diseño de registro y estructura para las bases preliminares Hogar y Personas. INDEC. [link de descarga](https://www.indec.gob.ar/ftp/cuadros/menusuperior/eph/EPH_registro_1t20.pdf)  
+
+INDEC. [-@INDEC2003]. La nueva Encuesta Permanente de Hogares de Argentina: 2003. [link de descarga](https://www.indec.gob.ar/ftp/cuadros/sociedad/metodologia_eph_continua.pdf)
+
+Kozlowski, D., Tiscornia, P., Weksler, G., Rosati, G., y Shokida, N. [-@kozlowski2020]. eph: Argentina’s permanent household survey data and manipulation utilities (manual). [link de descarga](https://cloud.r-project.org/web/packages/eph/eph.pdf)  
+
+Minoldo, S., y Born, D. [-@Minoldo.Born2019]. Claroscuros: 9 años de datos bajo sospecha (EPH en Argentina entre 2007 y 2015). [link de descarga](https://issuu.com/cieseditora/docs/claroscuros_minoldo-born)
+
+## La Encuesta Permanente de Hogares. Características principales {#eph1}
+
+La **Encuesta Permanente de Hogares** (EPH) se constituye como un programa nacional de producción sistemática y permanente de indicadores sociales que lleva a cabo el INDEC. que fundamentalmente permite conocer las características sociodemográficas y socioeconómicas de la población de manera periódica. Comenzó a aplicarse desde 1973, bajo una modalidad (puntual) que implicaba un doble relevamiento anual (mayo y octubre). Si bien hasta el año 1983 tenía una cobertura limitada al Gran Buenos Aires (GBA), paulatinamente fue ampliándose llegando en la actualidad a cubrir un total de 31 aglomerados:
+
+- Gran La Plata 
+- Bahía Blanca - Cerri 
+- Gran Rosario
+- Gran Santa Fé
+- Gran Paraná
+- Posadas
+- Gran Resistencia
+- Comodoro Rivadavia - Rada Tilly 
+- Gran Mendoza
+- Corrientes
+- Gran Córdoba
+- Concordia
+- Formosa
+- Neuquén – Plottier
+- Santiago del Estero - La Banda
+- Jujuy-Palpalá
+- Río Gallegos
+- Gran Catamarca
+- Gran Salta
+- La Rioja
+- Gran San Luis
+- Gran San Juan
+- Gran Tucumán - Tafí Viejo
+- Santa Rosa – Toay
+- Ushuaia - Río Grande
+- Ciudad Autónoma de Buenos Aires
+- Partidos del GBA
+- Mar del Plata - Batán
+- Río Cuarto
+- San Nicolás – Villa Constitución 
+- Rawson – Trelew
+- Viedma – Carmen de Patagones  
+
+
+Respecto a la EPH puntual, existen distintos tipos de bases de datos oficiales publicadas, ordenadas según su nivel de complejidad y de desagregación de las variables: Base r2 usuarias (R2U), Base usuaria (BU), Base de trabajo (BT), Base usuaria ampliada (BUA).
+
+### Características de la EPH continua
+<!--habría que citar más acá todo esto-->
+A partir de 2003, el INDEC reformuló integralmente a la EPH, dando lugar a lo que se conoce como "EPH continua". Específicamente podemos hablar de los siguientes cambios: 
+
+* *Reformulación temática*: se realizaron cambios en la forma de captación de las principales dimensiones relevadas a los fines de medir en forma más precisa aquellos procesos sociales que sufrieron transformaciones en la última década del siglo XX.
+
+* *Reformulación muestral*: la periodicidad de la encuesta paso a ser de cuatro estimaciones por año (trimestral), ampliando la cobertura geográfica y manteniéndose el diseño de panel (esquema de rotación de los hogares).
+
+Actualmente la EPH releva específicamente a 31 aglomerados urbanos que representan el 70% de la población urbana del país. El instrumento de recolección consta de tres cuestionarios (vivienda, hogares y personas), aunque las bases de microdatos se presentan bajo el formato de hogares e individuos. Las principales dimensiones relevadas son:
+
+* situación laboral
+* características demográficas básicas
+* migración
+* características habitacionales
+* educación
+* ingresos  
+
+El esquema de rotación del diseño de panel (2-2-2), implica que las viviendas de un área ingresan a la muestra para ser encuestadas en dos trimestres consecutivos, en el mes y semana asignados a esa área. Luego, se retiran por dos trimestres consecutivos y vuelven a la muestra para ser encuestadas en dos trimestres consecutivos en el mes y semana asignados a esa área.  
+
+### La EPH como fuente de análisis de la estructura de clases
+
+La EPH presenta, al menos, tres características fundamentales que la transforman en una fuente de datos predilecta para el estudio de la estructura de clases:
+
+1. *Variables sociolaborales*: la encuesta cuenta con un conjunto de variables que relevan la dimensión sociolaboral que no son frecuentemente relevadas en otras las encuestas de hogares. Principalmente nos referimos a variables que permiten determinar la posición que los individuos ocupan en las relaciones de trabajo: la condición de actividad, la categoría ocupacional, la ocupación, el sector de actividad, la rama de actividad, el tamaño del establecimiento en el cual se ejerce el trabajo, la supervisión del empleo de otros trabajadores, etc. Todas estás variables son centrales para la construcción de la mayoría de los nomencladores socio-ocupacionales y esquemas de clase, más allá de su filiación teórica.
+
+2. *Relevamiento continuo y generalizado*: el hecho de que la construcción de la información se realice en forma periódica y desde hace años, permite que la comparabilidad a lo largo del tiempo (no sin dificultades en los "empalmes" entre momentos en los que hubo cambios metodológicos significativos). A su vez, al relevar aproximadamente al 70% de los aglomerados urbanos de la Argentina, permite distintos niveles de comparabilidad a nivel regional, de ciudades u otras áreas geográficas.
+
+3. *Relevamiento de otras dimensiones*: finalmente, el relevamiento de otras dimensiones tales como las características demográficas y de composición de los hogares, el hábitat, el logro educativo o los ingresos, permite la puesta en relación del posicionamiento de clase con otros tópicos centrales de la desigualdad.
+
+Basta citar algunos trabajos recientes que, desde un enfoque de clases, han utilizado la EPH, para mostrar su utilidad [@Benza2016; @ChavezMolina2015; @Dalle.Stiberman2017; @Palomino.Dalle2012; @Pla.etal2018; @Sacco2019; @Solis.etal2019]. 
+
+## Comenzando a utilizar la EPH {#eph2}
+
+En este capítulo trabajaremos a partir de las siguientes librerías de **`R`**:
+
+```{r, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(eph)
+library(haven)
+library(foreign)
+library(rmarkdown)
+```
+
+Existen, al menos, dos formas de descargar y abrir las bases de micro-datos de la EPH desde **`R`**. En primer lugar vamos a revisar los pasos para efectuar dicha operación a partir de la información descargada manualmente desde la web de [INDEC](https://www.indec.gob.ar/indec/web/Institucional-Indec-BasesDeDatos){target="_blank"}. Como hemos visto anteriormente, este método "clásico" nos permite acceder a todas las bases de la EPH disponibles oficialmente, desde 1974 a la actualidad. 
+
+```{r, echo = F, warning = F, message = F}
+library("vembedr")
+embed_youtube("90exzR1GoDY")
+```
+<!-- acá hay que ver si vamos a tener que sacar los videos y poner el texto junto con las imágenes, para las versiones no web del libro. Creo que hay una forma de programar esto que hay que revisar-->
+La segunda forma que revisaremos será a través del uso del paquete [eph](https://github.com/holatam/eph){target="_blank"} [@kozlowski2020]. Este paquete nos simplificará el trabajo de descarga de micro-datos, así como el armado de _pools_ de datos. Temporalmente, su única limitación es que sólo podemos descargar las bases a partir de la primera onda de 1996.
+
+### El "método clásico"
+
+#### Bases 2016-2020
+
+Como se ha presentado previamente, dependiendo del período que necesitemos analizar, encontraremos que las bases a descargar se encuentran en distintos formatos de archivo. Al día de la fecha (`r format(Sys.time(), '%d %B, %Y')`) el INDEC no ha brindado su información bajo formato ```.RData```.
+
+Como ejemplo, podemos comenzar por una primera prueba descargando la base correspondiente al tercer trimestre de 2019 en formato `.txt` ([link de descarga](https://www.indec.gob.ar/ftp/cuadros/menusuperior/eph/EPH_usu_3_Trim_2019_txt.zip){target="_blank"}). El archivo `.zip` que descarguemos contendrá un archivo `.txt` referido a la base de individuos (Usu_individual_T319.txt) y otro referido a la base de hogares (Usu_hogar_T319.txt).
+
+Como buena práctica en la organización de la información que vamos utilizando, es recomendable alojar los archivos (en este caso las bases que descarguemos) en la carpeta del proyecto con el que estemos trabajando en __`RStudio`__ (en este caso, le hemos puesto el nombre "bases"). En este caso utilizaremos el comando ```read.csv2```, ya que nos permite importar archivos de texto plano delimitados. Señalamos que el delimitador es `;` y que el archivo cuenta en su línea superior con los nombres de las variables ```(header = TRUE)```.
+
+```{r}
+eph_ind_319 <- read.csv2("bases/Usu_individual_T319.txt", header = TRUE, sep = ";", dec = ",")
+```
+
+Observando los primeros 15 registros de la base podemos dar cuenta que la misma se ha cargado correctamente y explorar las distintas variables que contiene. 
+
+<br>
+
+```{r, echo=FALSE}
+eph_ind_319s <- eph_ind_319 %>% 
+	slice(1:15)
+paged_table(eph_ind_319s)
+```
+
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, eval = !knitr::is_html_output()}
+library(flextable)
+
+eph_ind_319s %>% 
+  select(c(1:6)) %>% 
+  flextable() %>% 
+  set_table_properties(width = 1, layout = "autofit") %>% 
+  set_caption("Recorte base de datos EPH individual. Año 2019 - tercer trimestre") %>% 
+  add_footer_row(values = "Fuente: EPH - INDEC", colwidths = 6) %>% 
+  fontsize(part = "all", size = 8) %>% 
+  bold(part = "header")
+```
+
+<br>
+
+La base cuenta con 57229 registros-filas (individuos) y 177 columnas (variables). 
+
+```{r}
+nrow(eph_ind_319)
+ncol(eph_ind_319)
+```
+
+#### Bases 2003-2015
+
+En el caso de las bases de microdatos pertenecientes al período 2003-2015, podemos encontrarlas en formato ```.sav``` (SPSS) y ```.dta``` (STATA). Ambos formatos pueden ser importados desde __`R`__ a través de la librería __```Haven```__ que debemos instalar. 
+
+En este ejemplo utilizaremos la base de hogares del cuarto trimestre de 2014 ([Hogar_t414](https://www.indec.gob.ar/ftp/cuadros/menusuperior/eph/t414_sav.rar){target="_blank"}) y la descargaremos en formato ```.sav```.
+
+```{r}
+eph_hog_414 <- read_sav("bases/Hogar_t414.sav")
+```
+
+Una de las ventajas de importar los datos desde el formato ```.sav``` o ```.dta``` es que generalmente están etiquetadas las variables. En el caso de la importación de archivos ```.txt``` o ```.csv``` esto no sucede.
+
+```{r, echo=FALSE}
+eph_hog_414 <- eph_hog_414 %>% 
+	slice(1:15)
+paged_table(eph_hog_414)
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, eval = !knitr::is_html_output()}
+
+eph_hog_414 %>% 
+  select(c(1:10)) %>% 
+  flextable() %>% 
+  set_table_properties(width = 1, layout = "autofit") %>% 
+  set_caption("Recorte base de datos EPH hogar. Año 2014 - cuarto trimestre") %>% 
+  add_footer_row(values = "Fuente: EPH - INDEC", colwidths = 10) %>% 
+  fontsize(part = "all", size = 8) %>% 
+  bold(part = "header")
+```
+
+#### Bases 1974-2002
+
+Finalmente probaremos descargar la base más antigua que se encuentra disponible en la página web del INDEC. Nos referimos a los microdatos de la base usuaria de individuos del año 1974 para el Gran Buenos Aires ([link de descarga](https://www.indec.gob.ar/dbindec/eph/bases_usuarias/Bu01374.zip){target="_blank"}). 
+
+Como hemos señalado, las bases anteriores a 2003 se encuentran únicamente en formato ```.dbf```. Para poder importarlas en `R` necesitaremos instalar y llamar a la librería __```foreign```__.
+
+```{r}
+eph_ind_74 <- read.dbf("bases/PERSO_US.DBF")
+```
+
+Aquí podemos ver los primeros 15 registros de la base:
+
+```{r, echo=FALSE}
+eph_ind_74 <- eph_ind_74 %>% 
+	slice(1:15)
+paged_table(eph_ind_74, options = list(rows.print = 15))
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, eval = !knitr::is_html_output()}
+
+eph_ind_74 %>% 
+  select(c(1:9)) %>% 
+  flextable() %>% 
+  set_table_properties(width = 1, layout = "autofit") %>% 
+  set_caption("Recorte base de datos EPH individual. Año 1974") %>% 
+  add_footer_row(values = "Fuente: EPH - INDEC", colwidths = 9) %>% 
+  fontsize(part = "all", size = 8) %>% 
+  bold(part = "header")
+```
+
+
+### Usando el paquete EPH para `R`
+
+El paquete __```eph```__ es una gran herramienta para usuaries de `R` que utilicen con frecuencia la EPH. Permite no solo la descarga de las bases oficiales del INDEC, sino que también, entre varias funciones, nos habilita a incorporar las etiquetas a las variables y categorías, organizar _pools_ de datos en panel o calcular y estimar tasas de pobreza.
+
+En este manual, aprenderemos a descargar las bases de la EPH a través del paquete y armar un _pool_ de datos, en el que dispondremos de distintas bases unidas, para distintos tipos de análisis.
+
+En primer lugar probaremos descargar la base individual de la EPH para el 4to trimestre de 2019, a través de la función ```get_microdata```. Vale aclarar que, al momento, únicamente pueden descargarse las bases posteriores al año 1996.
+
+```{r, message=FALSE, warning=FALSE}
+eph_ind_419 <- get_microdata(year = 2019, trimester = 4, type = "individual")
+```
+
+Como puede observarse, la función es sumamente intuitiva. Únicamente debemos modificar los parámetros ```year```, ```trimester``` y ```type```, para descargar la información deseada. En el caso de la EPH puntual, en lugar de usar el parámetro ```trimester``` utilizaremos ```wave```, que acepta los valores 1 y 2. En este caso, creamos el objeto **eph_ind_419** para guardar la base descargada.
+
+Por _default_, la función nos devuelve todas las variables, si queremos realizar alguna selección de variables podríamos utilizar el parámetro ```vars```. Aquí un ejemplo:
+
+```{r, message=FALSE, warning=FALSE}
+eph_estado <- get_microdata(year = 2019, trimester = 4, type = "individual", vars = c("CODUSU", "NRO_HOGAR", "ANO4", "ESTADO"))
+
+names(eph_estado)
+```
+
+En el ejemplo anterior, elegimos únicamente descargar las variables CODUSU, NRO_HOGAR, ANO4 y ESTADO. Dicho parámetro es muy útil para descargar solo aquella información que realmente necesitamos y no ocupar la memoria RAM de datos innecesarios. Sobre todo cuando armemos _pools_ de datos y las bases construidas sean de un gran peso, el parámetro ```vars``` será de una gran utilidad.
+
+Otra utilidad importante del paquete es que nos permite etiquetar las variables y las categorías automáticamente. Para ello se utiliza la función ```organize_labels```:
+
+```{r, message=FALSE, warning=FALSE}
+eph_ind_419 <- organize_labels(eph_ind_419, type = 'individual')
+```
+
+Por ejemplo, visualizaremos las etiquetas de la variable ESTADO:
+
+```{r, message=FALSE, warning=FALSE}
+attributes(eph_ind_419$ESTADO)
+```
+
+La variable se encuentra etiquetada como "Condición de actividad". El tipo (class) de variable es "labelled" e "interger", ya que si bien la variable es numérica entera también se encuentra etiquetada (labelled). Finalmente podemos ver las cuatro categorías de la variable: 0) Entrevista individual no realizada; 1) Ocupado; 2) Desocupado; 3) Inactivo; 4) Menor de 10 años.
+
+Finalmente, la función ```get_microdata``` también nos permite descargar múltiples bases de la EPH y que luego podemos pegar a los fines de poder trabajarlas longitudinalmente. Mostraremos un ejemplo descargando la selección de variables que hemos realizado anteriormente, pero para todos los cuartos trimestres de los años 2017-2019.
+
+```{r, message=FALSE, warning=FALSE}
+eph_estado_1719 <- get_microdata(year = 2017:2019, trimester = 4, type = "individual", vars = c("CODUSU", "NRO_HOGAR", "ANO4", "ESTADO")) #Descargo las bases
+
+eph_estado_1719 <- eph_estado_1719 %>%
+  select(microdata) %>%
+  unnest(cols = c(microdata)) #Ya que la información descargada se guarda en un objeto de tipo "lista", debemos des-anidar la columna "microdata" en donde están las bases.
+
+```
+
+En el segundo paso utilizamos las funciones ```dplyr::select``` y ```tidyr::unnest```. Podríamos haber descargado la información de todos los trimestres modificando el parámetro ```trimester``` con el valor c(1:4).
+
+Como advertencia, al descargar un número importante de bases (y de variables), el proceso puede tornarse lento y, al mismo tiempo, su resultado satisfactorio puede depender de la cantidad de memoria RAM disponible que tengamos al momento.
+
+## Primeros pasos en el estudio de las clases sociales a través de la EPH {#eph3} 
+
+En esta sección exploraremos la EPH, identificando aquellas variables que tendremos que manipular, configurar y filtrar para comenzar a utilizar la encuesta. Específicamente presentaremos: 
+
+- aquellas variables que nos permiten identificar viviendas y hogares, y que nos habilitarán a vincular la base de individuos con la de hogares;
+
+- aquellas variables que nos permiten seleccionar a la población adecuada, según nuestros objetivos, en el estudio de clases (edad, aglomerado, condición de actividad, etc.);
+
+- aquellas variables que nos permiten expandir y ponderar la muestra de datos.
+
+### Uniendo las bases de individuos y hogares
+
+Muchas veces debemos utilizar en forma combinada la información de la base de individuos y la base de hogares. Por ejemplo, en el estudio de las clases sociales, si queremos estudiar como se distribuyen las condiciones habitacionales según la posición de clase, es necesario "traer" algunas variables de dicha dimensión a la base de individuos, desde donde vamos a construir nuestro esquema de clases sociales (debido a que la información socio-laboral se encuentra ahí). Esto comúnmente se conoce como "unión" de bases y es una práctica frecuente en el uso de bases de datos.
+
+Al unir las bases de la EPH debe atenderse al hecho de que, en términos metodológicos, estaremos transitando de una unidad de análisis a otra. Mientras que en la base de hogares las unidades de análisis son la vivienda y el hogar, en la base individual nos estaremos refiriendo a personas. Siguiendo el ejemplo señalado en el párrafo anterior, si transferimos algunas variables sobre condiciones habitacionales a la base de individuos, estaremos transformándolas en atributos de las personas y no de las viviendas.
+
+En ambas bases existen dos variables que nos permiten identificar a los hogares, para así realizar una unión precisa: ```CODUSU``` y ```NRO_HOGAR```. Mientras que la primera es un ID que distingue viviendas, la segunda permite distinguir hogares al interior de las mismas. Ambas nos permitirán no solo identificar hogares e individuos que residen en dichos hogares entre ambas bases, sino que también permiten hacer el seguimiento de los hogares en el panel.
+
+Como primer ejercicio, utilizando el paquete __```eph```__ descargaremos las bases de individuos y hogares del tercer trimestre de 2019.
+
+```{r, message=FALSE, warning=FALSE}
+eph_ind_319 <- get_microdata(year = 2019, trimester = 3, type = "individual")
+eph_hog_319 <- get_microdata(year = 2019, trimester = 3, type = "hogar")
+```
+
+Suponiendo que utilizaremos distintas variables de la base de hogares, probaremos "traer" todas las variables a la base de individuos. Para eso utilizaremos la función ```left_join``` del paquete __```dplyr```__ y crearemos un nuevo `dataframe` llamado *eph_319*...
+
+```{r, message=FALSE, warning=FALSE}
+eph_319 <- eph_ind_319 %>% 
+	left_join(eph_hog_319, by = c("CODUSU", "NRO_HOGAR"))
+```
+
+Una vez unidas ambas bases, podemos visualizar el resultado. Teniendo en cuenta los primeros 15 casos, podemos observar que el número de variables asciende 242. La función ```left_join``` al unir ambos *data frames*, identifica con las siglas ```.x``` y ```.y``` a aquellas variables repetidas en ambas bases. Las que llevan la ```x``` corresponderán a la base de individuos y las que llevan ```y``` a la base de hogares. Ejemplo de esto son las variables de ponderación (PONDERA, PONDIH), las de identificación de la base (ANO4, TRIMESTRES, NRO_HOGAR) o las de ingresos (ITF, IPCF). Debido a que ambas presentan la misma información por caso, eliminaremos (mediante la función ```select(!(ends_with(".y")))```) las que finalizan con _y_.
+
+```{r, message=FALSE, warning=FALSE}
+eph_319 <- eph_319 %>%
+	select(!(ends_with(".y"))) 
+```
+
+```{r echo=FALSE}
+eph_319s <- eph_319 %>%
+	slice(1:15)
+paged_table(eph_319s)
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, eval = !knitr::is_html_output()}
+
+eph_319s %>% 
+  select(c(1:6)) %>% 
+  flextable() %>% 
+  set_table_properties(width = 1, layout = "autofit") %>% 
+  set_caption("Recorte base de datos EPH individual - hogar. Año 2019 - tercer trimestre") %>% 
+  add_footer_row(values = "Fuente: EPH - INDEC", colwidths = 6) %>% 
+  fontsize(part = "all", size = 8) %>% 
+  bold(part = "header")
+```
+
+
+De este modo, el `dataframe` resultante (eph_319) presenta la estructura de la base de individuos y para cada registro (individuo), se agrega la información correspondiente a su hogar.Por último etiquetaremos las variables y categorías de las bases con la función ```organize_labels``` del paquete **```eph```**.
+
+```{r, message=FALSE, warning=FALSE}
+eph_ind_319 <- organize_labels(eph_ind_319, type = "individual")
+eph_hog_319 <- organize_labels(eph_hog_319, type = "hogar")
+```
+
+### Seleccionando sobre que población trabajar
+
+En los estudios de clases sociales no es lo mismo trabajar con individuos u hogares, jóvenes o viejos, habitantes de la totalidad del país o de una ciudad particular. Varias decisiones respecto al universo de estudio, las unidades de análisis y el enfoque temporal, deben hacerse en forma previa para realizar posteriormente un análisis preciso según las preguntas de investigación. En este apartado exploraremos algunas filtros que son aplicados comúnmente en este tipo de investigaciones.
+
+#### Selección temporal
+
+Una primera decisión será definir sobre que **período temporal** trabajaremos en nuestra investigación. En este caso, tomando la base de individuos que hemos descargado, nos ceñiremos al tercer trimestre de 2019.
+
+Sin embargo, nuestros objetivos pueden corresponderse a preguntas de tipo longitudinal, por lo cual nuestra selección podría abarcar un mayor período de tiempo, en términos de trimestres o de años. Por ejemplo, anteriormente descargamos tres bases de datos que correspondían a los cuartos trimestres de 2017 a 2019. En ese caso, por ejemplo, podríamos analizar los cambios ocurridos en la estructura de clases, observando la distribución de las mismas en cada cuarto trimestre durante tres años.
+
+#### Selección espacial
+
+En segundo lugar deberemos definir sobre que **espacio**, en términos geográficos o de jurisdicción (políticos), estaremos haciendo nuestro análisis. Como señalamos, la EPH recaba información sobre los principales aglomerados del país, cubriendo aproximadamente a un 70% de la población nacional total. La población se encuentra clasificada según su aglomerado de residencia en la variable ```AGLOMERADO```.
+
+```{r, message=FALSE, warning=FALSE}
+attributes(eph_ind_319$AGLOMERADO)
+```
+
+A partir de los atributos de esta variable podemos reconocer los códigos que identifican a cada aglomerado. Supongamos ahora que queremos crear un nuevo objeto que nos guarde una selección determinada: la población que reside en el aglomerado _Gran Mendoza_. A través de la función ```dplyr::filter``` vamos a filtrar a dicho aglomerado y lo guardaremos en el objeto `eph_ind_319_sel`.
+
+```{r, message=FALSE, warning=FALSE}
+eph_ind_319_sel <- eph_ind_319 %>% 
+	filter(AGLOMERADO == 10)
+
+nrow(eph_ind_319_sel)
+```
+
+De esta forma el número de casos efectivos relevados por la EPH en el tercer trimestre de 2019 es de 2354.
+
+Otra variable a considerar para realizar selecciones de tipo espacial es la de ```region```, que presenta los siguientes atributos:
+
+```{r, message=FALSE, warning=FALSE}
+attributes(eph_ind_319$REGION)
+```
+
+#### Selecciones en base a características etarias
+
+La **edad** es otra característica comúnmente utilizada como elemento de recorte analítico. Hay estudios sobre estratificación social [@Erikson1992] que consideran que debe estudiarse aquella población mayor a 30 o 35 años, debido a que es a esa edad en donde se produce un proceso de consolidación laboral, y por ende, los sujetos se asientan, de algún modo, en una posición de clase. En contraposición, otros investigadores interesados en los procesos de estructuración de clase en juventudes optan por considerar la posición que asumen los mismos en las relaciones de trabajo.
+
+Estás son decisiones que operan en base a los objetivos del análisis que se quiere emprender y deben ser consideradas. En este caso, como ejemplo, sobre la base de la selección realizada sobre el aglomerado _Gran Mendoza_, filtraremos a aquella población mayor a 25 años, suponiendo que con mayor probabilidad ya se encuentra inserta en el mercado de trabajo. Utilizaremos la variable ```CH06``` en donde se recaba la edad en años cumplidos.
+
+```{r, message=FALSE, warning=FALSE}
+eph_ind_319_sel <- eph_ind_319_sel %>% 
+	filter(CH06 >= 25)
+
+nrow(eph_ind_319_sel)
+```
+
+Luego de aplicar la selección por edad, la base quedará con 1476 casos.
+
+#### Selección por condición de actividad  
+
+Otra gran pregunta que ha sentado debates en el estudio de las clases sociales es sobre si debe o no considerarse a la población desocupada o inactiva en tanto grupo capaz de ser clasificado en una determinada posición de clase.
+
+Por un lado, algunos trabajos han saldado este problema considerando únicamente a la población ocupada, mientras que otros han identificado a la **población económicamente activa (PEA)**, en tanto grupo posible a ser estudiado [@Torrado1998]. Es necesario señalar que la EPH recaba información acerca de las características de la última ocupación realizada por la población desocupada, por lo cual dichos insumos pueden ser utilizados para su posicionamiento en un esquema de clases.
+
+Por otro lado, la población inactiva difícilmente puede clasificarse directamente en una posición de clase, ya que por definición dichos individuos no se encuentran insertos en relaciones laborales. Algunas cuestiones sobre este problema serán retomadas en los próximos capítulos, cuando abordemos específicamente la construcción y medición de las clases.
+
+Como ejemplo, sobre la selección anteriormente realizada, filtraremos únicamente a la PEA. Para esto utilizaremos la variable ```estado``` que mide la condición de actividad de las personas. Si exploramos la variable, la PEA estará conformada por las categorías 1 (ocupados) y 2 (desocupados).
+
+```{r, message=FALSE, warning=FALSE}
+attributes(eph_ind_319$ESTADO)
+```
+
+```{r, message=FALSE, warning=FALSE}
+eph_ind_319_sel <- eph_ind_319_sel %>% 
+	filter(ESTADO == 1 | ESTADO == 2)
+
+nrow(eph_ind_319_sel)
+```
+
+Luego de seleccionar la PEA, la base quedará conformada por 987 casos.
+
+#### ¿Hogares o individuos?
+
+Finalmente, una decisión importante que debemos realizar, es si trabajaremos con los **individuos u hogares** en tanto unidades de análisis. Al igual que con la consideración de la población desocupada y/o inactiva, la respuesta a este interrogante es principalmente teórica. Retomaremos este problema en los próximos capítulos.
+
+De momento, y según nuestros fines metodológicos, podemos señalar que hasta aquí, en la base que estamos construyendo, consideramos a los individuos como unidades de análisis. Una opción posible para trabajar desde los hogares, a partir de información de los individuos, es teniendo en cuenta al jefe/a de hogar como agente representante del grupo familiar. Esta es una práctica frecuente utilizada en los estudios de clases sociales, sobre la cual también existen considerables críticas.
+
+Siguiendo con nuestro ejemplo, filtraremos únicamente a la población que es jefe/a de hogar, buscando consolidar una aproximación a la unidad de análisis "hogar". Para ello utilizaremos la variable ```CH03``` que releva a la relación de parentesco de los miembros de cada hogar.
+
+```{r, message=FALSE, warning=FALSE}
+attributes(eph_ind_319$CH03)
+```
+
+```{r, message=FALSE, warning=FALSE}
+eph_ind_319_sel <- eph_ind_319_sel %>% 
+	filter(CH03 == 1)
+
+nrow(eph_ind_319_sel)
+```
+
+Al centrarnos en les jefes/as de hogares la base quedará conformada por 509 casos. <!--ojo acá, poner en lugar del texto el objeto de la base de datos, que puede cambiar -->
+
+### Ponderación y expansión de la muestra
+
+Tal como hemos señalado en la caracterización de la EPH, nos estamos refiriendo a una encuesta de tipo probabilística que es representativa de la población que reside en los grandes aglomerados urbanos de Argentina. Por ello, para realizar de manera correcta los procesamientos y análisis de datos, la encuesta incluye diversos ponderadores que permiten tanto una recalibración de la muestra, debido a errores procedentes de la sobre o subrepresentación de diversos grupos poblacionales, y también, para expandir el número efectivo de casos al número total poblacional.
+
+La variable ```PONDERA``` es la que permite realizar esta operación cuando estamos trabajando con la mayor parte de las variables de la base. La misma es numérica e indica el número de personas u hogares del universo en estudio representada por cada persona u hogar de la muestra (corregidas por no respuesta). Por ejemplo, si queremos conocer el número de población expandida y ponderada de la muestra que hemos estado construyendo, haremos lo siguiente:
+
+```{r, message=FALSE, warning=FALSE}
+eph_ind_319_sel %>% 
+	tally(PONDERA)
+```
+
+Al ponderar y expandir la muestra que hemos ido construyendo podemos observar que la misma da cuenta de 220084 casos.
+
+En el caso de los relevamientos posteriores a 2016, encontraremos otros ponderadores que tienen como principal función la corrección en la no respuesta de las variables de ingresos:
+
+- ```PONDII``` para el tratamiento del ingreso total individual(p47t, decindr, adecindr, rdecindr, pdecindr,
+gdecindr, idecindr).  
+
+- ```PONDIIO``` para el ingreso de la ocupación principal (p21, pp06c, pp06d, pp08d1, pp08d4, pp08f1, pp08f2, pp08j1, pp08j2,pp08j3, decocur, adecocur, rdecocur, pdecocur, gdecocur, idecocur).
+
+- ```PONDIH``` para el ingreso total familiar (ITF, decifr, adecifr, rdecifr, pdecifr, gdecifr, idecifr), el ingreso per cápita familiar (IPCF, deccfr, adecifr, rdecifr, pdecifr, gdecifr, idecifr).
+
+## Otras encuestas de hogares para el estudio de la estructura de clases {#otras}
+
+Una de las principales características que deben cumplir las encuestas de hogares para poder abordar, a través de ellas, la problemática de las clases sociales de acuerdo a distintas opciones teóricas, es que deben relevar una serie de indicadores socio-laborales. Específicamente la condición ocupacional, la ocupación, la categoría ocupacional, entre otras. Asimismo, algunas encuestas especializadas en el estudio de la estructura de clases, cubren dimensiones específicas que permiten el análisis de la autopercepción de clase, la movilidad social o una delimitación más articulada de los posicionamientos de clase.
+
+En este último apartado, presentaremos otras encuestas de hogares que pueden utilizarse para el estudio de las clases sociales y su vinculación con otras problemáticas sociales en la Argentina. Tienen como desventaja que, en su mayoría, no son de tipo continuas, y por ende, su relevamiento permite el abordaje de un momento determinado. Sin embargo, a diferencia de la EPH, nos permitirán el análisis de la estructura de clases y su relación con múltiples aspectos de la realidad social. El listado no es exhaustivo pero reúne a las principales fuentes de información disponibles:
+
+- **Encuesta Nacional sobre la Estructura Social (ENES)**: es una encuesta de hogares y personas cuyo cuestionario modularizado permitió recabar información sobre distintas cuestiones vinculadas al estudio de las clases sociales: vivienda y hábitat, acceso a bienes, servicios y ayudas de otros, trabajo / trabajo doméstico, movilidad social y autopercepción de clase. La misma fue elaborada por el Programa de Investigación sobre la Sociedad Argentina Contemporánea (PISAC), es abierta a todo público y es parte de una serie de otros relevamientos que se realizarán. Puede encontrarse en  [http://pisac.mincyt.gob.ar/datos.php](http://pisac.mincyt.gob.ar/datos.php){target="_blank"}  
+
+- **Encuesta Anual de Hogares Urbanos (EAHU)**: fue un programa nacional del INDEC (entre 2010 y 2014), que se basó en una extensión de la EPH durante los terceros trimestres abarcando aglomerados de más de 2000 habitantes. Mantiene las mismas variables relevadas en la EPH. Puede encontrarse en [https://www.indec.gob.ar/indec/web/Institucional-Indec-BasesDeDatos](https://www.indec.gob.ar/indec/web/Institucional-Indec-BasesDeDatos){target="_blank"}
+
+- **Encuesta Nacional de Gastos de los Hogares (ENGHo)**: Entre varias de sus funciones, la ENGHo desarrollada por el INDEC permite conocer acerca de los gastos y los ingresos de los hogares y sus características sociodemográficas. De este modo, es una buena fuente para analizar la relación entre el posicionamiento de clase y los patrones de consumo y gasto. Dicho relevamiento se realiza, aproximadamente, cada 10 años, existiendo microdatos desde 1985-1986. La última versión data de 2017-2018 y cuenta con la información socio-ocupacional necesaria para la medición de las clases sociales, condición que la edición de 2012-2013 no cumplía, debido al no relevamiento de la variable ocupación. Puede encontrarse en [https://www.indec.gob.ar/indec/web/Institucional-Indec-BasesDeDatos-4](https://www.indec.gob.ar/indec/web/Institucional-Indec-BasesDeDatos-4){target="_blank"}  
+
+- **Módulos especiales de la EPH y EAHU**: Existen distintos módulos que se agregan a la EPH o a la EAHU que permiten el abordaje de problemáticas específicas. En este caso identificamos dos módulos que pueden ser de sumo interés en su relación con la estructura de clases:
+	+ Módulo de la EAHU sobre Trabajo No Remunerado y Uso del Tiempo - Tercer trimestre 2013 [https://www.indec.gob.ar/indec/web/Institucional-Indec-BasesDeDatos-5](https://www.indec.gob.ar/indec/web/Institucional-Indec-BasesDeDatos-5){target="_blank"}  
+	+ Encuesta Nacional sobre Acceso y Uso de Tecnologías de la Información y la Comunicación (ENTIC) [https://www.indec.gob.ar/indec/web/Institucional-Indec-BasesDeDatos-5](https://www.indec.gob.ar/indec/web/Institucional-Indec-BasesDeDatos-5){target="_blank"} y su actualización en el Módulo de Acceso y Uso de Tecnologías de la Información y la Comunicación (EPH) [https://www.indec.gob.ar/indec/web/Institucional-Indec-BasesDeDatos-3](https://www.indec.gob.ar/indec/web/Institucional-Indec-BasesDeDatos-3){target="_blank"}
+	
+- **Encuesta Anual de Hogares (EAH)**: Es una encuesta anual que realiza la Dirección General de Estadísticas y Censos de la Ciudad Autónoma de Buenos desde el año 2002. Al igual que la EPH, dicho relevamiento indaga sobre los aspectos demográficos, la educación, la salud y el mercado de trabajo de la población de la Ciudad de Buenos Aires. A nivel geográfico permite un nivel de desagregación por comuna. Puede encontrarse en [https://www.estadisticaciudad.gob.ar/eyc/?cat=93](https://www.estadisticaciudad.gob.ar/eyc/?cat=93){target="_blank"}
+
+- **International Social Survey Programme (ISSP)**: Existen al menos dos relevamientos de dicho programa, para el 2007 y el 2009, que se han realizado en Argentina y en otros países, que permiten el estudio de la estructura de clases y su relación con otros fenómenos: movilidad social, autopercepción de clase, tiempo libre, desigualdades sociales, entre otros. Específicamente, revisar las ondas de 2007 ([https://dbk.gesis.org/dbksearch/sdesc2.asp?no=4850&search=issp%202007&search2=&field=all&field2=&DB=e&tab=0&notabs=&nf=1&af=&ll=10](https://dbk.gesis.org/dbksearch/sdesc2.asp?no=4850&search=issp%202007&search2=&field=all&field2=&DB=e&tab=0&notabs=&nf=1&af=&ll=10){target="_blank"}) y 2009([https://dbk.gesis.org/dbksearch/sdesc2.asp?no=5400&search=issp%202009&search2=&field=all&field2=&DB=e&tab=0&notabs=&nf=1&af=&ll=10](https://dbk.gesis.org/dbksearch/sdesc2.asp?no=5400&search=issp%202009&search2=&field=all&field2=&DB=e&tab=0&notabs=&nf=1&af=&ll=10){target="_blank"}). Una de las ventajas de estas encuestas es que se insertan en programas internacionales de investigación que permiten la comparabilidad entre países.

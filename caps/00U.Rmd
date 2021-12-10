@@ -1,0 +1,1011 @@
+# (PART) Introducción {-}
+
+<!-- En esta sección se me ocurre ir volcando herramientas de introducción al curso. No hace falta publicarlo por el momento, es para ir armando de a poco -->
+
+# Las recetas {#recetas}
+
+La mayoría de los ejercicios expuestos a lo largo de este Manual usan una o más funciones de **``R``** para resolver un problema específico. Queremos destacar que no se describen las funciones en detalle, ya que ellas pueden ser consultadas en otras publicaciones. Más bien, aborda problemas puntuales que sirven para adentrarse a la temática de este libro.
+
+Cada ejercicio da solución a un problema en particular y sin duda, hay otras posibles soluciones.
+
+## Introducción a R y RStudio
+
+**``R``** es un lenguaje de programación usado para realizar análisis estadístico y en general, análisis de datos. **``R``** es un conjunto integrado de programas para trabajar con datos, cálculos y gráficos, que permite:
+
+- almacenar y manipular datos,  
+
+- operar cálculos sobre variables indexadas (como las matrices),
+
+- analizar datos con una colección de herramientas,  
+
+- aplicar herramientas gráficas para el análisis de datos y,  
+
+- programar con un lenguaje sencillo y en constante desarrollo. 
+
+```{r fig.cap= "Logo de R", fig.align='center', out.width = '40%', echo=FALSE}
+knitr::include_graphics("inputs/imagenes/R_logo.svg.png")
+```
+
+**``R``** es el lenguaje de programación más elegido debido a tres ventajas principales:
+
+- **accesibilidad**: cualquiera puede descargar el programa de manera gratuita,  
+
+- **código abierto**: quien desee modificar el código de **``R``**, puede hacerlo, y  
+
+- **comunidad de usuarios**: existe una actividad permanente alrededor de **``R``**, que brinda soporte a los usuarios para resolver dudas y aprender en línea.
+
+
+### El entorno de R
+
+- **``R``** se puede entender como el entorno donde se implementan múltiples técnicas estadísticas. El concepto de "entorno" se refiere a que es un sistema diseñado específicamente para el análisis de datos, que posee coherencia interna y que es más que el agregado de cada una de las herramientas que lo conforman. 
+
+- Gracias a la implementación de **`R`** se han desarrollado numerosos métodos interactivos para analizar datos. Los usuarios de **`R`** se han ido *aggiornando* con cada versión del programa que ha salido, añadiendo métodos que acompañan las nuevas tecnologías.
+
+### Aplicar estadística en R
+
+- Como se dijo previamente, el entorno de **``R``** permite desplegar técnicas estadísticas, de las más antiguas hasta la más actuales. Esta ventaja no es proporcional al esfuerzo que implica buscar las herramientas del programa que permiten su aplicación. 
+
+- Lo que diferencia a **`R`** de otros sistemas de análisis estadísticos como **Stata** y **SPSS** es que el output que se genera es escueto comparado con la cantidad de comandos (o "input") que se deben imprimir para obtenerlo. Cada uno de los pasos a seguir se van almacenando en forma de "objetos", que quedan disponibles para la observación y el análisis del usuario. 
+
+- Algunas técnicas estadísticas están incluidas en el entorno básico de **`R`** y otras se pueden obtener en forma de bibliotecas, llamadas **paquetes** (*packages*).
+
+```{r fig.cap= "Logos de algunos paquetes de R", fig.align='center', out.width = '60%', echo=FALSE}
+knitr::include_graphics("inputs/imagenes/R_packages.png")
+```
+
+### Descargar e instalar R
+
+Para descargar **`R`** es posible ingresar a <https://cran.r-project.org/>{target="_blank"}. Luego, se debe seleccionar el sistema operativo de cada computadora donde se lo desea instalar y, a consiguiente, comenzará la instalación.
+
+```{r fig.cap= "R", fig.align='center', out.width = '80%', echo=FALSE}
+knitr::include_graphics("inputs/imagenes/R_desc.png")
+```
+
+### RStudio
+
+**`RStudio`** es un **entorno de desarrollo integrado** (IDE, en inglés), que significa que contiene todas las herramientas que se necesitan en un mismo lugar. Las maneras más sencilla de "comunicarse" con **`R`** son:
+  
+- escribiendo líneas de comandos que conforman el código en la terminal o bien,
+
+- utilizando RStudio, que hace más atractiva y fácil la aproximación al programa.
+
+```{r fig.cap= "Terminal de R", fig.align='center', out.width = '80%', echo=FALSE}
+knitr::include_graphics("inputs/imagenes/terminal.png")
+```
+
+### Descargar e instalar RStudio
+
+Se debe ingresar al siguiente enlace: <https://www.rstudio.com/products/rstudio/download/>{target="_blank"}
+
+```{r fig.cap= "Logo de RStudio", fig.align='center', out.width = '10%', echo=FALSE}
+knitr::include_graphics("inputs/imagenes/RStudio_logo.png")
+```
+
+```{r fig.cap= "Descarga de RStudio", fig.align='center', out.width = '80%', echo=FALSE}
+knitr::include_graphics("inputs/imagenes/RStudio_desc.png")
+```
+
+### Las partes de RStudio
+
+Las secciones que conforman `RStudio` son cuatro:
+
+- la fuente (en la parte superior izquierda),
+
+- el entorno (parte superior derecha),
+
+- la consola (parte inferior izquierda) y
+
+- la sección de "documentos, gráficos, paquetes y ayuda" (parte inferior derecha).
+
+```{r fig.cap= "R", fig.align='center', out.width = '80%', echo=FALSE}
+knitr::include_graphics("inputs/imagenes/RStudio_partes.png")
+```
+
+### RStudio 
+
+Cuando uno abre `RStudio`, de forma predeterminada, se ve de la siguiente manera:
+
+```{r fig.cap= "RStudio Escritorio", fig.align='center', out.width = '80%', echo=FALSE}
+knitr::include_graphics("inputs/imagenes/rstudio_entorno.png")
+```
+
+* Básicamente, la interfaz se compone de diferentes paneles. Sobre el lado izquierdo hay un panel grande y en el lado derecho hay dos paneles más pequeños. Al comenzar a trabajar en `RStudio`, habrá un cuarto panel que se activa al abrir un nuevo documento.
+
+* Al crear ese nuevo archivo hay cuatro paneles: dos a la izquierda y dos a la derecha. Es posible ajustar estos paneles moviendo la barra que los separa. También se puede deslizar el divisor del medio para ajustar el ancho de los paneles y en el lado derecho también es posible ajustar las alturas relativas de estos paneles. 
+
+* En la esquina de cada panel hay un botón de minimizar, para ocultar cualquier panel. Se puede maximizar nuevamente haciendo clic sobre el mismo o en el botón que muestra dos paneles.
+
+* Esta es la forma predeterminada para configurar `RStudio`. Cualquier documento que se cree se encontrará en el panel superior **izquierdo** mientras que en el inferior izquierdo está la consola de **`R`**, que es un área donde se pueden escribir comandos directamente. En el lado **derecho**, el panel superior es básicamente información sobre el entorno en el que está trabajando.
+
+* En la parte inferior derecha hay un panel que tiene varias pestañas. El primero permite ver la estructura de los archivos, por lo que es parecido a una ventana estándar que se usa para navegar en cualquier sistema operativo.
+
+```{r fig.cap= "panel Derecho Inferior de RStudio", fig.align='center', out.width = '80%', echo=FALSE}
+knitr::include_graphics("inputs/imagenes/pan_der_inf.png")
+```
+
+* Hay una pestaña que enumera los paquetes que se han instalado. 
+
+```{r fig.cap= "Paquetes de RStudio", fig.align='center', out.width = '60%', echo=FALSE}
+knitr::include_graphics("inputs/imagenes/paquetes.png")
+```
+
+* La otra es una pestaña de ayuda, ya que en **`R`**, si uno desea ayuda sobre cualquier cosa, se la puede obtener escribiendo un signo de interrogación y luego el nombre del objeto sobre el que desea ayuda:
+
+```{r eval = FALSE}
+?mean
+```
+
+* Se puede ver que, al ejecutar ese comando, se obtiene un archivo de ayuda sobre la media. También es posible obtener uno sobre la mediana, y así sucesivamente. 
+
+```{r eval = FALSE}
+?median
+```
+
+Se obtendrá:
+
+```{r fig.cap= "R", fig.align='center', out.width = '60%', echo=FALSE}
+knitr::include_graphics("inputs/imagenes/ayuda.png")
+```
+
+* Entonces, si uno quiere ayuda, aparecerá en dicha pestaña. Hay que tener en cuenta que es posible modificar la configuración de estos paneles. Los pasos para hacerlo son:
+
+> Menú > Herramientas
+
+* Dentro de herramientas (*tools*) se encuentran las 'Opciones globales' (*global options*). Este menú ofrece todo tipo de posibilidades para configurar `RStudio` y el entorno. Para cambiar la ubicación de la consola y el entorno, hay que clicar arriba, donde dice 'Entorno', sobre el cuadro desplegable y aplicarlo. Al volver, se verá en el lado izquierdo, el documento en el que se está trabajando y debajo, el panel de 'Entorno'.
+
+```{r fig.cap= "RStudio Opciones Globales", fig.align='center', out.width = '80%', echo=FALSE}
+knitr::include_graphics("inputs/imagenes/global_opt.png")
+```
+
+* También es posible cambiar el color del esquema, dentro de las 'Opciones globales' puedes ver algunas opciones de apariencia. El tema predeterminado tiene blanco de fondo con un texto en negro. Pero no es el único, sino que existen diferentes temas que se pueden aplicar.  
+
+```{r fig.cap= "Selección de Colores en RStudio", fig.align='center', out.width = '80%', echo=FALSE}
+knitr::include_graphics("inputs/imagenes/color_schema.png")
+```
+
+## Workflow
+
+Esta sección trata sobre el flujo de trabajo (*workflow*) en `RStudio`. Existen muchas cosas sobre el trabajo en R que la gente encuentra confusas. Sin embargo, hay formas en las que puede simplificar este problema: sistematizando una buena práctica del flujo de trabajo desde el principio.
+
+### Proyectos R Studio
+
+Una de las cuestiones más comunes que generan dificultades en **`R`**, es que no provee las facilidades de un software estadístico estándar con el cual apuntar y hacer 'clic' dentro de la misma interfaz. Específicamente se dificulta el acceso a los archivos y el guardado utilizando rutas de archivo, en especial cuando esas rutas ("paths") son extensas. 
+
+La forma más sencilla de minimizar esta dificultad es trabajar con lo que se llama un documento de tipo **Proyecto de RStudio**. Este es el primer paso a seguir: usar los archivos de proyecto de `RStudio`. Antes que nada, ¿Qué es un archivo de proyecto de `RStudio`?
+
+- Es un archivo creado por `RStudio` que tiene una extensión de .Rproj, y esencialmente lo que hace es almacenar información sobre la carpeta que lo contiene. Así que para guardar este archivo de proyecto dentro de una carpeta en particular, hay que tener en cuenta que dentro del proyecto se guardará información sobre la carpeta que se encuentra en su sistema de archivos, y también guardará información sobre el estado anterior del proyecto. Cuando se genera un archivo de proyecto, primero se abrirá en `RStudio` y de este modo se podrá acceder a la información sobre la carpeta en la que se encuentra almacenado este proyecto. 
+
+### Organización
+
+Una de los aspectos clave es que, al trabajar con archivos de proyecto, es necesario organizarse. Una forma sencilla de trabajar con `RStudio` es tener un proceso pre-establecido por el que pasar cada vez que se inicie un nuevo proyecto en `RStudio`. El proceso que se sugiere en este libro consiste en:
+
+1. Crear un nuevo proyecto de `RStudio`, por el cual se generará una carpeta dentro del directorio local.
+
+2. Luego, dentro de esa carpeta crear una sub-carpeta llamada 'datos'. Ahí es donde se guardarán todos los archivos de datos relacionados con el proyecto. 
+
+3. También, crear una carpeta llamada 'r_docs' que es donde se guardan todos los documentos de **`R`** y de `RStudio`.
+
+4. En caso que haya imágenes o medios asociados con el proyecto, se aconseja generar una carpeta llamada 'imágenes'. 
+
+En resumen, siguiendo el tipo de organización aquí propuesta, hay un directorio donde se guardan todos los proyectos de R Studio. Tal como se aclaró antes: la información del proyecto se almacena dentro de una carpeta, donde a su vez hay tres carpetas más: una donde se encuentran los archivos de datos, otra donde guardar todos los documentos de **`R`** y `RStudio`, y una última carpeta para las imágenes. Además, dentro de esa carpeta grande habrá un archivo de 'RStudio project', con el nombre que el usuario le haya asignado.
+
+### Utilidad
+
+¿Por qué este procedimiento de organización del flujo de trabajo es útil? Porque respetando la estructura de las carpetas, es posible encontrar los archivos de manera sencilla, optimizando tiempo y espacio. Esta estructura se puede ver en la ruta del archivo, que será similar a /Usuarios/Nombreusuario/Documentos/RProjects...etc. Esta es una ruta a un archivo de datos que se almacena en el disco duro, en la unidad correspondiente, que puede ser C o U, por ejemplo.
+
+**Desventaja 1**
+
+Dentro de una carpeta llamada 'Usuarios', ingresando a una carpeta denominada "tunombre" (aquí cada uno puede colocar su propio nombre de usuario), dentro de la carpeta llamada "Documentos" y luego, dentro de otra carpeta se encuentra el nuevo proyecto creado. En esta última, finalmente, está la subcarpeta de "datos". Por lo tanto, cada vez que se desee acceder a ese archivo de datos, tanto para cargarlo como guardarlo, se debe llamar a esa gran cadena de texto, que es la ruta al archivo, lo cual puede resultar complicado.
+
+**Desventaja 2**
+
+Si se cambia de computadora donde fue creado un archivo de **`R`** a otra que no tenga el sistema de archivos que se ha descrito en este libro, entonces se debe reescribir todo el código de **`R`** para poder acceder al archivo deseado. Esto se debe a que podría estar guardado en una ubicación  diferente a la de mi archivo local. Al usar un proyecto de `RStudio` puedo usar lo que se conoce como "rutas relativas". También, hay un camino mucho más corto que implica colocar dos puntos y una barra al inicio de la ruta. Los puntos representan la carpeta del proyecto que se encuentra en una ubicación diferente a la del archivo que se está editando. Dondequiera que esa carpeta esté almacenada, no es necesario saberlo porque el proyecto de `RStudio` se redirige automáticamente allí cuando se implementan los puntos. Todo lo que hay que hacer es poner los puntos seguidos de una barra, luego el nombre de la carpeta de datos y de nuevo barra, seguido el nombre del archivo al que se intenta acceder. Por ejemplo, ../nombrecarpeta/nombrearchivo.rmd
+
+Ahora se presenta un segundo ejemplo utilizando la estructura de carpetas aquí propuesta. Si se almacenan los archivos de `RStudio` dentro de una carpeta llamada "docs_r", es necesario salir de la misma y luego volver a "mis_datos". Eso es lo que los puntos dobles hacen: subir de nivel. En concreto, las acciones que lleva a cabo son salir de 'docs_r' e ir a la carpeta de datos. Sin embargo, cuando hay muchos archivos, esto puede resultar un poco engorroso.
+
+### Crear un Proyecto de RStudio
+
+- Lo primero es seleccionar un directorio en alguna carpeta local del ordenador. 
+
+- Luego abrir `RStudio` e ir al menú "Archivo", hacer clic en "Nuevo proyecto" y así se obtendrá un cuadro de diálogo. Se puede crear un nuevo directorio con el proyecto o si ya existe un directorio que se pueda convertir en un proyecto de `RStudio`, también se puede seleccionar un directorio existente. 
+
+- En siguiente paso es seleccionar en la opción superior para generar un proyecto, y luego crear el proyecto nuevo como un subdirectorio.
+
+- Lo siguiente es buscar dónde guardar este proyecto. Si se desea mantener todos los proyectos juntos es necesario crear una carpeta llamada, por ejemplo, “proyectosr" donde colocar todos los proyectos de **`R`**. Como nombre del directorio se solicita el nombre del archivo de proyecto de `RStudio`, en este caso puede llamarse “primer_proyecto”. 
+
+- Como resultado, a pesar de que nada parece cambiar, en la pestaña de archivos (margen inferior), se notifica que uno se encuentra en la carpeta o directorio seleccionados. En este caso, dentro de la carpeta de todos los proyectos de **`R`** y, a su vez, en la carpeta llamada “primer_proyecto” que es como se ha nombrado a este proyecto. Se puede navegar dentro del proyecto desde aquí.
+
+**Recordatorio** 
+
+- **``R``** distingue entre mayúsculas y minúsculas, por lo que siempre es recomendable escribir todo en minúsculas.
+
+### Crear un archivo de R
+
+Lo siguiente es crear un documento en el que se quiere trabajar. En este libro se usa el ejemplo de un archivo de `RMarkdown`, aunque existen otros tipos de archivos de **`R`**. Uno de los más utilizados es el R script, equivalente a una sintaxis de **SPSS** o *do-file* de **STATA**. 
+
+- Crear un nuevo archivo de tipo `R Markdown`. Al seleccionar sobre el botón de crear archivo (margen superior izquierdo, identificado con el signo “+” en color verde), aparecerá una ventana. Allí, se coloca el título al documento, que se puede llamar “primer_documento”, y también el nombre del autor. No es necesario poner el nombre del autor, se puede dejar ese espacio en blanco. Y por último, se selecciona el "Formato de salida", que crea el archivo de R Markdown. 
+
+- Es posible ver que en el nuevo documento de R Markdown ya hay texto, que es un ejemplo de documento, el cual se puede borrar en su totalidad y cargar la información que se desee. En un documento de R Markdown, las áreas grises son lo que se conoce como “fragmentos de código” o *chunks*. Allí es donde se dan instrucciones a **`R`**, como comandos o fórmulas, sobre las que trabaja el programa. 
+
+- Fuera, en el área blanca, se puede escribir texto. Se presenta un ejemplo simple, en el que se inserta un fragmento de código de varias maneras.  
+
+También hay atajos de teclado que puedes usar: 
+
+```r
+* Insert code chunk in PC: Ctrl+Alt+I
+* Insert code chunk in Max/Linux: Cmd+Option+I
+```
+
+**En resumen**, cuando haya un nuevo proyecto en el que se esté trabajando, se recomienda generar un nuevo archivo de proyecto en `RStudio`. Dentro de esa carpeta, generar otra carpeta donde almacenar los datos (que aquí se ha llamado “r_docs”), como los documentos de R Markdown o R script.
+
+## R Markdown
+
+La manera más sencilla de interactuar con **`R`** es a través de documentos conocidos como archivos de **R Markdown**, que ya se ha visto a modo de ejemplo en la sección anterior^[Un resumen de las funciones y comandos que dispone R Markdown puede encontrarse [aquí](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf){target="_blank"}]. Estos documentos son una combinación de varios tipos de información. Por un lado, lo que se conoce como “fragmentos de código” (*code chunks*), que son un tipo de ventanas en **`R`** donde se escribe código para ejecutar análisis. También, fuera de esos fragmentos de código se puede escribir texto. En esta sección se explicará con mayor detalle cómo formatear el texto en el documento de **`R`**. Para ello seguir los pasos:
+
+- Abrir el primer proyecto de `RStudio`, el cual estará alojado en el directorio del equipo local llamado "proyectos_r" o similar.  
+
+- Dentro de esa carpeta, seleccionar el documento llamado "primer_proyecto.Rproj".  
+
+- Otras carpetas que se encuentran allí son: "datos" e "imágenes".  
+
+- Descargar una foto de Internet o seleccionar una foto antigua que se encuentre en la computadora y 
+guardarla en la carpeta de "imágenes".  
+
+- Crear un nuevo documento clicando en la barra superior de RStudio llamada "documentos", y luego en R Markdown. Otra opción es clicar sobre el ícono de una hoja blanca con un círculo verde en la esquina superior izquierda de la barra de herramientas de `RStudio`. Aparecerá una ventana, que se rellena con el título y el autor. Luego, guardarlo con un nombre al archivo y almacenarlo en la carpeta del proyecto, en "documentos_r".  
+
+- El documento posee un *template*, clicar sobre el botón "Knit", acompañado de un ícono de un ovillo de lana y unas agujas de tejer (barra superior izquierda). Se obtendrá un archivo de tipo HTML con el título, la fecha y el autor, que se puede eliminar en caso de ser necesario.
+
+### Agregar texto
+
+La cantidad de símbolos de numeral (#) indica el nivel del título o subtítulo que se desea editar. Es necesario dejar un espacio entre el numeral y el texto que se escribe para obtener los títulos en negrita y sin el símbolo. Se debe utilizar el primer nivel de títulos en cada documento R Markdown. Se prueban los niveles diferentes en un documento de R Markdown de la siguiente manera:
+
+```{r eval=FALSE}
+ # Título nivel 1
+ ## Título nivel 2
+ ### Título nivel 3
+ #### Título nivel 4
+```
+
+**Recordatorio: ** Clicar Control + S constantemente para guardar los cambios efectuados en el documento, a medida que se trabaja sobre él.
+
+### Listas
+
+* Se utiliza el símbolo del asterisco para realizar bullet-points (* Bullet)
+
+* Para un sub-bullet se usa el signo sumatorio (+ Sub-bullet)
+
+* Para un tercer nivel de sub-bullet, el signo de restas (- Tercer nivel de bullets)
+
+* Es importante, además de los símbolos, indentar las líneas cada vez que reduzca mi número de bullets 
+en una lista. Espaciar entre el símbolo y el contenido de la lista. Además hay que dejar un espacio una vez finalizada la lista y antes de comenzar otra nueva.
+
+* Se puede hacer una prueba creando una lista sobre "Materias que no me gustan de mi carrera". Para presentar la lista, se debe agregar una línea de texto común, con su descripción. 
+
+* Luego, clicar en "Knit" para generar el documento.
+
+### Editar texto
+
+* Para incluir algún formato de texto, se deben utilizar los siguientes símbolos al inicio y al final de cada palabra o grupo de palabras que se desea editar:
+
+```{r eval=FALSE}
+*Itálicas*
+	
+**Resaltado**
+	
+Texto ^superscript^
+	
+Texto ~subscript~
+
+```
+
+### Insertar imágenes
+
+* Las imágenes son fáciles de agregar, siguiendo las líneas de código siguiente:
+
+```{r eval=FALSE, message=FALSE, warning=FALSE}
+![Caption for image](filepath_for_image)
+```
+
+* Se puede hacer una prueba agregando una foto que nos guste.  
+
+* Se puede colocar el epígrafe de la foto del siguiente modo:
+
+
+```{r eval=FALSE, message=FALSE, warning=FALSE}
+![Figura 1: Mi mascota hermosa: Nina](inputs/imagenes/nina.jpeg)
+```
+
+
+![Figura 1: Mi mascota: Nina](inputs/imagenes/nina.jpeg)
+
+
+* También es posible seleccionar el tamaño de la imagen.
+
+```{r eval=FALSE, message=FALSE, warning=FALSE}
+![Nina](inputs/imagenes/nina.jpeg){width=50%}
+```
+
+![Nina](inputs/imagenes/nina.jpeg){width=50%}
+
+### Enlaces
+
+* Para incluir un enlace se debe:
+
+```{r eval=FALSE}
+Incluir entre corchetes [lo que aparecerá] en el texto y, seguido, entre paréntesis (el enlace que redirige al sitio que se seleccione)
+```
+
+[Link a google](www.google.com.ar)
+
+### Tips para escribir código en R
+
+- A la hora de escribir en este lenguaje de programación, hay que conocer algunas funcionalidades que nos permiten resolver acciones claves y responder a dudas de manera simple Para obtener información sobre una función concreta, se puede utilizar alguna de las siguientes funciones:
+
+```{r setup1, include=TRUE, eval=FALSE}
+help(solve)
+```
+
+```{r setup2, include=TRUE, eval=FALSE}
+?solve
+```
+
+- Las mayúsculas y minúsculas importan. **`R`** es un lenguaje de expresiones que es sensible a las mismas y responde de manera diferente a cada una. 
+
+- Las órdenes elementales consisten en expresiones o en asignaciones. Las órdenes se separan con un punto y coma, (‘;’), o cambiando de línea.  
+
+- Las flechas verticales permiten recuperar órdenes previas y ejecutarlas y las horizontales nos permiten desplazarnos dentro de una orden para corregirla.  
+
+- Para eliminar objetos puede utilizar la orden “rm”, por ejemplo: 
+
+```{r rm, include=TRUE, eval=FALSE}
+rm(x, y, z, cabello, perro, bonito)
+```
+
+## Primeros pasos en R
+
+### Funciones y comandos elementales
+
+Las entidades que crea **`R`** durante una sesión de trabajo se denominan *objetos*. Estos pueden ser números, cadenas, vectores, matrices, funciones o estructuras más generales construidas a partir de estos elementos. Estos objetos se guardan por nombre y se almacenan en un área dedicada llamada "espacio de trabajo" o *environment*. En cualquier momento, es posible verificar los objetos disponibles en el espacio de trabajo usando el comando:
+
+```{r ls, include=TRUE, eval=FALSE}
+ls()
+```
+
+Para eliminar un objeto del espacio de trabajo, use la función rm(). La función espera el nombre del objeto que desea eliminar como argumento. Suponiendo que hay un objeto llamado "cosa", puede eliminarlo con el comando:
+
+```{r rm2, include=TRUE, eval=FALSE}
+rm(cosa)
+```
+
+Al iniciar una nueva sesión de trabajo, se recomienda retirar los objetos existentes en el área de trabajo. Un comando útil para este propósito es:
+
+```{r rm3, include=TRUE}
+rm (list = ls()) 
+```
+
+Puede almacenar el espacio de trabajo con la función:
+
+```{r save, include=TRUE, eval=FALSE}
+save.image ()
+```
+
+Esto guarda todos los objetos contenidos en el espacio de trabajo en un archivo binario ".Rdata". La opción predeterminada se puede cambiar especificando en la llamada a save.image() el nombre, por ejemplo, "myfile.Rdata", que desea darle al archivo.
+
+```{r save2, include=TRUE, eval=FALSE}
+save.image (archive = "ilmiofile.Rdata")
+```
+
+El espacio de trabajo original se puede restaurar con la ayuda de la función:
+
+```{r sload, include=TRUE, eval=FALSE}
+load(".RData")
+```
+
+o, si ha optado por un nombre diferente al predeterminado:
+
+```{r load2, include=TRUE, eval=FALSE}
+load("ilmiofile.Rdata")
+```
+
+Las funciones:
+
+```{r save3, include=TRUE, eval=FALSE}
+savehistory()
+```
+
+```{r load3, include=TRUE, eval=FALSE}
+loadhistory()
+```
+
+permiten guardar en formato ASCII y recargar en **`R`** el historial de los comandos enviados. El argumento de archivo que permite especificar un nombre que no sea la elección predeterminada, es ".Rhistory".
+
+Finalmente, la función setwd() permite cambiar la carpeta de trabajo. Es una buena idea dedicar una carpeta separada a cada proyecto en el que esté trabajando para evitar la superposición de datos. El directorio de trabajo actual se puede ver con el comando getwd().
+
+Los comandos básicos constan de expresiones o asignaciones. Si el comando es una expresión, **`R`** devuelve el resultado de la evaluación, como se muestra en los siguientes ejemplos:
+
+```{r setup6, include=TRUE}
+12 > 10
+```
+
+```{r setup7, include=TRUE}
+1+2+3
+```
+
+```{r setup8, include=TRUE}
+2+3*4
+```
+
+```{r setup9, include=TRUE}
+3/2 + 1
+```
+
+```{r setup10, include=TRUE}
+2 + (3 * 4)
+```
+
+```{r setup11, include=TRUE}
+(2 + 3) * 4
+```
+
+```{r setup12, include=TRUE}
+4 * 3^3
+```
+
+Todas las funciones matemáticas que normalmente se encuentran en una calculadora de bolsillo están disponibles en **`R`** en forma de funciones básicas, que se recuerdan en la siguiente tabla:
+
+- sqrt ---> raíz cuadrada  
+
+- abs ---> valor absoluto  
+
+- sin,cos,tan ---> funciones trigonométricas  
+
+- asin,acos,atan ---> funciones trigonométricas inversas  
+
+- exp,log ---> exponenciales y logaritmos naturales  
+
+```{r setup13, include=TRUE}
+sqrt(2)
+```
+
+```{r setup14, include=TRUE}
+sin(3.14159)
+```
+
+```{r setup15, include=TRUE}
+sin(pi)
+```
+
+```{r setup16, include=TRUE}
+sqrt(sin(45 * pi/180))
+```
+
+Una asignación evalúa una expresión guardando el resultado en un objeto con un nombre. La asignación se realiza mediante el símbolo `<-` o el símbolo `=`. También se puede asignar de izquierda a derecha con el símbolo ->. El resultado de una asignación no se muestra automáticamente. El usuario puede verlo recordando el nombre del objeto. Los objetos creados a través de una asignación se pueden reutilizar en expresiones y asignaciones posteriores, como se muestra en los siguientes ejemplos:
+
+```{r setup17, include=TRUE}
+x <- sqrt(2) 
+x
+```
+
+```{r setup18, include=TRUE}
+x^3
+```
+
+```{r setup19, include=TRUE}
+y <- x^3
+```
+
+```{r setup20, include=TRUE}
+x <- 10 
+x > 10
+```
+
+```{r setup21, include=TRUE}
+x <= 10
+```
+
+```{r setup22, include=TRUE}
+tf <- x > 10  
+tf
+```
+
+### Valores y vectores
+
+Para asignarle un valor a una variable, recuerda que no es necesario utilizar espacios ni símbolos, excepto # . o _ en el nombre de la variable:
+
+```{r vector, include=TRUE}
+mi_valor <- 30 # número
+un_valor <- "vaca" # caracteres
+el_valor <- FALSE # booleano
+```
+
+Para crear un vector, se usa la función c():
+
+```{r setup23, include=TRUE}
+x <- c(2, 3, 5, 7, 11)
+x
+```
+
+El vector puede contener texto o valores numéricos:
+
+```{r vector2, include=TRUE}
+mi_vector <- c(6,12,80,120)
+mi_vector <- c("María","Esteban","Juan")
+```
+
+Si el vector contiene muchos elementos, puede ser más conveniente usar la función scan(), que le permite ingresarlos uno por uno a través de la consola:
+
+```{r vector3, include=TRUE, eval=FALSE}
+x <- scan()
+1: 1
+2: 6
+3: 3
+4: 4
+5:
+```
+
+Para crear una secuencia de números, puede usar el comando a:b.
+
+```{r setup26, include=TRUE}
+xx <- 1:10
+
+xx
+```
+
+```{r setup27, include=TRUE}
+xx <- 100:1 
+xx
+```
+
+También se pueden crear vectores que contienen elementos repetidos.
+
+```{r setup28, include=TRUE}
+rep(2, times = 3)
+```
+
+```{r setup29, include=TRUE}
+rep(2, 3)
+```
+
+```{r setup30, include=TRUE}
+a <-  c(rep(2, 3), 4, 5, rep(1, 5)) 
+a
+```
+ 
+Las operaciones aritméticas y lógicas básicas que se aplican a los escalares se pueden aplicar a los vectores.
+ 
+```{r setup31, include=TRUE}
+x <- 1:10 
+x*2
+```
+
+Los elementos de un vector se pueden extraer utilizando corchetes [] e indicando la posición del elemento a extraer entre corchetes.
+
+```{r setup32, include=TRUE}
+xx[7] 
+```
+
+Incluso se pueden extraer más elementos al mismo tiempo.
+
+```{r setup33, include=TRUE}
+xx[c(2, 3, 5, 7, 11)]
+```
+
+```{r setup34, include=TRUE}
+xx[85:91]
+```
+
+También se pueden guardar en nuevos vectores:
+
+```{r setup35, include=TRUE}
+yy <- xx[c(1, 2, 4, 8, 16, 32, 64)] 
+yy
+```
+
+Si los indicadores entre corchetes van precedidos de un signo negativo, los elementos correspondientes se eliminan del vector.
+
+```{r setup36, include=TRUE}
+x <- c(1, 2, 4, 8, 16, 32) 
+x
+```
+
+```{r setup37, include=TRUE}
+x[-4]
+```
+
+Al ingresar una variable a la consola, esta mostrará su contenido:
+
+```{r, include=TRUE}
+mi_vector
+```
+
+La función 'length()' sirve para obtener el número de elementos en un vector o en una lista de objetos:
+
+```{r vector4, include=TRUE}
+length(mi_vector)
+```
+
+### Matrices y listas
+
+Una variable indexada (*array*) es una colección de datos, por ejemplo numéricos, indexada por varios índices. **`R`** permite crear y manipular variables indexadas en general y en particular, matrices.
+
+Las matrices se crean utilizando la función matrix(). En su forma más simple, el uso de la función implica especificar un vector que contiene los elementos de la matriz y el número de filas o columnas de la matriz.
+
+```{r setup38, include=TRUE}
+x <- matrix(c(2, 3, 5, 7, 11, 13), nrow = 3) 
+x
+```
+
+```{r setup39, include=TRUE}
+ y <- matrix(c(2, 3, 5, 7, 11, 13), ncol = 2) 
+ y
+```
+
+Las *array* pueden verse como matrices multidimensionales. Se crean usando la función array(). En su forma más simple, el uso de la función implica especificar un vector que contiene los elementos de la matriz y el número de elementos para cada dimensión usando el argumento dim.
+
+```{r array, include=TRUE}
+w <- 1:20
+ay <- array(w, dim = c(5, 2, 2))
+
+ay
+```
+
+Hay que tener en cuenta que, de forma predeterminada, las matrices se forman insertando los distintos elementos por columna. Obviamente, la matriz se puede adquirir desde un archivo externo. Por ejemplo, suponga que el archivo matdata tiene el siguiente contenido.
+
+```r
+1,24,32,36,33
+2,16,44,34,33
+3,20,31,43,32
+4,23,35,37,35
+5,27,40,40,31
+6,19,43,32,37
+```
+
+El contenido del archivo se puede adquirir y asignar a una matriz de 6 × 5 con los comandos:
+
+```{r scan2, include=TRUE, eval = FALSE}
+x2 <- scan("matdata", sep = ",")
+
+mx <- matrix(x2, ncol = 5, byrow = TRUE)
+mx
+```
+
+El argumento byrow = TRUE especifica que el contenido debe adquirirse por fila y no por columna.
+
+La función dim() devuelve el tamaño (número de filas y número de columnas) de la matriz indicada como argumento.
+
+```{r dim, include=TRUE}
+dim (x)
+```
+
+En cuanto a los vectores, los elementos de una matriz se pueden extraer utilizando corchetes []. Para extraer un elemento de una matriz, se debe especificar su posición de fila y columna.
+
+```{r setup42, include=TRUE}
+x[2, 1]
+```
+
+```{r setup43, include=TRUE}
+x[2, 2]
+```
+
+Para extraer una fila o columna completa, simplemente hay que especificar su posición:
+
+```{r setup44, include=TRUE}
+x[, 1]
+```
+
+```{r setup45, include=TRUE}
+x[3, ]
+```
+
+Se pueden extraer subconjuntos de filas y/o columnas:
+
+```{r setup46, include=TRUE}
+x <- matrix(1:16, ncol = 4) 
+	x
+```
+
+También se puede crear una matriz compuesta por números usando la funcion "matrix()":
+
+```{r matrix, include=TRUE}
+mi_matriz <- matrix(data = 1:10, # qué se incuye en la matriz
+                    ncol = 5, # número de columnas
+                    nrow = 20, # número de filas
+                    byrow = TRUE) # incluir el input
+
+mi_matriz
+```
+
+Se puede indexar elementos de matrices en múltiples modos:
+
+```{r matrix2, include=TRUE}
+mi_matriz[1,] # las filas van seguidas de una coma. Primero filas y luego columnas[row,colum]
+mi_matriz[,5] # columnas detrás de la coma
+mi_matriz[3,3]
+
+```
+
+Se pueden crear nuevos vectores a partir de secciones de matrices:
+
+```{r matrix3, include=TRUE}
+val <- mi_matriz[3,3]
+val <- mi_matriz[,3]
+```
+
+Hay algunas funciones útiles que se puede aprender para conocer más a fondo la matriz:
+
+```{r matrix4, include=TRUE}
+sum(mi_matriz) # La suma de los elementos de la matriz
+nrow(mi_matriz) # El número de filas de la matriz
+ncol(mi_matriz) # El número de columnas de la matriz 
+
+```
+
+**`R`** tiene un conjunto de tipos de datos suficientemente diversificado para ser adecuado en la mayor cantidad de análisis. Los tipos que se encuentran con mayor frecuencia son lógicos (con los modos VERDADERO y FALSO), de caracteres (cadenas de caracteres) y numéricos. Las funciones con el prefijo is.type.of.data() o la función class() verifican a qué tipo de datos pertenece el objeto especificado como argumento.
+
+```{r setup47, include=TRUE}
+x1 <- 1:3
+is.logical(x1)
+class(x1)
+```
+
+Para combinar objetos que no comparten la misma estructura, como cadenas de caracteres y vectores, es necesario utilizar una **lista**. Este es un tipo más general de estructura de vectores y matrices.
+
+```{r lista, include=TRUE}
+lista1 <- list(x,y)  
+lista1
+```
+
+Una de las posibles formas de acceder a la información de una lista es mediante corchetes dobles.
+
+```{r lista2, include=TRUE}
+lista1[[1]]
+```
+
+```{r lista3, include=TRUE}
+lista1[[2]]
+```
+
+Es posible, en la fase de creación de una lista, asignar un nombre a cada uno de sus componentes. Si los componentes de una lista tienen un nombre, se puede acceder a ellos, y posteriormente a los elementos que los componen, mediante el símbolo $.
+
+```{r lista4, include=TRUE}
+lista2 <- list(comp1 = x, comp2 = y)
+lista2
+
+lista2$comp2
+
+lista2$comp2[3]
+
+```
+
+Devuelve el valor *NULL* si no se han asignado. Además de *NULL*, *TRUE* y *FALSE*, **`R`** tiene otros valores reservados.
+
+Probablemente, el más relevante es *NA*, que indica un valor faltante. No es raro encontrar valores *NaN* (número indefinido) e *Inf* (infinito).
+
+### Filtrado (Subsetting)
+
+La forma más básica de hacer un filtro (*subsetting*) es extraer un grupo de elementos de un vector, por ejemplo:
+
+```{r sub1, include=TRUE}
+mi_vector <- 1:10
+mi_vector[3:5] # extraer elementos 3 a 5
+mi_vector[c(1,2,9)] # extraer ciertos elementos
+
+new_vector <- mi_vector[3:5] # asignar valores a un nuevo vector
+new_vector
+```
+
+También se puede usar la función c() para quitar algunos subsets (subsecciones) de la matriz:
+
+```{r sub2, include=TRUE}
+mi_matriz[c(1:3,5),c(2,4)]
+```
+
+Nótese la diferencia entre [[]] y [] en las listas:
+
+```{r sub3, include=TRUE}
+nueva_lista <- lista1[1] # devuelve la lista
+nuevo_valor <-  lista1[[1]] # devuelve un objeto que estaba en la lista
+
+nueva_lista
+nuevo_valor
+```
+
+Usar [] para el subset de una lista:
+
+```{r sub4, include=TRUE}
+nueva_lista <- lista1[1:2]
+```
+
+### Cargar datos en R
+
+Cuando la intención es hacer una investigación utilizando datos secundarios, lo primero que se debe hacer (una vez diseñadas las preguntas de investigación y la/s hipótesis), es seleccionar los datos con los que se desea trabajar. En esta ocasión, se presenta cómo abrir una base de datos en **`R`**.
+
+#### Data Frames
+
+Como ejemplo, se construyen algunos datos...
+
+```{r dataframe, include=TRUE}
+numero_estudiante <- c(1:10)
+
+notas <- c("A","B","C","A","C","F","D","B","B","A")
+
+clase <- c(rep(0,times = 5),rep(1,times = 5))
+
+comida_gratis <- rep(TRUE,times = 10)
+```
+
+Ahora se pueden unir los vectores que se crearon antes para hacer un *data frame*, que es uno de los tipos de *data* más comunes en **`R`**. Los data frames sirven para contener muchos tipos de valores (sean textuales o numéricos) y además sus columnas son fáciles de indexar por nombre utilizando el operador "$". Es lo más cercano a una base de datos tradicional, con observaciones (filas) y variables (columnas).
+
+Para evitar que las notas (en formato de texto) se conviertan en factores de variables, es decir, que se transformen en una variable categórica de **`R`**, se debe implementar el argumento 'stringsAsFactors = FALSE'. 
+
+```{r dataframe2, include=TRUE}
+mis_datos <- data.frame(numero_estudiante,
+                      notas,
+                      clase,
+                      comida_gratis,
+                      stringsAsFactors = FALSE)
+```
+
+También es posible designar el nombre de las columnas:
+
+```{r dataframe3, include=TRUE}
+colnames(mis_datos) <- c("numero_estudiante", "notas","clase","comida_gratis")
+```
+
+Revisamos cómo queda el data frame:
+
+```{r dataframe4, include=TRUE}
+mis_datos
+```
+
+
+La indexación funciona de la misma manera para las matrices, pero con un pequeño cambio:
+
+```{r dataframe5, include=TRUE}
+mis_datos[,1]
+mis_datos[2,4]
+mis_datos$numero_estudiante # $ Indexación de columnas
+mis_datos$notas[3] # Tratar $ Indexación de columnas como vectores
+```
+
+#### Subsetting inteligente
+
+La función "winch()" nos permite identificar observaciones que cumplen ciertos criterios, que el usuario dispone. Usando el operador "$", que habilita a acceder a una variable del data frame, según su nombre:
+  
+```{r which, include=TRUE}
+which(mis_datos$notas == "A")
+```
+Ahora se puede crear un dataset que sólo incluya a los estudiantes que obtuvieron A o B como notas, guardando los índices de sus notas, luego usando para extraerlos de los datos totales:
+  
+```{r which2, include=TRUE}
+A_estudiantes <- which(mis_datos$notas == "A")
+B_estudiantes <- which(mis_datos$notas == "B")
+estudiantes_dataset_reducido <- c(A_estudiantes, B_estudiantes)
+```
+
+Luego se selecciona el vector para indexar únicamente algunas filas: para ello, extraerlas y guardarlas como objetos. Nota: si se indexa por [fila, columna] y queda un campo vacío, se toma la fila o columna entera.
+
+```{r which3, include=TRUE}
+datos_reducidos <- mis_datos[estudiantes_dataset_reducido,]
+datos_reducidos
+```
+
+Otra manera sencilla de aplicar un filtro es a través de la función subset()
+
+```{r subset5, include=TRUE}
+seleccion_data2 <- subset(mis_datos, notas == "A" | notas == "B")
+seleccion_data2
+```
+
+#### Carga de datos en listas
+
+Para crear una lista vacía, se utiliza la función "vector()":
+
+```{r listas10, include=TRUE}
+mi_lista <- vector(mode = "list", length = 10)
+```
+
+También se puede crear una lista a partir de objetos. Cada entrada puede ser llamada una lista, igual que se hace con un data.frame:
+
+```{r listas11, include=TRUE}
+mi_lista <- list(num = 10,
+                animal = "vaca",
+                vec = c(1:10),
+                dat = mis_datos)
+
+```
+
+Otra opción es crear una lista vacía y luego llenarla usando el operador "$":
+
+```{r listas12, include=TRUE}
+mi_lista <- list()
+```
+
+Una vez creada, se llena de datos:
+
+```{r listas13, include=TRUE}
+mi_lista$num <- 10
+mi_lista$dat <- mis_datos
+mi_lista$cancion_favo <- "Malamente"
+```
+
+Además, se pueden pegar listas al final de otras listas, usando la función "append()":
+
+```{r listas14, include=TRUE}
+mi_lista <- append(mi_lista, list(list(27,14,"perro")))
+```
+
+Se observa el contenido de la lista:
+
+```{r listas15, include=TRUE}
+print(mi_lista)
+```
+
+#### Importar datos desde Excel
+
+Existen numerosas fuentes de las que obtener datos secundarios. En la sección anterior, se realizó un breve recorrido sobre datos primarios. Estos últimos, son aquellos que genera el usuario. Por ejemplo, se puede realizar una encuesta y, en base a los resultados obtenidos, generar una base de datos que nos sirva de punto de partida para luego, incurrir en el análisis.
+
+Para ello, se deben seguir los siguientes pasos: utilizar una base de datos como archivo de Excel y moverlo a la carpeta del primer proyecto que se crea en la sesión anterior, para luego incorporarla a la sub-carpeta llamada "datos".
+
+Un tipo de formato muy conocido es el de **Excel**, cuyas extensiones pueden ser .xls y .xlsx, siendo la primera más vieja que la segunda.
+
+El objetivo es visualizar estos datos en la ventana del entorno de `RStudio`. Para ello, se necesita un paquete que ayude a leer estos datos, el cual se obtiene siguiendo los siguientes pasos:
+
+1. ingresar a la carpeta del proyecto sobre el que se está trabajando:  
+
+- clicar sobre "primer_proyecto.Rproj" (en lugar del nombre "primer proyecto, hay que insertar el nombre de tu proyecto en particular, que en este caso, se llama "primer_proyecto". La extensión del archivo debe ser .Rproj, que es la que tienen todos los proyectos en **`R`**).
+
+2. Ir a la consola y ejecutar el siguiente comando:
+
+```{r excel, eval=FALSE}
+install.packages("readxl")
+```
+
+Este paquete permite trabajar con archivos de **Excel** específicamente. En caso de tener otro tipo de archivo, debe usar la función o paquete indicado.
+
+3. Abrir la librería del paquete recientemente instalado, ejecutando el siguiente comando, nuevamente en la consola:
+
+```{r excel2}
+library(readxl)
+```
+
+Nótese que para abrir la librería no se precisan comillas entre los paréntesis, a diferencia de durante su instalación (detallada en el paso 2).
+
+4. Colocar la ruta en donde se encuentra mi base de datos. En este caso, el directorio donde se encuentra mi base de datos es: "/Users/sofiajaime/Documents/rprojects/primer_proyecto/datos/estaciones_tren.xlsx". Hay que tener en cuenta que esta ruta es específica de cada usuario, en su ordenador local. 
+
+Es posible obtener esta ruta/path fácilmente yendo a la capreta donde este se encuentra, clicando en el botón derecho sobre la misma y en la opción "Propiedades" en el caso de un PC o bien en "Obtener información" o "Get info" si tienes un Mac. 
+
+Luego, simplemente hay que denominar al objeto "encuesta", en este caso. Seguido, colocar una función "read_excel" y entre paréntesis y comillas, pegar la ruta **propia** que dará acceso al archivo seleccionado. La línea de código es la siguiente:
+
+```{r excel3}
+encuesta <- read_excel("inputs/bases/estaciones_tren.xls")
+```
+
+5. Si se han realizado los pasos anteriores correctamente, aparecerá la base de datos en el entorno o *environment* de `RStudio`. Allí es posible ver cuántas observaciones y cuántas variables reconoce el programa dentro de la base. Al clicar sobre la misma se abrirá un archivo de **`R`** con los datos de la base especificada, que sirve para visualizar de manera más sencilla toda la información que contiene.
+
+Para comprobar que el trabajo se haya realizado bien, se puede "llamar" al objeto "encuesta" de la siguiente manera, mostrando solo los primeros 6 casos:
+
+```{r excel4}
+head(encuesta)
+```
+
+**Sobre algunos errores comunes**: a veces, se confunden en detalles que, en **`R`**, hacen la diferencia. Algunos errores comunes son:
+
+- *Seleccionar las barras incorrectas (/ ó \) según la computadora*: en la ruta que da acceso a los documentos que se quieren utilizar, hay muchas barras. Es necesario colocar las correctas según la computadora en la que se esté trabajando, y además, que todas ellas estén en la misma dirección. Si utilizo estas barras: /, deben estas todas en la misma dirección en la línea de código que esté escribiendo, porque si hay inconsistencias (utilizo ambas de manera mezclada) **`R`** no podrá leer el archivo deseado.
+
+- *Ruta errónea*: se debe comprobar que cada ruta es fácil de encontrar, tal como se especifica en el paso 4 que se encuentra más arriba.
+
+- *Símbolos incorrectos, excedentes o faltantes*: un símbolo de más o uno ausente pueden hacer que **`R`** no entienda lo que se le "ordena". Por ello, verificar que todos los símbolos estén correctamente escritos, en el lugar que deben estar, es muy importante.
+
+
+## Otros recursos de consulta {#recursos}
+
+En esta sección recopilamos algunos manuales online en español que permiten ampliar los conocimientos para introducirse en el mundo de **`R`**.
+
+- [Wickham, H., & Grolemund, G. (2016). R para Ciencias de datos](https://es.r4ds.hadley.nz/){target="_blank"}  
+
+- [Vazquez Brust, A. (2021). Ciencia de Datos para Gente Sociable](https://bitsandbricks.github.io/ciencia_de_datos_gente_sociable/){target="_blank"}  
+
+- [Boccardo Bosoni, G. y Ruiz Bruzzone, F. (2019). RStudio para Estadística Descriptiva en Ciencias Sociales](https://bookdown.org/gboccardo/manual-ED-UCH/){target="_blank"}   
+
+- [Tiscornia, P. y Weksler, G. (sin año). Introducción a R para Ciencias Sociales. Aplicación practica en la EPH](https://guidowe.github.io/Curso-R-Flacso/){target="_blank"} 

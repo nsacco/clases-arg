@@ -1,0 +1,73 @@
+---
+title: "Libro de Cocina para el Análisis de las Clases Sociales en Argentina"
+author: ["Nicolás Sacco", "José Rodríguez de la Fuente", "Sofia Jaime"]
+date: "`r Sys.Date()`"
+
+bibliography: [bib/Biblio.bib, bib/bib_jose.bib, bib/packages.bib]
+biblio-style: apalike
+link-citations: yes
+
+github-repo: nsacco/libroESA
+description: "Manual introductorio para el estudio de la estructura social en Argentina"
+
+site: bookdown::bookdown_site
+knit: "bookdown::render_book"
+always_allow_html: true
+---
+
+```{r gset, echo = FALSE, include = FALSE}
+library(knitr)
+library(ggplot2)
+library(grDevices)
+
+
+knitr::opts_chunk$set(tidy.opts=list(width.cutoff=80),tidy=TRUE,warning = FALSE, message = FALSE, cache = TRUE, echo = FALSE, fig.align = 'center', fig.topcaption = TRUE, options(scipen = 999, OutDec = "."))
+
+#windowsFonts(times = windowsFont("Times New Roman"))
+
+knitr::knit_hooks$set(inline = function(x)
+  {if(!is.numeric(x)){x}else{prettyNum(round(x,2), big.mark=".", decimal.mark = ",")}
+  })
+
+library(flextable)
+set_flextable_defaults(
+  digits = 2, decimal.mark = ",", big.mark = ".")
+
+# automatically create a bib database for R packages
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+), 'bib/packages.bib')
+
+
+
+```
+
+
+
+# Prefacio {-}
+
+La literatura sobre las clases sociales en Argentina posee ya una larga tradición, con una gran cantidad de abordajes. La relevancia de este tema reside en las transformaciones recientes de la estructura social, pero también, en los desafíos, tanto teóricos como metodológicos,  que el tema posee. Estudiantxs, investigadorxs y profesionalxs, en fin, aquellxs interesadxs en su estudio dentro de la línea de la sociología empírica, se encuentran de forma frecuente con la paralizante tarea de afrontar la infinita literatura y discusión teórica sobre la cuestión, la construcción de información, o bien con el oscuro privilegio de acceso a ciertas bases de datos, en el caso de los estudios con a datos cuantitativos secundarios; en definitiva, en la posibilidad de caer en las trampas de la ciencia cerrada o no-reproducible, todavía bastante frecuente.
+
+A modo de aporte para cubrir parte de estos problemas, este libro-manual, abierto a la comunidad para su consulta, ofrece a través de "recetas" prácticas situar a les lectores en la “cocina” de la investigación social para el estudio de las clases sociales, en particular, en el abordaje de la problemática de la construcción y análisis estadístico de datos para su estudio en la Argentina contemporánea, con un enfoque global y de largo plazo, en base a datos cuantitativos secundarios.
+
+Compartiendo información compilada y herramientas usualmente dispersas tanto en la literatura, como en bibliotecas o bases de datos de acceso exclusivo, este manual condensa algunas lecciones aprendidas por les autores, surgidas de sus experiencias de investigación, apoyados en el lenguaje de programación **``R``** y con la interfaz **``RStudio``**. Siguiendo el criterio general de ciencia abierta y reproducible, **``R``**  permite ejemplificar el procedimiento de gestión de bases de datos y de procesamientos estadísticos, ya que se trata de una poderosa herramienta para estadística, presentación gráfica, y programación, utilizada por miles de usuarixs. Pero a la vez, el uso de **``R``** puede ser desalentador. Por ello, en este libro ofrecemos soluciones de programación para problemas específicos. A partir del relevamiento, evaluación, ajuste y procesamiento de datos secundarios, les lectores serán expuestos a los desafíos empíricos y metodológicos de encarar la construcción de datos en un campo de estudio donde no predomina información para largos periodos históricos que involucran a la población de hecho en Argentina.
+
+Utilizando principalmente como fuentes de datos a los censos de población modernos (1970-2010) y, sobre todo, a la Encuesta Permanente de Hogares (1974-2020) del Instituto Nacional de Estadística y Censos (INDEC), en los capítulos que siguen se retoman algunos debates actuales sobre la estratificación social y la literatura sobre el tema en América Latina y Argentina, pero el manual enfatiza en el trabajo empírico con datos secundarios, la construcción de información, su análisis estadístico y sus posibilidades explicativas para interpretar cambios sociales recientes en Argentina, tanto desde un punto de vista global y regional, como también local.
+
+En el [Capítulo 1](#recetas), incluimos una breve introducción a **``R``** y su interfaz **``RStudio``**, que se centra en las funciones puntuales que permiten realizar los ejercicios de los capítulos posteriores. El [Capítulo 2](#analisis1) retoma algunos de los debates y conceptos en torno al estudio de la desigualdad y de la estructura social. Ya que una gran cantidad de publicaciones se dedican a este tema, decidimos dejarlo como introducción general conceptual, para pasar a los capítulos enfocados en los datos. El [Capítulo 3](#fuentes) tiene como propósito presentar las características generales de la **Encuesta Permanente de Hogares** (EPH), en tanto herramienta central para el estudio de la estructura de clases en Argentina, mientras que el [Capítulo 4](#fuentes2) ofrece algo similar pero con los censos de población. En el [Capítulo 5](#ocupacion) nos focalizamos en "las variables económicas" de las fuentes descritas en los capítulo previos, y ya en [Capítulo 6](#clases5) presentamos los diversos abordajes teórico-empíricos más utilizados en el estudio de la estratificación social, a nivel internacional y nacional, desde un abordaje operacional. El [Capítulo 7](#independiente) presenta a las clases sociales como uno de los factores estructuradores de la desigualdad social. Luego, el [Capítulo 8](#dependiente) presenta, en cambio, una de las posibles aproximaciones al estudio de la estructura de clases en tanto variable dependiente. Dentro de este tipo de abordajes nos preguntamos acerca de aquellos factores que explican, condicionan o intervienen en el proceso de formación y acción de las clases sociales. Finalmente, en el [Capítulo 9](#tiempo) exploramos la dimensión temporal y la dimensión espacial como los procesos sociales más importantes para evaluar los cambios que se producen en la estructura de clases y en la desigualdad que desde la misma genera.
+
+Al socializar nuestro trabajo, anhelamos construir una comunidad de usuaries y que la información derivada del material presentado pueda llegar a contribuir al desarrollo de futuras investigaciones en profundidad por parte de les interesados, o a brindar a las autoridades responsables, en distintos niveles geográficos y administrativos, las herramientas que posibiliten la identificación de grupos de población específicos para la formulación, evaluación y ejecución de políticas públicas.
+
+Aprovechando las ventajas de la publicación en línea, este escrito mantiene un formato "vivo", que se irá modificando con el tiempo y, si se da la posibilidad de la interacción con sus lectores, sus aportes serán felizmente bienvenidos. Sin duda, además, pretender un manual omnicomprensivo y acabado de la **estructura social argentina** es un objetivo bastante utópico debido a la enormidad de la literatura sobre el tema.
+
+Pero acá estamos, dando el primer envión. Esperamos que les sea de utilidad y también, por qué no, de diversión...
+
+Nicolás  
+Sofía  
+José
+
+# Agradecimientos {-}
+
+La idea de este manual fue tomando forma durante la pandemia de COVID-19 a mediados del año 2020, a partir de una invitación por parte de la Universidad Nacional de Tres de Febrero (UNTreF) para elaborar un curso de posgrado, en particular, de Jorge Fernández Bussy, Director de la Maestría en Generación y Análisis de Información Estadística, en el marco del Ciclo de Seminarios y Cursos extracurriculares en Estadística y el Programa de Actualización Permanente de las Orientaciones de Estadísticas Económicas, Estadísticas Sociodemográficas y Estadísticas de Opinión y Mercado, en coordinación con la Secretaría de Extensión Universitaria y la Dirección de Posgrado. El curso “Taller de Análisis de la Estructura Social en la Argentina Contemporánea” fue ofrecido por les autores de este libro de formato a distancia híbrdo (a-sincrónico y sincrónico) durante el segundo semestre del 2020. Queremos por ello agradecer a Jorge y al personal de la UNTreF por todo su apoyo, en particular a Naomi Vermus, Ayelén Gati y Silvia Rosa, quienes permitieron llevar a cabo con éxito esta experiencia. También de forma especial a les estudiantes que participaron durante esos tiempos tan difíciles, que con su trabajo y aportes fueron nuestra primera audiencia. Por último, pero no por ello menos importante, queremos darles las gracias a Gabriela Benza, Ezequiel Adamovsky y Eduardo Chávez Molina, quienes participaron como entrevistados especialistas del tema en un módulo del curso.
+
+
