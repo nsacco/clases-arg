@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Page not found | Libro de Cocina para el Análisis de las Clases Sociales en Argentina</title>
+  <title>Capítulo 3 Introducción a R y RStudio | Libro de Cocina para el Análisis de las Clases Sociales en Argentina</title>
   <meta name="description" content="Manual introductorio para el estudio de la estructura social en Argentina" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Page not found | Libro de Cocina para el Análisis de las Clases Sociales en Argentina" />
+  <meta property="og:title" content="Capítulo 3 Introducción a R y RStudio | Libro de Cocina para el Análisis de las Clases Sociales en Argentina" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="nsacco/libroESA" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Page not found | Libro de Cocina para el Análisis de las Clases Sociales en Argentina" />
+  <meta name="twitter:title" content="Capítulo 3 Introducción a R y RStudio | Libro de Cocina para el Análisis de las Clases Sociales en Argentina" />
   
   <meta name="twitter:description" content="Manual introductorio para el estudio de la estructura social en Argentina" />
   
@@ -33,8 +33,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-
+<link rel="prev" href="debate.html"/>
+<link rel="next" href="workflow.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -247,19 +247,180 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="page-not-found" class="section level1">
-<h1>Page not found</h1>
-<p>The page you requested cannot be found (perhaps it was moved or renamed).</p>
-<p>You may want to try searching to find the page's new location, or use
-the table of contents to find the page you are looking for.</p>
+<div id="anexo" class="section level1" number="3">
+<h1><span class="header-section-number">Capítulo 3</span> Introducción a R y RStudio</h1>
+<p><strong><code>R</code></strong> es un lenguaje de programación usado para realizar análisis estadístico y en general, análisis de datos. Se trata de un conjunto integrado de programas para trabajar con datos, cálculos y gráficos, que permite:</p>
+<ul>
+<li><p>almacenar y manipular datos,</p></li>
+<li><p>operar cálculos sobre variables indexadas (como las matrices),</p></li>
+<li><p>analizar datos con una colección de herramientas,</p></li>
+<li><p>aplicar herramientas gráficas para el análisis de datos y,</p></li>
+<li><p>programar con un lenguaje sencillo y en constante desarrollo.</p></li>
+</ul>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-9"></span>
+<p class="caption">
+Gráfico 3.1: Logo de R
+</p>
+<img src="inputs/imagenes/R_logo.svg.png" alt="Logo de R" width="40%" />
+</div>
+<p><strong><code>R</code></strong> es el lenguaje de programación popular debido a tres ventajas principales:</p>
+<ul>
+<li><p><strong>accesibilidad</strong>: cualquiera puede descargar el programa de manera gratuita,</p></li>
+<li><p><strong>código abierto</strong>: quien desee modificar el código de <strong><code>R</code></strong>, puede hacerlo, y</p></li>
+<li><p><strong>comunidad de usuarios</strong>: existe una actividad permanente alrededor de <strong><code>R</code></strong>, que brinda soporte a los usuarios para resolver dudas y aprender en línea.</p></li>
+</ul>
+<div id="el-entorno-de-r" class="section level3" number="3.0.1">
+<h3><span class="header-section-number">3.0.1</span> El entorno de R</h3>
+<ul>
+<li><p><strong><code>R</code></strong> se puede entender como el entorno donde se implementan múltiples técnicas estadísticas. El concepto de “entorno” se refiere a que es un sistema diseñado específicamente para el análisis de datos, que posee coherencia interna y que es más que el agregado de cada una de las herramientas que lo conforman.</p></li>
+<li><p>Gracias a la implementación de <strong><code>R</code></strong> se han desarrollado numerosos métodos interactivos para analizar datos. Los usuarios de <strong><code>R</code></strong> se han ido <em>aggiornando</em> con cada versión del programa que ha salido, añadiendo métodos que acompañan las nuevas tecnologías.</p></li>
+</ul>
+</div>
+<div id="aplicar-estadística-en-r" class="section level3" number="3.0.2">
+<h3><span class="header-section-number">3.0.2</span> Aplicar estadística en R</h3>
+<ul>
+<li><p>El entorno de <strong><code>R</code></strong> permite desplegar técnicas estadísticas, de las más antiguas hasta la más actuales. Esta ventaja no es proporcional al esfuerzo que implica buscar las herramientas del programa que permiten su aplicación.</p></li>
+<li><p>Lo que diferencia a <strong><code>R</code></strong> de otros sistemas de análisis estadísticos como <strong>Stata</strong> o <strong>SPSS</strong> es que el <code>output</code> que se genera es escueto comparado con la cantidad de comandos (o <code>input</code>) que se deben imprimir para obtenerlo. Cada uno de los pasos a seguir se van almacenando en forma de <code>objetos</code>, que quedan disponibles para la observación y el análisis del usuario.</p></li>
+<li><p>Algunas técnicas estadísticas están incluidas en el entorno básico de <strong><code>R</code></strong> y otras se pueden obtener en forma de bibliotecas, llamadas <strong>paquetes</strong> (<code>packages</code>).</p></li>
+</ul>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-10"></span>
+<p class="caption">
+Gráfico 3.2: Logos de algunos paquetes de R
+</p>
+<img src="inputs/imagenes/R_packages.png" alt="Logos de algunos paquetes de R" width="60%" />
+</div>
+</div>
+<div id="descargar-e-instalar-r" class="section level3" number="3.0.3">
+<h3><span class="header-section-number">3.0.3</span> Descargar e instalar R</h3>
+<p>Para descargar <strong><code>R</code></strong> es posible ingresar a <a href="https://cran.r-project.org/" target="_blank">https://cran.r-project.org/</a>. Luego, se debe seleccionar el sistema operativo de cada computadora donde se lo desea instalar y, a consiguiente, comenzará la instalación.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-11"></span>
+<p class="caption">
+Gráfico 3.3: R
+</p>
+<img src="inputs/imagenes/R_desc.png" alt="R" width="80%" />
+</div>
+</div>
+<div id="rstudio" class="section level3" number="3.0.4">
+<h3><span class="header-section-number">3.0.4</span> RStudio</h3>
+<p><strong><code>RStudio</code></strong> es un <strong>entorno de desarrollo integrado</strong> (IDE, en inglés), que significa que contiene todas las herramientas que se necesitan en un mismo lugar. Las maneras más sencilla de “comunicarse” con <strong><code>R</code></strong> son:</p>
+<ul>
+<li><p>escribiendo líneas de comandos que conforman el código en la terminal o bien,</p></li>
+<li><p>utilizando <code>RStudio</code>, que hace más atractiva y fácil la aproximación al programa.</p></li>
+</ul>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-12"></span>
+<p class="caption">
+Gráfico 3.4: Terminal de R
+</p>
+<img src="inputs/imagenes/terminal.png" alt="Terminal de R" width="80%" />
+</div>
+</div>
+<div id="descargar-e-instalar-rstudio" class="section level3" number="3.0.5">
+<h3><span class="header-section-number">3.0.5</span> Descargar e instalar RStudio</h3>
+<p>Se debe ingresar al siguiente enlace: <a href="https://www.rstudio.com/products/rstudio/download/" target="_blank">https://www.rstudio.com/products/rstudio/download/</a></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-13"></span>
+<p class="caption">
+Gráfico 3.5: Logo de RStudio
+</p>
+<img src="inputs/imagenes/RStudio_logo.png" alt="Logo de RStudio" width="10%" />
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-14"></span>
+<p class="caption">
+Gráfico 3.6: Descarga de RStudio
+</p>
+<img src="inputs/imagenes/RStudio_desc.png" alt="Descarga de RStudio" width="80%" />
+</div>
+</div>
+<div id="las-partes-de-rstudio" class="section level3" number="3.0.6">
+<h3><span class="header-section-number">3.0.6</span> Las partes de RStudio</h3>
+<p>Las secciones que conforman <code>RStudio</code> son cuatro:</p>
+<ul>
+<li><p>la fuente (en la parte superior izquierda),</p></li>
+<li><p>el entorno (parte superior derecha),</p></li>
+<li><p>la consola (parte inferior izquierda) y</p></li>
+<li><p>la sección de “documentos, gráficos, paquetes y ayuda” (parte inferior derecha).</p></li>
+</ul>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-15"></span>
+<p class="caption">
+Gráfico 3.7: R
+</p>
+<img src="inputs/imagenes/RStudio_partes.png" alt="R" width="80%" />
+</div>
+</div>
+<div id="rstudio-1" class="section level3" number="3.0.7">
+<h3><span class="header-section-number">3.0.7</span> RStudio</h3>
+<p>Cuando uno abre <code>RStudio</code>, de forma predeterminada, se ve de la siguiente manera:</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-16"></span>
+<p class="caption">
+Gráfico 3.8: RStudio Escritorio
+</p>
+<img src="inputs/imagenes/rstudio_entorno.png" alt="RStudio Escritorio" width="80%" />
+</div>
+<ul>
+<li><p>Básicamente, la interfaz se compone de diferentes paneles. Sobre el lado izquierdo hay un panel grande y en el lado derecho hay dos paneles más pequeños. Al comenzar a trabajar en <code>RStudio</code>, habrá un cuarto panel que se activa al abrir un nuevo documento.</p></li>
+<li><p>Al crear ese nuevo archivo hay cuatro paneles: dos a la izquierda y dos a la derecha. Es posible ajustar estos paneles moviendo la barra que los separa. También se puede deslizar el divisor del medio para ajustar el ancho de los paneles y en el lado derecho también es posible ajustar las alturas relativas de estos paneles.</p></li>
+<li><p>En la esquina de cada panel hay un botón de minimizar, para ocultar cualquier panel. Se puede maximizar nuevamente haciendo <em>clic</em> sobre el mismo o en el botón que muestra dos paneles.</p></li>
+<li><p>Esta es la forma predeterminada para configurar <code>RStudio</code>. Cualquier documento que se cree se encontrará en el panel superior <strong>izquierdo</strong> mientras que en el inferior izquierdo está la consola de <strong><code>R</code></strong>, que es un área donde se pueden escribir comandos directamente. En el lado <strong>derecho</strong>, el panel superior es básicamente información sobre el entorno en el que está trabajando.</p></li>
+<li><p>En la parte inferior derecha hay un panel que tiene varias pestañas. El primero permite ver la estructura de los archivos, por lo que es parecido a una ventana estándar que se usa para navegar en cualquier sistema operativo.</p></li>
+</ul>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-17"></span>
+<p class="caption">
+Gráfico 3.9: panel Derecho Inferior de RStudio
+</p>
+<img src="inputs/imagenes/pan_der_inf.png" alt="panel Derecho Inferior de RStudio" width="80%" />
+</div>
+<ul>
+<li>Hay una pestaña que enumera los paquetes que se han instalado.</li>
+</ul>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-18"></span>
+<p class="caption">
+Gráfico 3.10: Paquetes de RStudio
+</p>
+<img src="inputs/imagenes/paquetes.png" alt="Paquetes de RStudio" width="60%" />
+</div>
+<ul>
+<li><p>La otra es una pestaña de ayuda, ya que en <strong><code>R</code></strong>, si uno desea ayuda sobre cualquier cosa, se la puede obtener escribiendo un signo de interrogación y luego el nombre del objeto sobre el que desea ayuda:</p></li>
+<li><p>Se puede ver que, al ejecutar ese comando, se obtiene un archivo de ayuda sobre la media. También es posible obtener uno sobre la mediana, y así sucesivamente.</p></li>
+</ul>
+<p>Se obtendrá:</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-21"></span>
+<p class="caption">
+Gráfico 3.11: R
+</p>
+<img src="inputs/imagenes/ayuda.png" alt="R" width="60%" />
+</div>
+<ul>
+<li>Entonces, si hace falta ayuda, aparecerá en dicha pestaña. Hay que tener en cuenta que es posible modificar la configuración de estos paneles. Los pasos para hacerlo son:</li>
+</ul>
+<blockquote>
+<p>Menú &gt; Herramientas</p>
+</blockquote>
+<ul>
+<li>Dentro de herramientas (<em>Tools</em>) se encuentran las ‘Opciones globales’ (<em>Global Options</em>). Este menú ofrece todo tipo de posibilidades para configurar <code>RStudio</code> y el entorno. Para cambiar la ubicación de la consola y el entorno, hay que clicar arriba, donde dice ‘Entorno,’ sobre el cuadro desplegable y aplicarlo. Al volver, se verá en el lado izquierdo, el documento en el que se está trabajando y debajo, el panel de ‘Entorno.’</li>
+</ul>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-22"></span>
+<p class="caption">
+Gráfico 3.12: RStudio Opciones Globales
+</p>
+<img src="inputs/imagenes/global_opt.png" alt="RStudio Opciones Globales" width="80%" />
+</div>
+<ul>
+<li>También es posible cambiar el color del esquema, dentro de las ‘Opciones globales’ puedes ver algunas opciones de apariencia. El tema predeterminado tiene blanco de fondo con un texto en negro. Pero no es el único, sino que existen diferentes temas que se pueden aplicar.</li>
+</ul>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-23"></span>
+<p class="caption">
+Gráfico 3.13: Selección de Colores en RStudio
+</p>
+<img src="inputs/imagenes/color_schema.png" alt="Selección de Colores en RStudio" width="80%" />
+</div>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-
+<a href="debate.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="workflow.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
