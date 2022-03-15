@@ -2,9 +2,9 @@
 
 # Las características económicas de la población {#ocupacion}
 
-En este capítulo hacemos foco en las variables económicas que se investigaron, de manera no siempre uniforme, en las fuentes que vimos en los dos capítulos anteriores. Además retomamos el muy discutido tópico de los clasificadores de ocupación y su comparabilidad. Presentaremos las distintas variables que son constitutivas para el estudio y la construcción de esquemas para la medición de las clases y la estratificación social, haciendo hincapié en limitaciones y los recaudos que deben considerarse en el uso de las mismas. Principalmente revisaremos y analizaremos aquellas variables relevadas en los operativos del **INDEC** que nos convocan: censos y EPH.
+En este capítulo se focaliza en las variables económicas que se investigaron, de manera no siempre uniforme, en las fuentes analizadas en los dos capítulos previos. Además se retoma el muy discutido tópico de los clasificadores de ocupación y su comparabilidad. Se presentan las distintas variables que son constitutivas para el estudio y la construcción de esquemas para la medición de las clases y la estratificación social, haciendo hincapié en limitaciones y los recaudos que deben considerarse en el uso de las mismas. Principalmente se revisa y analiza aquellas variables relevadas en los operativos del **INDEC**: censos y EPH.
 
-Exploraremos las siguientes preguntas:  
+Se exploran las siguientes preguntas:  
 - ¿Qué variables son necesarias considerar para estudiar empíricamente las clases sociales?  
 - ¿Cuáles son las limitaciones que se presentan en la utilización de dichas variables a la hora de trabajar con censos o encuestas de hogares?  
 - ¿Cómo fueron medidas las variables a lo largo del tiempo en el sistema estadístico argentino?  
@@ -17,7 +17,7 @@ Al completar el capítulo se espera que los lectores puedan:
 - Reconocer los distintos esquemas clasificatorios de la variable **ocupación**.
 - Reconocer las principales limitaciones que se presentan cuando se quieren hacer estudios de tipo longitudinales y se requiere la armonización de distintas clasificaciones que sufrieron cambios en el tiempo. 
 
-Para una mayor comprensión del capítulo recomendamos la lectura de los siguientes documentos: 
+Para una mayor comprensión del capítulo se recomienda la lectura de las siguientes publicaciones: 
 
 - Chávez Molina, E., Bernasconi, F., &amp; Rodríguez de la Fuente, J. [-@ChavezMolina.etal2020]. "Propuesta de correspondencias entre CNO y CIUO. Sintaxis para SPSS, Stata y R. Herramientas Para La Investigación Social." Serie: Cuadernos de Métodos y Técnicas de La Investigación Social ¿Cómo Se Hace?, 6. [Link de descarga](http://iigg.sociales.uba.ar/2020/09/30/his-6-propuesta-de-correspondencias-entre-cno-y-ciuo-sintaxis-para-spss-stata-y-r/?fbclid=IwAR3RvLDs7H8wYHDqUooZMEI74HIDS6MXT3YbEjstG44yt0DB9tFj0VwlT9A)  
 
@@ -38,13 +38,13 @@ de Ocupaciones. OIT. [Link de descarga](https://www.ilo.org/public/spanish/burea
 
 - Torrado, S. [-@Torrado1993a]. El nuevo ‘Clasificador Nacional de Ocupaciones del INDEC: Una fractura irreparable en el sistema estadístico nacional. _Estudios del Trabajo_, 5, 85–120.
 
-## Algunas consideraciones previas {#consideraciones} 
+## Consideraciones previas {#consideraciones} 
 
-### Comprender las reglas del juego
+### Las reglas del juego
 
-Si nuestra idea es abordar la estructura socioeconómica, debemos tener en cuenta varias cuestiones antes de ponernos a trabajar. En el [Capítulo 2](#estructura1) hemos estudiado numerosas perspectivas teóricas que se han desarrollado tanto a nivel internacional como a nivel local en Argentina. Lo cierto es que debemos contar con una perspectiva que se adecúe a nuestra pregunta de investigación y a nuestros objetivos. Luego, definir la metodología de nuestro estudio es crucial para poder organizar las técnicas de investigación que implementaremos. Partiendo de esta base, lo siguiente sería remitirnos a las fuentes de datos que utilizaremos, según su accesibilidad y pertinencia. Una vez que contamos con los datos, seleccionaremos las variables que nos sirvan para ponernos a “jugar” con su caracterización. Podemos elaborar sistemas de clases, construir nuevas variables, pensar en diferentes maneras de caracterizar a la estructura social y más. Todo ello con un mismo fin: analizar la sociedad a nivel macro.
+Si la idea es abordar la estructura socioeconómica, se debe tener en cuenta varias cuestiones antes de trabajar. En el [Capítulo 2](#estructura1) se describieron distintas perspectivas teóricas sobre clases sociales que se han desarrollado tanto a nivel internacional como a nivel local en Argentina. Lo cierto es que se debe contar con una perspectiva que se adecúe a la pregunta de investigación y a objetivos. Luego, definir la metodología de estudio es crucial para poder organizar las técnicas de investigación que se implementarán. Partiendo de esta base, lo siguiente sería remitirse a las fuentes de datos a utilizar, según su accesibilidad y pertinencia. Una vez que se cuenta con los datos, se seleccionan las variables que sirvan para “jugar” con su caracterización. Se pueden elaborar sistemas de clases, construir nuevas variables, pensar en diferentes maneras de caracterizar a la estructura social y más. Todo ello con un mismo fin: analizar la sociedad a nivel macro.
 
-En esta unidad elaboramos una descripción de las variables económicas que se han investigado en las fuentes, prestando especial atención a las variables socio-ocupacionales porque han sido los principales insumos en el estudio de clases sociales, en especial, la ocupación. Definimos su importancia, para qué ha servido en los estudios de Argentina, cómo tratarla y qué limitaciones podemos encontrar a la hora de implementarla. Además, presentamos otras variables que son de nuestro interés para construir esquemas de medición de clases sociales.
+En esta unidad se elabora una descripción de las variables económicas que se han investigado en las fuentes, prestando especial atención a las variables socio-ocupacionales porque han sido los principales insumos en el estudio de clases sociales, en especial, la ocupación. Se define su importancia, para qué ha servido en los estudios de Argentina, cómo tratarla y qué limitaciones se encuentran a la hora de implementarla. Además, presentamos otras variables que son de nuestro interés para construir esquemas de medición de clases sociales.
 
 ### La estratificación como perspectiva de análisis
 
@@ -68,13 +68,15 @@ La relación entre la población que contribuye a los procesos productivos en el
 
 ## Las variables socio-ocupacionales
 
-Las variables económicas de la población no han sido siempre las mismas, desde el censo de 1947 hasta el censo 2010, observándose una ampliación en la información recabada, según el número de variables a las que se hace referencia [@Sacco2015]. Como vimos en el [capítulo 4](#fuentes2), si comparamos los censos a partir del de 1980 hasta el último, realizado en 2010, veremos cómo se ha diversificado la manera de medir la actividad económica en Argentina. Por su parte, las diferentes variables que ofrece la **EPH** son similares a las del censo pero con algunas variaciones. Todas las variables aquí incluidas se encuentran disponibles en la base de Personas de la **EPH**.  
+Las variables económicas de la población no han sido siempre las mismas, desde el censo de 1947 hasta el censo 2010, observándose una ampliación en la información recabada, según el número de variables a las que se hace referencia [@Sacco2015]. Como se vio en el [capítulo 4](#fuentes2), si comparamos los censos a partir del de 1980 hasta el último, realizado en 2010, veremos cómo se ha diversificado la manera de medir la actividad económica en Argentina. Por su parte, las diferentes variables que ofrece la **EPH** (Tabla \@ref(fig:censos2) son similares a las del censo pero con algunas variaciones. Todas las variables aquí incluidas se encuentran disponibles en la base de Personas de la **EPH**.  
 
+<!--
 ```{r fig.cap= "Principales variables socio-ocupacionales de la EPH", fig.align='center', out.width = '80%', echo=FALSE, eval = knitr::is_html_output()}
 knitr::include_graphics("imagenes/t3_u4.png")
 ```
+-->
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE, eval = !knitr::is_html_output()}
+```{r vars1, echo=FALSE, fig.cap= "Principales variables socio-ocupacionales de la EPH", fig.align='center', out.width = '80%', warning=FALSE, message=FALSE, eval = !knitr::is_html_output()}
 variables_eph <- data.frame(c1 = c("Condición de actividad", "Categoría ocupacional",
                                    "Ocupación", "Rama de actividad", "Tamaño del establecimiento"),
                             c2 = c("Población activida o inactiva", 
@@ -305,13 +307,15 @@ Tanto en la **EPH** como en el censo, se ha utilizado la codificación disponibl
 
 En el censo de 1980, fue codificada según la “Clasificación Industrial Internacional Uniforme de Actividades Económicas” (**CIIU**) de las Naciones Unidas (Revisión 2-1968), hasta el nivel de ramas específicas (dos dígitos). Para 1991 y 2001 esta variable no presentó modificaciones sustanciales. Más información puede encontrarse en este [link](https://www.indec.gob.ar/micro_sitios/clanae/default.asp).
 
-En la **EPH** entre 1974, su primera onda, hasta 1980 inclusive, se han utilizado los tres primeros dígitos de la **CIIU**, Revisión 2, aunque la codificación original consta de hasta 5 dígitos a su nivel más detallado. A partir del año 1997, se ha utilizado la “Clasificación Nacional de Actividades Económicas” (ClaNAE-97) con un detalle a cinco dígitos. Más tarde, desde 2011, la **EPH** distingue las ramas de actividad según la “Clasificación de Actividades Económicas para Encuestas Sociodemográficas del Mercosur” (**CAES Mercosur 1.0**), utilizando los 5 dígitos del código. Así mismo, esta última versión del CAES es totalmente compatible con el **CIIU** en su revisión 4.
+En la **EPH** entre 1974, su primera onda, hasta 1980 inclusive, se han utilizado los tres primeros dígitos de la **CIIU**, Revisión 2, aunque la codificación original consta de hasta 5 dígitos a su nivel más detallado. A partir del año 1997, se ha utilizado la “Clasificación Nacional de Actividades Económicas” (ClaNAE-97) con un detalle a cinco dígitos. Más tarde, desde 2011, la **EPH** distingue las ramas de actividad según la “Clasificación de Actividades Económicas para Encuestas Sociodemográficas del Mercosur” (**CAES Mercosur 1.0**), utilizando los 5 dígitos del código. Así mismo, esta última versión del CAES es totalmente compatible con el **CIIU** en su revisión 4. En la Tabla \@ref(fig:caes10) se observa un ejemplo de la CAES:
 
+<!--
 ```{r fig.cap= "Ejemplo clasificación de Actividades Profesionales, Científicas y Técnicas - CAES 1.0 [@INDEC2011d]", fig.align='center', out.width = '80%', echo=FALSE, eval = knitr::is_html_output()}
 knitr::include_graphics("imagenes/caes10.png")
 ```
+-->
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE, eval = !knitr::is_html_output()}
+```{r caes10, fig.cap= "Ejemplo clasificación de Actividades Profesionales, Científicas y Técnicas - CAES 1.0 [@INDEC2011d]", fig.align='center', out.width = '80%', echo=FALSE, eval = knitr::is_html_output()}
 
 caes_tabla <- data.frame(c1 = c("M", "69",	"6900",	"70",	"7000",	"71",	"7100",	"72",	"7200",
                                 "73",	"7301",	"7302",	"74",	"7400",	"75",	"7500"),

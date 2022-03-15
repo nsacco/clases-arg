@@ -111,7 +111,7 @@ Esta perspectiva no está exenta de críticas, ya que se le suele señalar que f
 
 De acuerdo a lo esquematizado en la Tabla \@ref(fig:censos2), las variables, sus sistemas clasificatorios y los universos de observación presentan divergencias entre los censos de 1980 a 2010. 
 
-```{r censos2, fig.cap="Sistemas clasificatorios de las variables económicas de la población en los censos modernos. Argentina, 1947-2010"echo=FALSE, warning=FALSE, message=FALSE}
+```{r censos2, fig.cap="Sistemas clasificatorios de las variables económicas de la población en los censos modernos. Argentina, 1947-2010", echo=FALSE, warning=FALSE, message=FALSE}
 censos2 <- data.frame(c1 = c("Condición de Actividad", "Categoría de Ocupación", 
                              "Rama de Actividad", "Tamaño"),
                       c2 = c("Actividad ejercida en la semana anterior a la enumeración",
@@ -221,7 +221,7 @@ La descarga directa de los microdatos censales desde el sitio web oficial del IN
 
 Uno de los aspectos a considerar por parte del INDEC, para quienes se inclinan por esta opción, es la protección de la confidencialidad de los datos ofrecidos por las personas que fueron censadas, en tanto la información almacenada en los microdatos censales puede llevar a la identificación de las mismas, particularmente si se trabaja con información de áreas muy pequeñas del territorio. También existe la posibilidad de convertir los diccionarios de formato REDATAM a otros formatos, lo cual puede llegar a simplificar enormemente tareas de procesamiento de datos.
 
-Tanto para el caso del 2001 como el 2010, sólo hace falta hacer click en "Descargar Diccionario" para bajarse la base de microdatos, tal como se muestra en las imágenes y trabajarla de forma local, con REDATAM o, mediante su transformación, con su software de preferencia.
+Tanto para el caso del 2001 como el 2010, sólo hace falta hacer 'click' en "Descargar Diccionario" para bajarse la base de microdatos, tal como se muestra en las imágenes y trabajarla de forma local, con REDATAM o, mediante su transformación, con su software de preferencia.
 
 ```{r, echo = F, warning = F, message = F, fig.cap = 'Descargar diccionario', fig.width = 0.2, fig.height = 0.5, fig.asp=0.50, out.width = "80%", fig.align = "center"}
 knitr::include_graphics("imagenes/dic2001.png")
@@ -241,20 +241,25 @@ En su blog [Discontinuos](https://idiscontinuos.wordpress.com/2015/03/21/convirt
 
 Sólo cinco años después de la creación del CELADE, este organismo comenzó la Operación de Muestras de Censos (OMUECE), la más ambiciosa muestra internacional de censos del siglo XX. Gracias ello el archivo de microdatos censales de América Latina es uno los más completos de cualquier región del mundo (para más información ver artículos de McCaa y Jaspers-Faijer (2000) y McCaa, Esteve, Ruggles y Sobek (2004). Este proyecto fue el antecedente directo de las bases disponibles hoy en el IPUMS-I. Este espacio ofrece una colección, inventario, preservación de datos y documentación referida a muestras de censos en el mundo, con información armonizada, es decir, comparable entre países, de manera gratuita. Tiene una documentación bastante exhaustiva y facilita de esta forma la investigación comparativa. Una de las desventajas del proyecto IPUMS es que no posee mecanismos de validación con el INDEC y a veces resultan más confiables datos de los INDEC que IPUMS en algunas variables. 
 
-Para Argentina, contamos con microdatos de muestras censales sólo para los censos de 1970 a 2010. En el siguiente video instructivo podrán ver cómo acceder a las bases disponibles en IPUMS-I, con un ejemplo para Argentina en 1980:
+Para Argentina, contamos con microdatos de muestras censales sólo para los censos de 1970 a 2010. 
+
+
+<!-- solo para la verisión webEn el siguiente video instructivo podrán ver cómo acceder a las bases disponibles en IPUMS-I, con un ejemplo para Argentina en 1980:
 
 ```{r, echo = F, warning = F, message = F}
 library("vembedr")
 embed_youtube("IsBHZ1fHKBw")
 ```
 
-Para les usuaries de `R` que quieran trabajar las bases con este programa, les recomendamos que sigan las viñetas del paquete [`ipumsr`](https://cran.r-project.org/web/packages/ipumsr/vignettes/ipums.html){target="_blank"} para trabajar estos datos y la viñeta del [`tidyverse`](https://www.tidyverse.org/){target="_blank"} para su procesamiento.
+-->
+
+Para les usuaries de `R` que quieran trabajar las bases con este programa, se recomienda que sigan las viñetas del paquete [`ipumsr`](https://cran.r-project.org/web/packages/ipumsr/vignettes/ipums.html){target="_blank"} para trabajar estos datos y la viñeta del [`tidyverse`](https://www.tidyverse.org/){target="_blank"} para su procesamiento.
 
 ### Solicitud directa al INDEC
 
 ¿Qué se hace cuando las opciones de acceso a datos censales mencionadas previamente no satisfacen los requerimientos de información de los usuarios, ya sea porque se precisa información sobre un conjunto de variables específicas, o para un año censal en particular o para poder analizar los datos con mayores niveles de desagregación territorial? Pues bien, siempre está la opción de recurrir, con suerte variable, al INDEC.
 
-Sabido es que el INDEC conserva -de alguna manera y en algún sitio- una copia de las bases de los censos realizados en el país. ¿Se puede acceder a las mismas? Si así fuera, ¿en qué formato y condiciones se podrían adquirir? ¿Cuál es el procedimiento a seguir para realizar esta solicitud? ¿Tiene algún costo? Lamentablemente no tenemos respuestas claras para estas preguntas pero es probable que existan posibilidades y criterios diferentes, porque es información que por razones que desconocemos, no se socializan.
+Sabido es que el INDEC conserva —de alguna manera y en algún sitio— una copia de las bases de los censos realizados en el país. ¿Se puede acceder a las mismas? Si así fuera, ¿en qué formato y condiciones se podrían adquirir? ¿Cuál es el procedimiento a seguir para realizar esta solicitud? ¿Tiene algún costo? Lamentablemente no tenemos respuestas claras para estas preguntas pero es probable que existan posibilidades y criterios diferentes, porque es información que por razones que desconocemos, no se socializan.
 
 En este sentido, resulta difícil de identificar los procedimientos vigentes en el INDEC. En algunos censos existieron en procedimientos claros y estandarizados para atender los pedidos de bases de datos censales, pero en otras no. Cuando esto último ocurre, suele suceder que los criterios varían en el tiempo y en función de las autoridades presentes en el organismo.
 

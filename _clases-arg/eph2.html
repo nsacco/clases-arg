@@ -60,6 +60,8 @@
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 <link href="libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
 <script src="libs/pagedtable-1.1/js/pagedtable.js"></script>
+<link href="libs/tabwid-1.0.0/tabwid.css" rel="stylesheet" />
+<link href="libs/vembedr-0.1.5/css/vembedr.css" rel="stylesheet" />
 
 
 <style type="text/css">
@@ -207,6 +209,29 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="2.4" data-path="otras.html"><a href="otras.html"><i class="fa fa-check"></i><b>2.4</b> Otras encuestas de hogares para el estudio de la estructura de clases<span></span></a></li>
 </ul></li>
+<li class="chapter" data-level="3" data-path="fuentes2.html"><a href="fuentes2.html"><i class="fa fa-check"></i><b>3</b> Los censos de población modernos<span></span></a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="clases3.html"><a href="clases3.html"><i class="fa fa-check"></i><b>3.1</b> Clases sociales y censos de población<span></span></a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="clases3.html"><a href="clases3.html#antecedentes"><i class="fa fa-check"></i><b>3.1.1</b> Antecedentes<span></span></a></li>
+<li class="chapter" data-level="3.1.2" data-path="clases3.html"><a href="clases3.html#practicidad"><i class="fa fa-check"></i><b>3.1.2</b> Practicidad<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="censos.html"><a href="censos.html"><i class="fa fa-check"></i><b>3.2</b> Censos de población modernos. Características principales<span></span></a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="censos.html"><a href="censos.html#las-características-económicas-en-los-censos-de-población"><i class="fa fa-check"></i><b>3.2.1</b> Las características económicas en los censos de población<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="censos2.html"><a href="censos2.html"><i class="fa fa-check"></i><b>3.3</b> Censos modernos: acceso diferencial<span></span></a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="censos2.html"><a href="censos2.html#modos-de-acceso"><i class="fa fa-check"></i><b>3.3.1</b> Modos de acceso<span></span></a></li>
+<li class="chapter" data-level="3.3.2" data-path="censos2.html"><a href="censos2.html#es-lo-que-hay"><i class="fa fa-check"></i><b>3.3.2</b> Es lo que hay<span></span></a></li>
+<li class="chapter" data-level="3.3.3" data-path="censos2.html"><a href="censos2.html#procesamiento-de-datos-en-línea"><i class="fa fa-check"></i><b>3.3.3</b> Procesamiento de datos en línea<span></span></a></li>
+<li class="chapter" data-level="3.3.4" data-path="censos2.html"><a href="censos2.html#descarga-directa-de-microdatos"><i class="fa fa-check"></i><b>3.3.4</b> Descarga directa de microdatos<span></span></a></li>
+<li class="chapter" data-level="3.3.5" data-path="censos2.html"><a href="censos2.html#ipums-i"><i class="fa fa-check"></i><b>3.3.5</b> IPUMS-I<span></span></a></li>
+<li class="chapter" data-level="3.3.6" data-path="censos2.html"><a href="censos2.html#solicitud-directa-al-indec"><i class="fa fa-check"></i><b>3.3.6</b> Solicitud directa al INDEC<span></span></a></li>
+<li class="chapter" data-level="3.3.7" data-path="censos2.html"><a href="censos2.html#otras-opciones-no-oficiales"><i class="fa fa-check"></i><b>3.3.7</b> Otras opciones no oficiales<span></span></a></li>
+<li class="chapter" data-level="3.3.8" data-path="censos2.html"><a href="censos2.html#disponibilidad-en-detalle-para-el-estudio-de-clases-sociales"><i class="fa fa-check"></i><b>3.3.8</b> Disponibilidad en detalle para el estudio de clases sociales<span></span></a></li>
+</ul></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -229,7 +254,7 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="eph2" class="section level2 hasAnchor" number="2.2">
 <h2><span class="header-section-number">2.2</span> Comenzando a utilizar la EPH<a href="eph2.html#eph2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Existen diversas formas de descargar y abrir las bases de micro-datos de la EPH desde <strong><code>R</code></strong>. En primer lugar, a partir de la descarga manual desde la web de <a href="https://www.indec.gob.ar/indec/web/Institucional-Indec-BasesDeDatos" target="_blank">INDEC</a>. Este método permite acceder a todas las bases de la EPH disponibles oficialmente, desde 1974 a la actualidad. En segundo lugar, de acuerdo a algún programa. En este capítulo revisaremos el uso del paquete <a href="https://github.com/holatam/eph" target="_blank">eph</a> <span class="citation">(<a href="otras.html#ref-kozlowski2020" role="doc-biblioref">Kozlowski et al., 2020</a>)</span>, que nos simplifica el trabajo de acceso a micro-datos, así como el armado de <em>pools</em> de datos. Temporalmente, su única limitación es que sólo podemos descargar las bases a partir de la primera onda de 1996. Utilizaremos las siguientes librerías de <strong><code>R</code></strong>:</p>
+<p>Existen diversas formas de descargar y abrir las bases de micro-datos de la EPH desde <strong><code>R</code></strong>. En primer lugar, a partir de la descarga manual desde la web de <a href="https://www.indec.gob.ar/indec/web/Institucional-Indec-BasesDeDatos" target="_blank">INDEC</a>. Este método permite acceder a todas las bases de la EPH disponibles oficialmente, desde 1974 a la actualidad. En segundo lugar, de acuerdo a algún programa. En este capítulo revisaremos el uso del paquete <a href="https://github.com/holatam/eph" target="_blank">eph</a> <span class="citation">(<a href="censos2.html#ref-kozlowski2020" role="doc-biblioref">Kozlowski et al., 2020</a>)</span>, que nos simplifica el trabajo de acceso a micro-datos, así como el armado de <em>pools</em> de datos. Temporalmente, su única limitación es que sólo podemos descargar las bases a partir de la primera onda de 1996. Utilizaremos las siguientes librerías de <strong><code>R</code></strong>:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="eph2.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb1-2"><a href="eph2.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(eph)</span>
 <span id="cb1-3"><a href="eph2.html#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(haven)</span>

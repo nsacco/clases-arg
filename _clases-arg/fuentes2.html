@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Libro de Cocina para el Análisis de las Clases Sociales en Argentina</title>
+  <title>Capítulo 3 Los censos de población modernos | Libro de Cocina para el Análisis de las Clases Sociales en Argentina</title>
   <meta name="description" content="Manual introductorio para el estudio de la estructura social en Argentina" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Libro de Cocina para el Análisis de las Clases Sociales en Argentina" />
+  <meta property="og:title" content="Capítulo 3 Los censos de población modernos | Libro de Cocina para el Análisis de las Clases Sociales en Argentina" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="nsacco/libroESA" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Libro de Cocina para el Análisis de las Clases Sociales en Argentina" />
+  <meta name="twitter:title" content="Capítulo 3 Los censos de población modernos | Libro de Cocina para el Análisis de las Clases Sociales en Argentina" />
   
   <meta name="twitter:description" content="Manual introductorio para el estudio de la estructura social en Argentina" />
   
@@ -33,8 +33,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="agradecimientos.html"/>
+<link rel="prev" href="otras.html"/>
+<link rel="next" href="clases3.html"/>
 <script src="libs/header-attrs-2.12/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -252,32 +252,38 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Libro de Cocina para el Análisis de las Clases Sociales en Argentina</h1>
-<p class="author"><em>Nicolás Sacco</em></p>
-<p class="author"><em>José Rodríguez de la Fuente</em></p>
-<p class="author"><em>Sofia Jaime</em></p>
-<p class="date"><em>2022-03-11</em></p>
-</div>
-<div id="prefacio" class="section level1 unnumbered hasAnchor">
-<h1>Prefacio<a href="index.html#prefacio" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>La literatura sobre las clases sociales en Argentina posee ya una larga tradición y una amplia gama de abordajes. La relevancia de este tema reside en las transformaciones recientes de la estructura social, pero también, en los desafíos, tanto teóricos como metodológicos, que el tema posee. Estudiantxs, investigadorxs y profesionalxs, en fin, aquellxs interesadxs en su estudio, se encuentran de forma frecuente con la paralizante tarea de afrontar la infinita literatura y discusión teórica sobre la cuestión, la construcción de información, o bien con el oscuro privilegio de acceso a ciertas bases de datos, en el caso de los estudios con datos cuantitativos secundarios; en definitiva, en la posibilidad de caer en las trampas de la ciencia cerrada o no-reproducible, todavía bastante frecuente.</p>
-<p>A modo de aporte para cubrir parte de estos problemas, este manual, abierto a la comunidad para su consulta, ofrece a través de “recetas” prácticas situar a les lectores en la “cocina” de la investigación social para el estudio de las clases sociales, en particular, en el abordaje de la problemática de la construcción y análisis estadístico de datos para su estudio en la Argentina contemporánea, con un enfoque global y de largo plazo, en base a datos cuantitativos secundarios.</p>
-<p>Compartiendo información compilada y herramientas usualmente dispersas tanto en la literatura, como en bibliotecas o bases de datos de acceso exclusivo, este libro condensa algunas lecciones aprendidas y experiencias de investigación, apoyados en el lenguaje de programación <strong><code>R</code></strong> y con la interfaz <strong><code>RStudio</code></strong>. Siguiendo el criterio general de ciencia abierta y reproducible, <strong><code>R</code></strong> permite ejemplificar el procedimiento de gestión de bases de datos y de procesamientos estadísticos, ya que se trata de una poderosa herramienta para la estadística, presentación gráfica, y programación, utilizada por miles de usuarixs. Pero a la vez, el uso de <strong><code>R</code></strong> puede ser desalentador. Por ello, en este libro ofrecemos soluciones de programación para problemas específicos.</p>
-<p>Esta iniciativa se orientó, en ese sentido, al desarrollo de un conjunto básico de contenidos e instrumentos actualizados para la gestión de datos y análisis de las clases sociales. Este manual incluye su socialización en un formato también plano, y la presentación de herramientas computacionales que permiten apoyar la aplicación de los métodos presentados.</p>
-<p>A partir del relevamiento, evaluación, ajuste y procesamiento de datos secundarios, les lectores serán expuestos a los desafíos empíricos y metodológicos de encarar la construcción de datos en un campo de estudio donde no predomina información para largos periodos históricos que involucran a la población de hecho en Argentina. Utilizando principalmente como fuentes de datos a los censos de población modernos (1970-2010) pero, sobre todo, a la Encuesta Permanente de Hogares (1974-2020) del Instituto Nacional de Estadística y Censos (INDEC), en los capítulos que siguen se retoman algunos debates actuales sobre la estratificación social y la literatura sobre el tema, y sus vertientes en América Latina y Argentina, pero el manual enfatiza en el trabajo empírico con datos secundarios, la construcción de información, su análisis estadístico y sus posibilidades explicativas para interpretar cambios sociales recientes en Argentina, tanto desde un punto de vista global y regional, como también local.</p>
-<p>El <a href="analisis1.html#analisis1">Capítulo 1</a> retoma algunos de los debates y conceptos en torno al estudio de la desigualdad y de la estructura social. Ya que una gran cantidad de publicaciones se dedican a este tema, se decidió dejarlo como introducción general conceptual, para pasar a los capítulos enfocados en los datos. El <a href="fuentes.html#fuentes">Capítulo 2</a> presenta las características generales de la <strong>Encuesta Permanente de Hogares</strong> (EPH), en tanto herramienta central para el estudio de la estructura de clases en Argentina, mientras que el <a href="fuentes2.html#fuentes2">Capítulo 3</a> ofrece algo similar pero con los censos de población. El <a href="#ocupacion">Capítulo 4</a> se focaliza en “las variables económicas” de las fuentes descritas en los capítulo previos, y ya en <a href="#clases5">Capítulo 5</a> se presentan los diversos abordajes teórico-empíricos más utilizados en el estudio de la estratificación social, a nivel internacional y nacional, desde un abordaje operacional. El <a href="#independiente">Capítulo 6</a> presenta a las clases sociales como uno de los factores estructuradores de la desigualdad social. El <a href="#dependiente">Capítulo 7</a>, en cambio, retoma una de las posibles aproximaciones al estudio de la estructura de clases en tanto variable dependiente. Dentro de este tipo de abordajes se interroga acerca de aquellos factores que explican, condicionan o intervienen en el proceso de formación y acción de las clases sociales. Finalmente, en el <a href="#tiempo">Capítulo 8</a> se explora la dimensión temporal y la dimensión espacial como los procesos sociales más importantes para evaluar los cambios que se producen en la estructura de clases y en la desigualdad que desde la misma genera. En el <a href="#recetas">Anexo</a>, se incluye una breve introducción a <strong><code>R</code></strong> y su interfaz <strong><code>RStudio</code></strong>, centrada en las funciones puntuales que permiten realizar los ejercicios de los capítulos.</p>
-<p>Al socializar este trabajo, el anhelo es construir una comunidad de usuarios y que la información derivada del material presentado pueda llegar a contribuir al desarrollo de futuras investigaciones en profundidad por parte de les interesados. Aprovechando las ventajas de la publicación en línea, este escrito mantiene un formato “vivo”, que se irá modificando con el tiempo y, si se da la posibilidad de la interacción con sus lectores, sus aportes serán felizmente bienvenidos. Porque pretender un manual omnicomprensivo y acabado de la <strong>estructura social argentina</strong> es un objetivo bastante utópico dada la enormidad de la literatura sobre el tema.</p>
-<p>Esperamos que les sea de utilidad.</p>
-<p>Nicolás José Sofía</p>
+<div id="fuentes2" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Capítulo 3</span> Los censos de población modernos<a href="fuentes2.html#fuentes2" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Este capítulo tiene como propósito presentar a los censos de población modernos (1960-2010), llevados a cabo por el <a href="www.indec.gob.ar" target="_blank">Instituto Nacional de Estadísticas y Censos</a> (INDEC), para mostrar sus características, posibilidades y limitaciones en tanto fuente para el estudio de la estructura de clases en Argentina.</p>
+<p>Se abordan las siguientes preguntas:</p>
+<ul>
+<li>¿Cuáles son las principales características de los censos modernos?</li>
+<li>¿Qué elementos presentan para el estudio de la estructura de clases argentina?</li>
+<li>¿Cuáles son sus limitaciones? ¿Qué cambios han presentado a lo largo del tiempo?</li>
+<li>¿Cuáles son las principales variables que debemos considerar en el análisis de clase?</li>
+<li>¿Qué formas existen para acceder a los microdatos?</li>
+<li>¿Qué ventajas presenta cada forma de acceso?</li>
+</ul>
+<p>Al completar este capítulo se espera que les lectores puedan:</p>
+<ol style="list-style-type: decimal">
+<li>Identificar las principales características, ventajas y desventajas en el uso de los censos de población modernos para el estudio de la estructura de clases en Argentina.</li>
+<li>Aprender a localizar la información necesaria, incorporando distintos métodos de acceso a la misma (descarga de microdatos desde distintos sitios y uso de paquete <strong><code>ipumsr</code></strong> para <strong><code>R</code></strong>).</li>
+<li>Navegar los microdatos de los censos de población en <code>RStudio</code> y realizar exploraciones preliminares.</li>
+</ol>
+<p>Para una mayor comprensión del capítulo recomendamos la lectura de los siguientes documentos:</p>
+<p>De Grande, P. (2016): “El formato Redatam”. <em>Estudios demográficos y urbanos</em>, Vol. 31, Núm. 3 (93), pp. 811-832. <a href="https://estudiosdemograficosyurbanos.colmex.mx/index.php/edu/article/view/15/pdf" target="_blank">Link</a>.</p>
+<p>Observatorio Latinoamericano de Censos de Población <a href="https://observatoriocensal.org/" target="_blank">OLAC</a>.</p>
+<p>Robert McCaa, Albert Esteve, Steven Ruggles y Matthew Sobek (2004): “La integración de los microdatos censales de América Latina: el proyecto IPUMS-América Latina”, <em>Estudios Demográficos y Urbanos</em>, 20(1), 37-70.</p>
+<p>Sacco, N. (2017): “¿Cierran los números con la gente adentro?”. <em>Estudios Demográficos y Urbanos</em>, 32(96), 631-667. doi: 10.24201/edu.v32i3.1648.</p>
+<p>Torrado, S. (1992):‘Para leer “Estructura social de la Argentina”’ en Jorrat, J. R. &amp; Sautu, R. (Eds.) <em>Después de Germani: Exploraciones sobre estructura social de la Argentina</em>, Paidós.</p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="agradecimientos.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="otras.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="clases3.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
