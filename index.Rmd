@@ -22,7 +22,7 @@ library(ggplot2)
 library(grDevices)
 library(flextable)
 
-knitr::opts_chunk$set(tidy.opts = list(width.cutoff = 80),tidy = TRUE,warning = FALSE, message = FALSE, cache = TRUE, echo = FALSE, fig.align = 'center', fig.topcaption = TRUE, options(scipen = 999, OutDec = "."))
+knitr::opts_chunk$set(tidy.opts = list(width.cutoff = 80),tidy = TRUE, warning = FALSE, message = FALSE, cache = TRUE, echo = FALSE, fig.align = 'center', fig.topcaption = TRUE, options(scipen = 999, OutDec = "."))
 
 #windowsFonts(times = windowsFont("Times New Roman"))
 
@@ -61,7 +61,7 @@ Al socializar este trabajo, el anhelo es construir una comunidad de usuarios y q
 
 Esperamos que les sea de utilidad.
 
-Nicolás José Sofía
+Nicolás, José y Sofía
 
 # Agradecimientos {.unnumbered}
 

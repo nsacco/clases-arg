@@ -348,14 +348,14 @@ caes_tabla %>%
   fontsize(part = "all", size = 10)                            
 ```
 
-En el siguiente cuadro podemos ver todas las clasificaciones que se han ido implementando para codificar las ramas de actividad económica.
+En la siguiente Tabla \@ref(fig:caes2) podemos ver todas las clasificaciones que se han ido implementando para codificar las ramas de actividad económica.
 
 ```{r fig.cap= "Clasificadores de la rama de actividad", fig.align='center', out.width = '80%', echo=FALSE, eval = knitr::is_html_output()}
 knitr::include_graphics("imagenes/t4_u4.png")
 ```
 
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE, eval = !knitr::is_html_output()}
+```{r caes2, echo=FALSE, warning=FALSE, message=FALSE, eval = !knitr::is_html_output()}
 
 caes_tabla2 <- data.frame(c1 = c("CIIU Revisión 2", "CIIU Revisión 3", "CAES Mercosur (CIIU Revisión 3)",
                                  "ClaNAE-97", "CAES 2000 Mercosur (CIIU Revisión 4)",
@@ -373,7 +373,6 @@ caes_tabla2 %>%
   add_footer_row(values = "Fuente: elaboración propia", colwidths = 3) %>% 
   fontsize(part = "all", size = 10)                            
 ```
-
 
 
 ### Categoría de Ocupación
@@ -394,11 +393,11 @@ Esta variable se utiliza generalmente para realizar cortes dentro de la estratif
 
 La **supervisión** del trabajo de otros es un indicador muy utilizado dentro del enfoque neo-marxista o neo-weberiano de las clases sociales, en donde se busca diferenciar aquellas posiciones "contradictorias" a partir de las cuales si bien se hace referencia a trabajadores asalariados, tienen poder de dirección (con mayores o menores niveles de autonomía) en el trabajo de otros.
 
-En algunas encuestas está dimensión es relevada directamente, acompañada de otras preguntas que pueden recabar información sobre la cantidad de personas supervisadas o las características de dicha actividad de supervisión. En la **EPH**, una aproximación a dicha cuestión puede realizarse a través de la varible **ocupación** medida a través del **CNO**. El tercer dígito de dicho código, que permite establecer la *jerarquía ocupacional* posibilita diferenciar a aquellas ocupaciones de ejecución directa de las de jefatura. Estas últimas implican aquellos trabajos en donde se organiza, supervisa y controlan procesos y personas comprometidas en su ejecución.
+En algunas encuestas está dimensión es relevada directamente, acompañada de otras preguntas que pueden recabar información sobre la cantidad de personas supervisadas o las características de dicha actividad de supervisión. En la **EPH**, una aproximación a dicha cuestión puede realizarse a través de la variable **ocupación** medida a través del **CNO**. El tercer dígito de dicho código, que permite establecer la *jerarquía ocupacional* posibilita diferenciar a aquellas ocupaciones de ejecución directa de las de jefatura. Estas últimas implican aquellos trabajos en donde se organiza, supervisa y controlan procesos y personas comprometidas en su ejecución.
 
 ## Explorando las variables socio-ocupacionales en la EPH {#eph4} 
 
-Paquetes que utilizaremos en este subcapítulo:
+Paquetes que utilizaremos en esta sección:
 ```{r, message=FALSE, warning=FALSE}
 library(tidyverse)
 library(eph)
@@ -419,7 +418,7 @@ Como la codificación de la variable ocupación a partir de la **CIUO** se encue
 knitr::include_graphics("imagenes/indec_ciuo.png")
 ```
 
-Luego de descargado el archivo, descomprimiremos el ```.rar``` y utilizaremos el archivo eph_ciuo_215.dbf. A continuación abriremos dicho archivo y "pegaremos" la variable **PP04D_CIUO** en la base **eph_ind_215**. Utilizaremos las variables **CODUSU** (identificador de vivienda), **NRO_HOGAR** (identificador del hogar) y **COMPONENTE** (identificador de miembro del hogar) como ID para emparejar ambas bases. 
+Luego de descargado el archivo, descomprimiremos el ```.rar``` y utilizaremos el archivo `eph_ciuo_215.dbf`. A continuación abriremos dicho archivo y "pegaremos" la variable **PP04D_CIUO** en la base **eph_ind_215**. Utilizaremos las variables **CODUSU** (identificador de vivienda), **NRO_HOGAR** (identificador del hogar) y **COMPONENTE** (identificador de miembro del hogar) como ID para emparejar ambas bases. 
 
 ```{r, message=FALSE, warning=FALSE}
 library(foreign)
@@ -449,6 +448,7 @@ En la **EPH** la variable que mide la **condición de actividad** puede ser enco
 ```{r, message=FALSE, warning=FALSE}
 table(eph_ind_215$ESTADO)
 ```
+
 Como puede observarse las categorías son *entrevista individual no realizada*, *ocupado*, *desocupado*, *inactivo* y *menor de 10 años*. En el caso de que pretendamos seleccionar únicamente a la población económicamente activa, deberemos filtrar las categorías 1 (ocupado) y 2 (desocupado). En este caso nos quedaríamos con 25848 registros.
 
 ```{r, message=FALSE, warning=FALSE}
@@ -511,12 +511,11 @@ table(eph_ind_215$caes_eph_label)
 
 ### Categoría de ocupación  
 
-La categoría de ocupación es una variable que también es de vital importancia en la construcción de clasificaciones. La misma puede encontrarse bajo el nombre de *CAT_OCUP*. A continuación exploramos sus categorías.
+La categoría de ocupación es una variable que también es de vital importancia en la construcción de clasificaciones. La misma puede encontrarse bajo el nombre de *CAT_OCUP*. A continuación exploramos sus categorías:
 
 ```{r, message=FALSE, warning=FALSE}
 table(eph_ind_215$CAT_OCUP)
 ```
-
 
 ### Sector de actividad  
 
@@ -525,7 +524,6 @@ En la **EPH** el sector de actividad puede encontrarse en la variable *PP04A*.
 ```{r, message=FALSE, warning=FALSE}
 table(eph_ind_215$PP04A)
 ```
-
 
 ### Tamaño del establecimiento  
 

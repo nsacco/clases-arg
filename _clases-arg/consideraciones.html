@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Capítulo 3 Los censos de población modernos | Libro de Cocina para el Análisis de las Clases Sociales en Argentina</title>
+  <title>4.1 Consideraciones previas | Libro de Cocina para el Análisis de las Clases Sociales en Argentina</title>
   <meta name="description" content="Manual introductorio para el estudio de la estructura social en Argentina" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Capítulo 3 Los censos de población modernos | Libro de Cocina para el Análisis de las Clases Sociales en Argentina" />
+  <meta property="og:title" content="4.1 Consideraciones previas | Libro de Cocina para el Análisis de las Clases Sociales en Argentina" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="nsacco/libroESA" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 3 Los censos de población modernos | Libro de Cocina para el Análisis de las Clases Sociales en Argentina" />
+  <meta name="twitter:title" content="4.1 Consideraciones previas | Libro de Cocina para el Análisis de las Clases Sociales en Argentina" />
   
   <meta name="twitter:description" content="Manual introductorio para el estudio de la estructura social en Argentina" />
   
@@ -33,8 +33,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="otras.html"/>
-<link rel="next" href="clases3.html"/>
+<link rel="prev" href="ocupacion.html"/>
+<link rel="next" href="las-variables-socio-ocupacionales.html"/>
 <script src="libs/header-attrs-2.13/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -282,38 +282,37 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="fuentes2" class="section level1 hasAnchor" number="3">
-<h1><span class="header-section-number">Capítulo 3</span> Los censos de población modernos<a href="fuentes2.html#fuentes2" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Este capítulo tiene como propósito presentar a los censos de población modernos (1960-2010), llevados a cabo por el <a href="www.indec.gob.ar" target="_blank">Instituto Nacional de Estadísticas y Censos</a> (INDEC), para mostrar sus características, posibilidades y limitaciones en tanto fuente para el estudio de la estructura de clases en Argentina.</p>
-<p>Se abordan las siguientes preguntas:</p>
-<ul>
-<li>¿Cuáles son las principales características de los censos modernos?</li>
-<li>¿Qué elementos presentan para el estudio de la estructura de clases argentina?</li>
-<li>¿Cuáles son sus limitaciones? ¿Qué cambios han presentado a lo largo del tiempo?</li>
-<li>¿Cuáles son las principales variables que debemos considerar en el análisis de clase?</li>
-<li>¿Qué formas existen para acceder a los microdatos?</li>
-<li>¿Qué ventajas presenta cada forma de acceso?</li>
-</ul>
-<p>Al completar este capítulo se espera que les lectores puedan:</p>
-<ol style="list-style-type: decimal">
-<li>Identificar las principales características, ventajas y desventajas en el uso de los censos de población modernos para el estudio de la estructura de clases en Argentina.</li>
-<li>Aprender a localizar la información necesaria, incorporando distintos métodos de acceso a la misma (descarga de microdatos desde distintos sitios y uso de paquete <strong><code>ipumsr</code></strong> para <strong><code>R</code></strong>).</li>
-<li>Navegar los microdatos de los censos de población en <code>RStudio</code> y realizar exploraciones preliminares.</li>
-</ol>
-<p>Para una mayor comprensión del capítulo recomendamos la lectura de los siguientes documentos:</p>
-<p>De Grande, P. (2016): “El formato Redatam”. <em>Estudios demográficos y urbanos</em>, Vol. 31, Núm. 3 (93), pp. 811-832. <a href="https://estudiosdemograficosyurbanos.colmex.mx/index.php/edu/article/view/15/pdf" target="_blank">Link</a>.</p>
-<p>Observatorio Latinoamericano de Censos de Población <a href="https://observatoriocensal.org/" target="_blank">OLAC</a>.</p>
-<p>Robert McCaa, Albert Esteve, Steven Ruggles y Matthew Sobek (2004): “La integración de los microdatos censales de América Latina: el proyecto IPUMS-América Latina”, <em>Estudios Demográficos y Urbanos</em>, 20(1), 37-70.</p>
-<p>Sacco, N. (2017): “¿Cierran los números con la gente adentro?”. <em>Estudios Demográficos y Urbanos</em>, 32(96), 631-667. doi: 10.24201/edu.v32i3.1648.</p>
-<p>Torrado, S. (1992):‘Para leer “Estructura social de la Argentina”’ en Jorrat, J. R. &amp; Sautu, R. (Eds.) <em>Después de Germani: Exploraciones sobre estructura social de la Argentina</em>, Paidós.</p>
+<div id="consideraciones" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Consideraciones previas<a href="consideraciones.html#consideraciones" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="las-reglas-del-juego" class="section level3 hasAnchor" number="4.1.1">
+<h3><span class="header-section-number">4.1.1</span> Las reglas del juego<a href="consideraciones.html#las-reglas-del-juego" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Si la idea es abordar la estructura socioeconómica, se debe tener en cuenta varias cuestiones antes de trabajar. En el <a href="estructura1.html#estructura1">Capítulo 2</a> se describieron distintas perspectivas teóricas sobre clases sociales que se han desarrollado tanto a nivel internacional como a nivel local en Argentina. Lo cierto es que se debe contar con una perspectiva que se adecúe a la pregunta de investigación y a objetivos. Luego, definir la metodología de estudio es crucial para poder organizar las técnicas de investigación que se implementarán. Partiendo de esta base, lo siguiente sería remitirse a las fuentes de datos a utilizar, según su accesibilidad y pertinencia. Una vez que se cuenta con los datos, se seleccionan las variables que sirvan para “jugar” con su caracterización. Se pueden elaborar sistemas de clases, construir nuevas variables, pensar en diferentes maneras de caracterizar a la estructura social y más. Todo ello con un mismo fin: analizar la sociedad a nivel macro.</p>
+<p>En esta unidad se elabora una descripción de las variables económicas que se han investigado en las fuentes, prestando especial atención a las variables socio-ocupacionales porque han sido los principales insumos en el estudio de clases sociales, en especial, la ocupación. Se define su importancia, para qué ha servido en los estudios de Argentina, cómo tratarla y qué limitaciones se encuentran a la hora de implementarla. Además, presentamos otras variables que son de nuestro interés para construir esquemas de medición de clases sociales.</p>
+</div>
+<div id="la-estratificación-como-perspectiva-de-análisis" class="section level3 hasAnchor" number="4.1.2">
+<h3><span class="header-section-number">4.1.2</span> La estratificación como perspectiva de análisis<a href="consideraciones.html#la-estratificación-como-perspectiva-de-análisis" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>La estratificación es un proceso inherente a las sociedades modernas, que tiene que ver con la complejización de la actividad productiva. Las consecuencias de este fenómeno son relativas a la desigualdad de nuestras sociedades, lo cual ha despertado el interés de muchos cientistas sociales. Su estudio nos permite conocer los procesos de movilidad social inter e intra-generacionales y la configuración de la sociedad en grupos diferenciados. Lo cierto es que los recursos se distribuyen de manera desigual entre los miembros de nuestras sociedades, y esto genera distinciones entre ellos según la posición que ocupan.</p>
+<p>Estudiar la estratificación implica seleccionar los indicadores y variables que contribuirán a la explicación sobre este proceso de diferenciación y diversificación social. Existe una larga tradición de tomar la educación, la ocupación y los ingresos como las tres principales patas de la investigación en estratificación <span class="citation">(<a href="eph4.html#ref-Fujihara2020" role="doc-biblioref">Fujihara, 2020</a>)</span>. La combinación de estas tres variables se conoce como estatus socio-económico <span class="citation">(<a href="eph4.html#ref-Sno.Ganzeboom2017" role="doc-biblioref">Sno &amp; Ganzeboom, 2017</a>)</span>. Al respecto, la ocupación ha tomado el papel principal peso, convirtiéndose en el “mejor indicador” <span class="citation">(<a href="eph4.html#ref-Blau.Duncan1967" role="doc-biblioref">Blau &amp; Duncan, 1967</a>)</span> del estatus socio-económico.</p>
+<p>En resumen, observar con los lentes de estratificación a la sociedad implica asumir que la diversificación de la actividad económica ha traído consigo la distinción en grupos según su tarea y posicionamiento en la sociedad, lo cual, a su vez, significa concebir una sociedad desigual, con mayor o menor apertura al “movimiento” de las personas dentro de este entramado de relaciones (ya sea “hacia arriba” o “hacia abajo”) en el proceso de movilidad. Pero, ¿cómo medimos el proceso de estratificación?</p>
+</div>
+<div id="indicadores-de-la-estratificación-social" class="section level3 hasAnchor" number="4.1.3">
+<h3><span class="header-section-number">4.1.3</span> Indicadores de la estratificación social<a href="consideraciones.html#indicadores-de-la-estratificación-social" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>La investigación que aspira a comprender los cambios en la estructura social y su medición, se ha nutrido de dos grandes tipos de clasificación. Es decir que, a grandes rasgos, la investigación de la estructura social se ha bifurcado en estudios de clase o en estudios de estatus social. Si bien se parecen, no son lo mismo. Las clases sociales son categorías clasificatorias que se definen como variables discretas. Presentan a la sociedad como un conjunto de grupos que no necesariamente se encuentran ordenados de una manera particular. En cambio, el estatus social organiza a la sociedad según su carácter jerárquico. En este sentido, los grupos se diferencian por tener mayor o menor estatus con respecto a otros, es decir, en relación con los demás individuos. Esta aproximación está caracterizada por utilizar medidas continuas para ordenar a la sociedad. Las medidas empíricas de ordenamiento de la sociedad se diferencian en: escalas de prestigio ocupacional, índices de estatus socio-económico y sistemas de clases. Las primeras dos son medidas continuas mientras que la última consta de una clasificación en categorías discretas.</p>
+<p>¿Por qué la ocupación es tan importante? Debemos entender la relevancia de la fuerza de trabajo para conocer sus implicancias en nuestras sociedades actuales.</p>
+</div>
+<div id="la-fuerza-de-trabajo-y-las-características-económicas-de-la-población" class="section level3 hasAnchor" number="4.1.4">
+<h3><span class="header-section-number">4.1.4</span> La fuerza de trabajo y las características económicas de la población<a href="consideraciones.html#la-fuerza-de-trabajo-y-las-características-económicas-de-la-población" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>La actividad económica es vital para cualquier sociedad. Cómo se organizan las personas alrededor de las actividades productivas y los procesos de estratificación asociados con la diferenciación social del trabajo son características fundamentales en nuestras sociedades. El estudio de la dinámica de la fuerza de trabajo es relevante para los científicos sociales en diversos aspectos: contribuye al debate sobre distintos temas de políticas públicas, y además puede responder preguntas fundamentales que interesan a los investigadores sobre estratificación.</p>
+<p>La relación entre la población que contribuye a los procesos productivos en el mercado de trabajo y el resto, clasifica a las personas de acuerdo a su condición de actividad. La diferenciación entre los atributos de las personas económicamente activas de las inactivas permite el conocimiento de las características ocupacionales de los que participan en el mercado de trabajo. Para estudiar la actividad, los investigadores han desarrollado algunos conceptos como la Población Económicamente Activa (PEA) que aquí nos competen.</p>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="otras.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="clases3.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="ocupacion.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="las-variables-socio-ocupacionales.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

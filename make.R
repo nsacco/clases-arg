@@ -10,4 +10,4 @@ usethis::use_blank_slate()
 if (!require(pacman)) {install.packages("pacman", dependencies = T)}; library(pacman)
 
 # Load / Install Required Packages
-p_load(tidyverse, bookdown, foreign, devtools, ggplot2, flextable, devtools, grDevices, formatR, rmarkdown, kableExtra, eph, vembedr, modeest)
+p_load(tidyverse, bookdown, foreign, devtools, ggplot2, flextable, devtools, grDevices, formatR, rmarkdown, kableExtra, eph, vembedr, modeest, summarytools)
