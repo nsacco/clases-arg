@@ -206,7 +206,7 @@ Por ejemplo, tomando una de las dimensiones más complejas a ser medidas como lo
 knitr::include_graphics("imagenes/wright3.png")
 ```
 
-```{r wright3, echo=FALSE, fig.cap = ""Tipología de posiciones directivas", warning=FALSE, message=FALSE, eval = !knitr::is_html_output()}
+```{r wright3, echo=FALSE, fig.cap = "Tipología de posiciones directivas", warning=FALSE, message=FALSE, eval = !knitr::is_html_output()}
 wright3 <- data.frame(c1 = c("3", "3", "3", "3", "2", "2", "2", "2", "1", "1",
                           "1", "1", "1", "1", "1"),
                       c2  = c("3 o 4", "3 o 4", "1 o 2", "1 o 2", "3 o 4", "3 o 4",
@@ -657,7 +657,6 @@ library(summarytools)
 
 En este apartado practicaremos el método de operacionalización tradicional. Usando como referencia el texto de "La medición empírica de las clases sociales" [@Torrado1998d], seguiremos los pasos de la autora para llegar en primer lugar a un nomenclador de la Condición Socio-Ocupacional (CSO) y posteriormente a un sistema de clases sociales de 3 clases que puede ser subdividido en estratos.  
 Como hemos dicho la transformación de un concepto complejo como el de "clase social" a un esquema empírico que permita su medición, implica una serie de pasos en los que es necesario prestar atención y ser sumamente ordenado. Los pasos a seguir serán los siguientes:  
-
 1. Presentaremos la propuesta de la autora, en la que señala como a partir de distintas combinaciones entre categorías de las variables consideradas surgen posiciones socio-ocupacionales.  
 
 2. Transformaremos y crearemos algunas variables de la **EPH** necesarias para la construcción del esquema.  
@@ -1104,8 +1103,8 @@ eph_ind_215 %>%
         axis.title.y = element_text(size = 10, family = "times"),
         axis.text.x = element_text(size = 10, family = "times"),
         axis.text.y = element_text(size = 10, family = "times")) +
-	scale_x_continuous(breaks=seq(10, 90, 5)) +
-	scale_y_continuous(labels = scales::comma, breaks = seq(0, 1500000, 100000))
+	scale_x_continuous(breaks=seq(10, 90, 5)) #+
+#	scale_y_continuous(labels = scales::comma, breaks = seq(0, 1500000, 100000))
 ```
 
 El histograma nos muestra donde se concentran las personas según sus ocupaciones. De esta forma, la mayor parte de la población se encuentra entre el puntaje 15 y 43 de la escala. Por el contrario, las ocupaciones mejores puntadas tienen una menor proporción de personas.  
