@@ -1091,22 +1091,21 @@ eph_ind_215 %>%
 La ocupación peor posicionada es la que presenta un valor de `11,56`, mientras que la mejor posicionada `88,96`. La ocupación que divide a la muestra en dos (mediana) tiene un valor de `30,78` y el promedio es `35,78`. <!--esto se puede armar con inlinecode-->
 
 Por otro lado, pedimos también que nos muestren algunas correspondencias entre los valores de la codificación en CIUO y los puntajes del ISEI. Claramente los valores más bajos del ISEI, se corresponden con valores más bajos de la CIUO (Gráfico \@ref(fig:isei2).  
-<!--  No me funciona este grafico
+
 ```{r isei2, message=FALSE, warning=FALSE, fig.cap= "Histograma de frecuencias la escala ISEI"}
-##eph_ind_215 %>% 
-#	ggplot(aes(x = isei, weight = PONDERA)) + 
-#	geom_histogram(bins = 20)+ 
-#  labs(y = "Frecuencia",
-#       caption = "Elaboración propia en base a EPH-INDEC 2015") +
-#  theme(plot.caption = element_text(size = 9, family = "times"),
-#        axis.title.x = element_blank(),
-#        axis.title.y = element_text(size = 10, family = "times"),
-#        axis.text.x = element_text(size = 10, family = "times"),
-#        axis.text.y = element_text(size = 10, family = "times")) +
-#	scale_x_continuous(breaks=seq(10, 90, 5)) +
-#	scale_y_continuous(labels = scales::comma, breaks = seq(0, 1500000, 100000))
+eph_ind_215 %>% 
+	ggplot(aes(x = isei, weight = PONDERA)) + 
+	geom_histogram(bins = 20)+ 
+  labs(y = "Frecuencia",
+       caption = "Elaboración propia en base a EPH-INDEC 2015") +
+  theme(plot.caption = element_text(size = 9),
+        axis.title.x = element_blank(),
+        axis.title.y = element_text(size = 10),
+        axis.text.x = element_text(size = 10),
+        axis.text.y = element_text(size = 10)) +
+	scale_x_continuous(breaks=seq(10, 90, 5)) +
+	scale_y_continuous(labels = scales::comma, breaks = seq(0, 1500000, 100000))
 ```
--->
 
 El histograma nos muestra donde se concentran las personas según sus ocupaciones. De esta forma, la mayor parte de la población se encuentra entre el puntaje 15 y 43 de la escala. Por el contrario, las ocupaciones mejores puntadas tienen una menor proporción de personas.  
 

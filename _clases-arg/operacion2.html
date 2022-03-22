@@ -292,6 +292,20 @@ div.csl-indent {
 <li class="chapter" data-level="5.5.2" data-path="unidades.html"><a href="unidades.html#opciones-metodológicas"><i class="fa fa-check"></i><b>5.5.2</b> Opciones metodológicas<span></span></a></li>
 </ul></li>
 </ul></li>
+<li class="part"><span><b>V Análisis<span></span></b></span></li>
+<li class="chapter" data-level="6" data-path="independiente.html"><a href="independiente.html"><i class="fa fa-check"></i><b>6</b> La clase como variable independiente<span></span></a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="huevo.html"><a href="huevo.html"><i class="fa fa-check"></i><b>6.1</b> La estructura de clases ¿el huevo o la gallina?<span></span></a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="huevo.html"><a href="huevo.html#el-enfoque-relacional-weberiano"><i class="fa fa-check"></i><b>6.1.1</b> El enfoque relacional-weberiano<span></span></a></li>
+<li class="chapter" data-level="6.1.2" data-path="huevo.html"><a href="huevo.html#estructural-funcionalismo"><i class="fa fa-check"></i><b>6.1.2</b> Estructural funcionalismo<span></span></a></li>
+<li class="chapter" data-level="6.1.3" data-path="huevo.html"><a href="huevo.html#un-enfoque-intermedio"><i class="fa fa-check"></i><b>6.1.3</b> Un enfoque intermedio<span></span></a></li>
+<li class="chapter" data-level="6.1.4" data-path="huevo.html"><a href="huevo.html#una-cuarta-mirada"><i class="fa fa-check"></i><b>6.1.4</b> Una cuarta mirada<span></span></a></li>
+<li class="chapter" data-level="6.1.5" data-path="huevo.html"><a href="huevo.html#epílogo-una-sociedad-sin-clases"><i class="fa fa-check"></i><b>6.1.5</b> Epílogo: una sociedad sin clases<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="explorando.html"><a href="explorando.html"><i class="fa fa-check"></i><b>6.2</b> Explorando los datos por clase social<span></span></a></li>
+<li class="chapter" data-level="6.3" data-path="aprox.html"><a href="aprox.html"><i class="fa fa-check"></i><b>6.3</b> Aproximación al análisis multidimensional<span></span></a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -317,12 +331,12 @@ div.csl-indent {
 <p>Paquetes que utilizaremos en este subcapítulo:</p>
 <p>En este apartado aprenderemos otra forma de operacionalizar esquemas de clasificación social a través de <strong><code>R</code></strong>. Para ello utilizaremos el paquete <code>occupar</code>, que permite, entre sus distintas funciones:</p>
 <ol style="list-style-type: decimal">
-<li><p>Convertir diferentes versiones de la CIUO <a href="unidades.html#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a> (68, 88, 08).</p></li>
+<li><p>Convertir diferentes versiones de la CIUO <a href="aprox.html#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a> (68, 88, 08).</p></li>
 <li><p>Creación de esquemas de clasificación (ISEI, SIOPS, EGP, ESeC) a partir de la CIUO.</p></li>
 </ol>
 <p>Las ventajas de la utilización de este tipo de operacionalización es que podemos ahorrarnos una cantidad importante de tiempo, ya que no tendremos que invertirlo en escribir líneas y líneas de código. Al mismo tiempo, como veremos, nos permitirá la creación de al menos dos esquemas que son internacionalmente utilizados. Como desventaja, dependemos de la interpretación que los autores del paquete hicieron del proceso de operacionalización. Recordemos que operacionalizar implica decisiones teórico-metodológicas en la selección de variables y la combinación de categorías para la construcción de nuevas categorías (en este caso estratos y clases). Es decir, no podremos fácilmente modificar la propuesta de operacionalización ni adaptarla a nuestros objetivos e intereses.</p>
 <p>Por ejemplo, el paquete no operacionaliza en forma correcta el esquema <strong>EGP</strong>, ya que asigna en forma errónea a los casos en algunas posiciones de clase. En el caso que se quiera utilizar dicho esquema, es recomendable recurrir a esquema <strong>ESeC</strong>, utilizado oficialmente en Europa, y que está basado en el <strong>EGP</strong>.</p>
-<p>El paquete <code>occupar</code> esta basado en el proyecto implementado por <strong>Harry Ganzeboom</strong> de estandarización y armonización de medidas de posición de clase y estratificación <a href="unidades.html#fn9" class="footnote-ref" id="fnref9"><sup>9</sup></a>. El mismo también se encuentra disponible para ser utilizado con <strong><code>SPSS</code></strong>. A continuación vamos a explorar como operacionalizar la escala <strong>ISEI</strong> utilizando dicho paquete.</p>
+<p>El paquete <code>occupar</code> esta basado en el proyecto implementado por <strong>Harry Ganzeboom</strong> de estandarización y armonización de medidas de posición de clase y estratificación <a href="aprox.html#fn9" class="footnote-ref" id="fnref9"><sup>9</sup></a>. El mismo también se encuentra disponible para ser utilizado con <strong><code>SPSS</code></strong>. A continuación vamos a explorar como operacionalizar la escala <strong>ISEI</strong> utilizando dicho paquete.</p>
 <p>Para instalar el paquete <code>occupar</code> es necesario tener instalado el paquete <code>devtools</code>. A continuación dejamos los pasos de instalación:</p>
 <div id="operacionalizando-la-escala-isei" class="section level3 hasAnchor" number="5.4.1">
 <h3><span class="header-section-number">5.4.1</span> Operacionalizando la escala ISEI<a href="operacion2.html#operacionalizando-la-escala-isei" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -344,10 +358,13 @@ div.csl-indent {
 ##  9 7522        25.2
 ## 10 5223        28.5</code></pre>
 <p>La ocupación peor posicionada es la que presenta un valor de <code>11,56</code>, mientras que la mejor posicionada <code>88,96</code>. La ocupación que divide a la muestra en dos (mediana) tiene un valor de <code>30,78</code> y el promedio es <code>35,78</code>. <!--esto se puede armar con inlinecode--></p>
-<p>Por otro lado, pedimos también que nos muestren algunas correspondencias entre los valores de la codificación en CIUO y los puntajes del ISEI. Claramente los valores más bajos del ISEI, se corresponden con valores más bajos de la CIUO (Gráfico <a href="#fig:isei2"><strong>??</strong></a>.<br />
-<!--  No me funciona este grafico
-
---></p>
+<p>Por otro lado, pedimos también que nos muestren algunas correspondencias entre los valores de la codificación en CIUO y los puntajes del ISEI. Claramente los valores más bajos del ISEI, se corresponden con valores más bajos de la CIUO (Gráfico <a href="operacion2.html#fig:isei2">5.17</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:isei2"></span>
+<p class="caption">
+Figure 5.17: Histograma de frecuencias la escala ISEI
+</p>
+<img src="clases-arg_files/figure-html/isei2-1.png" alt="Histograma de frecuencias la escala ISEI" width="672" />
+</div>
 <p>El histograma nos muestra donde se concentran las personas según sus ocupaciones. De esta forma, la mayor parte de la población se encuentra entre el puntaje 15 y 43 de la escala. Por el contrario, las ocupaciones mejores puntadas tienen una menor proporción de personas.</p>
 </div>
 </div>
@@ -411,6 +428,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

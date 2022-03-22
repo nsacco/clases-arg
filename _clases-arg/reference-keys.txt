@@ -22,6 +22,10 @@ fig:unnamed-chunk-80
 fig:unnamed-chunk-81
 fig:unnamed-chunk-83
 tab:unnamed-chunk-89
+fig:isei2
+fig:unnamed-chunk-100
+fig:grusky
+fig:unnamed-chunk-103
 estructura1
 analisis1
 marx
@@ -123,3 +127,12 @@ operacionalizando-la-escala-isei
 unidades
 breve-discusión-teórica
 opciones-metodológicas
+independiente
+huevo
+el-enfoque-relacional-weberiano
+estructural-funcionalismo
+un-enfoque-intermedio
+una-cuarta-mirada
+epílogo-una-sociedad-sin-clases
+explorando
+aprox
