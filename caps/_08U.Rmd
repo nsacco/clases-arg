@@ -458,6 +458,7 @@ mapa <- merge(argentina, tabla_larga, by="region_f", all.x = TRUE)
 
 Puntualmente, el comando `geom_sf` del `ggplot2` nos permitirá superponer capas con información georreferenciada, como en este caso los departamentos del país. A su vez, el comando `facet_wrap` del mismo paquete nos permite representar un gráfico (en este caso un mapa) para la variable que seleccionemos (clase social).
 
+<!--
 ```{r message=FALSE, warning=FALSE, tidy=FALSE}
 ggplot() +
   geom_sf(data = mapa, aes(group = region_f, fill = percent), color = NA) +
@@ -478,4 +479,4 @@ ggplot() +
   scale_fill_viridis_c(direction = -1) +
   facet_wrap(~clase6_factor, ncol = 7, labeller = labeller(clase6_factor = label_wrap_gen(15)))
 ```
-
+-->

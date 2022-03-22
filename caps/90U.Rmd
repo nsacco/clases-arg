@@ -13,7 +13,7 @@
 - programar con un lenguaje sencillo y en constante desarrollo. 
 
 ```{r fig.cap= "Logo de R", fig.align='center', out.width = '40%', echo=FALSE}
-knitr::include_graphics("inputs/imagenes/R_logo.svg.png")
+knitr::include_graphics("imagenes/R_logo.svg.png")
 ```
 
 **``R``** es el lenguaje de programación popular debido a tres ventajas principales:
@@ -39,7 +39,7 @@ knitr::include_graphics("inputs/imagenes/R_logo.svg.png")
 - Algunas técnicas estadísticas están incluidas en el entorno básico de **`R`** y otras se pueden obtener en forma de bibliotecas, llamadas **paquetes** (`packages`).
 
 ```{r fig.cap= "Logos de algunos paquetes de R", fig.align='center', out.width = '60%', echo=FALSE}
-knitr::include_graphics("inputs/imagenes/R_packages.png")
+knitr::include_graphics("imagenes/R_packages.png")
 ```
 
 ### Descargar e instalar R
@@ -47,7 +47,7 @@ knitr::include_graphics("inputs/imagenes/R_packages.png")
 Para descargar **`R`** es posible ingresar a <https://cran.r-project.org/>{target="_blank"}. Luego, se debe seleccionar el sistema operativo de cada computadora donde se lo desea instalar y, a consiguiente, comenzará la instalación.
 
 ```{r fig.cap= "R", fig.align='center', out.width = '80%', echo=FALSE}
-knitr::include_graphics("inputs/imagenes/R_desc.png")
+knitr::include_graphics("imagenes/R_desc.png")
 ```
 
 ### RStudio
@@ -59,7 +59,7 @@ knitr::include_graphics("inputs/imagenes/R_desc.png")
 - utilizando `RStudio`, que hace más atractiva y fácil la aproximación al programa.
 
 ```{r fig.cap= "Terminal de R", fig.align='center', out.width = '80%', echo=FALSE}
-knitr::include_graphics("inputs/imagenes/terminal.png")
+knitr::include_graphics("imagenes/terminal.png")
 ```
 
 ### Descargar e instalar RStudio
@@ -67,11 +67,11 @@ knitr::include_graphics("inputs/imagenes/terminal.png")
 Se debe ingresar al siguiente enlace: <https://www.rstudio.com/products/rstudio/download/>{target="_blank"}
 
 ```{r fig.cap= "Logo de RStudio", fig.align='center', out.width = '10%', echo=FALSE}
-knitr::include_graphics("inputs/imagenes/RStudio_logo.png")
+knitr::include_graphics("imagenes/RStudio_logo.png")
 ```
 
 ```{r fig.cap= "Descarga de RStudio", fig.align='center', out.width = '80%', echo=FALSE}
-knitr::include_graphics("inputs/imagenes/RStudio_desc.png")
+knitr::include_graphics("imagenes/RStudio_desc.png")
 ```
 
 ### Las partes de RStudio
@@ -87,7 +87,7 @@ Las secciones que conforman `RStudio` son cuatro:
 - la sección de "documentos, gráficos, paquetes y ayuda" (parte inferior derecha).
 
 ```{r fig.cap= "R", fig.align='center', out.width = '80%', echo=FALSE}
-knitr::include_graphics("inputs/imagenes/RStudio_partes.png")
+knitr::include_graphics("imagenes/RStudio_partes.png")
 ```
 
 ### RStudio 
@@ -95,7 +95,7 @@ knitr::include_graphics("inputs/imagenes/RStudio_partes.png")
 Cuando uno abre `RStudio`, de forma predeterminada, se ve de la siguiente manera:
 
 ```{r fig.cap= "RStudio Escritorio", fig.align='center', out.width = '80%', echo=FALSE}
-knitr::include_graphics("inputs/imagenes/rstudio_entorno.png")
+knitr::include_graphics("imagenes/rstudio_entorno.png")
 ```
 
 * Básicamente, la interfaz se compone de diferentes paneles. Sobre el lado izquierdo hay un panel grande y en el lado derecho hay dos paneles más pequeños. Al comenzar a trabajar en `RStudio`, habrá un cuarto panel que se activa al abrir un nuevo documento.
@@ -109,13 +109,13 @@ knitr::include_graphics("inputs/imagenes/rstudio_entorno.png")
 * En la parte inferior derecha hay un panel que tiene varias pestañas. El primero permite ver la estructura de los archivos, por lo que es parecido a una ventana estándar que se usa para navegar en cualquier sistema operativo.
 
 ```{r fig.cap= "panel Derecho Inferior de RStudio", fig.align='center', out.width = '80%', echo=FALSE}
-knitr::include_graphics("inputs/imagenes/pan_der_inf.png")
+knitr::include_graphics("imagenes/pan_der_inf.png")
 ```
 
 * Hay una pestaña que enumera los paquetes que se han instalado. 
 
 ```{r fig.cap= "Paquetes de RStudio", fig.align='center', out.width = '60%', echo=FALSE}
-knitr::include_graphics("inputs/imagenes/paquetes.png")
+knitr::include_graphics("imagenes/paquetes.png")
 ```
 
 * La otra es una pestaña de ayuda, ya que en **`R`**, si uno desea ayuda sobre cualquier cosa, se la puede obtener escribiendo un signo de interrogación y luego el nombre del objeto sobre el que desea ayuda:
@@ -133,7 +133,7 @@ knitr::include_graphics("inputs/imagenes/paquetes.png")
 Se obtendrá:
 
 ```{r fig.cap= "R", fig.align='center', out.width = '60%', echo=FALSE}
-knitr::include_graphics("inputs/imagenes/ayuda.png")
+knitr::include_graphics("imagenes/ayuda.png")
 ```
 
 * Entonces, si hace falta ayuda, aparecerá en dicha pestaña. Hay que tener en cuenta que es posible modificar la configuración de estos paneles. Los pasos para hacerlo son:
@@ -143,13 +143,13 @@ knitr::include_graphics("inputs/imagenes/ayuda.png")
 * Dentro de herramientas (*Tools*) se encuentran las 'Opciones globales' (*Global Options*). Este menú ofrece todo tipo de posibilidades para configurar `RStudio` y el entorno. Para cambiar la ubicación de la consola y el entorno, hay que clicar arriba, donde dice 'Entorno', sobre el cuadro desplegable y aplicarlo. Al volver, se verá en el lado izquierdo, el documento en el que se está trabajando y debajo, el panel de 'Entorno'.
 
 ```{r fig.cap= "RStudio Opciones Globales", fig.align='center', out.width = '80%', echo=FALSE}
-knitr::include_graphics("inputs/imagenes/global_opt.png")
+knitr::include_graphics("imagenes/global_opt.png")
 ```
 
 * También es posible cambiar el color del esquema, dentro de las 'Opciones globales' puedes ver algunas opciones de apariencia. El tema predeterminado tiene blanco de fondo con un texto en negro. Pero no es el único, sino que existen diferentes temas que se pueden aplicar.  
 
 ```{r fig.cap= "Selección de Colores en RStudio", fig.align='center', out.width = '80%', echo=FALSE}
-knitr::include_graphics("inputs/imagenes/color_schema.png")
+knitr::include_graphics("imagenes/color_schema.png")
 ```
 
 ## Workflow
@@ -180,7 +180,7 @@ En resumen, siguiendo el tipo de organización aquí propuesta, hay un directori
 
 ### Utilidad
 
-¿Por qué este procedimiento de organización del flujo de trabajo es útil? Porque respetando la estructura de las carpetas, es posible encontrar los archivos de manera sencilla, optimizando tiempo y espacio. Esta estructura se puede ver en la ruta del archivo, que será similar a /Usuarios/Nombreusuario/Documentos/RProjects...etc. Esta es una ruta a un archivo de datos que se almacena en el disco duro, en la unidad correspondiente, que puede ser C o U, por ejemplo.
+¿Por qué este procedimiento de organización del flujo de trabajo es útil? Porque respetando la estructura de las carpetas, es posible encontrar los archivos de manera sencilla, optimizando tiempo y espacio. Esta estructura se puede ver en la ruta del archivo, que será similar a /Usuarios/Nombreusuario/Documentos/RProjects...etc. Esta es una ruta a un archivo de datos que se almacena en el disco duro, en la unidad correspondiente, que puede ser `C` o `U`, por ejemplo.
 
 **Desventaja 1**
 
@@ -301,19 +301,19 @@ Texto ~subscript~
 
 
 ```{r eval=FALSE, message=FALSE, warning=FALSE}
-![Figura 1: Mi mascota hermosa: Nina](inputs/imagenes/nina.jpeg)
+![Figura 1: Mi mascota hermosa: Nina](imagenes/nina.jpeg)
 ```
 
 
-![Figura 1: Mi mascota: Nina](inputs/imagenes/nina.jpeg)
+![Figura 1: Mi mascota: Nina](imagenes/nina.jpeg)
 
 * También es posible seleccionar el tamaño de la imagen.
 
 ```{r eval=FALSE, message=FALSE, warning=FALSE}
-![Nina](inputs/imagenes/nina.jpeg){width=50%}
+![Nina](imagenes/nina.jpeg){width=50%}
 ```
 
-![Nina](inputs/imagenes/nina.jpeg){width=50%}
+![Nina](imagenes/nina.jpeg){width=50%}
 
 ### Enlaces
 
@@ -967,7 +967,7 @@ Es posible obtener esta ruta/path fácilmente yendo a la carpeta donde este se e
 Luego, simplemente hay que denominar al objeto "encuesta", en este caso. Seguido, colocar una función `read_excel` y entre paréntesis y comillas, pegar la ruta **propia** que dará acceso al archivo seleccionado. La línea de código es la siguiente:
 
 ```{r excel3}
-encuesta <- read_excel("inputs/bases/estaciones_tren.xls")
+encuesta <- read_excel("bases/estaciones_tren.xls")
 ```
 
 5. Si se han realizado los pasos anteriores correctamente, aparecerá la base de datos en el entorno o *environment* de `RStudio`. Allí es posible ver cuántas observaciones y cuántas variables reconoce el programa dentro de la base. Al clicar sobre la misma se abrirá un archivo de **`R`** con los datos de la base especificada, que sirve para visualizar de manera más sencilla toda la información que contiene.

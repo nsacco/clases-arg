@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>5.4 Operacionalización automática | Libro de Cocina para el Análisis de las Clases Sociales en Argentina</title>
+  <title>8.4 Otros recursos de consulta | Libro de Cocina para el Análisis de las Clases Sociales en Argentina</title>
   <meta name="description" content="Manual introductorio para el estudio de la estructura social en Argentina" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="5.4 Operacionalización automática | Libro de Cocina para el Análisis de las Clases Sociales en Argentina" />
+  <meta property="og:title" content="8.4 Otros recursos de consulta | Libro de Cocina para el Análisis de las Clases Sociales en Argentina" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="nsacco/libroESA" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="5.4 Operacionalización automática | Libro de Cocina para el Análisis de las Clases Sociales en Argentina" />
+  <meta name="twitter:title" content="8.4 Otros recursos de consulta | Libro de Cocina para el Análisis de las Clases Sociales en Argentina" />
   
   <meta name="twitter:description" content="Manual introductorio para el estudio de la estructura social en Argentina" />
   
@@ -33,8 +33,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="operacion1.html"/>
-<link rel="next" href="unidades.html"/>
+<link rel="prev" href="primeros-pasos-en-r.html"/>
+<link rel="next" href="referencias.html"/>
 <script src="libs/header-attrs-2.13/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -382,55 +382,28 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="operacion2" class="section level2 hasAnchor" number="5.4">
-<h2><span class="header-section-number">5.4</span> Operacionalización automática<a href="operacion2.html#operacion2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Paquetes que utilizaremos en este subcapítulo:</p>
-<p>En este apartado aprenderemos otra forma de operacionalizar esquemas de clasificación social a través de <strong><code>R</code></strong>. Para ello utilizaremos el paquete <code>occupar</code>, que permite, entre sus distintas funciones:</p>
-<ol style="list-style-type: decimal">
-<li><p>Convertir diferentes versiones de la CIUO <a href="referencias.html#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a> (68, 88, 08).</p></li>
-<li><p>Creación de esquemas de clasificación (ISEI, SIOPS, EGP, ESeC) a partir de la CIUO.</p></li>
-</ol>
-<p>Las ventajas de la utilización de este tipo de operacionalización es que podemos ahorrarnos una cantidad importante de tiempo, ya que no tendremos que invertirlo en escribir líneas y líneas de código. Al mismo tiempo, como veremos, nos permitirá la creación de al menos dos esquemas que son internacionalmente utilizados. Como desventaja, dependemos de la interpretación que los autores del paquete hicieron del proceso de operacionalización. Recordemos que operacionalizar implica decisiones teórico-metodológicas en la selección de variables y la combinación de categorías para la construcción de nuevas categorías (en este caso estratos y clases). Es decir, no podremos fácilmente modificar la propuesta de operacionalización ni adaptarla a nuestros objetivos e intereses.</p>
-<p>Por ejemplo, el paquete no operacionaliza en forma correcta el esquema <strong>EGP</strong>, ya que asigna en forma errónea a los casos en algunas posiciones de clase. En el caso que se quiera utilizar dicho esquema, es recomendable recurrir a esquema <strong>ESeC</strong>, utilizado oficialmente en Europa, y que está basado en el <strong>EGP</strong>.</p>
-<p>El paquete <code>occupar</code> esta basado en el proyecto implementado por <strong>Harry Ganzeboom</strong> de estandarización y armonización de medidas de posición de clase y estratificación <a href="referencias.html#fn9" class="footnote-ref" id="fnref9"><sup>9</sup></a>. El mismo también se encuentra disponible para ser utilizado con <strong><code>SPSS</code></strong>. A continuación vamos a explorar como operacionalizar la escala <strong>ISEI</strong> utilizando dicho paquete.</p>
-<p>Para instalar el paquete <code>occupar</code> es necesario tener instalado el paquete <code>devtools</code>. A continuación dejamos los pasos de instalación:</p>
-<div id="operacionalizando-la-escala-isei" class="section level3 hasAnchor" number="5.4.1">
-<h3><span class="header-section-number">5.4.1</span> Operacionalizando la escala ISEI<a href="operacion2.html#operacionalizando-la-escala-isei" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Recordemos que la escala ISEI no es un esquema discreto de clases sociales, sino que esta basado en un enfoque gradacional, en donde a cada ocupación se le otorga un puntaje, estandarizado internacionalmente, considerando como factores a la edad, la educación y la ocupación.</p>
-<p>Utilizaremos la misma base que venimos explorando: la <strong>EPH</strong> del segundo trimestre de 2015 con el agregado de la ocupación codificada en la <strong>CIUO-08</strong>. La función es relativamente sencilla, se llama <code>isco08toISEI08</code> y sólo debemos señalarle donde se encuentra la variable <strong>CIUO</strong>. A continuación solicitaremos un resumen de las principales medidas de tendencia central y de posición.</p>
-<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA&#39;s 
-##      12      23      31      38      49      89   35722</code></pre>
-<pre><code>## # A tibble: 10 × 2
-##    PP04D_CIUO  isei
-##    &lt;fct&gt;      &lt;dbl&gt;
-##  1 7233        31.7
-##  2 9112        14.2
-##  3 7411        36.4
-##  4 8331        26.8
-##  5 7231        30.8
-##  6 2262        81.1
-##  7 9214        11.7
-##  8 5322        21.6
-##  9 7522        25.2
-## 10 5223        28.5</code></pre>
-<p>La ocupación peor posicionada es la que presenta un valor de <code>11,56</code>, mientras que la mejor posicionada <code>88,96</code>. La ocupación que divide a la muestra en dos (mediana) tiene un valor de <code>30,78</code> y el promedio es <code>35,78</code>. <!--esto se puede armar con inlinecode--></p>
-<p>Por otro lado, pedimos también que nos muestren algunas correspondencias entre los valores de la codificación en CIUO y los puntajes del ISEI. Claramente los valores más bajos del ISEI, se corresponden con valores más bajos de la CIUO (Gráfico <a href="operacion2.html#fig:isei2">5.17</a>.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:isei2"></span>
-<p class="caption">
-Figure 5.17: Histograma de frecuencias la escala ISEI
-</p>
-<img src="clases-arg_files/figure-html/isei2-1.png" alt="Histograma de frecuencias la escala ISEI" width="672" />
+<div id="recursos" class="section level2 hasAnchor" number="8.4">
+<h2><span class="header-section-number">8.4</span> Otros recursos de consulta<a href="recursos.html#recursos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>En esta sección se recopilan algunos manuales online en español que permiten ampliar los conocimientos para introducirse en el mundo de <strong><code>R</code></strong>.</p>
+<ul>
+<li><p><a href="https://es.r4ds.hadley.nz/" target="_blank">Wickham, H., &amp; Grolemund, G. (2016). R para Ciencias de datos</a></p></li>
+<li><p><a href="https://bitsandbricks.github.io/ciencia_de_datos_gente_sociable/" target="_blank">Vazquez Brust, A. (2021). Ciencia de Datos para Gente Sociable</a></p></li>
+<li><p><a href="https://bookdown.org/gboccardo/manual-ED-UCH/" target="_blank">Boccardo Bosoni, G. y Ruiz Bruzzone, F. (2019). RStudio para Estadística Descriptiva en Ciencias Sociales</a></p></li>
+<li><p><a href="https://guidowe.github.io/Curso-R-Flacso/" target="_blank">Tiscornia, P. y Weksler, G. (sin año). Introducción a R para Ciencias Sociales. Aplicación practica en la EPH</a></p></li>
+</ul>
+
 </div>
-<p>El histograma nos muestra donde se concentran las personas según sus ocupaciones. De esta forma, la mayor parte de la población se encuentra entre el puntaje 15 y 43 de la escala. Por el contrario, las ocupaciones mejores puntadas tienen una menor proporción de personas.</p>
-</div>
-</div>
+<!-- </div> -->
+
+
+
             </section>
 
           </div>
         </div>
       </div>
-<a href="operacion1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="unidades.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="primeros-pasos-en-r.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="referencias.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

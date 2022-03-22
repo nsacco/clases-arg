@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>5.4 Operacionalización automática | Libro de Cocina para el Análisis de las Clases Sociales en Argentina</title>
+  <title>8.2 R Markdown | Libro de Cocina para el Análisis de las Clases Sociales en Argentina</title>
   <meta name="description" content="Manual introductorio para el estudio de la estructura social en Argentina" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="5.4 Operacionalización automática | Libro de Cocina para el Análisis de las Clases Sociales en Argentina" />
+  <meta property="og:title" content="8.2 R Markdown | Libro de Cocina para el Análisis de las Clases Sociales en Argentina" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="nsacco/libroESA" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="5.4 Operacionalización automática | Libro de Cocina para el Análisis de las Clases Sociales en Argentina" />
+  <meta name="twitter:title" content="8.2 R Markdown | Libro de Cocina para el Análisis de las Clases Sociales en Argentina" />
   
   <meta name="twitter:description" content="Manual introductorio para el estudio de la estructura social en Argentina" />
   
@@ -33,8 +33,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="operacion1.html"/>
-<link rel="next" href="unidades.html"/>
+<link rel="prev" href="workflow.html"/>
+<link rel="next" href="primeros-pasos-en-r.html"/>
 <script src="libs/header-attrs-2.13/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -382,46 +382,76 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="operacion2" class="section level2 hasAnchor" number="5.4">
-<h2><span class="header-section-number">5.4</span> Operacionalización automática<a href="operacion2.html#operacion2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Paquetes que utilizaremos en este subcapítulo:</p>
-<p>En este apartado aprenderemos otra forma de operacionalizar esquemas de clasificación social a través de <strong><code>R</code></strong>. Para ello utilizaremos el paquete <code>occupar</code>, que permite, entre sus distintas funciones:</p>
-<ol style="list-style-type: decimal">
-<li><p>Convertir diferentes versiones de la CIUO <a href="referencias.html#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a> (68, 88, 08).</p></li>
-<li><p>Creación de esquemas de clasificación (ISEI, SIOPS, EGP, ESeC) a partir de la CIUO.</p></li>
-</ol>
-<p>Las ventajas de la utilización de este tipo de operacionalización es que podemos ahorrarnos una cantidad importante de tiempo, ya que no tendremos que invertirlo en escribir líneas y líneas de código. Al mismo tiempo, como veremos, nos permitirá la creación de al menos dos esquemas que son internacionalmente utilizados. Como desventaja, dependemos de la interpretación que los autores del paquete hicieron del proceso de operacionalización. Recordemos que operacionalizar implica decisiones teórico-metodológicas en la selección de variables y la combinación de categorías para la construcción de nuevas categorías (en este caso estratos y clases). Es decir, no podremos fácilmente modificar la propuesta de operacionalización ni adaptarla a nuestros objetivos e intereses.</p>
-<p>Por ejemplo, el paquete no operacionaliza en forma correcta el esquema <strong>EGP</strong>, ya que asigna en forma errónea a los casos en algunas posiciones de clase. En el caso que se quiera utilizar dicho esquema, es recomendable recurrir a esquema <strong>ESeC</strong>, utilizado oficialmente en Europa, y que está basado en el <strong>EGP</strong>.</p>
-<p>El paquete <code>occupar</code> esta basado en el proyecto implementado por <strong>Harry Ganzeboom</strong> de estandarización y armonización de medidas de posición de clase y estratificación <a href="referencias.html#fn9" class="footnote-ref" id="fnref9"><sup>9</sup></a>. El mismo también se encuentra disponible para ser utilizado con <strong><code>SPSS</code></strong>. A continuación vamos a explorar como operacionalizar la escala <strong>ISEI</strong> utilizando dicho paquete.</p>
-<p>Para instalar el paquete <code>occupar</code> es necesario tener instalado el paquete <code>devtools</code>. A continuación dejamos los pasos de instalación:</p>
-<div id="operacionalizando-la-escala-isei" class="section level3 hasAnchor" number="5.4.1">
-<h3><span class="header-section-number">5.4.1</span> Operacionalizando la escala ISEI<a href="operacion2.html#operacionalizando-la-escala-isei" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Recordemos que la escala ISEI no es un esquema discreto de clases sociales, sino que esta basado en un enfoque gradacional, en donde a cada ocupación se le otorga un puntaje, estandarizado internacionalmente, considerando como factores a la edad, la educación y la ocupación.</p>
-<p>Utilizaremos la misma base que venimos explorando: la <strong>EPH</strong> del segundo trimestre de 2015 con el agregado de la ocupación codificada en la <strong>CIUO-08</strong>. La función es relativamente sencilla, se llama <code>isco08toISEI08</code> y sólo debemos señalarle donde se encuentra la variable <strong>CIUO</strong>. A continuación solicitaremos un resumen de las principales medidas de tendencia central y de posición.</p>
-<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA&#39;s 
-##      12      23      31      38      49      89   35722</code></pre>
-<pre><code>## # A tibble: 10 × 2
-##    PP04D_CIUO  isei
-##    &lt;fct&gt;      &lt;dbl&gt;
-##  1 7233        31.7
-##  2 9112        14.2
-##  3 7411        36.4
-##  4 8331        26.8
-##  5 7231        30.8
-##  6 2262        81.1
-##  7 9214        11.7
-##  8 5322        21.6
-##  9 7522        25.2
-## 10 5223        28.5</code></pre>
-<p>La ocupación peor posicionada es la que presenta un valor de <code>11,56</code>, mientras que la mejor posicionada <code>88,96</code>. La ocupación que divide a la muestra en dos (mediana) tiene un valor de <code>30,78</code> y el promedio es <code>35,78</code>. <!--esto se puede armar con inlinecode--></p>
-<p>Por otro lado, pedimos también que nos muestren algunas correspondencias entre los valores de la codificación en CIUO y los puntajes del ISEI. Claramente los valores más bajos del ISEI, se corresponden con valores más bajos de la CIUO (Gráfico <a href="operacion2.html#fig:isei2">5.17</a>.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:isei2"></span>
-<p class="caption">
-Figure 5.17: Histograma de frecuencias la escala ISEI
-</p>
-<img src="clases-arg_files/figure-html/isei2-1.png" alt="Histograma de frecuencias la escala ISEI" width="672" />
+<div id="r-markdown" class="section level2 hasAnchor" number="8.2">
+<h2><span class="header-section-number">8.2</span> R Markdown<a href="r-markdown.html#r-markdown" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>La manera más sencilla de interactuar con <strong><code>R</code></strong> es a través de documentos conocidos como archivos de <strong>R Markdown</strong>, que ya se ha visto a modo de ejemplo en la sección anterior<a href="referencias.html#fn13" class="footnote-ref" id="fnref13"><sup>13</sup></a>. Estos documentos son una combinación de varios tipos de información. Por un lado, lo que se conoce como “fragmentos de código” (<em>code chunks</em>), que son un tipo de ventanas en <strong><code>R</code></strong> donde se escribe código para ejecutar análisis. También, fuera de esos fragmentos de código se puede escribir texto. En esta sección se explicará con mayor detalle cómo formatear el texto en el documento de <strong><code>R</code></strong>. Para ello seguir los pasos:</p>
+<ul>
+<li><p>Abrir el primer proyecto de <code>RStudio</code>, el cual estará alojado en el directorio del equipo local llamado “proyectos_r” o similar.</p></li>
+<li><p>Dentro de esa carpeta, seleccionar el documento llamado “primer_proyecto.Rproj”.</p></li>
+<li><p>Otras carpetas que se encuentran allí son: “datos” e “imágenes”.</p></li>
+<li><p>Descargar una foto de Internet o seleccionar una foto antigua que se encuentre en la computadora y
+guardarla en la carpeta de “imágenes”.</p></li>
+<li><p>Crear un nuevo documento clicando en la barra superior de RStudio llamada “documentos”, y luego en <code>R Markdown</code>. Otra opción es clicar sobre el ícono de una hoja blanca con un círculo verde en la esquina superior izquierda de la barra de herramientas de <code>RStudio</code>. Aparecerá una ventana, que se rellena con el título y el autor. Luego, guardarlo con un nombre al archivo y almacenarlo en la carpeta del proyecto, en “documentos_r”.</p></li>
+<li><p>El documento posee un <em>template</em>, clicar sobre el botón “Knit”, acompañado de un ícono de un ovillo de lana y unas agujas de tejer (barra superior izquierda). Se obtendrá un archivo de tipo <code>HTML</code> con el título, la fecha y el autor, que se puede eliminar en caso de ser necesario.</p></li>
+</ul>
+<div id="agregar-texto" class="section level3 hasAnchor" number="8.2.1">
+<h3><span class="header-section-number">8.2.1</span> Agregar texto<a href="r-markdown.html#agregar-texto" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>La cantidad de símbolos de numeral (#) indica el nivel del título o subtítulo que se desea editar. Es necesario dejar un espacio entre el numeral y el texto que se escribe para obtener los títulos en negrita y sin el símbolo. Se debe utilizar el primer nivel de títulos en cada documento <code>R Markdown</code>. Se prueban los niveles diferentes en un documento de <code>R Markdown</code> de la siguiente manera:</p>
+<p><strong>Recordatorio: </strong> Clicar Control + S constantemente para guardar los cambios efectuados en el documento, a medida que se trabaja sobre él.</p>
 </div>
-<p>El histograma nos muestra donde se concentran las personas según sus ocupaciones. De esta forma, la mayor parte de la población se encuentra entre el puntaje 15 y 43 de la escala. Por el contrario, las ocupaciones mejores puntadas tienen una menor proporción de personas.</p>
+<div id="listas" class="section level3 hasAnchor" number="8.2.2">
+<h3><span class="header-section-number">8.2.2</span> Listas<a href="r-markdown.html#listas" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p>Se utiliza el símbolo del asterisco para realizar bullet-points (* Bullet)</p></li>
+<li><p>Para un sub-bullet se usa el signo sumatorio (+ Sub-bullet)</p></li>
+<li><p>Para un tercer nivel de sub-bullet, el signo de restas (- Tercer nivel de bullets)</p></li>
+<li><p>Es importante, además de los símbolos, indentar las líneas cada vez que reduzca mi número de bullets
+en una lista. Espaciar entre el símbolo y el contenido de la lista. Además hay que dejar un espacio una vez finalizada la lista y antes de comenzar otra nueva.</p></li>
+<li><p>Se puede hacer una prueba creando una lista sobre “Materias que no me gustan de mi carrera”. Para presentar la lista, se debe agregar una línea de texto común, con su descripción.</p></li>
+<li><p>Luego, clicar en “Knit” para generar el documento.</p></li>
+</ul>
+</div>
+<div id="editar-texto" class="section level3 hasAnchor" number="8.2.3">
+<h3><span class="header-section-number">8.2.3</span> Editar texto<a href="r-markdown.html#editar-texto" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Para incluir algún formato de texto, se deben utilizar los siguientes símbolos al inicio y al final de cada palabra o grupo de palabras que se desea editar:</li>
+</ul>
+</div>
+<div id="insertar-imágenes" class="section level3 hasAnchor" number="8.2.4">
+<h3><span class="header-section-number">8.2.4</span> Insertar imágenes<a href="r-markdown.html#insertar-imágenes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p>Las imágenes son fáciles de agregar, siguiendo las líneas de código siguiente:</p></li>
+<li><p>Se puede hacer una prueba agregando una foto que nos guste.</p></li>
+<li><p>Se puede colocar el epígrafe de la foto del siguiente modo:</p></li>
+</ul>
+<div class="figure">
+<img src="imagenes/nina.jpeg" alt="" />
+<p class="caption">Figura 1: Mi mascota: Nina</p>
+</div>
+<ul>
+<li>También es posible seleccionar el tamaño de la imagen.</li>
+</ul>
+<div class="figure">
+<img src="imagenes/nina.jpeg" style="width:50.0%" alt="" />
+<p class="caption">Nina</p>
+</div>
+</div>
+<div id="enlaces" class="section level3 hasAnchor" number="8.2.5">
+<h3><span class="header-section-number">8.2.5</span> Enlaces<a href="r-markdown.html#enlaces" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Para incluir un enlace se debe:</li>
+</ul>
+<p><a href="www.google.com.ar">Link a google</a></p>
+</div>
+<div id="tips-para-escribir-código-en-r" class="section level3 hasAnchor" number="8.2.6">
+<h3><span class="header-section-number">8.2.6</span> Tips para escribir código en R<a href="r-markdown.html#tips-para-escribir-código-en-r" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p>A la hora de escribir en este lenguaje de programación, hay que conocer algunas funcionalidades que permiten resolver acciones claves y responder a dudas de manera simple. Para obtener información sobre una función concreta, se puede utilizar alguna de las siguientes funciones:</p></li>
+<li><p>Las mayúsculas y minúsculas importan. <strong><code>R</code></strong> es un lenguaje de expresiones que es sensible a las mismas y responde de manera diferente a cada una.</p></li>
+<li><p>Las órdenes elementales consisten en expresiones o en asignaciones. Las órdenes se separan con un punto y coma, (‘;’), o cambiando de línea.</p></li>
+<li><p>Las flechas verticales permiten recuperar órdenes previas y ejecutarlas y las horizontales permiten desplazarnos dentro de una orden para corregirla.</p></li>
+<li><p>Para eliminar objetos puede utilizar la orden “rm”, por ejemplo:</p></li>
+</ul>
 </div>
 </div>
             </section>
@@ -429,8 +459,8 @@ Figure 5.17: Histograma de frecuencias la escala ISEI
           </div>
         </div>
       </div>
-<a href="operacion1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="unidades.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="workflow.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="primeros-pasos-en-r.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
