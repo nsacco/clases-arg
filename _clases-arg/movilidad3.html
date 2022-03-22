@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>7.4 Aproximación al análisis multivariable de la movilidad social | Libro de Cocina para el Análisis de las Clases Sociales en Argentina</title>
+  <meta name="description" content="Manual introductorio para el estudio de la estructura social en Argentina" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="7.4 Aproximación al análisis multivariable de la movilidad social | Libro de Cocina para el Análisis de las Clases Sociales en Argentina" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Manual introductorio para el estudio de la estructura social en Argentina" />
+  <meta name="github-repo" content="nsacco/libroESA" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="7.4 Aproximación al análisis multivariable de la movilidad social | Libro de Cocina para el Análisis de las Clases Sociales en Argentina" />
+  
+  <meta name="twitter:description" content="Manual introductorio para el estudio de la estructura social en Argentina" />
+  
+
+<meta name="author" content="Nicolás Sacco" />
+<meta name="author" content="José Rodríguez de la Fuente" />
+<meta name="author" content="Sofia Jaime" />
+
+
+<meta name="date" content="2022-03-22" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="movilidad2.html"/>
+<link rel="next" href="tiempo.html"/>
+<script src="libs/header-attrs-2.13/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
+<script src="libs/pagedtable-1.1/js/pagedtable.js"></script>
+<link href="libs/vembedr-0.1.5/css/vembedr.css" rel="stylesheet" />
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Manual para el Análisis de la Estructura Social Argentina Actual</a></li>
+
+<li class="divider"></li>
+<li><a href="index.html#prefacio">Prefacio<span></span></a></li>
+<li><a href="agradecimientos.html#agradecimientos">Agradecimientos<span></span></a></li>
+<li class="part"><span><b>I Introducción<span></span></b></span></li>
+<li><a href="las-recetas.html#las-recetas">Las recetas<span></span></a></li>
+<li class="part"><span><b>II Aspectos teóricos<span></span></b></span></li>
+<li class="chapter" data-level="1" data-path="estructura1.html"><a href="estructura1.html"><i class="fa fa-check"></i><b>1</b> La estructura social en la Argentina actual<span></span></a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="analisis1.html"><a href="analisis1.html"><i class="fa fa-check"></i><b>1.1</b> Del análisis de las clases sociales a la teoría de la estratificación social<span></span></a></li>
+<li class="chapter" data-level="1.2" data-path="marx.html"><a href="marx.html"><i class="fa fa-check"></i><b>1.2</b> Marx, Weber y el funcionalismo<span></span></a></li>
+<li class="chapter" data-level="1.3" data-path="esperanza.html"><a href="esperanza.html"><i class="fa fa-check"></i><b>1.3</b> La esperanza de vida de la teoría: debates contemporáneos<span></span></a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="esperanza.html"><a href="esperanza.html#la-grieta-de-los-ochenta"><i class="fa fa-check"></i><b>1.3.1</b> La grieta de los ochenta<span></span></a></li>
+<li class="chapter" data-level="1.3.2" data-path="esperanza.html"><a href="esperanza.html#nuevos-debateshacia-una-operacionalización-más-refinada-de-los-conceptos"><i class="fa fa-check"></i><b>1.3.2</b> Nuevos debates…¿Hacia una operacionalización más refinada de los conceptos?<span></span></a></li>
+<li class="chapter" data-level="1.3.3" data-path="esperanza.html"><a href="esperanza.html#la-muerte-de-la-clases"><i class="fa fa-check"></i><b>1.3.3</b> La muerte de la clases<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="cuestion.html"><a href="cuestion.html"><i class="fa fa-check"></i><b>1.4</b> La cuestión en América Latina y en la Argentina<span></span></a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="cuestion.html"><a href="cuestion.html#nuevos-aires"><i class="fa fa-check"></i><b>1.4.1</b> Nuevos aires<span></span></a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>III Fuentes de datos<span></span></b></span></li>
+<li class="chapter" data-level="2" data-path="fuentes.html"><a href="fuentes.html"><i class="fa fa-check"></i><b>2</b> Encuestas de hogares<span></span></a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="eph1.html"><a href="eph1.html"><i class="fa fa-check"></i><b>2.1</b> La Encuesta Permanente de Hogares. Características principales<span></span></a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="eph1.html"><a href="eph1.html#características-de-la-eph-continua"><i class="fa fa-check"></i><b>2.1.1</b> Características de la EPH continua<span></span></a></li>
+<li class="chapter" data-level="2.1.2" data-path="eph1.html"><a href="eph1.html#la-eph-como-fuente-de-análisis-de-la-estructura-de-clases"><i class="fa fa-check"></i><b>2.1.2</b> La EPH como fuente de análisis de la estructura de clases<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="eph2.html"><a href="eph2.html"><i class="fa fa-check"></i><b>2.2</b> Comenzando a utilizar la EPH<span></span></a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="eph2.html"><a href="eph2.html#el-método-clásico"><i class="fa fa-check"></i><b>2.2.1</b> El “método clásico”<span></span></a></li>
+<li class="chapter" data-level="2.2.2" data-path="eph2.html"><a href="eph2.html#el-paquete-eph"><i class="fa fa-check"></i><b>2.2.2</b> El paquete <code>eph</code><span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="eph3.html"><a href="eph3.html"><i class="fa fa-check"></i><b>2.3</b> Primeros pasos en el estudio de las clases sociales a través de la EPH<span></span></a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="eph3.html"><a href="eph3.html#uniendo-las-bases-de-individuos-y-hogares"><i class="fa fa-check"></i><b>2.3.1</b> Uniendo las bases de individuos y hogares<span></span></a></li>
+<li class="chapter" data-level="2.3.2" data-path="eph3.html"><a href="eph3.html#población-bajo-análisis"><i class="fa fa-check"></i><b>2.3.2</b> Población bajo análisis<span></span></a></li>
+<li class="chapter" data-level="2.3.3" data-path="eph3.html"><a href="eph3.html#ponderación-y-expansión-de-la-muestra"><i class="fa fa-check"></i><b>2.3.3</b> Ponderación y expansión de la muestra<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="otras.html"><a href="otras.html"><i class="fa fa-check"></i><b>2.4</b> Otras encuestas de hogares para el estudio de la estructura de clases<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="fuentes2.html"><a href="fuentes2.html"><i class="fa fa-check"></i><b>3</b> Los censos de población modernos<span></span></a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="clases3.html"><a href="clases3.html"><i class="fa fa-check"></i><b>3.1</b> Clases sociales y censos de población<span></span></a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="clases3.html"><a href="clases3.html#antecedentes"><i class="fa fa-check"></i><b>3.1.1</b> Antecedentes<span></span></a></li>
+<li class="chapter" data-level="3.1.2" data-path="clases3.html"><a href="clases3.html#practicidad"><i class="fa fa-check"></i><b>3.1.2</b> Practicidad<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="censos.html"><a href="censos.html"><i class="fa fa-check"></i><b>3.2</b> Censos de población modernos. Características principales<span></span></a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="censos.html"><a href="censos.html#las-características-económicas-en-los-censos-de-población"><i class="fa fa-check"></i><b>3.2.1</b> Las características económicas en los censos de población<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="censos2.html"><a href="censos2.html"><i class="fa fa-check"></i><b>3.3</b> Censos modernos: acceso diferencial<span></span></a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="censos2.html"><a href="censos2.html#modos-de-acceso"><i class="fa fa-check"></i><b>3.3.1</b> Modos de acceso<span></span></a></li>
+<li class="chapter" data-level="3.3.2" data-path="censos2.html"><a href="censos2.html#es-lo-que-hay"><i class="fa fa-check"></i><b>3.3.2</b> Es lo que hay<span></span></a></li>
+<li class="chapter" data-level="3.3.3" data-path="censos2.html"><a href="censos2.html#procesamiento-de-datos-en-líneau-1"><i class="fa fa-check"></i><b>3.3.3</b> Procesamiento de datos en línea<span></span></a></li>
+<li class="chapter" data-level="3.3.4" data-path="censos2.html"><a href="censos2.html#descarga-directa-de-microdatos"><i class="fa fa-check"></i><b>3.3.4</b> Descarga directa de microdatos<span></span></a></li>
+<li class="chapter" data-level="3.3.5" data-path="censos2.html"><a href="censos2.html#ipums-i"><i class="fa fa-check"></i><b>3.3.5</b> IPUMS-I<span></span></a></li>
+<li class="chapter" data-level="3.3.6" data-path="censos2.html"><a href="censos2.html#solicitud-directa-al-indec"><i class="fa fa-check"></i><b>3.3.6</b> Solicitud directa al INDEC<span></span></a></li>
+<li class="chapter" data-level="3.3.7" data-path="censos2.html"><a href="censos2.html#otras-opciones-no-oficiales"><i class="fa fa-check"></i><b>3.3.7</b> Otras opciones no oficiales<span></span></a></li>
+<li class="chapter" data-level="3.3.8" data-path="censos2.html"><a href="censos2.html#disponibilidad-en-detalle-para-el-estudio-de-clases-sociales"><i class="fa fa-check"></i><b>3.3.8</b> Disponibilidad en detalle para el estudio de clases sociales<span></span></a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>IV Variables<span></span></b></span></li>
+<li class="chapter" data-level="4" data-path="ocupacion.html"><a href="ocupacion.html"><i class="fa fa-check"></i><b>4</b> Las características económicas de la población<span></span></a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="consideraciones.html"><a href="consideraciones.html"><i class="fa fa-check"></i><b>4.1</b> Consideraciones previas<span></span></a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="consideraciones.html"><a href="consideraciones.html#las-reglas-del-juego"><i class="fa fa-check"></i><b>4.1.1</b> Las reglas del juego<span></span></a></li>
+<li class="chapter" data-level="4.1.2" data-path="consideraciones.html"><a href="consideraciones.html#la-estratificación-como-perspectiva-de-análisis"><i class="fa fa-check"></i><b>4.1.2</b> La estratificación como perspectiva de análisis<span></span></a></li>
+<li class="chapter" data-level="4.1.3" data-path="consideraciones.html"><a href="consideraciones.html#indicadores-de-la-estratificación-social"><i class="fa fa-check"></i><b>4.1.3</b> Indicadores de la estratificación social<span></span></a></li>
+<li class="chapter" data-level="4.1.4" data-path="consideraciones.html"><a href="consideraciones.html#la-fuerza-de-trabajo-y-las-características-económicas-de-la-población"><i class="fa fa-check"></i><b>4.1.4</b> La fuerza de trabajo y las características económicas de la población<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="las-variables-socio-ocupacionales.html"><a href="las-variables-socio-ocupacionales.html"><i class="fa fa-check"></i><b>4.2</b> Las variables socio-ocupacionales<span></span></a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="las-variables-socio-ocupacionales.html"><a href="las-variables-socio-ocupacionales.html#condición-de-actividad"><i class="fa fa-check"></i><b>4.2.1</b> Condición de actividad<span></span></a></li>
+<li class="chapter" data-level="4.2.2" data-path="las-variables-socio-ocupacionales.html"><a href="las-variables-socio-ocupacionales.html#ocupación"><i class="fa fa-check"></i><b>4.2.2</b> Ocupación<span></span></a></li>
+<li class="chapter" data-level="4.2.3" data-path="las-variables-socio-ocupacionales.html"><a href="las-variables-socio-ocupacionales.html#rama-de-actividad"><i class="fa fa-check"></i><b>4.2.3</b> Rama de Actividad<span></span></a></li>
+<li class="chapter" data-level="4.2.4" data-path="las-variables-socio-ocupacionales.html"><a href="las-variables-socio-ocupacionales.html#categoría-de-ocupación"><i class="fa fa-check"></i><b>4.2.4</b> Categoría de Ocupación<span></span></a></li>
+<li class="chapter" data-level="4.2.5" data-path="las-variables-socio-ocupacionales.html"><a href="las-variables-socio-ocupacionales.html#sector-de-actividad"><i class="fa fa-check"></i><b>4.2.5</b> Sector de Actividad<span></span></a></li>
+<li class="chapter" data-level="4.2.6" data-path="las-variables-socio-ocupacionales.html"><a href="las-variables-socio-ocupacionales.html#tamaño-del-establecimiento"><i class="fa fa-check"></i><b>4.2.6</b> Tamaño del Establecimiento<span></span></a></li>
+<li class="chapter" data-level="4.2.7" data-path="las-variables-socio-ocupacionales.html"><a href="las-variables-socio-ocupacionales.html#supervisión"><i class="fa fa-check"></i><b>4.2.7</b> Supervisión<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="eph4.html"><a href="eph4.html"><i class="fa fa-check"></i><b>4.3</b> Explorando las variables socio-ocupacionales en la EPH<span></span></a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="eph4.html"><a href="eph4.html#condición-de-actividad-1"><i class="fa fa-check"></i><b>4.3.1</b> Condición de actividad<span></span></a></li>
+<li class="chapter" data-level="4.3.2" data-path="eph4.html"><a href="eph4.html#ocupación-1"><i class="fa fa-check"></i><b>4.3.2</b> Ocupación<span></span></a></li>
+<li class="chapter" data-level="4.3.3" data-path="eph4.html"><a href="eph4.html#rama-de-actividad-1"><i class="fa fa-check"></i><b>4.3.3</b> Rama de actividad<span></span></a></li>
+<li class="chapter" data-level="4.3.4" data-path="eph4.html"><a href="eph4.html#categoría-de-ocupación-1"><i class="fa fa-check"></i><b>4.3.4</b> Categoría de ocupación<span></span></a></li>
+<li class="chapter" data-level="4.3.5" data-path="eph4.html"><a href="eph4.html#sector-de-actividad-1"><i class="fa fa-check"></i><b>4.3.5</b> Sector de actividad<span></span></a></li>
+<li class="chapter" data-level="4.3.6" data-path="eph4.html"><a href="eph4.html#tamaño-del-establecimiento-1"><i class="fa fa-check"></i><b>4.3.6</b> Tamaño del establecimiento<span></span></a></li>
+<li class="chapter" data-level="4.3.7" data-path="eph4.html"><a href="eph4.html#supervisión-1"><i class="fa fa-check"></i><b>4.3.7</b> Supervisión<span></span></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="clases5.html"><a href="clases5.html"><i class="fa fa-check"></i><b>5</b> Los Nomencladores de clases sociales<span></span></a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="computadora.html"><a href="computadora.html"><i class="fa fa-check"></i><b>5.1</b> De las clases en el papel a las clases en la computadora<span></span></a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="computadora.html"><a href="computadora.html#operacionalizando-el-concepto-de-clase"><i class="fa fa-check"></i><b>5.1.1</b> Operacionalizando el concepto de clase<span></span></a></li>
+<li class="chapter" data-level="5.1.2" data-path="computadora.html"><a href="computadora.html#clases-grupos-estratos-qué-medimos-cuando-analizamos-la-estructura-social"><i class="fa fa-check"></i><b>5.1.2</b> Clases, grupos, estratos ¿Qué medimos cuando analizamos la estructura social?<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="clases6.html"><a href="clases6.html"><i class="fa fa-check"></i><b>5.2</b> Enfoques operacionalizables de clases y estratos sociales<span></span></a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="clases6.html"><a href="clases6.html#esquemas-internacionales"><i class="fa fa-check"></i><b>5.2.1</b> Esquemas internacionales<span></span></a></li>
+<li class="chapter" data-level="5.2.2" data-path="clases6.html"><a href="clases6.html#esquemas-nacionales"><i class="fa fa-check"></i><b>5.2.2</b> Esquemas nacionales<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="operacion1.html"><a href="operacion1.html"><i class="fa fa-check"></i><b>5.3</b> Operacionalización paso a paso<span></span></a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="operacion1.html"><a href="operacion1.html#punto-de-partida"><i class="fa fa-check"></i><b>5.3.1</b> Punto de partida<span></span></a></li>
+<li class="chapter" data-level="5.3.2" data-path="operacion1.html"><a href="operacion1.html#acondicionando-la-base"><i class="fa fa-check"></i><b>5.3.2</b> Acondicionando la base<span></span></a></li>
+<li class="chapter" data-level="5.3.3" data-path="operacion1.html"><a href="operacion1.html#creación-cso-desagregado"><i class="fa fa-check"></i><b>5.3.3</b> Creación CSO desagregado<span></span></a></li>
+<li class="chapter" data-level="5.3.4" data-path="operacion1.html"><a href="operacion1.html#creación-del-cso-agregado"><i class="fa fa-check"></i><b>5.3.4</b> Creación del CSO agregado<span></span></a></li>
+<li class="chapter" data-level="5.3.5" data-path="operacion1.html"><a href="operacion1.html#creación-esquema-de-clase"><i class="fa fa-check"></i><b>5.3.5</b> Creación esquema de clase<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="operacion2.html"><a href="operacion2.html"><i class="fa fa-check"></i><b>5.4</b> Operacionalización automática<span></span></a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="operacion2.html"><a href="operacion2.html#operacionalizando-la-escala-isei"><i class="fa fa-check"></i><b>5.4.1</b> Operacionalizando la escala ISEI<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="unidades.html"><a href="unidades.html"><i class="fa fa-check"></i><b>5.5</b> Unidades de análisis y clases sociales<span></span></a>
+<ul>
+<li class="chapter" data-level="5.5.1" data-path="unidades.html"><a href="unidades.html#breve-discusión-teórica"><i class="fa fa-check"></i><b>5.5.1</b> Breve discusión teórica<span></span></a></li>
+<li class="chapter" data-level="5.5.2" data-path="unidades.html"><a href="unidades.html#opciones-metodológicas"><i class="fa fa-check"></i><b>5.5.2</b> Opciones metodológicas<span></span></a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>V Análisis<span></span></b></span></li>
+<li class="chapter" data-level="6" data-path="independiente.html"><a href="independiente.html"><i class="fa fa-check"></i><b>6</b> La clase como variable independiente<span></span></a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="huevo.html"><a href="huevo.html"><i class="fa fa-check"></i><b>6.1</b> La estructura de clases ¿el huevo o la gallina?<span></span></a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="huevo.html"><a href="huevo.html#el-enfoque-relacional-weberiano"><i class="fa fa-check"></i><b>6.1.1</b> El enfoque relacional-weberiano<span></span></a></li>
+<li class="chapter" data-level="6.1.2" data-path="huevo.html"><a href="huevo.html#estructural-funcionalismo"><i class="fa fa-check"></i><b>6.1.2</b> Estructural funcionalismo<span></span></a></li>
+<li class="chapter" data-level="6.1.3" data-path="huevo.html"><a href="huevo.html#un-enfoque-intermedio"><i class="fa fa-check"></i><b>6.1.3</b> Un enfoque intermedio<span></span></a></li>
+<li class="chapter" data-level="6.1.4" data-path="huevo.html"><a href="huevo.html#una-cuarta-mirada"><i class="fa fa-check"></i><b>6.1.4</b> Una cuarta mirada<span></span></a></li>
+<li class="chapter" data-level="6.1.5" data-path="huevo.html"><a href="huevo.html#epílogo-una-sociedad-sin-clases"><i class="fa fa-check"></i><b>6.1.5</b> Epílogo: una sociedad sin clases<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="explorando.html"><a href="explorando.html"><i class="fa fa-check"></i><b>6.2</b> Explorando los datos por clase social<span></span></a></li>
+<li class="chapter" data-level="6.3" data-path="aprox.html"><a href="aprox.html"><i class="fa fa-check"></i><b>6.3</b> Aproximación al análisis multidimensional<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="dependiente.html"><a href="dependiente.html"><i class="fa fa-check"></i><b>7</b> La clase como variable dependiente<span></span></a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="movilidad1.html"><a href="movilidad1.html"><i class="fa fa-check"></i><b>7.1</b> El estudio de la movilidad social<span></span></a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="movilidad1.html"><a href="movilidad1.html#qué-es-la-movilidad-social"><i class="fa fa-check"></i><b>7.1.1</b> ¿Qué es la movilidad social?<span></span></a></li>
+<li class="chapter" data-level="7.1.2" data-path="movilidad1.html"><a href="movilidad1.html#enfoques-funcionalistas"><i class="fa fa-check"></i><b>7.1.2</b> Enfoques funcionalistas<span></span></a></li>
+<li class="chapter" data-level="7.1.3" data-path="movilidad1.html"><a href="movilidad1.html#enfoques-de-clase"><i class="fa fa-check"></i><b>7.1.3</b> Enfoques de clase<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="enes.html"><a href="enes.html"><i class="fa fa-check"></i><b>7.2</b> El uso de la base ENES-PISAC<span></span></a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="enes.html"><a href="enes.html#algunas-consideraciones-de-la-enes"><i class="fa fa-check"></i><b>7.2.1</b> Algunas consideraciones de la ENES<span></span></a></li>
+<li class="chapter" data-level="7.2.2" data-path="enes.html"><a href="enes.html#abriendo-y-pegando-la-base-enes"><i class="fa fa-check"></i><b>7.2.2</b> Abriendo y pegando la base ENES<span></span></a></li>
+<li class="chapter" data-level="7.2.3" data-path="enes.html"><a href="enes.html#recodificación-de-variables-y-filtros"><i class="fa fa-check"></i><b>7.2.3</b> Recodificación de variables y filtros<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="movilidad2.html"><a href="movilidad2.html"><i class="fa fa-check"></i><b>7.3</b> Las tablas de movilidad<span></span></a></li>
+<li class="chapter" data-level="7.4" data-path="movilidad3.html"><a href="movilidad3.html"><i class="fa fa-check"></i><b>7.4</b> Aproximación al análisis multivariable de la movilidad social<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="tiempo.html"><a href="tiempo.html"><i class="fa fa-check"></i><b>8</b> Tiempo, espacio y clases sociales<span></span></a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="temporal.html"><a href="temporal.html"><i class="fa fa-check"></i><b>8.1</b> La dimensión temporal<span></span></a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="temporal.html"><a href="temporal.html#algunos-ejemplos-de-la-bibliografía"><i class="fa fa-check"></i><b>8.1.1</b> Algunos ejemplos de la bibliografía<span></span></a></li>
+<li class="chapter" data-level="8.1.2" data-path="temporal.html"><a href="temporal.html#ejemplo-práctico"><i class="fa fa-check"></i><b>8.1.2</b> Ejemplo práctico<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="espacial.html"><a href="espacial.html"><i class="fa fa-check"></i><b>8.2</b> La dimensión espacial<span></span></a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="espacial.html"><a href="espacial.html#algunos-ejemplos-de-la-bibliografía-1"><i class="fa fa-check"></i><b>8.2.1</b> Algunos ejemplos de la bibliografía<span></span></a></li>
+<li class="chapter" data-level="8.2.2" data-path="espacial.html"><a href="espacial.html#ejemplo-práctico-1"><i class="fa fa-check"></i><b>8.2.2</b> Ejemplo práctico<span></span></a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Libro de Cocina para el Análisis de las Clases Sociales en Argentina</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="movilidad3" class="section level2 hasAnchor" number="7.4">
+<h2><span class="header-section-number">7.4</span> Aproximación al análisis multivariable de la movilidad social<a href="movilidad3.html#movilidad3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>En esta sección utilizaremos las siguientes librerías:</p>
+<p>Cómo hemos señalado en el <a href="aprox.html#aprox">Capítulo 7</a> cuando nos referíamos a la clase como variable independiente, también es posible realizar un análisis multidimensional sobre las oportunidades de movilidad social. En dicho caso, la variable dependiente es asumida por la posición de clase del encuestado, mientras que como factores independientes podemos considerar, además de la posición de clase del origen, otras dimensiones comúnmente estudiadas: el nivel educativos de los padres, el nivel educativo de los encuestados, el género, la edad, el lugar de nacimiento, entre otros.</p>
+<p>Sin adentrarnos específicamente en la cuestión técnica, les investigadores que analizan estas cuestiones comúnmente utilizan la <strong>regresión logística binomial</strong>, la <strong>regresión logística multinomial</strong> o la <strong>regresión logística ordinal</strong> para responder a los interrogantes. Al igual que en la técnica de regresión que vimos anteriormente, la regresión logística nos permite identificar el peso o la influencia que determinados factores independientes tienen sobre una variable dependiente. En este caso, al disponer de una variable dependiente de tipo categorial (clase del encuestado) no puede usarse la técnica de regresión lineal, debiendo optarse por utilizar la transformación logística.</p>
+<p>De este modo, es común que a través de la técnica se evalúe cuánto pesa el origen de clase y educativo en las chances de moverse en la estructura, así como aspectos de tipo <em>adscriptivos</em>, tales como el sexo o la edad, y otros <em>adquiridos</em> como el nivel educativo.</p>
+<p>En nuestro caso, y para simplificar el análisis, vamos a ensayar la técnica de regresión logística binomial, adecuada para cuando nuestra variable dependiente es de tipo dicotómica, es decir, que sólo tiene dos categorías de respuesta. Para ello vamos a recodificar nuevamente nuestra variable de clase social del encuestado en dos categorías:<br />
+1. Aquellos pertenecientes a la clase de servicio<br />
+0. Aquellos pertenecientes a otras clases</p>
+<p>Es decir, nosotros vamos a evaluar las probabilidades de acceder a la clase de servicio en lugar de a otra clase en función de diversos factores independientes condicionantes. Por eso, en primer lugar, recodificaremos la variable:</p>
+<p>Una vez realizada la recodificación, podemos construir la regresión logística tomando como factores independientes, en primer lugar, a los aspectos propiamente del origen social: la clase y la educación de los padres. Para ello recurriremos a la función <code>glm</code> (generalized linear model), que tiene un formato similar a la función <code>lm</code>, y debemos señalar la opción <code>binomial</code> en <code>family</code>. En este caso, para simplificar el proceso, no incorporaremos el ponderador, a través de la opción <code>weights</code>, ya que su aplicación no permite una correcto ajuste en la regresión <a href="espacial.html#fn12" class="footnote-ref" id="fnref12"><sup>12</sup></a>.</p>
+<p>Para observar los resultados utilizaremos la función <code>summ</code> (o <code>export_summs</code> si necesitamos exportar a Word o PDF) del paquete <code>jtools</code> que deberán instalar.</p>
+<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="movilidad3.html#cb67-1" aria-hidden="true" tabindex="-1"></a>logit1 <span class="ot">&lt;-</span> <span class="fu">glm</span>(egp2 <span class="sc">~</span> educ_hog_f <span class="sc">+</span> egp5a_f, <span class="at">data =</span> enes_movilidad, <span class="at">family =</span> <span class="st">&quot;binomial&quot;</span>)</span>
+<span id="cb67-2"><a href="movilidad3.html#cb67-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb67-3"><a href="movilidad3.html#cb67-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summ</span>(logit1)</span></code></pre></div>
+<table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<tbody>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Observations
+</td>
+<td style="text-align:right;">
+5907 (1553 missing obs. deleted)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Dependent variable
+</td>
+<td style="text-align:right;">
+egp2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Type
+</td>
+<td style="text-align:right;">
+Generalized linear model
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Family
+</td>
+<td style="text-align:right;">
+binomial
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Link
+</td>
+<td style="text-align:right;">
+logit
+</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<tbody>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+𝛘²(6)
+</td>
+<td style="text-align:right;">
+668.93
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Pseudo-R² (Cragg-Uhler)
+</td>
+<td style="text-align:right;">
+0.16
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Pseudo-R² (McFadden)
+</td>
+<td style="text-align:right;">
+0.10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+AIC
+</td>
+<td style="text-align:right;">
+6175.46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+BIC
+</td>
+<td style="text-align:right;">
+6222.24
+</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0;">
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+Est.
+</th>
+<th style="text-align:right;">
+S.E.
+</th>
+<th style="text-align:right;">
+z val.
+</th>
+<th style="text-align:right;">
+p
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+(Intercept)
+</td>
+<td style="text-align:right;">
+-0.55
+</td>
+<td style="text-align:right;">
+0.09
+</td>
+<td style="text-align:right;">
+-6.08
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+educ_hog_fSec. completo
+</td>
+<td style="text-align:right;">
+0.77
+</td>
+<td style="text-align:right;">
+0.08
+</td>
+<td style="text-align:right;">
+9.46
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+educ_hog_fSuperior completo
+</td>
+<td style="text-align:right;">
+1.22
+</td>
+<td style="text-align:right;">
+0.11
+</td>
+<td style="text-align:right;">
+11.20
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+egp5a_fTR
+</td>
+<td style="text-align:right;">
+-0.61
+</td>
+<td style="text-align:right;">
+0.14
+</td>
+<td style="text-align:right;">
+-4.40
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+egp5a_fPB
+</td>
+<td style="text-align:right;">
+-0.66
+</td>
+<td style="text-align:right;">
+0.10
+</td>
+<td style="text-align:right;">
+-6.68
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+egp5a_fCTC
+</td>
+<td style="text-align:right;">
+-0.71
+</td>
+<td style="text-align:right;">
+0.11
+</td>
+<td style="text-align:right;">
+-6.19
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+egp5a_fCTNC
+</td>
+<td style="text-align:right;">
+-1.38
+</td>
+<td style="text-align:right;">
+0.11
+</td>
+<td style="text-align:right;">
+-12.88
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup></sup> Standard errors: MLE
+</td>
+</tr>
+</tfoot>
+</table>
+<p>Esta primera información que nos brinda la función <code>summ(logit1)</code> nos permite decir tres cosas. En primer lugar, sabemos por la última columna que todos los coeficientes estimados son significativos estadísticamente (los p-value son menores a <code>0,05</code>). En segundo lugar, en el caso del nivel educativo de origen, hay una ventaja de aquellos que provienen de niveles educativos superiores respecto a los inferiores (las estimaciones se incrementan a medida que ascendemos en la escala educativa). Siempre nuestra categoría de referencia será aquella que no está señalada en el cuadro, en este caso, el nivel educativo más bajo. Entonces, <em>valores superiores a 0 nos dirán que las oportunidades de acceder a la clase de servicio mejoran al aumentar el nivel educativo de origen</em>. Algo similar sucede con la clase social de origen, donde la categoría de contraste es justamente la clase de servicio. A medida que descendemos en la escala de clases, las oportunidades de moverse intergeneracionalmente a la clase de servicio disminuyen, aumentan en términos negativos.</p>
+<p>En tercer lugar, los resultados de la sección <code>model fit</code> nos señalan distintas medidas de bondad de ajuste. En nuestro caso, observaremos los <code>Pseudo-R2</code> que nos permiten una aproximación a la cantidad de varianza explicada por el modelo. En este caso, el modelo planteado explica entre un <code>10%</code> y un <code>16%</code> de la varianza total de la variable dependiente. Cuanto más alto sea dicho valor, mejor ajuste tendrá el modelo y mejores predicciones realizaremos sobre la realidad que estamos midiendo.</p>
+<p>A continuación, elaboraremos un segundo modelo que incorpore como variables predictoras al nivel educativo y al sexo de los encuestades. Lo llamaremos <code>logit2</code>. A su vez, siguiendo el modo en que muchos estudios muestran los coeficientes de la regresión, pediremos a través del comando opción <code>exp = TRUE</code> de la función <code>summ</code>, que nos brinde las estimaciones en forma exponenciada. Como veremos a continuación esto facilitará la lectura de los mismos al transformarlos en razones de momios (<em>odds ratios</em>).</p>
+<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="movilidad3.html#cb68-1" aria-hidden="true" tabindex="-1"></a>logit2 <span class="ot">&lt;-</span> <span class="fu">glm</span>(egp2 <span class="sc">~</span> educ_hog_f <span class="sc">+</span> egp5a_f <span class="sc">+</span> educ_f <span class="sc">+</span> sexo_f, <span class="at">data =</span> enes_movilidad,</span>
+<span id="cb68-2"><a href="movilidad3.html#cb68-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">family =</span> <span class="st">&quot;binomial&quot;</span>)</span>
+<span id="cb68-3"><a href="movilidad3.html#cb68-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-4"><a href="movilidad3.html#cb68-4" aria-hidden="true" tabindex="-1"></a><span class="fu">summ</span>(logit2, <span class="at">exp =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<tbody>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Observations
+</td>
+<td style="text-align:right;">
+5900 (1560 missing obs. deleted)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Dependent variable
+</td>
+<td style="text-align:right;">
+egp2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Type
+</td>
+<td style="text-align:right;">
+Generalized linear model
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Family
+</td>
+<td style="text-align:right;">
+binomial
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Link
+</td>
+<td style="text-align:right;">
+logit
+</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<tbody>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+𝛘²(9)
+</td>
+<td style="text-align:right;">
+1899.04
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Pseudo-R² (Cragg-Uhler)
+</td>
+<td style="text-align:right;">
+0.40
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Pseudo-R² (McFadden)
+</td>
+<td style="text-align:right;">
+0.28
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+AIC
+</td>
+<td style="text-align:right;">
+4947.04
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+BIC
+</td>
+<td style="text-align:right;">
+5013.87
+</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0;">
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+exp(Est.)
+</th>
+<th style="text-align:right;">
+2.5%
+</th>
+<th style="text-align:right;">
+97.5%
+</th>
+<th style="text-align:right;">
+z val.
+</th>
+<th style="text-align:right;">
+p
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+(Intercept)
+</td>
+<td style="text-align:right;">
+0.13
+</td>
+<td style="text-align:right;">
+0.11
+</td>
+<td style="text-align:right;">
+0.17
+</td>
+<td style="text-align:right;">
+-16.01
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+educ_hog_fSec. completo
+</td>
+<td style="text-align:right;">
+1.13
+</td>
+<td style="text-align:right;">
+0.94
+</td>
+<td style="text-align:right;">
+1.36
+</td>
+<td style="text-align:right;">
+1.26
+</td>
+<td style="text-align:right;">
+0.21
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+educ_hog_fSuperior completo
+</td>
+<td style="text-align:right;">
+1.19
+</td>
+<td style="text-align:right;">
+0.92
+</td>
+<td style="text-align:right;">
+1.53
+</td>
+<td style="text-align:right;">
+1.34
+</td>
+<td style="text-align:right;">
+0.18
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+egp5a_fTR
+</td>
+<td style="text-align:right;">
+0.63
+</td>
+<td style="text-align:right;">
+0.46
+</td>
+<td style="text-align:right;">
+0.86
+</td>
+<td style="text-align:right;">
+-2.95
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+egp5a_fPB
+</td>
+<td style="text-align:right;">
+0.64
+</td>
+<td style="text-align:right;">
+0.51
+</td>
+<td style="text-align:right;">
+0.80
+</td>
+<td style="text-align:right;">
+-3.90
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+egp5a_fCTC
+</td>
+<td style="text-align:right;">
+0.60
+</td>
+<td style="text-align:right;">
+0.46
+</td>
+<td style="text-align:right;">
+0.77
+</td>
+<td style="text-align:right;">
+-3.90
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+egp5a_fCTNC
+</td>
+<td style="text-align:right;">
+0.42
+</td>
+<td style="text-align:right;">
+0.33
+</td>
+<td style="text-align:right;">
+0.54
+</td>
+<td style="text-align:right;">
+-7.02
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+educ_fSec. completo
+</td>
+<td style="text-align:right;">
+4.31
+</td>
+<td style="text-align:right;">
+3.61
+</td>
+<td style="text-align:right;">
+5.16
+</td>
+<td style="text-align:right;">
+15.96
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+educ_fSuperior completo
+</td>
+<td style="text-align:right;">
+26.09
+</td>
+<td style="text-align:right;">
+21.24
+</td>
+<td style="text-align:right;">
+32.04
+</td>
+<td style="text-align:right;">
+31.10
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+sexo_fMujer
+</td>
+<td style="text-align:right;">
+1.17
+</td>
+<td style="text-align:right;">
+1.01
+</td>
+<td style="text-align:right;">
+1.36
+</td>
+<td style="text-align:right;">
+2.15
+</td>
+<td style="text-align:right;">
+0.03
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup></sup> Standard errors: MLE
+</td>
+</tr>
+</tfoot>
+</table>
+<p>Podemos observar que al incorporar las variables de nivel educativo y sexo la bondad de ajuste mejora considerablemente (principalmente por el nivel educativo), alcanzando valores de <code>pseudo-R2</code> de entre <code>28%</code> y <code>40%</code>. Al mismo tiempo, los coeficientes de nivel educativo de origen ya no son significativos estadísticamente, es decir, que no tienen un impacto las probabilidades de acceso a la clase de servicio. Esto puede tener muchas explicaciones, pero siguiendo lo que vimos anteriormente en este capítulo, Blau y Duncan <span class="citation">(<a href="espacial.html#ref-Blau.Duncan1967" role="doc-biblioref">1967</a>)</span> entendían que el menor peso del origen educativo en la movilidad social se debía a que el mismo se transfería no en forma directa, sino indirectamente a través del logro educativo de los hijos.</p>
+<p>En este sentido, el nivel educativo alcanzado por los hijos es el “gran factor de explicación” del acceso a la clase de servicios. Que la categoría “superior completo” tenga un valor de <code>26,09</code> significa, en términos exponenciados, que <em>los individuos con niveles educativos superiores a diferencia de los que tienen niveles bajos (hasta secundaria incompleta) tienen <code>26</code> veces más de oportunidades de acceder a la clase de servicio que al resto de la clases</em>. En el caso de aquellos que tienen secundaria completa versus les que tienen niveles educativos bajos, las oportunidades son sólo <code>4</code> veces más altas.</p>
+<p>En el caso del género, las mujeres presentan un <code>17%</code> (<code>1,17</code> veces) más de oportunidades que los varones de acceder a la clase de servicio.</p>
+<p>Cómo regla de oro, las razones de momios (coeficientes exponenciados) pueden variar de <code>0</code> a <code>infinito</code>, siendo <code>1</code> la presencia de independencia estadística. Valores mayores a <code>1</code> implican una mayor oportunidad de que un suceso ocurra, mientras que valores menores a <code>1</code> implican menores oportunidades de que un suceso ocurra.</p>
+<p>Finalmente si lo que se quiere es presentar la comparación entre los dos modelos (o varios), tal como se suelen mostrar en las revistas científicas, recomendamos la instalación del paquete <code>huxtable</code>. Utilizando el comando <code>export_summs</code> e indicando en las opciones nuestros modelos, obtendremos las siguiente tabla:</p>
+<table class="huxtable" style="border-collapse: collapse; border: 0px; margin-bottom: 2em; margin-top: 2em; ; margin-left: auto; margin-right: auto;  " id="tab:unnamed-chunk-134">
+<caption style="caption-side: top; text-align: center;"><span id="tab:unnamed-chunk-134">Table 7.2: </span> </caption><col><col><col><tr>
+<th style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.8pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;"></th><th style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.8pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">Model 1</th><th style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.8pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">Model 2</th></tr>
+<tr>
+<th style="vertical-align: top; text-align: left; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">(Intercept)</th><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">-0.55 ***</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">-2.00 ***</td></tr>
+<tr>
+<th style="vertical-align: top; text-align: left; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;"></th><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">(0.09)&nbsp;&nbsp;&nbsp;</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">(0.13)&nbsp;&nbsp;&nbsp;</td></tr>
+<tr>
+<th style="vertical-align: top; text-align: left; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">educ_hog_fSec. completo</th><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.77 ***</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.12&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+<tr>
+<th style="vertical-align: top; text-align: left; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;"></th><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">(0.08)&nbsp;&nbsp;&nbsp;</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">(0.10)&nbsp;&nbsp;&nbsp;</td></tr>
+<tr>
+<th style="vertical-align: top; text-align: left; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">educ_hog_fSuperior completo</th><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">1.22 ***</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.17&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+<tr>
+<th style="vertical-align: top; text-align: left; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;"></th><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">(0.11)&nbsp;&nbsp;&nbsp;</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">(0.13)&nbsp;&nbsp;&nbsp;</td></tr>
+<tr>
+<th style="vertical-align: top; text-align: left; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">egp5a_fTR</th><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">-0.61 ***</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">-0.46 **&nbsp;</td></tr>
+<tr>
+<th style="vertical-align: top; text-align: left; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;"></th><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">(0.14)&nbsp;&nbsp;&nbsp;</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">(0.16)&nbsp;&nbsp;&nbsp;</td></tr>
+<tr>
+<th style="vertical-align: top; text-align: left; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">egp5a_fPB</th><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">-0.66 ***</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">-0.45 ***</td></tr>
+<tr>
+<th style="vertical-align: top; text-align: left; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;"></th><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">(0.10)&nbsp;&nbsp;&nbsp;</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">(0.11)&nbsp;&nbsp;&nbsp;</td></tr>
+<tr>
+<th style="vertical-align: top; text-align: left; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">egp5a_fCTC</th><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">-0.71 ***</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">-0.51 ***</td></tr>
+<tr>
+<th style="vertical-align: top; text-align: left; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;"></th><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">(0.11)&nbsp;&nbsp;&nbsp;</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">(0.13)&nbsp;&nbsp;&nbsp;</td></tr>
+<tr>
+<th style="vertical-align: top; text-align: left; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">egp5a_fCTNC</th><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">-1.38 ***</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">-0.86 ***</td></tr>
+<tr>
+<th style="vertical-align: top; text-align: left; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;"></th><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">(0.11)&nbsp;&nbsp;&nbsp;</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">(0.12)&nbsp;&nbsp;&nbsp;</td></tr>
+<tr>
+<th style="vertical-align: top; text-align: left; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">educ_fSec. completo</th><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">1.46 ***</td></tr>
+<tr>
+<th style="vertical-align: top; text-align: left; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;"></th><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">(0.09)&nbsp;&nbsp;&nbsp;</td></tr>
+<tr>
+<th style="vertical-align: top; text-align: left; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">educ_fSuperior completo</th><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">3.26 ***</td></tr>
+<tr>
+<th style="vertical-align: top; text-align: left; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;"></th><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">(0.10)&nbsp;&nbsp;&nbsp;</td></tr>
+<tr>
+<th style="vertical-align: top; text-align: left; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">sexo_f</th><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.16 *&nbsp;&nbsp;</td></tr>
+<tr>
+<th style="vertical-align: top; text-align: left; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;"></th><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">(0.07)&nbsp;&nbsp;&nbsp;</td></tr>
+<tr>
+<th style="vertical-align: top; text-align: left; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">N</th><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">5907&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">5900&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+<tr>
+<th style="vertical-align: top; text-align: left; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">AIC</th><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">6175.46&nbsp;&nbsp;&nbsp;&nbsp;</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">4947.04&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+<tr>
+<th style="vertical-align: top; text-align: left; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">BIC</th><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">6222.24&nbsp;&nbsp;&nbsp;&nbsp;</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">5013.87&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+<tr>
+<th style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.8pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">Pseudo R2</th><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.8pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.16&nbsp;&nbsp;&nbsp;&nbsp;</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.8pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.40&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+<tr>
+<th colspan="3" style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0.8pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">All continuous predictors are mean-centered and scaled by 1 standard deviation.  *** p &lt; 0.001;  ** p &lt; 0.01;  * p &lt; 0.05.</th></tr>
+</table>
+
+
+</div>
+<!-- </div> -->
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="movilidad2.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="tiempo.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["clases-arg.pdf", "clases-arg.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

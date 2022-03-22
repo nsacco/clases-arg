@@ -306,6 +306,36 @@ div.csl-indent {
 <li class="chapter" data-level="6.2" data-path="explorando.html"><a href="explorando.html"><i class="fa fa-check"></i><b>6.2</b> Explorando los datos por clase social<span></span></a></li>
 <li class="chapter" data-level="6.3" data-path="aprox.html"><a href="aprox.html"><i class="fa fa-check"></i><b>6.3</b> Aproximación al análisis multidimensional<span></span></a></li>
 </ul></li>
+<li class="chapter" data-level="7" data-path="dependiente.html"><a href="dependiente.html"><i class="fa fa-check"></i><b>7</b> La clase como variable dependiente<span></span></a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="movilidad1.html"><a href="movilidad1.html"><i class="fa fa-check"></i><b>7.1</b> El estudio de la movilidad social<span></span></a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="movilidad1.html"><a href="movilidad1.html#qué-es-la-movilidad-social"><i class="fa fa-check"></i><b>7.1.1</b> ¿Qué es la movilidad social?<span></span></a></li>
+<li class="chapter" data-level="7.1.2" data-path="movilidad1.html"><a href="movilidad1.html#enfoques-funcionalistas"><i class="fa fa-check"></i><b>7.1.2</b> Enfoques funcionalistas<span></span></a></li>
+<li class="chapter" data-level="7.1.3" data-path="movilidad1.html"><a href="movilidad1.html#enfoques-de-clase"><i class="fa fa-check"></i><b>7.1.3</b> Enfoques de clase<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="enes.html"><a href="enes.html"><i class="fa fa-check"></i><b>7.2</b> El uso de la base ENES-PISAC<span></span></a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="enes.html"><a href="enes.html#algunas-consideraciones-de-la-enes"><i class="fa fa-check"></i><b>7.2.1</b> Algunas consideraciones de la ENES<span></span></a></li>
+<li class="chapter" data-level="7.2.2" data-path="enes.html"><a href="enes.html#abriendo-y-pegando-la-base-enes"><i class="fa fa-check"></i><b>7.2.2</b> Abriendo y pegando la base ENES<span></span></a></li>
+<li class="chapter" data-level="7.2.3" data-path="enes.html"><a href="enes.html#recodificación-de-variables-y-filtros"><i class="fa fa-check"></i><b>7.2.3</b> Recodificación de variables y filtros<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="movilidad2.html"><a href="movilidad2.html"><i class="fa fa-check"></i><b>7.3</b> Las tablas de movilidad<span></span></a></li>
+<li class="chapter" data-level="7.4" data-path="movilidad3.html"><a href="movilidad3.html"><i class="fa fa-check"></i><b>7.4</b> Aproximación al análisis multivariable de la movilidad social<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="tiempo.html"><a href="tiempo.html"><i class="fa fa-check"></i><b>8</b> Tiempo, espacio y clases sociales<span></span></a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="temporal.html"><a href="temporal.html"><i class="fa fa-check"></i><b>8.1</b> La dimensión temporal<span></span></a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="temporal.html"><a href="temporal.html#algunos-ejemplos-de-la-bibliografía"><i class="fa fa-check"></i><b>8.1.1</b> Algunos ejemplos de la bibliografía<span></span></a></li>
+<li class="chapter" data-level="8.1.2" data-path="temporal.html"><a href="temporal.html#ejemplo-práctico"><i class="fa fa-check"></i><b>8.1.2</b> Ejemplo práctico<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="espacial.html"><a href="espacial.html"><i class="fa fa-check"></i><b>8.2</b> La dimensión espacial<span></span></a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="espacial.html"><a href="espacial.html#algunos-ejemplos-de-la-bibliografía-1"><i class="fa fa-check"></i><b>8.2.1</b> Algunos ejemplos de la bibliografía<span></span></a></li>
+<li class="chapter" data-level="8.2.2" data-path="espacial.html"><a href="espacial.html#ejemplo-práctico-1"><i class="fa fa-check"></i><b>8.2.2</b> Ejemplo práctico<span></span></a></li>
+</ul></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -328,7 +358,7 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="eph2" class="section level2 hasAnchor" number="2.2">
 <h2><span class="header-section-number">2.2</span> Comenzando a utilizar la EPH<a href="eph2.html#eph2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Existen diversas formas de descargar y abrir las bases de micro-datos de la EPH desde <strong><code>R</code></strong>. En primer lugar, a partir de la descarga manual desde la web de <a href="https://www.indec.gob.ar/indec/web/Institucional-Indec-BasesDeDatos" target="_blank">INDEC</a>. Este método permite acceder a todas las bases de la EPH disponibles oficialmente, desde 1974 a la actualidad. En segundo lugar, de acuerdo a algún programa. En este capítulo revisaremos el uso del paquete <a href="https://github.com/holatam/eph" target="_blank">eph</a> <span class="citation">(<a href="aprox.html#ref-kozlowski2020" role="doc-biblioref">Kozlowski et al., 2020</a>)</span>, que nos simplifica el trabajo de acceso a micro-datos, así como el armado de <em>pools</em> de datos. Temporalmente, su única limitación es que sólo podemos descargar las bases a partir de la primera onda de 1996. Utilizaremos las siguientes librerías de <strong><code>R</code></strong>:</p>
+<p>Existen diversas formas de descargar y abrir las bases de micro-datos de la EPH desde <strong><code>R</code></strong>. En primer lugar, a partir de la descarga manual desde la web de <a href="https://www.indec.gob.ar/indec/web/Institucional-Indec-BasesDeDatos" target="_blank">INDEC</a>. Este método permite acceder a todas las bases de la EPH disponibles oficialmente, desde 1974 a la actualidad. En segundo lugar, de acuerdo a algún programa. En este capítulo revisaremos el uso del paquete <a href="https://github.com/holatam/eph" target="_blank">eph</a> <span class="citation">(<a href="espacial.html#ref-kozlowski2020" role="doc-biblioref">Kozlowski et al., 2020</a>)</span>, que nos simplifica el trabajo de acceso a micro-datos, así como el armado de <em>pools</em> de datos. Temporalmente, su única limitación es que sólo podemos descargar las bases a partir de la primera onda de 1996. Utilizaremos las siguientes librerías de <strong><code>R</code></strong>:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="eph2.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb1-2"><a href="eph2.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(eph)</span>
 <span id="cb1-3"><a href="eph2.html#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(haven)</span>
