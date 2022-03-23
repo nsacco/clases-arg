@@ -8,11 +8,11 @@
 language:
   ui:
     chapter_name: "Capítulo "
-#  label:
-#    fig: 'Gráfico '
-#    tab: 'Tabla '
-#    eq: 'Ecuación '
-#    refs : 'Referencias'
+  label:
+    fig: 'Gráfico '
+    tab: 'Tabla '
+    eq: 'Ecuación '
+    refs : 'Referencias'
 
 rmd_subdir: ["caps"]
 

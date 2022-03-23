@@ -10,9 +10,8 @@ link-citations: yes
 
 github-repo: nsacco/libroESA
 description: "Manual introductorio para el estudio de la estructura social en Argentina"
-
 site: bookdown::bookdown_site
-knit: "bookdown::render_book"
+#knit: "bookdown::render_book"
 always_allow_html: true
 ---
 

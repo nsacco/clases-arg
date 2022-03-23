@@ -13,10 +13,8 @@ Cada ejercicio da solución a un problema en particular que sin duda, dan una de
 ```{r include=FALSE}
 library(tidyverse)
 library(kableExtra)
-options(scipen=999)
+options(scipen = 999)
 ```
-
-<!-- No me copa mucho este capítulo, quizås lo podemos sacar directamente, es bastante aburrido para mí actual gusto -->
 
 Este capítulo propone acercamiento introductorio al tema de las clases sociales, a través del abordaje de algunos conceptos básicos del estudio de la desigualdad social y de la estructura social, las tendencias actuales y cómo ésta subdisciplina ha evolucionado a través del tiempo.
 
@@ -54,7 +52,7 @@ Al situar a la lucha de clases como motor de la historia, Marx concedía al conc
 
 La premisa que considera a las clases como la variable explicativa del fenómeno de las desigualdades sociales tuvo en Marx el eje sobre el cual giró su discusión teórica, incluso hasta el presente. Su obra fue puesta en "diálogo" por Weber, quien criticó el principio de propiedad determinante de la clase social. Weber [-@Weber2002, pp. 682-694] propuso la existencia de una multiplicidad de factores que van más allá de la propiedad: estatus, relaciones de mercado, habilidades, prestigio, extendiendo de esta manera la dimensión "única" de clase. Considerando las ideas de Weber una extensión de las de Marx, a pesar de sus diferencias, el contraste entre estos dos autores puede, a veces, parecer exagerado. Weber no dejó de problematizar la visión materialista de la historia en Marx, ampliando esa visión "económica" y elaborando una propuesta multidimensional para el análisis del fenómeno de la estratificación social, distinguiendo a las clases, los estamentos y los partidos, donde la acción social predomina sobre una estructura objetiva, como el modo de producción [@Burris1995, p. 130].
 
-Para Kerbo [-@Kerbo2003] —quien distinguió de las teorías de la estratificación social las "teorías del conflicto" y "teorías funcionales de la sociedad" (resumidas en el Diagrama 1)— en lugar "de los supuestos críticos del conflicto en Marx, en Weber encontramos un conjunto de supuestos paradigmáticos que hemos denominado no críticos del conflicto" (p. 95). Si bien "Weber creía que el conflicto estaba más extendido y se encontraba en el núcleo mismo de la organización social compleja, no albergaba, a diferencia de Marx, la esperanza de que este conflicto humano se pudiera eliminar por completo algún día" (p. 107).
+Para Kerbo [-@Kerbo2003] —quien distinguió de las teorías de la estratificación social las "teorías del conflicto" y "teorías funcionales de la sociedad" (resumidas en la Tabla  \@ref(tab:textkerbo) —en lugar "de los supuestos críticos del conflicto en Marx, en Weber encontramos un conjunto de supuestos paradigmáticos que hemos denominado no críticos del conflicto" (p. 95). Si bien "Weber creía que el conflicto estaba más extendido y se encontraba en el núcleo mismo de la organización social compleja, no albergaba, a diferencia de Marx, la esperanza de que este conflicto humano se pudiera eliminar por completo algún día" (p. 107).
 
 ```{r, message=FALSE, warning=FALSE, echo=FALSE}
 text_kerbo <- data.frame(
@@ -65,19 +63,18 @@ text_kerbo <- data.frame(
 )
 ```
 
+<!--
 ```{r, message=FALSE, warning=FALSE, echo=FALSE, eval = knitr::is_html_output()}
 kable(text_kerbo, 
-			col.names = c("", "", "Críticos", "No críticos"),
-			caption = "Tipología de paradigmas de la estratificación social") %>%
+			col.names = c("", "", "Críticos", "No críticos"),	caption = "Tipología de paradigmas de la estratificación social") %>%
 	kable_styling("striped") %>% 
 	add_header_above(c(" " = 1, " " = 1, "Supuestos valorativos" = 2)) %>% 
 	collapse_rows(columns = 1, valign = "middle") %>% 
 	footnote(general = "Kerbo (2003, p. 83)", general_title = "Fuente: ", footnote_as_chunk = T)
 ```
+-->
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE, eval = !knitr::is_html_output()}
-library(flextable)
-
+```{r textkerbo, echo=FALSE, warning=FALSE, message=FALSE}
 text_kerbo %>% 
   flextable() %>% 
   set_table_properties(width = 1, layout = "autofit") %>% 

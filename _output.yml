@@ -11,28 +11,28 @@ bookdown::gitbook:
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
     download: ["pdf", "epub"]
 
-bookdown::pdf_book:
-  includes:
-    in_header: preamble.tex
-  latex_engine: xelatex
-  citation_package: natbib
+bookdown::pdf_document2:
+  fig_caption: yes
+#  includes:
+#    in_header: preamble.tex
+#  latex_engine: xelatex
+#  citation_package: natbib
   keep_tex: yes
-
-
 
 bookdown::html_document2:
   keep_md: true
   fig_caption: TRUE
-#  pandoc_args: [
-#      "--number-offset=2"]
+
 
 bookdown::word_document2:
   fig_caption: yes
-  reference_docx: "inputs/plantilla_eduntref.docx"
+  reference_docx: "plantilla_eduntref.docx"
   toc: yes
-
+  toc-title: "INDICE"
 
 #bookdown::pdf_book:
 #  latex_engine: xelatex
 
+word_document:
+  reference_docx: "plantilla_eduntref.docx"
 

@@ -10,7 +10,8 @@ usethis::use_blank_slate()
 if (!require(pacman)) {install.packages("pacman", dependencies = T)}; library(pacman)
 
 # Load / Install Required Packages
-p_load(tidyverse, bookdown, foreign, devtools, ggplot2, flextable, devtools, grDevices, formatR, rmarkdown, kableExtra, eph, vembedr, modeest, summarytools, extrafont, showtext, jtools, ggthemes)
+p_load(tidyverse, bookdown, foreign, devtools, ggplot2, flextable, devtools, grDevices, formatR, rmarkdown, kableExtra, eph, vembedr, modeest, summarytools, extrafont, showtext, jtools, ggthemes, knitr)
 
 devtools::install_github("DiogoFerrari/occupar")
 
+rmarkdown::render_site(output_format = 'bookdown::word_document2', encoding = 'UTF-8')
