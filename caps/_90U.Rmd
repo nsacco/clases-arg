@@ -248,7 +248,7 @@ guardarla en la carpeta de "imágenes".
 
 La cantidad de símbolos de numeral (#) indica el nivel del título o subtítulo que se desea editar. Es necesario dejar un espacio entre el numeral y el texto que se escribe para obtener los títulos en negrita y sin el símbolo. Se debe utilizar el primer nivel de títulos en cada documento `R Markdown`. Se prueban los niveles diferentes en un documento de `R Markdown` de la siguiente manera:
 
-```{r eval=FALSE}
+```{r eval=FALSE, echo=TRUE}
  # Título nivel 1
  ## Título nivel 2
  ### Título nivel 3
@@ -276,7 +276,7 @@ en una lista. Espaciar entre el símbolo y el contenido de la lista. Además hay
 
 * Para incluir algún formato de texto, se deben utilizar los siguientes símbolos al inicio y al final de cada palabra o grupo de palabras que se desea editar:
 
-```{r eval=FALSE}
+```{r eval=FALSE, echo=TRUE}
 *Itálicas*
 	
 **Resaltado**
@@ -291,7 +291,7 @@ Texto ~subscript~
 
 * Las imágenes son fáciles de agregar, siguiendo las líneas de código siguiente:
 
-```{r eval=FALSE, message=FALSE, warning=FALSE}
+```{r eval=FALSE, message=FALSE, warning=FALSE, echo=TRUE}
 ![Caption for image](filepath_for_image)
 ```
 
@@ -300,7 +300,7 @@ Texto ~subscript~
 * Se puede colocar el epígrafe de la foto del siguiente modo:
 
 
-```{r eval=FALSE, message=FALSE, warning=FALSE}
+```{r eval=FALSE, message=FALSE, warning=FALSE, echo=TRUE}
 ![Figura 1: Mi mascota hermosa: Nina](imagenes/nina.jpeg)
 ```
 
@@ -309,7 +309,7 @@ Texto ~subscript~
 
 * También es posible seleccionar el tamaño de la imagen.
 
-```{r eval=FALSE, message=FALSE, warning=FALSE}
+```{r eval=FALSE, message=FALSE, warning=FALSE, echo=TRUE}
 ![Nina](imagenes/nina.jpeg){width=50%}
 ```
 
@@ -319,7 +319,7 @@ Texto ~subscript~
 
 * Para incluir un enlace se debe:
 
-```{r eval=FALSE}
+```{r eval=FALSE, echo=TRUE}
 Incluir entre corchetes [lo que aparecerá] en el texto y, seguido, entre paréntesis (el enlace que redirige al sitio que se seleccione).
 ```
 
@@ -329,11 +329,11 @@ Incluir entre corchetes [lo que aparecerá] en el texto y, seguido, entre parén
 
 - A la hora de escribir en este lenguaje de programación, hay que conocer algunas funcionalidades que permiten resolver acciones claves y responder a dudas de manera simple. Para obtener información sobre una función concreta, se puede utilizar alguna de las siguientes funciones:
 
-```{r setup1, include=TRUE, eval=FALSE}
+```{r setup1, include=TRUE, eval=FALSE, echo=TRUE}
 help(solve)
 ```
 
-```{r setup2, include=TRUE, eval=FALSE}
+```{r setup2, include=TRUE, eval=FALSE, echo=TRUE}
 ?solve
 ```
 
@@ -345,7 +345,7 @@ help(solve)
 
 - Para eliminar objetos puede utilizar la orden “rm”, por ejemplo: 
 
-```{r rm, include=TRUE, eval=FALSE}
+```{r rm, include=TRUE, eval=FALSE, echo=TRUE}
 rm(x, y, z, cabello, perro, bonito)
 ```
 
@@ -355,53 +355,53 @@ rm(x, y, z, cabello, perro, bonito)
 
 Las entidades que crea **`R`** durante una sesión de trabajo se denominan *objetos*. Estos pueden ser números, cadenas, vectores, matrices, funciones o estructuras más generales construidas a partir de estos elementos. Estos objetos se guardan por nombre y se almacenan en un área dedicada llamada "espacio de trabajo" o *environment*. En cualquier momento, es posible verificar los objetos disponibles en el espacio de trabajo usando el comando:
 
-```{r ls, include=TRUE, eval=FALSE}
+```{r ls, include=TRUE, eval=FALSE, echo=TRUE}
 ls()
 ```
 
 Para eliminar un objeto del espacio de trabajo, se usa la función `rm()`. La función espera el nombre del objeto que se desea eliminar como argumento. Suponiendo que hay un objeto llamado "cosa", puede eliminarse con el comando:
 
-```{r rm2, include=TRUE, eval=FALSE}
+```{r rm2, include=TRUE, eval=FALSE, echo=TRUE}
 rm(cosa)
 ```
 
 Al iniciar una nueva sesión de trabajo, se recomienda retirar los objetos existentes en el área de trabajo. Un comando útil para este propósito es:
 
-```{r rm3, include=TRUE}
+```{r rm3, include=TRUE, echo=TRUE}
 rm (list = ls()) 
 ```
 
 Se puede almacenar el espacio de trabajo con la función:
 
-```{r save, include=TRUE, eval=FALSE}
+```{r save, include=TRUE, eval=FALSE, echo=TRUE}
 save.image ()
 ```
 
 Esto guarda todos los objetos contenidos en el espacio de trabajo en un archivo binario ".Rdata". La opción predeterminada se puede cambiar especificando en la llamada a `save.image()` el nombre, por ejemplo, "myfile.Rdata", que desea darle al archivo.
 
-```{r save2, include=TRUE, eval=FALSE}
+```{r save2, include=TRUE, eval=FALSE, echo=TRUE}
 save.image (archive = "myfile.Rdata")
 ```
 
 El espacio de trabajo original se puede restaurar con la ayuda de la función:
 
-```{r sload, include=TRUE, eval=FALSE}
+```{r sload, include=TRUE, eval=FALSE, echo=TRUE}
 load(".RData")
 ```
 
 o, si se ha optado por un nombre diferente al predeterminado:
 
-```{r load2, include=TRUE, eval=FALSE}
+```{r load2, include=TRUE, eval=FALSE, echo=TRUE}
 load("ilmiofile.Rdata")
 ```
 
 Las funciones:
 
-```{r save3, include=TRUE, eval=FALSE}
+```{r save3, include=TRUE, eval=FALSE, echo=TRUE}
 savehistory()
 ```
 
-```{r load3, include=TRUE, eval=FALSE}
+```{r load3, include=TRUE, eval=FALSE, echo=TRUE}
 loadhistory()
 ```
 
@@ -411,31 +411,31 @@ Finalmente, la función `setwd()` permite cambiar la carpeta de trabajo. Es una 
 
 Los comandos básicos constan de expresiones o asignaciones. Si el comando es una expresión, **`R`** devuelve el resultado de la evaluación, como se muestra en los siguientes ejemplos:
 
-```{r setup6, include=TRUE}
+```{r setup6, include=TRUE, echo=TRUE}
 12 > 10
 ```
 
-```{r setup7, include=TRUE}
+```{r setup7, include=TRUE, echo=TRUE}
 1 + 2 + 3
 ```
 
-```{r setup8, include=TRUE}
+```{r setup8, include=TRUE, echo=TRUE}
 2 + 3 * 4
 ```
 
-```{r setup9, include=TRUE}
+```{r setup9, include=TRUE, echo=TRUE}
 3/2 + 1
 ```
 
-```{r setup10, include=TRUE}
+```{r setup10, include=TRUE, echo=TRUE}
 2 + (3 * 4)
 ```
 
-```{r setup11, include=TRUE}
+```{r setup11, include=TRUE, echo=TRUE}
 (2 + 3) * 4
 ```
 
-```{r setup12, include=TRUE}
+```{r setup12, include=TRUE, echo=TRUE}
 4 * 3^3
 ```
 
@@ -451,47 +451,47 @@ Todas las funciones matemáticas que normalmente se encuentran en una calculador
 
 - `exp,log` ---> exponenciales y logaritmos naturales  
 
-```{r setup13, include=TRUE}
+```{r setup13, include=TRUE, echo=TRUE}
 sqrt(2)
 ```
 
-```{r setup14, include=TRUE}
+```{r setup14, include=TRUE, echo=TRUE}
 sin(3.14159)
 ```
 
-```{r setup15, include=TRUE}
+```{r setup15, include=TRUE, echo=TRUE}
 sin(pi)
 ```
 
-```{r setup16, include=TRUE}
+```{r setup16, include=TRUE, echo=TRUE}
 sqrt(sin(45 * pi/180))
 ```
 
 Una asignación evalúa una expresión guardando el resultado en un objeto con un nombre. La asignación se realiza mediante el símbolo `<-` o el símbolo `=`. También se puede asignar de izquierda a derecha con el símbolo `->`. El resultado de una asignación no se muestra automáticamente. El usuario puede verlo recordando el nombre del objeto. Los objetos creados a través de una asignación se pueden reutilizar en expresiones y asignaciones posteriores, como se muestra en los siguientes ejemplos:
 
-```{r setup17, include=TRUE}
+```{r setup17, include=TRUE, echo=TRUE}
 x <- sqrt(2) 
 x
 ```
 
-```{r setup18, include=TRUE}
+```{r setup18, include=TRUE, echo=TRUE}
 x^3
 ```
 
-```{r setup19, include=TRUE}
+```{r setup19, include=TRUE, echo=TRUE}
 y <- x^3
 ```
 
-```{r setup20, include=TRUE}
+```{r setup20, include=TRUE, echo=TRUE}
 x <- 10 
 x > 10
 ```
 
-```{r setup21, include=TRUE}
+```{r setup21, include=TRUE, echo=TRUE}
 x <= 10
 ```
 
-```{r setup22, include=TRUE}
+```{r setup22, include=TRUE, echo=TRUE}
 tf <- x > 10  
 tf
 ```
@@ -500,7 +500,7 @@ tf
 
 Para asignarle un valor a una variable, no es necesario utilizar espacios ni símbolos, excepto `#` `.` o `_` en el nombre de la variable:
 
-```{r vector, include=TRUE}
+```{r vector, include=TRUE, echo=TRUE}
 mi_valor <- 30 # número
 un_valor <- "vaca" # caracteres
 el_valor <- FALSE # booleano
@@ -508,21 +508,21 @@ el_valor <- FALSE # booleano
 
 Para crear un vector, se usa la función `c()`:
 
-```{r setup23, include=TRUE}
+```{r setup23, include=TRUE, echo=TRUE}
 x <- c(2, 3, 5, 7, 11)
 x
 ```
 
 El vector puede contener texto o valores numéricos:
 
-```{r vector2, include=TRUE}
+```{r vector2, include=TRUE, echo=TRUE}
 mi_vector <- c(6,12,80,120)
 mi_vector <- c("María","Esteban","Juan")
 ```
 
 Si el vector contiene muchos elementos, puede ser más conveniente usar la función `scan()`, que permite ingresarlos uno por uno a través de la consola:
 
-```{r vector3, include=TRUE, eval=FALSE}
+```{r vector3, include=TRUE, eval=FALSE, echo=TRUE}
 x <- scan()
 1: 1
 2: 6
@@ -533,82 +533,82 @@ x <- scan()
 
 Para crear una secuencia de números, puede usar el comando `a:b`:
 
-```{r setup26, include=TRUE}
+```{r setup26, include=TRUE, echo=TRUE}
 xx <- 1:10
 
 xx
 ```
 
-```{r setup27, include=TRUE}
+```{r setup27, include=TRUE, echo=TRUE}
 xx <- 100:1 
 xx
 ```
 
 También se pueden crear vectores que contienen elementos repetidos:
 
-```{r setup28, include=TRUE}
+```{r setup28, include=TRUE, echo=TRUE}
 rep(2, times = 3)
 ```
 
-```{r setup29, include=TRUE}
+```{r setup29, include=TRUE, echo=TRUE}
 rep(2, 3)
 ```
 
-```{r setup30, include=TRUE}
+```{r setup30, include=TRUE, echo=TRUE}
 a <-  c(rep(2, 3), 4, 5, rep(1, 5)) 
 a
 ```
  
 Las operaciones aritméticas y lógicas básicas que se aplican a los escalares se pueden aplicar a los vectores:
  
-```{r setup31, include=TRUE}
+```{r setup31, include=TRUE, echo=TRUE}
 x <- 1:10 
 x*2
 ```
 
 Los elementos de un vector se pueden extraer utilizando corchetes [] e indicando la posición del elemento a extraer entre corchetes:
 
-```{r setup32, include=TRUE}
+```{r setup32, include=TRUE, echo=TRUE}
 xx[7] 
 ```
 
 Incluso se pueden extraer más elementos al mismo tiempo:
 
-```{r setup33, include=TRUE}
+```{r setup33, include=TRUE, echo=TRUE}
 xx[c(2, 3, 5, 7, 11)]
 ```
 
-```{r setup34, include=TRUE}
+```{r setup34, include=TRUE, echo=TRUE}
 xx[85:91]
 ```
 
 También se pueden guardar en nuevos vectores:
 
-```{r setup35, include=TRUE}
+```{r setup35, include=TRUE, echo=TRUE}
 yy <- xx[c(1, 2, 4, 8, 16, 32, 64)] 
 yy
 ```
 
 Si los indicadores entre corchetes van precedidos de un signo negativo, los elementos correspondientes se eliminan del vector:
 
-```{r setup36, include=TRUE}
+```{r setup36, include=TRUE, echo=TRUE}
 x <- c(1, 2, 4, 8, 16, 32) 
 x
 ```
 
-```{r setup37, include=TRUE}
+```{r setup37, include=TRUE, echo=TRUE}
 x[-4]
 ```
 
 Al ingresar una variable a la consola, esta mostrará su contenido:
 
-```{r, include=TRUE}
+```{r, include=TRUE, echo=TRUE}
 mi_vector
 ```
 
 La función `length()` sirve para obtener el número de elementos en un vector o en una lista de objetos:
 
-```{r vector4, include=TRUE}
+```{r vector4, include=TRUE, echo=TRUE}
 length(mi_vector)
 ```
 
@@ -618,19 +618,19 @@ Una variable indexada (*array*) es una colección de datos, por ejemplo numéric
 
 Las matrices se crean utilizando la función `matrix()`. En su forma más simple, el uso de la función implica especificar un vector que contiene los elementos de la matriz y el número de filas o columnas de la matriz.
 
-```{r setup38, include=TRUE}
+```{r setup38, include=TRUE, echo=TRUE}
 x <- matrix(c(2, 3, 5, 7, 11, 13), nrow = 3) 
 x
 ```
 
-```{r setup39, include=TRUE}
+```{r setup39, include=TRUE, echo=TRUE}
  y <- matrix(c(2, 3, 5, 7, 11, 13), ncol = 2) 
  y
 ```
 
 Las *array* pueden verse como matrices multidimensionales. Se crean usando la función `array()`. En su forma más simple, el uso de la función implica especificar un vector que contiene los elementos de la matriz y el número de elementos para cada dimensión usando el argumento `dim`.
 
-```{r array, include=TRUE}
+```{r array, include=TRUE, echo=TRUE}
 w <- 1:20
 ay <- array(w, dim = c(5, 2, 2))
 
@@ -650,7 +650,7 @@ Hay que tener en cuenta que, de forma predeterminada, las matrices se forman ins
 
 El contenido del archivo se puede adquirir y asignar a una matriz de 6 × 5 con los comandos:
 
-```{r scan2, include=TRUE, eval = FALSE}
+```{r scan2, include=TRUE, eval = FALSE, echo=TRUE}
 x2 <- scan("matdata", sep = ",")
 
 mx <- matrix(x2, ncol = 5, byrow = TRUE)
@@ -661,40 +661,40 @@ El argumento `byrow = TRUE` especifica que el contenido debe adquirirse por fila
 
 La función `dim()` devuelve el tamaño (número de filas y número de columnas) de la matriz indicada como argumento:
 
-```{r dim, include=TRUE}
+```{r dim, include=TRUE, echo=TRUE}
 dim (x)
 ```
 
 En cuanto a los vectores, los elementos de una matriz se pueden extraer utilizando corchetes `[]`. Para extraer un elemento de una matriz, se debe especificar su posición de fila y columna:
 
-```{r setup42, include=TRUE}
+```{r setup42, include=TRUE, echo=TRUE}
 x[2, 1]
 ```
 
-```{r setup43, include=TRUE}
+```{r setup43, include=TRUE, echo=TRUE}
 x[2, 2]
 ```
 
 Para extraer una fila o columna completa, simplemente hay que especificar su posición:
 
-```{r setup44, include=TRUE}
+```{r setup44, include=TRUE, echo=TRUE}
 x[, 1]
 ```
 
-```{r setup45, include=TRUE}
+```{r setup45, include=TRUE, echo=TRUE}
 x[3, ]
 ```
 
 Se pueden extraer subconjuntos de filas y/o columnas:
 
-```{r setup46, include=TRUE}
+```{r setup46, include=TRUE, echo=TRUE}
 x <- matrix(1:16, ncol = 4) 
 	x
 ```
 
 También se puede crear una matriz compuesta por números usando la función `matrix()`:
 
-```{r matrix, include=TRUE}
+```{r matrix, include=TRUE, echo=TRUE}
 mi_matriz <- matrix(data = 1:10, # qué se incuye en la matriz
                     ncol = 5, # número de columnas
                     nrow = 20, # número de filas
@@ -705,7 +705,7 @@ mi_matriz
 
 Se puede indexar elementos de matrices en múltiples modos:
 
-```{r matrix2, include=TRUE}
+```{r matrix2, include=TRUE, echo=TRUE}
 mi_matriz[1,] # las filas van seguidas de una coma. Primero filas y luego columnas[row,colum]
 mi_matriz[,5] # columnas detrás de la coma
 mi_matriz[3,3]
@@ -714,14 +714,14 @@ mi_matriz[3,3]
 
 Se pueden crear nuevos vectores a partir de secciones de matrices:
 
-```{r matrix3, include=TRUE}
+```{r matrix3, include=TRUE, echo=TRUE}
 val <- mi_matriz[3,3]
 val <- mi_matriz[,3]
 ```
 
 Hay algunas funciones útiles que se puede aprender para conocer más a fondo la matriz:
 
-```{r matrix4, include=TRUE}
+```{r matrix4, include=TRUE, echo=TRUE}
 sum(mi_matriz) # La suma de los elementos de la matriz
 nrow(mi_matriz) # El número de filas de la matriz
 ncol(mi_matriz) # El número de columnas de la matriz 
@@ -730,7 +730,7 @@ ncol(mi_matriz) # El número de columnas de la matriz
 
 **`R`** tiene un conjunto de tipos de datos suficientemente diversificado para ser adecuado en la mayor cantidad de análisis. Los tipos que se encuentran con mayor frecuencia son lógicos (con los modos VERDADERO y FALSO), de caracteres (cadenas de caracteres) y numéricos. Las funciones con el prefijo `is.type.of.data()` o la función `class()` verifican a qué tipo de datos pertenece el objeto especificado como argumento.
 
-```{r setup47, include=TRUE}
+```{r setup47, include=TRUE, echo=TRUE}
 x1 <- 1:3
 is.logical(x1)
 class(x1)
@@ -738,24 +738,24 @@ class(x1)
 
 Para combinar objetos que no comparten la misma estructura, como cadenas de caracteres y vectores, es necesario utilizar una **lista**. Este es un tipo más general de estructura de vectores y matrices:
 
-```{r lista, include=TRUE}
+```{r lista, include=TRUE, echo=TRUE}
 lista1 <- list(x,y)  
 lista1
 ```
 
 Una de las posibles formas de acceder a la información de una lista es mediante corchetes dobles:
 
-```{r lista2, include=TRUE}
+```{r lista2, include=TRUE, echo=TRUE}
 lista1[[1]]
 ```
 
-```{r lista3, include=TRUE}
+```{r lista3, include=TRUE, echo=TRUE}
 lista1[[2]]
 ```
 
 Es posible, en la fase de creación de una lista, asignar un nombre a cada uno de sus componentes. Si los componentes de una lista tienen un nombre, se puede acceder a ellos, y posteriormente a los elementos que los componen, mediante el símbolo `$`.
 
-```{r lista4, include=TRUE}
+```{r lista4, include=TRUE, echo=TRUE}
 lista2 <- list(comp1 = x, comp2 = y)
 lista2
 
@@ -773,7 +773,7 @@ Probablemente, el más relevante es *NA*, que indica un valor faltante. No es ra
 
 La forma más básica de hacer un filtro (*subsetting*) es extraer un grupo de elementos de un vector, por ejemplo:
 
-```{r sub1, include=TRUE}
+```{r sub1, include=TRUE, echo=TRUE}
 mi_vector <- 1:10
 mi_vector[3:5] # extraer elementos 3 a 5
 mi_vector[c(1,2,9)] # extraer ciertos elementos
@@ -784,13 +784,13 @@ new_vector
 
 También se puede usar la función `c()` para quitar algunos `subsets` (subsecciones) de la matriz:
 
-```{r sub2, include=TRUE}
+```{r sub2, include=TRUE, echo=TRUE}
 mi_matriz[c(1:3,5),c(2,4)]
 ```
 
 Nótese la diferencia entre [[]] y [] en las listas:
 
-```{r sub3, include=TRUE}
+```{r sub3, include=TRUE, echo=TRUE}
 nueva_lista <- lista1[1] # devuelve la lista
 nuevo_valor <-  lista1[[1]] # devuelve un objeto que estaba en la lista
 
@@ -800,7 +800,7 @@ nuevo_valor
 
 Se debe usar `[]` para el `subset` de una lista:
 
-```{r sub4, include=TRUE}
+```{r sub4, include=TRUE, echo=TRUE}
 nueva_lista <- lista1[1:2]
 ```
 
@@ -812,7 +812,7 @@ Cuando la intención es hacer una investigación utilizando datos secundarios, l
 
 Como ejemplo, se construyen algunos datos...
 
-```{r dataframe, include=TRUE}
+```{r dataframe, include=TRUE, echo=TRUE}
 numero_estudiante <- c(1:10)
 
 notas <- c("A","B","C","A","C","F","D","B","B","A")
@@ -826,7 +826,7 @@ Ahora se pueden unir los vectores que se crearon antes para hacer un *data frame
 
 Para evitar que las notas (en formato de texto) se conviertan en factores de variables, es decir, que se transformen en una variable categórica de **`R`**, se debe implementar el argumento `stringsAsFactors = FALSE`. 
 
-```{r dataframe2, include=TRUE}
+```{r dataframe2, include=TRUE, echo=TRUE}
 mis_datos <- data.frame(numero_estudiante,
                       notas,
                       clase,
@@ -836,20 +836,20 @@ mis_datos <- data.frame(numero_estudiante,
 
 También es posible designar el nombre de las columnas:
 
-```{r dataframe3, include=TRUE}
+```{r dataframe3, include=TRUE, echo=TRUE}
 colnames(mis_datos) <- c("numero_estudiante", "notas","clase","comida_gratis")
 ```
 
 Al revisar cómo queda el `data.frame`:
 
-```{r dataframe4, include=TRUE}
+```{r dataframe4, include=TRUE, echo=TRUE}
 mis_datos
 ```
 
 
 La indexación funciona de la misma manera para las matrices, pero con un pequeño cambio:
 
-```{r dataframe5, include=TRUE}
+```{r dataframe5, include=TRUE, echo=TRUE}
 mis_datos[,1]
 mis_datos[2,4]
 mis_datos$numero_estudiante # $ Indexación de columnas
@@ -860,13 +860,13 @@ mis_datos$notas[3] # Tratar $ Indexación de columnas como vectores
 
 La función `which()` permite identificar observaciones que cumplen ciertos criterios, que el usuario dispone. Usando el operador `$`, se habilita a acceder a una variable del `data.frame`, según su nombre:
   
-```{r which, include=TRUE}
+```{r which, include=TRUE, echo=TRUE}
 which(mis_datos$notas == "A")
 ```
 
 De esta forma, se puede crear un dataset que sólo incluya a los estudiantes que obtuvieron 'A' o 'B' como notas, guardando los índices de sus notas, utilizando para extraerlos de los datos totales:
   
-```{r which2, include=TRUE}
+```{r which2, include=TRUE, echo=TRUE}
 A_estudiantes <- which(mis_datos$notas == "A")
 B_estudiantes <- which(mis_datos$notas == "B")
 estudiantes_dataset_reducido <- c(A_estudiantes, B_estudiantes)
@@ -874,14 +874,14 @@ estudiantes_dataset_reducido <- c(A_estudiantes, B_estudiantes)
 
 Luego se selecciona el vector para indexar únicamente algunas filas: para ello, se puede extraerlas y guardarlas como objetos. Nota: si se indexa por [fila, columna] y queda un campo vacío, se toma la fila o columna entera.
 
-```{r which3, include=TRUE}
+```{r which3, include=TRUE, echo=TRUE}
 datos_reducidos <- mis_datos[estudiantes_dataset_reducido,]
 datos_reducidos
 ```
 
 Otra manera sencilla de aplicar un filtro es a través de la función `subset()`:
 
-```{r subset5, include=TRUE}
+```{r subset5, include=TRUE, echo=TRUE}
 seleccion_data2 <- subset(mis_datos, notas == "A" | notas == "B")
 seleccion_data2
 ```
@@ -890,13 +890,13 @@ seleccion_data2
 
 Para crear una lista vacía, se utiliza la función `vector()`:
 
-```{r listas10, include=TRUE}
+```{r listas10, include=TRUE, echo=TRUE}
 mi_lista <- vector(mode = "list", length = 10)
 ```
 
 También se puede crear una lista a partir de objetos. Cada entrada puede ser llamada una lista, igual que se hace con un `data.frame`:
 
-```{r listas11, include=TRUE}
+```{r listas11, include=TRUE, echo=TRUE}
 mi_lista <- list(num = 10,
                 animal = "vaca",
                 vec = c(1:10),
@@ -906,13 +906,13 @@ mi_lista <- list(num = 10,
 
 Otra opción es crear una lista vacía y luego llenarla usando el operador `$`:
 
-```{r listas12, include=TRUE}
+```{r listas12, include=TRUE, echo=TRUE}
 mi_lista <- list()
 ```
 
 Una vez creada, se llena de datos:
 
-```{r listas13, include=TRUE}
+```{r listas13, include=TRUE, echo=TRUE}
 mi_lista$num <- 10
 mi_lista$dat <- mis_datos
 mi_lista$cancion_favo <- "Malamente"
@@ -920,13 +920,13 @@ mi_lista$cancion_favo <- "Malamente"
 
 Además, se pueden pegar listas al final de otras listas, usando la función `append()`:
 
-```{r listas14, include=TRUE}
+```{r listas14, include=TRUE, echo=TRUE}
 mi_lista <- append(mi_lista, list(list(27,14,"perro")))
 ```
 
 Se observa el contenido de la lista:
 
-```{r listas15, include=TRUE}
+```{r listas15, include=TRUE, echo=TRUE}
 print(mi_lista)
 ```
 
@@ -946,7 +946,7 @@ El objetivo es visualizar estos datos en la ventana del entorno de `RStudio`. Pa
 
 2. Ir a la consola y ejecutar el siguiente comando:
 
-```{r excel, eval=FALSE}
+```{r excel, eval=FALSE, echo=TRUE}
 install.packages("readxl")
 ```
 
@@ -954,7 +954,7 @@ Este paquete permite trabajar con archivos de **Excel** específicamente. En cas
 
 3. Abrir la librería del paquete recientemente instalado, ejecutando el siguiente comando, nuevamente en la consola:
 
-```{r excel2}
+```{r excel2, echo=TRUE}
 library(readxl)
 ```
 
@@ -966,7 +966,7 @@ Es posible obtener esta ruta/path fácilmente yendo a la carpeta donde este se e
 
 Luego, simplemente hay que denominar al objeto "encuesta", en este caso. Seguido, colocar una función `read_excel` y entre paréntesis y comillas, pegar la ruta **propia** que dará acceso al archivo seleccionado. La línea de código es la siguiente:
 
-```{r excel3}
+```{r excel3, echo=TRUE}
 encuesta <- read_excel("bases/estaciones_tren.xls")
 ```
 
@@ -974,7 +974,7 @@ encuesta <- read_excel("bases/estaciones_tren.xls")
 
 Para comprobar que el trabajo se haya realizado bien, se puede "llamar" al objeto "encuesta" de la siguiente manera, mostrando solo los primeros 6 casos:
 
-```{r excel4}
+```{r excel4, echo=TRUE}
 head(encuesta)
 ```
 

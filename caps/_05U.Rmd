@@ -649,7 +649,7 @@ torrado3 %>%
 ## Operacionalización paso a paso {#operacion1}
 
 Paquetes que utilizaremos en este subcapítulo:
-```{r, message=FALSE, warning=FALSE}
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
 library(tidyverse)
 library(car)
 library(summarytools)
@@ -729,7 +729,7 @@ En este caso, seguiremos utilizando la base de la **EPH** del segundo trimestre 
 
 En primer lugar vamos a descomponer los dígitos del **CNO**, ya que la variable _PP04D_COD_ será la que nos proporcionará la información ocupacional. La descomposición la realizaremos fundamentalmente para trabajar separadamente con el _carácter ocupacional_ y la _calificación de la tarea_. Para ello utilizaremos la función _str_sub_ del paquete ´stringr´ (se encuentra en el `tidyverse`), que nos permite "partir" variables de cadena según lo solicitemos. Por último convertimos dichas variables a tipo numérica, ya que realizaremos operaciones lógicas que así lo requieren.
 
-```{r, message=FALSE, warning=FALSE}
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
 eph_ind_215$cno12 <- str_sub(eph_ind_215$PP04D_COD, 1, 2) #señala que parta de la posición 1 hasta 2 del código
 eph_ind_215$cno3 <- str_sub(eph_ind_215$PP04D_COD, 3, 3) #señala que parta de la posición 3 a la 3 del código
 eph_ind_215$cno4 <- str_sub(eph_ind_215$PP04D_COD, 4, 4)
@@ -745,7 +745,7 @@ El segundo paso será crear una variable que permita agrupar a las ocupaciones d
 
 A través de la función *case_when* del paquete `dplyr` podremos asignarle un valor a la variable _go_ en la medida que se cumplan determinadas condiciones. Para quienes trabajan con **`SPSS`**, dicha función es similar al `IF`. Por otro lado, a través de la función `mutate` crearemos la nueva variable _go_.  
 
-```{r, message=FALSE, warning=FALSE, tidy=TRUE, tidy.opts=list(width.cutoff=60)}
+```{r, message=FALSE, warning=FALSE, tidy=TRUE, echo=TRUE, tidy.opts=list(width.cutoff=60)}
 eph_ind_215$go <- NA
 
 eph_ind_215 <- eph_ind_215 %>%  
@@ -808,7 +808,7 @@ eph_ind_215 <- eph_ind_215 %>%
 
 Para poder hacer un primer chequeo de la variable que creamos crearemos la misma en formato _factor_ y la etiquetaremos. Esto lo hacemos solo en términos ilustrativos, ya que no usaremos la varible posteriormente. Los casos "sin especificar" corresponden fundamentalmente a personas inactivas y desocupadas.  
 
-```{r, message=FALSE, warning=FALSE}
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
 eph_ind_215$go_f <- factor(eph_ind_215$go, labels=c("Empresarios, directores de empresas y funcionarios públicos superiores",
                                           "Propietarios de establecimientos",
                                           "Profesionales en función específica",
@@ -824,7 +824,7 @@ table(eph_ind_215$go_f)
 
 En tercer lugar, necesitaremos recodificar dos variables más: el _sector de actividad_ y el _tamaño del establecimiento_. En el primer caso, juntaremos la categoría "de otro tipo" al sector privado. De esta forma el valor 1 sera asumido por el "sector privado" y el 2 por el "sector público". Para ello utilizamos la función *recode* del paquete `car`, que es similar a la función *recode* en **`SPSS`**. Para el caso del tamaño del establecimiento separaremos a los casos que trabajan en establecimientos de menos de 5 trabajadores inclusive y aquellos de más de 5. Para ello nos basaremos tanto en la variable _PP04C_, que mide directamente el tamaño, y la variable _PP04C99_, que lo mide cuando la anterior variable no es respondida (revisar el diseño de registro de la **EPH** para mayor comprensión de como se preguntan dichos indicadores). El valor 1 representa las empresas de menos de 5 trabajadores inclusive y el valor 2 las de más de 5 trabajadores.  
 
-```{r, message=FALSE, warning=FALSE}
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
 eph_ind_215 <- eph_ind_215 %>% 
 	mutate(sector_act = car::recode(eph_ind_215$PP04A, "1=2; 2:3=1")) 
 
@@ -843,7 +843,7 @@ A modo de ejemplo vamos mostrar como llenaríamos los casilleros de la primera f
 
 A continuación, mostramos el código completo para la construcción del **CSO** desagregado.
 
-```{r, message=FALSE, warning=FALSE}
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
 eph_ind_215 <- eph_ind_215 %>% 
   mutate(cso_desag = case_when(go==1 & CAT_OCUP==1 & tamano==2 ~ 1, 
                                go==1 & CAT_OCUP==1 & tamano==1 ~ 13, 
@@ -968,7 +968,7 @@ Con el **CSO** desagregado construido, ya estamos en condiciones de colapsarlo y
 
 En el siguiente _script_ elaboramos la variable _cso_agg_ que guarda bajo formato numérico los grupos agregados del **CSO** y una variable de tipo factor (*css_agg_factor*) que nos permite trabajar con los grupos etiquetados. Finalmente, observaremos como se distribuye la población según el **CSO** agregado.  
 
-```{r, message=FALSE, warning=FALSE}
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
 eph_ind_215 <- eph_ind_215 %>% 
   mutate(cso_agg = case_when(cso_desag <=2 ~ 1,
                              cso_desag >=3 & cso_desag <=8 ~ 2,
@@ -1002,7 +1002,7 @@ table(eph_ind_215$cso_agg_factor)
 
 Por último ya estamos en condiciones de elaborar el sistema de clases que la autora propone [@Torrado1998d, pp. 235]. Vamos a realizar dos versiones, una de 6 categorías (*clase6*) y otra de 3 (*clase3*). En cada caso, generaremos un variable factor, que nos permitirá el etiquetamiento y el mejor tratamiento de la variable.  
 
-```{r, message=FALSE, warning=FALSE}
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
 eph_ind_215 <- eph_ind_215 %>% 
   mutate(clase6 = case_when(cso_agg == 1 ~ 1,
   													(cso_agg == 2 & CAT_OCUP == 2) | cso_agg == 3 | cso_agg == 5 ~ 2,
@@ -1029,7 +1029,7 @@ eph_ind_215$clase3_factor <- factor(eph_ind_215$clase3, labels = c("Clase alta",
 
 Para calcular la distribución de frecuencias ponderadas de la población por clase social, presentamos dos procedimientos. Uno, que es el que veníamos utilizando, a través de los comandos _group_by_ y _tally_ del paquete `dplyr`, y otro a través de la función _freq_ del paquete `summarytools`. Este último nos devuelve una tabla similar al comando _tabulate_ de **`STATA`** o del análisis de frecuencias que realiza **`SPSS`**. Asimismo, nos permite señalar que variable se utilizara para ponderar los resultados.  
 
-```{r, message=FALSE, warning=FALSE}
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
 eph_ind_215 %>%
 	filter(!is.na(clase6_factor)) %>% #quitamos los casos perdidos del análisis 
 	group_by(clase6_factor) %>% 
@@ -1045,7 +1045,7 @@ Como puede observarse, alcanzamos los mismos resultados, pero la función _freq_
 ## Operacionalización automática {#operacion2} 
 
 Paquetes que utilizaremos en este subcapítulo:
-```{r, message=FALSE, warning=FALSE}
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
 library(tidyverse)
 library(occupar)
 library(scales)
@@ -1065,7 +1065,7 @@ El paquete `occupar` esta basado en el proyecto implementado por **Harry Ganzebo
 
 Para instalar el paquete `occupar` es necesario tener instalado el paquete `devtools`. A continuación dejamos los pasos de instalación:
 
-```{r, message=FALSE, warning=FALSE, eval=FALSE}
+```{r, message=FALSE, warning=FALSE, eval=FALSE, echo=TRUE}
 install.packages("devtools")
 devtools::install_github("DiogoFerrari/occupar", dependencies=F)
 ```
@@ -1076,7 +1076,7 @@ Recordemos que la escala ISEI no es un esquema discreto de clases sociales, sino
 
 Utilizaremos la misma base que venimos explorando: la **EPH** del segundo trimestre de 2015 con el agregado de la ocupación codificada en la **CIUO-08**. La función es relativamente sencilla, se llama `isco08toISEI08` y sólo debemos señalarle donde se encuentra la variable **CIUO**. A continuación solicitaremos un resumen de las principales medidas de tendencia central y de posición.  
 
-```{r, message=FALSE, warning=FALSE}
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
 eph_ind_215$isei <- isco08toISEI08(eph_ind_215$PP04D_CIUO)
 
 summary(eph_ind_215$isei)
@@ -1092,7 +1092,7 @@ La ocupación peor posicionada es la que presenta un valor de `11,56`, mientras 
 
 Por otro lado, pedimos también que nos muestren algunas correspondencias entre los valores de la codificación en CIUO y los puntajes del ISEI. Claramente los valores más bajos del ISEI, se corresponden con valores más bajos de la CIUO (Gráfico \@ref(fig:isei2).  
 
-```{r isei2, message=FALSE, warning=FALSE, fig.cap= "Histograma de frecuencias la escala ISEI"}
+```{r isei2, message=FALSE, warning=FALSE, fig.cap= "Histograma de frecuencias la escala ISEI", echo=TRUE}
 eph_ind_215 %>% 
 	ggplot(aes(x = isei, weight = PONDERA)) + 
 	geom_histogram(bins = 20)+ 
@@ -1127,7 +1127,7 @@ En esta sección vamos a explorar tres formas de abordar la estructura de clases
 
 En el primer caso, para considerar al universo de estudio de la población ocupada sólo necesitaremos filtrar nuestra base únicamente seleccionando a aquellos individuos que para la variable **ESTADO** se encuentran en condición de ocupados (1).
 
-```{r, message=FALSE, warning=FALSE}
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
 base_PO <- eph_ind_215 %>% 
   filter(ESTADO == 1) # Creamos una nueva base con el filtro de la población ocupada
 
@@ -1138,7 +1138,7 @@ De esta forma, observamos que la población ocupada asciende a `11.136.719`, con
 
 Si en cambio lo que queremos observar es al universo de los hogares, utilizaremos las características económicas-laborales de uno de los miembros del hogar para caracterizar a toda la unidad. En el primer caso, nos basaremos en la **jefatura del hogar**. Para ello, filtraremos aquellos casos que sean jefe/a (1) en la variable **CH03**.
 
-```{r, message=FALSE, warning=FALSE}
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
 base_jefatura <- eph_ind_215 %>% 
   filter(CH03 == 1) # Nos quedamos únicamente con los/las jefe/as de hogar
 
@@ -1149,7 +1149,7 @@ Si comparamos con la tabla anterior, los valores han cambiado. Esto se debe a qu
 
 Finalmente podemos considerar el enfoque de **dominancia**. Este es algo más complejo en su elaboración, ya que es necesario aplicar una serie de pasos. De este modo, definimos a la posición de clase social del hogar como aquella ocupada por el cónyuge que posee la posición más aventajada. En los casos de hogares no nucleares o con el núcleo incompleto (ausencia de uno de los cónyuges), se tomará directamente la clase del jefe/a. 
 
-```{r, message=FALSE, warning=FALSE}
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
 
 # 1) Selecciono solo a jefe/as y cónyuges
 base_dominancia <- eph_ind_215 %>% 

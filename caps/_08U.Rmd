@@ -8,7 +8,7 @@ knitr::include_graphics("imagenes/volver_al_futuro.gif")
 
 En este capítulo trabajaremos a partir de las siguientes librerías de **`R`**:
 
-```{r, message=FALSE, warning=FALSE}
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
 library(tidyverse)
 library(eph)
 library(sf)
@@ -53,7 +53,7 @@ Ahora veremos como llevar a cabo un análisis de clase a lo largo de un período
 
 Para ello, tal como hemos visto en el [Capítulo 2](#fuentes), descargaremos las bases utilizando el paquete `eph`, con su función *get_microdata*.
 
-```{r, message=FALSE, warning=FALSE}
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
 eph_1115 <- get_microdata(year = 2011:2015, trimester = 2, type = "individual")
 
 eph_1115 <- eph_1115 %>%
@@ -64,7 +64,7 @@ eph_1115 <- eph_1115 %>%
 
 Como puede verse ahora contamos con una base de `333.819` casos y con información para los seis años seleccionados.
 
-```{r, message=FALSE, warning=FALSE}
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
 nrow(eph_1115)
 
 table(eph_1115$ANO4)
@@ -287,7 +287,7 @@ eph_1115$clase3_factor <- factor(eph_1115$clase3, labels = c("Clase alta",
 																																	 "Clase obrera"))
 ```
 
-```{r, message=FALSE, warning=FALSE}
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
 eph_1115_ocup <- eph_1115 %>% 
   filter(ESTADO == 1)
 
@@ -297,7 +297,7 @@ summarytools::freq(eph_1115_ocup$clase6_factor, weights = eph_1115_ocup$PONDERA,
 
 Finalmente ya estamos en condiciones de construir una nueva tabla en donde podamos cruzar la variable de clase social (`clase6_factor`) con la variable año (`ANO4`). Para ello, utilizaremos algunas de las herramientas del paquete `dplyr`. En primer lugar filtraremos aquellos casos perdidos (NA) para la variable de clase. Luego agruparemos los datos por año y clase (`group_by`) y contabilizaremos los casos (`tally`). Es importante notar que lo que sumamos son los casos brindados por la variable **PONDERA**, por eso es necesario declarar al ponderador a través del `wt = PONDERA`. Ya con las frecuencias absolutas por clase y año calculadas es posible llegar a los porcentajes. De este modo, volveremos a agrupar los datos por año y crearemos una nueva variable (`mutate`) que divida a cada frecuencia por su sumatoria total `(n/sum(n))` y la multiplique por `100`. Para hacer más fácil la lectura, dejaremos únicamente dos decimales. Finalmente para pasar de un formato largo de tabla a uno ancho, aplicaremos la función `spread`.
 
-```{r, message=FALSE, warning=FALSE}
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
 tabla_anios <- eph_1115_ocup %>%
   filter(!is.na(clase6_factor)) %>% 
   group_by(ANO4, clase6_factor) %>% 
@@ -314,7 +314,7 @@ Es necesario aclarar que hay muchas formas de construir una tabla de doble entra
 
 Otra opción de presentación es la elaboración de un gráfico de barras. Para ello recurriremos al paquete `ggplot2` y a la función `geom_col`. En este caso, al principio, repetiremos parte de la secuencia de pasos utilizada para el armado de la tabla, hasta la generación de la variable `percent`. Luego llamando a la librería `ggplot2`, definiremos la estética (aes) indicando el eje `x` (años), el eje `y` (porcentajes) y la variable que determinará el color de las barras (`fill`), es decir, la clase social. Posteriormente llamaremos a la función `geom_col()` y luego a `geom_text` para identificar con números los porcentajes en las barras. El resto de las opciones mejoran la salida gráfica configurando diversos aspectos.
 
-```{r, message=FALSE, warning=FALSE}
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
 eph_1115_ocup %>%
   filter(!is.na(clase6_factor)) %>% 
   group_by(ANO4, clase6_factor) %>% 
@@ -388,7 +388,7 @@ Ahora veremos como llevar a cabo un análisis de clase según información espac
 
 En forma simple vamos a indagar como se distribuyen las clases sociales al interior de cada una de las regiones identificadas por **INDEC**. En primer lugar, construyamos una tabla de doble entrada que nos permita mostrar dicha información.
 
-```{r, message=FALSE, warning=FALSE}
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
 # 1) Creo una variable factor con los nombres de las regiones (region_f)
 eph_1115_ocup$region_f <- factor(eph_1115_ocup$REGION, labels = c("GBA", "NOA", "NEA", "Cuyo",
                                                                   "Pampeana", "Patagonia"))
@@ -410,7 +410,7 @@ Finalmente presentamos un ejemplo de representación de la tabla anteriormente c
 
 A los fines de este ejemplo, trabajaremos con la cartografía por departamentos que proporciona INDEC (<https://www.indec.gob.ar/indec/web/Institucional-Indec-Codgeo>). Si bien no es la finalidad de este libro introducir el uso de herramientas SIG^[Recomendamos el manual [Ciencia de datos para gente sociable](https://bitsandbricks.github.io/ciencia_de_datos_gente_sociable/), específicamente su capítulo 6, para quienes quieran profundizar en el tema], a continuación presentamos el procedimiento "paso a paso" para la creación del mapa temático. 
 
-```{r, message=FALSE, warning=FALSE, out.width = '80%'}
+```{r, message=FALSE, warning=FALSE, out.width = '80%', echo=TRUE}
 # 1) Cargamos el archivo .shp y lo guardamos en el objetivo espacial "argentina"
 argentina <- st_read("cartografia/argentina_n.shp")
 

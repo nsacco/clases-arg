@@ -398,7 +398,7 @@ En algunas encuestas está dimensión es relevada directamente, acompañada de o
 ## Explorando las variables socio-ocupacionales en la EPH {#eph4} 
 
 Paquetes que utilizaremos en esta sección:
-```{r, message=FALSE, warning=FALSE}
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
 library(tidyverse)
 library(eph)
 library(foreign)
@@ -408,7 +408,7 @@ En este apartado aplicaremos lo aprendido en punto anterior y exploraremos las d
 
 En primer lugar descargamos la base: 
 
-```{r, message=FALSE, warning=FALSE}
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
 eph_ind_215 <- get_microdata(year = 2015, trimester = 2, type = "individual")
 ```
 
@@ -420,7 +420,7 @@ knitr::include_graphics("imagenes/indec_ciuo.png")
 
 Luego de descargado el archivo, descomprimiremos el ```.rar``` y utilizaremos el archivo `eph_ciuo_215.dbf`. A continuación abriremos dicho archivo y "pegaremos" la variable **PP04D_CIUO** en la base **eph_ind_215**. Utilizaremos las variables **CODUSU** (identificador de vivienda), **NRO_HOGAR** (identificador del hogar) y **COMPONENTE** (identificador de miembro del hogar) como ID para emparejar ambas bases. 
 
-```{r, message=FALSE, warning=FALSE}
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
 library(foreign)
 eph_ciuo_215 <- read.dbf("bases/eph_ciuo_215.dbf") #carga de base CIUO
 eph_ciuo_215 <- eph_ciuo_215 %>% 
@@ -433,7 +433,7 @@ eph_ind_215 <- eph_ind_215 %>%
 
 Ahora podemos etiquetar la base utilizando el comando ```organize_labels``` del paquete __```eph```__:
 
-```{r, message=FALSE, warning=FALSE}
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
 eph_ind_215 <- organize_labels(eph_ind_215, type = "individual")
 
 eph_ind_215$CODUSU <- as.character(eph_ind_215$CODUSU) #Es necesario convertir a "character" para futuras operaciones. Esto se hace porque el comando "organize_labels" le cambia el formato a la variables.
@@ -445,13 +445,13 @@ eph_ind_215$CODUSU <- as.character(eph_ind_215$CODUSU) #Es necesario convertir a
 
 En la **EPH** la variable que mide la **condición de actividad** puede ser encontrada bajo el nombre "ESTADO". Exploraremos las distintas categorías y frecuencias de casos que presenta para dicho trimestre. 
 
-```{r, message=FALSE, warning=FALSE}
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
 table(eph_ind_215$ESTADO)
 ```
 
 Como puede observarse las categorías son *entrevista individual no realizada*, *ocupado*, *desocupado*, *inactivo* y *menor de 10 años*. En el caso de que pretendamos seleccionar únicamente a la población económicamente activa, deberemos filtrar las categorías 1 (ocupado) y 2 (desocupado). En este caso nos quedaríamos con 25848 registros.
 
-```{r, message=FALSE, warning=FALSE}
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
 eph_2015_PEA <- eph_ind_215 %>% 
 	filter(ESTADO == 1 | ESTADO == 2)
 
@@ -464,7 +464,7 @@ Como presentaremos en la próxima unidad, la ocupación es la variable central e
 
 La **EPH** recaba la ocupación tanto para la población ocupada como desocupada, relevando para este último grupo el dato de la última ocupación realizada, en el caso que hubiera existido. Mientras que el primer dato se guarda en la variable *PP04D_COD*, la última ocupación de los desocupados puede encontrarse en la variable *PP11D_COD*. Con el comando ```table``` podemos visualizar todos los códigos existentes en la base y su frecuencia absoluta.
 
-```{r, message=FALSE, warning=FALSE}
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
 table(eph_ind_215$PP04D_COD)
 ```
 
@@ -478,13 +478,13 @@ table(eph_ind_215$CALIFICACION)
 
 Por su parte en la variable *PP04D_CIUO* encontraremos a la ocupación codificada según el **CIUO**.  
 
-```{r, message=FALSE, warning=FALSE}
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
 table(eph_ind_215$PP04D_CIUO)
 ```
 
 A través del paquete __```modest```__ y el comando ```mfv``` (most frequent value) calcularemos la moda de dichas variables, es decir, la ocupación más repetida en el relevamiento.  
 
-```{r, message=FALSE, warning=FALSE}
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
 modeest::mfv(eph_ind_215$PP04D_CIUO, na.rm = TRUE)
 ```
 
@@ -496,13 +496,13 @@ Al igual que para el caso de la ocupación, la rama de actividad es computada ta
 
 Echamos un vistazo a la distribución de la población ocupada según la rama de actividad.
 
-```{r, message=FALSE, warning=FALSE}
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
 table(eph_ind_215$PP04B_CAES)
 ```
 
 Del mismo modo que con la ocupación, el paquete __```eph```__ mediante la función ```organize_CAES``` nos agrega 8 columnas a la base en donde se clasifican distintas cuestiones: versión de la CAES, código de sección y división, etiqueta de sección y división y clasificación de ramas de actividad agregadas. A continuación revisamos dicho comando y solicitaremos las frecuencias de las ramas agregadas.
 
-```{r, message=FALSE, warning=FALSE}
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
 eph_ind_215$PP04B_COD <- as.character(eph_ind_215$PP04B_COD) #esta linea de comando corrige un error derivado del auto-etiquetamiento de las categorías.
 eph_ind_215 <- organize_caes(base = eph_ind_215)
 
@@ -513,7 +513,7 @@ table(eph_ind_215$caes_eph_label)
 
 La categoría de ocupación es una variable que también es de vital importancia en la construcción de clasificaciones. La misma puede encontrarse bajo el nombre de *CAT_OCUP*. A continuación exploramos sus categorías:
 
-```{r, message=FALSE, warning=FALSE}
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
 table(eph_ind_215$CAT_OCUP)
 ```
 
@@ -521,7 +521,7 @@ table(eph_ind_215$CAT_OCUP)
 
 En la **EPH** el sector de actividad puede encontrarse en la variable *PP04A*.
 
-```{r, message=FALSE, warning=FALSE}
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
 table(eph_ind_215$PP04A)
 ```
 
@@ -529,7 +529,7 @@ table(eph_ind_215$PP04A)
 
 La medición del tamaño del establecimiento se encuentra distribuida en dos variables: *PP04C* y *PP04C99*. La primera permite captar en forma detallada el tamaño del establecimiento donde trabaja la persona en diferentes rangos, mientras que la segunda permite recuperar, mediante una clasificación más acotada, aquel dato que en la primera variable figuraba como "Ns/Nc". A continuación exploramos ambas variables en forma cruzada.
 
-```{r, message=FALSE, warning=FALSE}
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
 table(eph_ind_215$PP04C, eph_ind_215$PP04C99)
 ```
 
@@ -539,7 +539,7 @@ Al igual que en el caso de la ocupación y la rama de actividad, para aquellas p
 
 Si bien la supervisión no es una variable medida directamente en la **EPH**, podemos aproximarnos a dicha noción a través del **CNO**. En su tercer dígito mide la jerarquía ocupacional. Sin embargo, para extraer dicha información es necesario "partir" el código ocupacional, reteniendo el tercer dígito. A través de __```R```__, realizaremos la operación utilizando la función ```str_sub``` del paquete __```stringr```__, indicando que dígitos queremos retener. En este caso debemos señalar que queremos retener únicamente el tercer dígito (que empiece en el 3 y termine en el 3) y se lo asignaremos a una nueva variable llamada "cno_jerarquia".
 
-```{r, message=FALSE, warning=FALSE}
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
 eph_ind_215$cno_jerarquia <- str_sub(eph_ind_215$PP04D_COD, start = 3, end = 3)
 
 eph_ind_215 %>% 

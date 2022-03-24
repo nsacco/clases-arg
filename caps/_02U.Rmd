@@ -159,7 +159,7 @@ En el caso de las bases de microdatos pertenecientes al período 2003-2015, pode
 
 En este ejemplo utilizaremos la base de hogares del cuarto trimestre de 2014 ([Hogar_t414](https://www.indec.gob.ar/ftp/cuadros/menusuperior/eph/t414_sav.rar){target="_blank"}) y la descargaremos en formato ```.sav```.
 
-```{r}
+```{r, echo=TRUE}
 eph_hog_414 <- read_sav("bases/Hogar_t414.sav")
 ```
 
@@ -189,7 +189,7 @@ Finalmente probaremos descargar la base más antigua que se encuentra disponible
 
 Como hemos señalado, las bases anteriores a 2003 se encuentran únicamente en formato ```.dbf```. Para poder importarlas en `R` necesitaremos instalar y llamar a la librería __```foreign```__.
 
-```{r}
+```{r, echo=TRUE}
 eph_ind_74 <- read.dbf("bases/PERSO_US.DBF")
 ```
 

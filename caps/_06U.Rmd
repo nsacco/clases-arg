@@ -148,7 +148,7 @@ Al estudiar las desigualdades desde una perspectiva de clases, una primera aprox
 
 Tomando como variable dependiente los ingresos totales individuales (`P47T`), calcularemos el promedio por clase social. Para ello utilizaremos algunas funciones del paquete `dplyr` y de `R base` como `weighted.mean`. Tomaremos como punto de partida, los datos que hemos trabajado en los capítulos anteriores de la **EPH** del segundo trimestre de 2015.  
 
-```{r, message=FALSE, warning=FALSE}
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
 eph_ind_215 %>% 
   filter(!is.na(clase6_factor)) %>% 
   group_by(clase6_factor) %>% 
@@ -158,7 +158,7 @@ eph_ind_215 %>%
 
 Como puede observarse, las posiciones de clase son explicativas de la desigualdad de ingresos. A mayor posición de clase, mayores ingresos percibidos. A su vez, existen fronteras, en términos de ingresos, entre la clase media y obrera, así como entre los estratos autónomos y asalariados. Sin embargo, la media es una medida que no da una caracterización completa respecto a la distribución de los valores. Para ello comúnmente se utilizan las medidas de posición y de dispersión como forma de conocer cuán homogéneas o heterogéneas son las distribuciones de los datos, en este caso, de los ingresos. El diagramas de caja (o en inglés *boxplot*), nos permite a partir de una salida gráfica, dar cuenta de una serie de estas medidas. Con ayuda del paquete `ggplot2` y la función *geom_boxplot* presentamos el siguiente gráfico. Para facilitar la visualización, seleccionamos únicamente los casos con ingresos hasta `$40.000`.  
 
-```{r, message=FALSE, warning=FALSE, fig.cap= "Ingresos totales individuales por clase social", fig.width= 6, fig.asp= 0.8}
+```{r, message=FALSE, warning=FALSE, fig.cap= "Ingresos totales individuales por clase social", fig.width= 6, fig.asp= 0.8, echo=TRUE}
 
 eph_ind_215 %>%
   filter(!is.na(clase6_factor), P47T <= 40000) %>% 
@@ -194,7 +194,7 @@ Como medida global, podremos obtener un coeficiente de bondad de ajuste que nos 
 
 En primer lugar para plantear un modelo de regresión, debemos configurar aquellas variables que son categóricas para que la función las pueda captar del modo correcto. Básicamente lo que necesitamos es transformar las variables cualitativas a factores. En este caso, solo debemos hacerlo con la variable *REGION* y *CH04* (sexo). Le tendremos que señalar la etiqueta o valor que tomara cada categoría en la nueva variable factor. Asimismo, indicaremos mediante la función *relevel* que para la variable de clase queremos tomar como categoría de referencia a la *Clase obrera - trabajadores marginales*. A continuación explicaremos porque.  
 
-```{r, message=FALSE, warning=FALSE}
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
 eph_ind_215$region_f <- factor(eph_ind_215$REGION, labels = c("GBA", "NOA", "NEA", "Cuyo", "Pampeana", "Patagónica"))
 
 eph_ind_215$sexo_f <- factor(eph_ind_215$CH04, labels = c("Varón", "Mujer"))
@@ -205,7 +205,7 @@ eph_ind_215$clase6_factor <- relevel(eph_ind_215$clase6_factor, ref = "Clase obr
 
 Realizado estos ajustes, estamos en condiciones de aplicar la regresión lineal múltiple. Antes, guardaremos en un nuevo `data frame` la selección de casos con la que venimos trabajando. La función a utilizar será *lm* (Linear Models), en donde deberemos primero señalar la variable dependiente (P47T) y seguido del símbolo `~` pondremos todas las variables independientes. Al final indicaremos la base sobre la que estamos trabajando. Cada modelo debe ser guardado en un objeto y luego debe ser llamado mediante la función *summary*. Nuestro primer modelo solo medirá la influencia de la clase social sobre los ingresos.
 
-```{r, message=FALSE, warning=FALSE}
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
 eph_regresion <- eph_ind_215 %>% 
 	filter(CH06 >= 20 & ESTADO == 1 & !is.na(clase6_factor))
 
@@ -222,7 +222,7 @@ En tercer lugar, debemos prestar atención a la bondad de ajuste del modelo. Est
 
 De esta forma, realizamos un segundo modelo (`regresion2`) en donde incorporamos a los factores edad, región y sexo.  
 
-```{r, message=FALSE, warning=FALSE}
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
 regresion2 <- lm(P47T ~ clase6_factor + CH06 + region_f + sexo_f, data = eph_regresion,
                  weights = PONDERA)
 summary(regresion2)
