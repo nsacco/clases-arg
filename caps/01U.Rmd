@@ -1,11 +1,3 @@
-# (PART) Introducción {.unnumbered}
-
-# Las recetas {-}
-
-La mayor parte de los ejercicios expuestos a lo largo de este Manual utilizan una o más funciones de **``R``** para resolver un problema específico. Se destaca que no se describen las funciones en detalle, ya que ellas pueden ser consultadas en otras publicaciones. En el [Anexo](#anexo), se presenta una introducción básica a la programación en `R` con `RStudio` y una selección de recursos disponibles para profundizar en su práctica.
-
-Cada ejercicio da solución a un problema en particular que sin duda, dan una de otras posibles soluciones.
-
 # (PART) Aspectos teóricos {.unnumbered}
 
 # La estructura social en la Argentina actual {#estructura1}

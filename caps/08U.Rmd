@@ -314,7 +314,7 @@ Es necesario aclarar que hay muchas formas de construir una tabla de doble entra
 
 Otra opción de presentación es la elaboración de un gráfico de barras. Para ello recurriremos al paquete `ggplot2` y a la función `geom_col`. En este caso, al principio, repetiremos parte de la secuencia de pasos utilizada para el armado de la tabla, hasta la generación de la variable `percent`. Luego llamando a la librería `ggplot2`, definiremos la estética (aes) indicando el eje `x` (años), el eje `y` (porcentajes) y la variable que determinará el color de las barras (`fill`), es decir, la clase social. Posteriormente llamaremos a la función `geom_col()` y luego a `geom_text` para identificar con números los porcentajes en las barras. El resto de las opciones mejoran la salida gráfica configurando diversos aspectos.
 
-```{r, message=FALSE, warning=FALSE, echo=TRUE}
+```{r, message=FALSE, warning=FALSE, echo=TRUE, fig.cap="Ejemplo de gráfico de columnas con la variable clase social"}
 eph_1115_ocup %>%
   filter(!is.na(clase6_factor)) %>% 
   group_by(ANO4, clase6_factor) %>% 
@@ -458,8 +458,8 @@ mapa <- merge(argentina, tabla_larga, by="region_f", all.x = TRUE)
 
 Puntualmente, el comando `geom_sf` del `ggplot2` nos permitirá superponer capas con información georreferenciada, como en este caso los departamentos del país. A su vez, el comando `facet_wrap` del mismo paquete nos permite representar un gráfico (en este caso un mapa) para la variable que seleccionemos (clase social).
 
-<!--
-```{r message=FALSE, warning=FALSE, tidy=FALSE}
+
+```{r message=FALSE, warning=FALSE, tidy=FALSE, fig.cap= "Ejemplo de mapa temático utilizando la variable clase social"}
 ggplot() +
   geom_sf(data = mapa, aes(group = region_f, fill = percent), color = NA) +
   theme_map() +
@@ -479,4 +479,4 @@ ggplot() +
   scale_fill_viridis_c(direction = -1) +
   facet_wrap(~clase6_factor, ncol = 7, labeller = labeller(clase6_factor = label_wrap_gen(15)))
 ```
--->
+

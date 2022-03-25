@@ -67,7 +67,7 @@ Los censos de población modernos, aquellos llevados a cabo en 1960, 1970, 1980,
 
 Las preguntas referidas a las variables económicas de la población tuvieron un acrecentamiento importante a lo largo de los censos de población [@Minujin1987, p. 49]. Desde una simple pregunta abierta en 1869 se pasó, ya para 1980, a una batería de seis preguntas que permitirían una captación más amplia de la población económicamente activa (PEA), al mismo tiempo que se complejizó la estructura de las preguntas, así como su instrucción y codificación. En la Tabla \@ref(fig:censos1) se observa el conjunto de información sobre las *características económicas* de la población que se relevaron a lo largo de los censos modernos, quienes se basaron (exceptuado al censo de 1947) en las recomendaciones internacionales para la conceptualización de las variables económicas siguiendo el enfoque de fuerza de trabajo, que sugiere el registro de la ocupación *actual* en un periodo breve y reciente. La cobertura temática cubrió una amplia gama de variables.
 
-```{r censos1, fig.cap="Variables económicas de la población en los censos modernos. Argentina, 1947-2010"}
+```{r censos1, fig.cap="Variables económicas de la población en los censos modernos. Argentina, 1947-2010", echo=FALSE}
 censos1 <- data.frame(c1 = c("Condición de actividad", "Categoría ocupacional",
                              "Profesión u oficio/ Ocupación", "Ocupación secundaria",
                              "Rama de actividad", "Dedicación del establecimiento",
@@ -111,7 +111,7 @@ Esta perspectiva no está exenta de críticas, ya que se le suele señalar que f
 
 De acuerdo a lo esquematizado en la Tabla \@ref(fig:censos2), las variables, sus sistemas clasificatorios y los universos de observación presentan divergencias entre los censos de 1980 a 2010.
 
-```{r censos2, fig.cap="Sistemas clasificatorios de las variables económicas de la población en los censos modernos. Argentina, 1947-2010"}
+```{r censos2, fig.cap="Sistemas clasificatorios de las variables económicas de la población en los censos modernos. Argentina, 1947-2010", echo=FALSE}
 censos2 <- data.frame(c1 = c("Condición de Actividad", "Categoría de Ocupación", 
                              "Rama de Actividad", "Tamaño"),
                       c2 = c("Actividad ejercida en la semana anterior a la enumeración",

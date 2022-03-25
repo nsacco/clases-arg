@@ -1,4 +1,11 @@
+# (PART) Anexo {.unnumbered}
+
 # Introducción a R y RStudio {#anexo}
+
+La mayor parte de los ejercicios expuestos a lo largo de este Manual utilizan una o más funciones de **``R``** para resolver un problema específico. Se destaca que no se describen las funciones en detalle, ya que ellas pueden ser consultadas en otras publicaciones. Sin embargo, en este anexo, se presenta una introducción básica a la programación en `R` con `RStudio` y una selección de recursos disponibles para profundizar en su práctica.
+
+
+## Introducción {#introR}
 
 **``R``** es un lenguaje de programación usado para realizar análisis estadístico y en general, análisis de datos. Se trata de un conjunto integrado de programas para trabajar con datos, cálculos y gráficos, que permite:
 
@@ -12,7 +19,7 @@
 
 - programar con un lenguaje sencillo y en constante desarrollo. 
 
-```{r fig.cap= "Logo de R", fig.align='center', out.width = '40%', echo=FALSE}
+```{r fig.cap= "Logo de R", fig.align='center', out.width = '40%', echo=FALSE, eval = knitr::is_html_output()}
 knitr::include_graphics("imagenes/R_logo.svg.png")
 ```
 
@@ -58,15 +65,12 @@ knitr::include_graphics("imagenes/R_desc.png")
 
 - utilizando `RStudio`, que hace más atractiva y fácil la aproximación al programa.
 
-```{r fig.cap= "Terminal de R", fig.align='center', out.width = '80%', echo=FALSE}
-knitr::include_graphics("imagenes/terminal.png")
-```
 
 ### Descargar e instalar RStudio
 
 Se debe ingresar al siguiente enlace: <https://www.rstudio.com/products/rstudio/download/>{target="_blank"}
 
-```{r fig.cap= "Logo de RStudio", fig.align='center', out.width = '10%', echo=FALSE}
+```{r fig.cap= "Logo de RStudio", fig.align='center', out.width = '80%', echo=FALSE, eval = knitr::is_html_output()}
 knitr::include_graphics("imagenes/RStudio_logo.png")
 ```
 
@@ -74,7 +78,7 @@ knitr::include_graphics("imagenes/RStudio_logo.png")
 knitr::include_graphics("imagenes/RStudio_desc.png")
 ```
 
-### Las partes de RStudio
+### Partes de RStudio
 
 Las secciones que conforman `RStudio` son cuatro:
 
@@ -85,12 +89,6 @@ Las secciones que conforman `RStudio` son cuatro:
 - la consola (parte inferior izquierda) y
 
 - la sección de "documentos, gráficos, paquetes y ayuda" (parte inferior derecha).
-
-```{r fig.cap= "R", fig.align='center', out.width = '80%', echo=FALSE}
-knitr::include_graphics("imagenes/RStudio_partes.png")
-```
-
-### RStudio 
 
 Cuando uno abre `RStudio`, de forma predeterminada, se ve de la siguiente manera:
 
@@ -108,7 +106,7 @@ knitr::include_graphics("imagenes/rstudio_entorno.png")
 
 * En la parte inferior derecha hay un panel que tiene varias pestañas. El primero permite ver la estructura de los archivos, por lo que es parecido a una ventana estándar que se usa para navegar en cualquier sistema operativo.
 
-```{r fig.cap= "panel Derecho Inferior de RStudio", fig.align='center', out.width = '80%', echo=FALSE}
+```{r fig.cap= "panel Derecho Inferior de RStudio", fig.align='center', out.width = '60%', echo=FALSE}
 knitr::include_graphics("imagenes/pan_der_inf.png")
 ```
 
@@ -142,17 +140,17 @@ knitr::include_graphics("imagenes/ayuda.png")
 
 * Dentro de herramientas (*Tools*) se encuentran las 'Opciones globales' (*Global Options*). Este menú ofrece todo tipo de posibilidades para configurar `RStudio` y el entorno. Para cambiar la ubicación de la consola y el entorno, hay que clicar arriba, donde dice 'Entorno', sobre el cuadro desplegable y aplicarlo. Al volver, se verá en el lado izquierdo, el documento en el que se está trabajando y debajo, el panel de 'Entorno'.
 
-```{r fig.cap= "RStudio Opciones Globales", fig.align='center', out.width = '80%', echo=FALSE}
+```{r fig.cap= "RStudio Opciones Globales", fig.align='center', out.width = '80%', echo=FALSE, eval = knitr::is_html_output()}
 knitr::include_graphics("imagenes/global_opt.png")
 ```
 
 * También es posible cambiar el color del esquema, dentro de las 'Opciones globales' puedes ver algunas opciones de apariencia. El tema predeterminado tiene blanco de fondo con un texto en negro. Pero no es el único, sino que existen diferentes temas que se pueden aplicar.  
 
-```{r fig.cap= "Selección de Colores en RStudio", fig.align='center', out.width = '80%', echo=FALSE}
+```{r fig.cap= "Selección de Colores en RStudio", fig.align='center', out.width = '80%', echo=FALSE, eval = knitr::is_html_output()}
 knitr::include_graphics("imagenes/color_schema.png")
 ```
 
-## Workflow
+## Workflow {#workflow}
 
 Esta sección trata sobre el flujo de trabajo (*workflow*) en `RStudio`. Existen muchas cosas sobre el trabajo en `R` que los encuentran confusas. Sin embargo, hay formas en las que se pueden simplificar problemas: sistematizando una buena práctica del flujo de trabajo desde el principio.
 
@@ -227,7 +225,7 @@ También hay atajos de teclado que puedes usar:
 
 **En resumen**, cuando haya un nuevo proyecto en el que se esté trabajando, se recomienda generar un nuevo archivo de proyecto en `RStudio`. Dentro de esa carpeta, generar otra carpeta donde almacenar los datos (que aquí se ha llamado “r_docs”), como los documentos de `R Markdown` o `R script`.
 
-## R Markdown
+## RMarkdown {#rmarkdown}
 
 La manera más sencilla de interactuar con **`R`** es a través de documentos conocidos como archivos de **R Markdown**, que ya se ha visto a modo de ejemplo en la sección anterior^[Un resumen de las funciones y comandos que dispone R Markdown puede encontrarse [aquí](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf){target="_blank"}]. Estos documentos son una combinación de varios tipos de información. Por un lado, lo que se conoce como “fragmentos de código” (*code chunks*), que son un tipo de ventanas en **`R`** donde se escribe código para ejecutar análisis. También, fuera de esos fragmentos de código se puede escribir texto. En esta sección se explicará con mayor detalle cómo formatear el texto en el documento de **`R`**. Para ello seguir los pasos:
 
@@ -349,7 +347,7 @@ help(solve)
 rm(x, y, z, cabello, perro, bonito)
 ```
 
-## Primeros pasos en R
+## Primeros pasos en R {#primerospasos}
 
 ### Funciones y comandos elementales
 
