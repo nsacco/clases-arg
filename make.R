@@ -14,4 +14,4 @@ p_load(tidyverse, bookdown, foreign, devtools, ggplot2, flextable, devtools, grD
 
 devtools::install_github("DiogoFerrari/occupar")
 
-rmarkdown::render_site(output_format = 'bookdown::word_document2', encoding = 'UTF-8')
+#rmarkdown::render_site(output_format = 'bookdown::word_document2', encoding = 'UTF-8')
