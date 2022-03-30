@@ -21,15 +21,15 @@ Al completar este capítulo se espera que los lectores puedan:
 
 Para una mayor comprensión del capítulo recomendamos la lectura de los siguientes textos: 
 
-Kerbo, H. R. [-@Kerbo2003]. Estratificación social y desigualdad: El conflicto de clases en perspectiva histórica y comparada. Madrid: McGraw-Hill Interamericana de España. **(Capítulo 6)** 
+- Kerbo, H. R. [-@Kerbo2003]. Estratificación social y desigualdad: El conflicto de clases en perspectiva histórica y comparada. Madrid: McGraw-Hill Interamericana de España. **(Capítulo 6)** 
 
-Dalle, P., Jorrat, J. R., y Riveiro, M. [-@Dalle.etal2018]. Movilidad social intergeneracional. En A. Salvia y J. I. Piovani (Eds.), La Argentina en el siglo XXI. Cómo somos, vivimos y convivimos en una sociedad desigual. Encuesta Nacional sobre la Estructura Social. Buenos Aires: Siglo Veintiuno Editores.
+- Dalle, P., Jorrat, J. R., y Riveiro, M. [-@Dalle.etal2018]. Movilidad social intergeneracional. En A. Salvia y J. I. Piovani (Eds.), La Argentina en el siglo XXI. Cómo somos, vivimos y convivimos en una sociedad desigual. Encuesta Nacional sobre la Estructura Social. Buenos Aires: Siglo Veintiuno Editores.
 
-Solís, P., y Boado, M. [-@Solis.Boado2016]. Y sin embargo se mueve. Estratificación y movilidad intergeneracional de clase en América Latina. México: Centro de Estudios Espinosa Yglesias. **(Capítulo 1)**  
+- Solís, P., y Boado, M. [-@Solis.Boado2016]. Y sin embargo se mueve. Estratificación y movilidad intergeneracional de clase en América Latina. México: Centro de Estudios Espinosa Yglesias. **(Capítulo 1)**  
 
-Pla, J., y Rodríguez de la Fuente, J. J. [-@Pla.RodriguezdelaFuente2016]. Tendencias de movilidad social en la Argentina de las dos últimas décadas: 1995-2010. Papers. Revista de Sociologia, 101(4), 473-502.  
+- Pla, J., y Rodríguez de la Fuente, J. J. [-@Pla.RodriguezdelaFuente2016]. Tendencias de movilidad social en la Argentina de las dos últimas décadas: 1995-2010. Papers. Revista de Sociologia, 101(4), 473-502.  
 
-Dalle, P. [-@Dalle2016]. Movilidad social desde las clases populares: Un estudio sociológico en el Área Metropolitana de Buenos Aires 1960-2013. Buenos Aires: IIGG-CLACSO. **(Capítulo 6 - ejemplo del uso de regresión logística)**  
+- Dalle, P. [-@Dalle2016]. Movilidad social desde las clases populares: Un estudio sociológico en el Área Metropolitana de Buenos Aires 1960-2013. Buenos Aires: IIGG-CLACSO. **(Capítulo 6 - ejemplo del uso de regresión logística)**  
 
 <!-- Clifford, P., y Heath, A. F. [-@Clifford.Heath1993]. The political consequences of social mobility. Journal of the Royal Statistical Society: Series A (Statistics in Society), 156(1), 51-61. Wiley Online Library. **(Ejemplo de diagonal reference model**) -->
 
@@ -48,7 +48,7 @@ El estudio de la movilidad social adquiere sentido dentro del campo teórico de 
 
 En forma simplificada, los estudios clásicos de movilidad social planteaban el abordaje de tres instituciones centrales en la vida de las personas: la familia, la educación y el mercado de trabajo. Esto derivó en lo que se denominó como "triángulo de la movilidad".  
 
-```{r fig.cap= "Triángulo de la movilidad ", fig.align='center', out.width = '80%', echo=FALSE}
+```{r fig.cap= "Triángulo de la movilidad ", fig.align='center', out.width = '80%', echo=FALSE, eval = knitr::is_html_output()}
 knitr::include_graphics("imagenes/triangulo.png")
 ```
 
@@ -60,13 +60,14 @@ Sin embargo los estudios de movilidad social no se han centrado únicamente en e
 
 La sociología de la movilidad social nace al calor del debate sobre la igualdad y en el seno del estructural-funcionalismo. Sus bases conceptuales se sustentan en la concepción liberal del orden social. Acorde con la teoría de la estratificación, la visión liberal-funcionalista comprendía a la sociedad como un campo continuo y homogéneo formado por individuos que desempeñan funciones de más o menos prestigio y remuneración, y que presentan amplias posibilidades de movilidad [@Kerbo2003; @CachonRodriguez1989].  
 
-Los primeros estudios de movilidad llevados a cabo por encuestas tuvieron lugar en el período de la segunda posguerra y sus preocupaciones giraban en torno a los niveles de movilidad que presentaban los distintos países y sobre la forma que la misma asumía. La **tabla de movilidad**, para esta generación, constituye el insumo central para el estudio del fenómeno, conteniendo la misma la información sobre la posición social de las personas a las cuales se encuestó y la posición de su familia (generalmente del padre) cuando éstas tenían alrededor de 15 años [@Breen2004, pp. 3].  
+Los primeros estudios de movilidad llevados a cabo por encuestas tuvieron lugar en el período de la segunda posguerra y sus preocupaciones giraban en torno a los niveles de movilidad que presentaban los distintos países y sobre la forma que la misma asumía. La **tabla de movilidad** —como se ilustra tabla siguiente—, para esta generación, constituye el insumo central para el estudio del fenómeno, conteniendo la misma la información sobre la posición social de las personas a las cuales se encuestó y la posición de su familia (generalmente del padre) cuando éstas tenían alrededor de 15 años [@Breen2004, pp. 3]:
 
 ```{r fig.cap= "Ejemplo de tabla de movilidad [@Dalle2016, pp. 106]", fig.align='center', out.width = '80%', echo=FALSE, eval = knitr::is_html_output()}
 knitr::include_graphics("imagenes/tabla_movilidad.png")
 ```
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, eval = !knitr::is_html_output()}
+
 dalle <- data.frame(c1 = c("Posición de clase del padre", "Posición de clase del padre",
                            "Clase media profesional y gerencial", "Pequeños propietarios de capital",
                            "Clase intermedia técnica-administrativa", "Clase popular calificada",
@@ -87,29 +88,34 @@ dalle <- data.frame(c1 = c("Posición de clase del padre", "Posición de clase d
                            "703"))
 dalle %>% 
   flextable() %>% 
+
   set_table_properties(width = 1, layout = "autofit") %>%
-  delete_part(part = "header") %>%
+  delete_part(part = "header")  %>%
   merge_v(j = 1) %>% 
-  merge_h(i = 1) %>% 
-  align(part = "all", align = "center") %>% 
-  align(j = 1, i = 3:8, align = "left") %>% 
-  set_caption("Ejemplo de tabla de movilidad") %>% 
+  merge_h(i = 1) %>%
   add_footer_row(values = "Fuente: Dalle (2016), en base a Encuestas del CEDEP-UBA",
                  colwidths = 8) %>% 
   fontsize(part = "all", size = 10) %>% 
   border(part = "body", border = officer::fp_border(color = "black"))
-
 ```
+ 
+<!--set_caption(caption = "Ejemplo de tabla de movilidad") %>% 
+  %>% align(part = "all", align = "center") %>%
+  align(j = 1, i = 3:8, align = "left")
+-->
 
-Posteriormente, una segunda oleada de estudios de movilidad social, iniciada con la obra *The American Occupational Structure* [@Blau.Duncan1967], marcaron un nuevo rumbo teórico y metodológico en el campo. En primer lugar, Blau y Duncan plantearon un abordaje del fenómeno de la movilidad social considerándolo como parte del “proceso de estratificación”. De este modo descompusieron el concepto en sus elementos constituyentes, es decir, en la posición de origen y de destino. Ya no enfocaron el problema desde el estudio de los patrones de movilidad, sino a partir de los efectos que las características adscriptivas presentaban sobre el logro ocupacional. En términos operativos, la preocupación rondaba en torno a cómo diversos factores intervinientes (principalmente, la educación) y las contingencias de la carrera ocupacional podían modificar la influencia de los orígenes sociales sobre los logros ocupacionales de los sujetos. Dicha propuesta se formalizó en el siguiente esquema:  
 
-```{r fig.cap= "Modelo básico de logro de estatus [@Blau.Duncan1967, pp. 170]", fig.align='center', out.width = '80%', echo=FALSE}
+Posteriormente, una segunda oleada de estudios de movilidad social, iniciada con la obra *The American Occupational Structure* [@Blau.Duncan1967], marcaron un nuevo rumbo teórico y metodológico en el campo. En primer lugar, Blau y Duncan plantearon un abordaje del fenómeno de la movilidad social considerándolo como parte del “proceso de estratificación”. De este modo descompusieron el concepto en sus elementos constituyentes, es decir, en la posición de origen y de destino. Ya no enfocaron el problema desde el estudio de los patrones de movilidad, sino a partir de los efectos que las características adscriptivas presentaban sobre el logro ocupacional. En términos operativos, la preocupación rondaba en torno a cómo diversos factores intervinientes (principalmente, la educación) y las contingencias de la carrera ocupacional podían modificar la influencia de los orígenes sociales sobre los logros ocupacionales de los sujetos. 
+
+<!--Dicha propuesta se formalizó en el siguiente esquema:-->
+
+```{r fig.cap= "Modelo básico de logro de estatus [@Blau.Duncan1967, pp. 170]", fig.align='center', out.width = '80%', echo=FALSE, eval = knitr::is_html_output()}
 knitr::include_graphics("imagenes/blau.png")
 ```
 
 El trabajo de Blau y Duncan resaltaba tres aspectos:  
 
-1. La utilización como criterio clasificatorio de un índice socio-económico (SEI)^[ver [capítulo 6][Propuestas gradacionales]]. Esta elección tenía dos fundamentos. En primer lugar, los autores asumían que la estructura ocupacional se configuraba de una manera más o menos continua, más que en clases discretas y separadas. En segundo lugar, el carácter gradacional era apropiado para la aplicación de determinadas técnicas estadísticas (correlaciones y regresiones) que el modelo analítico requería.  
+1. La utilización como criterio clasificatorio de un índice socio-económico (SEI)^[ver [Capítulo 6][Propuestas gradacionales]]. Esta elección tenía dos fundamentos. En primer lugar, los autores asumían que la estructura ocupacional se configuraba de una manera más o menos continua, más que en clases discretas y separadas. En segundo lugar, el carácter gradacional era apropiado para la aplicación de determinadas técnicas estadísticas (correlaciones y regresiones) que el modelo analítico requería.  
 
 2. La utilización de la técnica del *path analysis* (variante de la regresión lineal múltiple) para conocer los efectos directos e indirectos que ejercen cada una de las variables.  
 
@@ -172,9 +178,9 @@ rm(enes_hog, enes_ind)
 
 ### Recodificación de variables y filtros  
 
-Para el análisis de la movilidad social que realizaremos en las dos secciones posteriores necesitaremos recodificar una serie de variables para su correcto tratamiento. Empecemos por la principal, la clase social del/la encuestado/o. En este caso nos basaremos en el esquema EGP, que se encuentra codificado en la variable `egp11`. Al tenerlo en su versión desagregada de 11 clases, necesitaremos reagruparlo de tal forma que queden 5 clases. A continuación mostramos nuestra propuesta de agrupación y las líneas de comando necesarias para hacerlo:  
+Para el análisis de la movilidad social que realizaremos en las dos secciones posteriores necesitaremos recodificar una serie de variables para su correcto tratamiento. Empecemos por la principal, la clase social del/la encuestado/o. En este caso nos basaremos en el esquema EGP, que se encuentra codificado en la variable `egp11` —Tabla \@ref(tab:egpmov)—. Al tenerlo en su versión desagregada de 11 clases, necesitaremos reagruparlo de tal forma que queden 5 clases. A continuación mostramos nuestra propuesta de agrupación y las líneas de comando necesarias para hacerlo:  
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
+```{r egpmov, echo=FALSE, warning=FALSE, message=FALSE}
 egp_movilidad <- data.frame(c1 = c("Código", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"),
                     c2 = c("Esquema 11 clases", "I. Clase de servicios, alta", 
                            "II. Clase de servicios, baja", 
@@ -397,12 +403,13 @@ En el caso del género, las mujeres presentan un `17%` (`1,17` veces) más de op
 
 Cómo regla de oro, las razones de momios (coeficientes exponenciados) pueden variar de `0` a `infinito`, siendo `1` la presencia de independencia estadística. Valores mayores a `1` implican una mayor oportunidad de que un suceso ocurra, mientras que valores menores a `1` implican menores oportunidades de que un suceso ocurra.  
 
-Finalmente si lo que se quiere es presentar la comparación entre los dos modelos (o varios), tal como se suelen mostrar en las revistas científicas, recomendamos la instalación del paquete `huxtable`. Utilizando el comando `export_summs` e indicando en las opciones nuestros modelos, obtendremos las siguiente tabla:  
+Finalmente si lo que se quiere es presentar la comparación entre los dos modelos (o varios), tal como se suelen mostrar en las revistas científicas, recomendamos la instalación del paquete `huxtable`. Utilizando el comando `export_summs` e indicando en las opciones nuestros modelos, mediante el código: 
 
-
-```{r, results = 'asis', echo=TRUE}
+```{r, results = 'asis', echo=T, eval = F}
 export_summs(logit1, logit2, scale = TRUE)
 ```
+
+<!--obtendremos las siguiente tabla:-->
 
 <!-- ## Diagonal reference models -->
 

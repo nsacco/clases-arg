@@ -4,7 +4,6 @@
 
 La mayor parte de los ejercicios expuestos a lo largo de este Manual utilizan una o más funciones de **``R``** para resolver un problema específico. Se destaca que no se describen las funciones en detalle, ya que ellas pueden ser consultadas en otras publicaciones. Sin embargo, en este anexo, se presenta una introducción básica a la programación en `R` con `RStudio` y una selección de recursos disponibles para profundizar en su práctica.
 
-
 ## Introducción {#introR}
 
 **``R``** es un lenguaje de programación usado para realizar análisis estadístico y en general, análisis de datos. Se trata de un conjunto integrado de programas para trabajar con datos, cálculos y gráficos, que permite:
@@ -526,7 +525,7 @@ x <- scan()
 2: 6
 3: 3
 4: 4
-5:
+5: 2
 ```
 
 Para crear una secuencia de números, puede usar el comando `a:b`:
@@ -693,12 +692,13 @@ x <- matrix(1:16, ncol = 4)
 También se puede crear una matriz compuesta por números usando la función `matrix()`:
 
 ```{r matrix, include=TRUE, echo=TRUE}
-mi_matriz <- matrix(data = 1:10, # qué se incuye en la matriz
+mi_matriz <- matrix(data = 1:10, # qué se incluye en la matriz
                     ncol = 5, # número de columnas
                     nrow = 20, # número de filas
                     byrow = TRUE) # incluir el input
 
 mi_matriz
+
 ```
 
 Se puede indexar elementos de matrices en múltiples modos:

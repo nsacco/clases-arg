@@ -29,19 +29,25 @@ Esto no significa que no podamos estudiar la estructura de clases en el corto pl
 
 ### Algunos ejemplos de la bibliografía
 
-El estudio del cambio de la estructura de clases a través del tiempo fue una de las principales preocupaciones de los primeros trabajos sobre la temática realizados en Argentina. En este sentido, Gino Germani, pionero no sólo de la institucionalización de la sociología en el país sino en el estudio de la estructura social, en su principal obra, *Estructura social de la Argentina* [-@Germani1955], aborda los cambios producidos en las clases sociales a partir de la información censal disponible desde el censo de 1895. A continuación presentamos una tabla de una actualización de dicho trabajo en el que presenta un análisis de largo plazo, desde 1895 hasta 1960 [@Germani1971].
+El estudio del cambio de la estructura de clases a través del tiempo fue una de las principales preocupaciones de los primeros trabajos sobre la temática realizados en Argentina. En este sentido, Gino Germani, pionero no sólo de la institucionalización de la sociología en el país sino en el estudio de la estructura social, en su principal obra, *Estructura social de la Argentina* [-@Germani1955], aborda los cambios producidos en las clases sociales a partir de la información censal disponible desde el censo de 1895. 
+
+<!--A continuación presentamos una tabla de una actualización de dicho trabajo en el que presenta un análisis de largo plazo, desde 1895 hasta 1960 [@Germani1971].-->
 
 ```{r fig.cap= "Evolución de la estratificación social. 1869-1960. @Germani1971", fig.align='center', out.width = '80%', echo=FALSE, eval = knitr::is_html_output()}
 knitr::include_graphics("imagenes/germani3.png")
 ```
 
-Dicho trabajo fue continuado por Susana Torrado en su libro *Estructura social de la Argentina, 1945-1983* [-@Torrado1992], aunque aplicando el esquema de clases construido por la autora. Luego,  fueron incorporados los censos de 1980 a 2010 por Sacco  [-@Sacco2019], recontruyendo el esquema de clases de Torrado. A continuación presentamos una tabla similar, en el que se muestra la evolución de la estructura de clases desde 1947 hasta 1991, recurriendo también a información censal [@Torrado2007].
+Dicho trabajo fue continuado por Susana Torrado en su libro *Estructura social de la Argentina, 1945-1983* [-@Torrado1992], aunque aplicando el esquema de clases construido por la autora. Luego,  fueron incorporados los censos de 1980 a 2010 por Sacco  [-@Sacco2019], recontruyendo el esquema de clases de Torrado. 
+
+<!--A continuación presentamos una tabla similar, en el que se muestra la evolución de la estructura de clases desde 1947 hasta 1991, recurriendo también a información censal [@Torrado2007].-->
 
 ```{r fig.cap= "Evolución de la estructura de clases. Total país 1947-1991. @Torrado2007", fig.align='center', out.width = '80%', echo=FALSE, eval = knitr::is_html_output()}
 knitr::include_graphics("imagenes/torrado4.png")
 ```
 
-En otros trabajos se ha optado por el estudio de los cambios producidos en la estructura de clases pero en el mediano plazo. Para ello se ha recurrido fundamentalmente a la **EPH**, dado su carácter de relevamiento continuo y el tipo de variables socio-ocupacionales que contiene. De este modo podemos citar los trabajos de @Benza2016, @ChavezMolina2015, @Pla.etal2018, @Sacco2019 o @ChavezMolina.RodriguezdelaFuente2021. A continuación, a modo de ejemplo, presentamos la evolución de la estructura de clases argentina entre 2011 y 2019 en gráficos de barras [@ChavezMolina.RodriguezdelaFuente2021].
+En otros trabajos se ha optado por el estudio de los cambios producidos en la estructura de clases pero en el mediano plazo. Para ello se ha recurrido fundamentalmente a la **EPH**, dado su carácter de relevamiento continuo y el tipo de variables socio-ocupacionales que contiene. De este modo podemos citar los trabajos de @Benza2016, @ChavezMolina2015, @Pla.etal2018, @Sacco2019 o @ChavezMolina.RodriguezdelaFuente2021. 
+
+<!--Pasar esto y similares a inline code sobre para el output en html: A continuación, a modo de ejemplo, presentamos la evolución de la estructura de clases argentina entre 2011 y 2019 en gráficos de barras [@ChavezMolina.RodriguezdelaFuente2021].-->
 
 ```{r fig.cap= "Evolución de la estructura de clases. Total país 2011-2019. @ChavezMolina.RodriguezdelaFuente2021", fig.align='center', out.width = '80%', echo=FALSE, eval = knitr::is_html_output()}
 knitr::include_graphics("imagenes/clase_jose.png")
@@ -51,7 +57,7 @@ knitr::include_graphics("imagenes/clase_jose.png")
 
 Ahora veremos como llevar a cabo un análisis de clase a lo largo de un período. El estudio puede abordarse desde varias aristas. Podemos analizar como ha evolucionado la estructura de clases en su tamaño y/o composición o cómo ha evolucionado respecto a alguna variable dependiente (ingresos, riqueza, características habitacionales, etc.), por ejemplo. Puntualmente la evolución de las clases sociales entre 2011 y 2015, tomando como fuente de información a la **EPH**. A los fines de simplificar el ejemplo, trabajaremos únicamente con la población ocupada correspondiente a los segundos trimestres.
 
-Para ello, tal como hemos visto en el [Capítulo 2](#fuentes), descargaremos las bases utilizando el paquete `eph`, con su función *get_microdata*.
+Para ello, tal como hemos visto en el [Capítulo 2](#fuentes), descargaremos las bases utilizando el paquete `eph`, con su función `get_microdata`.
 
 ```{r, message=FALSE, warning=FALSE, echo=TRUE}
 eph_1115 <- get_microdata(year = 2011:2015, trimester = 2, type = "individual")
@@ -96,53 +102,34 @@ eph_1115 <- eph_1115 %>%
                         (cno12 == 32) | (cno12 >= 34 & cno12 <= 40) |
                         (cno12 >= 42 & cno12 <= 47) | (cno12 >= 49 & cno12 <= 54) | 
                         (cno12 >= 60 & cno12 <= 64) | (cno12 >= 70 & cno12 <= 92)) ~ 3,
-                        
                         (cno5 > 4) & (cno12 == 11 | cno12 == 42 | cno12 == 43 | 
                         cno12 == 50 | cno12 == 70 | cno12 == 81 | cno12 == 91) ~ 3,
-                        
                         (cno5 == 2) & ((cno12 >= 10 & cno12 <= 32) | (cno12 >= 34 & cno12 <= 54) | 
                         (cno12 >= 56 & cno12 <= 92)) ~ 4,
-                        
                         (cno5 == 1) & ((cno12 == 30 | cno12 == 31 | cno12 == 41 | cno12 == 48) | 
                         (cno12 >= 56 & cno12 <= 58) | (cno12 == 65)) ~ 4,
-                        
                         (cno5 == 3) & (cno12 == 40 | cno12 == 42 | cno12 == 43 | cno12 == 45 | 
                         cno12 == 91) ~ 4,
-                        
                         (cno5 == 4) & (cno12 == 42 | cno12 == 43 | cno12 == 45) ~ 4,
-                        
                         (cno5 > 4) & (cno12 == 40 | cno12 == 41 | cno12 == 44 | cno12 == 45 | 
                         cno12 == 46 | cno12 == 51 | cno12 == 92) ~ 4,
-                        
                         (cno5 == 3) & ((cno12 >= 10 & cno12 <= 32) | (cno12 == 35) | (cno12 == 41) | 
                         (cno12 == 54) | (cno12 == 81)) ~ 5,
-                        
                         (cno5 == 4) & ((cno12 >= 10 & cno12 <= 11) | (cno12 >= 30 & cno12 <= 32) | 
                         (cno12 == 35)) ~ 5,
-                        
                         (cno5 > 4) & ((cno12 == 10) | (cno12 >= 20 & cno12 <= 32) | (cno12 == 35)) ~ 5,
-                        
                         (cno5 == 1 | cno5 == 2) & (cno12 == 55) ~ 6,
-                        
                         (cno5 == 3) & ((cno12 == 34) | (cno12 == 36) | (cno12 == 44) | 
                         (cno12 >= 46 & cno12 <= 53) | (cno12 >= 55 & cno12 <= 80) | 
                         (cno12 == 82) | (cno12 == 90) | (cno12 == 92)) ~ 6,
-                        
                         (cno5 == 4) & ((cno12 == 44) | (cno12 == 49) | (cno12 == 53) | (cno12 == 57)) ~ 6,
-                        
                         (cno5 > 4) & ((cno12 == 34) | (cno12 >= 47 & cno12 <= 49) | (cno12 >= 52 & cno12 <= 54) | (cno12 >= 57 & cno12 <= 65) | (cno12 >= 71 & cno12 <= 80) | (cno12 >= 82 & cno12 <= 90)) ~ 6,
-                        
                         (cno12 == 33)	~ 7,
-                        
                         (cno5 == 4 | cno5 == 9) & ((cno12 == 20) | (cno12 == 34) | 
                         (cno12 >= 36 & cno12 <= 41) | (cno12 >= 46 & cno12 <= 48) |
                         (cno12 >= 50 & cno12 <= 52) | (cno12 == 54) | (cno12 == 56) | 
                         (cno12 >= 58 & cno12 <= 92)) ~ 7,
-                        
-                        (cno5 >= 4) & (cno12 == 55) ~ 8
-                        
-                        ,(cno12 == 99) | (is.na(cno12)) ~ 9))
-
+                        (cno5 >= 4) & (cno12 == 55) ~ 8, (cno12 == 99) | (is.na(cno12)) ~ 9))
 
 eph_1115$go_f <- factor(eph_1115$go, labels=c("Empresarios, directores de empresas y funcionarios públicos superiores",
                                           "Propietarios de establecimientos",
@@ -295,7 +282,7 @@ summarytools::freq(eph_1115_ocup$clase6_factor, weights = eph_1115_ocup$PONDERA,
   
 ```
 
-Finalmente ya estamos en condiciones de construir una nueva tabla en donde podamos cruzar la variable de clase social (`clase6_factor`) con la variable año (`ANO4`). Para ello, utilizaremos algunas de las herramientas del paquete `dplyr`. En primer lugar filtraremos aquellos casos perdidos (NA) para la variable de clase. Luego agruparemos los datos por año y clase (`group_by`) y contabilizaremos los casos (`tally`). Es importante notar que lo que sumamos son los casos brindados por la variable **PONDERA**, por eso es necesario declarar al ponderador a través del `wt = PONDERA`. Ya con las frecuencias absolutas por clase y año calculadas es posible llegar a los porcentajes. De este modo, volveremos a agrupar los datos por año y crearemos una nueva variable (`mutate`) que divida a cada frecuencia por su sumatoria total `(n/sum(n))` y la multiplique por `100`. Para hacer más fácil la lectura, dejaremos únicamente dos decimales. Finalmente para pasar de un formato largo de tabla a uno ancho, aplicaremos la función `spread`.
+Finalmente ya estamos en condiciones de construir una nueva tabla (no mostrsada en la salida) en donde podamos cruzar la variable de clase social (`clase6_factor`) con la variable año (`ANO4`). Para ello, utilizaremos algunas de las herramientas del paquete `dplyr`. En primer lugar filtraremos aquellos casos perdidos (NA) para la variable de clase. Luego agruparemos los datos por año y clase (`group_by`) y contabilizaremos los casos (`tally`). Es importante notar que lo que sumamos son los casos brindados por la variable **PONDERA**, por eso es necesario declarar al ponderador a través del `wt = PONDERA`. Ya con las frecuencias absolutas por clase y año calculadas es posible llegar a los porcentajes. De este modo, volveremos a agrupar los datos por año y crearemos una nueva variable (`mutate`) que divida a cada frecuencia por su sumatoria total `(n/sum(n))` y la multiplique por `100`. Para hacer más fácil la lectura, dejaremos únicamente dos decimales. Finalmente para pasar de un formato largo de tabla a uno ancho, aplicaremos la función `spread`.
 
 ```{r, message=FALSE, warning=FALSE, echo=TRUE}
 tabla_anios <- eph_1115_ocup %>%
@@ -307,8 +294,10 @@ tabla_anios <- eph_1115_ocup %>%
   select(clase6_factor, ANO4, percent) %>% 
   spread(ANO4, value = percent)
 
-knitr::kable(tabla_anios)
+
 ```
+
+<!--knitr::kable(tabla_anios). Arreglar tabla para salida HTML-->
 
 Es necesario aclarar que hay muchas formas de construir una tabla de doble entrada, así como de configurarla. Para ver otras opciones recomendamos explorar los paquetes `janitor` y `summarytools`.
 
@@ -362,13 +351,17 @@ Por limitaciones de las fuentes de información, en los estudios de estructuras 
 knitr::include_graphics("imagenes/tabla_solis.png")
 ```
 
-En Argentina, al igual que para el caso del análisis en el tiempo, los trabajos de Germani, Torrado y Sacco también abordaron el análisis de la dinámica del cambio en la estructura de clases en agregados geográficos subnacionales. El siguiente ejemplo de gráfico de barras [@Germani1955, pp 212], muestra, a partir del Censo Nacional de 1947, la distribución de las clases populares y medias por provincia.
+En Argentina, al igual que para el caso del análisis en el tiempo, los trabajos de Germani, Torrado también abordaron el análisis de la dinámica del cambio en la estructura de clases en agregados geográficos subnacionales. 
+
+<!--El siguiente ejemplo de gráfico de barras [@Germani1955, pp 212], muestra, a partir del Censo Nacional de 1947, la distribución de las clases populares y medias por provincia.-->
 
 ```{r fig.cap= "Estructura de clases en las distintas jurisdicciones del país. Gráfico extraído de @Germani.etal2010", fig.align='center', out.width = '100%', echo=FALSE, eval = knitr::is_html_output()}
 knitr::include_graphics("imagenes/germani_provincias.png")
 ```
 
-Posteriormente, bajo la asesoría general de Susana Torrado, desde Consejo Nacional de Inversiones [@CFI1988], se elaboraron informes para cada una de las provincias y el total país, en donde se caracterizaba la estratificación social y las condiciones de vida de la población, teniendo como fuente de datos el Censo Nacional de Población y Vivienda de 1980. Gran parte de dicho análisis fue retomado luego y publicado en el libro *Estructura social de la Argentina, 1945-1983* [@Torrado1992]. A continuación reproducimos una de las tablas en donde se analiza el tamaño de las clases sociales por regiones del país.
+Posteriormente, bajo la asesoría general de Susana Torrado, desde Consejo Nacional de Inversiones [@CFI1988], se elaboraron informes para cada una de las provincias y el total país, en donde se caracterizaba la estratificación social y las condiciones de vida de la población, teniendo como fuente de datos el Censo Nacional de Población y Vivienda de 1980. Gran parte de dicho análisis fue retomado luego y publicado en el libro *Estructura social de la Argentina, 1945-1983* [@Torrado1992]. 
+
+<!--A continuación reproducimos una de las tablas en donde se analiza el tamaño de las clases sociales por regiones del país.-->
 
 ```{r fig.cap= "Indicadores de la estructura social por regiones. 980. Torrado [@Torrado1992, pp 386]", fig.align='center', out.width = '100%', echo=FALSE, eval = knitr::is_html_output()}
 knitr::include_graphics("imagenes/torrado_regiones.png")
@@ -376,7 +369,9 @@ knitr::include_graphics("imagenes/torrado_regiones.png")
 
 Actualmente, con el avance y la difusión de la utilización de sistemas de información geográfica (SIG), se abrió la posibilidad de representación gráfica a través de mapas temáticos de información censal o proveniente de encuestas de hogares. Si bien aún en los estudios de estructura de clases no se ha tornado en una práctica frecuente, cada vez aparecen más trabajos que recurren a la representación geográfica de los datos para ilustrar los cambios y la evolución en la estructura social y de clases.
 
-Por ejemplo, Mike Savage y otros [-@Savage.etal2013] llevaron a cabo junto a la BBC una encuesta de representación nacional (*BBC's 2011 Great British Class Survey*), a través de la cual, a partir de la técnica de clases latentes, presentaron un nuevo abordaje en el estudio de las clases sociales conformado a partir de 7 clases. En ese trabajos, los autores recurren a una serie de mapas para demostrar cómo dichas clases se distribuyen al interior de Gran Bretaña. Por ejemplo, a continuación mostramos la distribución de la *clase trabajadora tradicional*.
+Por ejemplo, Mike Savage y otros [-@Savage.etal2013] llevaron a cabo junto a la BBC una encuesta de representación nacional (*BBC's 2011 Great British Class Survey*), a través de la cual, a partir de la técnica de clases latentes, presentaron un nuevo abordaje en el estudio de las clases sociales conformado a partir de 7 clases. En ese trabajos, los autores recurren a una serie de mapas para demostrar cómo dichas clases se distribuyen al interior de Gran Bretaña. 
+
+<!--Por ejemplo, a continuación mostramos la distribución de la *clase trabajadora tradicional*.-->
 
 ```{r fig.cap= "Distribución espacial de la clase trabajadora tradicional. Savage et al. [-@Savage.etal2013, pp 241]", fig.align='center', out.width = '80%', echo=FALSE, eval = knitr::is_html_output()}
 knitr::include_graphics("imagenes/savage_regiones.png")
@@ -386,7 +381,7 @@ knitr::include_graphics("imagenes/savage_regiones.png")
 
 Ahora veremos como llevar a cabo un análisis de clase según información espacial. Cómo dijimos anteriormente, la profundidad del tipo de análisis que podamos realizar va a depender del tipo de fuente con la que trabajemos. En este caso, vamos a aprovechar el pool de bases de **EPH** que hemos pegado para los años 2011 a 2015.
 
-En forma simple vamos a indagar como se distribuyen las clases sociales al interior de cada una de las regiones identificadas por **INDEC**. En primer lugar, construyamos una tabla de doble entrada que nos permita mostrar dicha información.
+En forma simple vamos a indagar como se distribuyen las clases sociales al interior de cada una de las regiones identificadas por **INDEC**. En primer lugar, construyamos una tabla (no mostrada) de doble entrada que nos permita mostrar dicha información.
 
 ```{r, message=FALSE, warning=FALSE, echo=TRUE}
 # 1) Creo una variable factor con los nombres de las regiones (region_f)
@@ -403,8 +398,10 @@ tabla_regiones <- eph_1115_ocup %>%
   select(clase6_factor, region_f, percent) %>% 
   spread(region_f, value = percent)
 
-knitr::kable(tabla_regiones)
+
 ```
+
+<!--knitr::kable(tabla_regiones)-->
 
 Finalmente presentamos un ejemplo de representación de la tabla anteriormente construida en un mapa temático. **`R`** posee varias librerías para manipular información de tipo geográfica. En este caso utilizaremos el paquete `sf`. Lo que haremos es representar en mapas en miniatura de Argentina, el porcentaje de individuos pertenecientes a cada clase social por región.
 
