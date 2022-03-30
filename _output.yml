@@ -1,3 +1,11 @@
+bookdown::word_document2:
+  fig_caption: yes
+  reference_docx: "plantilla_eduntref.docx"
+  toc: yes
+  pandoc_args: [
+      "-M", "toc-title=Contenidos"
+    ]
+
 bookdown::gitbook:
   css: style.css
   split_bib: false
@@ -23,10 +31,5 @@ bookdown::html_document2:
   keep_md: true
   fig_caption: TRUE
 
-bookdown::word_document2:
-  fig_caption: yes
-  reference_docx: "plantilla_eduntref.docx"
-  toc: yes
-  pandoc_args: [
-      "-M", "toc-title=Contenidos"
-    ]
+
+

@@ -142,8 +142,8 @@ eph_ind_319s %>%
   set_table_properties(width = 1, layout = "autofit") %>% 
   set_caption("Recorte base de datos EPH individual. Año 2019 - tercer trimestre") %>% 
   add_footer_row(values = "Fuente: EPH - INDEC", colwidths = 10) %>% 
-  fontsize(part = "all", size = 8) %>% 
-  bold(part = "header")
+  fontsize(part = "all", size = 8) # %>% 
+#  bold(part = "header")
 ```
 <br>
 La base cuenta con `r nrow(eph_ind_319)` registros-filas (individuos) y `r ncol(eph_ind_319)` columnas (variables):
@@ -322,8 +322,8 @@ eph_319s %>%
   set_table_properties(width = 1, layout = "autofit") %>% 
   set_caption("Recorte base de datos EPH individual - hogar. Año 2019 - tercer trimestre") %>% 
   add_footer_row(values = "Fuente: EPH - INDEC", colwidths = 6) %>% 
-  fontsize(part = "all", size = 8) %>% 
-  bold(part = "header")
+  fontsize(part = "all", size = 8) #%>% 
+#  bold(part = "header")
 ```
 
 De este modo, el `dataframe` resultante (`eph_319`) presenta la estructura de la base de individuos y para cada registro (individuo), se agrega la información correspondiente a su hogar. Por último, etiquetaremos las variables y categorías de las bases con la función ```organize_labels```.

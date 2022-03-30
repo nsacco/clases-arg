@@ -55,7 +55,6 @@ text_kerbo <- data.frame(
 )
 ```
 
-<!--
 ```{r, message=FALSE, warning=FALSE, echo=FALSE, eval = knitr::is_html_output()}
 kable(text_kerbo, 
 			col.names = c("", "", "Críticos", "No críticos"),	caption = "Tipología de paradigmas de la estratificación social") %>%
@@ -64,9 +63,8 @@ kable(text_kerbo,
 	collapse_rows(columns = 1, valign = "middle") %>% 
 	footnote(general = "Kerbo (2003, p. 83)", general_title = "Fuente: ", footnote_as_chunk = T)
 ```
--->
 
-```{r textkerbo, echo=FALSE, warning=FALSE, message=FALSE}
+```{r textkerbo, echo=FALSE, warning=FALSE, message=FALSE, eval = !knitr::is_html_output()}
 text_kerbo %>% 
   flextable() %>% 
   set_table_properties(width = 1, layout = "autofit") %>% 
