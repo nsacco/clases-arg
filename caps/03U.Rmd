@@ -19,15 +19,15 @@ Al completar este capítulo se espera que les lectores puedan:
 
 Para una mayor comprensión del capítulo recomendamos la lectura de los siguientes documentos:
 
-De Grande, P. (2016): "El formato Redatam". *Estudios demográficos y urbanos*, Vol. 31, Núm. 3 (93), pp. 811-832. [Link](https://estudiosdemograficosyurbanos.colmex.mx/index.php/edu/article/view/15/pdf){target="_blank"}.
+- De Grande, P. (2016): "El formato Redatam". *Estudios demográficos y urbanos*, Vol. 31, Núm. 3 (93), pp. 811-832. [Link](https://estudiosdemograficosyurbanos.colmex.mx/index.php/edu/article/view/15/pdf){target="_blank"}.
 
-Observatorio Latinoamericano de Censos de Población [OLAC](https://observatoriocensal.org/){target="_blank"}.
+- Observatorio Latinoamericano de Censos de Población [OLAC](https://observatoriocensal.org/){target="_blank"}.
 
-Robert McCaa, Albert Esteve, Steven Ruggles y Matthew Sobek (2004): "La integración de los microdatos censales de América Latina: el proyecto IPUMS-América Latina", *Estudios Demográficos y Urbanos*, 20(1), 37-70.
+- Robert McCaa, Albert Esteve, Steven Ruggles y Matthew Sobek (2004): "La integración de los microdatos censales de América Latina: el proyecto IPUMS-América Latina", *Estudios Demográficos y Urbanos*, 20(1), 37-70.
 
-Sacco, N. (2017): "¿Cierran los números con la gente adentro?". *Estudios Demográficos y Urbanos*, 32(96), 631-667. doi: 10.24201/edu.v32i3.1648.
+- Sacco, N. (2017): "¿Cierran los números con la gente adentro?". *Estudios Demográficos y Urbanos*, 32(96), 631-667. doi: 10.24201/edu.v32i3.1648.
 
-Torrado, S. (1992):'Para leer "Estructura social de la Argentina"' en Jorrat, J. R. & Sautu, R. (Eds.) *Después de Germani: Exploraciones sobre estructura social de la Argentina*, Paidós.
+- Torrado, S. (1992):'Para leer "Estructura social de la Argentina"' en Jorrat, J. R. & Sautu, R. (Eds.) *Después de Germani: Exploraciones sobre estructura social de la Argentina*, Paidós.
 
 ## Clases sociales y censos de población {#clases3}
 
@@ -65,9 +65,9 @@ Los censos de población modernos, aquellos llevados a cabo en 1960, 1970, 1980,
 
 ### Las características económicas en los censos de población
 
-Las preguntas referidas a las variables económicas de la población tuvieron un acrecentamiento importante a lo largo de los censos de población [@Minujin1987, p. 49]. Desde una simple pregunta abierta en 1869 se pasó, ya para 1980, a una batería de seis preguntas que permitirían una captación más amplia de la población económicamente activa (PEA), al mismo tiempo que se complejizó la estructura de las preguntas, así como su instrucción y codificación. En la Tabla \@ref(fig:censos1) se observa el conjunto de información sobre las *características económicas* de la población que se relevaron a lo largo de los censos modernos, quienes se basaron (exceptuado al censo de 1947) en las recomendaciones internacionales para la conceptualización de las variables económicas siguiendo el enfoque de fuerza de trabajo, que sugiere el registro de la ocupación *actual* en un periodo breve y reciente. La cobertura temática cubrió una amplia gama de variables.
+Las preguntas referidas a las variables económicas de la población tuvieron un acrecentamiento importante a lo largo de los censos de población [@Minujin1987, p. 49]. Desde una simple pregunta abierta en 1869 se pasó, ya para 1980, a una batería de seis preguntas que permitirían una captación más amplia de la población económicamente activa (PEA), al mismo tiempo que se complejizó la estructura de las preguntas, así como su instrucción y codificación. En la Tabla \@ref(tab:censos1) se observa el conjunto de información sobre las *características económicas* de la población que se relevaron a lo largo de los censos modernos, quienes se basaron (exceptuado al censo de 1947) en las recomendaciones internacionales para la conceptualización de las variables económicas siguiendo el enfoque de fuerza de trabajo, que sugiere el registro de la ocupación *actual* en un periodo breve y reciente. La cobertura temática cubrió una amplia gama de variables.
 
-```{r censos1, fig.cap="Variables económicas de la población en los censos modernos. Argentina, 1947-2010", echo=FALSE}
+```{r censos1, echo=FALSE}
 censos1 <- data.frame(c1 = c("Condición de actividad", "Categoría ocupacional",
                              "Profesión u oficio/ Ocupación", "Ocupación secundaria",
                              "Rama de actividad", "Dedicación del establecimiento",
@@ -97,7 +97,7 @@ censos1 %>%
                     c5 = "1980", c6 = "1991", c7 = "2001", c8 = "2010") %>% 
   align(part = "all", align = "center") %>% 
   bold(part = "header") %>% 
-#  set_caption("Características de los censos modernos") %>% 
+  set_caption("Variables económicas de la población en los censos modernos. Argentina, 1947-2010") %>% 
   add_footer_row(values = "Giusti (2007, p. 224)",
                  colwidths = 8) %>% 
   fontsize(part = "all", size = 10) %>% 
@@ -109,7 +109,7 @@ censos1 %>%
 
 Esta perspectiva no está exenta de críticas, ya que se le suele señalar que fue delineada de acuerdo al modelo de economías centrales capitalistas de alta industrialización, con ocupaciones estables y por ello, no adecuada para países en desarrollo, es decir, imposibilitada de captar ciertas franjas laborales (por ejemplo, economías agrícolas, de subsistencia, trabajo esporádico, discontinuo). Kritz [-@Kritz1987] señaló que los supuestos de este enfoque asumen que: i) es exógena la oferta de mano de obra (estabilidad de las tasas de participación dependientes de atributos asociados a la situación demográfica); ii) la demanda depende de agentes económicos diferentes de los oferentes; iii) homogeneidad del mercado de trabajo (no segmentación); iv) la situación ocupacional es bipolar (supuestos que no se darían en la Argentina).
 
-De acuerdo a lo esquematizado en la Tabla \@ref(fig:censos2), las variables, sus sistemas clasificatorios y los universos de observación presentan divergencias entre los censos de 1980 a 2010.
+De acuerdo a lo esquematizado en la Tabla \@ref(tab:censos2), las variables, sus sistemas clasificatorios y los universos de observación presentan divergencias entre los censos de 1980 a 2010.
 
 ```{r censos2, fig.cap="Sistemas clasificatorios de las variables económicas de la población en los censos modernos. Argentina, 1947-2010", echo=FALSE}
 censos2 <- data.frame(c1 = c("Condición de Actividad", "Categoría de Ocupación", 
@@ -135,7 +135,7 @@ censos2 %>%
                     c5 = "CEN-10") %>% 
   align(part = "all", align = "center") %>% 
   bold(part = "header") %>% 
-#  set_caption("Codificaciones de los datos disponibles respecto a las características económicas de la población por cobertura temática según censos. Argentina, 1980-2010") %>% 
+  set_caption("Codificaciones de los datos disponibles respecto a las características económicas de la población por cobertura temática según censos. Argentina, 1980-2010") %>% 
   add_footer_row(values = "Elaboración propia en base a censos nacionales de población.", colwidths = 5) %>% 
   fontsize(part = "all", size = 10) %>% 
   fontsize(part = "footer", size = 9) %>% 
@@ -186,9 +186,9 @@ Más allá de los tabulados disponibles y publicaciones con resultados discrimin
 
 Mientras que en las primeras tres se trata de recursos disponibles en internet, la ante-última demanda diferentes tipos de procedimiento para dar trámite a la solicitud de datos, que pueden implicar la presencia física en el INDEC e incluso el cobro de haberes por el servicio. Asimismo, mientras que la mayoría de estas modalidades de difusión y liberación de datos censales son definidas y gestionadas por el INDEC, la opción de utilizar los datos disponibles en IPUMS-I requiere aceptar una serie de condiciones dispuestas por la Universidad de Minnesota (registración, cita, etc.). Se describe a continuación cada caso en particular.
 
-### Procesamiento de datos en línea[^u-1]
+### Procesamiento de datos en línea[^u-2]
 
-[^u-1]: Nota: parte de esta sección fue tomada de del sitio web de OLAC.
+[^u-2]: Nota: parte de esta sección fue tomada de del sitio web de OLAC.
 
 Las herramientas de procesamiento de datos censales en línea han significado un gran avance para los usuarios interesados en producir rápidamente un conjunto de tabulados básicos de interés. Esta estrategia consiste en la posibilidad de acceder remotamente a las bases datos y a un conjunto de variables censales, definir qué variables se quieren utilizar en el análisis descriptivo y su desagregación territorial, y la posterior descarga de los tabulados en distintos formatos.
 

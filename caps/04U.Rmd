@@ -68,7 +68,7 @@ La relación entre la población que contribuye a los procesos productivos en el
 
 ## Las variables socio-ocupacionales
 
-Las variables económicas de la población no han sido siempre las mismas, desde el censo de 1947 hasta el censo 2010, observándose una ampliación en la información recabada, según el número de variables a las que se hace referencia [@Sacco2015]. Como se vio en el [capítulo 4](#fuentes2), si comparamos los censos a partir del de 1980 hasta el último, realizado en 2010, veremos cómo se ha diversificado la manera de medir la actividad económica en Argentina. Por su parte, las diferentes variables que ofrece la **EPH** (Tabla \@ref(fig:censos2) son similares a las del censo pero con algunas variaciones. Todas las variables aquí incluidas se encuentran disponibles en la base de Personas de la **EPH**.  
+Las variables económicas de la población no han sido siempre las mismas, desde el censo de 1947 hasta el censo 2010, observándose una ampliación en la información recabada, según el número de variables a las que se hace referencia [@Sacco2015]. Como se vio en el [Capítulo 4](#fuentes2), si comparamos los censos a partir del de 1980 hasta el último, realizado en 2010, veremos cómo se ha diversificado la manera de medir la actividad económica en Argentina. Por su parte, las diferentes variables que ofrece la **EPH** (Tabla \@ref(tab:vars1) son similares a las del censo pero con algunas variaciones. Todas las variables aquí incluidas se encuentran disponibles en la base de Personas de la **EPH**.  
 
 <!--
 ```{r fig.cap= "Principales variables socio-ocupacionales de la EPH", fig.align='center', out.width = '80%', echo=FALSE, eval = knitr::is_html_output()}
@@ -235,14 +235,13 @@ Clasifica la ocupación según la complejidad del proceso de trabajo específico
 
 Es importante realizar la distinción entre calificación de la ocupación y calificación requerida para la ocupación. La primera es la calificación del proceso de trabajo que involucra a dicha ocupación y la segunda es el nivel de formación necesario para acceder a cierta ocupación. En este caso, el 5º dígito del **CNO-17** hace referencia a la primera de las acepciones.
 
-Ilustramos, con un ejemplo, la clasificación en su mayor nivel de desagregación, a 5 dígitos, mostrando en el siguiente cuadro realizado por Chávez Molina et al. [-@ChavezMolina.etal2020] el código ocupacional de los "Jefes de la producción industrial y artesanal con calificación profesional (80201)".
-
+Ilustramos, con un ejemplo —Tabla \@ref(tab:cnotabla)—, la clasificación en su mayor nivel de desagregación, a 5 dígitos, mostrando en el siguiente cuadro realizado por Chávez Molina et al. [-@ChavezMolina.etal2020] el código ocupacional de los "Jefes de la producción industrial y artesanal con calificación profesional (80201)".
 
 ```{r, echo = F, warning = F, message = F, fig.cap = 'Jefes de la producción industrial y artesanal con calificación profesional (80201)', fig.width = 0.2, fig.height = 0.5, fig.asp=0.50, out.width = "80%", fig.align = "center", eval = knitr::is_html_output()}
 knitr::include_graphics("imagenes/t5_u4.png")
 ```
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE, eval = !knitr::is_html_output()}
+```{r cnotabla, echo=FALSE, warning=FALSE, message=FALSE, eval = !knitr::is_html_output()}
 
 cno_tabla <- data.frame(c1 = c("1° y 2°", "3°", "4°", "5°"),
                         c2 = c("Carácter", "Jerarquía", "Tecnología", "Calificación"),
@@ -263,7 +262,7 @@ cno_tabla %>%
 ```
 
 
-Dentro del grupo 80201 se encuentran ocupaciones tales como "Jefe de planta industrial" y "Jefe de laboratorio". El primer dígito, señala al grupo 8, que define tareas vinculadas a la producción de bienes, ya sea industrial o artesanal. Incluyendo un mayor nivel de detalle a dos dígitos, el grupo 80, alude a ocupaciones relativas a la transformación de materias primas para la elaboración de bienes industriales o artesanales, tanto bienes finales como intermedios. El 3º dígito permite establecer que la ocupación se inserta en una posición de jefatura. Al 4º código de la tecnología siempre se le adjudica el valor de 0 en los casos de patrones, directores y jefes. Por último, el 5º dígito describe que esta ocupación presenta una calificación profesional.
+Dentro del grupo `80201` se encuentran ocupaciones tales como "Jefe de planta industrial" y "Jefe de laboratorio". El primer dígito, señala al grupo 8, que define tareas vinculadas a la producción de bienes, ya sea industrial o artesanal. Incluyendo un mayor nivel de detalle a dos dígitos, el grupo 80, alude a ocupaciones relativas a la transformación de materias primas para la elaboración de bienes industriales o artesanales, tanto bienes finales como intermedios. El 3º dígito permite establecer que la ocupación se inserta en una posición de jefatura. Al 4º código de la tecnología siempre se le adjudica el valor de 0 en los casos de patrones, directores y jefes. Por último, el 5º dígito describe que esta ocupación presenta una calificación profesional.
 
 #### Compatibilidad entre la CNO y la CIUO
 
@@ -307,15 +306,13 @@ Tanto en la **EPH** como en el censo, se ha utilizado la codificación disponibl
 
 En el censo de 1980, fue codificada según la “Clasificación Industrial Internacional Uniforme de Actividades Económicas” (**CIIU**) de las Naciones Unidas (Revisión 2-1968), hasta el nivel de ramas específicas (dos dígitos). Para 1991 y 2001 esta variable no presentó modificaciones sustanciales. Más información puede encontrarse en este [link](https://www.indec.gob.ar/micro_sitios/clanae/default.asp).
 
-En la **EPH** entre 1974, su primera onda, hasta 1980 inclusive, se han utilizado los tres primeros dígitos de la **CIIU**, Revisión 2, aunque la codificación original consta de hasta 5 dígitos a su nivel más detallado. A partir del año 1997, se ha utilizado la “Clasificación Nacional de Actividades Económicas” (ClaNAE-97) con un detalle a cinco dígitos. Más tarde, desde 2011, la **EPH** distingue las ramas de actividad según la “Clasificación de Actividades Económicas para Encuestas Sociodemográficas del Mercosur” (**CAES Mercosur 1.0**), utilizando los 5 dígitos del código. Así mismo, esta última versión del CAES es totalmente compatible con el **CIIU** en su revisión 4. En la Tabla \@ref(fig:caes10) se observa un ejemplo de la CAES:
+En la **EPH** entre 1974, su primera onda, hasta 1980 inclusive, se han utilizado los tres primeros dígitos de la **CIIU**, Revisión 2, aunque la codificación original consta de hasta 5 dígitos a su nivel más detallado. A partir del año 1997, se ha utilizado la “Clasificación Nacional de Actividades Económicas” (ClaNAE-97) con un detalle a cinco dígitos. Más tarde, desde 2011, la **EPH** distingue las ramas de actividad según la “Clasificación de Actividades Económicas para Encuestas Sociodemográficas del Mercosur” (**CAES Mercosur 1.0**), utilizando los 5 dígitos del código. Así mismo, esta última versión del CAES es totalmente compatible con el **CIIU** en su revisión 4. En la Tabla \@ref(tab:caes10) se observa un ejemplo de la CAES:
 
-<!--
 ```{r fig.cap= "Ejemplo clasificación de Actividades Profesionales, Científicas y Técnicas - CAES 1.0 [@INDEC2011d]", fig.align='center', out.width = '80%', echo=FALSE, eval = knitr::is_html_output()}
 knitr::include_graphics("imagenes/caes10.png")
 ```
--->
 
-```{r caes10, fig.cap= "Ejemplo clasificación de Actividades Profesionales, Científicas y Técnicas - CAES 1.0 [@INDEC2011d]", fig.align='center', out.width = '80%', echo=FALSE, eval = knitr::is_html_output()}
+```{r caes10, fig.cap= "Ejemplo clasificación de Actividades Profesionales, Científicas y Técnicas - CAES 1.0 [@INDEC2011d]", fig.align='center', out.width = '80%', echo=FALSE, eval = !knitr::is_html_output()}
 
 caes_tabla <- data.frame(c1 = c("M", "69",	"6900",	"70",	"7000",	"71",	"7100",	"72",	"7200",
                                 "73",	"7301",	"7302",	"74",	"7400",	"75",	"7500"),
@@ -348,9 +345,9 @@ caes_tabla %>%
   fontsize(part = "all", size = 10)                            
 ```
 
-En la siguiente Tabla \@ref(fig:caes2) podemos ver todas las clasificaciones que se han ido implementando para codificar las ramas de actividad económica.
+En la siguiente Tabla \@ref(tab:caes2) podemos ver todas las clasificaciones que se han ido implementando para codificar las ramas de actividad económica.
 
-```{r fig.cap= "Clasificadores de la rama de actividad", fig.align='center', out.width = '80%', echo=FALSE, eval = knitr::is_html_output()}
+```{r, fig.cap= "Clasificadores de la rama de actividad", fig.align='center', out.width = '80%', echo=FALSE, eval = knitr::is_html_output()}
 knitr::include_graphics("imagenes/t4_u4.png")
 ```
 
@@ -373,7 +370,6 @@ caes_tabla2 %>%
   add_footer_row(values = "Fuente: elaboración propia", colwidths = 3) %>% 
   fontsize(part = "all", size = 10)                            
 ```
-
 
 ### Categoría de Ocupación
 

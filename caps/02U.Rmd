@@ -124,7 +124,7 @@ Como buena práctica en la organización de la información que vamos utilizando
 eph_ind_319 <- read.csv2("bases/Usu_individual_T319.txt", header = TRUE, sep = ";", dec = ",")
 ```
 
-Observando los primeros 15 registros de la base podemos dar cuenta que la misma se ha cargado correctamente y explorar las distintas variables que contiene. 
+Observando los primeros 15 registros —Tabla \@ref(tab:ephind319s)— de la base podemos dar cuenta que la misma se ha cargado correctamente y explorar las distintas variables que contiene. 
 
 <br>
 
@@ -135,7 +135,7 @@ paged_table(eph_ind_319s)
 ```
 
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE, eval = !knitr::is_html_output()}
+```{r ephind319s, echo=FALSE, warning=FALSE, message=FALSE, eval = !knitr::is_html_output()}
 eph_ind_319s %>% 
   select(c(1:10)) %>% 
   flextable() %>% 
@@ -155,9 +155,9 @@ ncol(eph_ind_319)
 
 #### Bases 2003-2015
 
-En el caso de las bases de microdatos pertenecientes al período 2003-2015, podemos encontrarlas en formato ```.sav``` (SPSS) y ```.dta``` (STATA). Ambos formatos pueden ser importados desde __`R`__ a través de la librería __```haven```__.
+En el caso de las bases de microdatos pertenecientes al período 2003-2015, podemos encontrarlas en formato `.sav` (SPSS) y `.dta` (STATA). Ambos formatos pueden ser importados desde __`R`__ a través de la librería __```haven```__.
 
-En este ejemplo utilizaremos la base de hogares del cuarto trimestre de 2014 ([Hogar_t414](https://www.indec.gob.ar/ftp/cuadros/menusuperior/eph/t414_sav.rar){target="_blank"}) y la descargaremos en formato ```.sav```.
+En este ejemplo —Tabla \@ref(tab:ephhog414)— utilizaremos la base de hogares del cuarto trimestre de 2014 ([Hogar_t414](https://www.indec.gob.ar/ftp/cuadros/menusuperior/eph/t414_sav.rar){target="_blank"}) y la descargaremos en formato ```.sav```.
 
 ```{r, echo=TRUE}
 eph_hog_414 <- read_sav("bases/Hogar_t414.sav")
@@ -171,7 +171,7 @@ eph_hog_414 <- eph_hog_414 %>%
 paged_table(eph_hog_414)
 ```
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE, eval = !knitr::is_html_output()}
+```{r ephhog414, echo=FALSE, warning=FALSE, message=FALSE, eval = !knitr::is_html_output()}
 
 eph_hog_414 %>% 
   select(c(1:10)) %>% 
@@ -193,7 +193,7 @@ Como hemos señalado, las bases anteriores a 2003 se encuentran únicamente en f
 eph_ind_74 <- read.dbf("bases/PERSO_US.DBF")
 ```
 
-Aquí podemos ver los primeros 15 registros de la base:
+En la Tabla \@ref(tab:ephind74) podemos ver los primeros 15 registros de la base:
 
 ```{r, echo=FALSE}
 eph_ind_74 <- eph_ind_74 %>% 
@@ -201,7 +201,7 @@ eph_ind_74 <- eph_ind_74 %>%
 paged_table(eph_ind_74, options = list(rows.print = 15))
 ```
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE, eval = !knitr::is_html_output()}
+```{r ephind74, echo=FALSE, warning=FALSE, message=FALSE, eval = !knitr::is_html_output()}
 
 eph_ind_74 %>% 
   select(c(1:9)) %>% 
@@ -306,7 +306,7 @@ eph_319 <- eph_319 %>%
 	select(!(ends_with(".y"))) 
 ```
 
-Teniendo en cuenta los primeros 15 casos, podemos observar que el número de variables asciende a `r ncol(eph_319)`:
+Teniendo en cuenta los primeros 15 casos —Tabla \@ref(tab:eph319s)—, podemos observar que el número de variables asciende a `r ncol(eph_319)`:
 
 ```{r echo=FALSE}
 eph_319s <- eph_319 %>%
@@ -314,7 +314,7 @@ eph_319s <- eph_319 %>%
 paged_table(eph_319s)
 ```
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE, eval = !knitr::is_html_output()}
+```{r eph319s, echo=FALSE, warning=FALSE, message=FALSE, eval = !knitr::is_html_output()}
 
 eph_319s %>% 
   select(c(1:6)) %>% 

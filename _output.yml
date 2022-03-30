@@ -23,16 +23,10 @@ bookdown::html_document2:
   keep_md: true
   fig_caption: TRUE
 
-
 bookdown::word_document2:
   fig_caption: yes
   reference_docx: "plantilla_eduntref.docx"
   toc: yes
-  toc-title: "INDICE"
-
-#bookdown::pdf_book:
-#  latex_engine: xelatex
-
-word_document:
-  reference_docx: "plantilla_eduntref.docx"
-
+  pandoc_args: [
+      "-M", "toc-title=Contenidos"
+    ]

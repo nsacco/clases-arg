@@ -21,7 +21,7 @@ library(ggplot2)
 library(grDevices)
 library(flextable)
 
-knitr::opts_chunk$set(tidy.opts = list(width.cutoff = 80),tidy = TRUE, warning = FALSE, message = FALSE, fig.align = 'center', fig.topcaption = TRUE, options(scipen = 999, OutDec = "."), comment=NA)
+knitr::opts_chunk$set(tidy.opts = list(width.cutoff = 80),tidy = TRUE, cache = TRUE, warning = FALSE, message = FALSE, fig.align = 'center', fig.topcaption = TRUE, options(scipen = 999, OutDec = "."), comment = NA)
 
 #windowsFonts(times = windowsFont("Times New Roman"))
 

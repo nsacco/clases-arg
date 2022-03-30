@@ -2,7 +2,7 @@
 
 Este capítulo tiene como propósito presentar los diversos abordajes teórico-empíricos más utilizados en el estudio de la estratificación social, a nivel internacional y nacional, fundamentalmente desde una mirada operacional.
 
-Presentados ya los principales enfoque teóricos en el [capítulo 2](#estructura1), en esta sección se focaliza en las operaciones que se realizan desde el punto de vista metodológico, siguiendo criterios teóricos, para hacer posible la medición de estratos y clases sociales definidas en términos conceptuales. Para esto revisaremos algunas de las propuestas más utilizadas.
+Presentados ya los principales enfoque teóricos en el [Capítulo 2](#estructura1), en esta sección se focaliza en las operaciones que se realizan desde el punto de vista metodológico, siguiendo criterios teóricos, para hacer posible la medición de estratos y clases sociales definidas en términos conceptuales. Para esto revisaremos algunas de las propuestas más utilizadas.
 
 Estas preguntas guian el capítulo:  
 - ¿Qué enfoques teóricos sobre las clases sociales fueron operacionalizados empíricamente?  
@@ -21,21 +21,21 @@ Al finalizar el capítulo se espera que los lectores puedan:
 
 Para una mayor comprensión del capítulo recomendamos la lectura de los siguientes documentos: 
 
-Clemenceau, L., Fernández Melián, M. C., y Rodríguez de la Fuente, J. [-@Clemenceau.etal2016]. Análisis de esquemas de clasificación social basados en la ocupación desde una perspectiva teórica-metodológica comparada. Documentos de Jóvenes Investigadores IIGG, 44.
+- Clemenceau, L., Fernández Melián, M. C., y Rodríguez de la Fuente, J. [-@Clemenceau.etal2016]. Análisis de esquemas de clasificación social basados en la ocupación desde una perspectiva teórica-metodológica comparada. Documentos de Jóvenes Investigadores IIGG, 44.
 
-Francés García, F. J. [-@FrancesGarcia2009]. Elementos para el estudio de la estratificación social en las sociedades avanzadas: Estrategias operativas. Revista Obets, 3.  
+- Francés García, F. J. [-@FrancesGarcia2009]. Elementos para el estudio de la estratificación social en las sociedades avanzadas: Estrategias operativas. Revista Obets, 3.  
 
-Torrado, S. [-@Torrado1998d]. La medición empírica de las clases sociales. En Familia y diferenciación social. Buenos Aires: Eudeba.
+- Torrado, S. [-@Torrado1998d]. La medición empírica de las clases sociales. En Familia y diferenciación social. Buenos Aires: Eudeba.
 
-Sacco, N. [-@Sacco2019]. Estructura social de la Argentina, 1976-2011. Trabajo y sociedad, (32), 25–51, (Anexo metodológico).
+- Sacco, N. [-@Sacco2019]. Estructura social de la Argentina, 1976-2011. Trabajo y sociedad, (32), 25–51, (Anexo metodológico).
 
-Carabaña, J. [-@Carabana1997]. Esquemas y estructuras. Revista crítica de ciências sociais, (49), 67-91. 
+- Carabaña, J. [-@Carabana1997]. Esquemas y estructuras. Revista crítica de ciências sociais, (49), 67-91. 
 
-Barozet, E. [-@Barozet2007]. La variable ocupación en los estudios de estratificación social.
+- Barozet, E. [-@Barozet2007]. La variable ocupación en los estudios de estratificación social.
 
-Sautu, R., Dalle, P., Otero, M. P., y Rodríguez, S. [-@Sautu.etal2007]. La construcción de un esquema de clases a partir de datos secundarios. (Documento de Cátedra II. 4). Metodología de la Investigación Social II, Cátedra Sautu, Facultad de Ciencias Sociales-UBA.  
+- Sautu, R., Dalle, P., Otero, M. P., y Rodríguez, S. [-@Sautu.etal2007]. La construcción de un esquema de clases a partir de datos secundarios. (Documento de Cátedra II. 4). Metodología de la Investigación Social II, Cátedra Sautu, Facultad de Ciencias Sociales-UBA.  
 
-Rodríguez de la Fuente, J. J. [-@RodriguezdelaFuente2020]. Del origen de clase a las condiciones de vida actuales. Movilidad social y bienestar material en la Ciudad de Buenos Aires (2004-2015). Buenos Aires: Teseo Press. (Capítulo 2. Diseño Metodológico)
+- Rodríguez de la Fuente, J. J. [-@RodriguezdelaFuente2020]. Del origen de clase a las condiciones de vida actuales. Movilidad social y bienestar material en la Ciudad de Buenos Aires (2004-2015). Buenos Aires: Teseo Press. (Capítulo 2. Diseño Metodológico)
 
 ## De las clases en el papel a las clases en la computadora {#computadora}
 
@@ -90,7 +90,7 @@ En referencia a los criterios operacionales que implica la construcción del esq
 3. la distinción no manual – manual – agrícola, y  
 4. el tipo de relación de empleo (de servicios o relación contractual).  
 
-En el siguiente esquema se detallan los principales criterios de clasificación y la asignación de las clases.  
+En la siguiente esquema se detallan los principales criterios de clasificación y la asignación de las clases.  
 
 ```{r fig.cap= "Derivación del esquema de clases EGP. Fuente: Erikson y Goldthorpe (1992)", fig.align='center', out.width = '80%', echo=FALSE, eval = knitr::is_html_output()}
 knitr::include_graphics("imagenes/esquema_egp.png")
@@ -100,7 +100,7 @@ De esta forma, la primera gran división ocurre a nivel de relaciones de producc
 
 La **relación de servicio** da lugar a lo que el autor denomina “clase de servicios” y que esta conformada por empleados profesionales, administradores y directivos. Los contratos suelen pautarse a largo tiempo y el modo de intercambio empleador-empleado suele ser difuso, en el sentido que no sólo actúa el salario como forma de pago, sino que también ciertos elementos prospectivos (aumentos, seguros sociales, pensiones, etc.) que garantizan la estabilidad y el sostenimiento del empleo. El empleado “de servicios” obtiene autonomía y discrecionalidad, dependiendo su rendimiento del “acuerdo moral” que existe con el empleador y no de sanciones externas. En contraposición, la relación basada en el **contrato de trabajo**, remite a lo que en términos agregados puede entenderse como “clase obrera”. A diferencia de la relación de servicio, los contratos suelen ser de menor término y se realiza un intercambio de dinero por esfuerzo, calculado en función de las horas trabajadas. La discrecionalidad y autonomía suelen ser bajas, ya que el rendimiento del trabajador está atado a una mayor supervisión sobre el mismo y a condicionamientos externos en forma de sanciones. En medio de ambos tipos ideales de relaciones, se encuentran las formas mixtas que dan lugar a las clases intermedias.  
 
-Por otro lado, las clases (identificadas en el gráfico anterior a partir de números romanos) pueden clasificarse de distintos modos, en función de cuán desagregada se desee presentar la información (Tabla \@ref(fig:egp1)). A nivel de mayor desagregación, el esquema cuenta con 11 clases, sin embargo los autores han trabajado con colapsamientos de 7, 5 y 3 clases.  
+Por otro lado, las clases (identificadas en el gráfico anterior a partir de números romanos) pueden clasificarse de distintos modos, en función de cuán desagregada se desee presentar la información —Tabla \@ref(tab:egp1)—. A nivel de mayor desagregación, el esquema cuenta con 11 clases, sin embargo los autores han trabajado con colapsamientos de 7, 5 y 3 clases.  
 
 ```{r fig.cap= "Esquema de clases EGP. Fuente: Erikson y Goldthorpe (1992)", fig.align='center', out.width = '80%', echo=FALSE, eval = knitr::is_html_output()}
 knitr::include_graphics("imagenes/egp2.png")
@@ -156,26 +156,29 @@ egp1 %>%
 
 ```
 
+Si bien existe bibliografía [@Erikson1992; @Rose.Harrison2007] en la que se señalan algunos indicios sobre cómo operacionalizar el esquema EGP, no hay una forma directa y unívoca de realizarlo. Goldthorpe y Heath [-@Goldthorpe.Heath1992] han realizado el ejercicio de operacionalización del mismo, pero para ser utilizado con la clasificación estandarizada de ocupaciones inglesa, que se diferencia tanto de la CIUO-88 como de la CIUO-08. 
 
-Si bien existe bibliografía [@Erikson1992; @Rose.Harrison2007] en la que se señalan algunos indicios sobre cómo operacionalizar el esquema EGP, no hay una forma directa y unívoca de realizarlo. Goldthorpe y Heath [-@Goldthorpe.Heath1992] han realizado el ejercicio de operacionalización del mismo, pero para ser utilizado con la clasificación estandarizada de ocupaciones inglesa, que se diferencia tanto de la CIUO-88 como de la CIUO-08. A continuación mostramos una página de dicho trabajo donde se aprecia, en la primera columna, la clasificación ocupacional utilizada, mientras que en las siguientes se observan las otras variables utilizadas: carácter manual / no manual de la ocupación y categoría ocupacional (*employment status*). Cada celda representa una posible posición de clase, derivada de la combinación de categorías. Los números dan cuenta de a qué clase apunta cada combinación. 
+<!--A continuación mostramos una página de dicho trabajo donde se aprecia, en la primera columna, la clasificación ocupacional utilizada, mientras que en las siguientes se observan las otras variables utilizadas: carácter manual / no manual de la ocupación y categoría ocupacional (*employment status*). Cada celda representa una posible posición de clase, derivada de la combinación de categorías. Los números dan cuenta de a qué clase apunta cada combinación. 
 
 ```{r fig.cap= "Tabla de operacionalización del esquema EGP original. Fuente: Goldthorpe y Heath (1992)", fig.align='center', out.width = '80%', echo=FALSE}
 knitr::include_graphics("imagenes/clasificacion_egp.png")
 ```
+-->
 
 Comúnmente, los investigadores interesados en utilizar la clasificación han partido de una adaptación realizada por Ganzeboom para SPSS ^[[http://www.harryganzeboom.nl/isco88/index.htm](http://www.harryganzeboom.nl/isco88/index.htm)], a partir del clasificador ocupacional CIUO-88. Existe un paquete para **```R```** llamado ```ocuppar```, que retoma la propuesta de Ganzeboom para ser utilizada bajo dicho programa. En el apartado siguiente, a modo de ejemplo retomaremos dicha propuesta de operacionalización.  
 
 #### Esquema de Wright  
 
-Como hemos señalado en el [capítulo 2](#estructura1), Wright ha presentado dos propuestas operacionalizables de clases, desde un enfoque neo-marxista: uno basado en las posiciones de las relaciones de clase y otro de las explotaciones múltiples. En este caso presentaremos los principales criterios abordados por el autor para el desarrollo de la segunda propuesta ^[La propuesta de operacionalización del enfoque de posiciones contradictorias puede encontrarse en Wright [-@Wright1979].  
+Como hemos señalado en el [Capítulo 2](#estructura1), Wright ha presentado dos propuestas operacionalizables de clases, desde un enfoque neo-marxista: uno basado en las posiciones de las relaciones de clase y otro de las explotaciones múltiples. En este caso presentaremos los principales criterios abordados por el autor para el desarrollo de la segunda propuesta^[La propuesta de operacionalización del enfoque de posiciones contradictorias puede encontrarse en Wright [-@Wright1979].].
 
-Influenciado por el marxismo analítico, Wright identificó cuatro tipos de bienes de explotación posibles de ser relevamos empíricamente, y que se traducen en los diferentes tipos de derechos y poderes (recursos tangibles e intangibles) que tienen los sujetos en las relaciones de producción [@Wright2005]:  
+Influenciado por el marxismo analítico, Wright identificó cuatro tipos de bienes de explotación posibles de ser relevamos empíricamente, y que se traducen en los diferentes tipos de derechos y poderes (recursos tangibles e intangibles) que tienen los sujetos en las relaciones de producción [@Wright2005]:
+
 1. **Fuerza de trabajo** (explotación feudal),  
 2. Los **medios de producción** (explotación capitalista),  
 3. Los **bienes de organización** (explotación estatal) y  
-4. Las **cualificaciones** (explotación socialista)   
+4. Las **cualificaciones** (explotación socialista) 
 
-De este modo, la combinación de esos cuatro tipos de bienes de explotación, permiten la generación de 12 posiciones de clase, tal como se observa en el siguiente gráfico:
+De este modo, la combinación de esos cuatro tipos de bienes de explotación, permiten la generación de 12 posiciones de clase [@Wright1994b]. <!--, tal como se observa en el siguiente gráfico:
 
 ```{r fig.cap= "Tipología de las posiciones de clase en la sociedad capitalista. Wright (1994)", fig.align='center', out.width = '80%', echo=FALSE, eval = knitr::is_html_output()}
 knitr::include_graphics("imagenes/wright1.png")
@@ -185,11 +188,11 @@ knitr::include_graphics("imagenes/wright1.png")
 ```{r fig.cap= "Tipología de las posiciones de clase en la sociedad capitalista. Wright (1994)", fig.align='center', out.width = '80%', echo=FALSE, eval = !knitr::is_html_output()}
 knitr::include_graphics("imagenes/wright1b.png")
 ```
-
+-->
 
 Ahora bien, ¿Cómo llega Wright a operacionalizar dicho esquema? En este sentido, el autor es bastante franco y sincero ya que explicita todas sus decisiones y limitaciones, señalando que de este modo "los que lo deseen puedan repetir los resultados que aquí hemos presentado, y hará también que nuestras decisiones operacionales queden lo más abiertas posibles a la crítica" [@Wright1994b]. Esto es de vital importancia en el campo científico, en donde la posibilidad de reproducir los resultados realizados en distintos contextos de investigación.  
 
-Es necesario aclarar que para abordar la estructura de clases desde el enfoque propuesto por Wright se torna crucial realizar un relevamiento que recabe ciertos indicadores específicos vinculados directamente con el enfoque teórico del que parte el autor ^[Una revisión de los items relevados por Wright para la construcción de sus indicadores específicos que constituyen su tipología de clases, pueden encontrarse en Wright [-@Wright1994b, pp. 331-345]]. En este sentido, el proceso de operacionalización, si lo pensamos en términos inversos, es decir, desde los indicadores (variables brutas) a la variable que mide el sistema de clases, puede ser pensado del siguiente modo:  
+Es necesario aclarar que para abordar la estructura de clases desde el enfoque propuesto por Wright se torna crucial realizar un relevamiento que recabe ciertos indicadores específicos vinculados directamente con el enfoque teórico del que parte el autor ^[Una revisión de los items relevados por Wright para la construcción de sus indicadores específicos que constituyen su tipología de clases, pueden encontrarse en Wright [-@Wright1994b, pp. 331-345]]. <!--En este sentido, el proceso de operacionalización, si lo pensamos en términos inversos, es decir, desde los indicadores (variables brutas) a la variable que mide el sistema de clases, puede ser pensado del siguiente modo:  
 
 ```{r fig.cap= "Pasos globales en la construcción de la tipología de clases. Wright (1994)", fig.align='center', out.width = '80%', echo=FALSE, eval = knitr::is_html_output()}
 knitr::include_graphics("imagenes/wright2.png")
@@ -199,8 +202,9 @@ knitr::include_graphics("imagenes/wright2.png")
 ```{r fig.cap= "Pasos globales en la construcción de la tipología de clases. Wright (1994)", fig.align='center', out.width = '80%', echo=FALSE, eval = !knitr::is_html_output()}
 knitr::include_graphics("imagenes/wright2b.png")
 ```
+-->
 
-Por ejemplo, tomando una de las dimensiones más complejas a ser medidas como los **bienes de organización**, el autor construye dos tipologías (de toma de decisiones y de autoridad) y una categoría dicotómica de posiciones jerárquicas que derivan luego en una tipología de posiciones directivas, Tabla \@ref(fig:wright3). 
+Por ejemplo, tomando una de las dimensiones más complejas a ser medidas como los **bienes de organización**, el autor construye dos tipologías (de toma de decisiones y de autoridad) y una categoría dicotómica de posiciones jerárquicas que derivan luego en una tipología de posiciones directivas, de acuerdo con la Tabla \@ref(tab:wright3). 
 
 ```{r fig.cap= "Construcción tipología bienes de organización. Wright (1994)", fig.align='center', out.width = '80%', echo=FALSE, eval = knitr::is_html_output()}
 knitr::include_graphics("imagenes/wright3.png")
@@ -271,13 +275,13 @@ En términos operacionales, estas gradaciones pueden constituirse de forma simpl
 
 De esta forma, si bien existe un número importante de enfoques gradacionales de ocupación, señalaremos brevemente dos de los más relevantes: la Standard International Occupational Prestige Scale (SIOPS) de Treiman y el Internacional Socio-Economic Index (ISEI) de Treiman, Ganzeboom y de Graaf [@Bergman.Joye2001; @FrancesGarcia2009]. Ambos toman a la ocupación como el indicador principal del posicionamiento en la jerarquía social, pero mientras uno mide el prestigio de las ocupaciones, el otro cuantifica el estatus socioeconómico de las mismas.
 
-El primero de estos (SIOPS), hace referencia a las clásicas escalas de prestigio ocupacional que, basadas en indicadores subjetivos, relevaron el grado de aprobación y respeto que presentaba un set de ocupaciones para las distintas personas. Según Treiman, los puntajes de prestigio obtenidos eran similares entre distintos sectores poblacionales (ricos o pobres, jóvenes o viejos) y entre distintos países del mundo. El prestigo, de este modo, era un proxy válido de la importancia funcional que las ocupaciones presentaban en la sociedad. En términos operativos, dicha escala recopila las puntuaciones medias de prestigio de aproximadamente 60 países, utilizando como base la CIUO-68. A continuación presentamos, a modo de ejemplo, las puntuaciones de 20 ocupaciones seleccionadas, entre las 509 rankeadas en total [@Treiman1977].  
+El primero de estos (SIOPS), hace referencia a las clásicas escalas de prestigio ocupacional que, basadas en indicadores subjetivos, relevaron el grado de aprobación y respeto que presentaba un set de ocupaciones para las distintas personas. Según Treiman, los puntajes de prestigio obtenidos eran similares entre distintos sectores poblacionales (ricos o pobres, jóvenes o viejos) y entre distintos países del mundo. El prestigo, de este modo, era un _proxy_ válido de la importancia funcional que las ocupaciones presentaban en la sociedad. En términos operativos, dicha escala recopila las puntuaciones medias de prestigio de aproximadamente 60 países, utilizando como base la CIUO-68. A continuación —Tabla \@ref(tab:siops)— presentamos, a modo de ejemplo, las puntuaciones de 20 ocupaciones seleccionadas, entre las 509 rankeadas en total [@Treiman1977].  
 
 ```{r fig.cap= "Puntajes estandard ordenados de 20 ocupaciones seleccionadas a partir de la escala SIOPS. Treiman(1977)", fig.align='center', out.width = '80%', echo=FALSE, eval = knitr::is_html_output()}
 knitr::include_graphics("imagenes/treiman.png")
 ```
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE, eval = !knitr::is_html_output()}
+```{r siops, echo=FALSE, warning=FALSE, message=FALSE, eval = !knitr::is_html_output()}
 siops <- data.frame(c1 = c("Jefe de Estado", "Oficial de policía de alto grado", "Científico social",
                            "Ingeniero eléctrico", "Osteópata", "Empresario", "Corredor de bolsa",
                            "Experto en huellas dactilares", "Agente de ventas", "Agente inmobiliario",
@@ -424,7 +428,7 @@ Para el autor, las clases sociales presentaban tres características centrales:
 
 Asimismo, Germani señaló que su propuesta de operacionalización podía ser modificada y adaptada en el tiempo ya que era en vano buscar una discriminación neta de dichos agrupamientos debido a la complejidad de combinaciones entre criterios estructurales y psicosociales. Las clases, entonces, se definían a partir de un criterio espacial y probabilístico, es decir, como “zonas de la estructura social en la que cierta combinación de criterios se da con mayor frecuencia estadística” [@Germani1955, pp. 143].
 
-Respecto al esquema de clasificación propuesto por el autor, el mismo recurre a “la convencional clasificación tripartita” de clase alta, media y popular [-@Germani1955, pp. 146]. La clase alta, debido a su bajo peso poblacional, es incluida dentro de las clases medias. Asimismo, tanto las clases populares como las clases medias son desagregadas según sector de actividad (sector urbano y sector rural) y de acuerdo a su estatus ocupacional (trabajadores dependientes e independientes) [-@Germani1955, pp. 146-147]. La frontera entre ambas clases se basaba en la distinción manual / no manual del trabajo, existiendo una amplia heterogeneidad dentro de cada agregado (Tabla \@ref(tab:germani)).
+Respecto al esquema de clasificación propuesto por el autor, el mismo recurre a “la convencional clasificación tripartita” de clase alta, media y popular [-@Germani1955, pp. 146]. La clase alta, debido a su bajo peso poblacional, es incluida dentro de las clases medias. Asimismo, tanto las clases populares como las clases medias son desagregadas según sector de actividad (sector urbano y sector rural) y de acuerdo a su estatus ocupacional (trabajadores dependientes e independientes) [-@Germani1955, pp. 146-147]. La frontera entre ambas clases se basaba en la distinción manual / no manual del trabajo, existiendo una amplia heterogeneidad dentro de cada agregado —Tabla \@ref(tab:germani)—.
 
 ```{r fig.cap= "Esquema de clases de Gino Germani (Germani, 1955)", fig.align='center', out.width = '80%', echo=FALSE, eval = knitr::is_html_output()}
 knitr::include_graphics("imagenes/germani.jpg")
@@ -463,7 +467,7 @@ germani %>%
 
 #### Propuesta de Torrado  
 
-En tanto continuadora de la tradición inaugurada por Germani, Susana Torrado aportó un formato de medición específico para el análisis de la estructura de clases argentina. La propuesta de la autora tiene, al menos dos versiones operacionalizables: una primigenia, producto de su trabajo en colaboración con de Ipola [@Ipola1976] y una versión posterior, más acabada, que constituyó la base de su obra “Estructura social de la Argentina” [@Torrado1992] y que fue resultado de diversas intentos de clasificación [@CFI1988; @Torrado.Rofman1988].  
+En tanto continuadora de la tradición inaugurada por Germani, Torrado aportó un formato de medición específico para el análisis de la estructura de clases argentina. La propuesta de la autora tiene, al menos dos versiones operacionalizables: una primigenia, producto de su trabajo en colaboración con de Ipola [@Ipola1976] y una versión posterior, más acabada, que constituyó la base de su obra “Estructura social de la Argentina” [@Torrado1992] y que fue resultado de diversas intentos de clasificación [@CFI1988; @Torrado.Rofman1988].  
 
 En palabras de la autora, su propuesta de esquema de clases mantenía un compromiso con tres de los principales enfoques de estratificación existentes: el “funcionalista”, que tiende a ofrecer una visión jerárquica de la estructura; el “materialista”, que define a las clases en función a las relaciones de producción y el “estadístico” o “pragmático” que hace hincapié en la utilización de categorías homogéneas que permitan comparabilidad de la información estadística [@Torrado1998d].
 
@@ -475,7 +479,7 @@ Torrado acude a cinco variables que conformarán lo que podríamos denominar com
 * el tamaño del establecimiento y  
 * la rama de actividad.  
 
-Particularmente la ocupación, captada a partir de la CIUO-68, es re-clasificada para conformar nueve grupos de ocupación (GO) (Tabla \@ref(tab:torrado1)): 1) Empresarios, directores de empresas y funcionarios públicos superiores; 2) Propietarios de establecimientos; 3) Profesionales en función específica; 4) Técnicos, docentes y supervisores; 5) Empleados y vendedores; 6) Trabajadores especializados; 7) Trabajadores no especializados; 8) Empleados domésticos y 9) Sin especificar.  
+Particularmente la ocupación, captada a partir de la CIUO-68, es re-clasificada para conformar nueve grupos de ocupación (GO) —Tabla \@ref(tab:torrado1)—: 1) Empresarios, directores de empresas y funcionarios públicos superiores; 2) Propietarios de establecimientos; 3) Profesionales en función específica; 4) Técnicos, docentes y supervisores; 5) Empleados y vendedores; 6) Trabajadores especializados; 7) Trabajadores no especializados; 8) Empleados domésticos y 9) Sin especificar.
 
 ```{r fig.cap= "Cruce de variables socio-ocupacionales y generación de estratos socales (Torrado, 1998)", fig.align='center', out.width = '80%', echo=FALSE, eval = knitr::is_html_output()}
 knitr::include_graphics("imagenes/torrado1.png")
@@ -529,7 +533,7 @@ torrado1 %>%
 
 ```
 
-De este modo, del entrecruzamiento de las distintas variables se genera una estratificación socio-ocupacional que presentamos a continuación (Tabla \@ref(tab:torrado2)), y que da lugar al clasificador de la **Condición Socio-Ocupacional** (CSO) en su versión desagregada.  
+De este modo, del entrecruzamiento de las distintas variables se genera una estratificación socio-ocupacional que presentamos a continuación —Tabla \@ref(tab:torrado2)—, y que da lugar al clasificador de la **Condición Socio-Ocupacional** (CSO) en su versión desagregada.
 
 ```{r, fig.cap= "Nomenclador de la Condición Socio-Ocupacional desagregado (Torrado, 1998)", fig.align='center', out.width = '80%', echo=FALSE, eval = knitr::is_html_output()}
 knitr::include_graphics("imagenes/torrado2.png")
@@ -607,7 +611,7 @@ torrado2 %>%
 
 ```
 
-En su versión agregada el nomenclador discrimina once estratos socio-ocupacionales, mientras que en su versión desagregada, dichos estratos son subdivididos en función del sector de actividad y la categoría ocupacional. Mientras que la ocupación, la categoría ocupacional y el tamaño del establecimiento, permiten establecer diferenciaciones verticales en la estratificación (formando, según la autora, capas sociales), la rama y el sector de actividad, permite diferenciar a los estratos en términos horizontales, es decir, en fracciones de clase. Finalmente, el nomenclador puede ser agregado en tres clases sociales (Tabla \@ref(tab: torrado3)), definidas por la autora como clase alta, media y obrera, terminologías que “se relacionan más con la forma simbólica en que dichos colectivos existen en la cultura política argentina, que con una adhesión más explícita a algunas de las incontables teorizaciones existentes (…)” [@Torrado1998d, pp. 236].
+En su versión agregada el nomenclador discrimina once estratos socio-ocupacionales, mientras que en su versión desagregada, dichos estratos son subdivididos en función del sector de actividad y la categoría ocupacional. Mientras que la ocupación, la categoría ocupacional y el tamaño del establecimiento, permiten establecer diferenciaciones verticales en la estratificación (formando, según la autora, capas sociales), la rama y el sector de actividad, permite diferenciar a los estratos en términos horizontales, es decir, en fracciones de clase. Finalmente, el nomenclador puede ser agregado en tres clases sociales —Tabla \@ref(tab: torrado3)—, definidas por la autora como clase alta, media y obrera, terminologías que “se relacionan más con la forma simbólica en que dichos colectivos existen en la cultura política argentina, que con una adhesión más explícita a algunas de las incontables teorizaciones existentes (…)” [@Torrado1998d, pp. 236].
 
 ```{r, fig.cap= "Sistema clasificatorio de la clase social (Torrado, 1998)", fig.align='center', out.width = '80%', echo=FALSE, eval = knitr::is_html_output()}
 knitr::include_graphics("imagenes/torrado3.png")
@@ -922,7 +926,7 @@ eph_ind_215 <- eph_ind_215 %>%
 
 Hasta aquí ya tenemos construido el **CSO** desagregado, que si bien permite una discriminación más precisa de la situación socio-ocupacional de las personas, sus 27 categorías dificultan la síntesis y el cruce con otras variables. En la Tabla \@ref(tab:torrado5), indicamos el código y la nomenclatura original que la autora asigna a cada posición en el texto [@Torrado1998d, pp. 226], el código que le asignamos nosotros para el uso en la sintaxis y la recodificación del **CSO** agregado que será revisado en la próxima sección.  
 
-```{r, fig.cap = "Asignación de códigos al CSO desagregado", echo=FALSE, warning=FALSE, message=FALSE}
+```{r torrado5, fig.cap = "Asignación de códigos al CSO desagregado", echo=FALSE, warning=FALSE, message=FALSE}
 torrado5 <- data.frame(c1 = c(1:27),
                        c2 = c("1.1", "1.2", "2.1.1", "2.1.2", "2.2", "2.3.1", "2.3.2",
                               "2.4", "3", "4.1.1", "4.1.2", "4.2", "5.1", "5.2", 
@@ -1090,7 +1094,7 @@ eph_ind_215 %>%
 
 La ocupación peor posicionada es la que presenta un valor de `11,56`, mientras que la mejor posicionada `88,96`. La ocupación que divide a la muestra en dos (mediana) tiene un valor de `30,78` y el promedio es `35,78`. <!--esto se puede armar con inlinecode-->
 
-Por otro lado, pedimos también que nos muestren algunas correspondencias entre los valores de la codificación en CIUO y los puntajes del ISEI. Claramente los valores más bajos del ISEI, se corresponden con valores más bajos de la CIUO (Gráfico \@ref(fig:isei2).  
+Por otro lado, pedimos también que nos muestren algunas correspondencias entre los valores de la codificación en CIUO y los puntajes del ISEI. Claramente los valores más bajos del ISEI, se corresponden con valores más bajos de la CIUO:
 
 ```{r isei2, message=FALSE, warning=FALSE, fig.cap= "Histograma de frecuencias la escala ISEI", echo=TRUE}
 eph_ind_215 %>% 
@@ -1187,4 +1191,4 @@ summarytools::freq(base_dominancia$clase6_factor, weights = base_dominancia$POND
 
 ```
 
-En este caso, luego de aplicar las transformaciones, contamos con `6.059.233` hogares clasificados a partir de la posición dominante de uno de lo cónyuges. <!--también acá se puede hacer inline--> 
+En este caso, luego de aplicar las transformaciones, contamos con `6.059.233` hogares clasificados a partir de la posición dominante de uno de lo cónyuges. 

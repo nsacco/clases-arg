@@ -14,8 +14,13 @@ language:
     eq: 'Ecuación '
     refs : 'Referencias'
 
-rmd_subdir: ["caps"]
-
+rmd_files: ["index.Rmd",
+"caps/01U.Rmd",
+"caps/02U.Rmd",
+"caps/03U.Rmd",
+"caps/04U.Rmd",
+"caps/05U.Rmd",
+"caps/06U.Rmd",]
 
 book_filename: "clases-arg"
 output_dir: "_clases-arg"
