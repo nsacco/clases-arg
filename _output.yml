@@ -12,6 +12,7 @@ bookdown::gitbook:
   split_by: section
   config:
     toc:
+      scroll_highlight: true
       collapse: section
       before: |
         <li><a href="./">Manual para el Análisis de la Estructura Social Argentina Actual</a></li>

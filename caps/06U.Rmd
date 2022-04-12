@@ -65,15 +65,16 @@ Como consecuencia, lejos de referirse a la estratificación social como un facto
 
 ### Un enfoque intermedio
 
-En un camino intermedio de estos dos enfoques se encuentra la propuesta de Grusky [-@Grusky2008]. El autor plantea que existen tres componentes clave que definen a un sistema de estratificación: 1) los procesos institucionales que definen qué tipos de bienes deben ser valorados y deseables; 2) las reglas de asignación que distribuyen dichos bienes según ocupaciones en la división del trabajo y 3) los procesos de movilidad que ligan a los individuos con las ocupaciones y brindan un control desigual sobre los recursos valorados [@Grusky2008, pp. 5], ilustrado en la @\ref(tab:grusky).
+En un camino intermedio de estos dos enfoques se encuentra la propuesta de Grusky [-@Grusky2008]. El autor plantea que existen tres componentes clave que definen a un sistema de estratificación: 1) los procesos institucionales que definen qué tipos de bienes deben ser valorados y deseables; 2) las reglas de asignación que distribuyen dichos bienes según ocupaciones en la división del trabajo y 3) los procesos de movilidad que ligan a los individuos con las ocupaciones y brindan un control desigual sobre los recursos valorados [@Grusky2008, pp. 5], ilustrado en la \@ref(tab:grusky). 
 
 Dentro de los activos que se encuentran desigualmente distribuidos en la sociedad, podemos nombrar a los: económicos, de poder, culturales, religiosos, sociales, honoríficos, civiles, humanos y físicos.
 
-```{r fig.cap= "Tipos de activos y ejemplos de grupos aventajados y desaventajados (Grusky, 2008)", out.width = '80%', echo=FALSE, eval = knitr::is_html_output()}
-knitr::include_graphics("imagenes/grusky.png")
-```
+<!-- ```{r fig.cap= "Tipos de activos y ejemplos de grupos aventajados y desaventajados (Grusky, 2008)", out.width = '80%', echo=FALSE, eval = knitr::is_html_output()} -->
+<!-- knitr::include_graphics("imagenes/grusky.png") -->
+<!-- ``` -->
 
-```{r grusky, echo=FALSE, warning=FALSE, message=FALSE, eval = !knitr::is_html_output()}
+
+```{r grusky, echo=FALSE, warning=FALSE, message=FALSE}
 grusky <- data.frame(c1 = c("Tipo de activos", "Económico", "", "", "Poder", "", "", "Cultural", "", "",
                             "Social", "", "", "Honorífico", "", "", "Civil", "", "", 
                             "Humano", "", "", "Físico", "", ""),
@@ -133,7 +134,7 @@ La solución del autor, en breve, apunta a otorgar un mayor peso de responsabili
 Finalmente, existen una serie de enfoques y teorías que señalan el debilitamiento y la **descomposición del concepto de clase social** como elemento central para comprender el sistema de desigualdades [@Dubet2015]. Según estos enfoques, las transformaciones en el capitalismo hacia finales de siglo XX, que algunos autores han englobado bajo la idea de “capitalismo de acumulación flexible”, “capitalismo tardío” o “post-industrialismo”, entre otras etiquetas, encontraron cierta compatibilidad con un proceso de cambio en el régimen de significación cultural que se daba a la par: el pasaje del modernismo al posmodernismo [@Lash2007]. El paradigma productivista que había marcado a fuego las relaciones sociales, las instituciones y los modos de acción social y política, sobre todo en los treinta gloriosos años del Estado de Bienestar, dejaría lugar a un nuevo régimen en el cual el consumo y la consecuente estilización de la vida cobran una mayor preeminencia, erigiéndose como nuevos cimientos del lazo social, las interacciones y la acción comunitaria.  
 
 Es partir de este desfasaje entre las mutaciones que atraviesa la sociedad en su conjunto y las categorías empleadas para analizarlas, que algunos autores plantearon la pérdida de la potencialidad explicativa del concepto de clase social y sus derivados. En una posición casi límite, Touraine [-@Touraine2005] indicaba que categorías tales como clase social y riqueza o estratificación y movilidad social, perdieron su poder explicativo debido a un cambio de paradigma en la interpretación de la vida personal y colectiva que ya no remite a una explicación en términos sociales. En esta línea, Beck [-@Beck1998] planteaba que la modernidad había producido una fractura en la cual la clásica sociedad industrial se disuelve transformando a las desigualdades sociales en desigualdades personales. De este modo, las categorías centrales del análisis de clase, herederas de la tradición marxista y weberiana, que funcionaban como “diques de contención” de los agrupamientos sociales, se vuelven estériles para comprender los procesos de individuación y diversificación en los estilos de vida que caracterizan a la nueva dinámica social.  
-<!--
+
 A grandes rasgos, los distintos enfoques que hemos reseñado en esta sección pueden ilustrarse en las siguientes gráficas:  
 
 ```{r xgrusky, fig.cap= "Tipos de representación de la estructura social (Grusky, 2008): 1) Régimen de clase, 2) Régimen gradacional, 3) Desigualdad desorganizada", fig.align='center', out.width = '80%', echo=FALSE}
@@ -141,7 +142,7 @@ knitr::include_graphics("imagenes/grusky2.png")
 ```
 
 Mientras que el primero de los gráficos hace referencia a los enfoque clásicos **relacionales de clase**, en donde las distintas posiciones no pueden representarse en términos de "más altas" o "más bajas", sino de acuerdo a las múltiples relaciones que se dan entre los grupos, el segundo gráfico hace referencia al enfoque **estructura funcionalista**, en el que las posiciones son pensadas en términos gradacionales y la distribución respecto a las oportunidades de vida se da en forma ordenada. Finalmente, en el tercer gráfico, se muestra la representación del enfoque que señala el **debilitamiento de la clase** como factor explicativo de las desigualdades, ante la aparición de múltiples aspectos y factores de mayor relevancia. En este sentido, la desigualdad se torna, en parte, irrepresentable y desorganizada a partir de características de raigambre más individual.
--->
+
 
 ## Explorando los datos por clase social {#explorando}  
 

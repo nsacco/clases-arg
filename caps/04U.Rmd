@@ -68,7 +68,7 @@ La relación entre la población que contribuye a los procesos productivos en el
 
 ## Las variables socio-ocupacionales
 
-Las variables económicas de la población no han sido siempre las mismas, desde el censo de 1947 hasta el censo 2010, observándose una ampliación en la información recabada, según el número de variables a las que se hace referencia [@Sacco2015]. Como se vio en el [Capítulo 4](#fuentes2), si comparamos los censos a partir del de 1980 hasta el último, realizado en 2010, veremos cómo se ha diversificado la manera de medir la actividad económica en Argentina. Por su parte, las diferentes variables que ofrece la **EPH** (Tabla \@ref(tab:vars1) son similares a las del censo pero con algunas variaciones. Todas las variables aquí incluidas se encuentran disponibles en la base de Personas de la **EPH**.  
+Las variables económicas de la población no han sido siempre las mismas, desde el censo de 1947 hasta el censo 2010, observándose una ampliación en la información recabada, según el número de variables a las que se hace referencia [@Sacco2015]. Como se vio en el [Capítulo 4](#fuentes2), si comparamos los censos a partir del de 1980 hasta el último, realizado en 2010, veremos cómo se ha diversificado la manera de medir la actividad económica en Argentina. Por su parte, las diferentes variables que ofrece la **EPH** (Tabla \@ref(tab:vars1)) son similares a las del censo pero con algunas variaciones. Todas las variables aquí incluidas se encuentran disponibles en la base de Personas de la **EPH**.  
 
 <!--
 ```{r fig.cap= "Principales variables socio-ocupacionales de la EPH", fig.align='center', out.width = '80%', echo=FALSE, eval = knitr::is_html_output()}
@@ -76,7 +76,7 @@ knitr::include_graphics("imagenes/t3_u4.png")
 ```
 -->
 
-```{r vars1, echo=FALSE, fig.cap= "Principales variables socio-ocupacionales de la EPH", fig.align='center', out.width = '80%', warning=FALSE, message=FALSE, eval = !knitr::is_html_output()}
+```{r vars1, echo=FALSE, fig.cap= "Principales variables socio-ocupacionales de la EPH", fig.align='center', out.width = '80%', warning=FALSE, message=FALSE}
 variables_eph <- data.frame(c1 = c("Condición de actividad", "Categoría ocupacional",
                                    "Ocupación", "Rama de actividad", "Tamaño del establecimiento"),
                             c2 = c("Población activida o inactiva", 
@@ -237,11 +237,12 @@ Es importante realizar la distinción entre calificación de la ocupación y cal
 
 Ilustramos, con un ejemplo —Tabla \@ref(tab:cnotabla)—, la clasificación en su mayor nivel de desagregación, a 5 dígitos, mostrando en el siguiente cuadro realizado por Chávez Molina et al. [-@ChavezMolina.etal2020] el código ocupacional de los "Jefes de la producción industrial y artesanal con calificación profesional (80201)".
 
-```{r, echo = F, warning = F, message = F, fig.cap = 'Jefes de la producción industrial y artesanal con calificación profesional (80201)', fig.width = 0.2, fig.height = 0.5, fig.asp=0.50, out.width = "80%", fig.align = "center", eval = knitr::is_html_output()}
-knitr::include_graphics("imagenes/t5_u4.png")
-```
+<!-- ```{r, echo = F, warning = F, message = F, fig.cap = 'Jefes de la producción industrial y artesanal con calificación profesional (80201)', fig.width = 0.2, fig.height = 0.5, fig.asp=0.50, out.width = "80%", fig.align = "center", eval = knitr::is_html_output()} -->
+<!-- knitr::include_graphics("imagenes/t5_u4.png") -->
+<!-- ``` -->
 
-```{r cnotabla, echo=FALSE, warning=FALSE, message=FALSE, eval = !knitr::is_html_output()}
+
+```{r cnotabla, echo=FALSE, warning=FALSE, message=FALSE}
 
 cno_tabla <- data.frame(c1 = c("1° y 2°", "3°", "4°", "5°"),
                         c2 = c("Carácter", "Jerarquía", "Tecnología", "Calificación"),
@@ -308,11 +309,11 @@ En el censo de 1980, fue codificada según la “Clasificación Industrial Inter
 
 En la **EPH** entre 1974, su primera onda, hasta 1980 inclusive, se han utilizado los tres primeros dígitos de la **CIIU**, Revisión 2, aunque la codificación original consta de hasta 5 dígitos a su nivel más detallado. A partir del año 1997, se ha utilizado la “Clasificación Nacional de Actividades Económicas” (ClaNAE-97) con un detalle a cinco dígitos. Más tarde, desde 2011, la **EPH** distingue las ramas de actividad según la “Clasificación de Actividades Económicas para Encuestas Sociodemográficas del Mercosur” (**CAES Mercosur 1.0**), utilizando los 5 dígitos del código. Así mismo, esta última versión del CAES es totalmente compatible con el **CIIU** en su revisión 4. En la Tabla \@ref(tab:caes10) se observa un ejemplo de la CAES:
 
-```{r fig.cap= "Ejemplo clasificación de Actividades Profesionales, Científicas y Técnicas - CAES 1.0 [@INDEC2011d]", fig.align='center', out.width = '80%', echo=FALSE, eval = knitr::is_html_output()}
-knitr::include_graphics("imagenes/caes10.png")
-```
+<!-- ```{r fig.cap= "Ejemplo clasificación de Actividades Profesionales, Científicas y Técnicas - CAES 1.0 [@INDEC2011d]", fig.align='center', out.width = '80%', echo=FALSE, eval = knitr::is_html_output()} -->
+<!-- knitr::include_graphics("imagenes/caes10.png") -->
+<!-- ``` -->
 
-```{r caes10, fig.cap= "Ejemplo clasificación de Actividades Profesionales, Científicas y Técnicas - CAES 1.0 [@INDEC2011d]", fig.align='center', out.width = '80%', echo=FALSE, eval = !knitr::is_html_output()}
+```{r caes10, fig.cap= "Ejemplo clasificación de Actividades Profesionales, Científicas y Técnicas - CAES 1.0 [@INDEC2011d]", fig.align='center', out.width = '80%', echo=FALSE}
 
 caes_tabla <- data.frame(c1 = c("M", "69",	"6900",	"70",	"7000",	"71",	"7100",	"72",	"7200",
                                 "73",	"7301",	"7302",	"74",	"7400",	"75",	"7500"),
@@ -347,12 +348,12 @@ caes_tabla %>%
 
 En la siguiente Tabla \@ref(tab:caes2) podemos ver todas las clasificaciones que se han ido implementando para codificar las ramas de actividad económica.
 
-```{r, fig.cap= "Clasificadores de la rama de actividad", fig.align='center', out.width = '80%', echo=FALSE, eval = knitr::is_html_output()}
-knitr::include_graphics("imagenes/t4_u4.png")
-```
+<!-- ```{r, fig.cap= "Clasificadores de la rama de actividad", fig.align='center', out.width = '80%', echo=FALSE, eval = knitr::is_html_output()} -->
+<!-- knitr::include_graphics("imagenes/t4_u4.png") -->
+<!-- ``` -->
 
 
-```{r caes2, echo=FALSE, warning=FALSE, message=FALSE, eval = !knitr::is_html_output()}
+```{r caes2, echo=FALSE, warning=FALSE, message=FALSE}
 
 caes_tabla2 <- data.frame(c1 = c("CIIU Revisión 2", "CIIU Revisión 3", "CAES Mercosur (CIIU Revisión 3)",
                                  "ClaNAE-97", "CAES 2000 Mercosur (CIIU Revisión 4)",

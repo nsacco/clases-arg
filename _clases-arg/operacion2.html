@@ -25,7 +25,7 @@
 <meta name="author" content="Sofia Jaime" />
 
 
-<meta name="date" content="2022-03-30" />
+<meta name="date" content="2022-04-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -56,10 +56,10 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/vembedr-0.1.5/css/vembedr.css" rel="stylesheet" />
 <link href="libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
 <script src="libs/pagedtable-1.1/js/pagedtable.js"></script>
 <link href="libs/tabwid-1.0.0/tabwid.css" rel="stylesheet" />
-<link href="libs/vembedr-0.1.5/css/vembedr.css" rel="stylesheet" />
 
 
 <style type="text/css">
@@ -402,12 +402,12 @@ div.csl-indent {
 <span id="cb81-3"><a href="operacion2.html#cb81-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(scales)</span></code></pre></div>
 <p>En este apartado aprenderemos otra forma de operacionalizar esquemas de clasificación social a través de <strong><code>R</code></strong>. Para ello utilizaremos el paquete <code>occupar</code>, que permite, entre sus distintas funciones:</p>
 <ol style="list-style-type: decimal">
-<li><p>Convertir diferentes versiones de la CIUO <a href="#fn9" class="footnote-ref" id="fnref9"><sup>9</sup></a> (68, 88, 08).</p></li>
+<li><p>Convertir diferentes versiones de la CIUO<a href="#fn9" class="footnote-ref" id="fnref9"><sup>9</sup></a> (68, 88, 08).</p></li>
 <li><p>Creación de esquemas de clasificación (ISEI, SIOPS, EGP, ESeC) a partir de la CIUO.</p></li>
 </ol>
 <p>Las ventajas de la utilización de este tipo de operacionalización es que podemos ahorrarnos una cantidad importante de tiempo, ya que no tendremos que invertirlo en escribir líneas y líneas de código. Al mismo tiempo, como veremos, nos permitirá la creación de al menos dos esquemas que son internacionalmente utilizados. Como desventaja, dependemos de la interpretación que los autores del paquete hicieron del proceso de operacionalización. Recordemos que operacionalizar implica decisiones teórico-metodológicas en la selección de variables y la combinación de categorías para la construcción de nuevas categorías (en este caso estratos y clases). Es decir, no podremos fácilmente modificar la propuesta de operacionalización ni adaptarla a nuestros objetivos e intereses.</p>
 <p>Por ejemplo, el paquete no operacionaliza en forma correcta el esquema <strong>EGP</strong>, ya que asigna en forma errónea a los casos en algunas posiciones de clase. En el caso que se quiera utilizar dicho esquema, es recomendable recurrir a esquema <strong>ESeC</strong>, utilizado oficialmente en Europa, y que está basado en el <strong>EGP</strong>.</p>
-<p>El paquete <code>occupar</code> esta basado en el proyecto implementado por <strong>Harry Ganzeboom</strong> de estandarización y armonización de medidas de posición de clase y estratificación <a href="#fn10" class="footnote-ref" id="fnref10"><sup>10</sup></a>. El mismo también se encuentra disponible para ser utilizado con <strong><code>SPSS</code></strong>. A continuación vamos a explorar como operacionalizar la escala <strong>ISEI</strong> utilizando dicho paquete.</p>
+<p>El paquete <code>occupar</code> esta basado en el proyecto implementado por <strong>Harry Ganzeboom</strong> de estandarización y armonización de medidas de posición de clase y estratificación.<a href="#fn10" class="footnote-ref" id="fnref10"><sup>10</sup></a> El mismo también se encuentra disponible para ser utilizado con <strong><code>SPSS</code></strong>. A continuación vamos a explorar como operacionalizar la escala <strong>ISEI</strong> utilizando dicho paquete.</p>
 <p>Para instalar el paquete <code>occupar</code> es necesario tener instalado el paquete <code>devtools</code>. A continuación dejamos los pasos de instalación:</p>
 <div class="sourceCode" id="cb82"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb82-1"><a href="operacion2.html#cb82-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;devtools&quot;</span>)</span>
 <span id="cb82-2"><a href="operacion2.html#cb82-2" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;DiogoFerrari/occupar&quot;</span>, <span class="at">dependencies =</span> F)</span></code></pre></div>
@@ -424,7 +424,7 @@ div.csl-indent {
 <span id="cb85-2"><a href="operacion2.html#cb85-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(PP04D_CIUO, isei) <span class="sc">%&gt;%</span> <span class="co">#selecciono las variables de ocupación</span></span>
 <span id="cb85-3"><a href="operacion2.html#cb85-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(isei)) <span class="sc">%&gt;%</span>  <span class="co">#filtro los casos con valores perdidos</span></span>
 <span id="cb85-4"><a href="operacion2.html#cb85-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">head</span>(<span class="at">n =</span> <span class="dv">10</span>)</span></code></pre></div>
-<pre><code># A tibble: 10 × 2
+<pre><code># A tibble: 10 x 2
    PP04D_CIUO  isei
    &lt;fct&gt;      &lt;dbl&gt;
  1 7233        31.7
@@ -448,7 +448,7 @@ div.csl-indent {
 <span id="cb87-7"><a href="operacion2.html#cb87-7" aria-hidden="true" tabindex="-1"></a>    <span class="dv">100000</span>))</span></code></pre></div>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:isei2"></span>
 <p class="caption">
-Gráfico 5.14: Histograma de frecuencias la escala ISEI
+Gráfico 5.2: Histograma de frecuencias la escala ISEI
 </p>
 <img src="clases-arg_files/figure-html/isei2-1.png" alt="Histograma de frecuencias la escala ISEI" width="672" />
 </div>
@@ -516,7 +516,8 @@ gitbook.start({
 "options": null
 },
 "toc": {
-"collapse": "section"
+"collapse": "section",
+"scroll_highlight": true
 }
 });
 });

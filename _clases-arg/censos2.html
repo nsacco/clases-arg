@@ -25,7 +25,7 @@
 <meta name="author" content="Sofia Jaime" />
 
 
-<meta name="date" content="2022-03-30" />
+<meta name="date" content="2022-04-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -56,10 +56,10 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/vembedr-0.1.5/css/vembedr.css" rel="stylesheet" />
 <link href="libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
 <script src="libs/pagedtable-1.1/js/pagedtable.js"></script>
 <link href="libs/tabwid-1.0.0/tabwid.css" rel="stylesheet" />
-<link href="libs/vembedr-0.1.5/css/vembedr.css" rel="stylesheet" />
 
 
 <style type="text/css">
@@ -409,7 +409,7 @@ div.csl-indent {
 </ul></li>
 <li>Generar y analizar datos de la muestra de microdatos de uso público del censo decenal de Argentina (PUMS) del INDEC y/o IPUMS con <strong><code>ipumsr</code></strong>.</li>
 </ul>
-<p>Los lenguajes de programación como <strong><code>R</code></strong>, aunque menos fáciles de usar y con una interfaz de usuario más disuasiva, poseen la capacidad de reproducir análisis repetidamente con conjuntos de datos muy diferentes, y tienen un gran impacto en la productividad, al tiempo que ofrecen algunas de las ventajas del código: control de versión y ciencia abierta. Por el contrario, las herramientas de apuntar y hacer clic con el <em>mouse</em> para la extracción, el análisis o la visualización de datos son populares y más fáciles de usar, pero no son reproducibles ni escalables. Si los usuarios están realizando un trabajo que no es tan complejo o no se basa en una gran cantidad de datos, no es necesario utilizar un entorno de programación. De cualquier manera, el objetivo del uso de estas herramientas debe ser minimizar la posibilidad de un error y maximizar la posibilidad de detectar un error y…“terminar las cosas”.</p>
+<p>Los lenguajes de programación como <strong><code>R</code></strong>, aunque menos fáciles de usar y con una interfaz de usuario más disuasiva, poseen la capacidad de reproducir análisis repetidamente con conjuntos de datos muy diferentes, y tienen un gran impacto en la productividad, al tiempo que ofrecen algunas de las ventajas del código: control de versión y ciencia abierta. Por el contrario, las herramientas de apuntar y hacer clic con el <em>mouse</em> para la extracción, el análisis o la visualización de datos son populares y más fáciles de usar, pero no son reproducibles ni escalables. Si los usuarios están realizando un trabajo que no es tan complejo o no se basa en una gran cantidad de datos, no es necesario utilizar un entorno de programación. De cualquier manera, el objetivo del uso de estas herramientas debe ser minimizar la posibilidad de un error y maximizar la posibilidad de detectar un error y…“terminar las cosas.”</p>
 <div id="modos-de-acceso" class="section level3 hasAnchor" number="3.3.1">
 <h3><span class="header-section-number">3.3.1</span> Modos de acceso<a href="censos2.html#modos-de-acceso" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Las formas de acceso a los datos censales en Argentina son diversas. Las modalidades posibles conocidas, poseen ventajas y desventajas, que serán detalladas más adelante. A raíz de la reciente circulación de bases de datos “no oficiales” publicadas por usuarixs anónimos antes que por el INDEC, es importante debatir las modalidades de acceso a los censos, tanto desde la perspectiva de los usuarios como la de los propios institutos oficiales. La magnitud de la difusión de microdatos censales para el desarrollo y la investigación, con garantías adecuadas para proteger la privacidad y garantizar la confidencialidad, es sistemáticamente señalada por la <a href="https://www.un.org/development/desa/es/about/desa-divisions/population.html" target="_blank">Dirección de Población de Naciones Unidas</a>, dado su potencial para ampliar significativamente los usos de la información.</p>
@@ -444,7 +444,7 @@ div.csl-indent {
 <li><a href="https://redatam.indec.gob.ar/argbin/RpWebEngine.exe/PortalAction?&amp;MODE=MAIN&amp;BASE=CPV2010B&amp;MAIN=WebServerMain.inl&amp;_ga=2.251878541.505137327.1603741558-822725481.1603741558">2010 básico</a></li>
 <li><a href="https://redatam.indec.gob.ar/argbin/RpWebEngine.exe/PortalAction?&amp;MODE=MAIN&amp;BASE=CPV2010A&amp;MAIN=WebServerMain.inl&amp;_ga=2.248606851.505137327.1603741558-822725481.1603741558">2010 ampliado</a></li>
 </ul>
-<p>REDATAM no solo ofrece herramientas de procesamiento en línea sino también la descarga del software para el procesamiento de microdatos censales en formato propio, ampliando el abanico de posibilidades de análisis, tanto en términos de variables disponibles y tipo de procesamiento estadístico, como por el hecho de poder acceder a bases de datos de censos “históricos”. La dificultad en este sentido está dada por el hecho de que se requiere acceder a los microdatos y para ello no están del todo claro los procedimientos vigentes o los metadatos de las bases disponibles. Se volverá sobre este punto.</p>
+<p>REDATAM no solo ofrece herramientas de procesamiento en línea sino también la descarga del software para el procesamiento de microdatos censales en formato propio, ampliando el abanico de posibilidades de análisis, tanto en términos de variables disponibles y tipo de procesamiento estadístico, como por el hecho de poder acceder a bases de datos de censos “históricos.” La dificultad en este sentido está dada por el hecho de que se requiere acceder a los microdatos y para ello no están del todo claro los procedimientos vigentes o los metadatos de las bases disponibles. Se volverá sobre este punto.</p>
 <p>Actualmente REDATAM puede correr como servidor para procesar datos en internet. Lamentablemente este producto corre solo en servidores Windows (que en la actualidad dejó de ser un estándar para estos servicios). Claramente este producto se está quedando en el tiempo y los formatos en los que se manejan los datos no son muy cómodos. Si bien REDATAM es gratuito, el código fuente con el que fue construido no es de libre acceso, quiere decir, se puede usar pero no se puede ver o proponer mejoras. Esto limita su desarrollo al equipo actual de programación y no permite a las comunidades de software libre auditar, proponer o desarrollar cambios en el producto.</p>
 </div>
 <div id="descarga-directa-de-microdatos" class="section level3 hasAnchor" number="3.3.4">
@@ -453,13 +453,13 @@ div.csl-indent {
 <p>La descarga directa de los microdatos censales desde el sitio web oficial del INDEC tiene claramente una serie de ventajas para el analista de datos, en tanto permite trabajar con el <em>set</em> bastante completo de variables utilizadas en el cuestionario censal (salvo eliminación expresa por parte de la INDEC) y realizar diferentes procesamientos estadísticos que permitan atender sus necesidades específicas de información. Llamativamente, para el caso del censo 2001, la variable ocupación, no está publicada por parte del INDEC.</p>
 <p>Uno de los aspectos a considerar por parte del INDEC, para quienes se inclinan por esta opción, es la protección de la confidencialidad de los datos ofrecidos por las personas que fueron censadas, en tanto la información almacenada en los microdatos censales puede llevar a la identificación de las mismas, particularmente si se trabaja con información de áreas muy pequeñas del territorio. También existe la posibilidad de convertir los diccionarios de formato REDATAM a otros formatos, lo cual puede llegar a simplificar enormemente tareas de procesamiento de datos.</p>
 <p>Tanto para el caso del 2001 como el 2010, sólo hace falta hacer ‘click’ en “Descargar Diccionario” para bajarse la base de microdatos, tal como se muestra en las imágenes y trabajarla de forma local, con REDATAM o, mediante su transformación, con su software de preferencia.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-33"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-35"></span>
 <p class="caption">
 Gráfico 3.1: Descargar diccionario
 </p>
 <img src="imagenes/dic2001.png" alt="Descargar diccionario" width="80%" />
 </div>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-34"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-36"></span>
 <p class="caption">
 Gráfico 3.2: Descargar diccionario2
 </p>
@@ -474,6 +474,11 @@ Gráfico 3.2: Descargar diccionario2
 <div id="ipums-i" class="section level3 hasAnchor" number="3.3.5">
 <h3><span class="header-section-number">3.3.5</span> IPUMS-I<a href="censos2.html#ipums-i" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Sólo cinco años después de la creación del CELADE, este organismo comenzó la Operación de Muestras de Censos (OMUECE), la más ambiciosa muestra internacional de censos del siglo XX. Gracias ello el archivo de microdatos censales de América Latina es uno los más completos de cualquier región del mundo (para más información ver artículos de McCaa y Jaspers-Faijer (2000) y McCaa, Esteve, Ruggles y Sobek (2004). Este proyecto fue el antecedente directo de las bases disponibles hoy en el IPUMS-I. Este espacio ofrece una colección, inventario, preservación de datos y documentación referida a muestras de censos en el mundo, con información armonizada, es decir, comparable entre países, de manera gratuita. Tiene una documentación bastante exhaustiva y facilita de esta forma la investigación comparativa. Una de las desventajas del proyecto IPUMS es que no posee mecanismos de validación con el INDEC y a veces resultan más confiables datos de los INDEC que IPUMS en algunas variables.</p>
+<div class="vembedr">
+<div>
+<iframe src="https://www.youtube.com/embed/IsBHZ1fHKBw" width="533" height="300" frameborder="0" allowfullscreen="" data-external="1"></iframe>
+</div>
+</div>
 <p>Para Argentina, contamos con microdatos de muestras censales sólo para los censos de 1970 a 2010.</p>
 <!-- solo para la verisión webEn el siguiente video instructivo podrán ver cómo acceder a las bases disponibles en IPUMS-I, con un ejemplo para Argentina en 1980:
 
@@ -569,7 +574,8 @@ gitbook.start({
 "options": null
 },
 "toc": {
-"collapse": "section"
+"collapse": "section",
+"scroll_highlight": true
 }
 });
 });

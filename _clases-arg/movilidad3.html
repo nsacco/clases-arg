@@ -25,7 +25,7 @@
 <meta name="author" content="Sofia Jaime" />
 
 
-<meta name="date" content="2022-03-30" />
+<meta name="date" content="2022-04-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -56,10 +56,10 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/vembedr-0.1.5/css/vembedr.css" rel="stylesheet" />
 <link href="libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
 <script src="libs/pagedtable-1.1/js/pagedtable.js"></script>
 <link href="libs/tabwid-1.0.0/tabwid.css" rel="stylesheet" />
-<link href="libs/vembedr-0.1.5/css/vembedr.css" rel="stylesheet" />
 
 
 <style type="text/css">
@@ -410,7 +410,7 @@ div.csl-indent {
 <div class="sourceCode" id="cb123"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb123-1"><a href="movilidad3.html#cb123-1" aria-hidden="true" tabindex="-1"></a>enes_movilidad <span class="ot">&lt;-</span> enes_movilidad <span class="sc">%&gt;%</span></span>
 <span id="cb123-2"><a href="movilidad3.html#cb123-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">egp2 =</span> car<span class="sc">::</span><span class="fu">recode</span>(egp5, <span class="st">&quot;1=1; 2:5=0&quot;</span>), <span class="at">egp2_f =</span> <span class="fu">factor</span>(egp2, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">&quot;Clase de servicio&quot;</span>,</span>
 <span id="cb123-3"><a href="movilidad3.html#cb123-3" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;Otra clase&quot;</span>)))</span></code></pre></div>
-<p>Una vez realizada la recodificación, podemos construir la regresión logística tomando como factores independientes, en primer lugar, a los aspectos propiamente del origen social: la clase y la educación de los padres. Para ello recurriremos a la función <code>glm</code> (generalized linear model), que tiene un formato similar a la función <code>lm</code>, y debemos señalar la opción <code>binomial</code> en <code>family</code>. En este caso, para simplificar el proceso, no incorporaremos el ponderador, a través de la opción <code>weights</code>, ya que su aplicación no permite una correcto ajuste en la regresión <a href="#fn13" class="footnote-ref" id="fnref13"><sup>13</sup></a>.</p>
+<p>Una vez realizada la recodificación, podemos construir la regresión logística tomando como factores independientes, en primer lugar, a los aspectos propiamente del origen social: la clase y la educación de los padres. Para ello recurriremos a la función <code>glm</code> (generalized linear model), que tiene un formato similar a la función <code>lm</code>, y debemos señalar la opción <code>binomial</code> en <code>family</code>. En este caso, para simplificar el proceso, no incorporaremos el ponderador, a través de la opción <code>weights</code>, ya que su aplicación no permite una correcto ajuste en la regresión.<a href="#fn13" class="footnote-ref" id="fnref13"><sup>13</sup></a></p>
 <p>Para observar los resultados utilizaremos la función <code>summ</code> (o <code>export_summs</code> si necesitamos exportar a Word o PDF) del paquete <code>jtools</code> que deberán instalar.</p>
 <div class="sourceCode" id="cb124"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb124-1"><a href="movilidad3.html#cb124-1" aria-hidden="true" tabindex="-1"></a>logit1 <span class="ot">&lt;-</span> <span class="fu">glm</span>(egp2 <span class="sc">~</span> educ_hog_f <span class="sc">+</span> egp5a_f, <span class="at">data =</span> enes_movilidad, <span class="at">family =</span> <span class="st">&quot;binomial&quot;</span>)</span>
 <span id="cb124-2"><a href="movilidad3.html#cb124-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -463,7 +463,7 @@ logit
 <tbody>
 <tr>
 <td style="text-align:left;font-weight: bold;">
-𝛘²(6)
+χ²(6)
 </td>
 <td style="text-align:right;">
 668.93
@@ -709,7 +709,7 @@ logit
 <tbody>
 <tr>
 <td style="text-align:left;font-weight: bold;">
-𝛘²(9)
+χ²(9)
 </td>
 <td style="text-align:right;">
 1899.04
@@ -1126,7 +1126,8 @@ gitbook.start({
 "options": null
 },
 "toc": {
-"collapse": "section"
+"collapse": "section",
+"scroll_highlight": true
 }
 });
 });

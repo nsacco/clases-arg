@@ -1,4 +1,4 @@
-# (PART) Aspectos teóricos {.unnumbered}
+# (PART) Aspectos teóricos {-}
 
 # La estructura social en la Argentina actual {#estructura1}
 
@@ -172,6 +172,11 @@ Al respecto, es interesante el razonamiento que propone Filgueira cuando conside
 > "Si uno de los problemas del paradigma clásico es su excesiva atadura a la dimensión empleo, la consideración de las diversas formas de capital abren el camino para la discusión de otros principios ordenadores de la diferenciación social. En particular, la cuestión actualmente en debate acerca de la relevancia de los estilos de vida y consumo como alternativa estructuradora de la diversidad del orden social en oposición o en paralelo con la determinación del empleo, o si se quiere, acerca de la pregunta sobre la vigencia actual del "paradigma productivista". Naturalmente, ello conduce a la pregunta acerca de qué ha cambiado para que la necesidad de revisar el paradigma clásico se haga evidente. No parece haber una respuesta definitiva acerca del punto aunque las razones que se aducen se remiten a la incapacidad de la teoría sociológica contemporánea de dar respuestas idóneas a las recientes transformaciones macroestructurales. En principio, tal hipótesis no parece del todo plausible o por lo menos está mal formulada. La carencia explicativa del paradigma clásico existió con independencia de los "cambios objetivos". Lo que sí ocurrió es que estos cambios hicieron más evidente sus limitaciones" [@Filgueira2001, p. 22]
 
 No ha sido la primera vez que el término de "clase" y el análisis de clase se viera objetado como desfasado en el tiempo y que, sus estrategias de investigación y abordaje fueran consideradas irrelevantes para sociedad actual. Si bien durante la mayor parte de los siglos XIX y XX el tema de las clases sociales ha estado en el centro de los debates académicos y extra-académicos de los científicos sociales —tal vez como reflejo de una discusión política más amplia acerca de las luchas sociales en las sociedades industrializadas occidentales [@Bauman2000; @Furbanck2005]—, cada tanto suele desaparecer de la corriente política o de la agenda mediática. Como otros paradigmas de la ciencia y de la sociología, el tema de las clase sociales parece una gran "estrella púlsar" que ilumina y decae a lo largo del tiempo.
+
+```{r, echo = F, warning = F, message = F, eval = knitr::is_html_output()}
+library("vembedr")
+embed_youtube("-e1KuzjGMQI/")
+```
 
 ## La cuestión en América Latina y en la Argentina {#cuestion}
 

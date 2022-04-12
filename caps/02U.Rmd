@@ -112,6 +112,12 @@ library(haven)
 library(foreign)
 library(rmarkdown)
 ```
+
+```{r, echo = F, warning = F, message = F, eval = knitr::is_html_output()}
+library("vembedr")
+embed_youtube("90exzR1GoDY")
+```
+
 ### El "método clásico"
 
 #### Bases 2016-2020

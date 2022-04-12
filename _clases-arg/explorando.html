@@ -25,7 +25,7 @@
 <meta name="author" content="Sofia Jaime" />
 
 
-<meta name="date" content="2022-03-30" />
+<meta name="date" content="2022-04-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -56,10 +56,10 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/vembedr-0.1.5/css/vembedr.css" rel="stylesheet" />
 <link href="libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
 <script src="libs/pagedtable-1.1/js/pagedtable.js"></script>
 <link href="libs/tabwid-1.0.0/tabwid.css" rel="stylesheet" />
-<link href="libs/vembedr-0.1.5/css/vembedr.css" rel="stylesheet" />
 
 
 <style type="text/css">
@@ -402,7 +402,7 @@ div.csl-indent {
 <span id="cb94-2"><a href="explorando.html#cb94-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(clase6_factor)) <span class="sc">%&gt;%</span></span>
 <span id="cb94-3"><a href="explorando.html#cb94-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(clase6_factor) <span class="sc">%&gt;%</span></span>
 <span id="cb94-4"><a href="explorando.html#cb94-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(<span class="at">media =</span> <span class="fu">weighted.mean</span>(P47T, <span class="at">w =</span> PONDERA))</span></code></pre></div>
-<pre><code># A tibble: 6 × 2
+<pre><code># A tibble: 6 x 2
   clase6_factor                           media
   &lt;fct&gt;                                   &lt;dbl&gt;
 1 Clase alta                             15723.
@@ -420,11 +420,11 @@ div.csl-indent {
 <span id="cb96-6"><a href="explorando.html#cb96-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title.x =</span> <span class="fu">element_blank</span>(), <span class="at">axis.title.y =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">10</span>), <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">10</span>),</span>
 <span id="cb96-7"><a href="explorando.html#cb96-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text.y =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">10</span>)) <span class="sc">+</span> <span class="fu">scale_x_discrete</span>(<span class="at">labels =</span> <span class="cf">function</span>(x) <span class="fu">str_wrap</span>(x,</span>
 <span id="cb96-8"><a href="explorando.html#cb96-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">width =</span> <span class="dv">20</span>)) <span class="sc">+</span> <span class="fu">scale_y_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">50000</span>, <span class="dv">5000</span>))</span></code></pre></div>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-94"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-82"></span>
 <p class="caption">
 Gráfico 6.2: Ingresos totales individuales por clase social
 </p>
-<img src="clases-arg_files/figure-html/unnamed-chunk-94-1.png" alt="Ingresos totales individuales por clase social" width="576" />
+<img src="clases-arg_files/figure-html/unnamed-chunk-82-1.png" alt="Ingresos totales individuales por clase social" width="576" />
 </div>
 <p>Varios son los elementos del gráfico que debemos destacar. En primer lugar, las cajas dan cuenta del rango inter-cuartil (1ro y 3ro), mientras que las lineas representan a las medianas de ingresos, es decir, el valor que parte a la distribución por la mitad. De esta forma, los resultados se muestran similares a los arribados en la tabla anterior, aunque las clases medias y la clase alta muestran cierta heterogeneidad en los ingresos percibidos. Finalmente, los límites de las lineas verticales representan los valores máximos y mínimos, mientras que los puntos identifican a los casos atípicos.</p>
 </div>
@@ -482,7 +482,8 @@ gitbook.start({
 "options": null
 },
 "toc": {
-"collapse": "section"
+"collapse": "section",
+"scroll_highlight": true
 }
 });
 });

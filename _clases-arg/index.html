@@ -25,7 +25,7 @@
 <meta name="author" content="Sofia Jaime" />
 
 
-<meta name="date" content="2022-03-30" />
+<meta name="date" content="2022-04-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -56,10 +56,10 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/vembedr-0.1.5/css/vembedr.css" rel="stylesheet" />
 <link href="libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
 <script src="libs/pagedtable-1.1/js/pagedtable.js"></script>
 <link href="libs/tabwid-1.0.0/tabwid.css" rel="stylesheet" />
-<link href="libs/vembedr-0.1.5/css/vembedr.css" rel="stylesheet" />
 
 
 <style type="text/css">
@@ -399,7 +399,7 @@ div.csl-indent {
 <p class="author"><em>Nicolás Sacco</em></p>
 <p class="author"><em>José Rodríguez de la Fuente</em></p>
 <p class="author"><em>Sofia Jaime</em></p>
-<p class="date"><em>2022-03-30</em></p>
+<p class="date"><em>2022-04-12</em></p>
 </div>
 <div id="prefacio" class="section level1 unnumbered hasAnchor">
 <h1>Prefacio<a href="index.html#prefacio" class="anchor-section" aria-label="Anchor link to header"></a></h1>
@@ -409,7 +409,7 @@ div.csl-indent {
 <p>Esta iniciativa se orientó, en ese sentido, al desarrollo de un conjunto básico de contenidos e instrumentos actualizados para la gestión de datos y análisis de las clases sociales. Este manual incluye su socialización en un formato también plano, y la presentación de herramientas computacionales que permiten apoyar la aplicación de los métodos presentados.</p>
 <p>A partir del relevamiento, evaluación, ajuste y procesamiento, los lectores serán expuestos a los desafíos empíricos y metodológicos de encarar la construcción de datos en un campo de estudio donde no predomina información para largos períodos históricos que involucran a la población de hecho en Argentina. Utilizando principalmente como fuentes de datos a los censos de población modernos (1970-2010) pero, sobre todo, a la Encuesta Permanente de Hogares (1974-2020) del Instituto Nacional de Estadística y Censos (INDEC), en los capítulos que siguen se retoman algunos debates actuales sobre la estratificación social y la literatura sobre el tema, y sus vertientes en América Latina y Argentina, pero el manual enfatiza en el trabajo empírico con datos secundarios, la construcción de información, su análisis estadístico y sus posibilidades explicativas para interpretar cambios sociales recientes en Argentina, tanto desde un punto de vista global y regional, como también local.</p>
 <p>El <a href="analisis1.html#analisis1">Capítulo 1</a> retoma algunos de los debates y conceptos en torno al estudio de la desigualdad y de la estructura social. Ya que una gran cantidad de publicaciones se dedican a este tema, se decidió dejarlo como introducción general conceptual, para pasar a los capítulos enfocados en los datos. El <a href="fuentes.html#fuentes">Capítulo 2</a> presenta las características generales de la <strong>Encuesta Permanente de Hogares</strong> (EPH), en tanto herramienta central para el estudio de la estructura de clases en Argentina, mientras que el <a href="fuentes2.html#fuentes2">Capítulo 3</a> ofrece algo similar pero con los censos de población. El <a href="ocupacion.html#ocupacion">Capítulo 4</a> se focaliza en “las variables económicas” de las fuentes descritas en los capítulos previos, y ya en <a href="clases5.html#clases5">Capítulo 5</a> se presentan los diversos abordajes teórico-empíricos más utilizados para el estudio de la estratificación social, a nivel internacional y nacional, desde un abordaje operacional. El <a href="independiente.html#independiente">Capítulo 6</a> presenta a las clases sociales como uno de los factores estructuradores de la desigualdad social. El <a href="dependiente.html#dependiente">Capítulo 7</a>, en cambio, retoma una de las posibles aproximaciones al estudio de la estructura de clases en tanto variable dependiente. Dentro de este tipo de abordajes se interroga acerca de aquellos factores que explican, condicionan o intervienen en el proceso de formación y acción de las clases sociales. Finalmente, en el <a href="tiempo.html#tiempo">Capítulo 8</a> se explora la dimensión temporal y la dimensión espacial, en tanto procesos sociales más importantes para evaluar los cambios que se producen en la estructura de clases y en la desigualdad. En el <a href="anexo.html#anexo">Anexo</a>, se incluye una breve introducción a <strong><code>R</code></strong> y su interfaz <strong><code>RStudio</code></strong>, centrada en las funciones puntuales que permiten realizar los ejercicios de los capítulos.</p>
-<p>Al socializar este trabajo, el anhelo es construir una comunidad de usuarios y que la información derivada del material presentado pueda llegar a contribuir al desarrollo de futuras investigaciones en profundidad por parte de los interesados. Aprovechando las ventajas de la publicación en línea, este escrito mantiene un formato “vivo”, que se irá modificando con el tiempo y, si se da la posibilidad de la interacción con sus lectores, sus aportes serán felizmente bienvenidos. Porque pretender un manual omnicomprensivo y acabado de la <strong>estructura social argentina</strong> es un objetivo bastante utópico dada la enormidad de la literatura sobre el tema.</p>
+<p>Al socializar este trabajo, el anhelo es construir una comunidad de usuarios y que la información derivada del material presentado pueda llegar a contribuir al desarrollo de futuras investigaciones en profundidad por parte de los interesados. Aprovechando las ventajas de la publicación en línea, este escrito mantiene un formato “vivo,” que se irá modificando con el tiempo y, si se da la posibilidad de la interacción con sus lectores, sus aportes serán felizmente bienvenidos. Porque pretender un manual omnicomprensivo y acabado de la <strong>estructura social argentina</strong> es un objetivo bastante utópico dada la enormidad de la literatura sobre el tema.</p>
 <p>Esperamos que les sea de utilidad.</p>
 <p>Nicolás, José y Sofía</p>
 </div>
@@ -467,7 +467,8 @@ gitbook.start({
 "options": null
 },
 "toc": {
-"collapse": "section"
+"collapse": "section",
+"scroll_highlight": true
 }
 });
 });

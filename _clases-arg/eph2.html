@@ -25,7 +25,7 @@
 <meta name="author" content="Sofia Jaime" />
 
 
-<meta name="date" content="2022-03-30" />
+<meta name="date" content="2022-04-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -56,10 +56,10 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/vembedr-0.1.5/css/vembedr.css" rel="stylesheet" />
 <link href="libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
 <script src="libs/pagedtable-1.1/js/pagedtable.js"></script>
 <link href="libs/tabwid-1.0.0/tabwid.css" rel="stylesheet" />
-<link href="libs/vembedr-0.1.5/css/vembedr.css" rel="stylesheet" />
 
 
 <style type="text/css">
@@ -402,6 +402,11 @@ div.csl-indent {
 <span id="cb1-3"><a href="eph2.html#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(haven)</span>
 <span id="cb1-4"><a href="eph2.html#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(foreign)</span>
 <span id="cb1-5"><a href="eph2.html#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rmarkdown)</span></code></pre></div>
+<div class="vembedr">
+<div>
+<iframe src="https://www.youtube.com/embed/90exzR1GoDY" width="533" height="300" frameborder="0" allowfullscreen="" data-external="1"></iframe>
+</div>
+</div>
 <div id="el-método-clásico" class="section level3 hasAnchor" number="2.2.1">
 <h3><span class="header-section-number">2.2.1</span> El “método clásico”<a href="eph2.html#el-método-clásico" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="bases-2016-2020" class="section level4 hasAnchor" number="2.2.1.1">
@@ -484,7 +489,7 @@ Entrevista individual no realizada (no respuesta al cuestionario individual)
                                                                            3 
                                                           Menor de 10 anios. 
                                                                            4 </code></pre>
-<p>La variable se encuentra etiquetada como “Condición de actividad”. El tipo (<code>class</code>) de variable es <code>labelled</code> e <code>interger</code>, ya que si bien la variable es numérica entera también se encuentra etiquetada (“labelled”). Finalmente podemos ver las cuatro categorías de la variable: 0) Entrevista individual no realizada; 1) Ocupado; 2) Desocupado; 3) Inactivo; 4) Menor de 10 años.</p>
+<p>La variable se encuentra etiquetada como “Condición de actividad.” El tipo (<code>class</code>) de variable es <code>labelled</code> e <code>interger</code>, ya que si bien la variable es numérica entera también se encuentra etiquetada (“labelled”). Finalmente podemos ver las cuatro categorías de la variable: 0) Entrevista individual no realizada; 1) Ocupado; 2) Desocupado; 3) Inactivo; 4) Menor de 10 años.</p>
 <p>Finalmente, la función <code>get_microdata</code> también nos permite descargar múltiples bases de la EPH y que luego podemos pegar a los fines de poder trabajarlas longitudinalmente. Mostraremos un ejemplo descargando la selección de variables que hemos realizado anteriormente, pero para todos los cuartos trimestres de los años 2017-2019:</p>
 <div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="eph2.html#cb15-1" aria-hidden="true" tabindex="-1"></a>eph_estado_1719 <span class="ot">&lt;-</span> <span class="fu">get_microdata</span>(<span class="at">year =</span> <span class="dv">2017</span><span class="sc">:</span><span class="dv">2019</span>, <span class="at">trimester =</span> <span class="dv">4</span>, <span class="at">type =</span> <span class="st">&quot;individual&quot;</span>,</span>
 <span id="cb15-2"><a href="eph2.html#cb15-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">vars =</span> <span class="fu">c</span>(<span class="st">&quot;CODUSU&quot;</span>, <span class="st">&quot;NRO_HOGAR&quot;</span>, <span class="st">&quot;ANO4&quot;</span>, <span class="st">&quot;ESTADO&quot;</span>))  <span class="co">#Descargo las bases</span></span></code></pre></div>
@@ -549,7 +554,8 @@ gitbook.start({
 "options": null
 },
 "toc": {
-"collapse": "section"
+"collapse": "section",
+"scroll_highlight": true
 }
 });
 });

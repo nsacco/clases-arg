@@ -242,6 +242,11 @@ En su blog [Discontinuos](https://idiscontinuos.wordpress.com/2015/03/21/convirt
 
 Sólo cinco años después de la creación del CELADE, este organismo comenzó la Operación de Muestras de Censos (OMUECE), la más ambiciosa muestra internacional de censos del siglo XX. Gracias ello el archivo de microdatos censales de América Latina es uno los más completos de cualquier región del mundo (para más información ver artículos de McCaa y Jaspers-Faijer (2000) y McCaa, Esteve, Ruggles y Sobek (2004). Este proyecto fue el antecedente directo de las bases disponibles hoy en el IPUMS-I. Este espacio ofrece una colección, inventario, preservación de datos y documentación referida a muestras de censos en el mundo, con información armonizada, es decir, comparable entre países, de manera gratuita. Tiene una documentación bastante exhaustiva y facilita de esta forma la investigación comparativa. Una de las desventajas del proyecto IPUMS es que no posee mecanismos de validación con el INDEC y a veces resultan más confiables datos de los INDEC que IPUMS en algunas variables.
 
+```{r, echo = F, warning = F, message = F, eval = knitr::is_html_output()}
+library("vembedr")
+embed_youtube("IsBHZ1fHKBw")
+```
+
 Para Argentina, contamos con microdatos de muestras censales sólo para los censos de 1970 a 2010.
 
 ````{=html}
