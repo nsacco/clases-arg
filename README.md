@@ -189,7 +189,7 @@ Ejercicios:
 
 -	Ejemplo de cambio espacial: Análisis de la distribución de las clases sociales a lo largo del territorio nacional. Comparación entre regiones.
 
-### Anexo
+## Anexo
 
 -	Introducción a R y RStudio
 
