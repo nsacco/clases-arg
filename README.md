@@ -4,7 +4,7 @@ Este libro combina contenidos teóricos y metodológicos que permiten abordar el
 
 La motivación principal del libro surge de una necesidad. En la cocina de la investigación en ciencias sociales, los científicos jugamos con las recetas que conocemos, utilizando los ingredientes que tenemos para entender fenómenos complejos de la realidad social. Esta metáfora nos permite comprender cómo nosotros, como autores, nos acercamos al estudio de las clases sociales en Argentina. 
 
-  Como investigadores, algunas veces, a pesar de que conocíamos las recetas existentes, los ingredientes que teníamos no eran los adecuados, o no eran suficientes; otras veces, simplemente se encontraban fuera de nuestro alcance o los desconocíamos. Con este libro queremos cubrir esa necesidad, ya que intentamos proveer a la comunidad lectora herramientas concretas que sirvan para analizar problemas complejos de la estructura social. 
+Como investigadores, algunas veces, a pesar de que conocíamos las recetas existentes, los ingredientes que teníamos no eran los adecuados, o no eran suficientes; otras veces, simplemente se encontraban fuera de nuestro alcance o los desconocíamos. Con este libro queremos cubrir esa necesidad, por eso proveemos a la comunidad lectora de herramientas concretas que sirven para analizar problemas complejos de la estructura social. 
 
 Son tres los pilares del libro: teoría, metodología y herramientas de programación. Primero, reunimos las voces que han liderado la literatura sobre clases sociales tanto a nivel internacional como nacional. Segundo, implementamos estrategias metodológicas de tipo cuantitativas, valiéndonos de técnicas estadísticas. Por último, introducimos el lenguaje de programación R y su interfaz RStudio para ejemplificar la resolución de problemas empíricos concretos. 
 
@@ -28,11 +28,11 @@ Tema:
 
 -	¿Cuáles son los principales debates sobre las clases sociales en Argentina?
 
--	¿Cuáles son los marcos teóricos que se pueden aplicar analizar la desigualdad social? 
+-	¿Cuáles son los marcos teóricos que se pueden aplicar al análisis de  la desigualdad social? 
 
 -	¿Cómo distinguir las clases sociales? 
 
--	¿Cómo encajan distintas definiciones en el debate actual de las clases sociales? 
+-	¿Cómo encajan distintas definiciones de clases sociales  en el debate actual de las clases sociales? 
 
 ## Capítulo 2: Encuestas de hogares
 
@@ -40,7 +40,7 @@ Tema:
 
 -	¿Cuáles son las principales características que presenta la EPH? 
 
--	¿Qué elementos presenta para el estudio de la estructura de clases argentina? 
+-	¿Qué elementos posee para el estudio de la estructura de clases argentina? 
 
 -	¿Cuáles son las limitaciones que debemos considerar? ¿Qué cambios ha presentado a lo largo del tiempo? 
 
@@ -56,9 +56,9 @@ Tema:
 
 Tema: 
 
--	¿Cuáles son las principales características que presentan los censos mod- ernos?
+-	¿Cuáles son las principales características que presentan los censos modernos?
 
--	¿Qué elementos presentan para el estudio de la estructura de clases ar- gentina? 
+-	¿Qué elementos presentan para el estudio de la estructura de clases argentina? 
 
 -	¿Cuáles son las limitaciones que debemos considerar? ¿Qué cambios han presentado a lo largo del tiempo? 
 
@@ -70,7 +70,7 @@ Tema:
 
 Ejercicio:
 
--	Descargar microdatos desde distintos sitios y uso de paquete ipumsr para R). 
+-	Descargar microdatos desde distintos sitios y uso de paquete ipumsr para R. 
 
 -	Navegar los microdatos de los censos de población en RStudio y realizar exploraciones preliminares. 
 
@@ -80,7 +80,7 @@ Tema:
 
 -	¿Qué variables son necesarias considerar para estudiar empíricamente las clases sociales? 
 
--	¿Cuáles son las limitaciones que se presentan en la utilización de dichas variables a la hora de trabajar con censos o encuestas de hogares?
+-	¿Cuáles son las limitaciones de utilizar dichas variables al trabajar con censos o encuestas de hogares?
 
 -	¿Cómo fueron medidas las variables a lo largo del tiempo en el sistema estadístico argentino?
 
@@ -109,11 +109,11 @@ Tema:
 Ejercicio:
 
 -	Identificar las semejanzas y diferencias específicas que presenta cada
-nomenclador de clases propuesto por los autores aquí revisados. 
+nomenclador de clases. 
 
 -	Conocer cuáles son las principales variables que sustentan a cada esquema. 
 
--	Adquirir la práctica en la operacionalización de variables complejas como la clase social. 
+-	Adquirir la práctica en la operacionalización de variables complejas como la "clase social". 
 
 -	Establecer críticamente qué esquema utilizar según el marco teórico propuesto. 
 
@@ -191,6 +191,4 @@ Ejercicios:
 
 ## Anexo
 
--	Introducción a R y RStudio
-
-
+-	Introducción a R y RStudio.
