@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>6.1 La estructura de clases ¿el huevo o la gallina? | Libro de Cocina para el Análisis de las Clases Sociales en Argentina</title>
+  <meta name="description" content="Manual introductorio para el estudio de la estructura social en Argentina" />
+  <meta name="generator" content="bookdown 0.25 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="6.1 La estructura de clases ¿el huevo o la gallina? | Libro de Cocina para el Análisis de las Clases Sociales en Argentina" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Manual introductorio para el estudio de la estructura social en Argentina" />
+  <meta name="github-repo" content="nsacco/libroESA" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="6.1 La estructura de clases ¿el huevo o la gallina? | Libro de Cocina para el Análisis de las Clases Sociales en Argentina" />
+  
+  <meta name="twitter:description" content="Manual introductorio para el estudio de la estructura social en Argentina" />
+  
+
+<meta name="author" content="Nicolás Sacco" />
+<meta name="author" content="José Rodríguez de la Fuente" />
+<meta name="author" content="Sofia Jaime" />
+
+
+<meta name="date" content="2022-05-03" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="independiente.html"/>
+<link rel="next" href="explorando.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/vembedr-0.1.5/css/vembedr.css" rel="stylesheet" />
+<link href="libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
+<script src="libs/pagedtable-1.1/js/pagedtable.js"></script>
+<link href="libs/tabwid-1.0.0/tabwid.css" rel="stylesheet" />
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Manual para el Análisis de la Estructura Social Argentina Actual</a></li>
+
+<li class="divider"></li>
+<li><a href="index.html#prefacio">Prefacio<span></span></a></li>
+<li><a href="agradecimientos.html#agradecimientos">Agradecimientos<span></span></a></li>
+<li class="part"><span><b>I Aspectos teóricos<span></span></b></span></li>
+<li class="chapter" data-level="1" data-path="estructura1.html"><a href="estructura1.html"><i class="fa fa-check"></i><b>1</b> La estructura social en la Argentina actual<span></span></a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="analisis1.html"><a href="analisis1.html"><i class="fa fa-check"></i><b>1.1</b> Del análisis de las clases sociales a la teoría de la estratificación social<span></span></a></li>
+<li class="chapter" data-level="1.2" data-path="marx.html"><a href="marx.html"><i class="fa fa-check"></i><b>1.2</b> Marx, Weber y el funcionalismo<span></span></a></li>
+<li class="chapter" data-level="1.3" data-path="esperanza.html"><a href="esperanza.html"><i class="fa fa-check"></i><b>1.3</b> La esperanza de vida de la teoría: debates contemporáneos<span></span></a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="esperanza.html"><a href="esperanza.html#la-grieta-de-los-ochenta"><i class="fa fa-check"></i><b>1.3.1</b> La grieta de los ochenta<span></span></a></li>
+<li class="chapter" data-level="1.3.2" data-path="esperanza.html"><a href="esperanza.html#nuevos-debateshacia-una-operacionalización-más-refinada-de-los-conceptos"><i class="fa fa-check"></i><b>1.3.2</b> Nuevos debates…¿Hacia una operacionalización más refinada de los conceptos?<span></span></a></li>
+<li class="chapter" data-level="1.3.3" data-path="esperanza.html"><a href="esperanza.html#la-muerte-de-la-clases"><i class="fa fa-check"></i><b>1.3.3</b> La muerte de la clases<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="cuestion.html"><a href="cuestion.html"><i class="fa fa-check"></i><b>1.4</b> La cuestión en América Latina y en la Argentina<span></span></a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="cuestion.html"><a href="cuestion.html#nuevos-aires"><i class="fa fa-check"></i><b>1.4.1</b> Nuevos aires<span></span></a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>II Fuentes de datos<span></span></b></span></li>
+<li class="chapter" data-level="2" data-path="fuentes.html"><a href="fuentes.html"><i class="fa fa-check"></i><b>2</b> Encuestas de hogares<span></span></a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="eph1.html"><a href="eph1.html"><i class="fa fa-check"></i><b>2.1</b> La Encuesta Permanente de Hogares. Características principales<span></span></a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="eph1.html"><a href="eph1.html#características-de-la-eph-continua"><i class="fa fa-check"></i><b>2.1.1</b> Características de la EPH continua<span></span></a></li>
+<li class="chapter" data-level="2.1.2" data-path="eph1.html"><a href="eph1.html#la-eph-como-fuente-de-análisis-de-la-estructura-de-clases"><i class="fa fa-check"></i><b>2.1.2</b> La EPH como fuente de análisis de la estructura de clases<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="eph2.html"><a href="eph2.html"><i class="fa fa-check"></i><b>2.2</b> Comenzando a utilizar la EPH<span></span></a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="eph2.html"><a href="eph2.html#el-método-clásico"><i class="fa fa-check"></i><b>2.2.1</b> El “método clásico”<span></span></a></li>
+<li class="chapter" data-level="2.2.2" data-path="eph2.html"><a href="eph2.html#el-paquete-eph"><i class="fa fa-check"></i><b>2.2.2</b> El paquete <code>eph</code><span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="eph3.html"><a href="eph3.html"><i class="fa fa-check"></i><b>2.3</b> Primeros pasos en el estudio de las clases sociales a través de la EPH<span></span></a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="eph3.html"><a href="eph3.html#uniendo-las-bases-de-individuos-y-hogares"><i class="fa fa-check"></i><b>2.3.1</b> Uniendo las bases de individuos y hogares<span></span></a></li>
+<li class="chapter" data-level="2.3.2" data-path="eph3.html"><a href="eph3.html#población-bajo-análisis"><i class="fa fa-check"></i><b>2.3.2</b> Población bajo análisis<span></span></a></li>
+<li class="chapter" data-level="2.3.3" data-path="eph3.html"><a href="eph3.html#ponderación-y-expansión-de-la-muestra"><i class="fa fa-check"></i><b>2.3.3</b> Ponderación y expansión de la muestra<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="otras.html"><a href="otras.html"><i class="fa fa-check"></i><b>2.4</b> Otras encuestas de hogares para el estudio de la estructura de clases<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="fuentes2.html"><a href="fuentes2.html"><i class="fa fa-check"></i><b>3</b> Los censos de población modernos<span></span></a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="clases3.html"><a href="clases3.html"><i class="fa fa-check"></i><b>3.1</b> Clases sociales y censos de población<span></span></a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="clases3.html"><a href="clases3.html#antecedentes"><i class="fa fa-check"></i><b>3.1.1</b> Antecedentes<span></span></a></li>
+<li class="chapter" data-level="3.1.2" data-path="clases3.html"><a href="clases3.html#practicidad"><i class="fa fa-check"></i><b>3.1.2</b> Practicidad<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="censos.html"><a href="censos.html"><i class="fa fa-check"></i><b>3.2</b> Censos de población modernos. Características principales<span></span></a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="censos.html"><a href="censos.html#las-características-económicas-en-los-censos-de-población"><i class="fa fa-check"></i><b>3.2.1</b> Las características económicas en los censos de población<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="censos2.html"><a href="censos2.html"><i class="fa fa-check"></i><b>3.3</b> Censos modernos: acceso diferencial<span></span></a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="censos2.html"><a href="censos2.html#modos-de-acceso"><i class="fa fa-check"></i><b>3.3.1</b> Modos de acceso<span></span></a></li>
+<li class="chapter" data-level="3.3.2" data-path="censos2.html"><a href="censos2.html#es-lo-que-hay"><i class="fa fa-check"></i><b>3.3.2</b> Es lo que hay<span></span></a></li>
+<li class="chapter" data-level="3.3.3" data-path="censos2.html"><a href="censos2.html#procesamiento-de-datos-en-líneau-2"><i class="fa fa-check"></i><b>3.3.3</b> Procesamiento de datos en línea<span></span></a></li>
+<li class="chapter" data-level="3.3.4" data-path="censos2.html"><a href="censos2.html#descarga-directa-de-microdatos"><i class="fa fa-check"></i><b>3.3.4</b> Descarga directa de microdatos<span></span></a></li>
+<li class="chapter" data-level="3.3.5" data-path="censos2.html"><a href="censos2.html#ipums-i"><i class="fa fa-check"></i><b>3.3.5</b> IPUMS-I<span></span></a></li>
+<li class="chapter" data-level="3.3.6" data-path="censos2.html"><a href="censos2.html#solicitud-directa-al-indec"><i class="fa fa-check"></i><b>3.3.6</b> Solicitud directa al INDEC<span></span></a></li>
+<li class="chapter" data-level="3.3.7" data-path="censos2.html"><a href="censos2.html#otras-opciones-no-oficiales"><i class="fa fa-check"></i><b>3.3.7</b> Otras opciones no oficiales<span></span></a></li>
+<li class="chapter" data-level="3.3.8" data-path="censos2.html"><a href="censos2.html#disponibilidad-en-detalle-para-el-estudio-de-clases-sociales"><i class="fa fa-check"></i><b>3.3.8</b> Disponibilidad en detalle para el estudio de clases sociales<span></span></a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>III Variables<span></span></b></span></li>
+<li class="chapter" data-level="4" data-path="ocupacion.html"><a href="ocupacion.html"><i class="fa fa-check"></i><b>4</b> Las características económicas de la población<span></span></a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="consideraciones.html"><a href="consideraciones.html"><i class="fa fa-check"></i><b>4.1</b> Consideraciones previas<span></span></a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="consideraciones.html"><a href="consideraciones.html#las-reglas-del-juego"><i class="fa fa-check"></i><b>4.1.1</b> Las reglas del juego<span></span></a></li>
+<li class="chapter" data-level="4.1.2" data-path="consideraciones.html"><a href="consideraciones.html#la-estratificación-como-perspectiva-de-análisis"><i class="fa fa-check"></i><b>4.1.2</b> La estratificación como perspectiva de análisis<span></span></a></li>
+<li class="chapter" data-level="4.1.3" data-path="consideraciones.html"><a href="consideraciones.html#indicadores-de-la-estratificación-social"><i class="fa fa-check"></i><b>4.1.3</b> Indicadores de la estratificación social<span></span></a></li>
+<li class="chapter" data-level="4.1.4" data-path="consideraciones.html"><a href="consideraciones.html#la-fuerza-de-trabajo-y-las-características-económicas-de-la-población"><i class="fa fa-check"></i><b>4.1.4</b> La fuerza de trabajo y las características económicas de la población<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="las-variables-socio-ocupacionales.html"><a href="las-variables-socio-ocupacionales.html"><i class="fa fa-check"></i><b>4.2</b> Las variables socio-ocupacionales<span></span></a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="las-variables-socio-ocupacionales.html"><a href="las-variables-socio-ocupacionales.html#condición-de-actividad"><i class="fa fa-check"></i><b>4.2.1</b> Condición de actividad<span></span></a></li>
+<li class="chapter" data-level="4.2.2" data-path="las-variables-socio-ocupacionales.html"><a href="las-variables-socio-ocupacionales.html#ocupación"><i class="fa fa-check"></i><b>4.2.2</b> Ocupación<span></span></a></li>
+<li class="chapter" data-level="4.2.3" data-path="las-variables-socio-ocupacionales.html"><a href="las-variables-socio-ocupacionales.html#rama-de-actividad"><i class="fa fa-check"></i><b>4.2.3</b> Rama de Actividad<span></span></a></li>
+<li class="chapter" data-level="4.2.4" data-path="las-variables-socio-ocupacionales.html"><a href="las-variables-socio-ocupacionales.html#categoría-de-ocupación"><i class="fa fa-check"></i><b>4.2.4</b> Categoría de Ocupación<span></span></a></li>
+<li class="chapter" data-level="4.2.5" data-path="las-variables-socio-ocupacionales.html"><a href="las-variables-socio-ocupacionales.html#sector-de-actividad"><i class="fa fa-check"></i><b>4.2.5</b> Sector de Actividad<span></span></a></li>
+<li class="chapter" data-level="4.2.6" data-path="las-variables-socio-ocupacionales.html"><a href="las-variables-socio-ocupacionales.html#tamaño-del-establecimiento"><i class="fa fa-check"></i><b>4.2.6</b> Tamaño del Establecimiento<span></span></a></li>
+<li class="chapter" data-level="4.2.7" data-path="las-variables-socio-ocupacionales.html"><a href="las-variables-socio-ocupacionales.html#supervisión"><i class="fa fa-check"></i><b>4.2.7</b> Supervisión<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="eph4.html"><a href="eph4.html"><i class="fa fa-check"></i><b>4.3</b> Explorando las variables socio-ocupacionales en la EPH<span></span></a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="eph4.html"><a href="eph4.html#condición-de-actividad-1"><i class="fa fa-check"></i><b>4.3.1</b> Condición de actividad<span></span></a></li>
+<li class="chapter" data-level="4.3.2" data-path="eph4.html"><a href="eph4.html#ocupación-1"><i class="fa fa-check"></i><b>4.3.2</b> Ocupación<span></span></a></li>
+<li class="chapter" data-level="4.3.3" data-path="eph4.html"><a href="eph4.html#rama-de-actividad-1"><i class="fa fa-check"></i><b>4.3.3</b> Rama de actividad<span></span></a></li>
+<li class="chapter" data-level="4.3.4" data-path="eph4.html"><a href="eph4.html#categoría-de-ocupación-1"><i class="fa fa-check"></i><b>4.3.4</b> Categoría de ocupación<span></span></a></li>
+<li class="chapter" data-level="4.3.5" data-path="eph4.html"><a href="eph4.html#sector-de-actividad-1"><i class="fa fa-check"></i><b>4.3.5</b> Sector de actividad<span></span></a></li>
+<li class="chapter" data-level="4.3.6" data-path="eph4.html"><a href="eph4.html#tamaño-del-establecimiento-1"><i class="fa fa-check"></i><b>4.3.6</b> Tamaño del establecimiento<span></span></a></li>
+<li class="chapter" data-level="4.3.7" data-path="eph4.html"><a href="eph4.html#supervisión-1"><i class="fa fa-check"></i><b>4.3.7</b> Supervisión<span></span></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="clases5.html"><a href="clases5.html"><i class="fa fa-check"></i><b>5</b> Los Nomencladores de clases sociales<span></span></a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="computadora.html"><a href="computadora.html"><i class="fa fa-check"></i><b>5.1</b> De las clases en el papel a las clases en la computadora<span></span></a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="computadora.html"><a href="computadora.html#operacionalizando-el-concepto-de-clase"><i class="fa fa-check"></i><b>5.1.1</b> Operacionalizando el concepto de clase<span></span></a></li>
+<li class="chapter" data-level="5.1.2" data-path="computadora.html"><a href="computadora.html#clases-grupos-estratos-qué-medimos-cuando-analizamos-la-estructura-social"><i class="fa fa-check"></i><b>5.1.2</b> Clases, grupos, estratos ¿Qué medimos cuando analizamos la estructura social?<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="clases6.html"><a href="clases6.html"><i class="fa fa-check"></i><b>5.2</b> Enfoques operacionalizables de clases y estratos sociales<span></span></a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="clases6.html"><a href="clases6.html#esquemas-internacionales"><i class="fa fa-check"></i><b>5.2.1</b> Esquemas internacionales<span></span></a></li>
+<li class="chapter" data-level="5.2.2" data-path="clases6.html"><a href="clases6.html#esquemas-nacionales"><i class="fa fa-check"></i><b>5.2.2</b> Esquemas nacionales<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="operacion1.html"><a href="operacion1.html"><i class="fa fa-check"></i><b>5.3</b> Operacionalización paso a paso<span></span></a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="operacion1.html"><a href="operacion1.html#punto-de-partida"><i class="fa fa-check"></i><b>5.3.1</b> Punto de partida<span></span></a></li>
+<li class="chapter" data-level="5.3.2" data-path="operacion1.html"><a href="operacion1.html#acondicionando-la-base"><i class="fa fa-check"></i><b>5.3.2</b> Acondicionando la base<span></span></a></li>
+<li class="chapter" data-level="5.3.3" data-path="operacion1.html"><a href="operacion1.html#creación-cso-desagregado"><i class="fa fa-check"></i><b>5.3.3</b> Creación CSO desagregado<span></span></a></li>
+<li class="chapter" data-level="5.3.4" data-path="operacion1.html"><a href="operacion1.html#creación-del-cso-agregado"><i class="fa fa-check"></i><b>5.3.4</b> Creación del CSO agregado<span></span></a></li>
+<li class="chapter" data-level="5.3.5" data-path="operacion1.html"><a href="operacion1.html#creación-esquema-de-clase"><i class="fa fa-check"></i><b>5.3.5</b> Creación esquema de clase<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="operacion2.html"><a href="operacion2.html"><i class="fa fa-check"></i><b>5.4</b> Operacionalización automática<span></span></a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="operacion2.html"><a href="operacion2.html#operacionalizando-la-escala-isei"><i class="fa fa-check"></i><b>5.4.1</b> Operacionalizando la escala ISEI<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="unidades.html"><a href="unidades.html"><i class="fa fa-check"></i><b>5.5</b> Unidades de análisis y clases sociales<span></span></a>
+<ul>
+<li class="chapter" data-level="5.5.1" data-path="unidades.html"><a href="unidades.html#breve-discusión-teórica"><i class="fa fa-check"></i><b>5.5.1</b> Breve discusión teórica<span></span></a></li>
+<li class="chapter" data-level="5.5.2" data-path="unidades.html"><a href="unidades.html#opciones-metodológicas"><i class="fa fa-check"></i><b>5.5.2</b> Opciones metodológicas<span></span></a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>IV Análisis<span></span></b></span></li>
+<li class="chapter" data-level="6" data-path="independiente.html"><a href="independiente.html"><i class="fa fa-check"></i><b>6</b> La clase como variable independiente<span></span></a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="huevo.html"><a href="huevo.html"><i class="fa fa-check"></i><b>6.1</b> La estructura de clases ¿el huevo o la gallina?<span></span></a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="huevo.html"><a href="huevo.html#el-enfoque-relacional-weberiano"><i class="fa fa-check"></i><b>6.1.1</b> El enfoque relacional-weberiano<span></span></a></li>
+<li class="chapter" data-level="6.1.2" data-path="huevo.html"><a href="huevo.html#estructural-funcionalismo"><i class="fa fa-check"></i><b>6.1.2</b> Estructural funcionalismo<span></span></a></li>
+<li class="chapter" data-level="6.1.3" data-path="huevo.html"><a href="huevo.html#un-enfoque-intermedio"><i class="fa fa-check"></i><b>6.1.3</b> Un enfoque intermedio<span></span></a></li>
+<li class="chapter" data-level="6.1.4" data-path="huevo.html"><a href="huevo.html#una-cuarta-mirada"><i class="fa fa-check"></i><b>6.1.4</b> Una cuarta mirada<span></span></a></li>
+<li class="chapter" data-level="6.1.5" data-path="huevo.html"><a href="huevo.html#epílogo-una-sociedad-sin-clases"><i class="fa fa-check"></i><b>6.1.5</b> Epílogo: una sociedad sin clases<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="explorando.html"><a href="explorando.html"><i class="fa fa-check"></i><b>6.2</b> Explorando los datos por clase social<span></span></a></li>
+<li class="chapter" data-level="6.3" data-path="aprox.html"><a href="aprox.html"><i class="fa fa-check"></i><b>6.3</b> Aproximación al análisis multidimensional<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="dependiente.html"><a href="dependiente.html"><i class="fa fa-check"></i><b>7</b> La clase como variable dependiente<span></span></a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="movilidad1.html"><a href="movilidad1.html"><i class="fa fa-check"></i><b>7.1</b> El estudio de la movilidad social<span></span></a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="movilidad1.html"><a href="movilidad1.html#qué-es-la-movilidad-social"><i class="fa fa-check"></i><b>7.1.1</b> ¿Qué es la movilidad social?<span></span></a></li>
+<li class="chapter" data-level="7.1.2" data-path="movilidad1.html"><a href="movilidad1.html#enfoques-funcionalistas"><i class="fa fa-check"></i><b>7.1.2</b> Enfoques funcionalistas<span></span></a></li>
+<li class="chapter" data-level="7.1.3" data-path="movilidad1.html"><a href="movilidad1.html#enfoques-de-clase"><i class="fa fa-check"></i><b>7.1.3</b> Enfoques de clase<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="enes.html"><a href="enes.html"><i class="fa fa-check"></i><b>7.2</b> El uso de la base ENES-PISAC<span></span></a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="enes.html"><a href="enes.html#algunas-consideraciones-de-la-enes"><i class="fa fa-check"></i><b>7.2.1</b> Algunas consideraciones de la ENES<span></span></a></li>
+<li class="chapter" data-level="7.2.2" data-path="enes.html"><a href="enes.html#abriendo-y-pegando-la-base-enes"><i class="fa fa-check"></i><b>7.2.2</b> Abriendo y pegando la base ENES<span></span></a></li>
+<li class="chapter" data-level="7.2.3" data-path="enes.html"><a href="enes.html#recodificación-de-variables-y-filtros"><i class="fa fa-check"></i><b>7.2.3</b> Recodificación de variables y filtros<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="movilidad2.html"><a href="movilidad2.html"><i class="fa fa-check"></i><b>7.3</b> Las tablas de movilidad<span></span></a></li>
+<li class="chapter" data-level="7.4" data-path="movilidad3.html"><a href="movilidad3.html"><i class="fa fa-check"></i><b>7.4</b> Aproximación al análisis multivariable de la movilidad social<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="tiempo.html"><a href="tiempo.html"><i class="fa fa-check"></i><b>8</b> Tiempo, espacio y clases sociales<span></span></a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="temporal.html"><a href="temporal.html"><i class="fa fa-check"></i><b>8.1</b> La dimensión temporal<span></span></a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="temporal.html"><a href="temporal.html#algunos-ejemplos-de-la-bibliografía"><i class="fa fa-check"></i><b>8.1.1</b> Algunos ejemplos de la bibliografía<span></span></a></li>
+<li class="chapter" data-level="8.1.2" data-path="temporal.html"><a href="temporal.html#ejemplo-práctico"><i class="fa fa-check"></i><b>8.1.2</b> Ejemplo práctico<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="espacial.html"><a href="espacial.html"><i class="fa fa-check"></i><b>8.2</b> La dimensión espacial<span></span></a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="espacial.html"><a href="espacial.html#algunos-ejemplos-de-la-bibliografía-1"><i class="fa fa-check"></i><b>8.2.1</b> Algunos ejemplos de la bibliografía<span></span></a></li>
+<li class="chapter" data-level="8.2.2" data-path="espacial.html"><a href="espacial.html#ejemplo-práctico-1"><i class="fa fa-check"></i><b>8.2.2</b> Ejemplo práctico<span></span></a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>V Anexo<span></span></b></span></li>
+<li class="chapter" data-level="9" data-path="anexo.html"><a href="anexo.html"><i class="fa fa-check"></i><b>9</b> Introducción a R y RStudio<span></span></a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="introR.html"><a href="introR.html"><i class="fa fa-check"></i><b>9.1</b> Introducción<span></span></a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="introR.html"><a href="introR.html#el-entorno-de-r"><i class="fa fa-check"></i><b>9.1.1</b> El entorno de R<span></span></a></li>
+<li class="chapter" data-level="9.1.2" data-path="introR.html"><a href="introR.html#aplicar-estadística-en-r"><i class="fa fa-check"></i><b>9.1.2</b> Aplicar estadística en R<span></span></a></li>
+<li class="chapter" data-level="9.1.3" data-path="introR.html"><a href="introR.html#descargar-e-instalar-r"><i class="fa fa-check"></i><b>9.1.3</b> Descargar e instalar R<span></span></a></li>
+<li class="chapter" data-level="9.1.4" data-path="introR.html"><a href="introR.html#rstudio"><i class="fa fa-check"></i><b>9.1.4</b> RStudio<span></span></a></li>
+<li class="chapter" data-level="9.1.5" data-path="introR.html"><a href="introR.html#descargar-e-instalar-rstudio"><i class="fa fa-check"></i><b>9.1.5</b> Descargar e instalar RStudio<span></span></a></li>
+<li class="chapter" data-level="9.1.6" data-path="introR.html"><a href="introR.html#partes-de-rstudio"><i class="fa fa-check"></i><b>9.1.6</b> Partes de RStudio<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="workflow.html"><a href="workflow.html"><i class="fa fa-check"></i><b>9.2</b> Workflow<span></span></a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="workflow.html"><a href="workflow.html#proyectos-r-studio"><i class="fa fa-check"></i><b>9.2.1</b> Proyectos R Studio<span></span></a></li>
+<li class="chapter" data-level="9.2.2" data-path="workflow.html"><a href="workflow.html#organización"><i class="fa fa-check"></i><b>9.2.2</b> Organización<span></span></a></li>
+<li class="chapter" data-level="9.2.3" data-path="workflow.html"><a href="workflow.html#utilidad"><i class="fa fa-check"></i><b>9.2.3</b> Utilidad<span></span></a></li>
+<li class="chapter" data-level="9.2.4" data-path="workflow.html"><a href="workflow.html#crear-un-proyecto-de-rstudio"><i class="fa fa-check"></i><b>9.2.4</b> Crear un Proyecto de RStudio<span></span></a></li>
+<li class="chapter" data-level="9.2.5" data-path="workflow.html"><a href="workflow.html#crear-un-archivo-de-r"><i class="fa fa-check"></i><b>9.2.5</b> Crear un archivo de R<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="rmarkdown.html"><a href="rmarkdown.html"><i class="fa fa-check"></i><b>9.3</b> RMarkdown<span></span></a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="rmarkdown.html"><a href="rmarkdown.html#agregar-texto"><i class="fa fa-check"></i><b>9.3.1</b> Agregar texto<span></span></a></li>
+<li class="chapter" data-level="9.3.2" data-path="rmarkdown.html"><a href="rmarkdown.html#listas"><i class="fa fa-check"></i><b>9.3.2</b> Listas<span></span></a></li>
+<li class="chapter" data-level="9.3.3" data-path="rmarkdown.html"><a href="rmarkdown.html#editar-texto"><i class="fa fa-check"></i><b>9.3.3</b> Editar texto<span></span></a></li>
+<li class="chapter" data-level="9.3.4" data-path="rmarkdown.html"><a href="rmarkdown.html#insertar-imágenes"><i class="fa fa-check"></i><b>9.3.4</b> Insertar imágenes<span></span></a></li>
+<li class="chapter" data-level="9.3.5" data-path="rmarkdown.html"><a href="rmarkdown.html#enlaces"><i class="fa fa-check"></i><b>9.3.5</b> Enlaces<span></span></a></li>
+<li class="chapter" data-level="9.3.6" data-path="rmarkdown.html"><a href="rmarkdown.html#tips-para-escribir-código-en-r"><i class="fa fa-check"></i><b>9.3.6</b> Tips para escribir código en R<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="primerospasos.html"><a href="primerospasos.html"><i class="fa fa-check"></i><b>9.4</b> Primeros pasos en R<span></span></a>
+<ul>
+<li class="chapter" data-level="9.4.1" data-path="primerospasos.html"><a href="primerospasos.html#funciones-y-comandos-elementales"><i class="fa fa-check"></i><b>9.4.1</b> Funciones y comandos elementales<span></span></a></li>
+<li class="chapter" data-level="9.4.2" data-path="primerospasos.html"><a href="primerospasos.html#valores-y-vectores"><i class="fa fa-check"></i><b>9.4.2</b> Valores y vectores<span></span></a></li>
+<li class="chapter" data-level="9.4.3" data-path="primerospasos.html"><a href="primerospasos.html#matrices-y-listas"><i class="fa fa-check"></i><b>9.4.3</b> Matrices y listas<span></span></a></li>
+<li class="chapter" data-level="9.4.4" data-path="primerospasos.html"><a href="primerospasos.html#filtrado-subsetting"><i class="fa fa-check"></i><b>9.4.4</b> Filtrado (Subsetting)<span></span></a></li>
+<li class="chapter" data-level="9.4.5" data-path="primerospasos.html"><a href="primerospasos.html#cargar-datos-en-r"><i class="fa fa-check"></i><b>9.4.5</b> Cargar datos en R<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="9.5" data-path="recursos.html"><a href="recursos.html"><i class="fa fa-check"></i><b>9.5</b> Otros recursos de consulta<span></span></a></li>
+</ul></li>
+<li class="part"><span><b>VI Referencias bibliográficas<span></span></b></span></li>
+<li><a href="referencias.html#referencias">Referencias<span></span></a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Libro de Cocina para el Análisis de las Clases Sociales en Argentina</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="huevo" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> La estructura de clases ¿el huevo o la gallina?<a href="huevo.html#huevo" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Para entender a qué nos referimos al conceptualizar a la clase social como variable independiente podemos pensar en el típico ejemplo de qué viene primero, si el huevo o la gallina. En este caso, la estructura de clases tiene potencial tanto de explicación como de fenómeno a ser explicado. En esta característica radican su versatilidad y complejidad. Lo cierto es que en esta sección, abordaremos de qué manera puede influir la clase en diversos aspectos de la desigualdad social, inherente a las sociedades actuales.</p>
+<p>Dicho en otros términos, si tomamos un modelo simple, podemos representar a la variable independiente como X y a la variable dependiente como Y, veremos que:</p>
+<p>X —&gt; Y</p>
+<p>Esta simplificación de la realidad nos brinda un modo sencillo de analizar la forma en que se relacionan las variables, dado que es la clase aquella que influye o afecta (pero nunca determina) a la desigualdad social. Asimismo, nuestra <code>Y</code> podría representar a múltiples factores o fenómenos que varían según el comportamiento de <code>X</code>. Esto es, por ejemplo, el modo en que la estructura de clases tiene efectos sobre la distribución de los ingresos de los individuos y de los hogares, o bien en el hábitat, los fenómenos demográficos, las condiciones laborales, el consumo, el capital cultural, los factores psico-sociales, entre otros. En la literatura, estos <em>resultados</em> ligados al posicionamiento de clase, fueron concebidos bajo diferentes ideas: “oportunidades de vida”, “condiciones de vida”, “nivel de vida”, “bienestar”, “riqueza”, “recursos”, “activos”, “capitales”, etc.</p>
+<p>Con la finalidad de presentar estas numerosas relaciones que la variable <em>clase</em> posee en los fenómenos aquí presentados, tendremos en cuanta una a una las diferentes perspectivas que nos permiten comprender cada una de ellas.</p>
+<div id="el-enfoque-relacional-weberiano" class="section level3 hasAnchor" number="6.1.1">
+<h3><span class="header-section-number">6.1.1</span> El enfoque relacional-weberiano<a href="huevo.html#el-enfoque-relacional-weberiano" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>La literatura destaca la relación existente entre las <strong>clases</strong> y las <strong>oportunidades de vida</strong>. Dicho de otro modo, existe una relación entre la estructura en la que se ubican los individuos y la posibilidad de lograr o alcanzar ciertas oportunidades de vida. Entonces, como señala Benza <span class="citation">(<a href="referencias.html#ref-Benza2014" role="doc-biblioref">2014</a>)</span>, esto no significa que las clases determinen necesariamente, o generen directamente tales o cuáles “chances” de vida de las personas, sino más bien, contribuyen a la probabilidad de que se den. En pocas palabras, pertenecer a una clase hace que sea mayormente posible el hecho de lograr determinadas oportunidades de vida, que en el caso de pertenecer a otra posición de la estructura social serían diferentes.</p>
+<p>Ya presentadas las diferencias que se ven afectadas por la pertenencia a una clase u otra, es decir, las diferencias entre clases, ahora nos centramos en ver qué sucede dentro de las clases, o sea, al interior de un grupo de la estructura social. Para ello, recordamos el argumento de Breen <span class="citation">(<a href="referencias.html#ref-Breen2005" role="doc-biblioref">2005, p. 3</a>)</span> acerca de la variabilidad en las oportunidades de vida que existen entre los miembros de una misma clase. Estas se deben a que las clases dependen de múltiples factores, lo que hace que cierta posición de clase no se corresponda totalmente —como condición <em>sine qua non</em>— con determinado conjunto de oportunidades de vida. La relación es más bien explicada como a consiguiente: las oportunidades de vida no se estructuran únicamente por la estructura de clases. También intervienen otros factores relevantes como la edad, el género, la etnia, el lugar de nacimiento y/o el nivel educativo.</p>
+<p>¿Cómo funcionan, entonces, las oportunidades de vida? Estas se componen de una amplia paleta de aspectos tales como los ingresos, la capacidad de ahorro, la seguridad económica, la estabilidad económica, las expectativas económicas, la salud, entre otros <span class="citation">(<a href="referencias.html#ref-Chan.Goldthorpe2007" role="doc-biblioref">Chan &amp; Goldthorpe, 2007</a>; <a href="referencias.html#ref-Goldthorpe.McKnight2006" role="doc-biblioref">J. H. Goldthorpe &amp; McKnight, 2006</a>)</span>. De este modo, explorar la relación entre la estructura de clases y las oportunidades de vida, implica tomar como punto de partida a las clases para analizar cómo afectan a los fenómenos de tinte cuantitativo (por ejemplo: la distribución del ingreso), y aquellos de tipo cualitativo (por ejemplo: expectativas económicas). Siguiendo esta línea de acercamiento relacional, vemos que para Goldthorpe las clases sociales deben pensarse no en términos jerárquicos (respecto a los resultados y oportunidades a los cuales se asocian) sino en términos de posiciones más o menos ventajosas.</p>
+</div>
+<div id="estructural-funcionalismo" class="section level3 hasAnchor" number="6.1.2">
+<h3><span class="header-section-number">6.1.2</span> Estructural funcionalismo<a href="huevo.html#estructural-funcionalismo" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Hablar del <strong>estructural funcionalismo</strong> implica “movernos” en el nivel de abstracción del análisis. Si el enfoque weberiano nos permite ahondar en los aspectos macro estructurales, el funcionalismo hace foco en el nivel intermedio o meso de análisis sociológico. Desde esta perspectiva, partiendo de criterios evaluatorios, el sistema social jerarquiza a las posiciones en función del mérito y la especificidad de la ocupación detentada y también establece el “paquete de recompensas” <span class="citation">(<a href="referencias.html#ref-CachonRodriguez1989" role="doc-biblioref">Cachón Rodríguez, 1989</a>; <a href="referencias.html#ref-Parsons1954" role="doc-biblioref">Parsons, 1954</a>)</span>. Esto es, la correspondencia ordenada e institucionalizada de la relación estratificación-recompensas.</p>
+<p>Como consecuencia, lejos de referirse a la estratificación social como un factor estructurador de las desigualdades, las recompensas deben pesarse como una consecuencia del proceso de igualdad de oportunidades, es decir, una “desigualdad institucionalizada” de resultados existentes.</p>
+</div>
+<div id="un-enfoque-intermedio" class="section level3 hasAnchor" number="6.1.3">
+<h3><span class="header-section-number">6.1.3</span> Un enfoque intermedio<a href="huevo.html#un-enfoque-intermedio" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>En un camino intermedio de estos dos enfoques se encuentra la propuesta de Grusky <span class="citation">(<a href="referencias.html#ref-Grusky2008" role="doc-biblioref">2008</a>)</span>. El autor plantea que existen tres componentes clave que definen a un sistema de estratificación: 1) los procesos institucionales que definen qué tipos de bienes deben ser valorados y deseables; 2) las reglas de asignación que distribuyen dichos bienes según ocupaciones en la división del trabajo y 3) los procesos de movilidad que ligan a los individuos con las ocupaciones y brindan un control desigual sobre los recursos valorados <span class="citation">(<a href="referencias.html#ref-Grusky2008" role="doc-biblioref">Grusky, 2008, p. 5</a>)</span>, ilustrado en la <a href="huevo.html#tab:grusky">6.1</a>.</p>
+<p>Dentro de los activos que se encuentran desigualmente distribuidos en la sociedad, podemos nombrar a los: económicos, de poder, culturales, religiosos, sociales, honoríficos, civiles, humanos y físicos.</p>
+<!-- ```{r fig.cap= "Tipos de activos y ejemplos de grupos aventajados y desaventajados (Grusky, 2008)", out.width = '80%', echo=FALSE, eval = knitr::is_html_output()} -->
+<!-- knitr::include_graphics("imagenes/grusky.png") -->
+<!-- ``` -->
+<template id="293fb5ec-7345-4915-a372-a6624ce10124"><style>
+.tabwid table{
+  border-spacing:0px !important;
+  border-collapse:collapse;
+  line-height:1;
+  margin-left:auto;
+  margin-right:auto;
+  border-width: 0;
+  display: table;
+  margin-top: 1.275em;
+  margin-bottom: 1.275em;
+  border-color: transparent;
+}
+.tabwid_left table{
+  margin-left:0;
+}
+.tabwid_right table{
+  margin-right:0;
+}
+.tabwid td {
+    padding: 0;
+}
+.tabwid a {
+  text-decoration: none;
+}
+.tabwid thead {
+    background-color: transparent;
+}
+.tabwid tfoot {
+    background-color: transparent;
+}
+.tabwid table tr {
+background-color: transparent;
+}
+</style><div class="tabwid"><style>.cl-4d229454{table-layout:auto;width:100%;}.cl-4d1b700c{font-family:'Helvetica';font-size:10pt;font-weight:bold;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-4d1b7016{font-family:'Helvetica';font-size:10pt;font-weight:normal;font-style:italic;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-4d1b7020{font-family:'Helvetica';font-size:10pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-4d1b8146{margin:0;text-align:center;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-4d1b8150{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-4d1bddd0{background-color:transparent;vertical-align: middle;border-bottom: 1pt solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-4d1bddda{background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-4d1bdde4{background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 1pt solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-4d1bdde5{background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-4d1bddee{background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-4d1bddf8{background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table class='cl-4d229454'>
+<caption class="Table Caption">
+<p><span id="tab:grusky">Tabla 6.1: </span>Tipos de activos y ejemplos de grupos aventajados y desaventajados</p>
+</caption>
+<thead><tr style="overflow-wrap:break-word;"><td  colspan="2"class="cl-4d1bddf8"><p class="cl-4d1b8146"><span class="cl-4d1b700c">Activos</span></p></td><td  colspan="2"class="cl-4d1bddf8"><p class="cl-4d1b8146"><span class="cl-4d1b700c">Ejemplos</span></p></td></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-4d1bddd0"><p class="cl-4d1b8146"><span class="cl-4d1b7016">Tipo de activos</span></p></td><td class="cl-4d1bddd0"><p class="cl-4d1b8146"><span class="cl-4d1b7016">Ejemplos</span></p></td><td class="cl-4d1bddd0"><p class="cl-4d1b8146"><span class="cl-4d1b7016">Aventajados</span></p></td><td class="cl-4d1bddd0"><p class="cl-4d1b8146"><span class="cl-4d1b7016">Desaventajados</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4d1bdde4"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Económico</span></p></td><td class="cl-4d1bdde4"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Riqueza</span></p></td><td class="cl-4d1bdde4"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Billonarios</span></p></td><td class="cl-4d1bdde4"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Trabajador quebrado</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020"></span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Ingresos</span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Profesionales</span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Obrero</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020"></span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Propiedad</span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Capitalistas</span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Empleado</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Poder</span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Poder político</span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Primer ministro</span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Persona sin derechos</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020"></span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Autoridad en el trabajo</span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Manager</span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Trabajador subordinado</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020"></span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Autoridad en el hogar</span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Jefe/a de hogar</span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Niño</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Cultural</span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Conocimiento</span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Intelectuales</span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Persona sin educación</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020"></span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Cultura digital</span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Residentes de Sillicon Valley</span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Residente de otros lugares</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020"></span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Buenas maneras</span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Aristocracia</span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Plebeyos</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Social</span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Club sociales</span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Miembro de un club de campo</span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">No miembro</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020"></span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Asociaciones profesionales</span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Miembro de sindicato</span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">No miembro</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020"></span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Redes informales</span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Washington A-List</span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Desconocido</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Honorífico</span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Ocupacional</span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Juez</span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Recolector de residuos</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020"></span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Religioso</span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Santo</span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Excomulgado</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020"></span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Basado en el mérito</span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Premio Nobel</span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">No ganador</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Civil</span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Derecho al trabajo</span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Ciudadano</span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Migrante ilegal</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020"></span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Debido proceso</span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Ciudadano</span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Supuesto terrorista</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020"></span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Voto</span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Ciudadano</span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Delincuente</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Humano</span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Formación laboral</span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Trabajador expermientado</span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Trabajador inexperto</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020"></span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Formación escolar</span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Graduado</span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Desertor escolar</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020"></span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Formación vocacional</span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Graduado</span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Trabajador no calificado</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Físico</span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Mortalidad</span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Persona con larga vida</span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Muerto prematuro</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020"></span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Enfermedad física</span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Persona saludable</span></p></td><td class="cl-4d1bddda"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Persona con SIDA, asma</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4d1bdde5"><p class="cl-4d1b8146"><span class="cl-4d1b7020"></span></p></td><td class="cl-4d1bdde5"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Salud mental</span></p></td><td class="cl-4d1bdde5"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Persona saludable</span></p></td><td class="cl-4d1bdde5"><p class="cl-4d1b8146"><span class="cl-4d1b7020">Deprimido, alienado</span></p></td></tr></tbody><tfoot><tr style="overflow-wrap:break-word;"><td  colspan="4"class="cl-4d1bddee"><p class="cl-4d1b8150"><span class="cl-4d1b7020">Fuente: Grusky (2008)</span></p></td></tr></tfoot></table></div></template>
+<div class="flextable-shadow-host" id="d98fba28-b7c1-42ea-8374-793a11d058a1"></div>
+<script>
+var dest = document.getElementById("d98fba28-b7c1-42ea-8374-793a11d058a1");
+var template = document.getElementById("293fb5ec-7345-4915-a372-a6624ce10124");
+var caption = template.content.querySelector("caption");
+if(caption) {
+  caption.style.cssText = "display:block;text-align:center;";
+  var newcapt = document.createElement("p");
+  newcapt.appendChild(caption)
+  dest.parentNode.insertBefore(newcapt, dest.previousSibling);
+}
+var fantome = dest.attachShadow({mode: 'open'});
+var templateContent = template.content;
+fantome.appendChild(templateContent);
+</script>
+
+</div>
+<div id="una-cuarta-mirada" class="section level3 hasAnchor" number="6.1.4">
+<h3><span class="header-section-number">6.1.4</span> Una cuarta mirada<a href="huevo.html#una-cuarta-mirada" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Existe otra alternativa para aproximarnos a la relación entre clases y distintos fenómenos sociales. Esta perspectiva focaliza en el riesgo como característica central, el cual se distribuye de manera desigual según la clase social <span class="citation">(<a href="referencias.html#ref-Esping-Andersen2000" role="doc-biblioref">Esping-Andersen, 2000</a>)</span>. Dicho de modo simple, el factor clave para esta tesis es el <strong>riesgo social</strong>, que cambia de un nivel individual al social una vez que a) hay consecuencias colectivas sobre el destino de los individuos; b) la sociedad lo reconoce como necesidades de consideración pública y c) la sociedad se complejiza. El punto es que el riesgo social no está dispuesto de la misma manera en toda la sociedad, sino como señalamos anteriormente: de forma desigual entre las clases (en la estructura social) y los cursos de vida (de los individuos).</p>
+<p>Entonces, ¿cómo logra lidiar la sociedad con el riesgo? Según este autor existen tres fuentes:<br />
+- La familia: es la solución tradicional<br />
+- El mercado: es la solución liberal<br />
+- El Estado de Bienestar: es la solución divergente, que puede identificarse con la democracia social.</p>
+<p>A diferencia de las miradas liberales, este enfoque entiende a las carencias y los riesgos, no como atributos de las personas, sino como probabilidades de grupos sociales: como aspectos colectivos. Este enfoque agrega un adicional a la propuesta weberiana, que radica en el papel del Estado a la hora de gestionar dichos riesgos. El concepto “desmercantilización” es clave para entender la cuestión, ya que el concepto aspira a captar el grado en el que el Estado puede garantizar determinados bienes y servicios debilitando su nexo monetario, es decir, independizando su obtención de acuerdo al lugar ocupado en el mercado. En función de la intensidad con la cual los riesgos de clase fueron atendidos, según Esping-Andersen, tres tipos ideales de Estado tuvieron lugar en las sociedades occidentales: un formato liberal, uno corporativista y uno universalista.</p>
+<p>La solución del autor, en breve, apunta a otorgar un mayor peso de responsabilidad en el estado para las soluciones públicas de los problemas colectivos, en detrimento del papel que el mercado o la familia, en tanto instituciones, puedan tener.</p>
+</div>
+<div id="epílogo-una-sociedad-sin-clases" class="section level3 hasAnchor" number="6.1.5">
+<h3><span class="header-section-number">6.1.5</span> Epílogo: una sociedad sin clases<a href="huevo.html#epílogo-una-sociedad-sin-clases" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Finalmente, existen una serie de enfoques y teorías que señalan el debilitamiento y la <strong>descomposición del concepto de clase social</strong> como elemento central para comprender el sistema de desigualdades <span class="citation">(<a href="referencias.html#ref-Dubet2015" role="doc-biblioref">Dubet, 2015</a>)</span>. Según estos enfoques, las transformaciones en el capitalismo hacia finales de siglo XX, que algunos autores han englobado bajo la idea de “capitalismo de acumulación flexible”, “capitalismo tardío” o “post-industrialismo”, entre otras etiquetas, encontraron cierta compatibilidad con un proceso de cambio en el régimen de significación cultural que se daba a la par: el pasaje del modernismo al posmodernismo <span class="citation">(<a href="referencias.html#ref-Lash2007" role="doc-biblioref">Lash, 2007</a>)</span>. El paradigma productivista que había marcado a fuego las relaciones sociales, las instituciones y los modos de acción social y política, sobre todo en los treinta gloriosos años del Estado de Bienestar, dejaría lugar a un nuevo régimen en el cual el consumo y la consecuente estilización de la vida cobran una mayor preeminencia, erigiéndose como nuevos cimientos del lazo social, las interacciones y la acción comunitaria.</p>
+<p>Es partir de este desfasaje entre las mutaciones que atraviesa la sociedad en su conjunto y las categorías empleadas para analizarlas, que algunos autores plantearon la pérdida de la potencialidad explicativa del concepto de clase social y sus derivados. En una posición casi límite, Touraine <span class="citation">(<a href="referencias.html#ref-Touraine2005" role="doc-biblioref">2005</a>)</span> indicaba que categorías tales como clase social y riqueza o estratificación y movilidad social, perdieron su poder explicativo debido a un cambio de paradigma en la interpretación de la vida personal y colectiva que ya no remite a una explicación en términos sociales. En esta línea, Beck <span class="citation">(<a href="referencias.html#ref-Beck1998" role="doc-biblioref">1998</a>)</span> planteaba que la modernidad había producido una fractura en la cual la clásica sociedad industrial se disuelve transformando a las desigualdades sociales en desigualdades personales. De este modo, las categorías centrales del análisis de clase, herederas de la tradición marxista y weberiana, que funcionaban como “diques de contención” de los agrupamientos sociales, se vuelven estériles para comprender los procesos de individuación y diversificación en los estilos de vida que caracterizan a la nueva dinámica social.</p>
+<p>A grandes rasgos, los distintos enfoques que hemos reseñado en esta sección pueden ilustrarse en las siguientes gráficas:</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:xgrusky"></span>
+<p class="caption">
+Gráfico 6.1: Tipos de representación de la estructura social (Grusky, 2008): 1) Régimen de clase, 2) Régimen gradacional, 3) Desigualdad desorganizada
+</p>
+<img src="imagenes/grusky2.png" alt="Tipos de representación de la estructura social (Grusky, 2008): 1) Régimen de clase, 2) Régimen gradacional, 3) Desigualdad desorganizada" width="80%" />
+</div>
+<p>Mientras que el primero de los gráficos hace referencia a los enfoque clásicos <strong>relacionales de clase</strong>, en donde las distintas posiciones no pueden representarse en términos de “más altas” o “más bajas”, sino de acuerdo a las múltiples relaciones que se dan entre los grupos, el segundo gráfico hace referencia al enfoque <strong>estructura funcionalista</strong>, en el que las posiciones son pensadas en términos gradacionales y la distribución respecto a las oportunidades de vida se da en forma ordenada. Finalmente, en el tercer gráfico, se muestra la representación del enfoque que señala el <strong>debilitamiento de la clase</strong> como factor explicativo de las desigualdades, ante la aparición de múltiples aspectos y factores de mayor relevancia. En este sentido, la desigualdad se torna, en parte, irrepresentable y desorganizada a partir de características de raigambre más individual.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="independiente.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="explorando.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["docs.pdf", "docs.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section",
+"scroll_highlight": true
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

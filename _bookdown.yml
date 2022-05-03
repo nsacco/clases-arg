@@ -29,7 +29,7 @@ rmd_files: [
 ]
 
 book_filename: "docs"
-output_dir: "_docs"
+output_dir: "docs"
 delete_rmd: True
 delete_merged_file: True
 
