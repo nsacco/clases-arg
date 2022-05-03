@@ -25,7 +25,7 @@
 <meta name="author" content="Sofia Jaime" />
 
 
-<meta name="date" content="2022-04-12" />
+<meta name="date" content="2022-05-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -400,13 +400,13 @@ div.csl-indent {
 <h3><span class="header-section-number">9.4.1</span> Funciones y comandos elementales<a href="primerospasos.html#funciones-y-comandos-elementales" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Las entidades que crea <strong><code>R</code></strong> durante una sesión de trabajo se denominan <em>objetos</em>. Estos pueden ser números, cadenas, vectores, matrices, funciones o estructuras más generales construidas a partir de estos elementos. Estos objetos se guardan por nombre y se almacenan en un área dedicada llamada “espacio de trabajo” o <em>environment</em>. En cualquier momento, es posible verificar los objetos disponibles en el espacio de trabajo usando el comando:</p>
 <div class="sourceCode" id="cb156"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb156-1"><a href="primerospasos.html#cb156-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span>()</span></code></pre></div>
-<p>Para eliminar un objeto del espacio de trabajo, se usa la función <code>rm()</code>. La función espera el nombre del objeto que se desea eliminar como argumento. Suponiendo que hay un objeto llamado “cosa,” puede eliminarse con el comando:</p>
+<p>Para eliminar un objeto del espacio de trabajo, se usa la función <code>rm()</code>. La función espera el nombre del objeto que se desea eliminar como argumento. Suponiendo que hay un objeto llamado “cosa”, puede eliminarse con el comando:</p>
 <div class="sourceCode" id="cb157"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb157-1"><a href="primerospasos.html#cb157-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(cosa)</span></code></pre></div>
 <p>Al iniciar una nueva sesión de trabajo, se recomienda retirar los objetos existentes en el área de trabajo. Un comando útil para este propósito es:</p>
 <div class="sourceCode" id="cb158"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb158-1"><a href="primerospasos.html#cb158-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>())</span></code></pre></div>
 <p>Se puede almacenar el espacio de trabajo con la función:</p>
 <div class="sourceCode" id="cb159"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb159-1"><a href="primerospasos.html#cb159-1" aria-hidden="true" tabindex="-1"></a><span class="fu">save.image</span>()</span></code></pre></div>
-<p>Esto guarda todos los objetos contenidos en el espacio de trabajo en un archivo binario “.Rdata.” La opción predeterminada se puede cambiar especificando en la llamada a <code>save.image()</code> el nombre, por ejemplo, “myfile.Rdata,” que desea darle al archivo.</p>
+<p>Esto guarda todos los objetos contenidos en el espacio de trabajo en un archivo binario “.Rdata”. La opción predeterminada se puede cambiar especificando en la llamada a <code>save.image()</code> el nombre, por ejemplo, “myfile.Rdata”, que desea darle al archivo.</p>
 <div class="sourceCode" id="cb160"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb160-1"><a href="primerospasos.html#cb160-1" aria-hidden="true" tabindex="-1"></a><span class="fu">save.image</span>(<span class="at">archive =</span> <span class="st">&quot;myfile.Rdata&quot;</span>)</span></code></pre></div>
 <p>El espacio de trabajo original se puede restaurar con la ayuda de la función:</p>
 <div class="sourceCode" id="cb161"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb161-1"><a href="primerospasos.html#cb161-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;.RData&quot;</span>)</span></code></pre></div>
@@ -415,7 +415,7 @@ div.csl-indent {
 <p>Las funciones:</p>
 <div class="sourceCode" id="cb163"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb163-1"><a href="primerospasos.html#cb163-1" aria-hidden="true" tabindex="-1"></a><span class="fu">savehistory</span>()</span></code></pre></div>
 <div class="sourceCode" id="cb164"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb164-1"><a href="primerospasos.html#cb164-1" aria-hidden="true" tabindex="-1"></a><span class="fu">loadhistory</span>()</span></code></pre></div>
-<p>permiten guardar en formato <code>ASCII</code> y recargar en <strong><code>R</code></strong> el historial de los comandos enviados. El argumento de archivo que permite especificar un nombre que no sea la elección predeterminada, es “.Rhistory.”</p>
+<p>permiten guardar en formato <code>ASCII</code> y recargar en <strong><code>R</code></strong> el historial de los comandos enviados. El argumento de archivo que permite especificar un nombre que no sea la elección predeterminada, es “.Rhistory”.</p>
 <p>Finalmente, la función <code>setwd()</code> permite cambiar la carpeta de trabajo. Es una buena idea dedicar una carpeta separada a cada proyecto en el que esté trabajando para evitar la superposición de datos. El directorio de trabajo actual se puede ver con el comando <code>getwd()</code>.</p>
 <p>Los comandos básicos constan de expresiones o asignaciones. Si el comando es una expresión, <strong><code>R</code></strong> devuelve el resultado de la evaluación, como se muestra en los siguientes ejemplos:</p>
 <div class="sourceCode" id="cb165"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb165-1"><a href="primerospasos.html#cb165-1" aria-hidden="true" tabindex="-1"></a><span class="dv">12</span> <span class="sc">&gt;</span> <span class="dv">10</span></span></code></pre></div>
@@ -900,7 +900,7 @@ $cancion_favo
 <div id="importar-datos-desde-excel" class="section level4 hasAnchor" number="9.4.5.4">
 <h4><span class="header-section-number">9.4.5.4</span> Importar datos desde Excel<a href="primerospasos.html#importar-datos-desde-excel" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Existen numerosas fuentes de las que obtener datos secundarios. En la sección anterior, se realizó un breve recorrido sobre datos primarios. Estos últimos, son aquellos que genera el usuario. Por ejemplo, se puede realizar una encuesta y, en base a los resultados obtenidos, generar una base de datos que nos sirva de punto de partida para luego, incurrir en el análisis.</p>
-<p>Para ello, se deben seguir los siguientes pasos: utilizar una base de datos como archivo de Excel y moverlo a la carpeta del primer proyecto que se crea en la sesión anterior, para luego incorporarla a la sub-carpeta llamada “datos.”</p>
+<p>Para ello, se deben seguir los siguientes pasos: utilizar una base de datos como archivo de Excel y moverlo a la carpeta del primer proyecto que se crea en la sesión anterior, para luego incorporarla a la sub-carpeta llamada “datos”.</p>
 <p>Un tipo de formato muy conocido es el de <strong>Excel</strong>, cuyas extensiones pueden ser <code>.xls</code> y <code>.xlsx</code>, siendo la primera más antiüa que la segunda.</p>
 <p>El objetivo es visualizar estos datos en la ventana del entorno de <code>RStudio</code>. Para ello, se necesita un paquete que ayude a leer estos datos, el cual se obtiene siguiendo los siguientes pasos:</p>
 <ol style="list-style-type: decimal">
@@ -920,10 +920,10 @@ $cancion_favo
 <div class="sourceCode" id="cb320"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb320-1"><a href="primerospasos.html#cb320-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span></code></pre></div>
 <p>Nótese que para abrir la librería no se precisan comillas entre los paréntesis, a diferencia de durante su instalación (detallada en el paso 2).</p>
 <ol start="4" style="list-style-type: decimal">
-<li>Colocar la ruta en donde se encuentra mi base de datos. En este caso, el directorio donde se encuentra mi base de datos es: “/Users/sofiajaime/Documents/rprojects/primer_proyecto/datos/estaciones_tren.xlsx.” Hay que tener en cuenta que esta ruta es específica de cada usuario, en su ordenador local.</li>
+<li>Colocar la ruta en donde se encuentra mi base de datos. En este caso, el directorio donde se encuentra mi base de datos es: “/Users/sofiajaime/Documents/rprojects/primer_proyecto/datos/estaciones_tren.xlsx”. Hay que tener en cuenta que esta ruta es específica de cada usuario, en su ordenador local.</li>
 </ol>
 <p>Es posible obtener esta ruta/path fácilmente yendo a la carpeta donde este se encuentra, clicando en el botón derecho sobre la misma y en la opción “Propiedades” en el caso de un PC o bien en “Obtener información” o “Get info” si es con iOS.</p>
-<p>Luego, simplemente hay que denominar al objeto “encuesta,” en este caso. Seguido, colocar una función <code>read_excel</code> y entre paréntesis y comillas, pegar la ruta <strong>propia</strong> que dará acceso al archivo seleccionado. La línea de código es la siguiente:</p>
+<p>Luego, simplemente hay que denominar al objeto “encuesta”, en este caso. Seguido, colocar una función <code>read_excel</code> y entre paréntesis y comillas, pegar la ruta <strong>propia</strong> que dará acceso al archivo seleccionado. La línea de código es la siguiente:</p>
 <div class="sourceCode" id="cb321"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb321-1"><a href="primerospasos.html#cb321-1" aria-hidden="true" tabindex="-1"></a>encuesta <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">&quot;bases/estaciones_tren.xls&quot;</span>)</span></code></pre></div>
 <ol start="5" style="list-style-type: decimal">
 <li>Si se han realizado los pasos anteriores correctamente, aparecerá la base de datos en el entorno o <em>environment</em> de <code>RStudio</code>. Allí es posible ver cuántas observaciones y cuántas variables reconoce el programa dentro de la base. Al clicar sobre la misma se abrirá un archivo de <strong><code>R</code></strong> con los datos de la base especificada, que sirve para visualizar de manera más sencilla toda la información que contiene.</li>
@@ -951,7 +951,7 @@ $cancion_favo
 <ul>
 <li><p><em>Seleccionar las barras incorrectas (/ ó ) según la computadora</em>: en la ruta que da acceso a los documentos que se quieren utilizar, hay muchas barras. Es necesario colocar las correctas según la computadora en la que se esté trabajando, y además, que todas ellas estén en la misma dirección. Si se utilizan estas barras: /, deben estas todas en la misma dirección en la línea de código que se esté escribiendo, porque si hay inconsistencias (utilizando ambas de manera mezclada) <strong><code>R</code></strong> no podrá leer el archivo deseado.</p></li>
 <li><p><em>Ruta errónea</em>: se debe comprobar que cada ruta es fácil de encontrar, tal como se especifica en el paso 4 que se encuentra más arriba.</p></li>
-<li><p><em>Símbolos incorrectos, excedentes o faltantes</em>: un símbolo de más o uno ausente pueden hacer que <strong><code>R</code></strong> no entienda lo que se le “ordena.” Por ello, verificar que todos los símbolos estén correctamente escritos, en el lugar que deben estar, es muy importante.</p></li>
+<li><p><em>Símbolos incorrectos, excedentes o faltantes</em>: un símbolo de más o uno ausente pueden hacer que <strong><code>R</code></strong> no entienda lo que se le “ordena”. Por ello, verificar que todos los símbolos estén correctamente escritos, en el lugar que deben estar, es muy importante.</p></li>
 </ul>
 </div>
 </div>

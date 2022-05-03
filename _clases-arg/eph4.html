@@ -25,7 +25,7 @@
 <meta name="author" content="Sofia Jaime" />
 
 
-<meta name="date" content="2022-04-12" />
+<meta name="date" content="2022-05-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -425,7 +425,7 @@ Gráfico 4.1: Ejemplo clasificación de Actividades Profesionales, Científicas 
 <p>¡Listo! La base está preparada para ser explorada.</p>
 <div id="condición-de-actividad-1" class="section level3 hasAnchor" number="4.3.1">
 <h3><span class="header-section-number">4.3.1</span> Condición de actividad<a href="eph4.html#condición-de-actividad-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>En la <strong>EPH</strong> la variable que mide la <strong>condición de actividad</strong> puede ser encontrada bajo el nombre “ESTADO.” Exploraremos las distintas categorías y frecuencias de casos que presenta para dicho trimestre.</p>
+<p>En la <strong>EPH</strong> la variable que mide la <strong>condición de actividad</strong> puede ser encontrada bajo el nombre “ESTADO”. Exploraremos las distintas categorías y frecuencias de casos que presenta para dicho trimestre.</p>
 <div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="eph4.html#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(eph_ind_215<span class="sc">$</span>ESTADO)</span></code></pre></div>
 <pre><code>
 Entrevista individual no realizada (no respuesta al cuestionario individual) 
@@ -668,7 +668,7 @@ Trabajador familiar sin remuneracion
 </div>
 <div id="tamaño-del-establecimiento-1" class="section level3 hasAnchor" number="4.3.6">
 <h3><span class="header-section-number">4.3.6</span> Tamaño del establecimiento<a href="eph4.html#tamaño-del-establecimiento-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>La medición del tamaño del establecimiento se encuentra distribuida en dos variables: <em>PP04C</em> y <em>PP04C99</em>. La primera permite captar en forma detallada el tamaño del establecimiento donde trabaja la persona en diferentes rangos, mientras que la segunda permite recuperar, mediante una clasificación más acotada, aquel dato que en la primera variable figuraba como “Ns/Nc.” A continuación exploramos ambas variables en forma cruzada.</p>
+<p>La medición del tamaño del establecimiento se encuentra distribuida en dos variables: <em>PP04C</em> y <em>PP04C99</em>. La primera permite captar en forma detallada el tamaño del establecimiento donde trabaja la persona en diferentes rangos, mientras que la segunda permite recuperar, mediante una clasificación más acotada, aquel dato que en la primera variable figuraba como “Ns/Nc”. A continuación exploramos ambas variables en forma cruzada.</p>
 <div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="eph4.html#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(eph_ind_215<span class="sc">$</span>PP04C, eph_ind_215<span class="sc">$</span>PP04C99)</span></code></pre></div>
 <pre><code>                       
                             0 hasta 5 de 6 a 40 mas de 40 Ns./Nr..
@@ -690,7 +690,7 @@ Trabajador familiar sin remuneracion
 </div>
 <div id="supervisión-1" class="section level3 hasAnchor" number="4.3.7">
 <h3><span class="header-section-number">4.3.7</span> Supervisión<a href="eph4.html#supervisión-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Si bien la supervisión no es una variable medida directamente en la <strong>EPH</strong>, podemos aproximarnos a dicha noción a través del <strong>CNO</strong>. En su tercer dígito mide la jerarquía ocupacional. Sin embargo, para extraer dicha información es necesario “partir” el código ocupacional, reteniendo el tercer dígito. A través de <strong><code>R</code></strong>, realizaremos la operación utilizando la función <code>str_sub</code> del paquete <strong><code>stringr</code></strong>, indicando que dígitos queremos retener. En este caso debemos señalar que queremos retener únicamente el tercer dígito (que empiece en el 3 y termine en el 3) y se lo asignaremos a una nueva variable llamada “cno_jerarquia.”</p>
+<p>Si bien la supervisión no es una variable medida directamente en la <strong>EPH</strong>, podemos aproximarnos a dicha noción a través del <strong>CNO</strong>. En su tercer dígito mide la jerarquía ocupacional. Sin embargo, para extraer dicha información es necesario “partir” el código ocupacional, reteniendo el tercer dígito. A través de <strong><code>R</code></strong>, realizaremos la operación utilizando la función <code>str_sub</code> del paquete <strong><code>stringr</code></strong>, indicando que dígitos queremos retener. En este caso debemos señalar que queremos retener únicamente el tercer dígito (que empiece en el 3 y termine en el 3) y se lo asignaremos a una nueva variable llamada “cno_jerarquia”.</p>
 <div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="eph4.html#cb65-1" aria-hidden="true" tabindex="-1"></a>eph_ind_215<span class="sc">$</span>cno_jerarquia <span class="ot">&lt;-</span> <span class="fu">str_sub</span>(eph_ind_215<span class="sc">$</span>PP04D_COD, <span class="at">start =</span> <span class="dv">3</span>, <span class="at">end =</span> <span class="dv">3</span>)</span>
 <span id="cb65-2"><a href="eph4.html#cb65-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb65-3"><a href="eph4.html#cb65-3" aria-hidden="true" tabindex="-1"></a>eph_ind_215 <span class="sc">%&gt;%</span></span>
