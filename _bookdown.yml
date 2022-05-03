@@ -28,8 +28,8 @@ rmd_files: [
 "caps/referencias.Rmd"
 ]
 
-book_filename: "clases-arg"
-output_dir: "_clases-arg"
+book_filename: "docs"
+output_dir: "_docs"
 delete_rmd: True
 delete_merged_file: True
 
