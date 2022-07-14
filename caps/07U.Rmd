@@ -295,10 +295,10 @@ Sin embargo, la tabla con las frecuencias absolutas poca información nos brinda
 
 ```{r, results = 'asis', echo=TRUE}
 summarytools::ctable(enes_movilidad$egp5a_f, enes_movilidad$egp5_f, weights = enes_movilidad$f_calib3.x, 
-										 prop = 'r', useNA = 'no', round.digits = 0, totals = FALSE)
+										 prop = 'r', useNA = 'no', round.digits = 1, totals = FALSE)
 
 summarytools::ctable(enes_movilidad$egp5a_f, enes_movilidad$egp5_f, weights = enes_movilidad$f_calib3.x, 
-										 prop = 'c', useNA = 'no', round.digits = 0, totals = FALSE)
+										 prop = 'c', useNA = 'no', round.digits = 1, totals = FALSE)
 ```
 
 Los porcentajes de salida (primera tabla) nos permiten dar cuenta del nivel de herencia por origen de clase. Generalmente los valores suelen acumularse en la diagonal descendente (situaciones de reproducción de clase) y en los extremos. Por ejemplo, un `58%` de los hijos que provienen de la clase de servicios reproducen dicha clase, mientras que un `40%` de los que provienen de la clase de trabajadores no calificados heredan dicha posición. Otra cuestión que puede observarse en dicha tabla es que el porcentaje de acceso a la clase superior desciende escalonadamente por origen de clase: mientras que un `33%` de individuos con origen en la clase de trabajadores rutinarios accede a la clase de servicios (primera columna), sólo un `13%` lo hace desde la clase de trabajadores no calificados.  
@@ -405,7 +405,7 @@ Cómo regla de oro, las razones de momios (coeficientes exponenciados) pueden va
 
 Finalmente si lo que se quiere es presentar la comparación entre los dos modelos (o varios), tal como se suelen mostrar en las revistas científicas, recomendamos la instalación del paquete `huxtable`. Utilizando el comando `export_summs` e indicando en las opciones nuestros modelos, mediante el código: 
 
-```{r, results = 'asis', echo=T, eval = F}
+```{r, results = 'asis', echo=T}
 export_summs(logit1, logit2, scale = TRUE)
 ```
 
