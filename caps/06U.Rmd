@@ -177,6 +177,26 @@ eph_ind_215 %>%
   scale_y_continuous(breaks=seq(0, 50000, 5000))
 ```
 
+
+```{r, message=FALSE, warning=FALSE, fig.cap= "Ingresos totales individuales por clase social", fig.width= 6, fig.asp= 0.8, include=FALSE}
+
+eph_ind_215 %>%
+  filter(!is.na(clase6_factor), P47T <= 40000) %>% 
+  ggplot(aes(x=clase6_factor, y=P47T, weight = PONDERA)) +
+  geom_boxplot(outlier.alpha = 0.1, show.legend = FALSE)+
+  labs(y = "Ingresos totales individuales",
+       caption = "Elaboración propia en base a EPH-INDEC 2015") +
+  theme(plot.caption = element_text(size = 9),
+        axis.title.x = element_blank(),
+        axis.title.y = element_text(size = 10),
+        axis.text.x = element_text(size = 10),
+        axis.text.y = element_text(size = 10)) +
+  scale_x_discrete(labels = function(x) str_wrap(x, width = 20)) +
+  scale_y_continuous(breaks=seq(0, 50000, 5000))
+
+ggsave(filename = "imagenes/boxplot.jpg", dpi = 300, type = "cairo", width = 8, height = 6)
+```
+
 Varios son los elementos del gráfico que debemos destacar. En primer lugar, las cajas dan cuenta del rango inter-cuartil (1ro y 3ro), mientras que las lineas representan a las medianas de ingresos, es decir, el valor que parte a la distribución por la mitad. De esta forma, los resultados se muestran similares a los arribados en la tabla anterior, aunque las clases medias y la clase alta muestran cierta heterogeneidad en los ingresos percibidos. Finalmente, los límites de las lineas verticales representan los valores máximos y mínimos, mientras que los puntos identifican a los casos atípicos. 
 
 ## Aproximación al análisis multidimensional {#aprox}

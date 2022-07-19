@@ -331,6 +331,36 @@ eph_1115_ocup %>%
   scale_y_continuous(breaks=seq(0, 100, 10))
 ```
 
+```{r, message=FALSE, warning=FALSE, include=FALSE, fig.cap="Ejemplo de gráfico de columnas con la variable clase social"}
+eph_1115_ocup %>%
+  filter(!is.na(clase6_factor)) %>% 
+  group_by(ANO4, clase6_factor) %>% 
+  tally(wt=PONDERA) %>% 
+  group_by(ANO4) %>% 
+  mutate(percent = round((n/sum(n))*100, digits = 2)) %>% 
+  ggplot(mapping = aes(x = ANO4, y = percent, fill = clase6_factor)) +
+  geom_col() +
+  geom_text(aes(label = percent), position = position_stack(.5), size = 3) +
+  scale_fill_grey(labels = function(x) str_wrap(x, width = 25)) +
+  labs(title = "Evolución de la estructura de clases sociales",
+       subtitle = "Población ocupada. Argentina urbana 2011-2015.",
+       caption = "Fuente: Elaboración propia en base a EPH-INDEC 2011-2015.",
+       fill = "Clase social") +
+  theme(legend.title = element_text(size = 10, face = "bold"),
+        legend.text = element_text(size = 10),
+        axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        axis.text.y = element_text(size = 10),
+        axis.text.x = element_text(size = 10),
+        plot.title = element_text(size = 12, face = "bold"),
+        plot.subtitle = element_text(size = 11),
+        plot.caption = element_text(size = 10, hjust = 1)) +
+  scale_x_continuous(breaks = c(2011:2015)) +
+  scale_y_continuous(breaks=seq(0, 100, 10))
+
+ggsave(filename = "imagenes/barras.jpg", dpi = 300, type = "cairo", width = 8, height = 6)
+```
+
 ## La dimensión espacial {#espacial}
 
 La dimensión espacial es otro de los elementos que todo estudio de la estructura social y de las clases sociales debería considerar. Como bien señala Osorio [-@Osorio2001, pp. 51] ésta remite al vínculo sociedad-naturaleza, al clima y a las condiciones geográfico-naturales que desempeñan un papel fundamental en la historia. Naciones, provincias, departamentos y hasta ciudades condensan una serie de heterogeneidades en su interior y entre sí mismas, que obligan al investigador a considerarlas en su fase de análisis.
@@ -477,3 +507,36 @@ ggplot() +
   facet_wrap(~clase6_factor, ncol = 7, labeller = labeller(clase6_factor = label_wrap_gen(15)))
 ```
 
+
+```{r message=FALSE, warning=FALSE, tidy=FALSE, include=FALSE, fig.cap= "Ejemplo de mapa temático utilizando la variable clase social"}
+library(colorblindr)
+library(colorspace)
+
+byn <- ggplot() +
+  geom_sf(data = mapa, aes(group = region_f, fill = percent), color = NA) +
+  labs(fill = "% Clase social",
+       title = "Distribución de las clases sociales por región",
+       subtitle = "Población ocupada. Argentina urbana 2011-2015.",
+       caption = "Fuente: Elaboración propia en base a EPH-INDEC 2011-2015.") +
+  theme_bw() +
+  theme(legend.title = element_text(size = 10, face = "bold"),
+        legend.text = element_text(size = 9),
+        legend.key.width = unit(1.5, "cm"),
+        legend.position = "bottom",
+        legend.justification = "center",
+        plot.title = element_text(size = 12, face = "bold"),
+        plot.subtitle = element_text(size = 11),
+        plot.caption = element_text(size = 10, hjust = 1),
+        strip.text = element_text(face = "bold", size = 10),
+        axis.text.x = element_blank(),
+        axis.text.y = element_blank(),
+        panel.background = element_rect(fill = "white")) +
+  scale_fill_viridis_c(direction = -1) +
+  facet_wrap(~clase6_factor, ncol = 7, labeller = labeller(clase6_factor = label_wrap_gen(15)))
+
+gg_des <- edit_colors(byn, desaturate)
+cowplot::ggdraw(gg_des)
+
+ggsave(filename = "imagenes/mapa.jpg", dpi = 300, type = "cairo", width = 8, height = 6)
+
+```
