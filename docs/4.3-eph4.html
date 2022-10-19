@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="4.3 Explorando las variables socio-ocupacionales en la EPH | Libro de Cocina para el Análisis de las Clases Sociales en Argentina" />
+<meta property="og:type" content="book" />
+
+<meta property="og:description" content="4.3 Explorando las variables socio-ocupacionales en la EPH | Libro de Cocina para el Análisis de las Clases Sociales en Argentina" />
+<meta name="github-repo" content="nsacco/libroESA" />
+
+<meta name="author" content="Nicolás Sacco" />
+<meta name="author" content="José Rodríguez de la Fuente" />
+<meta name="author" content="Sofia Jaime" />
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<meta name="description" content="4.3 Explorando las variables socio-ocupacionales en la EPH | Libro de Cocina para el Análisis de las Clases Sociales en Argentina">
+
+<title>4.3 Explorando las variables socio-ocupacionales en la EPH | Libro de Cocina para el Análisis de las Clases Sociales en Argentina</title>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="libs/bootstrap-3.3.5/css/darkly.min.css" rel="stylesheet" />
+<script src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="libs/navigation-1.1/tabsets.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/vembedr-0.1.5/css/vembedr.css" rel="stylesheet" />
+<link href="libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
+<script src="libs/pagedtable-1.1/js/pagedtable.js"></script>
+<link href="libs/tabwid-1.1.0/tabwid.css" rel="stylesheet" />
+<link href="libs/tabwid-1.1.0/scrool.css" rel="stylesheet" />
+
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="toc.css" type="text/css" />
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+/* show arrow before summary tag as in bootstrap
+TODO: remove if boostrap in updated in html_document (rmarkdown#1485) */
+details > summary {
+  display: list-item;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container-fluid main-container">
+
+
+<div class="row">
+<div class="col-sm-12">
+<div id="TOC">
+<ul>
+<li><a href="index.html#prefacio" id="toc-prefacio">Prefacio</a></li>
+<li><a href="agradecimientos.html#agradecimientos" id="toc-agradecimientos">Agradecimientos</a></li>
+<li class="part"><span><b>I Aspectos teóricos</b></span></li>
+<li class="has-sub"><a href="1-estructura1.html#estructura1" id="toc-estructura1"><span class="toc-section-number">1</span> La estructura social en la Argentina actual</a>
+<ul>
+<li><a href="1.1-analisis1.html#analisis1" id="toc-analisis1"><span class="toc-section-number">1.1</span> Del análisis de las clases sociales a la teoría de la estratificación social</a></li>
+<li><a href="1.2-marx.html#marx" id="toc-marx"><span class="toc-section-number">1.2</span> Marx, Weber y el funcionalismo</a></li>
+<li class="has-sub"><a href="1.3-esperanza.html#esperanza" id="toc-esperanza"><span class="toc-section-number">1.3</span> La esperanza de vida de la teoría: debates contemporáneos</a>
+<ul>
+<li><a href="1.3-esperanza.html#la-grieta-de-los-ochenta" id="toc-la-grieta-de-los-ochenta"><span class="toc-section-number">1.3.1</span> La grieta de los ochenta</a></li>
+<li><a href="1.3-esperanza.html#nuevos-debateshacia-una-operacionalización-más-refinada-de-los-conceptos" id="toc-nuevos-debateshacia-una-operacionalización-más-refinada-de-los-conceptos"><span class="toc-section-number">1.3.2</span> Nuevos debates…¿Hacia una operacionalización más refinada de los conceptos?</a></li>
+<li><a href="1.3-esperanza.html#la-muerte-de-la-clases" id="toc-la-muerte-de-la-clases"><span class="toc-section-number">1.3.3</span> La muerte de la clases</a></li>
+</ul></li>
+<li class="has-sub"><a href="1.4-cuestion.html#cuestion" id="toc-cuestion"><span class="toc-section-number">1.4</span> La cuestión en América Latina y en la Argentina</a>
+<ul>
+<li><a href="1.4-cuestion.html#nuevos-aires" id="toc-nuevos-aires"><span class="toc-section-number">1.4.1</span> Nuevos aires</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>II Fuentes de datos</b></span></li>
+<li class="has-sub"><a href="2-fuentes.html#fuentes" id="toc-fuentes"><span class="toc-section-number">2</span> Encuestas de hogares</a>
+<ul>
+<li class="has-sub"><a href="2.1-eph1.html#eph1" id="toc-eph1"><span class="toc-section-number">2.1</span> La Encuesta Permanente de Hogares. Características principales</a>
+<ul>
+<li><a href="2.1-eph1.html#características-de-la-eph-continua" id="toc-características-de-la-eph-continua"><span class="toc-section-number">2.1.1</span> Características de la EPH continua</a></li>
+<li><a href="2.1-eph1.html#la-eph-como-fuente-de-análisis-de-la-estructura-de-clases" id="toc-la-eph-como-fuente-de-análisis-de-la-estructura-de-clases"><span class="toc-section-number">2.1.2</span> La EPH como fuente de análisis de la estructura de clases</a></li>
+</ul></li>
+<li class="has-sub"><a href="2.2-eph2.html#eph2" id="toc-eph2"><span class="toc-section-number">2.2</span> Comenzando a utilizar la EPH</a>
+<ul>
+<li><a href="2.2-eph2.html#el-método-clásico" id="toc-el-método-clásico"><span class="toc-section-number">2.2.1</span> El “método clásico”</a></li>
+<li><a href="2.2-eph2.html#el-paquete-eph" id="toc-el-paquete-eph"><span class="toc-section-number">2.2.2</span> El paquete <code>eph</code></a></li>
+</ul></li>
+<li class="has-sub"><a href="2.3-eph3.html#eph3" id="toc-eph3"><span class="toc-section-number">2.3</span> Primeros pasos en el estudio de las clases sociales a través de la EPH</a>
+<ul>
+<li><a href="2.3-eph3.html#uniendo-las-bases-de-individuos-y-hogares" id="toc-uniendo-las-bases-de-individuos-y-hogares"><span class="toc-section-number">2.3.1</span> Uniendo las bases de individuos y hogares</a></li>
+<li><a href="2.3-eph3.html#población-bajo-análisis" id="toc-población-bajo-análisis"><span class="toc-section-number">2.3.2</span> Población bajo análisis</a></li>
+<li><a href="2.3-eph3.html#ponderación-y-expansión-de-la-muestra" id="toc-ponderación-y-expansión-de-la-muestra"><span class="toc-section-number">2.3.3</span> Ponderación y expansión de la muestra</a></li>
+</ul></li>
+<li><a href="2.4-otras.html#otras" id="toc-otras"><span class="toc-section-number">2.4</span> Otras encuestas de hogares para el estudio de la estructura de clases</a></li>
+</ul></li>
+<li class="has-sub"><a href="3-fuentes2.html#fuentes2" id="toc-fuentes2"><span class="toc-section-number">3</span> Los censos de población modernos</a>
+<ul>
+<li class="has-sub"><a href="3.1-clases3.html#clases3" id="toc-clases3"><span class="toc-section-number">3.1</span> Clases sociales y censos de población</a>
+<ul>
+<li><a href="3.1-clases3.html#antecedentes" id="toc-antecedentes"><span class="toc-section-number">3.1.1</span> Antecedentes</a></li>
+<li><a href="3.1-clases3.html#practicidad" id="toc-practicidad"><span class="toc-section-number">3.1.2</span> Practicidad</a></li>
+</ul></li>
+<li class="has-sub"><a href="3.2-censos.html#censos" id="toc-censos"><span class="toc-section-number">3.2</span> Censos de población modernos. Características principales</a>
+<ul>
+<li><a href="3.2-censos.html#las-características-económicas-en-los-censos-de-población" id="toc-las-características-económicas-en-los-censos-de-población"><span class="toc-section-number">3.2.1</span> Las características económicas en los censos de población</a></li>
+</ul></li>
+<li class="has-sub"><a href="3.3-censos2.html#censos2" id="toc-censos2"><span class="toc-section-number">3.3</span> Censos modernos: acceso diferencial</a>
+<ul>
+<li><a href="3.3-censos2.html#modos-de-acceso" id="toc-modos-de-acceso"><span class="toc-section-number">3.3.1</span> Modos de acceso</a></li>
+<li><a href="3.3-censos2.html#es-lo-que-hay" id="toc-es-lo-que-hay"><span class="toc-section-number">3.3.2</span> Es lo que hay</a></li>
+<li><a href="3.3-censos2.html#procesamiento-de-datos-en-líneau-2" id="toc-procesamiento-de-datos-en-líneau-2"><span class="toc-section-number">3.3.3</span> Procesamiento de datos en línea</a></li>
+<li><a href="3.3-censos2.html#descarga-directa-de-microdatos" id="toc-descarga-directa-de-microdatos"><span class="toc-section-number">3.3.4</span> Descarga directa de microdatos</a></li>
+<li><a href="3.3-censos2.html#ipums-i" id="toc-ipums-i"><span class="toc-section-number">3.3.5</span> IPUMS-I</a></li>
+<li><a href="3.3-censos2.html#solicitud-directa-al-indec" id="toc-solicitud-directa-al-indec"><span class="toc-section-number">3.3.6</span> Solicitud directa al INDEC</a></li>
+<li><a href="3.3-censos2.html#otras-opciones-no-oficiales" id="toc-otras-opciones-no-oficiales"><span class="toc-section-number">3.3.7</span> Otras opciones no oficiales</a></li>
+<li><a href="3.3-censos2.html#disponibilidad-en-detalle-para-el-estudio-de-clases-sociales" id="toc-disponibilidad-en-detalle-para-el-estudio-de-clases-sociales"><span class="toc-section-number">3.3.8</span> Disponibilidad en detalle para el estudio de clases sociales</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>III Variables</b></span></li>
+<li class="has-sub"><a href="4-ocupacion.html#ocupacion" id="toc-ocupacion"><span class="toc-section-number">4</span> Las características económicas de la población</a>
+<ul>
+<li class="has-sub"><a href="4.1-consideraciones.html#consideraciones" id="toc-consideraciones"><span class="toc-section-number">4.1</span> Consideraciones previas</a>
+<ul>
+<li><a href="4.1-consideraciones.html#las-reglas-del-juego" id="toc-las-reglas-del-juego"><span class="toc-section-number">4.1.1</span> Las reglas del juego</a></li>
+<li><a href="4.1-consideraciones.html#la-estratificación-como-perspectiva-de-análisis" id="toc-la-estratificación-como-perspectiva-de-análisis"><span class="toc-section-number">4.1.2</span> La estratificación como perspectiva de análisis</a></li>
+<li><a href="4.1-consideraciones.html#indicadores-de-la-estratificación-social" id="toc-indicadores-de-la-estratificación-social"><span class="toc-section-number">4.1.3</span> Indicadores de la estratificación social</a></li>
+<li><a href="4.1-consideraciones.html#la-fuerza-de-trabajo-y-las-características-económicas-de-la-población" id="toc-la-fuerza-de-trabajo-y-las-características-económicas-de-la-población"><span class="toc-section-number">4.1.4</span> La fuerza de trabajo y las características económicas de la población</a></li>
+</ul></li>
+<li class="has-sub"><a href="4.2-las-variables-socio-ocupacionales.html#las-variables-socio-ocupacionales" id="toc-las-variables-socio-ocupacionales"><span class="toc-section-number">4.2</span> Las variables socio-ocupacionales</a>
+<ul>
+<li><a href="4.2-las-variables-socio-ocupacionales.html#condición-de-actividad" id="toc-condición-de-actividad"><span class="toc-section-number">4.2.1</span> Condición de actividad</a></li>
+<li><a href="4.2-las-variables-socio-ocupacionales.html#ocupación" id="toc-ocupación"><span class="toc-section-number">4.2.2</span> Ocupación</a></li>
+<li><a href="4.2-las-variables-socio-ocupacionales.html#rama-de-actividad" id="toc-rama-de-actividad"><span class="toc-section-number">4.2.3</span> Rama de Actividad</a></li>
+<li><a href="4.2-las-variables-socio-ocupacionales.html#categoría-de-ocupación" id="toc-categoría-de-ocupación"><span class="toc-section-number">4.2.4</span> Categoría de Ocupación</a></li>
+<li><a href="4.2-las-variables-socio-ocupacionales.html#sector-de-actividad" id="toc-sector-de-actividad"><span class="toc-section-number">4.2.5</span> Sector de Actividad</a></li>
+<li><a href="4.2-las-variables-socio-ocupacionales.html#tamaño-del-establecimiento" id="toc-tamaño-del-establecimiento"><span class="toc-section-number">4.2.6</span> Tamaño del Establecimiento</a></li>
+<li><a href="4.2-las-variables-socio-ocupacionales.html#supervisión" id="toc-supervisión"><span class="toc-section-number">4.2.7</span> Supervisión</a></li>
+</ul></li>
+<li class="has-sub"><a href="4.3-eph4.html#eph4" id="toc-eph4"><span class="toc-section-number">4.3</span> Explorando las variables socio-ocupacionales en la EPH</a>
+<ul>
+<li><a href="4.3-eph4.html#condición-de-actividad-1" id="toc-condición-de-actividad-1"><span class="toc-section-number">4.3.1</span> Condición de actividad</a></li>
+<li><a href="4.3-eph4.html#ocupación-1" id="toc-ocupación-1"><span class="toc-section-number">4.3.2</span> Ocupación</a></li>
+<li><a href="4.3-eph4.html#rama-de-actividad-1" id="toc-rama-de-actividad-1"><span class="toc-section-number">4.3.3</span> Rama de actividad</a></li>
+<li><a href="4.3-eph4.html#categoría-de-ocupación-1" id="toc-categoría-de-ocupación-1"><span class="toc-section-number">4.3.4</span> Categoría de ocupación</a></li>
+<li><a href="4.3-eph4.html#sector-de-actividad-1" id="toc-sector-de-actividad-1"><span class="toc-section-number">4.3.5</span> Sector de actividad</a></li>
+<li><a href="4.3-eph4.html#tamaño-del-establecimiento-1" id="toc-tamaño-del-establecimiento-1"><span class="toc-section-number">4.3.6</span> Tamaño del establecimiento</a></li>
+<li><a href="4.3-eph4.html#supervisión-1" id="toc-supervisión-1"><span class="toc-section-number">4.3.7</span> Supervisión</a></li>
+</ul></li>
+</ul></li>
+<li class="has-sub"><a href="5-clases5.html#clases5" id="toc-clases5"><span class="toc-section-number">5</span> Los Nomencladores de clases sociales</a>
+<ul>
+<li class="has-sub"><a href="5.1-computadora.html#computadora" id="toc-computadora"><span class="toc-section-number">5.1</span> De las clases en el papel a las clases en la computadora</a>
+<ul>
+<li><a href="5.1-computadora.html#operacionalizando-el-concepto-de-clase" id="toc-operacionalizando-el-concepto-de-clase"><span class="toc-section-number">5.1.1</span> Operacionalizando el concepto de clase</a></li>
+<li><a href="5.1-computadora.html#clases-grupos-estratos-qué-medimos-cuando-analizamos-la-estructura-social" id="toc-clases-grupos-estratos-qué-medimos-cuando-analizamos-la-estructura-social"><span class="toc-section-number">5.1.2</span> Clases, grupos, estratos ¿Qué medimos cuando analizamos la estructura social?</a></li>
+</ul></li>
+<li class="has-sub"><a href="5.2-clases6.html#clases6" id="toc-clases6"><span class="toc-section-number">5.2</span> Enfoques operacionalizables de clases y estratos sociales</a>
+<ul>
+<li><a href="5.2-clases6.html#esquemas-internacionales" id="toc-esquemas-internacionales"><span class="toc-section-number">5.2.1</span> Esquemas internacionales</a></li>
+<li><a href="5.2-clases6.html#esquemas-nacionales" id="toc-esquemas-nacionales"><span class="toc-section-number">5.2.2</span> Esquemas nacionales</a></li>
+</ul></li>
+<li class="has-sub"><a href="5.3-operacion1.html#operacion1" id="toc-operacion1"><span class="toc-section-number">5.3</span> Operacionalización paso a paso</a>
+<ul>
+<li><a href="5.3-operacion1.html#punto-de-partida" id="toc-punto-de-partida"><span class="toc-section-number">5.3.1</span> Punto de partida</a></li>
+<li><a href="5.3-operacion1.html#acondicionando-la-base" id="toc-acondicionando-la-base"><span class="toc-section-number">5.3.2</span> Acondicionando la base</a></li>
+<li><a href="5.3-operacion1.html#creación-cso-desagregado" id="toc-creación-cso-desagregado"><span class="toc-section-number">5.3.3</span> Creación CSO desagregado</a></li>
+<li><a href="5.3-operacion1.html#creación-del-cso-agregado" id="toc-creación-del-cso-agregado"><span class="toc-section-number">5.3.4</span> Creación del CSO agregado</a></li>
+<li><a href="5.3-operacion1.html#creación-esquema-de-clase" id="toc-creación-esquema-de-clase"><span class="toc-section-number">5.3.5</span> Creación esquema de clase</a></li>
+</ul></li>
+<li class="has-sub"><a href="5.4-operacion2.html#operacion2" id="toc-operacion2"><span class="toc-section-number">5.4</span> Operacionalización automática</a>
+<ul>
+<li><a href="5.4-operacion2.html#operacionalizando-la-escala-isei" id="toc-operacionalizando-la-escala-isei"><span class="toc-section-number">5.4.1</span> Operacionalizando la escala ISEI</a></li>
+</ul></li>
+<li class="has-sub"><a href="5.5-unidades.html#unidades" id="toc-unidades"><span class="toc-section-number">5.5</span> Unidades de análisis y clases sociales</a>
+<ul>
+<li><a href="5.5-unidades.html#breve-discusión-teórica" id="toc-breve-discusión-teórica"><span class="toc-section-number">5.5.1</span> Breve discusión teórica</a></li>
+<li><a href="5.5-unidades.html#opciones-metodológicas" id="toc-opciones-metodológicas"><span class="toc-section-number">5.5.2</span> Opciones metodológicas</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>IV Análisis</b></span></li>
+<li class="has-sub"><a href="6-independiente.html#independiente" id="toc-independiente"><span class="toc-section-number">6</span> La clase como variable independiente</a>
+<ul>
+<li class="has-sub"><a href="6.1-huevo.html#huevo" id="toc-huevo"><span class="toc-section-number">6.1</span> La estructura de clases ¿el huevo o la gallina?</a>
+<ul>
+<li><a href="6.1-huevo.html#el-enfoque-relacional-weberiano" id="toc-el-enfoque-relacional-weberiano"><span class="toc-section-number">6.1.1</span> El enfoque relacional-weberiano</a></li>
+<li><a href="6.1-huevo.html#estructural-funcionalismo" id="toc-estructural-funcionalismo"><span class="toc-section-number">6.1.2</span> Estructural funcionalismo</a></li>
+<li><a href="6.1-huevo.html#un-enfoque-intermedio" id="toc-un-enfoque-intermedio"><span class="toc-section-number">6.1.3</span> Un enfoque intermedio</a></li>
+<li><a href="6.1-huevo.html#una-cuarta-mirada" id="toc-una-cuarta-mirada"><span class="toc-section-number">6.1.4</span> Una cuarta mirada</a></li>
+<li><a href="6.1-huevo.html#epílogo-una-sociedad-sin-clases" id="toc-epílogo-una-sociedad-sin-clases"><span class="toc-section-number">6.1.5</span> Epílogo: una sociedad sin clases</a></li>
+</ul></li>
+<li><a href="6.2-explorando.html#explorando" id="toc-explorando"><span class="toc-section-number">6.2</span> Explorando los datos por clase social</a></li>
+<li><a href="6.3-aprox.html#aprox" id="toc-aprox"><span class="toc-section-number">6.3</span> Aproximación al análisis multidimensional</a></li>
+</ul></li>
+<li class="has-sub"><a href="7-dependiente.html#dependiente" id="toc-dependiente"><span class="toc-section-number">7</span> La clase como variable dependiente</a>
+<ul>
+<li class="has-sub"><a href="7.1-movilidad1.html#movilidad1" id="toc-movilidad1"><span class="toc-section-number">7.1</span> El estudio de la movilidad social</a>
+<ul>
+<li><a href="7.1-movilidad1.html#qué-es-la-movilidad-social" id="toc-qué-es-la-movilidad-social"><span class="toc-section-number">7.1.1</span> ¿Qué es la movilidad social?</a></li>
+<li><a href="7.1-movilidad1.html#enfoques-funcionalistas" id="toc-enfoques-funcionalistas"><span class="toc-section-number">7.1.2</span> Enfoques funcionalistas</a></li>
+<li><a href="7.1-movilidad1.html#enfoques-de-clase" id="toc-enfoques-de-clase"><span class="toc-section-number">7.1.3</span> Enfoques de clase</a></li>
+</ul></li>
+<li class="has-sub"><a href="7.2-enes.html#enes" id="toc-enes"><span class="toc-section-number">7.2</span> El uso de la base ENES-PISAC</a>
+<ul>
+<li><a href="7.2-enes.html#algunas-consideraciones-de-la-enes" id="toc-algunas-consideraciones-de-la-enes"><span class="toc-section-number">7.2.1</span> Algunas consideraciones de la ENES</a></li>
+<li><a href="7.2-enes.html#abriendo-y-pegando-la-base-enes" id="toc-abriendo-y-pegando-la-base-enes"><span class="toc-section-number">7.2.2</span> Abriendo y pegando la base ENES</a></li>
+<li><a href="7.2-enes.html#recodificación-de-variables-y-filtros" id="toc-recodificación-de-variables-y-filtros"><span class="toc-section-number">7.2.3</span> Recodificación de variables y filtros</a></li>
+</ul></li>
+<li><a href="7.3-movilidad2.html#movilidad2" id="toc-movilidad2"><span class="toc-section-number">7.3</span> Las tablas de movilidad</a></li>
+<li><a href="7.4-movilidad3.html#movilidad3" id="toc-movilidad3"><span class="toc-section-number">7.4</span> Aproximación al análisis multivariable de la movilidad social</a></li>
+</ul></li>
+<li class="has-sub"><a href="8-tiempo.html#tiempo" id="toc-tiempo"><span class="toc-section-number">8</span> Tiempo, espacio y clases sociales</a>
+<ul>
+<li class="has-sub"><a href="8.1-temporal.html#temporal" id="toc-temporal"><span class="toc-section-number">8.1</span> La dimensión temporal</a>
+<ul>
+<li><a href="8.1-temporal.html#algunos-ejemplos-de-la-bibliografía" id="toc-algunos-ejemplos-de-la-bibliografía"><span class="toc-section-number">8.1.1</span> Algunos ejemplos de la bibliografía</a></li>
+<li><a href="8.1-temporal.html#ejemplo-práctico" id="toc-ejemplo-práctico"><span class="toc-section-number">8.1.2</span> Ejemplo práctico</a></li>
+</ul></li>
+<li class="has-sub"><a href="8.2-espacial.html#espacial" id="toc-espacial"><span class="toc-section-number">8.2</span> La dimensión espacial</a>
+<ul>
+<li><a href="8.2-espacial.html#algunos-ejemplos-de-la-bibliografía-1" id="toc-algunos-ejemplos-de-la-bibliografía-1"><span class="toc-section-number">8.2.1</span> Algunos ejemplos de la bibliografía</a></li>
+<li><a href="8.2-espacial.html#ejemplo-práctico-1" id="toc-ejemplo-práctico-1"><span class="toc-section-number">8.2.2</span> Ejemplo práctico</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>V Anexo</b></span></li>
+<li class="has-sub"><a href="9-anexo.html#anexo" id="toc-anexo"><span class="toc-section-number">9</span> Introducción a R y RStudio</a>
+<ul>
+<li class="has-sub"><a href="9.1-introR.html#introR" id="toc-introR"><span class="toc-section-number">9.1</span> Introducción</a>
+<ul>
+<li><a href="9.1-introR.html#el-entorno-de-r" id="toc-el-entorno-de-r"><span class="toc-section-number">9.1.1</span> El entorno de R</a></li>
+<li><a href="9.1-introR.html#aplicar-estadística-en-r" id="toc-aplicar-estadística-en-r"><span class="toc-section-number">9.1.2</span> Aplicar estadística en R</a></li>
+<li><a href="9.1-introR.html#descargar-e-instalar-r" id="toc-descargar-e-instalar-r"><span class="toc-section-number">9.1.3</span> Descargar e instalar R</a></li>
+<li><a href="9.1-introR.html#rstudio" id="toc-rstudio"><span class="toc-section-number">9.1.4</span> RStudio</a></li>
+<li><a href="9.1-introR.html#descargar-e-instalar-rstudio" id="toc-descargar-e-instalar-rstudio"><span class="toc-section-number">9.1.5</span> Descargar e instalar RStudio</a></li>
+<li><a href="9.1-introR.html#partes-de-rstudio" id="toc-partes-de-rstudio"><span class="toc-section-number">9.1.6</span> Partes de RStudio</a></li>
+</ul></li>
+<li class="has-sub"><a href="9.2-workflow.html#workflow" id="toc-workflow"><span class="toc-section-number">9.2</span> Workflow</a>
+<ul>
+<li><a href="9.2-workflow.html#proyectos-r-studio" id="toc-proyectos-r-studio"><span class="toc-section-number">9.2.1</span> Proyectos R Studio</a></li>
+<li><a href="9.2-workflow.html#organización" id="toc-organización"><span class="toc-section-number">9.2.2</span> Organización</a></li>
+<li><a href="9.2-workflow.html#utilidad" id="toc-utilidad"><span class="toc-section-number">9.2.3</span> Utilidad</a></li>
+<li><a href="9.2-workflow.html#crear-un-proyecto-de-rstudio" id="toc-crear-un-proyecto-de-rstudio"><span class="toc-section-number">9.2.4</span> Crear un Proyecto de RStudio</a></li>
+<li><a href="9.2-workflow.html#crear-un-archivo-de-r" id="toc-crear-un-archivo-de-r"><span class="toc-section-number">9.2.5</span> Crear un archivo de R</a></li>
+</ul></li>
+<li class="has-sub"><a href="9.3-rmarkdown.html#rmarkdown" id="toc-rmarkdown"><span class="toc-section-number">9.3</span> RMarkdown</a>
+<ul>
+<li><a href="9.3-rmarkdown.html#agregar-texto" id="toc-agregar-texto"><span class="toc-section-number">9.3.1</span> Agregar texto</a></li>
+<li><a href="9.3-rmarkdown.html#listas" id="toc-listas"><span class="toc-section-number">9.3.2</span> Listas</a></li>
+<li><a href="9.3-rmarkdown.html#editar-texto" id="toc-editar-texto"><span class="toc-section-number">9.3.3</span> Editar texto</a></li>
+<li><a href="9.3-rmarkdown.html#insertar-imágenes" id="toc-insertar-imágenes"><span class="toc-section-number">9.3.4</span> Insertar imágenes</a></li>
+<li><a href="9.3-rmarkdown.html#enlaces" id="toc-enlaces"><span class="toc-section-number">9.3.5</span> Enlaces</a></li>
+<li><a href="9.3-rmarkdown.html#tips-para-escribir-código-en-r" id="toc-tips-para-escribir-código-en-r"><span class="toc-section-number">9.3.6</span> Tips para escribir código en R</a></li>
+</ul></li>
+<li class="has-sub"><a href="9.4-primerospasos.html#primerospasos" id="toc-primerospasos"><span class="toc-section-number">9.4</span> Primeros pasos en R</a>
+<ul>
+<li><a href="9.4-primerospasos.html#funciones-y-comandos-elementales" id="toc-funciones-y-comandos-elementales"><span class="toc-section-number">9.4.1</span> Funciones y comandos elementales</a></li>
+<li><a href="9.4-primerospasos.html#valores-y-vectores" id="toc-valores-y-vectores"><span class="toc-section-number">9.4.2</span> Valores y vectores</a></li>
+<li><a href="9.4-primerospasos.html#matrices-y-listas" id="toc-matrices-y-listas"><span class="toc-section-number">9.4.3</span> Matrices y listas</a></li>
+<li><a href="9.4-primerospasos.html#filtrado-subsetting" id="toc-filtrado-subsetting"><span class="toc-section-number">9.4.4</span> Filtrado (Subsetting)</a></li>
+<li><a href="9.4-primerospasos.html#cargar-datos-en-r" id="toc-cargar-datos-en-r"><span class="toc-section-number">9.4.5</span> Cargar datos en R</a></li>
+</ul></li>
+<li><a href="9.5-recursos.html#recursos" id="toc-recursos"><span class="toc-section-number">9.5</span> Otros recursos de consulta</a></li>
+</ul></li>
+<li class="part"><span><b>VI Referencias bibliográficas</b></span></li>
+<li><a href="referencias.html#referencias" id="toc-referencias">Referencias</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div id="eph4" class="section level2" number="4.3">
+<h2><span class="header-section-number">4.3</span> Explorando las variables socio-ocupacionales en la EPH</h2>
+<p>Paquetes que utilizaremos en esta sección:</p>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="4.3-eph4.html#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb39-2"><a href="4.3-eph4.html#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(eph)</span>
+<span id="cb39-3"><a href="4.3-eph4.html#cb39-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(foreign)</span></code></pre></div>
+<p>En este apartado aplicaremos lo aprendido en punto anterior y exploraremos las distintas variables revisadas a partir de la <strong>EPH</strong>. Lo que nos interesa es identificarlas, saber qué nombre tienen y como se presentan sus categorías. Al mismo tiempo, revisaremos algunas de las cuestiones aprendidas en el <a href="2-fuentes.html#fuentes">Capítulo 3</a>. Aprovecharemos a utilizar la base del segundo trimestre de la <strong>EPH</strong> de 2015, ya que en la misma, excepcionalmente, la ocupación fue codificada tanto a partir del <strong>CNO-01</strong> como de la <strong>CIUO-08</strong>. De esta forma, por un lado descargaremos a través del paquete <strong><code>eph</code></strong> y añadiremos la variable de ocupación descargando la información adicional desde la página de <strong>INDEC</strong>.</p>
+<p>En primer lugar descargamos la base:</p>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="4.3-eph4.html#cb40-1" aria-hidden="true" tabindex="-1"></a>eph_ind_215 <span class="ot">&lt;-</span> <span class="fu">get_microdata</span>(<span class="at">year =</span> <span class="dv">2015</span>, <span class="at">trimester =</span> <span class="dv">2</span>, <span class="at">type =</span> <span class="st">&quot;individual&quot;</span>)</span></code></pre></div>
+<p>Como la codificación de la variable ocupación a partir de la <strong>CIUO</strong> se encuentra en un archivo aparte, debemos acceder al sitio de INDEC para descargarlo.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-42"></span>
+<p class="caption">
+Gráfico 4.1: Ejemplo clasificación de Actividades Profesionales, Científicas y Técnicas - CAES 1.0 <span class="citation">(<a href="#ref-INDEC2011d" role="doc-biblioref">INDEC, 2011</a>)</span>
+</p>
+<img src="imagenes/indec_ciuo.png" alt="Ejemplo clasificación de Actividades Profesionales, Científicas y Técnicas - CAES 1.0 [@INDEC2011d]" width="80%" />
+</div>
+<p>Luego de descargado el archivo, descomprimiremos el <code>.rar</code> y utilizaremos el archivo <code>eph_ciuo_215.dbf</code>. A continuación abriremos dicho archivo y “pegaremos” la variable <strong>PP04D_CIUO</strong> en la base <strong>eph_ind_215</strong>. Utilizaremos las variables <strong>CODUSU</strong> (identificador de vivienda), <strong>NRO_HOGAR</strong> (identificador del hogar) y <strong>COMPONENTE</strong> (identificador de miembro del hogar) como ID para emparejar ambas bases.</p>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="4.3-eph4.html#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(foreign)</span>
+<span id="cb41-2"><a href="4.3-eph4.html#cb41-2" aria-hidden="true" tabindex="-1"></a>eph_ciuo_215 <span class="ot">&lt;-</span> <span class="fu">read.dbf</span>(<span class="st">&quot;bases/eph_ciuo_215.dbf&quot;</span>) <span class="co">#carga de base CIUO</span></span>
+<span id="cb41-3"><a href="4.3-eph4.html#cb41-3" aria-hidden="true" tabindex="-1"></a>eph_ciuo_215 <span class="ot">&lt;-</span> eph_ciuo_215 <span class="sc">%&gt;%</span> </span>
+<span id="cb41-4"><a href="4.3-eph4.html#cb41-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(CODUSU, NRO_HOGAR, COMPONENTE, PP04D_CIUO) <span class="co">#selecciono las variables que necesito retener</span></span>
+<span id="cb41-5"><a href="4.3-eph4.html#cb41-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-6"><a href="4.3-eph4.html#cb41-6" aria-hidden="true" tabindex="-1"></a>eph_ind_215 <span class="ot">&lt;-</span> eph_ind_215 <span class="sc">%&gt;%</span> </span>
+<span id="cb41-7"><a href="4.3-eph4.html#cb41-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">left_join</span>(eph_ciuo_215, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">&quot;CODUSU&quot;</span>, <span class="st">&quot;NRO_HOGAR&quot;</span>, <span class="st">&quot;COMPONENTE&quot;</span>)) <span class="co">#Pego la variable CIUO a la base eph_ind_215</span></span></code></pre></div>
+<p>Ahora podemos etiquetar la base utilizando el comando <code>organize_labels</code> del paquete <strong><code>eph</code></strong>:</p>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="4.3-eph4.html#cb42-1" aria-hidden="true" tabindex="-1"></a>eph_ind_215 <span class="ot">&lt;-</span> <span class="fu">organize_labels</span>(eph_ind_215, <span class="at">type =</span> <span class="st">&quot;individual&quot;</span>)</span>
+<span id="cb42-2"><a href="4.3-eph4.html#cb42-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-3"><a href="4.3-eph4.html#cb42-3" aria-hidden="true" tabindex="-1"></a>eph_ind_215<span class="sc">$</span>CODUSU <span class="ot">&lt;-</span> <span class="fu">as.character</span>(eph_ind_215<span class="sc">$</span>CODUSU) <span class="co">#Es necesario convertir a &quot;character&quot; para futuras operaciones. Esto se hace porque el comando &quot;organize_labels&quot; le cambia el formato a la variables.</span></span></code></pre></div>
+<p>¡Listo! La base está preparada para ser explorada.</p>
+<div id="condición-de-actividad-1" class="section level3" number="4.3.1">
+<h3><span class="header-section-number">4.3.1</span> Condición de actividad</h3>
+<p>En la <strong>EPH</strong> la variable que mide la <strong>condición de actividad</strong> puede ser encontrada bajo el nombre “ESTADO”. Exploraremos las distintas categorías y frecuencias de casos que presenta para dicho trimestre.</p>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="4.3-eph4.html#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(eph_ind_215<span class="sc">$</span>ESTADO)</span></code></pre></div>
+<pre><code>
+Entrevista individual no realizada (no respuesta al cuestionario individual) 
+                                                                          63 
+                                                                     Ocupado 
+                                                                       24398 
+                                                                  Desocupado 
+                                                                        1450 
+                                                                    Inactivo 
+                                                                       25138 
+                                                          Menor de 10 anios. 
+                                                                        8979 </code></pre>
+<p>Como puede observarse las categorías son <em>entrevista individual no realizada</em>, <em>ocupado</em>, <em>desocupado</em>, <em>inactivo</em> y <em>menor de 10 años</em>. En el caso de que pretendamos seleccionar únicamente a la población económicamente activa, deberemos filtrar las categorías 1 (ocupado) y 2 (desocupado). En este caso nos quedaríamos con 25848 registros.</p>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="4.3-eph4.html#cb45-1" aria-hidden="true" tabindex="-1"></a>eph_2015_PEA <span class="ot">&lt;-</span> eph_ind_215 <span class="sc">%&gt;%</span> </span>
+<span id="cb45-2"><a href="4.3-eph4.html#cb45-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(ESTADO <span class="sc">==</span> <span class="dv">1</span> <span class="sc">|</span> ESTADO <span class="sc">==</span> <span class="dv">2</span>)</span>
+<span id="cb45-3"><a href="4.3-eph4.html#cb45-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-4"><a href="4.3-eph4.html#cb45-4" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(eph_2015_PEA)</span></code></pre></div>
+<pre><code>[1] 25848</code></pre>
+</div>
+<div id="ocupación-1" class="section level3" number="4.3.2">
+<h3><span class="header-section-number">4.3.2</span> Ocupación</h3>
+<p>Como presentaremos en la próxima unidad, la ocupación es la variable central en la construcción de esquemas de estratificación y clases sociales. En el caso de la EPH, los censos (posteriores a 1991) y las diversas encuestas que produce el <strong>INDEC</strong>, en las que se releva información ocupacional, suelen codificar dicha variable a través del <strong>CNO</strong>.</p>
+<p>La <strong>EPH</strong> recaba la ocupación tanto para la población ocupada como desocupada, relevando para este último grupo el dato de la última ocupación realizada, en el caso que hubiera existido. Mientras que el primer dato se guarda en la variable <em>PP04D_COD</em>, la última ocupación de los desocupados puede encontrarse en la variable <em>PP11D_COD</em>. Con el comando <code>table</code> podemos visualizar todos los códigos existentes en la base y su frecuencia absoluta.</p>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="4.3-eph4.html#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(eph_ind_215<span class="sc">$</span>PP04D_COD)</span></code></pre></div>
+<pre><code>
+      00001 01001 02001 03001 04001 05001 05002 06001 06002 07001 10112 10113 
+35630    44     2    11    66    11   102   654   266     1     6    26    13 
+10122 10131 10132 10133 10201 10202 10203 10311 10312 10313 10314 10323 10331 
+    1     2    12     8    12    53    60    11   136   118    31     2    29 
+10332 10333 11113 11131 11132 11202 11203 11311 11312 11313 11323 11331 11332 
+   33  2127     1   108     2     2     3    10     4     6     1   112     4 
+11333 20111 20112 20113 20131 20132 20133 20202 20203 20311 20312 20313 20314 
+   52     1     1     9    57     2     7    10    25     8     7   203     6 
+20323 20331 20332 20333 30111 30112 30113 30131 30132 30133 30202 30203 30311 
+    1    94    67   354     2    74   930     3     1     9     1    71     8 
+30312 30313 30314 30323 30331 30332 30333 31113 31312 31313 31314 32111 32113 
+  217   310  1018     1     4     2    23    58     2   148     3     1     1 
+32123 32131 32133 32201 32202 32311 32312 32313 32314 32323 32333 33113 33133 
+    1     2     1     1     5     1     2     5   152     2    10   217     1 
+33312 33313 33314 33333 34113 34123 34202 34203 34312 34313 34314 34323 34324 
+    2     8    20     3     3   241     6     9     5    15    30   939     4 
+34331 34332 34333 35113 35123 35131 35201 35202 35203 35313 35314 35323 35333 
+    1     2     1     4    20     2     2     1     6    11    28   176     7 
+36113 36203 36313 36314 36323 36333 40111 40112 40113 40131 40132 40201 40202 
+   13    16    57   104    59    70    77    57     2     5     2     4    17 
+40203 40311 40312 40313 40314 40322 40323 40331 40332 40333 41111 41112 41113 
+    1   251   400    12    19    27     9    23    12     1     2   112     1 
+41201 41202 41203 41311 41312 41313 41314 41323 41331 41332 41333 42131 42201 
+    5    10    14   115  1335    98     1     2    12     1     2     1     1 
+42202 42203 42311 42313 42331 42332 42333 43111 43112 43131 43311 43331 43332 
+    1     4     4     7    39     5     6     1     2    22     1    40     4 
+44111 44112 44113 44131 44132 44203 44312 44313 44331 45111 45112 45122 45123 
+    1     3     2     2     1     3    41    10     2     1     3     3     1 
+45131 45132 45203 45311 45312 45322 45323 45331 45332 45662 46112 46202 46203 
+    5     3     1    11    34     8     2     7    30     1     3     3     1 
+46311 46312 46313 46314 46331 46332 46333 47113 47203 47312 47313 47314 47323 
+   18    52    17     2     3     1     2     5     7     1   255    71     6 
+48203 48311 48312 48313 48323 49202 49203 49311 49312 49313 49314 49323 49331 
+    5    27    65   309    14     1     1     3    14    53     4     5     1 
+50111 50112 50113 50122 50131 50311 50312 50313 50322 51112 51202 51203 51312 
+   22     1     2     1     2    25     2     2     1    30     2     1    77 
+51314 51331 52112 52113 52123 52203 52312 52313 52314 52323 52332 52333 53112 
+    3     1     3     2     4     3    13    20     2     5     4     3     2 
+53113 53203 53312 53313 53314 53323 54112 54133 54311 54312 54313 54323 54332 
+  160    31     9   262   286     3     4     1     1    10    14     1     2 
+54333 55203 55312 55314 56113 56123 56203 56313 56314 56323 57112 57113 57312 
+   12     3     1  1354    22     1     7    67   927    21     9   130     3 
+57313 57314 58112 58113 58132 58203 58312 58313 58314 58323 58332 59313 60111 
+   30   437    11   128     1     1     8   108    13     2     2     1     2 
+60113 60123 60131 60203 60311 60312 60313 60314 60323 60331 60332 60333 61113 
+    1     4     6     2     1     1    50     3    11     5     1     1     4 
+61123 61203 61311 61313 61314 61323 61331 62313 62314 62323 63113 63313 63331 
+    2     1     1    10     2     1     1     5     1     4     1     2     2 
+64113 64202 64313 64314 64323 64331 70131 70202 70203 70311 70312 70313 70322 
+    1     1     8     2     2     1     2     3    28     1     3    33     2 
+70323 70331 70332 70333 71113 71201 71202 71203 71311 71312 71313 71323 71331 
+   27     8     2     1     1     2     1    10     1     3     9    12     6 
+71332 71333 72112 72113 72131 72132 72201 72202 72203 72311 72312 72313 72314 
+    1     1    29   873    50     1     2     3    58     2    60  1068   576 
+72323 72331 72332 72333 73113 74314 80111 80112 80113 80123 80131 80132 80202 
+   41    56    17     2     1     1     1    74   144   222     5     1     4 
+80203 80311 80312 80313 80314 80322 80323 80331 80332 80333 81101 81121 81123 
+   64     4    24   516    63     4   688    21     2    10     1     1     2 
+81131 81132 81201 81202 81323 81331 81332 81333 82111 82112 82113 82123 82131 
+   23     3    19     1     1    68     9     1     1    46   219    49     1 
+82203 82312 82313 82314 82323 90112 90113 90203 90312 90313 90323 90331 90332 
+    2    23   192    32     7     4     5     6    14    76     6     1     2 
+91311 92112 92113 92132 92202 92203 92312 92313 92331 92333 99999 
+    1    44     3     2     1     1    90    48     2     1    53 </code></pre>
+<p>Por otro lado, el paquete <strong><code>eph</code></strong> mediante la función <code>organize_CNO</code> nos agrega 4 columnas a la base en donde se clasifica cada componente del CNO: carácter, jerarquía, tecnología y calificación ocupacional. A continuación revisamos dicho comando y solicitaremos las frecuencias, por ejemplo, de la calificación.</p>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="4.3-eph4.html#cb49-1" aria-hidden="true" tabindex="-1"></a>eph_ind_215 <span class="ot">&lt;-</span> <span class="fu">organize_cno</span>(<span class="at">base =</span> eph_ind_215)</span>
+<span id="cb49-2"><a href="4.3-eph4.html#cb49-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-3"><a href="4.3-eph4.html#cb49-3" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(eph_ind_215<span class="sc">$</span>CALIFICACION)</span></code></pre></div>
+<pre><code>
+No calificados          Ns.Nc     Operativos  Profesionales       Técnicos 
+          5195             53          12879           2012           4259 </code></pre>
+<p>Por su parte en la variable <em>PP04D_CIUO</em> encontraremos a la ocupación codificada según el <strong>CIUO</strong>.</p>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="4.3-eph4.html#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(eph_ind_215<span class="sc">$</span>PP04D_CIUO)</span></code></pre></div>
+<pre><code>
+0110 0210 0310 1111 1112 1114 1120 1211 1212 1213 1219 1221 1222 1223 1311 1321 
+   4   10   34    4   45    7   34    5    4    1    6   45    1    1    7    5 
+1322 1323 1324 1330 1341 1342 1343 1344 1345 1346 1349 1411 1412 1420 1431 1439 
+   1   14   12    5    1    8    2    1   76   15    6    5   24   68    1   14 
+2111 2112 2113 2114 2120 2131 2132 2133 2141 2142 2143 2144 2145 2146 2149 2151 
+   1    3    1    6    1   38   20    5   17   33    4    4    6    2    3    8 
+2152 2153 2161 2163 2164 2165 2166 2211 2212 2221 2240 2250 2261 2262 2263 2265 
+   5    2   80    9    1   10   21  121  110    3    2   19   58   30    6    3 
+2266 2269 2310 2320 2330 2341 2342 2351 2352 2353 2354 2355 2356 2359 2411 2412 
+   5    9  164   39  426  487  177   20   50   24   27   34    4   83  189   14 
+2413 2421 2422 2423 2424 2431 2432 2433 2434 2511 2512 2513 2514 2519 2521 2522 
+   2    5   19   51   11    8    3    7    1   33   20   22    9    2    4    8 
+2523 2529 2611 2612 2619 2622 2631 2632 2633 2634 2635 2636 2641 2642 2643 2651 
+   9    2  242   10    1    3   11    2    1   86   26   12    3   54    5    5 
+2652 2653 2654 2655 2656 2659 3111 3112 3113 3114 3115 3116 3117 3118 3119 3121 
+  21    2    6    8   17    3   13   29   12   25    6    3    7    8    4   23 
+3122 3123 3131 3132 3133 3134 3135 3139 3141 3142 3143 3152 3153 3154 3155 3211 
+  71   92   21   14    3   14    1   18    6    2    1    4    2    3    3   40 
+3212 3213 3214 3221 3222 3240 3251 3252 3253 3254 3255 3256 3257 3258 3259 3311 
+  37   10   16  257    2    2    6    4    3    6   52   11   54    3    1   15 
+3312 3313 3314 3315 3321 3322 3323 3324 3331 3332 3333 3334 3339 3341 3342 3343 
+  34   77    8    6   47   72   14   66    9   17    5   40   47  109   32   91 
+3344 3351 3352 3353 3354 3355 3359 3411 3412 3413 3421 3422 3423 3431 3432 3434 
+  27    1    9    3   10    9    9   36   55    5    7   34  104   23   11   17 
+3435 3511 3512 3513 3514 3521 3522 4110 4120 4131 4132 4211 4212 4214 4221 4222 
+  33   23   13   19    9   30    8 1830  226    5   24   21   59   29   27   81 
+4223 4224 4225 4226 4227 4229 4311 4312 4313 4321 4322 4323 4411 4412 4413 4415 
+  38   25   29   64    9    4  289    9   18  119   17   35   26   70    1    3 
+4416 4419 5111 5112 5113 5120 5131 5132 5141 5142 5151 5152 5153 5161 5162 5163 
+   6   20    1    3   15  301  146   36  155   42    7    4   52    2    5    6 
+5164 5165 5169 5211 5212 5221 5222 5223 5230 5241 5242 5243 5244 5245 5246 5249 
+  23    1    6   69   33 1122   93 1229  230    2    7  241   41   47   36    8 
+5311 5312 5321 5322 5329 5411 5412 5413 5414 5419 6111 6112 6113 6114 6121 6122 
+ 265  106   62  147   57   10  413   42  344   42    9    6   10   11   27    3 
+6123 6130 6210 6222 6223 7111 7112 7113 7114 7115 7119 7121 7122 7123 7125 7126 
+   2    5    6    5    6    5 1240    3    4   58    3   10    8   11   11  163 
+7127 7131 7132 7211 7212 7213 7214 7215 7221 7222 7223 7224 7231 7232 7233 7234 
+  39  177   31    2  126   74   17    2  108   23   34    3  318   14  141   14 
+7311 7312 7313 7314 7315 7316 7317 7318 7319 7321 7322 7323 7411 7412 7413 7421 
+   3    3    4   10    5    9   22   63   25   19   52   13  185   73   44   28 
+7422 7511 7512 7513 7514 7515 7516 7521 7522 7523 7531 7532 7533 7534 7535 7536 
+ 111   54  115    7    1    9    1    4   74    3   73   10   63   27    1   40 
+7542 7543 7544 7549 8111 8112 8113 8114 8121 8122 8131 8132 8141 8142 8143 8151 
+   2   34    9    9    3    3   37   12   44   14   17    2   28   35   13   21 
+8152 8153 8154 8155 8156 8157 8159 8160 8172 8181 8182 8183 8189 8211 8212 8219 
+  12   73    5    2   18   23   24  102   30   19    2   53    5   28   88   18 
+8311 8312 8321 8322 8331 8332 8341 8342 8343 8344 8350 9111 9112 9121 9122 9123 
+  10    9   49  758  179  242   18   25   24   58    6 1361  763   11   75    1 
+9129 9211 9212 9213 9214 9215 9311 9312 9313 9321 9329 9331 9333 9334 9411 9412 
+   2   28   14    1  190    3    6   13  561   61   47    5  158  146   36  138 
+9510 9520 9611 9612 9613 9621 9622 9623 9624 9629 9999 
+   8  113   45   41  108   32  123    7    1   21   41 </code></pre>
+<p>A través del paquete <strong><code>modest</code></strong> y el comando <code>mfv</code> (most frequent value) calcularemos la moda de dichas variables, es decir, la ocupación más repetida en el relevamiento.</p>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="4.3-eph4.html#cb53-1" aria-hidden="true" tabindex="-1"></a>modeest<span class="sc">::</span><span class="fu">mfv</span>(eph_ind_215<span class="sc">$</span>PP04D_CIUO, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<pre><code>[1] 4110
+411 Levels: 0110 0210 0310 1111 1112 1114 1120 1211 1212 1213 1219 1221 ... 9999</code></pre>
+<p>El código 4110 designa a los <strong>oficinistas generales</strong></p>
+</div>
+<div id="rama-de-actividad-1" class="section level3" number="4.3.3">
+<h3><span class="header-section-number">4.3.3</span> Rama de actividad</h3>
+<p>Al igual que para el caso de la ocupación, la rama de actividad es computada tanto para la población ocupada como la desocupada. En los relevamientos previos a 2011 y posteriores a 2016, en el primer caso acudimos a la variable <em>PP04B_COD</em> mientras que en el segundo a la <em>PP11B_COD</em>. Para los relevamiento entre 2011 y 2015, dichas variables fueron nombradas sin el sufijo *_COD* y con el sufijo *_CAES*.</p>
+<p>Echamos un vistazo a la distribución de la población ocupada según la rama de actividad.</p>
+<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="4.3-eph4.html#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(eph_ind_215<span class="sc">$</span>PP04B_CAES)</span></code></pre></div>
+<pre><code>
+       0101  0102  0103  0104  0200  0300  0600  0700  0800  0900  1001  1002 
+35630   101    43    35     1     6    15    48     4    26   100   116    43 
+ 1003  1009  1100  1200  1300  1400  1501  1502  1600  1700  1800    19  1902 
+   37   383    53     5   120   156    13    57    41    31    67     3     8 
+   20  2001  2002  2009  2100  2201  2202  2301  2309  2400  2500  2601  2602 
+   24     6    30     5   101    33    62    14    63    26   406    18     7 
+ 2603  2604  2701  2709  2800  2900  3001  3003  3009  3100  3200  3300  3501 
+   24    26    34    32    94    68     8     2    22   179   110   104   101 
+ 3502  3600  3800  3900  4000  4501  4502  4503  4504    48  4801  4802  4803 
+   19    53   113     3  2575   100   398    74    48   126    21    35   777 
+ 4804  4805  4806  4807  4808  4809  4810  4811    49  4901  4902  4903  4904 
+  427   168    80   651   827    41   416    28    15    36     1   582   302 
+ 4909  5000  5100  5201  5202  5300  5500  5601  5602  5800  5900  6000  6100 
+   36    14    15    34   168   114   102   669    42    37    23    54   158 
+ 6200  6300  6400  6500  6600  6800  6900  7000  7100  7200  7301  7302  7400 
+   95     7   219   179    12    55   371    60   136    36    40    11    91 
+ 7500  7701  7702  7800  7900  8000  8101  8102  8200  8401  8402  8403  8501 
+   29    16     9    12    44   220   143   131   115  2094   990    76  1944 
+ 8509  8600  8700  8800  9000  9100  9200  9301  9302  9401  9402  9409  9501 
+  229  1243    65    24    29    26   105   169    61    26    34   321    49 
+ 9502  9503  9601  9602  9603  9609  9700     Z 
+    9   168    18   214    25    62  1780   113 </code></pre>
+<p>Del mismo modo que con la ocupación, el paquete <strong><code>eph</code></strong> mediante la función <code>organize_CAES</code> nos agrega 8 columnas a la base en donde se clasifican distintas cuestiones: versión de la CAES, código de sección y división, etiqueta de sección y división y clasificación de ramas de actividad agregadas. A continuación revisamos dicho comando y solicitaremos las frecuencias de las ramas agregadas.</p>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="4.3-eph4.html#cb57-1" aria-hidden="true" tabindex="-1"></a>eph_ind_215<span class="sc">$</span>PP04B_COD <span class="ot">&lt;-</span> <span class="fu">as.character</span>(eph_ind_215<span class="sc">$</span>PP04B_COD) <span class="co">#esta linea de comando corrige un error derivado del auto-etiquetamiento de las categorías.</span></span>
+<span id="cb57-2"><a href="4.3-eph4.html#cb57-2" aria-hidden="true" tabindex="-1"></a>eph_ind_215 <span class="ot">&lt;-</span> <span class="fu">organize_caes</span>(<span class="at">base =</span> eph_ind_215)</span>
+<span id="cb57-3"><a href="4.3-eph4.html#cb57-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-4"><a href="4.3-eph4.html#cb57-4" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(eph_ind_215<span class="sc">$</span>caes_eph_label)</span></code></pre></div>
+<pre><code>
+                              Actividades primarias 
+                                                379 
+                            Industria manufacturera 
+                                               2631 
+                                       Construccion 
+                                               2575 
+                                           Comercio 
+                                               4217 
+                             Hoteles y restaurantes 
+                                                813 
+        Transporte, almacenamiento y comunicaciones 
+                                               1691 
+ Servicios financieros, de alquiler y empresariales 
+                                               1929 
+ Administracion publica, defensa y seguridad social 
+                                               3084 
+                                          Ensenanza 
+                                               2173 
+                      Servicios sociales y de salud 
+                                               1332 
+                                 Servicio domestico 
+                                               1780 
+Otros servicios comunitarios, sociales y personales 
+                                               1316 
+                                        Otras ramas 
+                                                169 
+                  Actividades no bien especificadas 
+                                                120 </code></pre>
+</div>
+<div id="categoría-de-ocupación-1" class="section level3" number="4.3.4">
+<h3><span class="header-section-number">4.3.4</span> Categoría de ocupación</h3>
+<p>La categoría de ocupación es una variable que también es de vital importancia en la construcción de clasificaciones. La misma puede encontrarse bajo el nombre de <em>CAT_OCUP</em>. A continuación exploramos sus categorías:</p>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="4.3-eph4.html#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(eph_ind_215<span class="sc">$</span>CAT_OCUP)</span></code></pre></div>
+<pre><code>
+                                   0                               Patron 
+                               34530                                  969 
+                       Cuenta propia                    Obrero o empleado 
+                                4772                                19597 
+Trabajador familiar sin remuneracion 
+                                 160 </code></pre>
+</div>
+<div id="sector-de-actividad-1" class="section level3" number="4.3.5">
+<h3><span class="header-section-number">4.3.5</span> Sector de actividad</h3>
+<p>En la <strong>EPH</strong> el sector de actividad puede encontrarse en la variable <em>PP04A</em>.</p>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="4.3-eph4.html#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(eph_ind_215<span class="sc">$</span>PP04A)</span></code></pre></div>
+<pre><code>
+              0      ...estatal      ...privada ...de otro tipo        Ns./Nr.. 
+          35630            5517           18492             373              16 </code></pre>
+</div>
+<div id="tamaño-del-establecimiento-1" class="section level3" number="4.3.6">
+<h3><span class="header-section-number">4.3.6</span> Tamaño del establecimiento</h3>
+<p>La medición del tamaño del establecimiento se encuentra distribuida en dos variables: <em>PP04C</em> y <em>PP04C99</em>. La primera permite captar en forma detallada el tamaño del establecimiento donde trabaja la persona en diferentes rangos, mientras que la segunda permite recuperar, mediante una clasificación más acotada, aquel dato que en la primera variable figuraba como “Ns/Nc”. A continuación exploramos ambas variables en forma cruzada.</p>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="4.3-eph4.html#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(eph_ind_215<span class="sc">$</span>PP04C, eph_ind_215<span class="sc">$</span>PP04C99)</span></code></pre></div>
+<pre><code>                       
+                            0 hasta 5 de 6 a 40 mas de 40 Ns./Nr..
+  0                     37370       0         0         0        0
+  1 persona              3565       0         0         0        0
+  2 personas             2123       0         0         0        0
+  3 personas             1241       0         0         0        0
+  4 personas              816       0         0         0        0
+  5 personas              752       0         0         0        0
+  6 a 10 personas        1876       0         0         0        0
+  11 a 25 personas       1783       0         0         0        0
+  26 a 40 personas       1567       0         0         0        0
+  de 41 a 100 personas   2035       0         0         0        0
+  de 101 a 200 personas  1386       0         0         0        0
+  de 201 a 500 personas  1204       0         0         0        0
+  mas de 500 personas    1304       0         0         0        0
+  Ns./Nr.                   0     125       610       919     1352</code></pre>
+<p>Al igual que en el caso de la ocupación y la rama de actividad, para aquellas personas desocupadas que han trabajado alguna vez en el pasado, el tamaño del establecimiento puede ser identificado en las variables <em>PP11C</em> y <em>PP11C99</em>.</p>
+</div>
+<div id="supervisión-1" class="section level3" number="4.3.7">
+<h3><span class="header-section-number">4.3.7</span> Supervisión</h3>
+<p>Si bien la supervisión no es una variable medida directamente en la <strong>EPH</strong>, podemos aproximarnos a dicha noción a través del <strong>CNO</strong>. En su tercer dígito mide la jerarquía ocupacional. Sin embargo, para extraer dicha información es necesario “partir” el código ocupacional, reteniendo el tercer dígito. A través de <strong><code>R</code></strong>, realizaremos la operación utilizando la función <code>str_sub</code> del paquete <strong><code>stringr</code></strong>, indicando que dígitos queremos retener. En este caso debemos señalar que queremos retener únicamente el tercer dígito (que empiece en el 3 y termine en el 3) y se lo asignaremos a una nueva variable llamada “cno_jerarquia”.</p>
+<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="4.3-eph4.html#cb65-1" aria-hidden="true" tabindex="-1"></a>eph_ind_215<span class="sc">$</span>cno_jerarquia <span class="ot">&lt;-</span> <span class="fu">str_sub</span>(eph_ind_215<span class="sc">$</span>PP04D_COD, <span class="at">start =</span> <span class="dv">3</span>, <span class="at">end =</span> <span class="dv">3</span>)</span>
+<span id="cb65-2"><a href="4.3-eph4.html#cb65-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb65-3"><a href="4.3-eph4.html#cb65-3" aria-hidden="true" tabindex="-1"></a>eph_ind_215 <span class="sc">%&gt;%</span> </span>
+<span id="cb65-4"><a href="4.3-eph4.html#cb65-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(cno_jerarquia <span class="sc">==</span> <span class="dv">2</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb65-5"><a href="4.3-eph4.html#cb65-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">nrow</span>()</span></code></pre></div>
+<pre><code>[1] 619</code></pre>
+<p>Conociendo que el código 2 es el que hace referencia a la jefatura, si filtramos los resultados podemos decir que existen 619 casos que supervisan las tareas de otras personas.</p>
+
+</div>
+</div>
+<!-- </div> -->
+<h3>Referencias</h3>
+<div id="refs" class="references csl-bib-body hanging-indent" line-spacing="2">
+<div id="ref-INDEC2011d" class="csl-entry">
+INDEC. (2011). <em>Clasificación de <span>Actividades</span> <span>Económicas</span> para <span>Encuestas</span> <span>Sociodemográficas</span> del <span>MERCOSUR</span>. <span>CAES</span>-<span>MERCOSUR</span> 1.0 <span>Versión</span> <span>Argentina</span></em>. Buenos Aires.
+</div>
+</div>
+<p style="text-align: center;">
+<a href="4.2-las-variables-socio-ocupacionales.html"><button class="btn btn-default">Previous</button></a>
+<a href="5-clases5.html"><button class="btn btn-default">Next</button></a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+</body>
+</html>

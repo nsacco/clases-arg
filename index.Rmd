@@ -1,6 +1,9 @@
 ---
 title: "Libro de Cocina para el Análisis de las Clases Sociales en Argentina"
-author: ["Nicolás Sacco", "José Rodríguez de la Fuente", "Sofia Jaime"]
+author: 
+  - Nicolás Sacco
+  - José Rodríguez de la Fuente 
+  - Sofia Jaime
 date: "`r Sys.Date()`"
 
 bibliography: [bib/Biblio.bib, bib/bib_jose.bib, bib/packages.bib]
@@ -9,7 +12,7 @@ csl: bib/apa-6th-edition.csl
 link-citations: yes
 
 github-repo: nsacco/libroESA
-description: "Manual introductorio para el estudio de la estructura social en Argentina"
+description: "Libro de Cocina para el Análisis de las Clases Sociales en Argentina"
 site: bookdown::bookdown_site
 #knit: "bookdown::render_book"
 always_allow_html: true
@@ -44,9 +47,10 @@ knitr::write_bib(c(
 
 ```
 
+
 # Prefacio {.unnumbered}
 
-La literatura sobre las clases sociales en Argentina posee ya una larga tradición y una amplia gama de abordajes. La relevancia de este tema reside en las transformaciones recientes de la estructura social, pero también, en los desafíos, tanto teóricos como metodológicos, que el tema posee. Estudiantes, investigadores y profesionales, en fin, aquellos interesados en su estudio, se encuentran de forma frecuente con la paralizante tarea de afrontar la infinita literatura y discusión teórica sobre la cuestión, la construcción de información, o bien con el oscuro privilegio de acceso a ciertas bases de datos, en el caso de los estudios con datos cuantitativos secundarios; en definitiva, en la posibilidad de caer en las trampas de la ciencia cerrada o no-reproducible, todavía bastante frecuente.
+<img src="imagenes/cocina1.png" class="cover" width="328" height="328"/>La literatura sobre las clases sociales en Argentina posee ya una larga tradición y una amplia gama de abordajes. La relevancia de este tema reside en las transformaciones recientes de la estructura social, pero también, en los desafíos, tanto teóricos como metodológicos, que el tema posee. Estudiantes, investigadores y profesionales, en fin, aquellos interesados en su estudio, se encuentran de forma frecuente con la paralizante tarea de afrontar la infinita literatura y discusión teórica sobre la cuestión, la construcción de información, o bien con el oscuro privilegio de acceso a ciertas bases de datos, en el caso de los estudios con datos cuantitativos secundarios; en definitiva, en la posibilidad de caer en las trampas de la ciencia cerrada o no-reproducible, todavía bastante frecuente.
 
 A modo de aporte para cubrir parte de estos problemas, este manual, abierto a la comunidad para su consulta, ofrece a través de "recetas" prácticas situar a los lectores en la "cocina" de la investigación para el estudio de las clases sociales, en particular, en el abordaje de la problemática de la construcción y análisis estadístico de datos para su estudio en la Argentina contemporánea, con un enfoque global y de largo plazo, en base a datos cuantitativos secundarios.
 
@@ -62,7 +66,25 @@ Al socializar este trabajo, el anhelo es construir una comunidad de usuarios y q
 
 Esperamos que les sea de utilidad.
 
-Nicolás, José y Sofía
+Nicolás, José y Sofía  
+
+
+>**¿Cómo citar este libro?**  
+Sacco, Nicolás; José Rodríguez de la Fuente y Sofía Jaime (2022). *Libro de Cocina para el Análisis de las Clases Sociales en Argentina*. https://nsacco.github.io/clases-arg/  
+
+<hr>
+
+## Contacto con los autores {.unnumbered}
+
+Nicolás Sacco -  <nsacco@psu.edu>
+
+José Rodríguez de la Fuente <josedelafuente_86@hotmail.com>
+
+Sofia Jaime – <sofiajaimemoschin@gmail.com>
+
+<hr>
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />Este obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.
 
 # Agradecimientos {.unnumbered}
 

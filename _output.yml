@@ -11,11 +11,14 @@ bookdown::gitbook:
   split_bib: false
   split_by: section
   config:
+    edit:
+      link: https://github.com/nsacco/clases-arg/%s
+      text: "Edit"
     toc:
       scroll_highlight: true
       collapse: section
       before: |
-        <li><a href="./">Manual para el Análisis de la Estructura Social Argentina Actual</a></li>
+        <li><a href="./">Libro de Cocina para el Análisis de las Clases Sociales en Argentina</a></li>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
     download: ["pdf", "epub"]
@@ -31,6 +34,12 @@ bookdown::pdf_document2:
 bookdown::html_document2:
   keep_md: true
   fig_caption: TRUE
+
+bookdown::bs4_book:
+  theme:
+    primary: "#E95420"
+    secondary: "#AEA79F"
+  repo: https://github.com/nsacco/clases-arg
 
 
 

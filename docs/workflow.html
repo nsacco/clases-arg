@@ -2,73 +2,64 @@
 <html lang="" xml:lang="">
 <head>
 
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>9.2 Workflow | Libro de Cocina para el Análisis de las Clases Sociales en Argentina</title>
-  <meta name="description" content="Manual introductorio para el estudio de la estructura social en Argentina" />
-  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="9.2 Workflow | Libro de Cocina para el Análisis de las Clases Sociales en Argentina" />
+<meta property="og:type" content="book" />
 
-  <meta property="og:title" content="9.2 Workflow | Libro de Cocina para el Análisis de las Clases Sociales en Argentina" />
-  <meta property="og:type" content="book" />
-  
-  <meta property="og:description" content="Manual introductorio para el estudio de la estructura social en Argentina" />
-  <meta name="github-repo" content="nsacco/libroESA" />
-
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="9.2 Workflow | Libro de Cocina para el Análisis de las Clases Sociales en Argentina" />
-  
-  <meta name="twitter:description" content="Manual introductorio para el estudio de la estructura social en Argentina" />
-  
+<meta property="og:description" content="9.2 Workflow | Libro de Cocina para el Análisis de las Clases Sociales en Argentina" />
+<meta name="github-repo" content="nsacco/libroESA" />
 
 <meta name="author" content="Nicolás Sacco" />
 <meta name="author" content="José Rodríguez de la Fuente" />
 <meta name="author" content="Sofia Jaime" />
 
 
-<meta name="date" content="2022-07-18" />
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  
-  
-<link rel="prev" href="introR.html"/>
-<link rel="next" href="rmarkdown.html"/>
+<meta name="description" content="9.2 Workflow | Libro de Cocina para el Análisis de las Clases Sociales en Argentina">
+
+<title>9.2 Workflow | Libro de Cocina para el Análisis de las Clases Sociales en Argentina</title>
+
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
-<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
-
-
-
-
-
-
-
-<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
-<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="libs/bootstrap-3.3.5/css/darkly.min.css" rel="stylesheet" />
+<script src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="libs/navigation-1.1/tabsets.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 <link href="libs/vembedr-0.1.5/css/vembedr.css" rel="stylesheet" />
 <link href="libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
 <script src="libs/pagedtable-1.1/js/pagedtable.js"></script>
-<link href="libs/tabwid-1.0.0/tabwid.css" rel="stylesheet" />
-<link href="libs/tabwid-1.0.0/scrool.css" rel="stylesheet" />
+<link href="libs/tabwid-1.1.0/tabwid.css" rel="stylesheet" />
+<link href="libs/tabwid-1.1.0/scrool.css" rel="stylesheet" />
 
 
+<style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
@@ -127,6 +118,12 @@ code span.va { color: #19177c; } /* Variable */
 code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+
 
 <style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
@@ -151,263 +148,266 @@ div.csl-indent {
 }
 </style>
 
-<link rel="stylesheet" href="style.css" type="text/css" />
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+/* show arrow before summary tag as in bootstrap
+TODO: remove if boostrap in updated in html_document (rmarkdown#1485) */
+details > summary {
+  display: list-item;
+  cursor: pointer;
+}
+</style>
 </head>
 
 <body>
 
+<div class="container-fluid main-container">
 
 
-  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
-
-    <div class="book-summary">
-      <nav role="navigation">
-
-<ul class="summary">
-<li><a href="./">Manual para el Análisis de la Estructura Social Argentina Actual</a></li>
-
-<li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefacio</a></li>
-<li class="chapter" data-level="" data-path="agradecimientos.html"><a href="agradecimientos.html"><i class="fa fa-check"></i>Agradecimientos</a></li>
+<div class="row">
+<div class="col-sm-12">
+<div id="TOC">
+<ul>
+<li><a href="index.html#prefacio" id="toc-prefacio">Prefacio</a></li>
+<li><a href="agradecimientos.html#agradecimientos" id="toc-agradecimientos">Agradecimientos</a></li>
 <li class="part"><span><b>I Aspectos teóricos</b></span></li>
-<li class="chapter" data-level="1" data-path="estructura1.html"><a href="estructura1.html"><i class="fa fa-check"></i><b>1</b> La estructura social en la Argentina actual</a>
+<li class="has-sub"><a href="estructura1.html#estructura1" id="toc-estructura1"><span class="toc-section-number">1</span> La estructura social en la Argentina actual</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="analisis1.html"><a href="analisis1.html"><i class="fa fa-check"></i><b>1.1</b> Del análisis de las clases sociales a la teoría de la estratificación social</a></li>
-<li class="chapter" data-level="1.2" data-path="marx.html"><a href="marx.html"><i class="fa fa-check"></i><b>1.2</b> Marx, Weber y el funcionalismo</a></li>
-<li class="chapter" data-level="1.3" data-path="esperanza.html"><a href="esperanza.html"><i class="fa fa-check"></i><b>1.3</b> La esperanza de vida de la teoría: debates contemporáneos</a>
+<li><a href="analisis1.html#analisis1" id="toc-analisis1"><span class="toc-section-number">1.1</span> Del análisis de las clases sociales a la teoría de la estratificación social</a></li>
+<li><a href="marx.html#marx" id="toc-marx"><span class="toc-section-number">1.2</span> Marx, Weber y el funcionalismo</a></li>
+<li class="has-sub"><a href="esperanza.html#esperanza" id="toc-esperanza"><span class="toc-section-number">1.3</span> La esperanza de vida de la teoría: debates contemporáneos</a>
 <ul>
-<li class="chapter" data-level="1.3.1" data-path="esperanza.html"><a href="esperanza.html#la-grieta-de-los-ochenta"><i class="fa fa-check"></i><b>1.3.1</b> La grieta de los ochenta</a></li>
-<li class="chapter" data-level="1.3.2" data-path="esperanza.html"><a href="esperanza.html#nuevos-debateshacia-una-operacionalización-más-refinada-de-los-conceptos"><i class="fa fa-check"></i><b>1.3.2</b> Nuevos debates…¿Hacia una operacionalización más refinada de los conceptos?</a></li>
-<li class="chapter" data-level="1.3.3" data-path="esperanza.html"><a href="esperanza.html#la-muerte-de-la-clases"><i class="fa fa-check"></i><b>1.3.3</b> La muerte de la clases</a></li>
+<li><a href="esperanza.html#la-grieta-de-los-ochenta" id="toc-la-grieta-de-los-ochenta"><span class="toc-section-number">1.3.1</span> La grieta de los ochenta</a></li>
+<li><a href="esperanza.html#nuevos-debateshacia-una-operacionalización-más-refinada-de-los-conceptos" id="toc-nuevos-debateshacia-una-operacionalización-más-refinada-de-los-conceptos"><span class="toc-section-number">1.3.2</span> Nuevos debates…¿Hacia una operacionalización más refinada de los conceptos?</a></li>
+<li><a href="esperanza.html#la-muerte-de-la-clases" id="toc-la-muerte-de-la-clases"><span class="toc-section-number">1.3.3</span> La muerte de la clases</a></li>
 </ul></li>
-<li class="chapter" data-level="1.4" data-path="cuestion.html"><a href="cuestion.html"><i class="fa fa-check"></i><b>1.4</b> La cuestión en América Latina y en la Argentina</a>
+<li class="has-sub"><a href="cuestion.html#cuestion" id="toc-cuestion"><span class="toc-section-number">1.4</span> La cuestión en América Latina y en la Argentina</a>
 <ul>
-<li class="chapter" data-level="1.4.1" data-path="cuestion.html"><a href="cuestion.html#nuevos-aires"><i class="fa fa-check"></i><b>1.4.1</b> Nuevos aires</a></li>
+<li><a href="cuestion.html#nuevos-aires" id="toc-nuevos-aires"><span class="toc-section-number">1.4.1</span> Nuevos aires</a></li>
 </ul></li>
 </ul></li>
 <li class="part"><span><b>II Fuentes de datos</b></span></li>
-<li class="chapter" data-level="2" data-path="fuentes.html"><a href="fuentes.html"><i class="fa fa-check"></i><b>2</b> Encuestas de hogares</a>
+<li class="has-sub"><a href="fuentes.html#fuentes" id="toc-fuentes"><span class="toc-section-number">2</span> Encuestas de hogares</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="eph1.html"><a href="eph1.html"><i class="fa fa-check"></i><b>2.1</b> La Encuesta Permanente de Hogares. Características principales</a>
+<li class="has-sub"><a href="eph1.html#eph1" id="toc-eph1"><span class="toc-section-number">2.1</span> La Encuesta Permanente de Hogares. Características principales</a>
 <ul>
-<li class="chapter" data-level="2.1.1" data-path="eph1.html"><a href="eph1.html#características-de-la-eph-continua"><i class="fa fa-check"></i><b>2.1.1</b> Características de la EPH continua</a></li>
-<li class="chapter" data-level="2.1.2" data-path="eph1.html"><a href="eph1.html#la-eph-como-fuente-de-análisis-de-la-estructura-de-clases"><i class="fa fa-check"></i><b>2.1.2</b> La EPH como fuente de análisis de la estructura de clases</a></li>
+<li><a href="eph1.html#características-de-la-eph-continua" id="toc-características-de-la-eph-continua"><span class="toc-section-number">2.1.1</span> Características de la EPH continua</a></li>
+<li><a href="eph1.html#la-eph-como-fuente-de-análisis-de-la-estructura-de-clases" id="toc-la-eph-como-fuente-de-análisis-de-la-estructura-de-clases"><span class="toc-section-number">2.1.2</span> La EPH como fuente de análisis de la estructura de clases</a></li>
 </ul></li>
-<li class="chapter" data-level="2.2" data-path="eph2.html"><a href="eph2.html"><i class="fa fa-check"></i><b>2.2</b> Comenzando a utilizar la EPH</a>
+<li class="has-sub"><a href="eph2.html#eph2" id="toc-eph2"><span class="toc-section-number">2.2</span> Comenzando a utilizar la EPH</a>
 <ul>
-<li class="chapter" data-level="2.2.1" data-path="eph2.html"><a href="eph2.html#el-método-clásico"><i class="fa fa-check"></i><b>2.2.1</b> El “método clásico”</a></li>
-<li class="chapter" data-level="2.2.2" data-path="eph2.html"><a href="eph2.html#el-paquete-eph"><i class="fa fa-check"></i><b>2.2.2</b> El paquete <code>eph</code></a></li>
+<li><a href="eph2.html#el-método-clásico" id="toc-el-método-clásico"><span class="toc-section-number">2.2.1</span> El “método clásico”</a></li>
+<li><a href="eph2.html#el-paquete-eph" id="toc-el-paquete-eph"><span class="toc-section-number">2.2.2</span> El paquete <code>eph</code></a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="eph3.html"><a href="eph3.html"><i class="fa fa-check"></i><b>2.3</b> Primeros pasos en el estudio de las clases sociales a través de la EPH</a>
+<li class="has-sub"><a href="eph3.html#eph3" id="toc-eph3"><span class="toc-section-number">2.3</span> Primeros pasos en el estudio de las clases sociales a través de la EPH</a>
 <ul>
-<li class="chapter" data-level="2.3.1" data-path="eph3.html"><a href="eph3.html#uniendo-las-bases-de-individuos-y-hogares"><i class="fa fa-check"></i><b>2.3.1</b> Uniendo las bases de individuos y hogares</a></li>
-<li class="chapter" data-level="2.3.2" data-path="eph3.html"><a href="eph3.html#población-bajo-análisis"><i class="fa fa-check"></i><b>2.3.2</b> Población bajo análisis</a></li>
-<li class="chapter" data-level="2.3.3" data-path="eph3.html"><a href="eph3.html#ponderación-y-expansión-de-la-muestra"><i class="fa fa-check"></i><b>2.3.3</b> Ponderación y expansión de la muestra</a></li>
+<li><a href="eph3.html#uniendo-las-bases-de-individuos-y-hogares" id="toc-uniendo-las-bases-de-individuos-y-hogares"><span class="toc-section-number">2.3.1</span> Uniendo las bases de individuos y hogares</a></li>
+<li><a href="eph3.html#población-bajo-análisis" id="toc-población-bajo-análisis"><span class="toc-section-number">2.3.2</span> Población bajo análisis</a></li>
+<li><a href="eph3.html#ponderación-y-expansión-de-la-muestra" id="toc-ponderación-y-expansión-de-la-muestra"><span class="toc-section-number">2.3.3</span> Ponderación y expansión de la muestra</a></li>
 </ul></li>
-<li class="chapter" data-level="2.4" data-path="otras.html"><a href="otras.html"><i class="fa fa-check"></i><b>2.4</b> Otras encuestas de hogares para el estudio de la estructura de clases</a></li>
+<li><a href="otras.html#otras" id="toc-otras"><span class="toc-section-number">2.4</span> Otras encuestas de hogares para el estudio de la estructura de clases</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="fuentes2.html"><a href="fuentes2.html"><i class="fa fa-check"></i><b>3</b> Los censos de población modernos</a>
+<li class="has-sub"><a href="fuentes2.html#fuentes2" id="toc-fuentes2"><span class="toc-section-number">3</span> Los censos de población modernos</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="clases3.html"><a href="clases3.html"><i class="fa fa-check"></i><b>3.1</b> Clases sociales y censos de población</a>
+<li class="has-sub"><a href="clases3.html#clases3" id="toc-clases3"><span class="toc-section-number">3.1</span> Clases sociales y censos de población</a>
 <ul>
-<li class="chapter" data-level="3.1.1" data-path="clases3.html"><a href="clases3.html#antecedentes"><i class="fa fa-check"></i><b>3.1.1</b> Antecedentes</a></li>
-<li class="chapter" data-level="3.1.2" data-path="clases3.html"><a href="clases3.html#practicidad"><i class="fa fa-check"></i><b>3.1.2</b> Practicidad</a></li>
+<li><a href="clases3.html#antecedentes" id="toc-antecedentes"><span class="toc-section-number">3.1.1</span> Antecedentes</a></li>
+<li><a href="clases3.html#practicidad" id="toc-practicidad"><span class="toc-section-number">3.1.2</span> Practicidad</a></li>
 </ul></li>
-<li class="chapter" data-level="3.2" data-path="censos.html"><a href="censos.html"><i class="fa fa-check"></i><b>3.2</b> Censos de población modernos. Características principales</a>
+<li class="has-sub"><a href="censos.html#censos" id="toc-censos"><span class="toc-section-number">3.2</span> Censos de población modernos. Características principales</a>
 <ul>
-<li class="chapter" data-level="3.2.1" data-path="censos.html"><a href="censos.html#las-características-económicas-en-los-censos-de-población"><i class="fa fa-check"></i><b>3.2.1</b> Las características económicas en los censos de población</a></li>
+<li><a href="censos.html#las-características-económicas-en-los-censos-de-población" id="toc-las-características-económicas-en-los-censos-de-población"><span class="toc-section-number">3.2.1</span> Las características económicas en los censos de población</a></li>
 </ul></li>
-<li class="chapter" data-level="3.3" data-path="censos2.html"><a href="censos2.html"><i class="fa fa-check"></i><b>3.3</b> Censos modernos: acceso diferencial</a>
+<li class="has-sub"><a href="censos2.html#censos2" id="toc-censos2"><span class="toc-section-number">3.3</span> Censos modernos: acceso diferencial</a>
 <ul>
-<li class="chapter" data-level="3.3.1" data-path="censos2.html"><a href="censos2.html#modos-de-acceso"><i class="fa fa-check"></i><b>3.3.1</b> Modos de acceso</a></li>
-<li class="chapter" data-level="3.3.2" data-path="censos2.html"><a href="censos2.html#es-lo-que-hay"><i class="fa fa-check"></i><b>3.3.2</b> Es lo que hay</a></li>
-<li class="chapter" data-level="3.3.3" data-path="censos2.html"><a href="censos2.html#procesamiento-de-datos-en-líneau-2"><i class="fa fa-check"></i><b>3.3.3</b> Procesamiento de datos en línea</a></li>
-<li class="chapter" data-level="3.3.4" data-path="censos2.html"><a href="censos2.html#descarga-directa-de-microdatos"><i class="fa fa-check"></i><b>3.3.4</b> Descarga directa de microdatos</a></li>
-<li class="chapter" data-level="3.3.5" data-path="censos2.html"><a href="censos2.html#ipums-i"><i class="fa fa-check"></i><b>3.3.5</b> IPUMS-I</a></li>
-<li class="chapter" data-level="3.3.6" data-path="censos2.html"><a href="censos2.html#solicitud-directa-al-indec"><i class="fa fa-check"></i><b>3.3.6</b> Solicitud directa al INDEC</a></li>
-<li class="chapter" data-level="3.3.7" data-path="censos2.html"><a href="censos2.html#otras-opciones-no-oficiales"><i class="fa fa-check"></i><b>3.3.7</b> Otras opciones no oficiales</a></li>
-<li class="chapter" data-level="3.3.8" data-path="censos2.html"><a href="censos2.html#disponibilidad-en-detalle-para-el-estudio-de-clases-sociales"><i class="fa fa-check"></i><b>3.3.8</b> Disponibilidad en detalle para el estudio de clases sociales</a></li>
+<li><a href="censos2.html#modos-de-acceso" id="toc-modos-de-acceso"><span class="toc-section-number">3.3.1</span> Modos de acceso</a></li>
+<li><a href="censos2.html#es-lo-que-hay" id="toc-es-lo-que-hay"><span class="toc-section-number">3.3.2</span> Es lo que hay</a></li>
+<li><a href="censos2.html#procesamiento-de-datos-en-líneau-2" id="toc-procesamiento-de-datos-en-líneau-2"><span class="toc-section-number">3.3.3</span> Procesamiento de datos en línea</a></li>
+<li><a href="censos2.html#descarga-directa-de-microdatos" id="toc-descarga-directa-de-microdatos"><span class="toc-section-number">3.3.4</span> Descarga directa de microdatos</a></li>
+<li><a href="censos2.html#ipums-i" id="toc-ipums-i"><span class="toc-section-number">3.3.5</span> IPUMS-I</a></li>
+<li><a href="censos2.html#solicitud-directa-al-indec" id="toc-solicitud-directa-al-indec"><span class="toc-section-number">3.3.6</span> Solicitud directa al INDEC</a></li>
+<li><a href="censos2.html#otras-opciones-no-oficiales" id="toc-otras-opciones-no-oficiales"><span class="toc-section-number">3.3.7</span> Otras opciones no oficiales</a></li>
+<li><a href="censos2.html#disponibilidad-en-detalle-para-el-estudio-de-clases-sociales" id="toc-disponibilidad-en-detalle-para-el-estudio-de-clases-sociales"><span class="toc-section-number">3.3.8</span> Disponibilidad en detalle para el estudio de clases sociales</a></li>
 </ul></li>
 </ul></li>
 <li class="part"><span><b>III Variables</b></span></li>
-<li class="chapter" data-level="4" data-path="ocupacion.html"><a href="ocupacion.html"><i class="fa fa-check"></i><b>4</b> Las características económicas de la población</a>
+<li class="has-sub"><a href="ocupacion.html#ocupacion" id="toc-ocupacion"><span class="toc-section-number">4</span> Las características económicas de la población</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="consideraciones.html"><a href="consideraciones.html"><i class="fa fa-check"></i><b>4.1</b> Consideraciones previas</a>
+<li class="has-sub"><a href="consideraciones.html#consideraciones" id="toc-consideraciones"><span class="toc-section-number">4.1</span> Consideraciones previas</a>
 <ul>
-<li class="chapter" data-level="4.1.1" data-path="consideraciones.html"><a href="consideraciones.html#las-reglas-del-juego"><i class="fa fa-check"></i><b>4.1.1</b> Las reglas del juego</a></li>
-<li class="chapter" data-level="4.1.2" data-path="consideraciones.html"><a href="consideraciones.html#la-estratificación-como-perspectiva-de-análisis"><i class="fa fa-check"></i><b>4.1.2</b> La estratificación como perspectiva de análisis</a></li>
-<li class="chapter" data-level="4.1.3" data-path="consideraciones.html"><a href="consideraciones.html#indicadores-de-la-estratificación-social"><i class="fa fa-check"></i><b>4.1.3</b> Indicadores de la estratificación social</a></li>
-<li class="chapter" data-level="4.1.4" data-path="consideraciones.html"><a href="consideraciones.html#la-fuerza-de-trabajo-y-las-características-económicas-de-la-población"><i class="fa fa-check"></i><b>4.1.4</b> La fuerza de trabajo y las características económicas de la población</a></li>
+<li><a href="consideraciones.html#las-reglas-del-juego" id="toc-las-reglas-del-juego"><span class="toc-section-number">4.1.1</span> Las reglas del juego</a></li>
+<li><a href="consideraciones.html#la-estratificación-como-perspectiva-de-análisis" id="toc-la-estratificación-como-perspectiva-de-análisis"><span class="toc-section-number">4.1.2</span> La estratificación como perspectiva de análisis</a></li>
+<li><a href="consideraciones.html#indicadores-de-la-estratificación-social" id="toc-indicadores-de-la-estratificación-social"><span class="toc-section-number">4.1.3</span> Indicadores de la estratificación social</a></li>
+<li><a href="consideraciones.html#la-fuerza-de-trabajo-y-las-características-económicas-de-la-población" id="toc-la-fuerza-de-trabajo-y-las-características-económicas-de-la-población"><span class="toc-section-number">4.1.4</span> La fuerza de trabajo y las características económicas de la población</a></li>
 </ul></li>
-<li class="chapter" data-level="4.2" data-path="las-variables-socio-ocupacionales.html"><a href="las-variables-socio-ocupacionales.html"><i class="fa fa-check"></i><b>4.2</b> Las variables socio-ocupacionales</a>
+<li class="has-sub"><a href="las-variables-socio-ocupacionales.html#las-variables-socio-ocupacionales" id="toc-las-variables-socio-ocupacionales"><span class="toc-section-number">4.2</span> Las variables socio-ocupacionales</a>
 <ul>
-<li class="chapter" data-level="4.2.1" data-path="las-variables-socio-ocupacionales.html"><a href="las-variables-socio-ocupacionales.html#condición-de-actividad"><i class="fa fa-check"></i><b>4.2.1</b> Condición de actividad</a></li>
-<li class="chapter" data-level="4.2.2" data-path="las-variables-socio-ocupacionales.html"><a href="las-variables-socio-ocupacionales.html#ocupación"><i class="fa fa-check"></i><b>4.2.2</b> Ocupación</a></li>
-<li class="chapter" data-level="4.2.3" data-path="las-variables-socio-ocupacionales.html"><a href="las-variables-socio-ocupacionales.html#rama-de-actividad"><i class="fa fa-check"></i><b>4.2.3</b> Rama de Actividad</a></li>
-<li class="chapter" data-level="4.2.4" data-path="las-variables-socio-ocupacionales.html"><a href="las-variables-socio-ocupacionales.html#categoría-de-ocupación"><i class="fa fa-check"></i><b>4.2.4</b> Categoría de Ocupación</a></li>
-<li class="chapter" data-level="4.2.5" data-path="las-variables-socio-ocupacionales.html"><a href="las-variables-socio-ocupacionales.html#sector-de-actividad"><i class="fa fa-check"></i><b>4.2.5</b> Sector de Actividad</a></li>
-<li class="chapter" data-level="4.2.6" data-path="las-variables-socio-ocupacionales.html"><a href="las-variables-socio-ocupacionales.html#tamaño-del-establecimiento"><i class="fa fa-check"></i><b>4.2.6</b> Tamaño del Establecimiento</a></li>
-<li class="chapter" data-level="4.2.7" data-path="las-variables-socio-ocupacionales.html"><a href="las-variables-socio-ocupacionales.html#supervisión"><i class="fa fa-check"></i><b>4.2.7</b> Supervisión</a></li>
+<li><a href="las-variables-socio-ocupacionales.html#condición-de-actividad" id="toc-condición-de-actividad"><span class="toc-section-number">4.2.1</span> Condición de actividad</a></li>
+<li><a href="las-variables-socio-ocupacionales.html#ocupación" id="toc-ocupación"><span class="toc-section-number">4.2.2</span> Ocupación</a></li>
+<li><a href="las-variables-socio-ocupacionales.html#rama-de-actividad" id="toc-rama-de-actividad"><span class="toc-section-number">4.2.3</span> Rama de Actividad</a></li>
+<li><a href="las-variables-socio-ocupacionales.html#categoría-de-ocupación" id="toc-categoría-de-ocupación"><span class="toc-section-number">4.2.4</span> Categoría de Ocupación</a></li>
+<li><a href="las-variables-socio-ocupacionales.html#sector-de-actividad" id="toc-sector-de-actividad"><span class="toc-section-number">4.2.5</span> Sector de Actividad</a></li>
+<li><a href="las-variables-socio-ocupacionales.html#tamaño-del-establecimiento" id="toc-tamaño-del-establecimiento"><span class="toc-section-number">4.2.6</span> Tamaño del Establecimiento</a></li>
+<li><a href="las-variables-socio-ocupacionales.html#supervisión" id="toc-supervisión"><span class="toc-section-number">4.2.7</span> Supervisión</a></li>
 </ul></li>
-<li class="chapter" data-level="4.3" data-path="eph4.html"><a href="eph4.html"><i class="fa fa-check"></i><b>4.3</b> Explorando las variables socio-ocupacionales en la EPH</a>
+<li class="has-sub"><a href="eph4.html#eph4" id="toc-eph4"><span class="toc-section-number">4.3</span> Explorando las variables socio-ocupacionales en la EPH</a>
 <ul>
-<li class="chapter" data-level="4.3.1" data-path="eph4.html"><a href="eph4.html#condición-de-actividad-1"><i class="fa fa-check"></i><b>4.3.1</b> Condición de actividad</a></li>
-<li class="chapter" data-level="4.3.2" data-path="eph4.html"><a href="eph4.html#ocupación-1"><i class="fa fa-check"></i><b>4.3.2</b> Ocupación</a></li>
-<li class="chapter" data-level="4.3.3" data-path="eph4.html"><a href="eph4.html#rama-de-actividad-1"><i class="fa fa-check"></i><b>4.3.3</b> Rama de actividad</a></li>
-<li class="chapter" data-level="4.3.4" data-path="eph4.html"><a href="eph4.html#categoría-de-ocupación-1"><i class="fa fa-check"></i><b>4.3.4</b> Categoría de ocupación</a></li>
-<li class="chapter" data-level="4.3.5" data-path="eph4.html"><a href="eph4.html#sector-de-actividad-1"><i class="fa fa-check"></i><b>4.3.5</b> Sector de actividad</a></li>
-<li class="chapter" data-level="4.3.6" data-path="eph4.html"><a href="eph4.html#tamaño-del-establecimiento-1"><i class="fa fa-check"></i><b>4.3.6</b> Tamaño del establecimiento</a></li>
-<li class="chapter" data-level="4.3.7" data-path="eph4.html"><a href="eph4.html#supervisión-1"><i class="fa fa-check"></i><b>4.3.7</b> Supervisión</a></li>
+<li><a href="eph4.html#condición-de-actividad-1" id="toc-condición-de-actividad-1"><span class="toc-section-number">4.3.1</span> Condición de actividad</a></li>
+<li><a href="eph4.html#ocupación-1" id="toc-ocupación-1"><span class="toc-section-number">4.3.2</span> Ocupación</a></li>
+<li><a href="eph4.html#rama-de-actividad-1" id="toc-rama-de-actividad-1"><span class="toc-section-number">4.3.3</span> Rama de actividad</a></li>
+<li><a href="eph4.html#categoría-de-ocupación-1" id="toc-categoría-de-ocupación-1"><span class="toc-section-number">4.3.4</span> Categoría de ocupación</a></li>
+<li><a href="eph4.html#sector-de-actividad-1" id="toc-sector-de-actividad-1"><span class="toc-section-number">4.3.5</span> Sector de actividad</a></li>
+<li><a href="eph4.html#tamaño-del-establecimiento-1" id="toc-tamaño-del-establecimiento-1"><span class="toc-section-number">4.3.6</span> Tamaño del establecimiento</a></li>
+<li><a href="eph4.html#supervisión-1" id="toc-supervisión-1"><span class="toc-section-number">4.3.7</span> Supervisión</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="clases5.html"><a href="clases5.html"><i class="fa fa-check"></i><b>5</b> Los Nomencladores de clases sociales</a>
+<li class="has-sub"><a href="clases5.html#clases5" id="toc-clases5"><span class="toc-section-number">5</span> Los Nomencladores de clases sociales</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="computadora.html"><a href="computadora.html"><i class="fa fa-check"></i><b>5.1</b> De las clases en el papel a las clases en la computadora</a>
+<li class="has-sub"><a href="computadora.html#computadora" id="toc-computadora"><span class="toc-section-number">5.1</span> De las clases en el papel a las clases en la computadora</a>
 <ul>
-<li class="chapter" data-level="5.1.1" data-path="computadora.html"><a href="computadora.html#operacionalizando-el-concepto-de-clase"><i class="fa fa-check"></i><b>5.1.1</b> Operacionalizando el concepto de clase</a></li>
-<li class="chapter" data-level="5.1.2" data-path="computadora.html"><a href="computadora.html#clases-grupos-estratos-qué-medimos-cuando-analizamos-la-estructura-social"><i class="fa fa-check"></i><b>5.1.2</b> Clases, grupos, estratos ¿Qué medimos cuando analizamos la estructura social?</a></li>
+<li><a href="computadora.html#operacionalizando-el-concepto-de-clase" id="toc-operacionalizando-el-concepto-de-clase"><span class="toc-section-number">5.1.1</span> Operacionalizando el concepto de clase</a></li>
+<li><a href="computadora.html#clases-grupos-estratos-qué-medimos-cuando-analizamos-la-estructura-social" id="toc-clases-grupos-estratos-qué-medimos-cuando-analizamos-la-estructura-social"><span class="toc-section-number">5.1.2</span> Clases, grupos, estratos ¿Qué medimos cuando analizamos la estructura social?</a></li>
 </ul></li>
-<li class="chapter" data-level="5.2" data-path="clases6.html"><a href="clases6.html"><i class="fa fa-check"></i><b>5.2</b> Enfoques operacionalizables de clases y estratos sociales</a>
+<li class="has-sub"><a href="clases6.html#clases6" id="toc-clases6"><span class="toc-section-number">5.2</span> Enfoques operacionalizables de clases y estratos sociales</a>
 <ul>
-<li class="chapter" data-level="5.2.1" data-path="clases6.html"><a href="clases6.html#esquemas-internacionales"><i class="fa fa-check"></i><b>5.2.1</b> Esquemas internacionales</a></li>
-<li class="chapter" data-level="5.2.2" data-path="clases6.html"><a href="clases6.html#esquemas-nacionales"><i class="fa fa-check"></i><b>5.2.2</b> Esquemas nacionales</a></li>
+<li><a href="clases6.html#esquemas-internacionales" id="toc-esquemas-internacionales"><span class="toc-section-number">5.2.1</span> Esquemas internacionales</a></li>
+<li><a href="clases6.html#esquemas-nacionales" id="toc-esquemas-nacionales"><span class="toc-section-number">5.2.2</span> Esquemas nacionales</a></li>
 </ul></li>
-<li class="chapter" data-level="5.3" data-path="operacion1.html"><a href="operacion1.html"><i class="fa fa-check"></i><b>5.3</b> Operacionalización paso a paso</a>
+<li class="has-sub"><a href="operacion1.html#operacion1" id="toc-operacion1"><span class="toc-section-number">5.3</span> Operacionalización paso a paso</a>
 <ul>
-<li class="chapter" data-level="5.3.1" data-path="operacion1.html"><a href="operacion1.html#punto-de-partida"><i class="fa fa-check"></i><b>5.3.1</b> Punto de partida</a></li>
-<li class="chapter" data-level="5.3.2" data-path="operacion1.html"><a href="operacion1.html#acondicionando-la-base"><i class="fa fa-check"></i><b>5.3.2</b> Acondicionando la base</a></li>
-<li class="chapter" data-level="5.3.3" data-path="operacion1.html"><a href="operacion1.html#creación-cso-desagregado"><i class="fa fa-check"></i><b>5.3.3</b> Creación CSO desagregado</a></li>
-<li class="chapter" data-level="5.3.4" data-path="operacion1.html"><a href="operacion1.html#creación-del-cso-agregado"><i class="fa fa-check"></i><b>5.3.4</b> Creación del CSO agregado</a></li>
-<li class="chapter" data-level="5.3.5" data-path="operacion1.html"><a href="operacion1.html#creación-esquema-de-clase"><i class="fa fa-check"></i><b>5.3.5</b> Creación esquema de clase</a></li>
+<li><a href="operacion1.html#punto-de-partida" id="toc-punto-de-partida"><span class="toc-section-number">5.3.1</span> Punto de partida</a></li>
+<li><a href="operacion1.html#acondicionando-la-base" id="toc-acondicionando-la-base"><span class="toc-section-number">5.3.2</span> Acondicionando la base</a></li>
+<li><a href="operacion1.html#creación-cso-desagregado" id="toc-creación-cso-desagregado"><span class="toc-section-number">5.3.3</span> Creación CSO desagregado</a></li>
+<li><a href="operacion1.html#creación-del-cso-agregado" id="toc-creación-del-cso-agregado"><span class="toc-section-number">5.3.4</span> Creación del CSO agregado</a></li>
+<li><a href="operacion1.html#creación-esquema-de-clase" id="toc-creación-esquema-de-clase"><span class="toc-section-number">5.3.5</span> Creación esquema de clase</a></li>
 </ul></li>
-<li class="chapter" data-level="5.4" data-path="operacion2.html"><a href="operacion2.html"><i class="fa fa-check"></i><b>5.4</b> Operacionalización automática</a>
+<li class="has-sub"><a href="operacion2.html#operacion2" id="toc-operacion2"><span class="toc-section-number">5.4</span> Operacionalización automática</a>
 <ul>
-<li class="chapter" data-level="5.4.1" data-path="operacion2.html"><a href="operacion2.html#operacionalizando-la-escala-isei"><i class="fa fa-check"></i><b>5.4.1</b> Operacionalizando la escala ISEI</a></li>
+<li><a href="operacion2.html#operacionalizando-la-escala-isei" id="toc-operacionalizando-la-escala-isei"><span class="toc-section-number">5.4.1</span> Operacionalizando la escala ISEI</a></li>
 </ul></li>
-<li class="chapter" data-level="5.5" data-path="unidades.html"><a href="unidades.html"><i class="fa fa-check"></i><b>5.5</b> Unidades de análisis y clases sociales</a>
+<li class="has-sub"><a href="unidades.html#unidades" id="toc-unidades"><span class="toc-section-number">5.5</span> Unidades de análisis y clases sociales</a>
 <ul>
-<li class="chapter" data-level="5.5.1" data-path="unidades.html"><a href="unidades.html#breve-discusión-teórica"><i class="fa fa-check"></i><b>5.5.1</b> Breve discusión teórica</a></li>
-<li class="chapter" data-level="5.5.2" data-path="unidades.html"><a href="unidades.html#opciones-metodológicas"><i class="fa fa-check"></i><b>5.5.2</b> Opciones metodológicas</a></li>
+<li><a href="unidades.html#breve-discusión-teórica" id="toc-breve-discusión-teórica"><span class="toc-section-number">5.5.1</span> Breve discusión teórica</a></li>
+<li><a href="unidades.html#opciones-metodológicas" id="toc-opciones-metodológicas"><span class="toc-section-number">5.5.2</span> Opciones metodológicas</a></li>
 </ul></li>
 </ul></li>
 <li class="part"><span><b>IV Análisis</b></span></li>
-<li class="chapter" data-level="6" data-path="independiente.html"><a href="independiente.html"><i class="fa fa-check"></i><b>6</b> La clase como variable independiente</a>
+<li class="has-sub"><a href="independiente.html#independiente" id="toc-independiente"><span class="toc-section-number">6</span> La clase como variable independiente</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="huevo.html"><a href="huevo.html"><i class="fa fa-check"></i><b>6.1</b> La estructura de clases ¿el huevo o la gallina?</a>
+<li class="has-sub"><a href="huevo.html#huevo" id="toc-huevo"><span class="toc-section-number">6.1</span> La estructura de clases ¿el huevo o la gallina?</a>
 <ul>
-<li class="chapter" data-level="6.1.1" data-path="huevo.html"><a href="huevo.html#el-enfoque-relacional-weberiano"><i class="fa fa-check"></i><b>6.1.1</b> El enfoque relacional-weberiano</a></li>
-<li class="chapter" data-level="6.1.2" data-path="huevo.html"><a href="huevo.html#estructural-funcionalismo"><i class="fa fa-check"></i><b>6.1.2</b> Estructural funcionalismo</a></li>
-<li class="chapter" data-level="6.1.3" data-path="huevo.html"><a href="huevo.html#un-enfoque-intermedio"><i class="fa fa-check"></i><b>6.1.3</b> Un enfoque intermedio</a></li>
-<li class="chapter" data-level="6.1.4" data-path="huevo.html"><a href="huevo.html#una-cuarta-mirada"><i class="fa fa-check"></i><b>6.1.4</b> Una cuarta mirada</a></li>
-<li class="chapter" data-level="6.1.5" data-path="huevo.html"><a href="huevo.html#epílogo-una-sociedad-sin-clases"><i class="fa fa-check"></i><b>6.1.5</b> Epílogo: una sociedad sin clases</a></li>
+<li><a href="huevo.html#el-enfoque-relacional-weberiano" id="toc-el-enfoque-relacional-weberiano"><span class="toc-section-number">6.1.1</span> El enfoque relacional-weberiano</a></li>
+<li><a href="huevo.html#estructural-funcionalismo" id="toc-estructural-funcionalismo"><span class="toc-section-number">6.1.2</span> Estructural funcionalismo</a></li>
+<li><a href="huevo.html#un-enfoque-intermedio" id="toc-un-enfoque-intermedio"><span class="toc-section-number">6.1.3</span> Un enfoque intermedio</a></li>
+<li><a href="huevo.html#una-cuarta-mirada" id="toc-una-cuarta-mirada"><span class="toc-section-number">6.1.4</span> Una cuarta mirada</a></li>
+<li><a href="huevo.html#epílogo-una-sociedad-sin-clases" id="toc-epílogo-una-sociedad-sin-clases"><span class="toc-section-number">6.1.5</span> Epílogo: una sociedad sin clases</a></li>
 </ul></li>
-<li class="chapter" data-level="6.2" data-path="explorando.html"><a href="explorando.html"><i class="fa fa-check"></i><b>6.2</b> Explorando los datos por clase social</a></li>
-<li class="chapter" data-level="6.3" data-path="aprox.html"><a href="aprox.html"><i class="fa fa-check"></i><b>6.3</b> Aproximación al análisis multidimensional</a></li>
+<li><a href="explorando.html#explorando" id="toc-explorando"><span class="toc-section-number">6.2</span> Explorando los datos por clase social</a></li>
+<li><a href="aprox.html#aprox" id="toc-aprox"><span class="toc-section-number">6.3</span> Aproximación al análisis multidimensional</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="dependiente.html"><a href="dependiente.html"><i class="fa fa-check"></i><b>7</b> La clase como variable dependiente</a>
+<li class="has-sub"><a href="dependiente.html#dependiente" id="toc-dependiente"><span class="toc-section-number">7</span> La clase como variable dependiente</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="movilidad1.html"><a href="movilidad1.html"><i class="fa fa-check"></i><b>7.1</b> El estudio de la movilidad social</a>
+<li class="has-sub"><a href="movilidad1.html#movilidad1" id="toc-movilidad1"><span class="toc-section-number">7.1</span> El estudio de la movilidad social</a>
 <ul>
-<li class="chapter" data-level="7.1.1" data-path="movilidad1.html"><a href="movilidad1.html#qué-es-la-movilidad-social"><i class="fa fa-check"></i><b>7.1.1</b> ¿Qué es la movilidad social?</a></li>
-<li class="chapter" data-level="7.1.2" data-path="movilidad1.html"><a href="movilidad1.html#enfoques-funcionalistas"><i class="fa fa-check"></i><b>7.1.2</b> Enfoques funcionalistas</a></li>
-<li class="chapter" data-level="7.1.3" data-path="movilidad1.html"><a href="movilidad1.html#enfoques-de-clase"><i class="fa fa-check"></i><b>7.1.3</b> Enfoques de clase</a></li>
+<li><a href="movilidad1.html#qué-es-la-movilidad-social" id="toc-qué-es-la-movilidad-social"><span class="toc-section-number">7.1.1</span> ¿Qué es la movilidad social?</a></li>
+<li><a href="movilidad1.html#enfoques-funcionalistas" id="toc-enfoques-funcionalistas"><span class="toc-section-number">7.1.2</span> Enfoques funcionalistas</a></li>
+<li><a href="movilidad1.html#enfoques-de-clase" id="toc-enfoques-de-clase"><span class="toc-section-number">7.1.3</span> Enfoques de clase</a></li>
 </ul></li>
-<li class="chapter" data-level="7.2" data-path="enes.html"><a href="enes.html"><i class="fa fa-check"></i><b>7.2</b> El uso de la base ENES-PISAC</a>
+<li class="has-sub"><a href="enes.html#enes" id="toc-enes"><span class="toc-section-number">7.2</span> El uso de la base ENES-PISAC</a>
 <ul>
-<li class="chapter" data-level="7.2.1" data-path="enes.html"><a href="enes.html#algunas-consideraciones-de-la-enes"><i class="fa fa-check"></i><b>7.2.1</b> Algunas consideraciones de la ENES</a></li>
-<li class="chapter" data-level="7.2.2" data-path="enes.html"><a href="enes.html#abriendo-y-pegando-la-base-enes"><i class="fa fa-check"></i><b>7.2.2</b> Abriendo y pegando la base ENES</a></li>
-<li class="chapter" data-level="7.2.3" data-path="enes.html"><a href="enes.html#recodificación-de-variables-y-filtros"><i class="fa fa-check"></i><b>7.2.3</b> Recodificación de variables y filtros</a></li>
+<li><a href="enes.html#algunas-consideraciones-de-la-enes" id="toc-algunas-consideraciones-de-la-enes"><span class="toc-section-number">7.2.1</span> Algunas consideraciones de la ENES</a></li>
+<li><a href="enes.html#abriendo-y-pegando-la-base-enes" id="toc-abriendo-y-pegando-la-base-enes"><span class="toc-section-number">7.2.2</span> Abriendo y pegando la base ENES</a></li>
+<li><a href="enes.html#recodificación-de-variables-y-filtros" id="toc-recodificación-de-variables-y-filtros"><span class="toc-section-number">7.2.3</span> Recodificación de variables y filtros</a></li>
 </ul></li>
-<li class="chapter" data-level="7.3" data-path="movilidad2.html"><a href="movilidad2.html"><i class="fa fa-check"></i><b>7.3</b> Las tablas de movilidad</a></li>
-<li class="chapter" data-level="7.4" data-path="movilidad3.html"><a href="movilidad3.html"><i class="fa fa-check"></i><b>7.4</b> Aproximación al análisis multivariable de la movilidad social</a></li>
+<li><a href="movilidad2.html#movilidad2" id="toc-movilidad2"><span class="toc-section-number">7.3</span> Las tablas de movilidad</a></li>
+<li><a href="movilidad3.html#movilidad3" id="toc-movilidad3"><span class="toc-section-number">7.4</span> Aproximación al análisis multivariable de la movilidad social</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="tiempo.html"><a href="tiempo.html"><i class="fa fa-check"></i><b>8</b> Tiempo, espacio y clases sociales</a>
+<li class="has-sub"><a href="tiempo.html#tiempo" id="toc-tiempo"><span class="toc-section-number">8</span> Tiempo, espacio y clases sociales</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="temporal.html"><a href="temporal.html"><i class="fa fa-check"></i><b>8.1</b> La dimensión temporal</a>
+<li class="has-sub"><a href="temporal.html#temporal" id="toc-temporal"><span class="toc-section-number">8.1</span> La dimensión temporal</a>
 <ul>
-<li class="chapter" data-level="8.1.1" data-path="temporal.html"><a href="temporal.html#algunos-ejemplos-de-la-bibliografía"><i class="fa fa-check"></i><b>8.1.1</b> Algunos ejemplos de la bibliografía</a></li>
-<li class="chapter" data-level="8.1.2" data-path="temporal.html"><a href="temporal.html#ejemplo-práctico"><i class="fa fa-check"></i><b>8.1.2</b> Ejemplo práctico</a></li>
+<li><a href="temporal.html#algunos-ejemplos-de-la-bibliografía" id="toc-algunos-ejemplos-de-la-bibliografía"><span class="toc-section-number">8.1.1</span> Algunos ejemplos de la bibliografía</a></li>
+<li><a href="temporal.html#ejemplo-práctico" id="toc-ejemplo-práctico"><span class="toc-section-number">8.1.2</span> Ejemplo práctico</a></li>
 </ul></li>
-<li class="chapter" data-level="8.2" data-path="espacial.html"><a href="espacial.html"><i class="fa fa-check"></i><b>8.2</b> La dimensión espacial</a>
+<li class="has-sub"><a href="espacial.html#espacial" id="toc-espacial"><span class="toc-section-number">8.2</span> La dimensión espacial</a>
 <ul>
-<li class="chapter" data-level="8.2.1" data-path="espacial.html"><a href="espacial.html#algunos-ejemplos-de-la-bibliografía-1"><i class="fa fa-check"></i><b>8.2.1</b> Algunos ejemplos de la bibliografía</a></li>
-<li class="chapter" data-level="8.2.2" data-path="espacial.html"><a href="espacial.html#ejemplo-práctico-1"><i class="fa fa-check"></i><b>8.2.2</b> Ejemplo práctico</a></li>
+<li><a href="espacial.html#algunos-ejemplos-de-la-bibliografía-1" id="toc-algunos-ejemplos-de-la-bibliografía-1"><span class="toc-section-number">8.2.1</span> Algunos ejemplos de la bibliografía</a></li>
+<li><a href="espacial.html#ejemplo-práctico-1" id="toc-ejemplo-práctico-1"><span class="toc-section-number">8.2.2</span> Ejemplo práctico</a></li>
 </ul></li>
 </ul></li>
 <li class="part"><span><b>V Anexo</b></span></li>
-<li class="chapter" data-level="9" data-path="anexo.html"><a href="anexo.html"><i class="fa fa-check"></i><b>9</b> Introducción a R y RStudio</a>
+<li class="has-sub"><a href="anexo.html#anexo" id="toc-anexo"><span class="toc-section-number">9</span> Introducción a R y RStudio</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="introR.html"><a href="introR.html"><i class="fa fa-check"></i><b>9.1</b> Introducción</a>
+<li class="has-sub"><a href="introR.html#introR" id="toc-introR"><span class="toc-section-number">9.1</span> Introducción</a>
 <ul>
-<li class="chapter" data-level="9.1.1" data-path="introR.html"><a href="introR.html#el-entorno-de-r"><i class="fa fa-check"></i><b>9.1.1</b> El entorno de R</a></li>
-<li class="chapter" data-level="9.1.2" data-path="introR.html"><a href="introR.html#aplicar-estadística-en-r"><i class="fa fa-check"></i><b>9.1.2</b> Aplicar estadística en R</a></li>
-<li class="chapter" data-level="9.1.3" data-path="introR.html"><a href="introR.html#descargar-e-instalar-r"><i class="fa fa-check"></i><b>9.1.3</b> Descargar e instalar R</a></li>
-<li class="chapter" data-level="9.1.4" data-path="introR.html"><a href="introR.html#rstudio"><i class="fa fa-check"></i><b>9.1.4</b> RStudio</a></li>
-<li class="chapter" data-level="9.1.5" data-path="introR.html"><a href="introR.html#descargar-e-instalar-rstudio"><i class="fa fa-check"></i><b>9.1.5</b> Descargar e instalar RStudio</a></li>
-<li class="chapter" data-level="9.1.6" data-path="introR.html"><a href="introR.html#partes-de-rstudio"><i class="fa fa-check"></i><b>9.1.6</b> Partes de RStudio</a></li>
+<li><a href="introR.html#el-entorno-de-r" id="toc-el-entorno-de-r"><span class="toc-section-number">9.1.1</span> El entorno de R</a></li>
+<li><a href="introR.html#aplicar-estadística-en-r" id="toc-aplicar-estadística-en-r"><span class="toc-section-number">9.1.2</span> Aplicar estadística en R</a></li>
+<li><a href="introR.html#descargar-e-instalar-r" id="toc-descargar-e-instalar-r"><span class="toc-section-number">9.1.3</span> Descargar e instalar R</a></li>
+<li><a href="introR.html#rstudio" id="toc-rstudio"><span class="toc-section-number">9.1.4</span> RStudio</a></li>
+<li><a href="introR.html#descargar-e-instalar-rstudio" id="toc-descargar-e-instalar-rstudio"><span class="toc-section-number">9.1.5</span> Descargar e instalar RStudio</a></li>
+<li><a href="introR.html#partes-de-rstudio" id="toc-partes-de-rstudio"><span class="toc-section-number">9.1.6</span> Partes de RStudio</a></li>
 </ul></li>
-<li class="chapter" data-level="9.2" data-path="workflow.html"><a href="workflow.html"><i class="fa fa-check"></i><b>9.2</b> Workflow</a>
+<li class="has-sub"><a href="workflow.html#workflow" id="toc-workflow"><span class="toc-section-number">9.2</span> Workflow</a>
 <ul>
-<li class="chapter" data-level="9.2.1" data-path="workflow.html"><a href="workflow.html#proyectos-r-studio"><i class="fa fa-check"></i><b>9.2.1</b> Proyectos R Studio</a></li>
-<li class="chapter" data-level="9.2.2" data-path="workflow.html"><a href="workflow.html#organización"><i class="fa fa-check"></i><b>9.2.2</b> Organización</a></li>
-<li class="chapter" data-level="9.2.3" data-path="workflow.html"><a href="workflow.html#utilidad"><i class="fa fa-check"></i><b>9.2.3</b> Utilidad</a></li>
-<li class="chapter" data-level="9.2.4" data-path="workflow.html"><a href="workflow.html#crear-un-proyecto-de-rstudio"><i class="fa fa-check"></i><b>9.2.4</b> Crear un Proyecto de RStudio</a></li>
-<li class="chapter" data-level="9.2.5" data-path="workflow.html"><a href="workflow.html#crear-un-archivo-de-r"><i class="fa fa-check"></i><b>9.2.5</b> Crear un archivo de R</a></li>
+<li><a href="workflow.html#proyectos-r-studio" id="toc-proyectos-r-studio"><span class="toc-section-number">9.2.1</span> Proyectos R Studio</a></li>
+<li><a href="workflow.html#organización" id="toc-organización"><span class="toc-section-number">9.2.2</span> Organización</a></li>
+<li><a href="workflow.html#utilidad" id="toc-utilidad"><span class="toc-section-number">9.2.3</span> Utilidad</a></li>
+<li><a href="workflow.html#crear-un-proyecto-de-rstudio" id="toc-crear-un-proyecto-de-rstudio"><span class="toc-section-number">9.2.4</span> Crear un Proyecto de RStudio</a></li>
+<li><a href="workflow.html#crear-un-archivo-de-r" id="toc-crear-un-archivo-de-r"><span class="toc-section-number">9.2.5</span> Crear un archivo de R</a></li>
 </ul></li>
-<li class="chapter" data-level="9.3" data-path="rmarkdown.html"><a href="rmarkdown.html"><i class="fa fa-check"></i><b>9.3</b> RMarkdown</a>
+<li class="has-sub"><a href="rmarkdown.html#rmarkdown" id="toc-rmarkdown"><span class="toc-section-number">9.3</span> RMarkdown</a>
 <ul>
-<li class="chapter" data-level="9.3.1" data-path="rmarkdown.html"><a href="rmarkdown.html#agregar-texto"><i class="fa fa-check"></i><b>9.3.1</b> Agregar texto</a></li>
-<li class="chapter" data-level="9.3.2" data-path="rmarkdown.html"><a href="rmarkdown.html#listas"><i class="fa fa-check"></i><b>9.3.2</b> Listas</a></li>
-<li class="chapter" data-level="9.3.3" data-path="rmarkdown.html"><a href="rmarkdown.html#editar-texto"><i class="fa fa-check"></i><b>9.3.3</b> Editar texto</a></li>
-<li class="chapter" data-level="9.3.4" data-path="rmarkdown.html"><a href="rmarkdown.html#insertar-imágenes"><i class="fa fa-check"></i><b>9.3.4</b> Insertar imágenes</a></li>
-<li class="chapter" data-level="9.3.5" data-path="rmarkdown.html"><a href="rmarkdown.html#enlaces"><i class="fa fa-check"></i><b>9.3.5</b> Enlaces</a></li>
-<li class="chapter" data-level="9.3.6" data-path="rmarkdown.html"><a href="rmarkdown.html#tips-para-escribir-código-en-r"><i class="fa fa-check"></i><b>9.3.6</b> Tips para escribir código en R</a></li>
+<li><a href="rmarkdown.html#agregar-texto" id="toc-agregar-texto"><span class="toc-section-number">9.3.1</span> Agregar texto</a></li>
+<li><a href="rmarkdown.html#listas" id="toc-listas"><span class="toc-section-number">9.3.2</span> Listas</a></li>
+<li><a href="rmarkdown.html#editar-texto" id="toc-editar-texto"><span class="toc-section-number">9.3.3</span> Editar texto</a></li>
+<li><a href="rmarkdown.html#insertar-imágenes" id="toc-insertar-imágenes"><span class="toc-section-number">9.3.4</span> Insertar imágenes</a></li>
+<li><a href="rmarkdown.html#enlaces" id="toc-enlaces"><span class="toc-section-number">9.3.5</span> Enlaces</a></li>
+<li><a href="rmarkdown.html#tips-para-escribir-código-en-r" id="toc-tips-para-escribir-código-en-r"><span class="toc-section-number">9.3.6</span> Tips para escribir código en R</a></li>
 </ul></li>
-<li class="chapter" data-level="9.4" data-path="primerospasos.html"><a href="primerospasos.html"><i class="fa fa-check"></i><b>9.4</b> Primeros pasos en R</a>
+<li class="has-sub"><a href="primerospasos.html#primerospasos" id="toc-primerospasos"><span class="toc-section-number">9.4</span> Primeros pasos en R</a>
 <ul>
-<li class="chapter" data-level="9.4.1" data-path="primerospasos.html"><a href="primerospasos.html#funciones-y-comandos-elementales"><i class="fa fa-check"></i><b>9.4.1</b> Funciones y comandos elementales</a></li>
-<li class="chapter" data-level="9.4.2" data-path="primerospasos.html"><a href="primerospasos.html#valores-y-vectores"><i class="fa fa-check"></i><b>9.4.2</b> Valores y vectores</a></li>
-<li class="chapter" data-level="9.4.3" data-path="primerospasos.html"><a href="primerospasos.html#matrices-y-listas"><i class="fa fa-check"></i><b>9.4.3</b> Matrices y listas</a></li>
-<li class="chapter" data-level="9.4.4" data-path="primerospasos.html"><a href="primerospasos.html#filtrado-subsetting"><i class="fa fa-check"></i><b>9.4.4</b> Filtrado (Subsetting)</a></li>
-<li class="chapter" data-level="9.4.5" data-path="primerospasos.html"><a href="primerospasos.html#cargar-datos-en-r"><i class="fa fa-check"></i><b>9.4.5</b> Cargar datos en R</a></li>
+<li><a href="primerospasos.html#funciones-y-comandos-elementales" id="toc-funciones-y-comandos-elementales"><span class="toc-section-number">9.4.1</span> Funciones y comandos elementales</a></li>
+<li><a href="primerospasos.html#valores-y-vectores" id="toc-valores-y-vectores"><span class="toc-section-number">9.4.2</span> Valores y vectores</a></li>
+<li><a href="primerospasos.html#matrices-y-listas" id="toc-matrices-y-listas"><span class="toc-section-number">9.4.3</span> Matrices y listas</a></li>
+<li><a href="primerospasos.html#filtrado-subsetting" id="toc-filtrado-subsetting"><span class="toc-section-number">9.4.4</span> Filtrado (Subsetting)</a></li>
+<li><a href="primerospasos.html#cargar-datos-en-r" id="toc-cargar-datos-en-r"><span class="toc-section-number">9.4.5</span> Cargar datos en R</a></li>
 </ul></li>
-<li class="chapter" data-level="9.5" data-path="recursos.html"><a href="recursos.html"><i class="fa fa-check"></i><b>9.5</b> Otros recursos de consulta</a></li>
+<li><a href="recursos.html#recursos" id="toc-recursos"><span class="toc-section-number">9.5</span> Otros recursos de consulta</a></li>
 </ul></li>
 <li class="part"><span><b>VI Referencias bibliográficas</b></span></li>
-<li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
-<li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-
+<li><a href="referencias.html#referencias" id="toc-referencias">Referencias</a></li>
 </ul>
-
-      </nav>
-    </div>
-
-    <div class="book-body">
-      <div class="body-inner">
-        <div class="book-header" role="navigation">
-          <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Libro de Cocina para el Análisis de las Clases Sociales en Argentina</a>
-          </h1>
-        </div>
-
-        <div class="page-wrapper" tabindex="-1" role="main">
-          <div class="page-inner">
-
-            <section class="normal" id="section-">
-<div id="workflow" class="section level2 hasAnchor" number="9.2">
-<h2><span class="header-section-number">9.2</span> Workflow<a href="workflow.html#workflow" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div id="workflow" class="section level2" number="9.2">
+<h2><span class="header-section-number">9.2</span> Workflow</h2>
 <p>Esta sección trata sobre el flujo de trabajo (<em>workflow</em>) en <code>RStudio</code>. Existen muchas cosas sobre el trabajo en <code>R</code> que los encuentran confusas. Sin embargo, hay formas en las que se pueden simplificar problemas: sistematizando una buena práctica del flujo de trabajo desde el principio.</p>
-<div id="proyectos-r-studio" class="section level3 hasAnchor" number="9.2.1">
-<h3><span class="header-section-number">9.2.1</span> Proyectos R Studio<a href="workflow.html#proyectos-r-studio" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="proyectos-r-studio" class="section level3" number="9.2.1">
+<h3><span class="header-section-number">9.2.1</span> Proyectos R Studio</h3>
 <p>Una de las cuestiones más comunes que generan dificultades en <strong><code>R</code></strong>, es que no provee las facilidades de un software estadístico estándar con el cual apuntar y hacer <em>clic</em> dentro de la misma interfaz. Específicamente se dificulta el acceso a los archivos y el guardado utilizando rutas de archivo, en especial cuando esas rutas (<code>paths</code>) son extensas.</p>
 <p>La forma más sencilla de minimizar esta dificultad es trabajar con lo que se llama un documento de tipo <strong>Proyecto de RStudio</strong>. Este es el primer paso a seguir: usar los archivos de proyecto de <code>RStudio</code>. Antes que nada, ¿Qué es un archivo de proyecto de <code>RStudio</code>?</p>
 <ul>
 <li>Es un archivo creado por <code>RStudio</code> que tiene una extensión de <code>.Rproj</code>, y esencialmente lo que hace es almacenar información sobre la carpeta que lo contiene. Así que para guardar este archivo de proyecto dentro de una carpeta en particular, hay que tener en cuenta que dentro del proyecto se guardará información sobre la carpeta que se encuentra en su sistema de archivos, y también guardará información sobre el estado anterior del proyecto. Cuando se genera un archivo de proyecto, primero se abrirá en <code>RStudio</code> y de este modo se podrá acceder a la información sobre la carpeta en la que se encuentra almacenado este proyecto.</li>
 </ul>
 </div>
-<div id="organización" class="section level3 hasAnchor" number="9.2.2">
-<h3><span class="header-section-number">9.2.2</span> Organización<a href="workflow.html#organización" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="organización" class="section level3" number="9.2.2">
+<h3><span class="header-section-number">9.2.2</span> Organización</h3>
 <p>Una de los aspectos clave es que, al trabajar con archivos de proyecto, es necesario organizarse. Una forma sencilla de trabajar con <code>RStudio</code> es tener un proceso pre-establecido por el que pasar cada vez que se inicie un nuevo proyecto. El proceso que se sugiere en este libro consiste en:</p>
 <ol style="list-style-type: decimal">
 <li><p>Crear un nuevo proyecto de <code>RStudio</code>, por el cual se generará una carpeta dentro del directorio local.</p></li>
@@ -417,8 +417,8 @@ div.csl-indent {
 </ol>
 <p>En resumen, siguiendo el tipo de organización aquí propuesta, hay un directorio donde se guardan todos los proyectos de <code>R Studio</code>. Tal como se aclaró antes: la información del proyecto se almacena dentro de una carpeta, donde a su vez hay tres carpetas más: una donde se encuentran los archivos de <code>datos</code>, otra donde guardar todos los <code>documentos</code> de <strong><code>R</code></strong> y <code>RStudio</code>, y una última carpeta para las <code>imágenes</code>. Además, dentro de esa carpeta grande habrá un archivo de <code>RStudio Project</code>, con el nombre que el usuario le haya asignado.</p>
 </div>
-<div id="utilidad" class="section level3 hasAnchor" number="9.2.3">
-<h3><span class="header-section-number">9.2.3</span> Utilidad<a href="workflow.html#utilidad" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="utilidad" class="section level3" number="9.2.3">
+<h3><span class="header-section-number">9.2.3</span> Utilidad</h3>
 <p>¿Por qué este procedimiento de organización del flujo de trabajo es útil? Porque respetando la estructura de las carpetas, es posible encontrar los archivos de manera sencilla, optimizando tiempo y espacio. Esta estructura se puede ver en la ruta del archivo, que será similar a /Usuarios/Nombreusuario/Documentos/RProjects…etc. Esta es una ruta a un archivo de datos que se almacena en el disco duro, en la unidad correspondiente, que puede ser <code>C</code> o <code>U</code>, por ejemplo.</p>
 <p><strong>Desventaja 1</strong></p>
 <p>Dentro de una carpeta llamada <code>Usuarios</code>, ingresando a una carpeta denominada “tunombre” (aquí cada uno puede colocar su propio nombre de usuario), dentro de la carpeta llamada “Documentos” y luego, dentro de otra carpeta, se encuentra el nuevo proyecto creado. En esta última, finalmente, está la subcarpeta de “datos”. Por lo tanto, cada vez que se desee acceder a ese archivo de datos, tanto para cargarlo como guardarlo, se debe llamar a esa gran cadena de texto, que es la ruta al archivo, lo cual puede resultar complicado.</p>
@@ -426,8 +426,8 @@ div.csl-indent {
 <p>Si se cambia de computadora donde fue creado un archivo de <strong><code>R</code></strong> a otra que no tenga el sistema de archivos que se ha descrito en este libro, entonces se debe reescribir todo el código de <strong><code>R</code></strong> para poder acceder al archivo deseado. Esto se debe a que podría estar guardado en una ubicación diferente a la de mi archivo local. Al usar un proyecto de <code>RStudio</code> se puede utilizar lo que se conoce como “rutas relativas”. También, hay un camino mucho más corto que implica colocar dos puntos y una barra al inicio de la ruta. Los puntos representan la carpeta del proyecto que se encuentra en una ubicación diferente a la del archivo que se está editando. Dondequiera que esa carpeta esté almacenada, no es necesario saberlo porque el proyecto de <code>RStudio</code> se redirige automáticamente allí cuando se implementan los puntos. Todo lo que hay que hacer es poner los puntos seguidos de una barra, luego el nombre de la carpeta de datos y de nuevo barra, seguido el nombre del archivo al que se intenta acceder. Por ejemplo, <code>../nombrecarpeta/nombrearchivo.Rmd</code></p>
 <p>De seguido, se presenta un segundo ejemplo utilizando la estructura de carpetas propuesta. Si se almacenan los archivos de <code>RStudio</code> dentro de una carpeta llamada “docs_r”, es necesario salir de la misma y luego volver a “mis_datos”. Eso es lo que los puntos dobles hacen: subir de nivel. En concreto, las acciones que lleva a cabo son salir de ‘docs_r’ e ir a la carpeta de datos. Sin embargo, cuando hay muchos archivos, esto puede resultar un poco engorroso.</p>
 </div>
-<div id="crear-un-proyecto-de-rstudio" class="section level3 hasAnchor" number="9.2.4">
-<h3><span class="header-section-number">9.2.4</span> Crear un Proyecto de RStudio<a href="workflow.html#crear-un-proyecto-de-rstudio" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="crear-un-proyecto-de-rstudio" class="section level3" number="9.2.4">
+<h3><span class="header-section-number">9.2.4</span> Crear un Proyecto de RStudio</h3>
 <ul>
 <li><p>Lo primero es seleccionar un directorio en alguna carpeta local del ordenador.</p></li>
 <li><p>Luego abrir <code>RStudio</code> e ir al menú “Archivo”, hacer clic en “Nuevo Proyecto” y así se obtendrá un cuadro de diálogo. Se puede crear un nuevo directorio con el proyecto o si ya existe un directorio que se pueda convertir en un proyecto de <code>RStudio</code>, también se puede seleccionar un directorio existente.</p></li>
@@ -440,8 +440,8 @@ div.csl-indent {
 <li><strong><code>R</code></strong> distingue entre mayúsculas y minúsculas, por lo que siempre es recomendable escribir todo en minúsculas.</li>
 </ul>
 </div>
-<div id="crear-un-archivo-de-r" class="section level3 hasAnchor" number="9.2.5">
-<h3><span class="header-section-number">9.2.5</span> Crear un archivo de R<a href="workflow.html#crear-un-archivo-de-r" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="crear-un-archivo-de-r" class="section level3" number="9.2.5">
+<h3><span class="header-section-number">9.2.5</span> Crear un archivo de R</h3>
 <p>Lo siguiente es crear un documento en el que se quiere trabajar. En este libro se usa el ejemplo de un archivo de <code>RMarkdown</code>, aunque existen otros tipos de archivos de <strong><code>R</code></strong>. Uno de los más utilizados es el <code>R script</code>, equivalente a una sintaxis de <strong>SPSS</strong> o <em>do-file</em> de <strong>STATA</strong>.</p>
 <ul>
 <li><p>Crear un nuevo archivo de tipo <code>R Markdown</code>. Al seleccionar sobre el botón de crear archivo (margen superior izquierdo, identificado con el signo “+” en color verde), aparecerá una ventana. Allí, se coloca el título al documento, que se puede llamar “primer_documento”, y también el nombre del autor. No es necesario poner el nombre del autor, se puede dejar ese espacio en blanco. Y por último, se selecciona el “Formato de salida”, que crea el archivo de <code>R Markdown</code>.</p></li>
@@ -454,81 +454,24 @@ div.csl-indent {
 <p><strong>En resumen</strong>, cuando haya un nuevo proyecto en el que se esté trabajando, se recomienda generar un nuevo archivo de proyecto en <code>RStudio</code>. Dentro de esa carpeta, generar otra carpeta donde almacenar los datos (que aquí se ha llamado “r_docs”), como los documentos de <code>R Markdown</code> o <code>R script</code>.</p>
 </div>
 </div>
-            </section>
+<p style="text-align: center;">
+<a href="introR.html"><button class="btn btn-default">Previous</button></a>
+<a href="rmarkdown.html"><button class="btn btn-default">Next</button></a>
+</p>
+</div>
+</div>
 
-          </div>
-        </div>
-      </div>
-<a href="introR.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="rmarkdown.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
-    </div>
-  </div>
-<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
-<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+
+</div>
+
 <script>
-gitbook.require(["gitbook"], function(gitbook) {
-gitbook.start({
-"sharing": {
-"github": false,
-"facebook": true,
-"twitter": true,
-"linkedin": false,
-"weibo": false,
-"instapaper": false,
-"vk": false,
-"whatsapp": false,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
-},
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": {
-"link": null,
-"text": null
-},
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": ["docs.pdf", "docs.epub"],
-"search": {
-"engine": "fuse",
-"options": null
-},
-"toc": {
-"collapse": "section",
-"scroll_highlight": true
-}
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
 });
-});
+
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
-
 </html>
