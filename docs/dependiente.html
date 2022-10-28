@@ -24,7 +24,13 @@
 <link href="libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
 <script src="libs/pagedtable-1.1/js/pagedtable.js"></script><link href="libs/tabwid-1.1.0/tabwid.css" rel="stylesheet">
 <link href="libs/tabwid-1.1.0/scrool.css" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+<!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-247494419-1"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-247494419-1');
+    </script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
   </style>
@@ -231,7 +237,7 @@ Gráfico 7.3: Modelo básico de logro de estatus <span class="citation">(<a href
 <span class="header-section-number">7.2.3</span> Recodificación de variables y filtros<a class="anchor" aria-label="anchor" href="#recodificaci%C3%B3n-de-variables-y-filtros"><i class="fas fa-link"></i></a>
 </h3>
 <p>Para el análisis de la movilidad social que realizaremos en las dos secciones posteriores necesitaremos recodificar una serie de variables para su correcto tratamiento. Empecemos por la principal, la clase social del/la encuestado/o. En este caso nos basaremos en el esquema EGP, que se encuentra codificado en la variable <code>egp11</code> —Tabla <a href="dependiente.html#tab:egpmov">7.1</a>—. Al tenerlo en su versión desagregada de 11 clases, necesitaremos reagruparlo de tal forma que queden 5 clases. A continuación mostramos nuestra propuesta de agrupación y las líneas de comando necesarias para hacerlo:</p>
-<template id="6b5a968a-5707-44df-820f-e0643e3fcea4"><style>
+<template id="0487589e-bc8b-4bde-b1c0-d7fd6dec1d4d"><style>
 .tabwid table{
   border-spacing:0px !important;
   border-collapse:collapse;
@@ -272,75 +278,75 @@ background-color: transparent;
 }
 </style>
 <div class="tabwid">
-<style>.cl-ac1fbd74{table-layout:auto;width:100%;}.cl-ac11cca0{font-family:'Arial';font-size:10pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-ac175972{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-ac1772f4{background-color:transparent;vertical-align: middle;border-bottom: 1pt solid rgba(0, 0, 0, 1.00);border-top: 1pt solid rgba(0, 0, 0, 1.00);border-left: 1pt solid rgba(0, 0, 0, 1.00);border-right: 1pt solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-ac1772fe{background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-ac0ab672{font-family:'Arial';font-size:9pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}</style>
-<div class="inline-table"><table class="cl-ac1fbd74">
+<style>.cl-9b3605b0{table-layout:auto;width:100%;}.cl-9b2b23de{font-family:'Arial';font-size:10pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-9b2f6534{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-9b2f7d94{background-color:transparent;vertical-align: middle;border-bottom: 1pt solid rgba(0, 0, 0, 1.00);border-top: 1pt solid rgba(0, 0, 0, 1.00);border-left: 1pt solid rgba(0, 0, 0, 1.00);border-right: 1pt solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-9b2f7d9e{background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-9b260188{font-family:'Arial';font-size:9pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}</style>
+<div class="inline-table"><table class="cl-9b3605b0">
 <caption>
-<span id="tab:egpmov">Tabla 7.1: </span><span class="cl-ac0ab672">Esquema EGP recodificado</span>
+<span id="tab:egpmov">Tabla 7.1: </span><span class="cl-9b260188">Esquema EGP recodificado</span>
 </caption>
 
 <tbody>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-ac1772f4"><p class="cl-ac175972"><span class="cl-ac11cca0">Código</span></p></td>
-<td class="cl-ac1772f4"><p class="cl-ac175972"><span class="cl-ac11cca0">Esquema 11 clases</span></p></td>
-<td class="cl-ac1772f4"><p class="cl-ac175972"><span class="cl-ac11cca0">Esquema 5 clases</span></p></td>
+<td class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">Código</span></p></td>
+<td class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">Esquema 11 clases</span></p></td>
+<td class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">Esquema 5 clases</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-ac1772f4"><p class="cl-ac175972"><span class="cl-ac11cca0">1</span></p></td>
-<td class="cl-ac1772f4"><p class="cl-ac175972"><span class="cl-ac11cca0">I. Clase de servicios, alta</span></p></td>
-<td rowspan="2" class="cl-ac1772f4"><p class="cl-ac175972"><span class="cl-ac11cca0">Clase de servicios</span></p></td>
+<td class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">1</span></p></td>
+<td class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">I. Clase de servicios, alta</span></p></td>
+<td rowspan="2" class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">Clase de servicios</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-ac1772f4"><p class="cl-ac175972"><span class="cl-ac11cca0">2</span></p></td>
-<td class="cl-ac1772f4"><p class="cl-ac175972"><span class="cl-ac11cca0">II. Clase de servicios, baja</span></p></td>
+<td class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">2</span></p></td>
+<td class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">II. Clase de servicios, baja</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-ac1772f4"><p class="cl-ac175972"><span class="cl-ac11cca0">3</span></p></td>
-<td class="cl-ac1772f4"><p class="cl-ac175972"><span class="cl-ac11cca0">IIIa. Trabajadores no manuales de rutina, alta</span></p></td>
-<td rowspan="2" class="cl-ac1772f4"><p class="cl-ac175972"><span class="cl-ac11cca0">Trabajadores rutinarios</span></p></td>
+<td class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">3</span></p></td>
+<td class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">IIIa. Trabajadores no manuales de rutina, alta</span></p></td>
+<td rowspan="2" class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">Trabajadores rutinarios</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-ac1772f4"><p class="cl-ac175972"><span class="cl-ac11cca0">4</span></p></td>
-<td class="cl-ac1772f4"><p class="cl-ac175972"><span class="cl-ac11cca0">IIIb. Trabajadores no manuales de servicios y comercio, baja</span></p></td>
+<td class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">4</span></p></td>
+<td class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">IIIb. Trabajadores no manuales de servicios y comercio, baja</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-ac1772f4"><p class="cl-ac175972"><span class="cl-ac11cca0">5</span></p></td>
-<td class="cl-ac1772f4"><p class="cl-ac175972"><span class="cl-ac11cca0">IVa. Autónomos con empleados</span></p></td>
-<td rowspan="2" class="cl-ac1772f4"><p class="cl-ac175972"><span class="cl-ac11cca0">Pequeña Burguesía</span></p></td>
+<td class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">5</span></p></td>
+<td class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">IVa. Autónomos con empleados</span></p></td>
+<td rowspan="2" class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">Pequeña Burguesía</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-ac1772f4"><p class="cl-ac175972"><span class="cl-ac11cca0">6</span></p></td>
-<td class="cl-ac1772f4"><p class="cl-ac175972"><span class="cl-ac11cca0">IVb. Autónomos sin empleados</span></p></td>
+<td class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">6</span></p></td>
+<td class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">IVb. Autónomos sin empleados</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-ac1772f4"><p class="cl-ac175972"><span class="cl-ac11cca0">7</span></p></td>
-<td class="cl-ac1772f4"><p class="cl-ac175972"><span class="cl-ac11cca0">V. Supervisores de trabajadores manuales</span></p></td>
-<td rowspan="2" class="cl-ac1772f4"><p class="cl-ac175972"><span class="cl-ac11cca0">Clase trabajadora calificada</span></p></td>
+<td class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">7</span></p></td>
+<td class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">V. Supervisores de trabajadores manuales</span></p></td>
+<td rowspan="2" class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">Clase trabajadora calificada</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-ac1772f4"><p class="cl-ac175972"><span class="cl-ac11cca0">8</span></p></td>
-<td class="cl-ac1772f4"><p class="cl-ac175972"><span class="cl-ac11cca0">VI. Trabajadores manuales calificados</span></p></td>
+<td class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">8</span></p></td>
+<td class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">VI. Trabajadores manuales calificados</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-ac1772f4"><p class="cl-ac175972"><span class="cl-ac11cca0">9</span></p></td>
-<td class="cl-ac1772f4"><p class="cl-ac175972"><span class="cl-ac11cca0">VIIa. Trabajadores manuales no calificados</span></p></td>
-<td rowspan="2" class="cl-ac1772f4"><p class="cl-ac175972"><span class="cl-ac11cca0">Clase trabajadora no calificada</span></p></td>
+<td class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">9</span></p></td>
+<td class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">VIIa. Trabajadores manuales no calificados</span></p></td>
+<td rowspan="2" class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">Clase trabajadora no calificada</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-ac1772f4"><p class="cl-ac175972"><span class="cl-ac11cca0">10</span></p></td>
-<td class="cl-ac1772f4"><p class="cl-ac175972"><span class="cl-ac11cca0">VIIb. Trabajadores agropecuarios</span></p></td>
+<td class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">10</span></p></td>
+<td class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">VIIb. Trabajadores agropecuarios</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-ac1772f4"><p class="cl-ac175972"><span class="cl-ac11cca0">11</span></p></td>
-<td class="cl-ac1772f4"><p class="cl-ac175972"><span class="cl-ac11cca0">IVc. Autónomos agropecuarios</span></p></td>
-<td class="cl-ac1772f4"><p class="cl-ac175972"><span class="cl-ac11cca0">Pequeña Burguesía</span></p></td>
+<td class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">11</span></p></td>
+<td class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">IVc. Autónomos agropecuarios</span></p></td>
+<td class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">Pequeña Burguesía</span></p></td>
 </tr>
 </tbody>
-<tfoot><tr style="overflow-wrap:break-word;"><td colspan="3" class="cl-ac1772fe"><p class="cl-ac175972"><span class="cl-ac11cca0">Fuente: elaboración propia en base Erikson y Goldthorpe (1992)</span></p></td></tr></tfoot>
+<tfoot><tr style="overflow-wrap:break-word;"><td colspan="3" class="cl-9b2f7d9e"><p class="cl-9b2f6534"><span class="cl-9b2b23de">Fuente: elaboración propia en base Erikson y Goldthorpe (1992)</span></p></td></tr></tfoot>
 </table></div>
-</div></template><div class="flextable-shadow-host" id="a6da5387-1df1-4f36-a13b-87fd1b266790"></div>
+</div></template><div class="flextable-shadow-host" id="55514aa0-6543-45e0-83eb-eef9107d39f1"></div>
 <script>
-var dest = document.getElementById("a6da5387-1df1-4f36-a13b-87fd1b266790");
-var template = document.getElementById("6b5a968a-5707-44df-820f-e0643e3fcea4");
+var dest = document.getElementById("55514aa0-6543-45e0-83eb-eef9107d39f1");
+var template = document.getElementById("0487589e-bc8b-4bde-b1c0-d7fd6dec1d4d");
 var caption = template.content.querySelector("caption");
 var fantome = dest.attachShadow({mode: 'open'});
 var templateContent = template.content;
@@ -1448,7 +1454,7 @@ sexo_fMujer
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Libro de Cocina para el Análisis de las Clases Sociales en Argentina</strong>" was written by Nicolás Sacco, José Rodríguez de la Fuente, Sofia Jaime. It was last built on 2022-10-27.</p>
+    <p>"<strong>Libro de Cocina para el Análisis de las Clases Sociales en Argentina</strong>" was written by Nicolás Sacco, José Rodríguez de la Fuente, Sofia Jaime. It was last built on 2022-10-28.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

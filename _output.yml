@@ -39,6 +39,8 @@ bookdown::bs4_book:
   theme:
     primary: "#E95420"
     secondary: "#AEA79F"
+  includes:
+    in_header: google_analytics.html
   repo: https://github.com/nsacco/clases-arg
 
 
