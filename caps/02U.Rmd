@@ -130,7 +130,7 @@ Como buena práctica en la organización de la información que vamos utilizando
 eph_ind_319 <- read.csv2("bases/Usu_individual_T319.txt", header = TRUE, sep = ";", dec = ",")
 ```
 
-Observando los primeros 15 registros —Tabla \@ref(tab:ephind319s)— de la base podemos dar cuenta que la misma se ha cargado correctamente y explorar las distintas variables que contiene. 
+Observando los primeros 15 registros de la base podemos dar cuenta que la misma se ha cargado correctamente y explorar las distintas variables que contiene. 
 
 <br>
 
@@ -141,7 +141,7 @@ paged_table(eph_ind_319s)
 ```
 
 
-```{r ephind319s, echo=FALSE, warning=FALSE, message=FALSE, eval = !knitr::is_html_output()}
+```{r  ephind319s, echo=FALSE, warning=FALSE, message=FALSE, eval = !knitr::is_html_output()}
 eph_ind_319s %>% 
   select(c(1:10)) %>% 
   flextable() %>% 
@@ -163,7 +163,7 @@ ncol(eph_ind_319)
 
 En el caso de las bases de microdatos pertenecientes al período 2003-2015, podemos encontrarlas en formato `.sav` (SPSS) y `.dta` (STATA). Ambos formatos pueden ser importados desde __`R`__ a través de la librería __```haven```__.
 
-En este ejemplo —Tabla \@ref(tab:ephhog414)— utilizaremos la base de hogares del cuarto trimestre de 2014 ([Hogar_t414](https://www.indec.gob.ar/ftp/cuadros/menusuperior/eph/t414_sav.rar){target="_blank"}) y la descargaremos en formato ```.sav```.
+En este ejemplo utilizaremos la base de hogares del cuarto trimestre de 2014 ([Hogar_t414](https://www.indec.gob.ar/ftp/cuadros/menusuperior/eph/t414_sav.rar){target="_blank"}) y la descargaremos en formato ```.sav```.
 
 ```{r, echo=TRUE}
 eph_hog_414 <- read_sav("bases/Hogar_t414.sav")
@@ -199,7 +199,7 @@ Como hemos señalado, las bases anteriores a 2003 se encuentran únicamente en f
 eph_ind_74 <- read.dbf("bases/PERSO_US.DBF")
 ```
 
-En la Tabla \@ref(tab:ephind74) podemos ver los primeros 15 registros de la base:
+En la siguiente tabla podemos ver los primeros 15 registros de la base:
 
 ```{r, echo=FALSE}
 eph_ind_74 <- eph_ind_74 %>% 
@@ -263,14 +263,6 @@ Finalmente, la función ```get_microdata``` también nos permite descargar múlt
 eph_estado_1719 <- get_microdata(year = 2017:2019, trimester = 4, type = "individual", vars = c("CODUSU", "NRO_HOGAR", "ANO4", "ESTADO")) #Descargo las bases
 ```
 
-En el segundo paso utilizamos las funciones ```dplyr::select``` y ```tidyr::unnest```. Podríamos haber descargado la información de todos los trimestres modificando el parámetro ```trimester``` con el valor `c(1:4)`.
-
-```{r, message=FALSE, warning=FALSE, echo=TRUE}
-eph_estado_1719 <- eph_estado_1719 %>%
-  select(microdata) %>%
-  unnest(cols = c(microdata)) #Ya que la información descargada se guarda en un objeto de tipo "lista", debemos des-anidar la columna "microdata" en donde están las bases.
-```
-
 Como advertencia, al descargar un número importante de bases (y de variables), el proceso puede tornarse lento y, al mismo tiempo, su resultado satisfactorio puede depender de la cantidad de memoria RAM disponible que tengamos al momento.
 
 ## Primeros pasos en el estudio de las clases sociales a través de la EPH {#eph3} 
@@ -312,9 +304,9 @@ eph_319 <- eph_319 %>%
 	select(!(ends_with(".y"))) 
 ```
 
-Teniendo en cuenta los primeros 15 casos —Tabla \@ref(tab:eph319s)—, podemos observar que el número de variables asciende a `r ncol(eph_319)`:
+Teniendo en cuenta los primeros 15 casos podemos observar que el número de variables asciende a `r ncol(eph_319)`:
 
-```{r echo=FALSE}
+```{r, echo=FALSE}
 eph_319s <- eph_319 %>%
 	slice(1:15)
 paged_table(eph_319s)

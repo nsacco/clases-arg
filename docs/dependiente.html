@@ -9,7 +9,7 @@
 <meta name="author" content="José Rodríguez de la Fuente">
 <meta name="author" content="Sofia Jaime">
 <meta name="description" content="Este capítulo tiene como propósito presentar una de las posibles aproximaciones al estudio de la estructura de clases en tanto variable dependiente. Dentro de este tipo de abordajes nos...">
-<meta name="generator" content="bookdown 0.27 with bs4_book()">
+<meta name="generator" content="bookdown 0.33 with bs4_book()">
 <meta property="og:title" content="Capítulo 7 La clase como variable dependiente | Libro de Cocina para el Análisis de las Clases Sociales en Argentina">
 <meta property="og:type" content="book">
 <meta property="og:description" content="Este capítulo tiene como propósito presentar una de las posibles aproximaciones al estudio de la estructura de clases en tanto variable dependiente. Dentro de este tipo de abordajes nos...">
@@ -18,13 +18,11 @@
 <meta name="twitter:description" content="Este capítulo tiene como propósito presentar una de las posibles aproximaciones al estudio de la estructura de clases en tanto variable dependiente. Dentro de este tipo de abordajes nos...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.0/transition.js"></script><script src="libs/bs3compat-0.4.0/tabs.js"></script><script src="libs/bs3compat-0.4.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.2/transition.js"></script><script src="libs/bs3compat-0.4.2/tabs.js"></script><script src="libs/bs3compat-0.4.2/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/kePrint-0.0.1/kePrint.js"></script><link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 <link href="libs/vembedr-0.1.5/css/vembedr.css" rel="stylesheet">
 <link href="libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
-<script src="libs/pagedtable-1.1/js/pagedtable.js"></script><link href="libs/tabwid-1.1.0/tabwid.css" rel="stylesheet">
-<link href="libs/tabwid-1.1.0/scrool.css" rel="stylesheet">
-<!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-247494419-1"></script><script>
+<script src="libs/pagedtable-1.1/js/pagedtable.js"></script><!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-247494419-1"></script><script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
@@ -146,7 +144,7 @@
 <p>El estudio de la movilidad social adquiere sentido dentro del campo teórico de la estratificación social <span class="citation">(<a href="referencias.html#ref-Cortes.Solis2006" role="doc-biblioref">Cortés &amp; Solís, 2006</a>)</span>, ya que el primer paso es tener noción sobre cómo la sociedad se estructura en grupos o clases. Siguiendo la clásica definición de Lipset y Bendix <span class="citation">(<a href="referencias.html#ref-Lipset.Bendix1963" role="doc-biblioref">1963, p. 18</a>)</span>, podemos entender a la movilidad social como el “proceso por el cual los individuos pasan de una posición a otra en la sociedad”. Al referirnos a <em>posición</em>, la literatura admite varias nociones: clases sociales, ocupaciones, niveles de ingresos, niveles de riqueza, niveles de condiciones de vida, niveles educativos, etc. Asimismo, la movilidad puede medirse en términos <strong>intergeneracionales</strong> (cambios en la posición de los hijos respecto de los padres) o <strong>intrageneracionales</strong> (cambios en la trayectoria de clase en la vida de la persona). En esta unidad nos centraremos en la <strong>movilidad intergeneracional de clase</strong>.</p>
 <p>En forma simplificada, los estudios clásicos de movilidad social planteaban el abordaje de tres instituciones centrales en la vida de las personas: la familia, la educación y el mercado de trabajo. Esto derivó en lo que se denominó como “triángulo de la movilidad”.</p>
 <div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:unnamed-chunk-88"></span>
+<span style="display:block;" id="fig:unnamed-chunk-87"></span>
 <p class="caption">
 Gráfico 7.1: Triángulo de la movilidad
 </p>
@@ -162,7 +160,7 @@ Gráfico 7.1: Triángulo de la movilidad
 <p>La sociología de la movilidad social nace al calor del debate sobre la igualdad y en el seno del estructural-funcionalismo. Sus bases conceptuales se sustentan en la concepción liberal del orden social. Acorde con la teoría de la estratificación, la visión liberal-funcionalista comprendía a la sociedad como un campo continuo y homogéneo formado por individuos que desempeñan funciones de más o menos prestigio y remuneración, y que presentan amplias posibilidades de movilidad <span class="citation">(<a href="referencias.html#ref-CachonRodriguez1989" role="doc-biblioref">Cachón Rodríguez, 1989</a>; <a href="referencias.html#ref-Kerbo2003" role="doc-biblioref">Kerbo, 2003</a>)</span>.</p>
 <p>Los primeros estudios de movilidad llevados a cabo por encuestas tuvieron lugar en el período de la segunda posguerra y sus preocupaciones giraban en torno a los niveles de movilidad que presentaban los distintos países y sobre la forma que la misma asumía. La <strong>tabla de movilidad</strong> —como se ilustra tabla siguiente—, para esta generación, constituye el insumo central para el estudio del fenómeno, conteniendo la misma la información sobre la posición social de las personas a las cuales se encuestó y la posición de su familia (generalmente del padre) cuando éstas tenían alrededor de 15 años <span class="citation">(<a href="referencias.html#ref-Breen2004" role="doc-biblioref">Breen, 2004, p. 3</a>)</span>:</p>
 <div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:unnamed-chunk-89"></span>
+<span style="display:block;" id="fig:unnamed-chunk-88"></span>
 <p class="caption">
 Gráfico 7.2: Ejemplo de tabla de movilidad <span class="citation">(<a href="referencias.html#ref-Dalle2016" role="doc-biblioref">Dalle, 2016, p. 106</a>)</span>
 </p>
@@ -175,7 +173,7 @@ Gráfico 7.2: Ejemplo de tabla de movilidad <span class="citation">(<a href="ref
 <p>Posteriormente, una segunda oleada de estudios de movilidad social, iniciada con la obra <em>The American Occupational Structure</em> <span class="citation">(<a href="referencias.html#ref-Blau.Duncan1967" role="doc-biblioref">Blau &amp; Duncan, 1967</a>)</span>, marcaron un nuevo rumbo teórico y metodológico en el campo. En primer lugar, Blau y Duncan plantearon un abordaje del fenómeno de la movilidad social considerándolo como parte del “proceso de estratificación”. De este modo descompusieron el concepto en sus elementos constituyentes, es decir, en la posición de origen y de destino. Ya no enfocaron el problema desde el estudio de los patrones de movilidad, sino a partir de los efectos que las características adscriptivas presentaban sobre el logro ocupacional. En términos operativos, la preocupación rondaba en torno a cómo diversos factores intervinientes (principalmente, la educación) y las contingencias de la carrera ocupacional podían modificar la influencia de los orígenes sociales sobre los logros ocupacionales de los sujetos.</p>
 <!--Dicha propuesta se formalizó en el siguiente esquema:-->
 <div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:unnamed-chunk-91"></span>
+<span style="display:block;" id="fig:unnamed-chunk-90"></span>
 <p class="caption">
 Gráfico 7.3: Modelo básico de logro de estatus <span class="citation">(<a href="referencias.html#ref-Blau.Duncan1967" role="doc-biblioref">Blau &amp; Duncan, 1967, p. 170</a>)</span>
 </p>
@@ -202,7 +200,7 @@ Gráfico 7.3: Modelo básico de logro de estatus <span class="citation">(<a href
 <span class="header-section-number">7.2</span> El uso de la base ENES-PISAC<a class="anchor" aria-label="anchor" href="#enes"><i class="fas fa-link"></i></a>
 </h2>
 <p>Librerías que utilizaremos en esta sección:</p>
-<div class="sourceCode" id="cb102"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb101"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://haven.tidyverse.org">haven</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span>, warn.conflicts <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
 <p>Como hemos señalado en el <a href="fuentes.html#otras">Capítulo 2</a>, una de las bases de datos públicas y nacionales para el estudio de la movilidad social es la <em>Encuesta Nacional sobre la Estructura Social</em> (<strong>ENES</strong>) desarrollada por el <strong>Programa de Investigación sobre la Sociedad Argentina Contemporánea</strong>(PISAC). La misma puede ser descargada, junto a los manuales de códigos, siguiendo este <a href="https://www.argentina.gob.ar/ciencia/pisac/bases-de-datos" target="_blank">link</a>.</p>
@@ -223,11 +221,11 @@ Gráfico 7.3: Modelo básico de logro de estatus <span class="citation">(<a href
 <span class="header-section-number">7.2.2</span> Abriendo y pegando la base ENES<a class="anchor" aria-label="anchor" href="#abriendo-y-pegando-la-base-enes"><i class="fas fa-link"></i></a>
 </h3>
 <p>Para abrir los archivos <strong><code>.sav</code></strong> nuevamente deberemos llamar al paquete <code>haven</code> que hemos instalado en el <a href="fuentes.html#eph2">Capítulo 3</a> y utilizaremos la función <em>read_sav</em>.</p>
-<div class="sourceCode" id="cb103"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb102"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">enes_ind</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://haven.tidyverse.org/reference/read_spss.html">read_sav</a></span><span class="op">(</span><span class="st">"bases/ENES_Personas_version_final.sav"</span><span class="op">)</span></span>
 <span><span class="va">enes_hog</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://haven.tidyverse.org/reference/read_spss.html">read_sav</a></span><span class="op">(</span><span class="st">"bases/ENES_Hogares_version_final.sav"</span><span class="op">)</span></span></code></pre></div>
 <p>Obtenidos ambos <code>datasets</code> ahora vamos a pegar la base de hogares a la de individuos, utilizando como variables identificadoras a <code>nocues</code> (Código Identificador de Vivienda) y <code>nhog</code> (Código Identificador del Hogar).</p>
-<div class="sourceCode" id="cb104"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb103"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">enes</span> <span class="op">&lt;-</span> <span class="va">enes_ind</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span><span class="op">(</span><span class="va">enes_hog</span>, by <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"nocues"</span>, <span class="st">"nhog"</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="op">!</span><span class="op">(</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/starts_with.html">ends_with</a></span><span class="op">(</span><span class="st">".y"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="co">#elimina una de las variables que tienen en común las bases y que se duplican.</span></span></code></pre></div>
@@ -237,133 +235,86 @@ Gráfico 7.3: Modelo básico de logro de estatus <span class="citation">(<a href
 <span class="header-section-number">7.2.3</span> Recodificación de variables y filtros<a class="anchor" aria-label="anchor" href="#recodificaci%C3%B3n-de-variables-y-filtros"><i class="fas fa-link"></i></a>
 </h3>
 <p>Para el análisis de la movilidad social que realizaremos en las dos secciones posteriores necesitaremos recodificar una serie de variables para su correcto tratamiento. Empecemos por la principal, la clase social del/la encuestado/o. En este caso nos basaremos en el esquema EGP, que se encuentra codificado en la variable <code>egp11</code> —Tabla <a href="dependiente.html#tab:egpmov">7.1</a>—. Al tenerlo en su versión desagregada de 11 clases, necesitaremos reagruparlo de tal forma que queden 5 clases. A continuación mostramos nuestra propuesta de agrupación y las líneas de comando necesarias para hacerlo:</p>
-<template id="0487589e-bc8b-4bde-b1c0-d7fd6dec1d4d"><style>
-.tabwid table{
-  border-spacing:0px !important;
-  border-collapse:collapse;
-  line-height:1;
-  margin-left:auto;
-  margin-right:auto;
-  border-width: 0;
-  display: table;
-  border-color: transparent;
-  caption-side: top;
-}
-.tabwid-caption-bottom table{
-  caption-side: bottom;
-}
-.tabwid_left table{
-  margin-left:0;
-}
-.tabwid_right table{
-  margin-right:0;
-}
-.tabwid td {
-    padding: 0;
-}
-.tabwid a {
-  text-decoration: none;
-}
-.tabwid thead {
-    background-color: transparent;
-}
-.tabwid tfoot {
-    background-color: transparent;
-}
-.tabwid table tr {
-background-color: transparent;
-}
-.katex-display {
-    margin: 0 0 !important;
-}
-</style>
 <div class="tabwid">
-<style>.cl-9b3605b0{table-layout:auto;width:100%;}.cl-9b2b23de{font-family:'Arial';font-size:10pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-9b2f6534{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-9b2f7d94{background-color:transparent;vertical-align: middle;border-bottom: 1pt solid rgba(0, 0, 0, 1.00);border-top: 1pt solid rgba(0, 0, 0, 1.00);border-left: 1pt solid rgba(0, 0, 0, 1.00);border-right: 1pt solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-9b2f7d9e{background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-9b260188{font-family:'Arial';font-size:9pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}</style>
-<div class="inline-table"><table class="cl-9b3605b0">
-<caption>
-<span id="tab:egpmov">Tabla 7.1: </span><span class="cl-9b260188">Esquema EGP recodificado</span>
+<style>.cl-a5868374{table-layout:auto;width:100%;}.cl-a57b6d40{font-family:'Arial';font-size:10pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-a57fcb9c{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-a57fe1b8{background-color:transparent;vertical-align: middle;border-bottom: 1pt solid rgba(0, 0, 0, 1.00);border-top: 1pt solid rgba(0, 0, 0, 1.00);border-left: 1pt solid rgba(0, 0, 0, 1.00);border-right: 1pt solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a57fe1c2{background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style>
+<div class="inline-table"><table data-quarto-disable-processing="true" class="cl-a5868374">
+<caption style="margin:0pt;text-align:center;border-bottom: 0.00pt solid transparent;border-top: 0.00pt solid transparent;border-left: 0.00pt solid transparent;border-right: 0.00pt solid transparent;padding-top:3pt;padding-bottom:3pt;padding-left:3pt;padding-right:3pt;line-height: 1;background-color:transparent;">
+<span id="tab:egpmov">Tabla 7.1: </span><span>Esquema EGP recodificado</span>
 </caption>
 
 <tbody>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">Código</span></p></td>
-<td class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">Esquema 11 clases</span></p></td>
-<td class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">Esquema 5 clases</span></p></td>
+<td class="cl-a57fe1b8"><p class="cl-a57fcb9c"><span class="cl-a57b6d40">Código</span></p></td>
+<td class="cl-a57fe1b8"><p class="cl-a57fcb9c"><span class="cl-a57b6d40">Esquema 11 clases</span></p></td>
+<td class="cl-a57fe1b8"><p class="cl-a57fcb9c"><span class="cl-a57b6d40">Esquema 5 clases</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">1</span></p></td>
-<td class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">I. Clase de servicios, alta</span></p></td>
-<td rowspan="2" class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">Clase de servicios</span></p></td>
+<td class="cl-a57fe1b8"><p class="cl-a57fcb9c"><span class="cl-a57b6d40">1</span></p></td>
+<td class="cl-a57fe1b8"><p class="cl-a57fcb9c"><span class="cl-a57b6d40">I. Clase de servicios, alta</span></p></td>
+<td rowspan="2" class="cl-a57fe1b8"><p class="cl-a57fcb9c"><span class="cl-a57b6d40">Clase de servicios</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">2</span></p></td>
-<td class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">II. Clase de servicios, baja</span></p></td>
+<td class="cl-a57fe1b8"><p class="cl-a57fcb9c"><span class="cl-a57b6d40">2</span></p></td>
+<td class="cl-a57fe1b8"><p class="cl-a57fcb9c"><span class="cl-a57b6d40">II. Clase de servicios, baja</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">3</span></p></td>
-<td class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">IIIa. Trabajadores no manuales de rutina, alta</span></p></td>
-<td rowspan="2" class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">Trabajadores rutinarios</span></p></td>
+<td class="cl-a57fe1b8"><p class="cl-a57fcb9c"><span class="cl-a57b6d40">3</span></p></td>
+<td class="cl-a57fe1b8"><p class="cl-a57fcb9c"><span class="cl-a57b6d40">IIIa. Trabajadores no manuales de rutina, alta</span></p></td>
+<td rowspan="2" class="cl-a57fe1b8"><p class="cl-a57fcb9c"><span class="cl-a57b6d40">Trabajadores rutinarios</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">4</span></p></td>
-<td class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">IIIb. Trabajadores no manuales de servicios y comercio, baja</span></p></td>
+<td class="cl-a57fe1b8"><p class="cl-a57fcb9c"><span class="cl-a57b6d40">4</span></p></td>
+<td class="cl-a57fe1b8"><p class="cl-a57fcb9c"><span class="cl-a57b6d40">IIIb. Trabajadores no manuales de servicios y comercio, baja</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">5</span></p></td>
-<td class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">IVa. Autónomos con empleados</span></p></td>
-<td rowspan="2" class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">Pequeña Burguesía</span></p></td>
+<td class="cl-a57fe1b8"><p class="cl-a57fcb9c"><span class="cl-a57b6d40">5</span></p></td>
+<td class="cl-a57fe1b8"><p class="cl-a57fcb9c"><span class="cl-a57b6d40">IVa. Autónomos con empleados</span></p></td>
+<td rowspan="2" class="cl-a57fe1b8"><p class="cl-a57fcb9c"><span class="cl-a57b6d40">Pequeña Burguesía</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">6</span></p></td>
-<td class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">IVb. Autónomos sin empleados</span></p></td>
+<td class="cl-a57fe1b8"><p class="cl-a57fcb9c"><span class="cl-a57b6d40">6</span></p></td>
+<td class="cl-a57fe1b8"><p class="cl-a57fcb9c"><span class="cl-a57b6d40">IVb. Autónomos sin empleados</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">7</span></p></td>
-<td class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">V. Supervisores de trabajadores manuales</span></p></td>
-<td rowspan="2" class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">Clase trabajadora calificada</span></p></td>
+<td class="cl-a57fe1b8"><p class="cl-a57fcb9c"><span class="cl-a57b6d40">7</span></p></td>
+<td class="cl-a57fe1b8"><p class="cl-a57fcb9c"><span class="cl-a57b6d40">V. Supervisores de trabajadores manuales</span></p></td>
+<td rowspan="2" class="cl-a57fe1b8"><p class="cl-a57fcb9c"><span class="cl-a57b6d40">Clase trabajadora calificada</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">8</span></p></td>
-<td class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">VI. Trabajadores manuales calificados</span></p></td>
+<td class="cl-a57fe1b8"><p class="cl-a57fcb9c"><span class="cl-a57b6d40">8</span></p></td>
+<td class="cl-a57fe1b8"><p class="cl-a57fcb9c"><span class="cl-a57b6d40">VI. Trabajadores manuales calificados</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">9</span></p></td>
-<td class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">VIIa. Trabajadores manuales no calificados</span></p></td>
-<td rowspan="2" class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">Clase trabajadora no calificada</span></p></td>
+<td class="cl-a57fe1b8"><p class="cl-a57fcb9c"><span class="cl-a57b6d40">9</span></p></td>
+<td class="cl-a57fe1b8"><p class="cl-a57fcb9c"><span class="cl-a57b6d40">VIIa. Trabajadores manuales no calificados</span></p></td>
+<td rowspan="2" class="cl-a57fe1b8"><p class="cl-a57fcb9c"><span class="cl-a57b6d40">Clase trabajadora no calificada</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">10</span></p></td>
-<td class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">VIIb. Trabajadores agropecuarios</span></p></td>
+<td class="cl-a57fe1b8"><p class="cl-a57fcb9c"><span class="cl-a57b6d40">10</span></p></td>
+<td class="cl-a57fe1b8"><p class="cl-a57fcb9c"><span class="cl-a57b6d40">VIIb. Trabajadores agropecuarios</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">11</span></p></td>
-<td class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">IVc. Autónomos agropecuarios</span></p></td>
-<td class="cl-9b2f7d94"><p class="cl-9b2f6534"><span class="cl-9b2b23de">Pequeña Burguesía</span></p></td>
+<td class="cl-a57fe1b8"><p class="cl-a57fcb9c"><span class="cl-a57b6d40">11</span></p></td>
+<td class="cl-a57fe1b8"><p class="cl-a57fcb9c"><span class="cl-a57b6d40">IVc. Autónomos agropecuarios</span></p></td>
+<td class="cl-a57fe1b8"><p class="cl-a57fcb9c"><span class="cl-a57b6d40">Pequeña Burguesía</span></p></td>
 </tr>
 </tbody>
-<tfoot><tr style="overflow-wrap:break-word;"><td colspan="3" class="cl-9b2f7d9e"><p class="cl-9b2f6534"><span class="cl-9b2b23de">Fuente: elaboración propia en base Erikson y Goldthorpe (1992)</span></p></td></tr></tfoot>
+<tfoot><tr style="overflow-wrap:break-word;"><td colspan="3" class="cl-a57fe1c2"><p class="cl-a57fcb9c"><span class="cl-a57b6d40">Fuente: elaboración propia en base Erikson y Goldthorpe (1992)</span></p></td></tr></tfoot>
 </table></div>
-</div></template><div class="flextable-shadow-host" id="55514aa0-6543-45e0-83eb-eef9107d39f1"></div>
-<script>
-var dest = document.getElementById("55514aa0-6543-45e0-83eb-eef9107d39f1");
-var template = document.getElementById("0487589e-bc8b-4bde-b1c0-d7fd6dec1d4d");
-var caption = template.content.querySelector("caption");
-var fantome = dest.attachShadow({mode: 'open'});
-var templateContent = template.content;
-fantome.appendChild(templateContent);
-</script><div class="sourceCode" id="cb105"><pre class="downlit sourceCode r">
+</div>
+<div class="sourceCode" id="cb104"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">enes</span> <span class="op">&lt;-</span> <span class="va">enes</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>egp5 <span class="op">=</span> <span class="fu">car</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/car/man/recode.html">recode</a></span><span class="op">(</span><span class="va">egp11</span>, <span class="st">"1:2=1; 3:4=2; 5:6=3; 7:8=4; 9:10=5; 11=3"</span><span class="op">)</span>,</span>
 <span>                 egp5_f <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">egp5</span>, labels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"CS"</span>, <span class="st">"TR"</span>, <span class="st">"PB"</span>, <span class="st">"CTC"</span>, <span class="st">"CTNC"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p>Como bien puede apreciarse, también construimos una variable factor (<code>egp5_f</code>) ya que posteriormente la necesitaremos al realizar un análisis multivariable. Al estar estudiando movilidad intergeneracional también precisaremos tener clasificados en un esquema de clases al PSH del hogar cuando les encuestades tenían 15 años. En este caso recodificaremos la variable de clase únicamente del PSH encuestado (<code>egp11a</code>) ya que trabajaremos únicamente con esa población para no complicar el análisis.</p>
-<div class="sourceCode" id="cb106"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb105"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">enes</span> <span class="op">&lt;-</span> <span class="va">enes</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>egp5a <span class="op">=</span> <span class="fu">car</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/car/man/recode.html">recode</a></span><span class="op">(</span><span class="va">egp11a</span>, <span class="st">"1:2=1; 3:4=2; 5:6=3; 7:8=4; 9:10=5; 11=3"</span><span class="op">)</span>,</span>
 <span>                 egp5a_f <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">egp5a</span>, labels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"CS"</span>, <span class="st">"TR"</span>, <span class="st">"PB"</span>, <span class="st">"CTC"</span>, <span class="st">"CTNC"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p>Sumada a estas variables, también recodificaremos el nivel educativo de los encuestados y del hogar de origen y crearemos una variable factor para el género. Puntualmente el nivel educativo quedará codificado en las siguientes categorías: 1. Hasta secundario incompleto; 2. Secundario completo - superior incompleto; 3. Superior completo.</p>
 <p>Para establecer el nivel educativo del hogar de origen, seleccionaremos la posición educativa más alta entre el PSH y cónyuge de ese hogar, ya que tenemos dichos datos. Esto es lo que comúnmente se denomina <em>clima educativo</em>. Primero deberemos construir la variable de nivel educativo para cada miembro del hogar de origen (PSH y cónyuge), a través de las variables <code>v240a</code> (máximo nivel educativo del PSH), <code>v241a</code> (finalidad del nivel educativo del PSH), <code>v244a</code> (máximo nivel educativo del cónyuge), <code>v245a</code> (finalidad del nivel educativo del cónyuge). Luego buscaremos el valor máximo de las dos variables para cada registro, generando un nivel educativo para cada hogar de origen. Para ello usaremos la función <code>pmax</code> de <code>R</code> base.</p>
 <p>Es recomendable revisar el libro de códigos de la encuesta para poder ver como se clasifican las variables, principalmente aquellas ligadas a la educación.</p>
-<div class="sourceCode" id="cb107"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb106"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">enes</span> <span class="op">&lt;-</span> <span class="va">enes</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>educ <span class="op">=</span> <span class="fu">car</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/car/man/recode.html">recode</a></span><span class="op">(</span><span class="va">nivel_ed</span>, <span class="st">"0:4=1; c(5,6,8)=2; c(7,9)=3; else=NA"</span><span class="op">)</span>,</span>
 <span>                 educ_f <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">educ</span>, labels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Hasta sec. incompleto"</span>, <span class="st">"Sec. completo"</span>, <span class="st">"Superior completo"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
@@ -390,11 +341,11 @@ fantome.appendChild(templateContent);
 <span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>sexo <span class="op">=</span> <span class="fu">car</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/car/man/recode.html">recode</a></span><span class="op">(</span><span class="va">v109</span>, <span class="st">"1=1; 2=2; else=NA"</span><span class="op">)</span>,</span>
 <span>                 sexo_f <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">sexo</span>, labels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Varon"</span>, <span class="st">"Mujer"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p>Por último generaremos un nuevo dataset que sólo contenga la información del PSH encuestado, ya que es para este miembro que tenemos la información acerca de su origen social. Para ello, aplicaremos el filtro a partir de la variable <code>v111</code> que nos permite conocer el parentesco de los miembros del hogar. También seleccionaremos a la población mayor a 30 años, ya que en los estudios de movilidad se suele priorizar para el análisis a las poblaciones que ya se encuentran con cierta madurez ocupacional.</p>
-<div class="sourceCode" id="cb108"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb107"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">enes_movilidad</span> <span class="op">&lt;-</span> <span class="va">enes</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">v111</span> <span class="op">==</span> <span class="fl">1</span> <span class="op">&amp;</span> <span class="va">v108</span> <span class="op">&gt;=</span> <span class="fl">30</span><span class="op">)</span></span></code></pre></div>
 <p>Podemos observar los 15 primeros casos de la base para observar el <em>clima educativo</em> se ha construido de manera correcta, calculando el máximo entre el nivel educativo de los padres (PSH y cónyuge) de los encuestades.</p>
-<div class="sourceCode" id="cb109"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb108"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">enes_movilidad</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">educ_psh</span>, <span class="va">educ_con</span>, <span class="va">educ_hog</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>    <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="fl">15</span><span class="op">)</span></span></code></pre></div>
@@ -433,7 +384,7 @@ fantome.appendChild(templateContent);
 <li>Están ordenadas de la misma manera.</li>
 </ol>
 <p>Por convención la variable de origen social se suele poner en las filas y la de destino social (clase del encuestado) en las columnas. La base ENES también cuenta con un factor de calibración (ponderador) que debe utilizarse y que se encuentra en la variable <code>f_calib3</code>. A continuación presentamos la tabla de movilidad para las variables que hemos preparado en la sección anterior.</p>
-<div class="sourceCode" id="cb111"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb110"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">summarytools</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/summarytools/man/ctable.html">ctable</a></span><span class="op">(</span><span class="va">enes_movilidad</span><span class="op">$</span><span class="va">egp5a_f</span>, <span class="va">enes_movilidad</span><span class="op">$</span><span class="va">egp5_f</span>, weights <span class="op">=</span> <span class="va">enes_movilidad</span><span class="op">$</span><span class="va">f_calib3.x</span>, </span>
 <span>                                         prop <span class="op">=</span> <span class="st">'n'</span>, useNA <span class="op">=</span> <span class="st">'no'</span><span class="op">)</span></span></code></pre></div>
 <p>Cross-Tabulation<br>
@@ -522,7 +473,7 @@ Data Frame: enes_movilidad</p>
 </tr>
 </tbody></table></div>
 <p>Sin embargo, la tabla con las frecuencias absolutas poca información nos brinda acerca de cómo el origen de clase condiciona al destino de clase. Para ello se calculan los porcentajes de salida (<em>outflow</em>), calculados por fila, y de entrada (<em>inflow</em>), calculados por columna. Mientras que los porcentajes de salida permiten dar cuenta de los destinos de los sujetos en función de sus orígenes, los porcentajes de entrada permiten observar la composición, en función del origen, para cada uno de los destinos de clase. Para ello modificaremos el parámetro <code>prop</code> de la función <code>ctable</code>: ‘r’ para los porcentajes por fila y ‘c’ para los porcentajes por columna.</p>
-<div class="sourceCode" id="cb112"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb111"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">summarytools</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/summarytools/man/ctable.html">ctable</a></span><span class="op">(</span><span class="va">enes_movilidad</span><span class="op">$</span><span class="va">egp5a_f</span>, <span class="va">enes_movilidad</span><span class="op">$</span><span class="va">egp5_f</span>, weights <span class="op">=</span> <span class="va">enes_movilidad</span><span class="op">$</span><span class="va">f_calib3.x</span>, </span>
 <span>                                         prop <span class="op">=</span> <span class="st">'r'</span>, useNA <span class="op">=</span> <span class="st">'no'</span>, round.digits <span class="op">=</span> <span class="fl">1</span>, totals <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
 <p>Cross-Tabulation, Row Proportions<br>
@@ -593,7 +544,7 @@ Data Frame: enes_movilidad</p>
 <td align="right">1185543.0 (39.6%)</td>
 </tr>
 </tbody></table></div>
-<div class="sourceCode" id="cb113"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb112"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">summarytools</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/summarytools/man/ctable.html">ctable</a></span><span class="op">(</span><span class="va">enes_movilidad</span><span class="op">$</span><span class="va">egp5a_f</span>, <span class="va">enes_movilidad</span><span class="op">$</span><span class="va">egp5_f</span>, weights <span class="op">=</span> <span class="va">enes_movilidad</span><span class="op">$</span><span class="va">f_calib3.x</span>, </span>
 <span>                                         prop <span class="op">=</span> <span class="st">'c'</span>, useNA <span class="op">=</span> <span class="st">'no'</span>, round.digits <span class="op">=</span> <span class="fl">1</span>, totals <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
 <p>Cross-Tabulation, Column Proportions<br>
@@ -672,19 +623,19 @@ Data Frame: enes_movilidad</p>
 - Índice de movilidad ascendente<br>
 - Índice de movilidad descendente</p>
 <p>El <strong>índice de reproducción</strong> se calcula como el cociente entre la sumatoria de todos los casos que se ubican en la diagonal principal descendente y el total de casos. Si lo multiplicamos por <code>100</code> obtendremos el porcentaje de casos que mantiene su posición de origen, es decir, que no cambia respecto a sus padres:</p>
-<div class="sourceCode" id="cb114"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb113"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="op">(</span><span class="op">(</span><span class="fl">744807</span> <span class="op">+</span> <span class="fl">111470</span> <span class="op">+</span> <span class="fl">760637</span> <span class="op">+</span> <span class="fl">196952</span> <span class="op">+</span> <span class="fl">1185543</span><span class="op">)</span> <span class="op">/</span> <span class="fl">8778789</span><span class="op">)</span><span class="op">*</span><span class="fl">100</span></span></code></pre></div>
 <pre><code>[1] 34</code></pre>
 <p>Lógicamente, si al total le restamos el índice de reproducción, obtenemos el <strong>índice de movilidad</strong>:</p>
-<div class="sourceCode" id="cb116"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb115"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fl">100</span> <span class="op">-</span> <span class="fl">34.16655</span></span></code></pre></div>
 <pre><code>[1] 66</code></pre>
 <p>Entonces mientras que un <code>34%</code> mantiene su posición respecto a sus padres, un <code>66%</code> ha logrado moverse en términos intergeneracionales.</p>
 <p>Por último, para saber si esos movimientos son ascendentes o descendentes, calcularemos los otros dos índices. El primero de ellos se calcula como el cociente entre la sumatoria de todos los casos que efectivamente han ascendido intergeneracionalmente, es decir, aquellos que se ubican por debajo de la diagonal principal, y el total de casos. En contraposición, el <strong>índice de movilidad descendente</strong> se calcula como el cociente entre la sumatoria de todos los casos que han descendido intergeneracionalmente (aquellos que se ubican por encima de la diagonal principal) y el total de casos.</p>
-<div class="sourceCode" id="cb118"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb117"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="op">(</span><span class="op">(</span><span class="fl">184008</span> <span class="op">+</span> <span class="fl">735952</span> <span class="op">+</span> <span class="fl">308108</span> <span class="op">+</span> <span class="fl">397512</span> <span class="op">+</span> <span class="fl">300851</span> <span class="op">+</span> <span class="fl">155335</span> <span class="op">+</span> <span class="fl">408370</span> <span class="op">+</span> <span class="fl">282531</span> <span class="op">+</span> <span class="fl">659705</span> <span class="op">+</span> <span class="fl">341606</span><span class="op">)</span> <span class="op">/</span> <span class="fl">8778789</span><span class="op">)</span> <span class="op">*</span> <span class="fl">100</span></span></code></pre></div>
 <pre><code>[1] 43</code></pre>
-<div class="sourceCode" id="cb120"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb119"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="op">(</span><span class="op">(</span><span class="fl">126972</span> <span class="op">+</span> <span class="fl">186148</span> <span class="op">+</span> <span class="fl">105476</span> <span class="op">+</span> <span class="fl">118558</span> <span class="op">+</span> <span class="fl">45828</span> <span class="op">+</span> <span class="fl">251341</span> <span class="op">+</span> <span class="fl">113067</span> <span class="op">+</span> <span class="fl">115481</span> <span class="op">+</span> <span class="fl">605470</span> <span class="op">+</span> <span class="fl">337061</span><span class="op">)</span> <span class="op">/</span> <span class="fl">8778789</span><span class="op">)</span> <span class="op">*</span> <span class="fl">100</span></span></code></pre></div>
 <pre><code>[1] 23</code></pre>
 <p>Mientras que un <code>43%</code> de los casos totales ha experimentado movilidad social ascendente, un <code>23%</code> ha descendido de posición respecto a sus padres. Ambos porcentajes sumados obtienen el <code>66%</code> de la movilidad total.</p>
@@ -694,7 +645,7 @@ Data Frame: enes_movilidad</p>
 <span class="header-section-number">7.4</span> Aproximación al análisis multivariable de la movilidad social<a class="anchor" aria-label="anchor" href="#movilidad3"><i class="fas fa-link"></i></a>
 </h2>
 <p>En esta sección utilizaremos las siguientes librerías:</p>
-<div class="sourceCode" id="cb122"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb121"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span>, warn.conflicts <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://jtools.jacob-long.com">jtools</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://hughjonesd.github.io/huxtable/">huxtable</a></span><span class="op">)</span></span></code></pre></div>
@@ -705,13 +656,13 @@ Data Frame: enes_movilidad</p>
 1. Aquellos pertenecientes a la clase de servicio<br>
 0. Aquellos pertenecientes a otras clases</p>
 <p>Es decir, nosotros vamos a evaluar las probabilidades de acceder a la clase de servicio en lugar de a otra clase en función de diversos factores independientes condicionantes. Por eso, en primer lugar, recodificaremos la variable:</p>
-<div class="sourceCode" id="cb123"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb122"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">enes_movilidad</span> <span class="op">&lt;-</span> <span class="va">enes_movilidad</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>egp2 <span class="op">=</span> <span class="fu">car</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/car/man/recode.html">recode</a></span><span class="op">(</span><span class="va">egp5</span>, <span class="st">"1=1; 2:5=0"</span><span class="op">)</span>,</span>
 <span>                 egp2_f <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">egp2</span>, labels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Clase de servicio"</span>, <span class="st">"Otra clase"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p>Una vez realizada la recodificación, podemos construir la regresión logística tomando como factores independientes, en primer lugar, a los aspectos propiamente del origen social: la clase y la educación de los padres. Para ello recurriremos a la función <code>glm</code> (generalized linear model), que tiene un formato similar a la función <code>lm</code>, y debemos señalar la opción <code>binomial</code> en <code>family</code>. En este caso, para simplificar el proceso, no incorporaremos el ponderador, a través de la opción <code>weights</code>, ya que su aplicación no permite una correcto ajuste en la regresión <a class="footnote-ref" tabindex="0" data-toggle="popover" data-content="&lt;p&gt;Recomendamos el uso del paquete &lt;code&gt;survey&lt;/code&gt; para la realización de procesamientos y estimaciones que impliquen el uso de ponderadores. Por fuera de &lt;strong&gt;&lt;code&gt;R&lt;/code&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;code&gt;STATA&lt;/code&gt;&lt;/strong&gt; es uno de los mejores paquetes estadísticos que permiten fácilmente la realización de distintos tipos de regresiones&lt;/p&gt;"><sup>13</sup></a>.</p>
 <p>Para observar los resultados utilizaremos la función <code>summ</code> (o <code>export_summs</code> si necesitamos exportar a Word o PDF) del paquete <code>jtools</code> que deberán instalar.</p>
-<div class="sourceCode" id="cb124"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb123"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">logit1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/glm.html">glm</a></span><span class="op">(</span><span class="va">egp2</span> <span class="op">~</span> <span class="va">educ_hog_f</span> <span class="op">+</span> <span class="va">egp5a_f</span>, data <span class="op">=</span> <span class="va">enes_movilidad</span>, family <span class="op">=</span> <span class="st">"binomial"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu"><a href="https://jtools.jacob-long.com/reference/summ.html">summ</a></span><span class="op">(</span><span class="va">logit1</span><span class="op">)</span></span></code></pre></div>
@@ -943,14 +894,14 @@ egp5a_fCTNC
 </td>
 </tr></tfoot>
 </table></div>
-<div class="sourceCode" id="cb125"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb124"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">logit1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/glm.html">glm</a></span><span class="op">(</span><span class="va">egp2</span> <span class="op">~</span> <span class="va">educ_hog_f</span> <span class="op">+</span> <span class="va">egp5a_f</span>, data <span class="op">=</span> <span class="va">enes_movilidad</span>, family <span class="op">=</span> <span class="st">"binomial"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu"><a href="https://jtools.jacob-long.com/reference/export_summs.html">export_summs</a></span><span class="op">(</span><span class="va">logit1</span><span class="op">)</span></span></code></pre></div>
 <p>Esta primera información que nos brinda la función <code>summ(logit1)</code> nos permite decir tres cosas. En primer lugar, sabemos por la última columna que todos los coeficientes estimados son significativos estadísticamente (los p-value son menores a <code>0,05</code>). En segundo lugar, en el caso del nivel educativo de origen, hay una ventaja de aquellos que provienen de niveles educativos superiores respecto a los inferiores (las estimaciones se incrementan a medida que ascendemos en la escala educativa). Siempre nuestra categoría de referencia será aquella que no está señalada en el cuadro, en este caso, el nivel educativo más bajo. Entonces, <em>valores superiores a 0 nos dirán que las oportunidades de acceder a la clase de servicio mejoran al aumentar el nivel educativo de origen</em>. Algo similar sucede con la clase social de origen, donde la categoría de contraste es justamente la clase de servicio. A medida que descendemos en la escala de clases, las oportunidades de moverse intergeneracionalmente a la clase de servicio disminuyen, aumentan en términos negativos.</p>
 <p>En tercer lugar, los resultados de la sección <code>model fit</code> nos señalan distintas medidas de bondad de ajuste. En nuestro caso, observaremos los <code>Pseudo-R2</code> que nos permiten una aproximación a la cantidad de varianza explicada por el modelo. En este caso, el modelo planteado explica entre un <code>10%</code> y un <code>16%</code> de la varianza total de la variable dependiente. Cuanto más alto sea dicho valor, mejor ajuste tendrá el modelo y mejores predicciones realizaremos sobre la realidad que estamos midiendo.</p>
 <p>A continuación, elaboraremos un segundo modelo que incorpore como variables predictoras al nivel educativo y al sexo de los encuestades. Lo llamaremos <code>logit2</code>. A su vez, siguiendo el modo en que muchos estudios muestran los coeficientes de la regresión, pediremos a través del comando opción <code>exp = TRUE</code> de la función <code>summ</code>, que nos brinde las estimaciones en forma exponenciada. Como veremos a continuación esto facilitará la lectura de los mismos al transformarlos en razones de momios (<em>odds ratios</em>).</p>
-<div class="sourceCode" id="cb126"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb125"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">logit2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/glm.html">glm</a></span><span class="op">(</span><span class="va">egp2</span> <span class="op">~</span> <span class="va">educ_hog_f</span> <span class="op">+</span> <span class="va">egp5a_f</span> <span class="op">+</span> <span class="va">educ_f</span> <span class="op">+</span> <span class="va">sexo_f</span>, data <span class="op">=</span> <span class="va">enes_movilidad</span>, family <span class="op">=</span> <span class="st">"binomial"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu"><a href="https://jtools.jacob-long.com/reference/summ.html">summ</a></span><span class="op">(</span><span class="va">logit2</span>, exp <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
@@ -1266,7 +1217,7 @@ sexo_fMujer
 </td>
 </tr></tfoot>
 </table></div>
-<div class="sourceCode" id="cb127"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb126"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">logit2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/glm.html">glm</a></span><span class="op">(</span><span class="va">egp2</span> <span class="op">~</span> <span class="va">educ_hog_f</span> <span class="op">+</span> <span class="va">egp5a_f</span> <span class="op">+</span> <span class="va">educ_f</span> <span class="op">+</span> <span class="va">sexo_f</span>, data <span class="op">=</span> <span class="va">enes_movilidad</span>, family <span class="op">=</span> <span class="st">"binomial"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu"><a href="https://jtools.jacob-long.com/reference/export_summs.html">export_summs</a></span><span class="op">(</span><span class="va">logit2</span>, exp <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
@@ -1275,11 +1226,11 @@ sexo_fMujer
 <p>En el caso del género, las mujeres presentan un <code>17%</code> (<code>1,17</code> veces) más de oportunidades que los varones de acceder a la clase de servicio.</p>
 <p>Cómo regla de oro, las razones de momios (coeficientes exponenciados) pueden variar de <code>0</code> a <code>infinito</code>, siendo <code>1</code> la presencia de independencia estadística. Valores mayores a <code>1</code> implican una mayor oportunidad de que un suceso ocurra, mientras que valores menores a <code>1</code> implican menores oportunidades de que un suceso ocurra.</p>
 <p>Finalmente si lo que se quiere es presentar la comparación entre los dos modelos (o varios), tal como se suelen mostrar en las revistas científicas, recomendamos la instalación del paquete <code>huxtable</code>. Utilizando el comando <code>export_summs</code> e indicando en las opciones nuestros modelos, mediante el código:</p>
-<div class="sourceCode" id="cb128"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb127"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://jtools.jacob-long.com/reference/export_summs.html">export_summs</a></span><span class="op">(</span><span class="va">logit1</span>, <span class="va">logit2</span>, scale <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
-<div class="inline-table"><table class="huxtable" style="border-collapse: collapse; border: 0px; margin-bottom: 2em; margin-top: 2em; ; margin-left: auto; margin-right: auto;  " id="tab:unnamed-chunk-113">
+<div class="inline-table"><table class="huxtable" style="border-collapse: collapse; border: 0px; margin-bottom: 2em; margin-top: 2em; ; margin-left: auto; margin-right: auto;  " id="tab:unnamed-chunk-112">
 <caption style="caption-side: top; text-align: center;">
-<span id="tab:unnamed-chunk-113">Tabla 7.2: </span> </caption>
+<span id="tab:unnamed-chunk-112">Tabla 7.2: </span> </caption>
 <col>
 <col>
 <col>
@@ -1289,119 +1240,119 @@ sexo_fMujer
 <th style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.8pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">Model 2</th>
 </tr>
 <tr>
-<th style="vertical-align: top; text-align: left; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">(Intercept)</th>
+<th style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">(Intercept)</th>
 <td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">-0.55 ***</td>
 <td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">-2.00 ***</td>
 </tr>
 <tr>
-<th style="vertical-align: top; text-align: left; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;"></th>
-<td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">(0.09)   </td>
-<td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">(0.13)   </td>
+<th style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;"></th>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">(0.09)   </td>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">(0.13)   </td>
 </tr>
 <tr>
-<th style="vertical-align: top; text-align: left; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">educ_hog_fSec. completo</th>
-<td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.77 ***</td>
-<td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.12    </td>
+<th style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">educ_hog_fSec. completo</th>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.77 ***</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.12    </td>
 </tr>
 <tr>
-<th style="vertical-align: top; text-align: left; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;"></th>
-<td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">(0.08)   </td>
-<td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">(0.10)   </td>
+<th style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;"></th>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">(0.08)   </td>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">(0.10)   </td>
 </tr>
 <tr>
-<th style="vertical-align: top; text-align: left; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">educ_hog_fSuperior completo</th>
-<td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">1.22 ***</td>
-<td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.17    </td>
+<th style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">educ_hog_fSuperior completo</th>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">1.22 ***</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.17    </td>
 </tr>
 <tr>
-<th style="vertical-align: top; text-align: left; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;"></th>
-<td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">(0.11)   </td>
-<td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">(0.13)   </td>
+<th style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;"></th>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">(0.11)   </td>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">(0.13)   </td>
 </tr>
 <tr>
-<th style="vertical-align: top; text-align: left; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">egp5a_fTR</th>
-<td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">-0.61 ***</td>
-<td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">-0.46 ** </td>
+<th style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">egp5a_fTR</th>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">-0.61 ***</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">-0.46 ** </td>
 </tr>
 <tr>
-<th style="vertical-align: top; text-align: left; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;"></th>
-<td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">(0.14)   </td>
-<td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">(0.16)   </td>
+<th style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;"></th>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">(0.14)   </td>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">(0.16)   </td>
 </tr>
 <tr>
-<th style="vertical-align: top; text-align: left; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">egp5a_fPB</th>
-<td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">-0.66 ***</td>
-<td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">-0.45 ***</td>
+<th style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">egp5a_fPB</th>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">-0.66 ***</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">-0.45 ***</td>
 </tr>
 <tr>
-<th style="vertical-align: top; text-align: left; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;"></th>
-<td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">(0.10)   </td>
-<td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">(0.11)   </td>
+<th style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;"></th>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">(0.10)   </td>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">(0.11)   </td>
 </tr>
 <tr>
-<th style="vertical-align: top; text-align: left; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">egp5a_fCTC</th>
-<td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">-0.71 ***</td>
-<td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">-0.51 ***</td>
+<th style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">egp5a_fCTC</th>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">-0.71 ***</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">-0.51 ***</td>
 </tr>
 <tr>
-<th style="vertical-align: top; text-align: left; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;"></th>
-<td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">(0.11)   </td>
-<td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">(0.13)   </td>
+<th style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;"></th>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">(0.11)   </td>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">(0.13)   </td>
 </tr>
 <tr>
-<th style="vertical-align: top; text-align: left; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">egp5a_fCTNC</th>
-<td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">-1.38 ***</td>
-<td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">-0.86 ***</td>
+<th style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">egp5a_fCTNC</th>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">-1.38 ***</td>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">-0.86 ***</td>
 </tr>
 <tr>
-<th style="vertical-align: top; text-align: left; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;"></th>
-<td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">(0.11)   </td>
-<td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">(0.12)   </td>
+<th style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;"></th>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">(0.11)   </td>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">(0.12)   </td>
 </tr>
 <tr>
-<th style="vertical-align: top; text-align: left; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">educ_fSec. completo</th>
-<td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">       </td>
-<td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">1.46 ***</td>
+<th style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">educ_fSec. completo</th>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">       </td>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">1.46 ***</td>
 </tr>
 <tr>
-<th style="vertical-align: top; text-align: left; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;"></th>
-<td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">       </td>
-<td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">(0.09)   </td>
+<th style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;"></th>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">       </td>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">(0.09)   </td>
 </tr>
 <tr>
-<th style="vertical-align: top; text-align: left; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">educ_fSuperior completo</th>
-<td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">       </td>
-<td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">3.26 ***</td>
+<th style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">educ_fSuperior completo</th>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">       </td>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">3.26 ***</td>
 </tr>
 <tr>
-<th style="vertical-align: top; text-align: left; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;"></th>
-<td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">       </td>
-<td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">(0.10)   </td>
+<th style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;"></th>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">       </td>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">(0.10)   </td>
 </tr>
 <tr>
-<th style="vertical-align: top; text-align: left; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">sexo_fMujer</th>
-<td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">       </td>
-<td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.16 *  </td>
+<th style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">sexo_fMujer</th>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">       </td>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.16 *  </td>
 </tr>
 <tr>
-<th style="vertical-align: top; text-align: left; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;"></th>
+<th style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;"></th>
 <td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">       </td>
 <td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">(0.07)   </td>
 </tr>
 <tr>
-<th style="vertical-align: top; text-align: left; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">N</th>
+<th style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">N</th>
 <td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">5907       </td>
 <td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">5900       </td>
 </tr>
 <tr>
-<th style="vertical-align: top; text-align: left; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">AIC</th>
-<td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">6175.46    </td>
-<td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">4947.04    </td>
+<th style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">AIC</th>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">6175.46    </td>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">4947.04    </td>
 </tr>
 <tr>
-<th style="vertical-align: top; text-align: left; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">BIC</th>
-<td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">6222.24    </td>
-<td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">5013.87    </td>
+<th style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">BIC</th>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">6222.24    </td>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">5013.87    </td>
 </tr>
 <tr>
 <th style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.8pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">Pseudo R2</th>
@@ -1454,7 +1405,7 @@ sexo_fMujer
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Libro de Cocina para el Análisis de las Clases Sociales en Argentina</strong>" was written by Nicolás Sacco, José Rodríguez de la Fuente, Sofia Jaime. It was last built on 2022-10-28.</p>
+    <p>"<strong>Libro de Cocina para el Análisis de las Clases Sociales en Argentina</strong>" was written by Nicolás Sacco, José Rodríguez de la Fuente, Sofia Jaime. It was last built on 2023-04-21.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
@@ -1467,7 +1418,7 @@ sexo_fMujer
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

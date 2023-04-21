@@ -62,10 +62,6 @@ Para ello, tal como hemos visto en el [Capítulo 2](#fuentes), descargaremos las
 ```{r, message=FALSE, warning=FALSE, echo=TRUE}
 eph_1115 <- get_microdata(year = 2011:2015, trimester = 2, type = "individual")
 
-eph_1115 <- eph_1115 %>%
-  select(microdata) %>%
-  unnest(cols = c(microdata))
-
 ```
 
 Como puede verse ahora contamos con una base de `333.819` casos y con información para los seis años seleccionados.
