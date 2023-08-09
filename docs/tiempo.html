@@ -1,453 +1,482 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="" xml:lang="">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Capítulo 8 Tiempo, espacio y clases sociales | Libro de Cocina para el Análisis de las Clases Sociales en Argentina</title>
-<meta name="author" content="Nicolás Sacco">
-<meta name="author" content="José Rodríguez de la Fuente">
-<meta name="author" content="Sofia Jaime">
-<meta name="description" content="En este capítulo trabajaremos a partir de las siguientes librerías de R: library(tidyverse) library(eph) library(sf) library(ggthemes) Hasta aquí, en el libro tratamos de presentar el modo en que...">
-<meta name="generator" content="bookdown 0.33 with bs4_book()">
-<meta property="og:title" content="Capítulo 8 Tiempo, espacio y clases sociales | Libro de Cocina para el Análisis de las Clases Sociales en Argentina">
-<meta property="og:type" content="book">
-<meta property="og:description" content="En este capítulo trabajaremos a partir de las siguientes librerías de R: library(tidyverse) library(eph) library(sf) library(ggthemes) Hasta aquí, en el libro tratamos de presentar el modo en que...">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Capítulo 8 Tiempo, espacio y clases sociales | Libro de Cocina para el Análisis de las Clases Sociales en Argentina">
-<meta name="twitter:description" content="En este capítulo trabajaremos a partir de las siguientes librerías de R: library(tidyverse) library(eph) library(sf) library(ggthemes) Hasta aquí, en el libro tratamos de presentar el modo en que...">
-<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.2/transition.js"></script><script src="libs/bs3compat-0.4.2/tabs.js"></script><script src="libs/bs3compat-0.4.2/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
-<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/kePrint-0.0.1/kePrint.js"></script><link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet">
-<link href="libs/vembedr-0.1.5/css/vembedr.css" rel="stylesheet">
-<link href="libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
-<script src="libs/pagedtable-1.1/js/pagedtable.js"></script><!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-247494419-1"></script><script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
 
-      gtag('config', 'UA-247494419-1');
-    </script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
-    
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-  </style>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Capítulo 8 Tiempo, espacio y clases sociales | Libro de Cocina para el Análisis de las Clases Sociales en Argentina</title>
+  <meta name="description" content="Capítulo 8 Tiempo, espacio y clases sociales | Libro de Cocina para el Análisis de las Clases Sociales en Argentina" />
+  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Capítulo 8 Tiempo, espacio y clases sociales | Libro de Cocina para el Análisis de las Clases Sociales en Argentina" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Capítulo 8 Tiempo, espacio y clases sociales | Libro de Cocina para el Análisis de las Clases Sociales en Argentina" />
+  <meta name="github-repo" content="nsacco/libroESA" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Capítulo 8 Tiempo, espacio y clases sociales | Libro de Cocina para el Análisis de las Clases Sociales en Argentina" />
+  
+  <meta name="twitter:description" content="Capítulo 8 Tiempo, espacio y clases sociales | Libro de Cocina para el Análisis de las Clases Sociales en Argentina" />
+  
+
+<meta name="author" content="Nicolás Sacco" />
+<meta name="author" content="José Rodríguez de la Fuente" />
+<meta name="author" content="Sofia Jaime" />
+
+
+<meta name="date" content="2023-08-09" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="movilidad3.html"/>
+<link rel="next" href="temporal.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/vembedr-0.1.5/css/vembedr.css" rel="stylesheet" />
+<link href="libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
+<script src="libs/pagedtable-1.1/js/pagedtable.js"></script>
+<link href="libs/tabwid-1.1.3/tabwid.css" rel="stylesheet" />
+<script src="libs/tabwid-1.1.3/tabwid.js"></script>
+
+
 <style type="text/css">
-    /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
-    div.csl-bib-body { }
-    div.csl-entry {
-      clear: both;
-        }
-    .hanging div.csl-entry {
-      margin-left:2em;
-      text-indent:-2em;
-    }
-    div.csl-left-margin {
-      min-width:2em;
-      float:left;
-    }
-    div.csl-right-inline {
-      margin-left:2em;
-      padding-left:1em;
-    }
-    div.csl-indent {
-      margin-left: 2em;
-    }
-  </style>
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
 </head>
-<body data-spy="scroll" data-target="#toc">
 
-<div class="container-fluid">
-<div class="row">
-  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+<body>
 
-    <div class="d-flex align-items-start justify-content-between">
-      <h1>
-        <a href="index.html" title="">Libro de Cocina para el Análisis de las Clases Sociales en Argentina</a>
-      </h1>
-      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Libro de Cocina para el Análisis de las Clases Sociales en Argentina</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefacio</a>
+<ul>
+<li class="chapter" data-level="" data-path="contacto-con-los-autores.html"><a href="contacto-con-los-autores.html"><i class="fa fa-check"></i>Contacto con los autores</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="agradecimientos.html"><a href="agradecimientos.html"><i class="fa fa-check"></i>Agradecimientos</a></li>
+<li class="part"><span><b>I Aspectos teóricos</b></span></li>
+<li class="chapter" data-level="1" data-path="estructura1.html"><a href="estructura1.html"><i class="fa fa-check"></i><b>1</b> La estructura social en la Argentina actual</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="analisis1.html"><a href="analisis1.html"><i class="fa fa-check"></i><b>1.1</b> Del análisis de las clases sociales a la teoría de la estratificación social</a></li>
+<li class="chapter" data-level="1.2" data-path="marx.html"><a href="marx.html"><i class="fa fa-check"></i><b>1.2</b> Marx, Weber y el funcionalismo</a></li>
+<li class="chapter" data-level="1.3" data-path="esperanza.html"><a href="esperanza.html"><i class="fa fa-check"></i><b>1.3</b> La esperanza de vida de la teoría: debates contemporáneos</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="esperanza.html"><a href="esperanza.html#la-grieta-de-los-ochenta"><i class="fa fa-check"></i><b>1.3.1</b> La grieta de los ochenta</a></li>
+<li class="chapter" data-level="1.3.2" data-path="esperanza.html"><a href="esperanza.html#nuevos-debateshacia-una-operacionalización-más-refinada-de-los-conceptos"><i class="fa fa-check"></i><b>1.3.2</b> Nuevos debates…¿Hacia una operacionalización más refinada de los conceptos?</a></li>
+<li class="chapter" data-level="1.3.3" data-path="esperanza.html"><a href="esperanza.html#la-muerte-de-la-clases"><i class="fa fa-check"></i><b>1.3.3</b> La muerte de la clases</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="cuestion.html"><a href="cuestion.html"><i class="fa fa-check"></i><b>1.4</b> La cuestión en América Latina y en la Argentina</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="cuestion.html"><a href="cuestion.html#nuevos-aires"><i class="fa fa-check"></i><b>1.4.1</b> Nuevos aires</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>II Fuentes de datos</b></span></li>
+<li class="chapter" data-level="2" data-path="fuentes.html"><a href="fuentes.html"><i class="fa fa-check"></i><b>2</b> Encuestas de hogares</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="eph1.html"><a href="eph1.html"><i class="fa fa-check"></i><b>2.1</b> La Encuesta Permanente de Hogares. Características principales</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="eph1.html"><a href="eph1.html#características-de-la-eph-continua"><i class="fa fa-check"></i><b>2.1.1</b> Características de la EPH continua</a></li>
+<li class="chapter" data-level="2.1.2" data-path="eph1.html"><a href="eph1.html#la-eph-como-fuente-de-análisis-de-la-estructura-de-clases"><i class="fa fa-check"></i><b>2.1.2</b> La EPH como fuente de análisis de la estructura de clases</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="eph2.html"><a href="eph2.html"><i class="fa fa-check"></i><b>2.2</b> Comenzando a utilizar la EPH</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="eph2.html"><a href="eph2.html#el-método-clásico"><i class="fa fa-check"></i><b>2.2.1</b> El “método clásico”</a></li>
+<li class="chapter" data-level="2.2.2" data-path="eph2.html"><a href="eph2.html#el-paquete-eph"><i class="fa fa-check"></i><b>2.2.2</b> El paquete <code>eph</code></a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="eph3.html"><a href="eph3.html"><i class="fa fa-check"></i><b>2.3</b> Primeros pasos en el estudio de las clases sociales a través de la EPH</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="eph3.html"><a href="eph3.html#uniendo-las-bases-de-individuos-y-hogares"><i class="fa fa-check"></i><b>2.3.1</b> Uniendo las bases de individuos y hogares</a></li>
+<li class="chapter" data-level="2.3.2" data-path="eph3.html"><a href="eph3.html#población-bajo-análisis"><i class="fa fa-check"></i><b>2.3.2</b> Población bajo análisis</a></li>
+<li class="chapter" data-level="2.3.3" data-path="eph3.html"><a href="eph3.html#ponderación-y-expansión-de-la-muestra"><i class="fa fa-check"></i><b>2.3.3</b> Ponderación y expansión de la muestra</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="otras.html"><a href="otras.html"><i class="fa fa-check"></i><b>2.4</b> Otras encuestas de hogares para el estudio de la estructura de clases</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="fuentes2.html"><a href="fuentes2.html"><i class="fa fa-check"></i><b>3</b> Los censos de población modernos</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="clases3.html"><a href="clases3.html"><i class="fa fa-check"></i><b>3.1</b> Clases sociales y censos de población</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="clases3.html"><a href="clases3.html#antecedentes"><i class="fa fa-check"></i><b>3.1.1</b> Antecedentes</a></li>
+<li class="chapter" data-level="3.1.2" data-path="clases3.html"><a href="clases3.html#practicidad"><i class="fa fa-check"></i><b>3.1.2</b> Practicidad</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="censos.html"><a href="censos.html"><i class="fa fa-check"></i><b>3.2</b> Censos de población modernos. Características principales</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="censos.html"><a href="censos.html#las-características-económicas-en-los-censos-de-población"><i class="fa fa-check"></i><b>3.2.1</b> Las características económicas en los censos de población</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="censos2.html"><a href="censos2.html"><i class="fa fa-check"></i><b>3.3</b> Censos modernos: acceso diferencial</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="censos2.html"><a href="censos2.html#modos-de-acceso"><i class="fa fa-check"></i><b>3.3.1</b> Modos de acceso</a></li>
+<li class="chapter" data-level="3.3.2" data-path="censos2.html"><a href="censos2.html#es-lo-que-hay"><i class="fa fa-check"></i><b>3.3.2</b> Es lo que hay</a></li>
+<li class="chapter" data-level="3.3.3" data-path="censos2.html"><a href="censos2.html#procesamiento-de-datos-en-líneau-2"><i class="fa fa-check"></i><b>3.3.3</b> Procesamiento de datos en línea</a></li>
+<li class="chapter" data-level="3.3.4" data-path="censos2.html"><a href="censos2.html#descarga-directa-de-microdatos"><i class="fa fa-check"></i><b>3.3.4</b> Descarga directa de microdatos</a></li>
+<li class="chapter" data-level="3.3.5" data-path="censos2.html"><a href="censos2.html#ipums-i"><i class="fa fa-check"></i><b>3.3.5</b> IPUMS-I</a></li>
+<li class="chapter" data-level="3.3.6" data-path="censos2.html"><a href="censos2.html#solicitud-directa-al-indec"><i class="fa fa-check"></i><b>3.3.6</b> Solicitud directa al INDEC</a></li>
+<li class="chapter" data-level="3.3.7" data-path="censos2.html"><a href="censos2.html#otras-opciones-no-oficiales"><i class="fa fa-check"></i><b>3.3.7</b> Otras opciones no oficiales</a></li>
+<li class="chapter" data-level="3.3.8" data-path="censos2.html"><a href="censos2.html#disponibilidad-en-detalle-para-el-estudio-de-clases-sociales"><i class="fa fa-check"></i><b>3.3.8</b> Disponibilidad en detalle para el estudio de clases sociales</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>III Variables</b></span></li>
+<li class="chapter" data-level="4" data-path="ocupacion.html"><a href="ocupacion.html"><i class="fa fa-check"></i><b>4</b> Las características económicas de la población</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="consideraciones.html"><a href="consideraciones.html"><i class="fa fa-check"></i><b>4.1</b> Consideraciones previas</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="consideraciones.html"><a href="consideraciones.html#las-reglas-del-juego"><i class="fa fa-check"></i><b>4.1.1</b> Las reglas del juego</a></li>
+<li class="chapter" data-level="4.1.2" data-path="consideraciones.html"><a href="consideraciones.html#la-estratificación-como-perspectiva-de-análisis"><i class="fa fa-check"></i><b>4.1.2</b> La estratificación como perspectiva de análisis</a></li>
+<li class="chapter" data-level="4.1.3" data-path="consideraciones.html"><a href="consideraciones.html#indicadores-de-la-estratificación-social"><i class="fa fa-check"></i><b>4.1.3</b> Indicadores de la estratificación social</a></li>
+<li class="chapter" data-level="4.1.4" data-path="consideraciones.html"><a href="consideraciones.html#la-fuerza-de-trabajo-y-las-características-económicas-de-la-población"><i class="fa fa-check"></i><b>4.1.4</b> La fuerza de trabajo y las características económicas de la población</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="las-variables-socio-ocupacionales.html"><a href="las-variables-socio-ocupacionales.html"><i class="fa fa-check"></i><b>4.2</b> Las variables socio-ocupacionales</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="las-variables-socio-ocupacionales.html"><a href="las-variables-socio-ocupacionales.html#condición-de-actividad"><i class="fa fa-check"></i><b>4.2.1</b> Condición de actividad</a></li>
+<li class="chapter" data-level="4.2.2" data-path="las-variables-socio-ocupacionales.html"><a href="las-variables-socio-ocupacionales.html#ocupación"><i class="fa fa-check"></i><b>4.2.2</b> Ocupación</a></li>
+<li class="chapter" data-level="4.2.3" data-path="las-variables-socio-ocupacionales.html"><a href="las-variables-socio-ocupacionales.html#rama-de-actividad"><i class="fa fa-check"></i><b>4.2.3</b> Rama de Actividad</a></li>
+<li class="chapter" data-level="4.2.4" data-path="las-variables-socio-ocupacionales.html"><a href="las-variables-socio-ocupacionales.html#categoría-de-ocupación"><i class="fa fa-check"></i><b>4.2.4</b> Categoría de Ocupación</a></li>
+<li class="chapter" data-level="4.2.5" data-path="las-variables-socio-ocupacionales.html"><a href="las-variables-socio-ocupacionales.html#sector-de-actividad"><i class="fa fa-check"></i><b>4.2.5</b> Sector de Actividad</a></li>
+<li class="chapter" data-level="4.2.6" data-path="las-variables-socio-ocupacionales.html"><a href="las-variables-socio-ocupacionales.html#tamaño-del-establecimiento"><i class="fa fa-check"></i><b>4.2.6</b> Tamaño del Establecimiento</a></li>
+<li class="chapter" data-level="4.2.7" data-path="las-variables-socio-ocupacionales.html"><a href="las-variables-socio-ocupacionales.html#supervisión"><i class="fa fa-check"></i><b>4.2.7</b> Supervisión</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="eph4.html"><a href="eph4.html"><i class="fa fa-check"></i><b>4.3</b> Explorando las variables socio-ocupacionales en la EPH</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="eph4.html"><a href="eph4.html#condición-de-actividad-1"><i class="fa fa-check"></i><b>4.3.1</b> Condición de actividad</a></li>
+<li class="chapter" data-level="4.3.2" data-path="eph4.html"><a href="eph4.html#ocupación-1"><i class="fa fa-check"></i><b>4.3.2</b> Ocupación</a></li>
+<li class="chapter" data-level="4.3.3" data-path="eph4.html"><a href="eph4.html#rama-de-actividad-1"><i class="fa fa-check"></i><b>4.3.3</b> Rama de actividad</a></li>
+<li class="chapter" data-level="4.3.4" data-path="eph4.html"><a href="eph4.html#categoría-de-ocupación-1"><i class="fa fa-check"></i><b>4.3.4</b> Categoría de ocupación</a></li>
+<li class="chapter" data-level="4.3.5" data-path="eph4.html"><a href="eph4.html#sector-de-actividad-1"><i class="fa fa-check"></i><b>4.3.5</b> Sector de actividad</a></li>
+<li class="chapter" data-level="4.3.6" data-path="eph4.html"><a href="eph4.html#tamaño-del-establecimiento-1"><i class="fa fa-check"></i><b>4.3.6</b> Tamaño del establecimiento</a></li>
+<li class="chapter" data-level="4.3.7" data-path="eph4.html"><a href="eph4.html#supervisión-1"><i class="fa fa-check"></i><b>4.3.7</b> Supervisión</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="clases5.html"><a href="clases5.html"><i class="fa fa-check"></i><b>5</b> Los Nomencladores de clases sociales</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="computadora.html"><a href="computadora.html"><i class="fa fa-check"></i><b>5.1</b> De las clases en el papel a las clases en la computadora</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="computadora.html"><a href="computadora.html#operacionalizando-el-concepto-de-clase"><i class="fa fa-check"></i><b>5.1.1</b> Operacionalizando el concepto de clase</a></li>
+<li class="chapter" data-level="5.1.2" data-path="computadora.html"><a href="computadora.html#clases-grupos-estratos-qué-medimos-cuando-analizamos-la-estructura-social"><i class="fa fa-check"></i><b>5.1.2</b> Clases, grupos, estratos ¿Qué medimos cuando analizamos la estructura social?</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="clases6.html"><a href="clases6.html"><i class="fa fa-check"></i><b>5.2</b> Enfoques operacionalizables de clases y estratos sociales</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="clases6.html"><a href="clases6.html#esquemas-internacionales"><i class="fa fa-check"></i><b>5.2.1</b> Esquemas internacionales</a></li>
+<li class="chapter" data-level="5.2.2" data-path="clases6.html"><a href="clases6.html#esquemas-nacionales"><i class="fa fa-check"></i><b>5.2.2</b> Esquemas nacionales</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="operacion1.html"><a href="operacion1.html"><i class="fa fa-check"></i><b>5.3</b> Operacionalización paso a paso</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="operacion1.html"><a href="operacion1.html#punto-de-partida"><i class="fa fa-check"></i><b>5.3.1</b> Punto de partida</a></li>
+<li class="chapter" data-level="5.3.2" data-path="operacion1.html"><a href="operacion1.html#acondicionando-la-base"><i class="fa fa-check"></i><b>5.3.2</b> Acondicionando la base</a></li>
+<li class="chapter" data-level="5.3.3" data-path="operacion1.html"><a href="operacion1.html#creación-cso-desagregado"><i class="fa fa-check"></i><b>5.3.3</b> Creación CSO desagregado</a></li>
+<li class="chapter" data-level="5.3.4" data-path="operacion1.html"><a href="operacion1.html#creación-del-cso-agregado"><i class="fa fa-check"></i><b>5.3.4</b> Creación del CSO agregado</a></li>
+<li class="chapter" data-level="5.3.5" data-path="operacion1.html"><a href="operacion1.html#creación-esquema-de-clase"><i class="fa fa-check"></i><b>5.3.5</b> Creación esquema de clase</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="operacion2.html"><a href="operacion2.html"><i class="fa fa-check"></i><b>5.4</b> Operacionalización automática</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="operacion2.html"><a href="operacion2.html#operacionalizando-la-escala-isei"><i class="fa fa-check"></i><b>5.4.1</b> Operacionalizando la escala ISEI</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="unidades.html"><a href="unidades.html"><i class="fa fa-check"></i><b>5.5</b> Unidades de análisis y clases sociales</a>
+<ul>
+<li class="chapter" data-level="5.5.1" data-path="unidades.html"><a href="unidades.html#breve-discusión-teórica"><i class="fa fa-check"></i><b>5.5.1</b> Breve discusión teórica</a></li>
+<li class="chapter" data-level="5.5.2" data-path="unidades.html"><a href="unidades.html#opciones-metodológicas"><i class="fa fa-check"></i><b>5.5.2</b> Opciones metodológicas</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>IV Análisis</b></span></li>
+<li class="chapter" data-level="6" data-path="independiente.html"><a href="independiente.html"><i class="fa fa-check"></i><b>6</b> La clase como variable independiente</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="huevo.html"><a href="huevo.html"><i class="fa fa-check"></i><b>6.1</b> La estructura de clases ¿el huevo o la gallina?</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="huevo.html"><a href="huevo.html#el-enfoque-relacional-weberiano"><i class="fa fa-check"></i><b>6.1.1</b> El enfoque relacional-weberiano</a></li>
+<li class="chapter" data-level="6.1.2" data-path="huevo.html"><a href="huevo.html#estructural-funcionalismo"><i class="fa fa-check"></i><b>6.1.2</b> Estructural funcionalismo</a></li>
+<li class="chapter" data-level="6.1.3" data-path="huevo.html"><a href="huevo.html#un-enfoque-intermedio"><i class="fa fa-check"></i><b>6.1.3</b> Un enfoque intermedio</a></li>
+<li class="chapter" data-level="6.1.4" data-path="huevo.html"><a href="huevo.html#una-cuarta-mirada"><i class="fa fa-check"></i><b>6.1.4</b> Una cuarta mirada</a></li>
+<li class="chapter" data-level="6.1.5" data-path="huevo.html"><a href="huevo.html#epílogo-una-sociedad-sin-clases"><i class="fa fa-check"></i><b>6.1.5</b> Epílogo: una sociedad sin clases</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="explorando.html"><a href="explorando.html"><i class="fa fa-check"></i><b>6.2</b> Explorando los datos por clase social</a></li>
+<li class="chapter" data-level="6.3" data-path="aprox.html"><a href="aprox.html"><i class="fa fa-check"></i><b>6.3</b> Aproximación al análisis multidimensional</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="dependiente.html"><a href="dependiente.html"><i class="fa fa-check"></i><b>7</b> La clase como variable dependiente</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="movilidad1.html"><a href="movilidad1.html"><i class="fa fa-check"></i><b>7.1</b> El estudio de la movilidad social</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="movilidad1.html"><a href="movilidad1.html#qué-es-la-movilidad-social"><i class="fa fa-check"></i><b>7.1.1</b> ¿Qué es la movilidad social?</a></li>
+<li class="chapter" data-level="7.1.2" data-path="movilidad1.html"><a href="movilidad1.html#enfoques-funcionalistas"><i class="fa fa-check"></i><b>7.1.2</b> Enfoques funcionalistas</a></li>
+<li class="chapter" data-level="7.1.3" data-path="movilidad1.html"><a href="movilidad1.html#enfoques-de-clase"><i class="fa fa-check"></i><b>7.1.3</b> Enfoques de clase</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="enes.html"><a href="enes.html"><i class="fa fa-check"></i><b>7.2</b> El uso de la base ENES-PISAC</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="enes.html"><a href="enes.html#algunas-consideraciones-de-la-enes"><i class="fa fa-check"></i><b>7.2.1</b> Algunas consideraciones de la ENES</a></li>
+<li class="chapter" data-level="7.2.2" data-path="enes.html"><a href="enes.html#abriendo-y-pegando-la-base-enes"><i class="fa fa-check"></i><b>7.2.2</b> Abriendo y pegando la base ENES</a></li>
+<li class="chapter" data-level="7.2.3" data-path="enes.html"><a href="enes.html#recodificación-de-variables-y-filtros"><i class="fa fa-check"></i><b>7.2.3</b> Recodificación de variables y filtros</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="movilidad2.html"><a href="movilidad2.html"><i class="fa fa-check"></i><b>7.3</b> Las tablas de movilidad</a></li>
+<li class="chapter" data-level="7.4" data-path="movilidad3.html"><a href="movilidad3.html"><i class="fa fa-check"></i><b>7.4</b> Aproximación al análisis multivariable de la movilidad social</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="tiempo.html"><a href="tiempo.html"><i class="fa fa-check"></i><b>8</b> Tiempo, espacio y clases sociales</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="temporal.html"><a href="temporal.html"><i class="fa fa-check"></i><b>8.1</b> La dimensión temporal</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="temporal.html"><a href="temporal.html#algunos-ejemplos-de-la-bibliografía"><i class="fa fa-check"></i><b>8.1.1</b> Algunos ejemplos de la bibliografía</a></li>
+<li class="chapter" data-level="8.1.2" data-path="temporal.html"><a href="temporal.html#ejemplo-práctico"><i class="fa fa-check"></i><b>8.1.2</b> Ejemplo práctico</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="espacial.html"><a href="espacial.html"><i class="fa fa-check"></i><b>8.2</b> La dimensión espacial</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="espacial.html"><a href="espacial.html#algunos-ejemplos-de-la-bibliografía-1"><i class="fa fa-check"></i><b>8.2.1</b> Algunos ejemplos de la bibliografía</a></li>
+<li class="chapter" data-level="8.2.2" data-path="espacial.html"><a href="espacial.html#ejemplo-práctico-1"><i class="fa fa-check"></i><b>8.2.2</b> Ejemplo práctico</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>V Anexo</b></span></li>
+<li class="chapter" data-level="9" data-path="anexo.html"><a href="anexo.html"><i class="fa fa-check"></i><b>9</b> Introducción a R y RStudio</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="introR.html"><a href="introR.html"><i class="fa fa-check"></i><b>9.1</b> Introducción</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="introR.html"><a href="introR.html#el-entorno-de-r"><i class="fa fa-check"></i><b>9.1.1</b> El entorno de R</a></li>
+<li class="chapter" data-level="9.1.2" data-path="introR.html"><a href="introR.html#aplicar-estadística-en-r"><i class="fa fa-check"></i><b>9.1.2</b> Aplicar estadística en R</a></li>
+<li class="chapter" data-level="9.1.3" data-path="introR.html"><a href="introR.html#descargar-e-instalar-r"><i class="fa fa-check"></i><b>9.1.3</b> Descargar e instalar R</a></li>
+<li class="chapter" data-level="9.1.4" data-path="introR.html"><a href="introR.html#rstudio"><i class="fa fa-check"></i><b>9.1.4</b> RStudio</a></li>
+<li class="chapter" data-level="9.1.5" data-path="introR.html"><a href="introR.html#descargar-e-instalar-rstudio"><i class="fa fa-check"></i><b>9.1.5</b> Descargar e instalar RStudio</a></li>
+<li class="chapter" data-level="9.1.6" data-path="introR.html"><a href="introR.html#partes-de-rstudio"><i class="fa fa-check"></i><b>9.1.6</b> Partes de RStudio</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="workflow.html"><a href="workflow.html"><i class="fa fa-check"></i><b>9.2</b> Workflow</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="workflow.html"><a href="workflow.html#proyectos-r-studio"><i class="fa fa-check"></i><b>9.2.1</b> Proyectos R Studio</a></li>
+<li class="chapter" data-level="9.2.2" data-path="workflow.html"><a href="workflow.html#organización"><i class="fa fa-check"></i><b>9.2.2</b> Organización</a></li>
+<li class="chapter" data-level="9.2.3" data-path="workflow.html"><a href="workflow.html#utilidad"><i class="fa fa-check"></i><b>9.2.3</b> Utilidad</a></li>
+<li class="chapter" data-level="9.2.4" data-path="workflow.html"><a href="workflow.html#crear-un-proyecto-de-rstudio"><i class="fa fa-check"></i><b>9.2.4</b> Crear un Proyecto de RStudio</a></li>
+<li class="chapter" data-level="9.2.5" data-path="workflow.html"><a href="workflow.html#crear-un-archivo-de-r"><i class="fa fa-check"></i><b>9.2.5</b> Crear un archivo de R</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="rmarkdown.html"><a href="rmarkdown.html"><i class="fa fa-check"></i><b>9.3</b> RMarkdown</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="rmarkdown.html"><a href="rmarkdown.html#agregar-texto"><i class="fa fa-check"></i><b>9.3.1</b> Agregar texto</a></li>
+<li class="chapter" data-level="9.3.2" data-path="rmarkdown.html"><a href="rmarkdown.html#listas"><i class="fa fa-check"></i><b>9.3.2</b> Listas</a></li>
+<li class="chapter" data-level="9.3.3" data-path="rmarkdown.html"><a href="rmarkdown.html#editar-texto"><i class="fa fa-check"></i><b>9.3.3</b> Editar texto</a></li>
+<li class="chapter" data-level="9.3.4" data-path="rmarkdown.html"><a href="rmarkdown.html#insertar-imágenes"><i class="fa fa-check"></i><b>9.3.4</b> Insertar imágenes</a></li>
+<li class="chapter" data-level="9.3.5" data-path="rmarkdown.html"><a href="rmarkdown.html#enlaces"><i class="fa fa-check"></i><b>9.3.5</b> Enlaces</a></li>
+<li class="chapter" data-level="9.3.6" data-path="rmarkdown.html"><a href="rmarkdown.html#tips-para-escribir-código-en-r"><i class="fa fa-check"></i><b>9.3.6</b> Tips para escribir código en R</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="primerospasos.html"><a href="primerospasos.html"><i class="fa fa-check"></i><b>9.4</b> Primeros pasos en R</a>
+<ul>
+<li class="chapter" data-level="9.4.1" data-path="primerospasos.html"><a href="primerospasos.html#funciones-y-comandos-elementales"><i class="fa fa-check"></i><b>9.4.1</b> Funciones y comandos elementales</a></li>
+<li class="chapter" data-level="9.4.2" data-path="primerospasos.html"><a href="primerospasos.html#valores-y-vectores"><i class="fa fa-check"></i><b>9.4.2</b> Valores y vectores</a></li>
+<li class="chapter" data-level="9.4.3" data-path="primerospasos.html"><a href="primerospasos.html#matrices-y-listas"><i class="fa fa-check"></i><b>9.4.3</b> Matrices y listas</a></li>
+<li class="chapter" data-level="9.4.4" data-path="primerospasos.html"><a href="primerospasos.html#filtrado-subsetting"><i class="fa fa-check"></i><b>9.4.4</b> Filtrado (Subsetting)</a></li>
+<li class="chapter" data-level="9.4.5" data-path="primerospasos.html"><a href="primerospasos.html#cargar-datos-en-r"><i class="fa fa-check"></i><b>9.4.5</b> Cargar datos en R</a></li>
+</ul></li>
+<li class="chapter" data-level="9.5" data-path="recursos.html"><a href="recursos.html"><i class="fa fa-check"></i><b>9.5</b> Otros recursos de consulta</a></li>
+</ul></li>
+<li class="part"><span><b>VI Referencias bibliográficas</b></span></li>
+<li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
     </div>
 
-    <div id="main-nav" class="collapse-lg">
-      <form role="search">
-        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
-</form>
-
-      <nav aria-label="Table of contents"><h2>Table of contents</h2>
-        <ul class="book-toc list-unstyled">
-<li><a class="" href="index.html">Prefacio</a></li>
-<li><a class="" href="agradecimientos.html">Agradecimientos</a></li>
-<li class="book-part">Aspectos teóricos</li>
-<li><a class="" href="estructura1.html"><span class="header-section-number">1</span> La estructura social en la Argentina actual</a></li>
-<li class="book-part">Fuentes de datos</li>
-<li><a class="" href="fuentes.html"><span class="header-section-number">2</span> Encuestas de hogares</a></li>
-<li><a class="" href="fuentes2.html"><span class="header-section-number">3</span> Los censos de población modernos</a></li>
-<li class="book-part">Variables</li>
-<li><a class="" href="ocupacion.html"><span class="header-section-number">4</span> Las características económicas de la población</a></li>
-<li><a class="" href="clases5.html"><span class="header-section-number">5</span> Los Nomencladores de clases sociales</a></li>
-<li class="book-part">Análisis</li>
-<li><a class="" href="independiente.html"><span class="header-section-number">6</span> La clase como variable independiente</a></li>
-<li><a class="" href="dependiente.html"><span class="header-section-number">7</span> La clase como variable dependiente</a></li>
-<li><a class="active" href="tiempo.html"><span class="header-section-number">8</span> Tiempo, espacio y clases sociales</a></li>
-<li class="book-part">Anexo</li>
-<li><a class="" href="anexo.html"><span class="header-section-number">9</span> Introducción a R y RStudio</a></li>
-<li class="book-part">Referencias bibliográficas</li>
-<li><a class="" href="referencias.html">Referencias</a></li>
-</ul>
-
-        <div class="book-extra">
-          <p><a id="book-repo" href="https://github.com/nsacco/clases-arg">View book source <i class="fab fa-github"></i></a></p>
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Libro de Cocina para el Análisis de las Clases Sociales en Argentina</a>
+          </h1>
         </div>
-      </nav>
-</div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="tiempo" class="section level1" number="8">
-<h1>
-<span class="header-section-number">Capítulo 8</span> Tiempo, espacio y clases sociales<a class="anchor" aria-label="anchor" href="#tiempo"><i class="fas fa-link"></i></a>
-</h1>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="tiempo" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number">Capítulo 8</span> Tiempo, espacio y clases sociales<a href="tiempo.html#tiempo" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <!--*Capítulo en proceso de escritura*-->
-<div class="inline-figure"><img src="imagenes/volver_al_futuro.gif" width="60%" style="display: block; margin: auto;"></div>
+<p><img src="imagenes/volver_al_futuro.gif" width="60%" style="display: block; margin: auto;" /></p>
 <p>En este capítulo trabajaremos a partir de las siguientes librerías de <strong><code>R</code></strong>:</p>
-<div class="sourceCode" id="cb128"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/holatam/eph">eph</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://r-spatial.github.io/sf/">sf</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/jrnold/ggthemes">ggthemes</a></span><span class="op">)</span></span></code></pre></div>
-<p>Hasta aquí, en el libro tratamos de presentar el modo en que puede desentrañarse, principalmente a través de algunos procesos metodológicos, algunos aspectos de la realidad socio-económica. Siguiendo la propuesta de Osorio <span class="citation">(<a href="referencias.html#ref-Osorio2001" role="doc-biblioref">2001</a>)</span>, al estudiar las clases sociales, lo que hacemos es bucear en los <strong>espesores</strong> profundos de la estructura social para hallar ahí mecanismos y regularidades que no se brindan de modo transparente en la superficie inmediata que experimentamos cotidianamente. Retomando el ejemplo citado por el autor <span class="citation">(<a href="referencias.html#ref-Osorio2001" role="doc-biblioref">Osorio, 2001</a>, pp 41)</span>, una persona puede indicar o nos puede <em>parecer</em> de una clase, pero el análisis de una interrelación de factores nos puede llevar a posicionarlo en otra situación.</p>
+<div class="sourceCode" id="cb128"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb128-1"><a href="tiempo.html#cb128-1" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb128-2"><a href="tiempo.html#cb128-2" tabindex="-1"></a><span class="fu">library</span>(eph)</span>
+<span id="cb128-3"><a href="tiempo.html#cb128-3" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
+<span id="cb128-4"><a href="tiempo.html#cb128-4" tabindex="-1"></a><span class="fu">library</span>(ggthemes)</span></code></pre></div>
+<p>Hasta aquí, en el libro tratamos de presentar el modo en que puede desentrañarse, principalmente a través de algunos procesos metodológicos, algunos aspectos de la realidad socio-económica. Siguiendo la propuesta de Osorio <span class="citation">(<a href="referencias.html#ref-Osorio2001">2001</a>)</span>, al estudiar las clases sociales, lo que hacemos es bucear en los <strong>espesores</strong> profundos de la estructura social para hallar ahí mecanismos y regularidades que no se brindan de modo transparente en la superficie inmediata que experimentamos cotidianamente. Retomando el ejemplo citado por el autor <span class="citation">(<a href="referencias.html#ref-Osorio2001">Osorio, 2001</a>, pp 41)</span>, una persona puede indicar o nos puede <em>parecer</em> de una clase, pero el análisis de una interrelación de factores nos puede llevar a posicionarlo en otra situación.</p>
 <p>De este modo, además de los <strong>espesores</strong>, la dimensión <strong>temporal</strong> y la dimensión <strong>espacial</strong> son dos de los procesos sociales más importantes para evaluar los cambios que se producen en la estructura de clases y en la desigualdad que desde la misma se genera. La estructura social, y particularmente, las clases sociales no asumen la misma forma y composición a lo largo del tiempo, ni en los distintos niveles geográficos de un país, de un continente o del mundo. En este capítulo nos proponemos realizar una breve presentación acerca de cómo estos aspectos han sido tratados en la bibliografía del estudio de las clases sociales. Al mismo tiempo brindaremos algunos ejemplos sobre cómo podemos trabajar <em>empíricamente</em> dichas dimensiones.</p>
-<div id="temporal" class="section level2" number="8.1">
-<h2>
-<span class="header-section-number">8.1</span> La dimensión temporal<a class="anchor" aria-label="anchor" href="#temporal"><i class="fas fa-link"></i></a>
-</h2>
-<p>Uno de los primeros elementos a resaltar en el estudio de la dinámica temporal es que el <em>tiempo social</em> es distinta a la del <em>tiempo cronológico</em>. Mientras que este último es lineal, continuo y homogéneo, el tiempo social es diferencial, heterogéneo y discontinuo <span class="citation">(<a href="referencias.html#ref-Osorio2001" role="doc-biblioref">Osorio, 2001</a>, pp 46)</span>. En ciencias sociales el tiempo es clasificado, caracterizado y recortado en función de los procesos que acontecen. En este sentido, comúnmente hablamos de corto, medio y largo plazo. Mientras que el tiempo corto son breves y concentrados, en el tiempo medio y largo, los mismos se presentan en forma dilatada <span class="citation">(<a href="referencias.html#ref-Osorio2001" role="doc-biblioref">Osorio, 2001</a>, pp 49)</span>.</p>
-<p>La elección de que unidad temporal analizar será consecuencia no sólo de los objetivos de investigación, sino también del proceso social que se desea investigar. Por ejemplo, los estudios de estructura de clases o de movilidad social inter o intrageneracional, rara vez son analizados a partir de períodos cortos (uno o dos años), ya que los cambios estructurales suelen producirse en forma lenta y paulatina. Vale el ejemplo de los procesos de transformación en la estructura social a partir la migración del campo a las ciudades o de los cambios producidos a partir de la instauración de un modelo de acumulación basado en la valorización financiera.</p>
-<p>Esto no significa que no podamos estudiar la estructura de clases en el corto plazo. En momentos en los que se producen cambios profundos en forma rápida, como por ejemplo una pandemia o un proceso hiperinflacionario, un análisis del corto plazo puede brindarnos mucha información acerca de cómo el impacto pudo haberse producido en forma diferencial por clase social.</p>
-<div id="algunos-ejemplos-de-la-bibliografía" class="section level3" number="8.1.1">
-<h3>
-<span class="header-section-number">8.1.1</span> Algunos ejemplos de la bibliografía<a class="anchor" aria-label="anchor" href="#algunos-ejemplos-de-la-bibliograf%C3%ADa"><i class="fas fa-link"></i></a>
-</h3>
-<p>El estudio del cambio de la estructura de clases a través del tiempo fue una de las principales preocupaciones de los primeros trabajos sobre la temática realizados en Argentina. En este sentido, Gino Germani, pionero no sólo de la institucionalización de la sociología en el país sino en el estudio de la estructura social, en su principal obra, <em>Estructura social de la Argentina</em> <span class="citation">(<a href="referencias.html#ref-Germani1955" role="doc-biblioref">1955</a>)</span>, aborda los cambios producidos en las clases sociales a partir de la información censal disponible desde el censo de 1895.</p>
-<!--A continuación presentamos una tabla de una actualización de dicho trabajo en el que presenta un análisis de largo plazo, desde 1895 hasta 1960 [@Germani1971].-->
-<div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:unnamed-chunk-115"></span>
-<p class="caption">
-Gráfico 8.1: Evolución de la estratificación social. 1869-1960. <span class="citation">Germani (<a href="referencias.html#ref-Germani1971" role="doc-biblioref">1971</a>)</span>
-</p>
-<img src="imagenes/germani3.png" alt="Evolución de la estratificación social. 1869-1960. @Germani1971" width="80%">
 </div>
-<p>Dicho trabajo fue continuado por Susana Torrado en su libro <em>Estructura social de la Argentina, 1945-1983</em> <span class="citation">(<a href="referencias.html#ref-Torrado1992" role="doc-biblioref">1992</a>)</span>, aunque aplicando el esquema de clases construido por la autora. Luego, fueron incorporados los censos de 1980 a 2010 por Sacco <span class="citation">(<a href="referencias.html#ref-Sacco2019" role="doc-biblioref">2019</a>)</span>, recontruyendo el esquema de clases de Torrado.</p>
-<!--A continuación presentamos una tabla similar, en el que se muestra la evolución de la estructura de clases desde 1947 hasta 1991, recurriendo también a información censal [@Torrado2007].-->
-<div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:unnamed-chunk-116"></span>
-<p class="caption">
-Gráfico 8.2: Evolución de la estructura de clases. Total país 1947-1991. <span class="citation">Torrado (<a href="referencias.html#ref-Torrado2007" role="doc-biblioref">2007</a>)</span>
-</p>
-<img src="imagenes/torrado4.png" alt="Evolución de la estructura de clases. Total país 1947-1991. @Torrado2007" width="80%">
-</div>
-<p>En otros trabajos se ha optado por el estudio de los cambios producidos en la estructura de clases pero en el mediano plazo. Para ello se ha recurrido fundamentalmente a la <strong>EPH</strong>, dado su carácter de relevamiento continuo y el tipo de variables socio-ocupacionales que contiene. De este modo podemos citar los trabajos de <span class="citation">Benza (<a href="referencias.html#ref-Benza2016" role="doc-biblioref">2016</a>)</span>, <span class="citation">Chávez Molina &amp; Sacco (<a href="referencias.html#ref-ChavezMolina2015" role="doc-biblioref">2015</a>)</span>, <span class="citation">Pla et al. (<a href="referencias.html#ref-Pla.etal2018" role="doc-biblioref">2018</a>)</span>, <span class="citation">Sacco (<a href="referencias.html#ref-Sacco2019" role="doc-biblioref">2019</a>)</span> o <span class="citation">Chávez Molina &amp; Rodríguez de la Fuente (<a href="referencias.html#ref-ChavezMolina.RodriguezdelaFuente2021" role="doc-biblioref">2021</a>)</span>.</p>
-<!--Pasar esto y similares a inline code sobre para el output en html: A continuación, a modo de ejemplo, presentamos la evolución de la estructura de clases argentina entre 2011 y 2019 en gráficos de barras [@ChavezMolina.RodriguezdelaFuente2021].-->
-<div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:unnamed-chunk-117"></span>
-<p class="caption">
-Gráfico 8.3: Evolución de la estructura de clases. Total país 2011-2019. <span class="citation">Chávez Molina &amp; Rodríguez de la Fuente (<a href="referencias.html#ref-ChavezMolina.RodriguezdelaFuente2021" role="doc-biblioref">2021</a>)</span>
-</p>
-<img src="imagenes/clase_jose.png" alt="Evolución de la estructura de clases. Total país 2011-2019. @ChavezMolina.RodriguezdelaFuente2021" width="80%">
-</div>
-</div>
-<div id="ejemplo-práctico" class="section level3" number="8.1.2">
-<h3>
-<span class="header-section-number">8.1.2</span> Ejemplo práctico<a class="anchor" aria-label="anchor" href="#ejemplo-pr%C3%A1ctico"><i class="fas fa-link"></i></a>
-</h3>
-<p>Ahora veremos como llevar a cabo un análisis de clase a lo largo de un período. El estudio puede abordarse desde varias aristas. Podemos analizar como ha evolucionado la estructura de clases en su tamaño y/o composición o cómo ha evolucionado respecto a alguna variable dependiente (ingresos, riqueza, características habitacionales, etc.), por ejemplo. Puntualmente la evolución de las clases sociales entre 2011 y 2015, tomando como fuente de información a la <strong>EPH</strong>. A los fines de simplificar el ejemplo, trabajaremos únicamente con la población ocupada correspondiente a los segundos trimestres.</p>
-<p>Para ello, tal como hemos visto en el <a href="fuentes.html#fuentes">Capítulo 2</a>, descargaremos las bases utilizando el paquete <code>eph</code>, con su función <code>get_microdata</code>.</p>
-<div class="sourceCode" id="cb129"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">eph_1115</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/eph/man/get_microdata.html">get_microdata</a></span><span class="op">(</span>year <span class="op">=</span> <span class="fl">2011</span><span class="op">:</span><span class="fl">2015</span>, trimester <span class="op">=</span> <span class="fl">2</span>, type <span class="op">=</span> <span class="st">"individual"</span><span class="op">)</span></span></code></pre></div>
-<p>Como puede verse ahora contamos con una base de <code>333.819</code> casos y con información para los seis años seleccionados.</p>
-<div class="sourceCode" id="cb130"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="va">eph_1115</span><span class="op">)</span></span></code></pre></div>
-<pre><code>[1] 292198</code></pre>
-<div class="sourceCode" id="cb132"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/table.html">table</a></span><span class="op">(</span><span class="va">eph_1115</span><span class="op">$</span><span class="va">ANO4</span><span class="op">)</span></span></code></pre></div>
-<pre><code>
- 2011  2012  2013  2014  2015 
-58726 56915 55417 61112 60028 </code></pre>
-<p>Descargadas y pegadas las bases, utilizaremos el código de ejemplo presentado en el <a href="clases5.html#operacion1">Capítulo 5.3</a> para operacionalizar el esquema de clases. Al ser un código largo, sólo lo aplicaremos sobre la base sin mostrar el <em>script</em>. Luego de seleccionar únicamente a los individuos ocupados, realizaremos una distribución de frecuencias de la clase social con el total de los casos para comprobar si la operacionalización funcionó.</p>
-<div class="sourceCode" id="cb134"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">eph_1115_ocup</span> <span class="op">&lt;-</span> <span class="va">eph_1115</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">ESTADO</span> <span class="op">==</span> <span class="fl">1</span><span class="op">)</span></span>
-<span></span>
-<span><span class="fu">summarytools</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/summarytools/man/freq.html">freq</a></span><span class="op">(</span><span class="va">eph_1115_ocup</span><span class="op">$</span><span class="va">clase6_factor</span>, weights <span class="op">=</span> <span class="va">eph_1115_ocup</span><span class="op">$</span><span class="va">PONDERA</span>, justify <span class="op">=</span> <span class="st">"center"</span>, cumul <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
-<pre><code>Weighted Frequencies  
-eph_1115_ocup$clase6_factor  
-Type: Factor  
-Weights: PONDERA  
+            </section>
 
-                                                 Freq       % Valid   % Total 
--------------------------------------------- ------------- --------- ---------
-                 Clase alta                    429662.00     0.79      0.78   
-           Clase media - autónoma             7178247.00     13.19     13.11  
-          Clase media - asalariada            20140492.00    37.02     36.77  
-          Clase obrera - autónoma             5064586.00     9.31      9.25   
-         Clase obrera - asalariada            17593697.00    32.34     32.12  
-   Clase obrera - trabajadores marginales     3995731.00     7.34      7.30   
-                    &lt;NA&gt;                       368788.00               0.67   
-                   Total                      54771203.00   100.00    100.00  </code></pre>
-<p>Finalmente ya estamos en condiciones de construir una nueva tabla (no mostrsada en la salida) en donde podamos cruzar la variable de clase social (<code>clase6_factor</code>) con la variable año (<code>ANO4</code>). Para ello, utilizaremos algunas de las herramientas del paquete <code>dplyr</code>. En primer lugar filtraremos aquellos casos perdidos (NA) para la variable de clase. Luego agruparemos los datos por año y clase (<code>group_by</code>) y contabilizaremos los casos (<code>tally</code>). Es importante notar que lo que sumamos son los casos brindados por la variable <strong>PONDERA</strong>, por eso es necesario declarar al ponderador a través del <code>wt = PONDERA</code>. Ya con las frecuencias absolutas por clase y año calculadas es posible llegar a los porcentajes. De este modo, volveremos a agrupar los datos por año y crearemos una nueva variable (<code>mutate</code>) que divida a cada frecuencia por su sumatoria total <code>(n/sum(n))</code> y la multiplique por <code>100</code>. Para hacer más fácil la lectura, dejaremos únicamente dos decimales. Finalmente para pasar de un formato largo de tabla a uno ancho, aplicaremos la función <code>spread</code>.</p>
-<div class="sourceCode" id="cb136"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">tabla_anios</span> <span class="op">&lt;-</span> <span class="va">eph_1115_ocup</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">clase6_factor</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">ANO4</span>, <span class="va">clase6_factor</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">tally</a></span><span class="op">(</span>wt<span class="op">=</span><span class="va">PONDERA</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">ANO4</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>percent <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="op">(</span><span class="va">n</span><span class="op">/</span><span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">n</span><span class="op">)</span><span class="op">)</span><span class="op">*</span><span class="fl">100</span>, digits <span class="op">=</span> <span class="fl">2</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">clase6_factor</span>, <span class="va">ANO4</span>, <span class="va">percent</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/spread.html">spread</a></span><span class="op">(</span><span class="va">ANO4</span>, value <span class="op">=</span> <span class="va">percent</span><span class="op">)</span></span></code></pre></div>
-<!--knitr::kable(tabla_anios). Arreglar tabla para salida HTML-->
-<p>Es necesario aclarar que hay muchas formas de construir una tabla de doble entrada, así como de configurarla. Para ver otras opciones recomendamos explorar los paquetes <code>janitor</code> y <code>summarytools</code>.</p>
-<p>Otra opción de presentación es la elaboración de un gráfico de barras. Para ello recurriremos al paquete <code>ggplot2</code> y a la función <code>geom_col</code>. En este caso, al principio, repetiremos parte de la secuencia de pasos utilizada para el armado de la tabla, hasta la generación de la variable <code>percent</code>. Luego llamando a la librería <code>ggplot2</code>, definiremos la estética (aes) indicando el eje <code>x</code> (años), el eje <code>y</code> (porcentajes) y la variable que determinará el color de las barras (<code>fill</code>), es decir, la clase social. Posteriormente llamaremos a la función <code><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col()</a></code> y luego a <code>geom_text</code> para identificar con números los porcentajes en las barras. El resto de las opciones mejoran la salida gráfica configurando diversos aspectos.</p>
-<div class="sourceCode" id="cb137"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">eph_1115_ocup</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">clase6_factor</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">ANO4</span>, <span class="va">clase6_factor</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">tally</a></span><span class="op">(</span>wt<span class="op">=</span><span class="va">PONDERA</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">ANO4</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>percent <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="op">(</span><span class="va">n</span><span class="op">/</span><span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">n</span><span class="op">)</span><span class="op">)</span><span class="op">*</span><span class="fl">100</span>, digits <span class="op">=</span> <span class="fl">2</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">ANO4</span>, y <span class="op">=</span> <span class="va">percent</span>, fill <span class="op">=</span> <span class="va">clase6_factor</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_text.html">geom_text</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>label <span class="op">=</span> <span class="va">percent</span><span class="op">)</span>, position <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/position_stack.html">position_stack</a></span><span class="op">(</span><span class="fl">.5</span><span class="op">)</span>, size <span class="op">=</span> <span class="fl">3</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_colour_discrete.html">scale_fill_discrete</a></span><span class="op">(</span>labels <span class="op">=</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="fu"><a href="https://stringr.tidyverse.org/reference/str_wrap.html">str_wrap</a></span><span class="op">(</span><span class="va">x</span>, width <span class="op">=</span> <span class="fl">25</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Evolución de la estructura de clases sociales"</span>,</span>
-<span>       subtitle <span class="op">=</span> <span class="st">"Población ocupada. Argentina urbana 2011-2015."</span>,</span>
-<span>       caption <span class="op">=</span> <span class="st">"Fuente: Elaboración propia en base a EPH-INDEC 2011-2015."</span>,</span>
-<span>       fill <span class="op">=</span> <span class="st">"Clase social"</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>legend.title <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">10</span>, face <span class="op">=</span> <span class="st">"bold"</span><span class="op">)</span>,</span>
-<span>        legend.text <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">10</span><span class="op">)</span>,</span>
-<span>        axis.title.x <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span>,</span>
-<span>        axis.title.y <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span>,</span>
-<span>        axis.text.y <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">10</span><span class="op">)</span>,</span>
-<span>        axis.text.x <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">10</span><span class="op">)</span>,</span>
-<span>        plot.title <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">12</span>, face <span class="op">=</span> <span class="st">"bold"</span><span class="op">)</span>,</span>
-<span>        plot.subtitle <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">11</span><span class="op">)</span>,</span>
-<span>        plot.caption <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">10</span>, hjust <span class="op">=</span> <span class="fl">1</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_x_continuous</a></span><span class="op">(</span>breaks <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2011</span><span class="op">:</span><span class="fl">2015</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_y_continuous</a></span><span class="op">(</span>breaks<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">100</span>, <span class="fl">10</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:unnamed-chunk-123"></span>
-<p class="caption">
-Gráfico 8.4: Ejemplo de gráfico de columnas con la variable clase social
-</p>
-<img src="docs_files/figure-html/unnamed-chunk-123-1.png" alt="Ejemplo de gráfico de columnas con la variable clase social" width="672">
-</div>
-</div>
-</div>
-<div id="espacial" class="section level2" number="8.2">
-<h2>
-<span class="header-section-number">8.2</span> La dimensión espacial<a class="anchor" aria-label="anchor" href="#espacial"><i class="fas fa-link"></i></a>
-</h2>
-<p>La dimensión espacial es otro de los elementos que todo estudio de la estructura social y de las clases sociales debería considerar. Como bien señala Osorio <span class="citation">(<a href="referencias.html#ref-Osorio2001" role="doc-biblioref">2001, p. 51</a>)</span> ésta remite al vínculo sociedad-naturaleza, al clima y a las condiciones geográfico-naturales que desempeñan un papel fundamental en la historia. Naciones, provincias, departamentos y hasta ciudades condensan una serie de heterogeneidades en su interior y entre sí mismas, que obligan al investigador a considerarlas en su fase de análisis.</p>
-<p>Claro está que no siempre contamos con las fuentes de información óptimas para abordar dicha heterogeneidades geográficas. Por ejemplo, con la <strong>EPH</strong>, fuente que venimos utilizando en este libro, podemos tener una desagregación espacial para el país por aglomerados, provincias o regiones, pero siempre considerando a la población urbana encuestada. Algo similar sucede con otras encuestas de hogares como la <a href="https://www.argentina.gob.ar/ciencia/pisac/bases-de-datos" target="_blank">ENES-PISAC</a>.</p>
-<p>Por el contrario, la información censal nos permite acceder a un nivel de desagregación geo-estadísticas de mayor precisión, tales como las fracciones y los radios censales. De esta forma, el mosaico de heterogeneidades sociales que podemos representar se vuelve más complejo a través de este tipo de fuente de datos.</p>
-<div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:unnamed-chunk-125"></span>
-<p class="caption">
-Gráfico 8.5: Ejemplo de unidades geo-estadísticas del INDEC. 1) Provincias; 2) Departametnos; 3) Fracciones censales; 4) Radios censales. Fuente: elaboración propia en base a Cartografía y códigos geográficos del Sistema Estadístico Nacional
-</p>
-<img src="imagenes/formosa_radios.png" alt="Ejemplo de unidades geo-estadísticas del INDEC. 1) Provincias; 2) Departametnos; 3) Fracciones censales; 4) Radios censales. Fuente: elaboración propia en base a Cartografía y códigos geográficos del Sistema Estadístico Nacional" width="100%">
-</div>
-<div id="algunos-ejemplos-de-la-bibliografía-1" class="section level3" number="8.2.1">
-<h3>
-<span class="header-section-number">8.2.1</span> Algunos ejemplos de la bibliografía<a class="anchor" aria-label="anchor" href="#algunos-ejemplos-de-la-bibliograf%C3%ADa-1"><i class="fas fa-link"></i></a>
-</h3>
-<p>Por limitaciones de las fuentes de información, en los estudios de estructuras de clases, cuando se cruzan los datos construidos con información espacial se suelen hacer comparaciones entre unidades de mayor nivel, tales como los países o las provincias y regiones dentro de las naciones. Por ejemplo, el análisis de Solís, Chávez Molina y Cobos <span class="citation">(<a href="referencias.html#ref-Solis.etal2019" role="doc-biblioref">2019</a>)</span> se compara la estructura de clases reciente en 9 países latinoamericanos. Para ello se recurrió a información específica proveniente de encuestas de hogares de cada uno de los países seleccionados, que luego fue armonizada para poder ser comparable.</p>
-<div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:unnamed-chunk-126"></span>
-<p class="caption">
-Gráfico 8.6: Estructura de clases en países de América Latina. Población entre 15 y 64 años. 2011-2015. Solís, Chávez Molina y Cobos <span class="citation">(<a href="referencias.html#ref-Solis.etal2019" role="doc-biblioref">2019</a>, pp 861)</span>
-</p>
-<img src="imagenes/tabla_solis.png" alt="Estructura de clases en países de América Latina. Población entre 15 y 64 años. 2011-2015. Solís, Chávez Molina y Cobos [-@Solis.etal2019, pp 861]" width="100%">
-</div>
-<p>En Argentina, al igual que para el caso del análisis en el tiempo, los trabajos de Germani, Torrado también abordaron el análisis de la dinámica del cambio en la estructura de clases en agregados geográficos subnacionales.</p>
-<!--El siguiente ejemplo de gráfico de barras [@Germani1955, pp 212], muestra, a partir del Censo Nacional de 1947, la distribución de las clases populares y medias por provincia.-->
-<div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:unnamed-chunk-127"></span>
-<p class="caption">
-Gráfico 8.7: Estructura de clases en las distintas jurisdicciones del país. Gráfico extraído de <span class="citation">Germani et al. (<a href="referencias.html#ref-Germani.etal2010" role="doc-biblioref">2010</a>)</span>
-</p>
-<img src="imagenes/germani_provincias.png" alt="Estructura de clases en las distintas jurisdicciones del país. Gráfico extraído de @Germani.etal2010" width="100%">
-</div>
-<p>Posteriormente, bajo la asesoría general de Susana Torrado, desde Consejo Nacional de Inversiones <span class="citation">(<a href="referencias.html#ref-CFI1988" role="doc-biblioref">CFI, 1988</a>)</span>, se elaboraron informes para cada una de las provincias y el total país, en donde se caracterizaba la estratificación social y las condiciones de vida de la población, teniendo como fuente de datos el Censo Nacional de Población y Vivienda de 1980. Gran parte de dicho análisis fue retomado luego y publicado en el libro <em>Estructura social de la Argentina, 1945-1983</em> <span class="citation">(<a href="referencias.html#ref-Torrado1992" role="doc-biblioref">Torrado, 1992</a>)</span>.</p>
-<!--A continuación reproducimos una de las tablas en donde se analiza el tamaño de las clases sociales por regiones del país.-->
-<div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:unnamed-chunk-128"></span>
-<p class="caption">
-Gráfico 8.8: Indicadores de la estructura social por regiones. 980. Torrado <span class="citation">(<a href="referencias.html#ref-Torrado1992" role="doc-biblioref">Torrado, 1992</a>, pp 386)</span>
-</p>
-<img src="imagenes/torrado_regiones.png" alt="Indicadores de la estructura social por regiones. 980. Torrado [@Torrado1992, pp 386]" width="100%">
-</div>
-<p>Actualmente, con el avance y la difusión de la utilización de sistemas de información geográfica (SIG), se abrió la posibilidad de representación gráfica a través de mapas temáticos de información censal o proveniente de encuestas de hogares. Si bien aún en los estudios de estructura de clases no se ha tornado en una práctica frecuente, cada vez aparecen más trabajos que recurren a la representación geográfica de los datos para ilustrar los cambios y la evolución en la estructura social y de clases.</p>
-<p>Por ejemplo, Mike Savage y otros <span class="citation">(<a href="referencias.html#ref-Savage.etal2013" role="doc-biblioref">2013</a>)</span> llevaron a cabo junto a la BBC una encuesta de representación nacional (<em>BBC’s 2011 Great British Class Survey</em>), a través de la cual, a partir de la técnica de clases latentes, presentaron un nuevo abordaje en el estudio de las clases sociales conformado a partir de 7 clases. En ese trabajos, los autores recurren a una serie de mapas para demostrar cómo dichas clases se distribuyen al interior de Gran Bretaña.</p>
-<!--Por ejemplo, a continuación mostramos la distribución de la *clase trabajadora tradicional*.-->
-<div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:unnamed-chunk-129"></span>
-<p class="caption">
-Gráfico 8.9: Distribución espacial de la clase trabajadora tradicional. Savage et al. <span class="citation">(<a href="referencias.html#ref-Savage.etal2013" role="doc-biblioref">2013</a>, pp 241)</span>
-</p>
-<img src="imagenes/savage_regiones.png" alt="Distribución espacial de la clase trabajadora tradicional. Savage et al. [-@Savage.etal2013, pp 241]" width="80%">
-</div>
-</div>
-<div id="ejemplo-práctico-1" class="section level3" number="8.2.2">
-<h3>
-<span class="header-section-number">8.2.2</span> Ejemplo práctico<a class="anchor" aria-label="anchor" href="#ejemplo-pr%C3%A1ctico-1"><i class="fas fa-link"></i></a>
-</h3>
-<p>Ahora veremos como llevar a cabo un análisis de clase según información espacial. Cómo dijimos anteriormente, la profundidad del tipo de análisis que podamos realizar va a depender del tipo de fuente con la que trabajemos. En este caso, vamos a aprovechar el pool de bases de <strong>EPH</strong> que hemos pegado para los años 2011 a 2015.</p>
-<p>En forma simple vamos a indagar como se distribuyen las clases sociales al interior de cada una de las regiones identificadas por <strong>INDEC</strong>. En primer lugar, construyamos una tabla (no mostrada) de doble entrada que nos permita mostrar dicha información.</p>
-<div class="sourceCode" id="cb138"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># 1) Creo una variable factor con los nombres de las regiones (region_f)</span></span>
-<span><span class="va">eph_1115_ocup</span><span class="op">$</span><span class="va">region_f</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">eph_1115_ocup</span><span class="op">$</span><span class="va">REGION</span>, labels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"GBA"</span>, <span class="st">"NOA"</span>, <span class="st">"NEA"</span>, <span class="st">"Cuyo"</span>,</span>
-<span>                                                                  <span class="st">"Pampeana"</span>, <span class="st">"Patagonia"</span><span class="op">)</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># 2) Construimos un objeto tabla cruzando la variable clase6_factor y region_f</span></span>
-<span><span class="va">tabla_regiones</span> <span class="op">&lt;-</span> <span class="va">eph_1115_ocup</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">clase6_factor</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">region_f</span>, <span class="va">clase6_factor</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">tally</a></span><span class="op">(</span>wt<span class="op">=</span><span class="va">PONDERA</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">region_f</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>percent <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="op">(</span><span class="va">n</span><span class="op">/</span><span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">n</span><span class="op">)</span><span class="op">)</span><span class="op">*</span><span class="fl">100</span>, digits <span class="op">=</span> <span class="fl">2</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">clase6_factor</span>, <span class="va">region_f</span>, <span class="va">percent</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/spread.html">spread</a></span><span class="op">(</span><span class="va">region_f</span>, value <span class="op">=</span> <span class="va">percent</span><span class="op">)</span></span></code></pre></div>
-<!--knitr::kable(tabla_regiones)-->
-<p>Finalmente presentamos un ejemplo de representación de la tabla anteriormente construida en un mapa temático. <strong><code>R</code></strong> posee varias librerías para manipular información de tipo geográfica. En este caso utilizaremos el paquete <code>sf</code>. Lo que haremos es representar en mapas en miniatura de Argentina, el porcentaje de individuos pertenecientes a cada clase social por región.</p>
-<p>A los fines de este ejemplo, trabajaremos con la cartografía por departamentos que proporciona INDEC (<a href="https://www.indec.gob.ar/indec/web/Institucional-Indec-Codgeo" class="uri">https://www.indec.gob.ar/indec/web/Institucional-Indec-Codgeo</a>). Si bien no es la finalidad de este libro introducir el uso de herramientas SIG<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content='&lt;p&gt;Recomendamos el manual &lt;a href="https://bitsandbricks.github.io/ciencia_de_datos_gente_sociable/"&gt;Ciencia de datos para gente sociable&lt;/a&gt;, específicamente su capítulo 6, para quienes quieran profundizar en el tema&lt;/p&gt;'><sup>14</sup></a>, a continuación presentamos el procedimiento “paso a paso” para la creación del mapa temático.</p>
-<div class="sourceCode" id="cb139"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># 1) Cargamos el archivo .shp y lo guardamos en el objetivo espacial "argentina"</span></span>
-<span><span class="va">argentina</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_read.html">st_read</a></span><span class="op">(</span><span class="st">"cartografia/argentina_n.shp"</span><span class="op">)</span></span></code></pre></div>
-<pre><code>Reading layer `argentina_n' from data source 
-  `C:\Users\josed\Documents\Repositorios_git\clases-arg\cartografia\argentina_n.shp' 
-  using driver `ESRI Shapefile'
-Simple feature collection with 1242 features and 10 fields
-Geometry type: POLYGON
-Dimension:     XY
-Bounding box:  xmin: -74 ymin: -90 xmax: -25 ymax: -22
-Geodetic CRS:  WGS 84</code></pre>
-<div class="sourceCode" id="cb141"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># 2) Filtramos al territorio antártico ya que no contamos con información en la EPH y se dificulta la visualización del mapa</span></span>
-<span><span class="va">argentina</span> <span class="op">&lt;-</span> <span class="va">argentina</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="op">!</span><span class="va">link</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"94028"</span><span class="op">)</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">#provincias &lt;- st_read("E:/OneDrive/Otros/proyectos_R/mapas/Codgeo_Pais_x_prov_datos/provincias_n.shp")</span></span>
-<span></span>
-<span><span class="co"># 3) Creamos un vector con los 31 códigos geográficos de los 31 partidos del GBA </span></span>
-<span><span class="va">partidos</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"06028"</span>, <span class="st">"06035"</span>, <span class="st">"06091"</span>, <span class="st">"06134"</span>, <span class="st">"06252"</span>, <span class="st">"06260"</span>, <span class="st">"06270"</span>, <span class="st">"06274"</span>, <span class="st">"06364"</span>, <span class="st">"06371"</span>,</span>
-<span>              <span class="st">"06408"</span>, <span class="st">"06410"</span>, <span class="st">"06412"</span>, <span class="st">"06427"</span>, <span class="st">"06434"</span>, <span class="st">"06490"</span>, <span class="st">"06515"</span>, <span class="st">"06525"</span>, <span class="st">"06539"</span>, <span class="st">"06560"</span>,</span>
-<span>              <span class="st">"06568"</span>, <span class="st">"06638"</span>, <span class="st">"06648"</span>, <span class="st">"06658"</span>, <span class="st">"06749"</span>, <span class="st">"06756"</span>, <span class="st">"06760"</span>, <span class="st">"06778"</span>, <span class="st">"06805"</span>, <span class="st">"06840"</span>,</span>
-<span>              <span class="st">"06861"</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># 4) Definimos dentro del objeto geográfico "argentina" a la columna link como caracter y a la columna codpcia como numérica</span></span>
-<span><span class="va">argentina</span><span class="op">$</span><span class="va">link</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/character.html">as.character</a></span><span class="op">(</span><span class="va">argentina</span><span class="op">$</span><span class="va">link</span><span class="op">)</span></span>
-<span><span class="va">argentina</span><span class="op">$</span><span class="va">codpcia</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span><span class="op">(</span><span class="va">argentina</span><span class="op">$</span><span class="va">codpcia</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># 5) Creamos en el objeto "argentina" una variable llamada REGION que agrupe a las provincias igual que en la EPH</span></span>
-<span><span class="va">argentina</span> <span class="op">&lt;-</span> <span class="va">argentina</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>region_f <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/case_when.html">case_when</a></span><span class="op">(</span><span class="va">codpcia</span> <span class="op">==</span> <span class="fl">2</span> <span class="op">|</span> <span class="op">(</span><span class="va">link</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="va">partidos</span><span class="op">)</span> <span class="op">~</span> <span class="st">"GBA"</span>,</span>
-<span>                            <span class="va">codpcia</span> <span class="op">==</span> <span class="fl">10</span> <span class="op">|</span> <span class="va">codpcia</span> <span class="op">==</span> <span class="fl">38</span> <span class="op">|</span> <span class="va">codpcia</span> <span class="op">==</span> <span class="fl">46</span> <span class="op">|</span> <span class="va">codpcia</span> <span class="op">==</span> <span class="fl">66</span> <span class="op">|</span> </span>
-<span>                            <span class="va">codpcia</span> <span class="op">==</span> <span class="fl">90</span> <span class="op">|</span> <span class="va">codpcia</span> <span class="op">==</span> <span class="fl">86</span> <span class="op">~</span> <span class="st">"NOA"</span>,</span>
-<span>                            <span class="va">codpcia</span> <span class="op">==</span> <span class="fl">18</span> <span class="op">|</span> <span class="va">codpcia</span> <span class="op">==</span> <span class="fl">22</span> <span class="op">|</span> <span class="va">codpcia</span> <span class="op">==</span> <span class="fl">54</span> <span class="op">|</span> <span class="va">codpcia</span> <span class="op">==</span> <span class="fl">34</span> <span class="op">~</span> <span class="st">"NEA"</span>,</span>
-<span>                            <span class="va">codpcia</span> <span class="op">==</span> <span class="fl">50</span> <span class="op">|</span> <span class="va">codpcia</span> <span class="op">==</span> <span class="fl">70</span> <span class="op">|</span> <span class="va">codpcia</span> <span class="op">==</span> <span class="fl">74</span> <span class="op">~</span> <span class="st">"Cuyo"</span>,</span>
-<span>                            <span class="op">(</span><span class="va">codpcia</span> <span class="op">==</span> <span class="fl">6</span> <span class="op">&amp;</span> <span class="op">!</span><span class="op">(</span><span class="va">link</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="va">partidos</span><span class="op">)</span><span class="op">)</span> <span class="op">|</span> <span class="va">codpcia</span> <span class="op">==</span> <span class="fl">30</span> <span class="op">|</span> <span class="va">codpcia</span> <span class="op">==</span> <span class="fl">14</span></span>
-<span>                            <span class="op">|</span> <span class="va">codpcia</span> <span class="op">==</span> <span class="fl">82</span> <span class="op">|</span> <span class="va">codpcia</span> <span class="op">==</span> <span class="fl">42</span> <span class="op">~</span> <span class="st">"Pampeana"</span>,</span>
-<span>                            <span class="va">codpcia</span> <span class="op">==</span> <span class="fl">58</span> <span class="op">|</span> <span class="va">codpcia</span> <span class="op">==</span> <span class="fl">62</span> <span class="op">|</span> <span class="va">codpcia</span> <span class="op">==</span> <span class="fl">26</span> <span class="op">|</span> <span class="va">codpcia</span> <span class="op">==</span> <span class="fl">78</span> <span class="op">|</span></span>
-<span>                            <span class="va">codpcia</span> <span class="op">==</span> <span class="fl">94</span> <span class="op">~</span> <span class="st">"Patagonia"</span><span class="op">)</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># 6) Volvemos a crear una tabla con los porcentajes de individuos por clase sociales según región, pero esta vez en formato largo  </span></span>
-<span></span>
-<span><span class="va">tabla_larga</span> <span class="op">&lt;-</span> <span class="va">eph_1115_ocup</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">clase6_factor</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">region_f</span>, <span class="va">clase6_factor</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">tally</a></span><span class="op">(</span>wt<span class="op">=</span><span class="va">PONDERA</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">region_f</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>percent <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="op">(</span><span class="va">n</span><span class="op">/</span><span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">n</span><span class="op">)</span><span class="op">)</span><span class="op">*</span><span class="fl">100</span>, digits <span class="op">=</span> <span class="fl">2</span><span class="op">)</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># 7) Unimos el objeto "argentina" con la tabla larga que contiene los porcentajes por clase y región, tomando como variable identificadora REGION</span></span>
-<span><span class="va">mapa</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/merge.html">merge</a></span><span class="op">(</span><span class="va">argentina</span>, <span class="va">tabla_larga</span>, by<span class="op">=</span><span class="st">"region_f"</span>, all.x <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
-<p>Puntualmente, el comando <code>geom_sf</code> del <code>ggplot2</code> nos permitirá superponer capas con información georreferenciada, como en este caso los departamentos del país. A su vez, el comando <code>facet_wrap</code> del mismo paquete nos permite representar un gráfico (en este caso un mapa) para la variable que seleccionemos (clase social).</p>
-<div class="sourceCode" id="cb142"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsf.html">geom_sf</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">mapa</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>group <span class="op">=</span> <span class="va">region_f</span>, fill <span class="op">=</span> <span class="va">percent</span><span class="op">)</span>, color <span class="op">=</span> <span class="cn">NA</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://rdrr.io/pkg/ggthemes/man/theme_map.html">theme_map</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="st">"% Clase social"</span>,</span>
-<span>       title <span class="op">=</span> <span class="st">"Distribución de las clases sociales por región"</span>,</span>
-<span>       subtitle <span class="op">=</span> <span class="st">"Población ocupada. Argentina urbana 2011-2015."</span>,</span>
-<span>       caption <span class="op">=</span> <span class="st">"Fuente: Elaboración propia en base a EPH-INDEC 2011-2015."</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>legend.title <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">10</span>, face <span class="op">=</span> <span class="st">"bold"</span><span class="op">)</span>,</span>
-<span>        legend.text <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">9</span><span class="op">)</span>,</span>
-<span>        legend.key.width <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/grid/unit.html">unit</a></span><span class="op">(</span><span class="fl">1.5</span>, <span class="st">"cm"</span><span class="op">)</span>,</span>
-<span>        legend.position <span class="op">=</span> <span class="st">"bottom"</span>,</span>
-<span>        legend.justification <span class="op">=</span> <span class="st">"center"</span>,</span>
-<span>        plot.title <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">12</span>, face <span class="op">=</span> <span class="st">"bold"</span><span class="op">)</span>,</span>
-<span>        plot.subtitle <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">11</span><span class="op">)</span>,</span>
-<span>        plot.caption <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">10</span>, hjust <span class="op">=</span> <span class="fl">1</span><span class="op">)</span>,</span>
-<span>        strip.text <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>face <span class="op">=</span> <span class="st">"bold"</span>, size <span class="op">=</span> <span class="fl">10</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_viridis.html">scale_fill_viridis_c</a></span><span class="op">(</span>direction <span class="op">=</span> <span class="op">-</span><span class="fl">1</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html">facet_wrap</a></span><span class="op">(</span><span class="op">~</span><span class="va">clase6_factor</span>, ncol <span class="op">=</span> <span class="fl">7</span>, labeller <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labeller.html">labeller</a></span><span class="op">(</span>clase6_factor <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labellers.html">label_wrap_gen</a></span><span class="op">(</span><span class="fl">15</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:unnamed-chunk-132"></span>
-<p class="caption">
-Gráfico 8.10: Ejemplo de mapa temático utilizando la variable clase social
-</p>
-<img src="docs_files/figure-html/unnamed-chunk-132-1.png" alt="Ejemplo de mapa temático utilizando la variable clase social" width="672">
-</div>
-
-</div>
-</div>
-</div>
-
-
-
-
-  <div class="chapter-nav">
-<div class="prev"><a href="dependiente.html"><span class="header-section-number">7</span> La clase como variable dependiente</a></div>
-<div class="next"><a href="anexo.html"><span class="header-section-number">9</span> Introducción a R y RStudio</a></div>
-</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
-    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
-      <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#tiempo"><span class="header-section-number">8</span> Tiempo, espacio y clases sociales</a></li>
-<li>
-<a class="nav-link" href="#temporal"><span class="header-section-number">8.1</span> La dimensión temporal</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#algunos-ejemplos-de-la-bibliograf%C3%ADa"><span class="header-section-number">8.1.1</span> Algunos ejemplos de la bibliografía</a></li>
-<li><a class="nav-link" href="#ejemplo-pr%C3%A1ctico"><span class="header-section-number">8.1.2</span> Ejemplo práctico</a></li>
-</ul>
-</li>
-<li>
-<a class="nav-link" href="#espacial"><span class="header-section-number">8.2</span> La dimensión espacial</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#algunos-ejemplos-de-la-bibliograf%C3%ADa-1"><span class="header-section-number">8.2.1</span> Algunos ejemplos de la bibliografía</a></li>
-<li><a class="nav-link" href="#ejemplo-pr%C3%A1ctico-1"><span class="header-section-number">8.2.2</span> Ejemplo práctico</a></li>
-</ul>
-</li>
-</ul>
-
-      <div class="book-extra">
-        <ul class="list-unstyled">
-<li><a id="book-source" href="https://github.com/nsacco/clases-arg/blob/master/caps/08U.Rmd">View source <i class="fab fa-github"></i></a></li>
-          <li><a id="book-edit" href="https://github.com/nsacco/clases-arg/edit/master/caps/08U.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
-        </ul>
-</div>
-    </nav>
-</div>
-
-</div>
-</div> <!-- .container -->
-
-<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
-
-  <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Libro de Cocina para el Análisis de las Clases Sociales en Argentina</strong>" was written by Nicolás Sacco, José Rodríguez de la Fuente, Sofia Jaime. It was last built on 2023-04-21.</p>
+          </div>
+        </div>
+      </div>
+<a href="movilidad3.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="temporal.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
   </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/nsacco/clases-arg/caps/08U.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["docs.pdf", "docs.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section",
+"scroll_highlight": true
+}
+});
+});
+</script>
 
-  <div class="col-12 col-md-6 mt-3">
-    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
-  </div>
-
-</div></div>
-</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
@@ -459,22 +488,7 @@ Gráfico 8.10: Ejemplo de mapa temático utilizando la variable clase social
     script.src = src;
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
-</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
-for (let popover of popovers) {
-  const div = document.createElement('div');
-  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
-  div.innerHTML = popover.getAttribute('data-content');
-
-  var has_math = div.querySelector("span.math");
-  if (has_math) {
-    document.body.appendChild(div);
-    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
-    MathJax.Hub.Queue(function() {
-      popover.setAttribute('data-content', div.innerHTML);
-      document.body.removeChild(div);
-    })
-  }
-}
 </script>
 </body>
+
 </html>

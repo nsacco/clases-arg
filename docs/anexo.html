@@ -1,1416 +1,474 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="" xml:lang="">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Capítulo 9 Introducción a R y RStudio | Libro de Cocina para el Análisis de las Clases Sociales en Argentina</title>
-<meta name="author" content="Nicolás Sacco">
-<meta name="author" content="José Rodríguez de la Fuente">
-<meta name="author" content="Sofia Jaime">
-<meta name="description" content="La mayor parte de los ejercicios expuestos a lo largo de este Manual utilizan una o más funciones de R para resolver un problema específico. Se destaca que no se describen las funciones en...">
-<meta name="generator" content="bookdown 0.33 with bs4_book()">
-<meta property="og:title" content="Capítulo 9 Introducción a R y RStudio | Libro de Cocina para el Análisis de las Clases Sociales en Argentina">
-<meta property="og:type" content="book">
-<meta property="og:description" content="La mayor parte de los ejercicios expuestos a lo largo de este Manual utilizan una o más funciones de R para resolver un problema específico. Se destaca que no se describen las funciones en...">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Capítulo 9 Introducción a R y RStudio | Libro de Cocina para el Análisis de las Clases Sociales en Argentina">
-<meta name="twitter:description" content="La mayor parte de los ejercicios expuestos a lo largo de este Manual utilizan una o más funciones de R para resolver un problema específico. Se destaca que no se describen las funciones en...">
-<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.2/transition.js"></script><script src="libs/bs3compat-0.4.2/tabs.js"></script><script src="libs/bs3compat-0.4.2/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
-<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/kePrint-0.0.1/kePrint.js"></script><link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet">
-<link href="libs/vembedr-0.1.5/css/vembedr.css" rel="stylesheet">
-<link href="libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
-<script src="libs/pagedtable-1.1/js/pagedtable.js"></script><!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-247494419-1"></script><script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
 
-      gtag('config', 'UA-247494419-1');
-    </script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
-    
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-  </style>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Capítulo 9 Introducción a R y RStudio | Libro de Cocina para el Análisis de las Clases Sociales en Argentina</title>
+  <meta name="description" content="Capítulo 9 Introducción a R y RStudio | Libro de Cocina para el Análisis de las Clases Sociales en Argentina" />
+  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Capítulo 9 Introducción a R y RStudio | Libro de Cocina para el Análisis de las Clases Sociales en Argentina" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Capítulo 9 Introducción a R y RStudio | Libro de Cocina para el Análisis de las Clases Sociales en Argentina" />
+  <meta name="github-repo" content="nsacco/libroESA" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Capítulo 9 Introducción a R y RStudio | Libro de Cocina para el Análisis de las Clases Sociales en Argentina" />
+  
+  <meta name="twitter:description" content="Capítulo 9 Introducción a R y RStudio | Libro de Cocina para el Análisis de las Clases Sociales en Argentina" />
+  
+
+<meta name="author" content="Nicolás Sacco" />
+<meta name="author" content="José Rodríguez de la Fuente" />
+<meta name="author" content="Sofia Jaime" />
+
+
+<meta name="date" content="2023-08-09" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="espacial.html"/>
+<link rel="next" href="introR.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/vembedr-0.1.5/css/vembedr.css" rel="stylesheet" />
+<link href="libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
+<script src="libs/pagedtable-1.1/js/pagedtable.js"></script>
+<link href="libs/tabwid-1.1.3/tabwid.css" rel="stylesheet" />
+<script src="libs/tabwid-1.1.3/tabwid.js"></script>
+
+
 <style type="text/css">
-    /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
-    div.csl-bib-body { }
-    div.csl-entry {
-      clear: both;
-        }
-    .hanging div.csl-entry {
-      margin-left:2em;
-      text-indent:-2em;
-    }
-    div.csl-left-margin {
-      min-width:2em;
-      float:left;
-    }
-    div.csl-right-inline {
-      margin-left:2em;
-      padding-left:1em;
-    }
-    div.csl-indent {
-      margin-left: 2em;
-    }
-  </style>
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
 </head>
-<body data-spy="scroll" data-target="#toc">
 
-<div class="container-fluid">
-<div class="row">
-  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+<body>
 
-    <div class="d-flex align-items-start justify-content-between">
-      <h1>
-        <a href="index.html" title="">Libro de Cocina para el Análisis de las Clases Sociales en Argentina</a>
-      </h1>
-      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Libro de Cocina para el Análisis de las Clases Sociales en Argentina</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefacio</a>
+<ul>
+<li class="chapter" data-level="" data-path="contacto-con-los-autores.html"><a href="contacto-con-los-autores.html"><i class="fa fa-check"></i>Contacto con los autores</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="agradecimientos.html"><a href="agradecimientos.html"><i class="fa fa-check"></i>Agradecimientos</a></li>
+<li class="part"><span><b>I Aspectos teóricos</b></span></li>
+<li class="chapter" data-level="1" data-path="estructura1.html"><a href="estructura1.html"><i class="fa fa-check"></i><b>1</b> La estructura social en la Argentina actual</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="analisis1.html"><a href="analisis1.html"><i class="fa fa-check"></i><b>1.1</b> Del análisis de las clases sociales a la teoría de la estratificación social</a></li>
+<li class="chapter" data-level="1.2" data-path="marx.html"><a href="marx.html"><i class="fa fa-check"></i><b>1.2</b> Marx, Weber y el funcionalismo</a></li>
+<li class="chapter" data-level="1.3" data-path="esperanza.html"><a href="esperanza.html"><i class="fa fa-check"></i><b>1.3</b> La esperanza de vida de la teoría: debates contemporáneos</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="esperanza.html"><a href="esperanza.html#la-grieta-de-los-ochenta"><i class="fa fa-check"></i><b>1.3.1</b> La grieta de los ochenta</a></li>
+<li class="chapter" data-level="1.3.2" data-path="esperanza.html"><a href="esperanza.html#nuevos-debateshacia-una-operacionalización-más-refinada-de-los-conceptos"><i class="fa fa-check"></i><b>1.3.2</b> Nuevos debates…¿Hacia una operacionalización más refinada de los conceptos?</a></li>
+<li class="chapter" data-level="1.3.3" data-path="esperanza.html"><a href="esperanza.html#la-muerte-de-la-clases"><i class="fa fa-check"></i><b>1.3.3</b> La muerte de la clases</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="cuestion.html"><a href="cuestion.html"><i class="fa fa-check"></i><b>1.4</b> La cuestión en América Latina y en la Argentina</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="cuestion.html"><a href="cuestion.html#nuevos-aires"><i class="fa fa-check"></i><b>1.4.1</b> Nuevos aires</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>II Fuentes de datos</b></span></li>
+<li class="chapter" data-level="2" data-path="fuentes.html"><a href="fuentes.html"><i class="fa fa-check"></i><b>2</b> Encuestas de hogares</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="eph1.html"><a href="eph1.html"><i class="fa fa-check"></i><b>2.1</b> La Encuesta Permanente de Hogares. Características principales</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="eph1.html"><a href="eph1.html#características-de-la-eph-continua"><i class="fa fa-check"></i><b>2.1.1</b> Características de la EPH continua</a></li>
+<li class="chapter" data-level="2.1.2" data-path="eph1.html"><a href="eph1.html#la-eph-como-fuente-de-análisis-de-la-estructura-de-clases"><i class="fa fa-check"></i><b>2.1.2</b> La EPH como fuente de análisis de la estructura de clases</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="eph2.html"><a href="eph2.html"><i class="fa fa-check"></i><b>2.2</b> Comenzando a utilizar la EPH</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="eph2.html"><a href="eph2.html#el-método-clásico"><i class="fa fa-check"></i><b>2.2.1</b> El “método clásico”</a></li>
+<li class="chapter" data-level="2.2.2" data-path="eph2.html"><a href="eph2.html#el-paquete-eph"><i class="fa fa-check"></i><b>2.2.2</b> El paquete <code>eph</code></a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="eph3.html"><a href="eph3.html"><i class="fa fa-check"></i><b>2.3</b> Primeros pasos en el estudio de las clases sociales a través de la EPH</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="eph3.html"><a href="eph3.html#uniendo-las-bases-de-individuos-y-hogares"><i class="fa fa-check"></i><b>2.3.1</b> Uniendo las bases de individuos y hogares</a></li>
+<li class="chapter" data-level="2.3.2" data-path="eph3.html"><a href="eph3.html#población-bajo-análisis"><i class="fa fa-check"></i><b>2.3.2</b> Población bajo análisis</a></li>
+<li class="chapter" data-level="2.3.3" data-path="eph3.html"><a href="eph3.html#ponderación-y-expansión-de-la-muestra"><i class="fa fa-check"></i><b>2.3.3</b> Ponderación y expansión de la muestra</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="otras.html"><a href="otras.html"><i class="fa fa-check"></i><b>2.4</b> Otras encuestas de hogares para el estudio de la estructura de clases</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="fuentes2.html"><a href="fuentes2.html"><i class="fa fa-check"></i><b>3</b> Los censos de población modernos</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="clases3.html"><a href="clases3.html"><i class="fa fa-check"></i><b>3.1</b> Clases sociales y censos de población</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="clases3.html"><a href="clases3.html#antecedentes"><i class="fa fa-check"></i><b>3.1.1</b> Antecedentes</a></li>
+<li class="chapter" data-level="3.1.2" data-path="clases3.html"><a href="clases3.html#practicidad"><i class="fa fa-check"></i><b>3.1.2</b> Practicidad</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="censos.html"><a href="censos.html"><i class="fa fa-check"></i><b>3.2</b> Censos de población modernos. Características principales</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="censos.html"><a href="censos.html#las-características-económicas-en-los-censos-de-población"><i class="fa fa-check"></i><b>3.2.1</b> Las características económicas en los censos de población</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="censos2.html"><a href="censos2.html"><i class="fa fa-check"></i><b>3.3</b> Censos modernos: acceso diferencial</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="censos2.html"><a href="censos2.html#modos-de-acceso"><i class="fa fa-check"></i><b>3.3.1</b> Modos de acceso</a></li>
+<li class="chapter" data-level="3.3.2" data-path="censos2.html"><a href="censos2.html#es-lo-que-hay"><i class="fa fa-check"></i><b>3.3.2</b> Es lo que hay</a></li>
+<li class="chapter" data-level="3.3.3" data-path="censos2.html"><a href="censos2.html#procesamiento-de-datos-en-líneau-2"><i class="fa fa-check"></i><b>3.3.3</b> Procesamiento de datos en línea</a></li>
+<li class="chapter" data-level="3.3.4" data-path="censos2.html"><a href="censos2.html#descarga-directa-de-microdatos"><i class="fa fa-check"></i><b>3.3.4</b> Descarga directa de microdatos</a></li>
+<li class="chapter" data-level="3.3.5" data-path="censos2.html"><a href="censos2.html#ipums-i"><i class="fa fa-check"></i><b>3.3.5</b> IPUMS-I</a></li>
+<li class="chapter" data-level="3.3.6" data-path="censos2.html"><a href="censos2.html#solicitud-directa-al-indec"><i class="fa fa-check"></i><b>3.3.6</b> Solicitud directa al INDEC</a></li>
+<li class="chapter" data-level="3.3.7" data-path="censos2.html"><a href="censos2.html#otras-opciones-no-oficiales"><i class="fa fa-check"></i><b>3.3.7</b> Otras opciones no oficiales</a></li>
+<li class="chapter" data-level="3.3.8" data-path="censos2.html"><a href="censos2.html#disponibilidad-en-detalle-para-el-estudio-de-clases-sociales"><i class="fa fa-check"></i><b>3.3.8</b> Disponibilidad en detalle para el estudio de clases sociales</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>III Variables</b></span></li>
+<li class="chapter" data-level="4" data-path="ocupacion.html"><a href="ocupacion.html"><i class="fa fa-check"></i><b>4</b> Las características económicas de la población</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="consideraciones.html"><a href="consideraciones.html"><i class="fa fa-check"></i><b>4.1</b> Consideraciones previas</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="consideraciones.html"><a href="consideraciones.html#las-reglas-del-juego"><i class="fa fa-check"></i><b>4.1.1</b> Las reglas del juego</a></li>
+<li class="chapter" data-level="4.1.2" data-path="consideraciones.html"><a href="consideraciones.html#la-estratificación-como-perspectiva-de-análisis"><i class="fa fa-check"></i><b>4.1.2</b> La estratificación como perspectiva de análisis</a></li>
+<li class="chapter" data-level="4.1.3" data-path="consideraciones.html"><a href="consideraciones.html#indicadores-de-la-estratificación-social"><i class="fa fa-check"></i><b>4.1.3</b> Indicadores de la estratificación social</a></li>
+<li class="chapter" data-level="4.1.4" data-path="consideraciones.html"><a href="consideraciones.html#la-fuerza-de-trabajo-y-las-características-económicas-de-la-población"><i class="fa fa-check"></i><b>4.1.4</b> La fuerza de trabajo y las características económicas de la población</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="las-variables-socio-ocupacionales.html"><a href="las-variables-socio-ocupacionales.html"><i class="fa fa-check"></i><b>4.2</b> Las variables socio-ocupacionales</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="las-variables-socio-ocupacionales.html"><a href="las-variables-socio-ocupacionales.html#condición-de-actividad"><i class="fa fa-check"></i><b>4.2.1</b> Condición de actividad</a></li>
+<li class="chapter" data-level="4.2.2" data-path="las-variables-socio-ocupacionales.html"><a href="las-variables-socio-ocupacionales.html#ocupación"><i class="fa fa-check"></i><b>4.2.2</b> Ocupación</a></li>
+<li class="chapter" data-level="4.2.3" data-path="las-variables-socio-ocupacionales.html"><a href="las-variables-socio-ocupacionales.html#rama-de-actividad"><i class="fa fa-check"></i><b>4.2.3</b> Rama de Actividad</a></li>
+<li class="chapter" data-level="4.2.4" data-path="las-variables-socio-ocupacionales.html"><a href="las-variables-socio-ocupacionales.html#categoría-de-ocupación"><i class="fa fa-check"></i><b>4.2.4</b> Categoría de Ocupación</a></li>
+<li class="chapter" data-level="4.2.5" data-path="las-variables-socio-ocupacionales.html"><a href="las-variables-socio-ocupacionales.html#sector-de-actividad"><i class="fa fa-check"></i><b>4.2.5</b> Sector de Actividad</a></li>
+<li class="chapter" data-level="4.2.6" data-path="las-variables-socio-ocupacionales.html"><a href="las-variables-socio-ocupacionales.html#tamaño-del-establecimiento"><i class="fa fa-check"></i><b>4.2.6</b> Tamaño del Establecimiento</a></li>
+<li class="chapter" data-level="4.2.7" data-path="las-variables-socio-ocupacionales.html"><a href="las-variables-socio-ocupacionales.html#supervisión"><i class="fa fa-check"></i><b>4.2.7</b> Supervisión</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="eph4.html"><a href="eph4.html"><i class="fa fa-check"></i><b>4.3</b> Explorando las variables socio-ocupacionales en la EPH</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="eph4.html"><a href="eph4.html#condición-de-actividad-1"><i class="fa fa-check"></i><b>4.3.1</b> Condición de actividad</a></li>
+<li class="chapter" data-level="4.3.2" data-path="eph4.html"><a href="eph4.html#ocupación-1"><i class="fa fa-check"></i><b>4.3.2</b> Ocupación</a></li>
+<li class="chapter" data-level="4.3.3" data-path="eph4.html"><a href="eph4.html#rama-de-actividad-1"><i class="fa fa-check"></i><b>4.3.3</b> Rama de actividad</a></li>
+<li class="chapter" data-level="4.3.4" data-path="eph4.html"><a href="eph4.html#categoría-de-ocupación-1"><i class="fa fa-check"></i><b>4.3.4</b> Categoría de ocupación</a></li>
+<li class="chapter" data-level="4.3.5" data-path="eph4.html"><a href="eph4.html#sector-de-actividad-1"><i class="fa fa-check"></i><b>4.3.5</b> Sector de actividad</a></li>
+<li class="chapter" data-level="4.3.6" data-path="eph4.html"><a href="eph4.html#tamaño-del-establecimiento-1"><i class="fa fa-check"></i><b>4.3.6</b> Tamaño del establecimiento</a></li>
+<li class="chapter" data-level="4.3.7" data-path="eph4.html"><a href="eph4.html#supervisión-1"><i class="fa fa-check"></i><b>4.3.7</b> Supervisión</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="clases5.html"><a href="clases5.html"><i class="fa fa-check"></i><b>5</b> Los Nomencladores de clases sociales</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="computadora.html"><a href="computadora.html"><i class="fa fa-check"></i><b>5.1</b> De las clases en el papel a las clases en la computadora</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="computadora.html"><a href="computadora.html#operacionalizando-el-concepto-de-clase"><i class="fa fa-check"></i><b>5.1.1</b> Operacionalizando el concepto de clase</a></li>
+<li class="chapter" data-level="5.1.2" data-path="computadora.html"><a href="computadora.html#clases-grupos-estratos-qué-medimos-cuando-analizamos-la-estructura-social"><i class="fa fa-check"></i><b>5.1.2</b> Clases, grupos, estratos ¿Qué medimos cuando analizamos la estructura social?</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="clases6.html"><a href="clases6.html"><i class="fa fa-check"></i><b>5.2</b> Enfoques operacionalizables de clases y estratos sociales</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="clases6.html"><a href="clases6.html#esquemas-internacionales"><i class="fa fa-check"></i><b>5.2.1</b> Esquemas internacionales</a></li>
+<li class="chapter" data-level="5.2.2" data-path="clases6.html"><a href="clases6.html#esquemas-nacionales"><i class="fa fa-check"></i><b>5.2.2</b> Esquemas nacionales</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="operacion1.html"><a href="operacion1.html"><i class="fa fa-check"></i><b>5.3</b> Operacionalización paso a paso</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="operacion1.html"><a href="operacion1.html#punto-de-partida"><i class="fa fa-check"></i><b>5.3.1</b> Punto de partida</a></li>
+<li class="chapter" data-level="5.3.2" data-path="operacion1.html"><a href="operacion1.html#acondicionando-la-base"><i class="fa fa-check"></i><b>5.3.2</b> Acondicionando la base</a></li>
+<li class="chapter" data-level="5.3.3" data-path="operacion1.html"><a href="operacion1.html#creación-cso-desagregado"><i class="fa fa-check"></i><b>5.3.3</b> Creación CSO desagregado</a></li>
+<li class="chapter" data-level="5.3.4" data-path="operacion1.html"><a href="operacion1.html#creación-del-cso-agregado"><i class="fa fa-check"></i><b>5.3.4</b> Creación del CSO agregado</a></li>
+<li class="chapter" data-level="5.3.5" data-path="operacion1.html"><a href="operacion1.html#creación-esquema-de-clase"><i class="fa fa-check"></i><b>5.3.5</b> Creación esquema de clase</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="operacion2.html"><a href="operacion2.html"><i class="fa fa-check"></i><b>5.4</b> Operacionalización automática</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="operacion2.html"><a href="operacion2.html#operacionalizando-la-escala-isei"><i class="fa fa-check"></i><b>5.4.1</b> Operacionalizando la escala ISEI</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="unidades.html"><a href="unidades.html"><i class="fa fa-check"></i><b>5.5</b> Unidades de análisis y clases sociales</a>
+<ul>
+<li class="chapter" data-level="5.5.1" data-path="unidades.html"><a href="unidades.html#breve-discusión-teórica"><i class="fa fa-check"></i><b>5.5.1</b> Breve discusión teórica</a></li>
+<li class="chapter" data-level="5.5.2" data-path="unidades.html"><a href="unidades.html#opciones-metodológicas"><i class="fa fa-check"></i><b>5.5.2</b> Opciones metodológicas</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>IV Análisis</b></span></li>
+<li class="chapter" data-level="6" data-path="independiente.html"><a href="independiente.html"><i class="fa fa-check"></i><b>6</b> La clase como variable independiente</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="huevo.html"><a href="huevo.html"><i class="fa fa-check"></i><b>6.1</b> La estructura de clases ¿el huevo o la gallina?</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="huevo.html"><a href="huevo.html#el-enfoque-relacional-weberiano"><i class="fa fa-check"></i><b>6.1.1</b> El enfoque relacional-weberiano</a></li>
+<li class="chapter" data-level="6.1.2" data-path="huevo.html"><a href="huevo.html#estructural-funcionalismo"><i class="fa fa-check"></i><b>6.1.2</b> Estructural funcionalismo</a></li>
+<li class="chapter" data-level="6.1.3" data-path="huevo.html"><a href="huevo.html#un-enfoque-intermedio"><i class="fa fa-check"></i><b>6.1.3</b> Un enfoque intermedio</a></li>
+<li class="chapter" data-level="6.1.4" data-path="huevo.html"><a href="huevo.html#una-cuarta-mirada"><i class="fa fa-check"></i><b>6.1.4</b> Una cuarta mirada</a></li>
+<li class="chapter" data-level="6.1.5" data-path="huevo.html"><a href="huevo.html#epílogo-una-sociedad-sin-clases"><i class="fa fa-check"></i><b>6.1.5</b> Epílogo: una sociedad sin clases</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="explorando.html"><a href="explorando.html"><i class="fa fa-check"></i><b>6.2</b> Explorando los datos por clase social</a></li>
+<li class="chapter" data-level="6.3" data-path="aprox.html"><a href="aprox.html"><i class="fa fa-check"></i><b>6.3</b> Aproximación al análisis multidimensional</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="dependiente.html"><a href="dependiente.html"><i class="fa fa-check"></i><b>7</b> La clase como variable dependiente</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="movilidad1.html"><a href="movilidad1.html"><i class="fa fa-check"></i><b>7.1</b> El estudio de la movilidad social</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="movilidad1.html"><a href="movilidad1.html#qué-es-la-movilidad-social"><i class="fa fa-check"></i><b>7.1.1</b> ¿Qué es la movilidad social?</a></li>
+<li class="chapter" data-level="7.1.2" data-path="movilidad1.html"><a href="movilidad1.html#enfoques-funcionalistas"><i class="fa fa-check"></i><b>7.1.2</b> Enfoques funcionalistas</a></li>
+<li class="chapter" data-level="7.1.3" data-path="movilidad1.html"><a href="movilidad1.html#enfoques-de-clase"><i class="fa fa-check"></i><b>7.1.3</b> Enfoques de clase</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="enes.html"><a href="enes.html"><i class="fa fa-check"></i><b>7.2</b> El uso de la base ENES-PISAC</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="enes.html"><a href="enes.html#algunas-consideraciones-de-la-enes"><i class="fa fa-check"></i><b>7.2.1</b> Algunas consideraciones de la ENES</a></li>
+<li class="chapter" data-level="7.2.2" data-path="enes.html"><a href="enes.html#abriendo-y-pegando-la-base-enes"><i class="fa fa-check"></i><b>7.2.2</b> Abriendo y pegando la base ENES</a></li>
+<li class="chapter" data-level="7.2.3" data-path="enes.html"><a href="enes.html#recodificación-de-variables-y-filtros"><i class="fa fa-check"></i><b>7.2.3</b> Recodificación de variables y filtros</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="movilidad2.html"><a href="movilidad2.html"><i class="fa fa-check"></i><b>7.3</b> Las tablas de movilidad</a></li>
+<li class="chapter" data-level="7.4" data-path="movilidad3.html"><a href="movilidad3.html"><i class="fa fa-check"></i><b>7.4</b> Aproximación al análisis multivariable de la movilidad social</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="tiempo.html"><a href="tiempo.html"><i class="fa fa-check"></i><b>8</b> Tiempo, espacio y clases sociales</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="temporal.html"><a href="temporal.html"><i class="fa fa-check"></i><b>8.1</b> La dimensión temporal</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="temporal.html"><a href="temporal.html#algunos-ejemplos-de-la-bibliografía"><i class="fa fa-check"></i><b>8.1.1</b> Algunos ejemplos de la bibliografía</a></li>
+<li class="chapter" data-level="8.1.2" data-path="temporal.html"><a href="temporal.html#ejemplo-práctico"><i class="fa fa-check"></i><b>8.1.2</b> Ejemplo práctico</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="espacial.html"><a href="espacial.html"><i class="fa fa-check"></i><b>8.2</b> La dimensión espacial</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="espacial.html"><a href="espacial.html#algunos-ejemplos-de-la-bibliografía-1"><i class="fa fa-check"></i><b>8.2.1</b> Algunos ejemplos de la bibliografía</a></li>
+<li class="chapter" data-level="8.2.2" data-path="espacial.html"><a href="espacial.html#ejemplo-práctico-1"><i class="fa fa-check"></i><b>8.2.2</b> Ejemplo práctico</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>V Anexo</b></span></li>
+<li class="chapter" data-level="9" data-path="anexo.html"><a href="anexo.html"><i class="fa fa-check"></i><b>9</b> Introducción a R y RStudio</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="introR.html"><a href="introR.html"><i class="fa fa-check"></i><b>9.1</b> Introducción</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="introR.html"><a href="introR.html#el-entorno-de-r"><i class="fa fa-check"></i><b>9.1.1</b> El entorno de R</a></li>
+<li class="chapter" data-level="9.1.2" data-path="introR.html"><a href="introR.html#aplicar-estadística-en-r"><i class="fa fa-check"></i><b>9.1.2</b> Aplicar estadística en R</a></li>
+<li class="chapter" data-level="9.1.3" data-path="introR.html"><a href="introR.html#descargar-e-instalar-r"><i class="fa fa-check"></i><b>9.1.3</b> Descargar e instalar R</a></li>
+<li class="chapter" data-level="9.1.4" data-path="introR.html"><a href="introR.html#rstudio"><i class="fa fa-check"></i><b>9.1.4</b> RStudio</a></li>
+<li class="chapter" data-level="9.1.5" data-path="introR.html"><a href="introR.html#descargar-e-instalar-rstudio"><i class="fa fa-check"></i><b>9.1.5</b> Descargar e instalar RStudio</a></li>
+<li class="chapter" data-level="9.1.6" data-path="introR.html"><a href="introR.html#partes-de-rstudio"><i class="fa fa-check"></i><b>9.1.6</b> Partes de RStudio</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="workflow.html"><a href="workflow.html"><i class="fa fa-check"></i><b>9.2</b> Workflow</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="workflow.html"><a href="workflow.html#proyectos-r-studio"><i class="fa fa-check"></i><b>9.2.1</b> Proyectos R Studio</a></li>
+<li class="chapter" data-level="9.2.2" data-path="workflow.html"><a href="workflow.html#organización"><i class="fa fa-check"></i><b>9.2.2</b> Organización</a></li>
+<li class="chapter" data-level="9.2.3" data-path="workflow.html"><a href="workflow.html#utilidad"><i class="fa fa-check"></i><b>9.2.3</b> Utilidad</a></li>
+<li class="chapter" data-level="9.2.4" data-path="workflow.html"><a href="workflow.html#crear-un-proyecto-de-rstudio"><i class="fa fa-check"></i><b>9.2.4</b> Crear un Proyecto de RStudio</a></li>
+<li class="chapter" data-level="9.2.5" data-path="workflow.html"><a href="workflow.html#crear-un-archivo-de-r"><i class="fa fa-check"></i><b>9.2.5</b> Crear un archivo de R</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="rmarkdown.html"><a href="rmarkdown.html"><i class="fa fa-check"></i><b>9.3</b> RMarkdown</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="rmarkdown.html"><a href="rmarkdown.html#agregar-texto"><i class="fa fa-check"></i><b>9.3.1</b> Agregar texto</a></li>
+<li class="chapter" data-level="9.3.2" data-path="rmarkdown.html"><a href="rmarkdown.html#listas"><i class="fa fa-check"></i><b>9.3.2</b> Listas</a></li>
+<li class="chapter" data-level="9.3.3" data-path="rmarkdown.html"><a href="rmarkdown.html#editar-texto"><i class="fa fa-check"></i><b>9.3.3</b> Editar texto</a></li>
+<li class="chapter" data-level="9.3.4" data-path="rmarkdown.html"><a href="rmarkdown.html#insertar-imágenes"><i class="fa fa-check"></i><b>9.3.4</b> Insertar imágenes</a></li>
+<li class="chapter" data-level="9.3.5" data-path="rmarkdown.html"><a href="rmarkdown.html#enlaces"><i class="fa fa-check"></i><b>9.3.5</b> Enlaces</a></li>
+<li class="chapter" data-level="9.3.6" data-path="rmarkdown.html"><a href="rmarkdown.html#tips-para-escribir-código-en-r"><i class="fa fa-check"></i><b>9.3.6</b> Tips para escribir código en R</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="primerospasos.html"><a href="primerospasos.html"><i class="fa fa-check"></i><b>9.4</b> Primeros pasos en R</a>
+<ul>
+<li class="chapter" data-level="9.4.1" data-path="primerospasos.html"><a href="primerospasos.html#funciones-y-comandos-elementales"><i class="fa fa-check"></i><b>9.4.1</b> Funciones y comandos elementales</a></li>
+<li class="chapter" data-level="9.4.2" data-path="primerospasos.html"><a href="primerospasos.html#valores-y-vectores"><i class="fa fa-check"></i><b>9.4.2</b> Valores y vectores</a></li>
+<li class="chapter" data-level="9.4.3" data-path="primerospasos.html"><a href="primerospasos.html#matrices-y-listas"><i class="fa fa-check"></i><b>9.4.3</b> Matrices y listas</a></li>
+<li class="chapter" data-level="9.4.4" data-path="primerospasos.html"><a href="primerospasos.html#filtrado-subsetting"><i class="fa fa-check"></i><b>9.4.4</b> Filtrado (Subsetting)</a></li>
+<li class="chapter" data-level="9.4.5" data-path="primerospasos.html"><a href="primerospasos.html#cargar-datos-en-r"><i class="fa fa-check"></i><b>9.4.5</b> Cargar datos en R</a></li>
+</ul></li>
+<li class="chapter" data-level="9.5" data-path="recursos.html"><a href="recursos.html"><i class="fa fa-check"></i><b>9.5</b> Otros recursos de consulta</a></li>
+</ul></li>
+<li class="part"><span><b>VI Referencias bibliográficas</b></span></li>
+<li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
     </div>
 
-    <div id="main-nav" class="collapse-lg">
-      <form role="search">
-        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
-</form>
-
-      <nav aria-label="Table of contents"><h2>Table of contents</h2>
-        <ul class="book-toc list-unstyled">
-<li><a class="" href="index.html">Prefacio</a></li>
-<li><a class="" href="agradecimientos.html">Agradecimientos</a></li>
-<li class="book-part">Aspectos teóricos</li>
-<li><a class="" href="estructura1.html"><span class="header-section-number">1</span> La estructura social en la Argentina actual</a></li>
-<li class="book-part">Fuentes de datos</li>
-<li><a class="" href="fuentes.html"><span class="header-section-number">2</span> Encuestas de hogares</a></li>
-<li><a class="" href="fuentes2.html"><span class="header-section-number">3</span> Los censos de población modernos</a></li>
-<li class="book-part">Variables</li>
-<li><a class="" href="ocupacion.html"><span class="header-section-number">4</span> Las características económicas de la población</a></li>
-<li><a class="" href="clases5.html"><span class="header-section-number">5</span> Los Nomencladores de clases sociales</a></li>
-<li class="book-part">Análisis</li>
-<li><a class="" href="independiente.html"><span class="header-section-number">6</span> La clase como variable independiente</a></li>
-<li><a class="" href="dependiente.html"><span class="header-section-number">7</span> La clase como variable dependiente</a></li>
-<li><a class="" href="tiempo.html"><span class="header-section-number">8</span> Tiempo, espacio y clases sociales</a></li>
-<li class="book-part">Anexo</li>
-<li><a class="active" href="anexo.html"><span class="header-section-number">9</span> Introducción a R y RStudio</a></li>
-<li class="book-part">Referencias bibliográficas</li>
-<li><a class="" href="referencias.html">Referencias</a></li>
-</ul>
-
-        <div class="book-extra">
-          <p><a id="book-repo" href="https://github.com/nsacco/clases-arg">View book source <i class="fab fa-github"></i></a></p>
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Libro de Cocina para el Análisis de las Clases Sociales en Argentina</a>
+          </h1>
         </div>
-      </nav>
-</div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="anexo" class="section level1" number="9">
-<h1>
-<span class="header-section-number">Capítulo 9</span> Introducción a R y RStudio<a class="anchor" aria-label="anchor" href="#anexo"><i class="fas fa-link"></i></a>
-</h1>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="anexo" class="section level1 hasAnchor" number="9">
+<h1><span class="header-section-number">Capítulo 9</span> Introducción a R y RStudio<a href="anexo.html#anexo" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>La mayor parte de los ejercicios expuestos a lo largo de este Manual utilizan una o más funciones de <strong><code>R</code></strong> para resolver un problema específico. Se destaca que no se describen las funciones en detalle, ya que ellas pueden ser consultadas en otras publicaciones. Sin embargo, en este anexo, se presenta una introducción básica a la programación en <code>R</code> con <code>RStudio</code> y una selección de recursos disponibles para profundizar en su práctica.</p>
-<div id="introR" class="section level2" number="9.1">
-<h2>
-<span class="header-section-number">9.1</span> Introducción<a class="anchor" aria-label="anchor" href="#introR"><i class="fas fa-link"></i></a>
-</h2>
-<p><strong><code>R</code></strong> es un lenguaje de programación usado para realizar análisis estadístico y en general, análisis de datos. Se trata de un conjunto integrado de programas para trabajar con datos, cálculos y gráficos, que permite:</p>
-<ul>
-<li><p>almacenar y manipular datos,</p></li>
-<li><p>operar cálculos sobre variables indexadas (como las matrices),</p></li>
-<li><p>analizar datos con una colección de herramientas,</p></li>
-<li><p>aplicar herramientas gráficas para el análisis de datos y,</p></li>
-<li><p>programar con un lenguaje sencillo y en constante desarrollo.</p></li>
-</ul>
-<div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:unnamed-chunk-134"></span>
-<p class="caption">
-Gráfico 9.1: Logo de R
-</p>
-<img src="imagenes/R_logo.svg.png" alt="Logo de R" width="40%">
 </div>
-<p><strong><code>R</code></strong> es el lenguaje de programación popular debido a tres ventajas principales:</p>
-<ul>
-<li><p><strong>accesibilidad</strong>: cualquiera puede descargar el programa de manera gratuita,</p></li>
-<li><p><strong>código abierto</strong>: quien desee modificar el código de <strong><code>R</code></strong>, puede hacerlo, y</p></li>
-<li><p><strong>comunidad de usuarios</strong>: existe una actividad permanente alrededor de <strong><code>R</code></strong>, que brinda soporte a los usuarios para resolver dudas y aprender en línea.</p></li>
-</ul>
-<div id="el-entorno-de-r" class="section level3" number="9.1.1">
-<h3>
-<span class="header-section-number">9.1.1</span> El entorno de R<a class="anchor" aria-label="anchor" href="#el-entorno-de-r"><i class="fas fa-link"></i></a>
-</h3>
-<ul>
-<li><p><strong><code>R</code></strong> se puede entender como el entorno donde se implementan múltiples técnicas estadísticas. El concepto de “entorno” se refiere a que es un sistema diseñado específicamente para el análisis de datos, que posee coherencia interna y que es más que el agregado de cada una de las herramientas que lo conforman.</p></li>
-<li><p>Gracias a la implementación de <strong><code>R</code></strong> se han desarrollado numerosos métodos interactivos para analizar datos. Los usuarios de <strong><code>R</code></strong> se han ido <em>aggiornando</em> con cada versión del programa que ha salido, añadiendo métodos que acompañan las nuevas tecnologías.</p></li>
-</ul>
-</div>
-<div id="aplicar-estadística-en-r" class="section level3" number="9.1.2">
-<h3>
-<span class="header-section-number">9.1.2</span> Aplicar estadística en R<a class="anchor" aria-label="anchor" href="#aplicar-estad%C3%ADstica-en-r"><i class="fas fa-link"></i></a>
-</h3>
-<ul>
-<li><p>El entorno de <strong><code>R</code></strong> permite desplegar técnicas estadísticas, de las más antiguas hasta la más actuales. Esta ventaja no es proporcional al esfuerzo que implica buscar las herramientas del programa que permiten su aplicación.</p></li>
-<li><p>Lo que diferencia a <strong><code>R</code></strong> de otros sistemas de análisis estadísticos como <strong>Stata</strong> o <strong>SPSS</strong> es que el <code>output</code> que se genera es escueto comparado con la cantidad de comandos (o <code>input</code>) que se deben imprimir para obtenerlo. Cada uno de los pasos a seguir se van almacenando en forma de <code>objetos</code>, que quedan disponibles para la observación y el análisis del usuario.</p></li>
-<li><p>Algunas técnicas estadísticas están incluidas en el entorno básico de <strong><code>R</code></strong> y otras se pueden obtener en forma de bibliotecas, llamadas <strong>paquetes</strong> (<code>packages</code>).</p></li>
-</ul>
-<div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:unnamed-chunk-135"></span>
-<p class="caption">
-Gráfico 9.2: Logos de algunos paquetes de R
-</p>
-<img src="imagenes/R_packages.png" alt="Logos de algunos paquetes de R" width="60%">
-</div>
-</div>
-<div id="descargar-e-instalar-r" class="section level3" number="9.1.3">
-<h3>
-<span class="header-section-number">9.1.3</span> Descargar e instalar R<a class="anchor" aria-label="anchor" href="#descargar-e-instalar-r"><i class="fas fa-link"></i></a>
-</h3>
-<p>Para descargar <strong><code>R</code></strong> es posible ingresar a <a href="https://cran.r-project.org/" target="_blank">https://cran.r-project.org/</a>. Luego, se debe seleccionar el sistema operativo de cada computadora donde se lo desea instalar y, a consiguiente, comenzará la instalación.</p>
-<div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:unnamed-chunk-136"></span>
-<p class="caption">
-Gráfico 9.3: R
-</p>
-<img src="imagenes/R_desc.png" alt="R" width="80%">
-</div>
-</div>
-<div id="rstudio" class="section level3" number="9.1.4">
-<h3>
-<span class="header-section-number">9.1.4</span> RStudio<a class="anchor" aria-label="anchor" href="#rstudio"><i class="fas fa-link"></i></a>
-</h3>
-<p><strong><code>RStudio</code></strong> es un <strong>entorno de desarrollo integrado</strong> (IDE, en inglés), que significa que contiene todas las herramientas que se necesitan en un mismo lugar. Las maneras más sencilla de “comunicarse” con <strong><code>R</code></strong> son:</p>
-<ul>
-<li><p>escribiendo líneas de comandos que conforman el código en la terminal o bien,</p></li>
-<li><p>utilizando <code>RStudio</code>, que hace más atractiva y fácil la aproximación al programa.</p></li>
-</ul>
-</div>
-<div id="descargar-e-instalar-rstudio" class="section level3" number="9.1.5">
-<h3>
-<span class="header-section-number">9.1.5</span> Descargar e instalar RStudio<a class="anchor" aria-label="anchor" href="#descargar-e-instalar-rstudio"><i class="fas fa-link"></i></a>
-</h3>
-<p>Se debe ingresar al siguiente enlace: <a href="https://www.rstudio.com/products/rstudio/download/" target="_blank">https://www.rstudio.com/products/rstudio/download/</a></p>
-<div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:unnamed-chunk-137"></span>
-<p class="caption">
-Gráfico 9.4: Logo de RStudio
-</p>
-<img src="imagenes/RStudio_logo.png" alt="Logo de RStudio" width="80%">
-</div>
-<div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:unnamed-chunk-138"></span>
-<p class="caption">
-Gráfico 9.5: Descarga de RStudio
-</p>
-<img src="imagenes/RStudio_desc.png" alt="Descarga de RStudio" width="80%">
-</div>
-</div>
-<div id="partes-de-rstudio" class="section level3" number="9.1.6">
-<h3>
-<span class="header-section-number">9.1.6</span> Partes de RStudio<a class="anchor" aria-label="anchor" href="#partes-de-rstudio"><i class="fas fa-link"></i></a>
-</h3>
-<p>Las secciones que conforman <code>RStudio</code> son cuatro:</p>
-<ul>
-<li><p>la fuente (en la parte superior izquierda),</p></li>
-<li><p>el entorno (parte superior derecha),</p></li>
-<li><p>la consola (parte inferior izquierda) y</p></li>
-<li><p>la sección de “documentos, gráficos, paquetes y ayuda” (parte inferior derecha).</p></li>
-</ul>
-<p>Cuando uno abre <code>RStudio</code>, de forma predeterminada, se ve de la siguiente manera:</p>
-<div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:unnamed-chunk-139"></span>
-<p class="caption">
-Gráfico 9.6: RStudio Escritorio
-</p>
-<img src="imagenes/rstudio_entorno.png" alt="RStudio Escritorio" width="80%">
-</div>
-<ul>
-<li><p>Básicamente, la interfaz se compone de diferentes paneles. Sobre el lado izquierdo hay un panel grande y en el lado derecho hay dos paneles más pequeños. Al comenzar a trabajar en <code>RStudio</code>, habrá un cuarto panel que se activa al abrir un nuevo documento.</p></li>
-<li><p>Al crear ese nuevo archivo hay cuatro paneles: dos a la izquierda y dos a la derecha. Es posible ajustar estos paneles moviendo la barra que los separa. También se puede deslizar el divisor del medio para ajustar el ancho de los paneles y en el lado derecho también es posible ajustar las alturas relativas de estos paneles.</p></li>
-<li><p>En la esquina de cada panel hay un botón de minimizar, para ocultar cualquier panel. Se puede maximizar nuevamente haciendo <em>clic</em> sobre el mismo o en el botón que muestra dos paneles.</p></li>
-<li><p>Esta es la forma predeterminada para configurar <code>RStudio</code>. Cualquier documento que se cree se encontrará en el panel superior <strong>izquierdo</strong> mientras que en el inferior izquierdo está la consola de <strong><code>R</code></strong>, que es un área donde se pueden escribir comandos directamente. En el lado <strong>derecho</strong>, el panel superior es básicamente información sobre el entorno en el que está trabajando.</p></li>
-<li><p>En la parte inferior derecha hay un panel que tiene varias pestañas. El primero permite ver la estructura de los archivos, por lo que es parecido a una ventana estándar que se usa para navegar en cualquier sistema operativo.</p></li>
-</ul>
-<div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:unnamed-chunk-140"></span>
-<p class="caption">
-Gráfico 9.7: panel Derecho Inferior de RStudio
-</p>
-<img src="imagenes/pan_der_inf.png" alt="panel Derecho Inferior de RStudio" width="60%">
-</div>
-<ul>
-<li>Hay una pestaña que enumera los paquetes que se han instalado.</li>
-</ul>
-<div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:unnamed-chunk-141"></span>
-<p class="caption">
-Gráfico 9.8: Paquetes de RStudio
-</p>
-<img src="imagenes/paquetes.png" alt="Paquetes de RStudio" width="60%">
-</div>
-<ul>
-<li>La otra es una pestaña de ayuda, ya que en <strong><code>R</code></strong>, si uno desea ayuda sobre cualquier cosa, se la puede obtener escribiendo un signo de interrogación y luego el nombre del objeto sobre el que desea ayuda:</li>
-</ul>
-<div class="sourceCode" id="cb143"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="op">?</span><span class="va">mean</span></span></code></pre></div>
-<ul>
-<li>Se puede ver que, al ejecutar ese comando, se obtiene un archivo de ayuda sobre la media. También es posible obtener uno sobre la mediana, y así sucesivamente.</li>
-</ul>
-<div class="sourceCode" id="cb144"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="op">?</span><span class="va">median</span></span></code></pre></div>
-<p>Se obtendrá:</p>
-<div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:unnamed-chunk-144"></span>
-<p class="caption">
-Gráfico 9.9: R
-</p>
-<img src="imagenes/ayuda.png" alt="R" width="60%">
-</div>
-<ul>
-<li>Entonces, si hace falta ayuda, aparecerá en dicha pestaña. Hay que tener en cuenta que es posible modificar la configuración de estos paneles. Los pasos para hacerlo son:</li>
-</ul>
-<blockquote>
-<p>Menú &gt; Herramientas</p>
-</blockquote>
-<ul>
-<li>Dentro de herramientas (<em>Tools</em>) se encuentran las ‘Opciones globales’ (<em>Global Options</em>). Este menú ofrece todo tipo de posibilidades para configurar <code>RStudio</code> y el entorno. Para cambiar la ubicación de la consola y el entorno, hay que clicar arriba, donde dice ‘Entorno’, sobre el cuadro desplegable y aplicarlo. Al volver, se verá en el lado izquierdo, el documento en el que se está trabajando y debajo, el panel de ‘Entorno’.</li>
-</ul>
-<div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:unnamed-chunk-145"></span>
-<p class="caption">
-Gráfico 9.10: RStudio Opciones Globales
-</p>
-<img src="imagenes/global_opt.png" alt="RStudio Opciones Globales" width="80%">
-</div>
-<ul>
-<li>También es posible cambiar el color del esquema, dentro de las ‘Opciones globales’ puedes ver algunas opciones de apariencia. El tema predeterminado tiene blanco de fondo con un texto en negro. Pero no es el único, sino que existen diferentes temas que se pueden aplicar.</li>
-</ul>
-<div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:unnamed-chunk-146"></span>
-<p class="caption">
-Gráfico 9.11: Selección de Colores en RStudio
-</p>
-<img src="imagenes/color_schema.png" alt="Selección de Colores en RStudio" width="80%">
-</div>
-</div>
-</div>
-<div id="workflow" class="section level2" number="9.2">
-<h2>
-<span class="header-section-number">9.2</span> Workflow<a class="anchor" aria-label="anchor" href="#workflow"><i class="fas fa-link"></i></a>
-</h2>
-<p>Esta sección trata sobre el flujo de trabajo (<em>workflow</em>) en <code>RStudio</code>. Existen muchas cosas sobre el trabajo en <code>R</code> que los encuentran confusas. Sin embargo, hay formas en las que se pueden simplificar problemas: sistematizando una buena práctica del flujo de trabajo desde el principio.</p>
-<div id="proyectos-r-studio" class="section level3" number="9.2.1">
-<h3>
-<span class="header-section-number">9.2.1</span> Proyectos R Studio<a class="anchor" aria-label="anchor" href="#proyectos-r-studio"><i class="fas fa-link"></i></a>
-</h3>
-<p>Una de las cuestiones más comunes que generan dificultades en <strong><code>R</code></strong>, es que no provee las facilidades de un software estadístico estándar con el cual apuntar y hacer <em>clic</em> dentro de la misma interfaz. Específicamente se dificulta el acceso a los archivos y el guardado utilizando rutas de archivo, en especial cuando esas rutas (<code>paths</code>) son extensas.</p>
-<p>La forma más sencilla de minimizar esta dificultad es trabajar con lo que se llama un documento de tipo <strong>Proyecto de RStudio</strong>. Este es el primer paso a seguir: usar los archivos de proyecto de <code>RStudio</code>. Antes que nada, ¿Qué es un archivo de proyecto de <code>RStudio</code>?</p>
-<ul>
-<li>Es un archivo creado por <code>RStudio</code> que tiene una extensión de <code>.Rproj</code>, y esencialmente lo que hace es almacenar información sobre la carpeta que lo contiene. Así que para guardar este archivo de proyecto dentro de una carpeta en particular, hay que tener en cuenta que dentro del proyecto se guardará información sobre la carpeta que se encuentra en su sistema de archivos, y también guardará información sobre el estado anterior del proyecto. Cuando se genera un archivo de proyecto, primero se abrirá en <code>RStudio</code> y de este modo se podrá acceder a la información sobre la carpeta en la que se encuentra almacenado este proyecto.</li>
-</ul>
-</div>
-<div id="organización" class="section level3" number="9.2.2">
-<h3>
-<span class="header-section-number">9.2.2</span> Organización<a class="anchor" aria-label="anchor" href="#organizaci%C3%B3n"><i class="fas fa-link"></i></a>
-</h3>
-<p>Una de los aspectos clave es que, al trabajar con archivos de proyecto, es necesario organizarse. Una forma sencilla de trabajar con <code>RStudio</code> es tener un proceso pre-establecido por el que pasar cada vez que se inicie un nuevo proyecto. El proceso que se sugiere en este libro consiste en:</p>
-<ol style="list-style-type: decimal">
-<li><p>Crear un nuevo proyecto de <code>RStudio</code>, por el cual se generará una carpeta dentro del directorio local.</p></li>
-<li><p>Luego, dentro de esa carpeta crear una sub-carpeta llamada ‘datos’. Ahí es donde se guardarán todos los archivos de datos relacionados con el proyecto.</p></li>
-<li><p>También, crear una carpeta llamada <code>r_docs</code> que es donde se guardan todos los documentos de <strong><code>R</code></strong> y de <code>RStudio</code>.</p></li>
-<li><p>En caso que haya imágenes o medios asociados con el proyecto, se aconseja generar una carpeta llamada ‘imágenes’.</p></li>
-</ol>
-<p>En resumen, siguiendo el tipo de organización aquí propuesta, hay un directorio donde se guardan todos los proyectos de <code>R Studio</code>. Tal como se aclaró antes: la información del proyecto se almacena dentro de una carpeta, donde a su vez hay tres carpetas más: una donde se encuentran los archivos de <code>datos</code>, otra donde guardar todos los <code>documentos</code> de <strong><code>R</code></strong> y <code>RStudio</code>, y una última carpeta para las <code>imágenes</code>. Además, dentro de esa carpeta grande habrá un archivo de <code>RStudio Project</code>, con el nombre que el usuario le haya asignado.</p>
-</div>
-<div id="utilidad" class="section level3" number="9.2.3">
-<h3>
-<span class="header-section-number">9.2.3</span> Utilidad<a class="anchor" aria-label="anchor" href="#utilidad"><i class="fas fa-link"></i></a>
-</h3>
-<p>¿Por qué este procedimiento de organización del flujo de trabajo es útil? Porque respetando la estructura de las carpetas, es posible encontrar los archivos de manera sencilla, optimizando tiempo y espacio. Esta estructura se puede ver en la ruta del archivo, que será similar a /Usuarios/Nombreusuario/Documentos/RProjects…etc. Esta es una ruta a un archivo de datos que se almacena en el disco duro, en la unidad correspondiente, que puede ser <code>C</code> o <code>U</code>, por ejemplo.</p>
-<p><strong>Desventaja 1</strong></p>
-<p>Dentro de una carpeta llamada <code>Usuarios</code>, ingresando a una carpeta denominada “tunombre” (aquí cada uno puede colocar su propio nombre de usuario), dentro de la carpeta llamada “Documentos” y luego, dentro de otra carpeta, se encuentra el nuevo proyecto creado. En esta última, finalmente, está la subcarpeta de “datos”. Por lo tanto, cada vez que se desee acceder a ese archivo de datos, tanto para cargarlo como guardarlo, se debe llamar a esa gran cadena de texto, que es la ruta al archivo, lo cual puede resultar complicado.</p>
-<p><strong>Desventaja 2</strong></p>
-<p>Si se cambia de computadora donde fue creado un archivo de <strong><code>R</code></strong> a otra que no tenga el sistema de archivos que se ha descrito en este libro, entonces se debe reescribir todo el código de <strong><code>R</code></strong> para poder acceder al archivo deseado. Esto se debe a que podría estar guardado en una ubicación diferente a la de mi archivo local. Al usar un proyecto de <code>RStudio</code> se puede utilizar lo que se conoce como “rutas relativas”. También, hay un camino mucho más corto que implica colocar dos puntos y una barra al inicio de la ruta. Los puntos representan la carpeta del proyecto que se encuentra en una ubicación diferente a la del archivo que se está editando. Dondequiera que esa carpeta esté almacenada, no es necesario saberlo porque el proyecto de <code>RStudio</code> se redirige automáticamente allí cuando se implementan los puntos. Todo lo que hay que hacer es poner los puntos seguidos de una barra, luego el nombre de la carpeta de datos y de nuevo barra, seguido el nombre del archivo al que se intenta acceder. Por ejemplo, <code>../nombrecarpeta/nombrearchivo.Rmd</code></p>
-<p>De seguido, se presenta un segundo ejemplo utilizando la estructura de carpetas propuesta. Si se almacenan los archivos de <code>RStudio</code> dentro de una carpeta llamada “docs_r”, es necesario salir de la misma y luego volver a “mis_datos”. Eso es lo que los puntos dobles hacen: subir de nivel. En concreto, las acciones que lleva a cabo son salir de ‘docs_r’ e ir a la carpeta de datos. Sin embargo, cuando hay muchos archivos, esto puede resultar un poco engorroso.</p>
-</div>
-<div id="crear-un-proyecto-de-rstudio" class="section level3" number="9.2.4">
-<h3>
-<span class="header-section-number">9.2.4</span> Crear un Proyecto de RStudio<a class="anchor" aria-label="anchor" href="#crear-un-proyecto-de-rstudio"><i class="fas fa-link"></i></a>
-</h3>
-<ul>
-<li><p>Lo primero es seleccionar un directorio en alguna carpeta local del ordenador.</p></li>
-<li><p>Luego abrir <code>RStudio</code> e ir al menú “Archivo”, hacer clic en “Nuevo Proyecto” y así se obtendrá un cuadro de diálogo. Se puede crear un nuevo directorio con el proyecto o si ya existe un directorio que se pueda convertir en un proyecto de <code>RStudio</code>, también se puede seleccionar un directorio existente.</p></li>
-<li><p>En siguiente paso es seleccionar en la opción superior para generar un proyecto, y luego crear el proyecto nuevo como un subdirectorio.</p></li>
-<li><p>Lo siguiente es buscar dónde guardar este proyecto. Si se desea mantener todos los proyectos juntos es necesario crear una carpeta llamada, por ejemplo, “proyectosr” donde colocar todos los proyectos de <strong><code>R</code></strong>. Como nombre del directorio se solicita el nombre del archivo de proyecto de <code>RStudio</code>, en este caso puede llamarse “primer_proyecto”.</p></li>
-<li><p>Como resultado, a pesar de que nada parece cambiar, en la pestaña de archivos (margen inferior), se notifica que uno se encuentra en la carpeta o directorio seleccionados. En este caso, dentro de la carpeta de todos los proyectos de <strong><code>R</code></strong> y, a su vez, en la carpeta llamada “primer_proyecto” que es como se ha nombrado a este proyecto. Se puede navegar dentro del proyecto desde aquí.</p></li>
-</ul>
-<p><strong>Recordatorio</strong></p>
-<ul>
-<li>
-<strong><code>R</code></strong> distingue entre mayúsculas y minúsculas, por lo que siempre es recomendable escribir todo en minúsculas.</li>
-</ul>
-</div>
-<div id="crear-un-archivo-de-r" class="section level3" number="9.2.5">
-<h3>
-<span class="header-section-number">9.2.5</span> Crear un archivo de R<a class="anchor" aria-label="anchor" href="#crear-un-archivo-de-r"><i class="fas fa-link"></i></a>
-</h3>
-<p>Lo siguiente es crear un documento en el que se quiere trabajar. En este libro se usa el ejemplo de un archivo de <code>RMarkdown</code>, aunque existen otros tipos de archivos de <strong><code>R</code></strong>. Uno de los más utilizados es el <code>R script</code>, equivalente a una sintaxis de <strong>SPSS</strong> o <em>do-file</em> de <strong>STATA</strong>.</p>
-<ul>
-<li><p>Crear un nuevo archivo de tipo <code>R Markdown</code>. Al seleccionar sobre el botón de crear archivo (margen superior izquierdo, identificado con el signo “+” en color verde), aparecerá una ventana. Allí, se coloca el título al documento, que se puede llamar “primer_documento”, y también el nombre del autor. No es necesario poner el nombre del autor, se puede dejar ese espacio en blanco. Y por último, se selecciona el “Formato de salida”, que crea el archivo de <code>R Markdown</code>.</p></li>
-<li><p>Es posible ver que en el nuevo documento de <code>R Markdown</code> ya hay texto, que es un ejemplo de documento, el cual se puede borrar en su totalidad y cargar la información que se desee. En un documento de <code>R Markdown</code>, las áreas grises son lo que se conoce como “fragmentos de código” o <em>chunks</em>. Allí es donde se dan instrucciones a <strong><code>R</code></strong>, como comandos o fórmulas, sobre las que trabaja el programa.</p></li>
-<li><p>Fuera, en el área blanca, se puede escribir texto. Se presenta un ejemplo simple, en el que se inserta un fragmento de código de varias maneras.</p></li>
-</ul>
-<p>También hay atajos de teclado que puedes usar:</p>
-<div class="sourceCode" id="cb145"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb145-1"><a href="anexo.html#cb145-1" aria-hidden="true" tabindex="-1"></a><span class="sc">*</span> Insert code chunk <span class="cf">in</span> PC<span class="sc">:</span> Ctrl<span class="sc">+</span>Alt<span class="sc">+</span>I</span>
-<span id="cb145-2"><a href="anexo.html#cb145-2" aria-hidden="true" tabindex="-1"></a><span class="sc">*</span> Insert code chunk <span class="cf">in</span> Max<span class="sc">/</span>Linux<span class="sc">:</span> Cmd<span class="sc">+</span>Option<span class="sc">+</span>I</span></code></pre></div>
-<p><strong>En resumen</strong>, cuando haya un nuevo proyecto en el que se esté trabajando, se recomienda generar un nuevo archivo de proyecto en <code>RStudio</code>. Dentro de esa carpeta, generar otra carpeta donde almacenar los datos (que aquí se ha llamado “r_docs”), como los documentos de <code>R Markdown</code> o <code>R script</code>.</p>
-</div>
-</div>
-<div id="rmarkdown" class="section level2" number="9.3">
-<h2>
-<span class="header-section-number">9.3</span> RMarkdown<a class="anchor" aria-label="anchor" href="#rmarkdown"><i class="fas fa-link"></i></a>
-</h2>
-<p>La manera más sencilla de interactuar con <strong><code>R</code></strong> es a través de documentos conocidos como archivos de <strong>R Markdown</strong>, que ya se ha visto a modo de ejemplo en la sección anterior<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content='&lt;p&gt;Un resumen de las funciones y comandos que dispone R Markdown puede encontrarse &lt;a href="https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf" target="_blank"&gt;aquí&lt;/a&gt;&lt;/p&gt;'><sup>15</sup></a>. Estos documentos son una combinación de varios tipos de información. Por un lado, lo que se conoce como “fragmentos de código” (<em>code chunks</em>), que son un tipo de ventanas en <strong><code>R</code></strong> donde se escribe código para ejecutar análisis. También, fuera de esos fragmentos de código se puede escribir texto. En esta sección se explicará con mayor detalle cómo formatear el texto en el documento de <strong><code>R</code></strong>. Para ello seguir los pasos:</p>
-<ul>
-<li><p>Abrir el primer proyecto de <code>RStudio</code>, el cual estará alojado en el directorio del equipo local llamado “proyectos_r” o similar.</p></li>
-<li><p>Dentro de esa carpeta, seleccionar el documento llamado “primer_proyecto.Rproj”.</p></li>
-<li><p>Otras carpetas que se encuentran allí son: “datos” e “imágenes”.</p></li>
-<li><p>Descargar una foto de Internet o seleccionar una foto antigua que se encuentre en la computadora y
-guardarla en la carpeta de “imágenes”.</p></li>
-<li><p>Crear un nuevo documento clicando en la barra superior de RStudio llamada “documentos”, y luego en <code>R Markdown</code>. Otra opción es clicar sobre el ícono de una hoja blanca con un círculo verde en la esquina superior izquierda de la barra de herramientas de <code>RStudio</code>. Aparecerá una ventana, que se rellena con el título y el autor. Luego, guardarlo con un nombre al archivo y almacenarlo en la carpeta del proyecto, en “documentos_r”.</p></li>
-<li><p>El documento posee un <em>template</em>, clicar sobre el botón “Knit”, acompañado de un ícono de un ovillo de lana y unas agujas de tejer (barra superior izquierda). Se obtendrá un archivo de tipo <code>HTML</code> con el título, la fecha y el autor, que se puede eliminar en caso de ser necesario.</p></li>
-</ul>
-<div id="agregar-texto" class="section level3" number="9.3.1">
-<h3>
-<span class="header-section-number">9.3.1</span> Agregar texto<a class="anchor" aria-label="anchor" href="#agregar-texto"><i class="fas fa-link"></i></a>
-</h3>
-<p>La cantidad de símbolos de numeral (#) indica el nivel del título o subtítulo que se desea editar. Es necesario dejar un espacio entre el numeral y el texto que se escribe para obtener los títulos en negrita y sin el símbolo. Se debe utilizar el primer nivel de títulos en cada documento <code>R Markdown</code>. Se prueban los niveles diferentes en un documento de <code>R Markdown</code> de la siguiente manera:</p>
-<div class="sourceCode" id="cb146"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span> <span class="co"># Título nivel 1</span></span>
-<span> <span class="co">## Título nivel 2</span></span>
-<span> <span class="co">### Título nivel 3</span></span>
-<span> <span class="co">#### Título nivel 4</span></span></code></pre></div>
-<p><strong>Recordatorio: </strong> Clicar Control + S constantemente para guardar los cambios efectuados en el documento, a medida que se trabaja sobre él.</p>
-</div>
-<div id="listas" class="section level3" number="9.3.2">
-<h3>
-<span class="header-section-number">9.3.2</span> Listas<a class="anchor" aria-label="anchor" href="#listas"><i class="fas fa-link"></i></a>
-</h3>
-<ul>
-<li><p>Se utiliza el símbolo del asterisco para realizar bullet-points (* Bullet)</p></li>
-<li><p>Para un sub-bullet se usa el signo sumatorio (+ Sub-bullet)</p></li>
-<li><p>Para un tercer nivel de sub-bullet, el signo de restas (- Tercer nivel de bullets)</p></li>
-<li><p>Es importante, además de los símbolos, indentar las líneas cada vez que reduzca mi número de bullets
-en una lista. Espaciar entre el símbolo y el contenido de la lista. Además hay que dejar un espacio una vez finalizada la lista y antes de comenzar otra nueva.</p></li>
-<li><p>Se puede hacer una prueba creando una lista sobre “Materias que no me gustan de mi carrera”. Para presentar la lista, se debe agregar una línea de texto común, con su descripción.</p></li>
-<li><p>Luego, clicar en “Knit” para generar el documento.</p></li>
-</ul>
-</div>
-<div id="editar-texto" class="section level3" number="9.3.3">
-<h3>
-<span class="header-section-number">9.3.3</span> Editar texto<a class="anchor" aria-label="anchor" href="#editar-texto"><i class="fas fa-link"></i></a>
-</h3>
-<ul>
-<li>Para incluir algún formato de texto, se deben utilizar los siguientes símbolos al inicio y al final de cada palabra o grupo de palabras que se desea editar:</li>
-</ul>
-<div class="sourceCode" id="cb147"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb147-1"><a href="anexo.html#cb147-1" aria-hidden="true" tabindex="-1"></a><span class="sc">*</span>Itálicas<span class="sc">*</span></span>
-<span id="cb147-2"><a href="anexo.html#cb147-2" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb147-3"><a href="anexo.html#cb147-3" aria-hidden="true" tabindex="-1"></a><span class="er">**</span>Resaltado<span class="sc">**</span></span>
-<span id="cb147-4"><a href="anexo.html#cb147-4" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb147-5"><a href="anexo.html#cb147-5" aria-hidden="true" tabindex="-1"></a>Texto <span class="sc">^</span>superscript<span class="sc">^</span></span>
-<span id="cb147-6"><a href="anexo.html#cb147-6" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb147-7"><a href="anexo.html#cb147-7" aria-hidden="true" tabindex="-1"></a>Texto <span class="sc">~</span>subscript<span class="sc">~</span></span></code></pre></div>
-</div>
-<div id="insertar-imágenes" class="section level3" number="9.3.4">
-<h3>
-<span class="header-section-number">9.3.4</span> Insertar imágenes<a class="anchor" aria-label="anchor" href="#insertar-im%C3%A1genes"><i class="fas fa-link"></i></a>
-</h3>
-<ul>
-<li>Las imágenes son fáciles de agregar, siguiendo las líneas de código siguiente:</li>
-</ul>
-<div class="sourceCode" id="cb148"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb148-1"><a href="anexo.html#cb148-1" aria-hidden="true" tabindex="-1"></a><span class="sc">!</span>[Caption <span class="cf">for</span> image](filepath_for_image)</span></code></pre></div>
-<ul>
-<li><p>Se puede hacer una prueba agregando una foto que nos guste.</p></li>
-<li><p>Se puede colocar el epígrafe de la foto del siguiente modo:</p></li>
-</ul>
-<div class="sourceCode" id="cb149"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb149-1"><a href="anexo.html#cb149-1" aria-hidden="true" tabindex="-1"></a><span class="sc">!</span>[Figura <span class="dv">1</span><span class="sc">:</span> Mi mascota hermosa<span class="sc">:</span> Nina](imagenes<span class="sc">/</span>nina.jpeg)</span></code></pre></div>
-<div class="figure">
-<img src="imagenes/nina.jpeg" alt=""><p class="caption">Figura 1: Mi mascota: Nina</p>
-</div>
-<ul>
-<li>También es posible seleccionar el tamaño de la imagen.</li>
-</ul>
-<div class="sourceCode" id="cb150"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb150-1"><a href="anexo.html#cb150-1" aria-hidden="true" tabindex="-1"></a><span class="sc">!</span>[Nina](imagenes<span class="sc">/</span>nina.jpeg){width<span class="ot">=</span><span class="dv">50</span>%}</span></code></pre></div>
-<div class="figure">
-<img src="imagenes/nina.jpeg" style="width:50.0%" alt=""><p class="caption">Nina</p>
-</div>
-</div>
-<div id="enlaces" class="section level3" number="9.3.5">
-<h3>
-<span class="header-section-number">9.3.5</span> Enlaces<a class="anchor" aria-label="anchor" href="#enlaces"><i class="fas fa-link"></i></a>
-</h3>
-<ul>
-<li>Para incluir un enlace se debe:</li>
-</ul>
-<div class="sourceCode" id="cb151"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb151-1"><a href="anexo.html#cb151-1" aria-hidden="true" tabindex="-1"></a>Incluir entre corchetes [lo que aparecerá] en el texto y, seguido, entre paréntesis (el enlace que redirige al sitio que se seleccione).</span></code></pre></div>
-<p><a href="www.google.com.ar">Link a google</a></p>
-</div>
-<div id="tips-para-escribir-código-en-r" class="section level3" number="9.3.6">
-<h3>
-<span class="header-section-number">9.3.6</span> Tips para escribir código en R<a class="anchor" aria-label="anchor" href="#tips-para-escribir-c%C3%B3digo-en-r"><i class="fas fa-link"></i></a>
-</h3>
-<ul>
-<li>A la hora de escribir en este lenguaje de programación, hay que conocer algunas funcionalidades que permiten resolver acciones claves y responder a dudas de manera simple. Para obtener información sobre una función concreta, se puede utilizar alguna de las siguientes funciones:</li>
-</ul>
-<div class="sourceCode" id="cb152"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/help.html">help</a></span><span class="op">(</span><span class="va">solve</span><span class="op">)</span></span></code></pre></div>
-<div class="sourceCode" id="cb153"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="op">?</span><span class="va">solve</span></span></code></pre></div>
-<ul>
-<li><p>Las mayúsculas y minúsculas importan. <strong><code>R</code></strong> es un lenguaje de expresiones que es sensible a las mismas y responde de manera diferente a cada una.</p></li>
-<li><p>Las órdenes elementales consisten en expresiones o en asignaciones. Las órdenes se separan con un punto y coma, (‘;’), o cambiando de línea.</p></li>
-<li><p>Las flechas verticales permiten recuperar órdenes previas y ejecutarlas y las horizontales permiten desplazarnos dentro de una orden para corregirla.</p></li>
-<li><p>Para eliminar objetos puede utilizar la orden “rm”, por ejemplo:</p></li>
-</ul>
-<div class="sourceCode" id="cb154"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/rm.html">rm</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, <span class="va">z</span>, <span class="va">cabello</span>, <span class="va">perro</span>, <span class="va">bonito</span><span class="op">)</span></span></code></pre></div>
-</div>
-</div>
-<div id="primerospasos" class="section level2" number="9.4">
-<h2>
-<span class="header-section-number">9.4</span> Primeros pasos en R<a class="anchor" aria-label="anchor" href="#primerospasos"><i class="fas fa-link"></i></a>
-</h2>
-<div id="funciones-y-comandos-elementales" class="section level3" number="9.4.1">
-<h3>
-<span class="header-section-number">9.4.1</span> Funciones y comandos elementales<a class="anchor" aria-label="anchor" href="#funciones-y-comandos-elementales"><i class="fas fa-link"></i></a>
-</h3>
-<p>Las entidades que crea <strong><code>R</code></strong> durante una sesión de trabajo se denominan <em>objetos</em>. Estos pueden ser números, cadenas, vectores, matrices, funciones o estructuras más generales construidas a partir de estos elementos. Estos objetos se guardan por nombre y se almacenan en un área dedicada llamada “espacio de trabajo” o <em>environment</em>. En cualquier momento, es posible verificar los objetos disponibles en el espacio de trabajo usando el comando:</p>
-<div class="sourceCode" id="cb155"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/ls.html">ls</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<p>Para eliminar un objeto del espacio de trabajo, se usa la función <code><a href="https://rdrr.io/r/base/rm.html">rm()</a></code>. La función espera el nombre del objeto que se desea eliminar como argumento. Suponiendo que hay un objeto llamado “cosa”, puede eliminarse con el comando:</p>
-<div class="sourceCode" id="cb156"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/rm.html">rm</a></span><span class="op">(</span><span class="va">cosa</span><span class="op">)</span></span></code></pre></div>
-<p>Al iniciar una nueva sesión de trabajo, se recomienda retirar los objetos existentes en el área de trabajo. Un comando útil para este propósito es:</p>
-<div class="sourceCode" id="cb157"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/rm.html">rm</a></span> <span class="op">(</span>list <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/ls.html">ls</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> </span></code></pre></div>
-<p>Se puede almacenar el espacio de trabajo con la función:</p>
-<div class="sourceCode" id="cb158"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/save.html">save.image</a></span> <span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<p>Esto guarda todos los objetos contenidos en el espacio de trabajo en un archivo binario “.Rdata”. La opción predeterminada se puede cambiar especificando en la llamada a <code><a href="https://rdrr.io/r/base/save.html">save.image()</a></code> el nombre, por ejemplo, “myfile.Rdata”, que desea darle al archivo.</p>
-<div class="sourceCode" id="cb159"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/save.html">save.image</a></span> <span class="op">(</span>archive <span class="op">=</span> <span class="st">"myfile.Rdata"</span><span class="op">)</span></span></code></pre></div>
-<p>El espacio de trabajo original se puede restaurar con la ayuda de la función:</p>
-<div class="sourceCode" id="cb160"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/load.html">load</a></span><span class="op">(</span><span class="st">".RData"</span><span class="op">)</span></span></code></pre></div>
-<p>o, si se ha optado por un nombre diferente al predeterminado:</p>
-<div class="sourceCode" id="cb161"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/load.html">load</a></span><span class="op">(</span><span class="st">"ilmiofile.Rdata"</span><span class="op">)</span></span></code></pre></div>
-<p>Las funciones:</p>
-<div class="sourceCode" id="cb162"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/savehistory.html">savehistory</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<div class="sourceCode" id="cb163"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/savehistory.html">loadhistory</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<p>permiten guardar en formato <code>ASCII</code> y recargar en <strong><code>R</code></strong> el historial de los comandos enviados. El argumento de archivo que permite especificar un nombre que no sea la elección predeterminada, es “.Rhistory”.</p>
-<p>Finalmente, la función <code><a href="https://rdrr.io/r/base/getwd.html">setwd()</a></code> permite cambiar la carpeta de trabajo. Es una buena idea dedicar una carpeta separada a cada proyecto en el que esté trabajando para evitar la superposición de datos. El directorio de trabajo actual se puede ver con el comando <code><a href="https://rdrr.io/r/base/getwd.html">getwd()</a></code>.</p>
-<p>Los comandos básicos constan de expresiones o asignaciones. Si el comando es una expresión, <strong><code>R</code></strong> devuelve el resultado de la evaluación, como se muestra en los siguientes ejemplos:</p>
-<div class="sourceCode" id="cb164"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fl">12</span> <span class="op">&gt;</span> <span class="fl">10</span></span></code></pre></div>
-<pre><code>[1] TRUE</code></pre>
-<div class="sourceCode" id="cb166"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fl">1</span> <span class="op">+</span> <span class="fl">2</span> <span class="op">+</span> <span class="fl">3</span></span></code></pre></div>
-<pre><code>[1] 6</code></pre>
-<div class="sourceCode" id="cb168"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fl">2</span> <span class="op">+</span> <span class="fl">3</span> <span class="op">*</span> <span class="fl">4</span></span></code></pre></div>
-<pre><code>[1] 14</code></pre>
-<div class="sourceCode" id="cb170"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fl">3</span><span class="op">/</span><span class="fl">2</span> <span class="op">+</span> <span class="fl">1</span></span></code></pre></div>
-<pre><code>[1] 2.5</code></pre>
-<div class="sourceCode" id="cb172"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fl">2</span> <span class="op">+</span> <span class="op">(</span><span class="fl">3</span> <span class="op">*</span> <span class="fl">4</span><span class="op">)</span></span></code></pre></div>
-<pre><code>[1] 14</code></pre>
-<div class="sourceCode" id="cb174"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="op">(</span><span class="fl">2</span> <span class="op">+</span> <span class="fl">3</span><span class="op">)</span> <span class="op">*</span> <span class="fl">4</span></span></code></pre></div>
-<pre><code>[1] 20</code></pre>
-<div class="sourceCode" id="cb176"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fl">4</span> <span class="op">*</span> <span class="fl">3</span><span class="op">^</span><span class="fl">3</span></span></code></pre></div>
-<pre><code>[1] 108</code></pre>
-<p>Todas las funciones matemáticas que normalmente se encuentran en una calculadora de bolsillo están disponibles en <strong><code>R</code></strong> en forma de funciones básicas, que se recuerdan en la siguiente tabla:</p>
-<ul>
-<li><p><code>sqrt</code> —&gt; raíz cuadrada</p></li>
-<li><p><code>abs</code> —&gt; valor absoluto</p></li>
-<li><p><code>sin,cos,tan</code> —&gt; funciones trigonométricas</p></li>
-<li><p><code>asin,acos,atan</code> —&gt; funciones trigonométricas inversas</p></li>
-<li><p><code>exp,log</code> —&gt; exponenciales y logaritmos naturales</p></li>
-</ul>
-<div class="sourceCode" id="cb178"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/MathFun.html">sqrt</a></span><span class="op">(</span><span class="fl">2</span><span class="op">)</span></span></code></pre></div>
-<pre><code>[1] 1.4</code></pre>
-<div class="sourceCode" id="cb180"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Trig.html">sin</a></span><span class="op">(</span><span class="fl">3.14159</span><span class="op">)</span></span></code></pre></div>
-<pre><code>[1] 0.0000027</code></pre>
-<div class="sourceCode" id="cb182"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Trig.html">sin</a></span><span class="op">(</span><span class="va">pi</span><span class="op">)</span></span></code></pre></div>
-<pre><code>[1] 0.00000000000000012</code></pre>
-<div class="sourceCode" id="cb184"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/MathFun.html">sqrt</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/Trig.html">sin</a></span><span class="op">(</span><span class="fl">45</span> <span class="op">*</span> <span class="va">pi</span><span class="op">/</span><span class="fl">180</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<pre><code>[1] 0.84</code></pre>
-<p>Una asignación evalúa una expresión guardando el resultado en un objeto con un nombre. La asignación se realiza mediante el símbolo <code>&lt;-</code> o el símbolo <code>=</code>. También se puede asignar de izquierda a derecha con el símbolo <code>-&gt;</code>. El resultado de una asignación no se muestra automáticamente. El usuario puede verlo recordando el nombre del objeto. Los objetos creados a través de una asignación se pueden reutilizar en expresiones y asignaciones posteriores, como se muestra en los siguientes ejemplos:</p>
-<div class="sourceCode" id="cb186"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/MathFun.html">sqrt</a></span><span class="op">(</span><span class="fl">2</span><span class="op">)</span> </span>
-<span><span class="va">x</span></span></code></pre></div>
-<pre><code>[1] 1.4</code></pre>
-<div class="sourceCode" id="cb188"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">x</span><span class="op">^</span><span class="fl">3</span></span></code></pre></div>
-<pre><code>[1] 2.8</code></pre>
-<div class="sourceCode" id="cb190"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">y</span> <span class="op">&lt;-</span> <span class="va">x</span><span class="op">^</span><span class="fl">3</span></span></code></pre></div>
-<div class="sourceCode" id="cb191"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fl">10</span> </span>
-<span><span class="va">x</span> <span class="op">&gt;</span> <span class="fl">10</span></span></code></pre></div>
-<pre><code>[1] FALSE</code></pre>
-<div class="sourceCode" id="cb193"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;=</span> <span class="fl">10</span></span></code></pre></div>
-<pre><code>[1] TRUE</code></pre>
-<div class="sourceCode" id="cb195"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">tf</span> <span class="op">&lt;-</span> <span class="va">x</span> <span class="op">&gt;</span> <span class="fl">10</span>  </span>
-<span><span class="va">tf</span></span></code></pre></div>
-<pre><code>[1] FALSE</code></pre>
-</div>
-<div id="valores-y-vectores" class="section level3" number="9.4.2">
-<h3>
-<span class="header-section-number">9.4.2</span> Valores y vectores<a class="anchor" aria-label="anchor" href="#valores-y-vectores"><i class="fas fa-link"></i></a>
-</h3>
-<p>Para asignarle un valor a una variable, no es necesario utilizar espacios ni símbolos, excepto <code>#</code> <code>.</code> o <code>_</code> en el nombre de la variable:</p>
-<div class="sourceCode" id="cb197"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">mi_valor</span> <span class="op">&lt;-</span> <span class="fl">30</span> <span class="co"># número</span></span>
-<span><span class="va">un_valor</span> <span class="op">&lt;-</span> <span class="st">"vaca"</span> <span class="co"># caracteres</span></span>
-<span><span class="va">el_valor</span> <span class="op">&lt;-</span> <span class="cn">FALSE</span> <span class="co"># booleano</span></span></code></pre></div>
-<p>Para crear un vector, se usa la función <code><a href="https://rdrr.io/r/base/c.html">c()</a></code>:</p>
-<div class="sourceCode" id="cb198"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">3</span>, <span class="fl">5</span>, <span class="fl">7</span>, <span class="fl">11</span><span class="op">)</span></span>
-<span><span class="va">x</span></span></code></pre></div>
-<pre><code>[1]  2  3  5  7 11</code></pre>
-<p>El vector puede contener texto o valores numéricos:</p>
-<div class="sourceCode" id="cb200"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">mi_vector</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">6</span>,<span class="fl">12</span>,<span class="fl">80</span>,<span class="fl">120</span><span class="op">)</span></span>
-<span><span class="va">mi_vector</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"María"</span>,<span class="st">"Esteban"</span>,<span class="st">"Juan"</span><span class="op">)</span></span></code></pre></div>
-<p>Si el vector contiene muchos elementos, puede ser más conveniente usar la función <code><a href="https://rdrr.io/r/base/scan.html">scan()</a></code>, que permite ingresarlos uno por uno a través de la consola:</p>
-<div class="sourceCode" id="cb201"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/scan.html">scan</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="fl">1</span><span class="op">:</span> <span class="fl">1</span></span>
-<span><span class="fl">2</span><span class="op">:</span> <span class="fl">6</span></span>
-<span><span class="fl">3</span><span class="op">:</span> <span class="fl">3</span></span>
-<span><span class="fl">4</span><span class="op">:</span> <span class="fl">4</span></span>
-<span><span class="fl">5</span><span class="op">:</span> <span class="fl">2</span></span></code></pre></div>
-<p>Para crear una secuencia de números, puede usar el comando <code>a:b</code>:</p>
-<div class="sourceCode" id="cb202"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">xx</span> <span class="op">&lt;-</span> <span class="fl">1</span><span class="op">:</span><span class="fl">10</span></span>
-<span></span>
-<span><span class="va">xx</span></span></code></pre></div>
-<pre><code> [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
-<div class="sourceCode" id="cb204"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">xx</span> <span class="op">&lt;-</span> <span class="fl">100</span><span class="op">:</span><span class="fl">1</span> </span>
-<span><span class="va">xx</span></span></code></pre></div>
-<pre><code>  [1] 100  99  98  97  96  95  94  93  92  91  90  89  88  87  86  85  84  83
- [19]  82  81  80  79  78  77  76  75  74  73  72  71  70  69  68  67  66  65
- [37]  64  63  62  61  60  59  58  57  56  55  54  53  52  51  50  49  48  47
- [55]  46  45  44  43  42  41  40  39  38  37  36  35  34  33  32  31  30  29
- [73]  28  27  26  25  24  23  22  21  20  19  18  17  16  15  14  13  12  11
- [91]  10   9   8   7   6   5   4   3   2   1</code></pre>
-<p>También se pueden crear vectores que contienen elementos repetidos:</p>
-<div class="sourceCode" id="cb206"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="fl">2</span>, times <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span></code></pre></div>
-<pre><code>[1] 2 2 2</code></pre>
-<div class="sourceCode" id="cb208"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span></span></code></pre></div>
-<pre><code>[1] 2 2 2</code></pre>
-<div class="sourceCode" id="cb210"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">a</span> <span class="op">&lt;-</span>  <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span>, <span class="fl">4</span>, <span class="fl">5</span>, <span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">5</span><span class="op">)</span><span class="op">)</span> </span>
-<span><span class="va">a</span></span></code></pre></div>
-<pre><code> [1] 2 2 2 4 5 1 1 1 1 1</code></pre>
-<p>Las operaciones aritméticas y lógicas básicas que se aplican a los escalares se pueden aplicar a los vectores:</p>
-<div class="sourceCode" id="cb212"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fl">1</span><span class="op">:</span><span class="fl">10</span> </span>
-<span><span class="va">x</span><span class="op">*</span><span class="fl">2</span></span></code></pre></div>
-<pre><code> [1]  2  4  6  8 10 12 14 16 18 20</code></pre>
-<p>Los elementos de un vector se pueden extraer utilizando corchetes [] e indicando la posición del elemento a extraer entre corchetes:</p>
-<div class="sourceCode" id="cb214"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">xx</span><span class="op">[</span><span class="fl">7</span><span class="op">]</span> </span></code></pre></div>
-<pre><code>[1] 94</code></pre>
-<p>Incluso se pueden extraer más elementos al mismo tiempo:</p>
-<div class="sourceCode" id="cb216"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">xx</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">3</span>, <span class="fl">5</span>, <span class="fl">7</span>, <span class="fl">11</span><span class="op">)</span><span class="op">]</span></span></code></pre></div>
-<pre><code>[1] 99 98 96 94 90</code></pre>
-<div class="sourceCode" id="cb218"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">xx</span><span class="op">[</span><span class="fl">85</span><span class="op">:</span><span class="fl">91</span><span class="op">]</span></span></code></pre></div>
-<pre><code>[1] 16 15 14 13 12 11 10</code></pre>
-<p>También se pueden guardar en nuevos vectores:</p>
-<div class="sourceCode" id="cb220"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">yy</span> <span class="op">&lt;-</span> <span class="va">xx</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">4</span>, <span class="fl">8</span>, <span class="fl">16</span>, <span class="fl">32</span>, <span class="fl">64</span><span class="op">)</span><span class="op">]</span> </span>
-<span><span class="va">yy</span></span></code></pre></div>
-<pre><code>[1] 100  99  97  93  85  69  37</code></pre>
-<p>Si los indicadores entre corchetes van precedidos de un signo negativo, los elementos correspondientes se eliminan del vector:</p>
-<div class="sourceCode" id="cb222"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">4</span>, <span class="fl">8</span>, <span class="fl">16</span>, <span class="fl">32</span><span class="op">)</span> </span>
-<span><span class="va">x</span></span></code></pre></div>
-<pre><code>[1]  1  2  4  8 16 32</code></pre>
-<div class="sourceCode" id="cb224"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">x</span><span class="op">[</span><span class="op">-</span><span class="fl">4</span><span class="op">]</span></span></code></pre></div>
-<pre><code>[1]  1  2  4 16 32</code></pre>
-<p>Al ingresar una variable a la consola, esta mostrará su contenido:</p>
-<div class="sourceCode" id="cb226"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">mi_vector</span></span></code></pre></div>
-<pre><code>[1] "María"   "Esteban" "Juan"   </code></pre>
-<p>La función <code><a href="https://rdrr.io/r/base/length.html">length()</a></code> sirve para obtener el número de elementos en un vector o en una lista de objetos:</p>
-<div class="sourceCode" id="cb228"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">mi_vector</span><span class="op">)</span></span></code></pre></div>
-<pre><code>[1] 3</code></pre>
-</div>
-<div id="matrices-y-listas" class="section level3" number="9.4.3">
-<h3>
-<span class="header-section-number">9.4.3</span> Matrices y listas<a class="anchor" aria-label="anchor" href="#matrices-y-listas"><i class="fas fa-link"></i></a>
-</h3>
-<p>Una variable indexada (<em>array</em>) es una colección de datos, por ejemplo numéricos, indexada por varios índices. <strong><code>R</code></strong> permite crear y manipular variables indexadas en general y en particular, matrices.</p>
-<p>Las matrices se crean utilizando la función <code><a href="https://rdrr.io/r/base/matrix.html">matrix()</a></code>. En su forma más simple, el uso de la función implica especificar un vector que contiene los elementos de la matriz y el número de filas o columnas de la matriz.</p>
-<div class="sourceCode" id="cb230"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">3</span>, <span class="fl">5</span>, <span class="fl">7</span>, <span class="fl">11</span>, <span class="fl">13</span><span class="op">)</span>, nrow <span class="op">=</span> <span class="fl">3</span><span class="op">)</span> </span>
-<span><span class="va">x</span></span></code></pre></div>
-<pre><code>     [,1] [,2]
-[1,]    2    7
-[2,]    3   11
-[3,]    5   13</code></pre>
-<div class="sourceCode" id="cb232"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span> <span class="va">y</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">3</span>, <span class="fl">5</span>, <span class="fl">7</span>, <span class="fl">11</span>, <span class="fl">13</span><span class="op">)</span>, ncol <span class="op">=</span> <span class="fl">2</span><span class="op">)</span> </span>
-<span> <span class="va">y</span></span></code></pre></div>
-<pre><code>     [,1] [,2]
-[1,]    2    7
-[2,]    3   11
-[3,]    5   13</code></pre>
-<p>Las <em>array</em> pueden verse como matrices multidimensionales. Se crean usando la función <code><a href="https://rdrr.io/r/base/array.html">array()</a></code>. En su forma más simple, el uso de la función implica especificar un vector que contiene los elementos de la matriz y el número de elementos para cada dimensión usando el argumento <code>dim</code>.</p>
-<div class="sourceCode" id="cb234"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">w</span> <span class="op">&lt;-</span> <span class="fl">1</span><span class="op">:</span><span class="fl">20</span></span>
-<span><span class="va">ay</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/array.html">array</a></span><span class="op">(</span><span class="va">w</span>, dim <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">5</span>, <span class="fl">2</span>, <span class="fl">2</span><span class="op">)</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">ay</span></span></code></pre></div>
-<pre><code>, , 1
+            </section>
 
-     [,1] [,2]
-[1,]    1    6
-[2,]    2    7
-[3,]    3    8
-[4,]    4    9
-[5,]    5   10
-
-, , 2
-
-     [,1] [,2]
-[1,]   11   16
-[2,]   12   17
-[3,]   13   18
-[4,]   14   19
-[5,]   15   20</code></pre>
-<p>Hay que tener en cuenta que, de forma predeterminada, las matrices se forman insertando los distintos elementos por columna. Obviamente, la matriz se puede adquirir desde un archivo externo. Por ejemplo, suponiendo que el archivo <code>matdata</code> tiene el siguiente contenido:</p>
-<div class="sourceCode" id="cb236"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb236-1"><a href="anexo.html#cb236-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span>,<span class="dv">24</span>,<span class="dv">32</span>,<span class="dv">36</span>,<span class="dv">33</span></span>
-<span id="cb236-2"><a href="anexo.html#cb236-2" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span>,<span class="dv">16</span>,<span class="dv">44</span>,<span class="dv">34</span>,<span class="dv">33</span></span>
-<span id="cb236-3"><a href="anexo.html#cb236-3" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span>,<span class="dv">20</span>,<span class="dv">31</span>,<span class="dv">43</span>,<span class="dv">32</span></span>
-<span id="cb236-4"><a href="anexo.html#cb236-4" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span>,<span class="dv">23</span>,<span class="dv">35</span>,<span class="dv">37</span>,<span class="dv">35</span></span>
-<span id="cb236-5"><a href="anexo.html#cb236-5" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span>,<span class="dv">27</span>,<span class="dv">40</span>,<span class="dv">40</span>,<span class="dv">31</span></span>
-<span id="cb236-6"><a href="anexo.html#cb236-6" aria-hidden="true" tabindex="-1"></a><span class="dv">6</span>,<span class="dv">19</span>,<span class="dv">43</span>,<span class="dv">32</span>,<span class="dv">37</span></span></code></pre></div>
-<p>El contenido del archivo se puede adquirir y asignar a una matriz de 6 × 5 con los comandos:</p>
-<div class="sourceCode" id="cb237"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">x2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/scan.html">scan</a></span><span class="op">(</span><span class="st">"matdata"</span>, sep <span class="op">=</span> <span class="st">","</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">mx</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span><span class="va">x2</span>, ncol <span class="op">=</span> <span class="fl">5</span>, byrow <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
-<span><span class="va">mx</span></span></code></pre></div>
-<p>El argumento <code>byrow = TRUE</code> especifica que el contenido debe adquirirse por fila y no por columna.</p>
-<p>La función <code><a href="https://rdrr.io/r/base/dim.html">dim()</a></code> devuelve el tamaño (número de filas y número de columnas) de la matriz indicada como argumento:</p>
-<div class="sourceCode" id="cb238"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/dim.html">dim</a></span> <span class="op">(</span><span class="va">x</span><span class="op">)</span></span></code></pre></div>
-<pre><code>[1] 3 2</code></pre>
-<p>En cuanto a los vectores, los elementos de una matriz se pueden extraer utilizando corchetes <code>[]</code>. Para extraer un elemento de una matriz, se debe especificar su posición de fila y columna:</p>
-<div class="sourceCode" id="cb240"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">x</span><span class="op">[</span><span class="fl">2</span>, <span class="fl">1</span><span class="op">]</span></span></code></pre></div>
-<pre><code>[1] 3</code></pre>
-<div class="sourceCode" id="cb242"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">x</span><span class="op">[</span><span class="fl">2</span>, <span class="fl">2</span><span class="op">]</span></span></code></pre></div>
-<pre><code>[1] 11</code></pre>
-<p>Para extraer una fila o columna completa, simplemente hay que especificar su posición:</p>
-<div class="sourceCode" id="cb244"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">x</span><span class="op">[</span>, <span class="fl">1</span><span class="op">]</span></span></code></pre></div>
-<pre><code>[1] 2 3 5</code></pre>
-<div class="sourceCode" id="cb246"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">x</span><span class="op">[</span><span class="fl">3</span>, <span class="op">]</span></span></code></pre></div>
-<pre><code>[1]  5 13</code></pre>
-<p>Se pueden extraer subconjuntos de filas y/o columnas:</p>
-<div class="sourceCode" id="cb248"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">16</span>, ncol <span class="op">=</span> <span class="fl">4</span><span class="op">)</span> </span>
-<span>    <span class="va">x</span></span></code></pre></div>
-<pre><code>     [,1] [,2] [,3] [,4]
-[1,]    1    5    9   13
-[2,]    2    6   10   14
-[3,]    3    7   11   15
-[4,]    4    8   12   16</code></pre>
-<p>También se puede crear una matriz compuesta por números usando la función <code><a href="https://rdrr.io/r/base/matrix.html">matrix()</a></code>:</p>
-<div class="sourceCode" id="cb250"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">mi_matriz</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span>data <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">10</span>, <span class="co"># qué se incluye en la matriz</span></span>
-<span>                    ncol <span class="op">=</span> <span class="fl">5</span>, <span class="co"># número de columnas</span></span>
-<span>                    nrow <span class="op">=</span> <span class="fl">20</span>, <span class="co"># número de filas</span></span>
-<span>                    byrow <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="co"># incluir el input</span></span>
-<span></span>
-<span><span class="va">mi_matriz</span></span></code></pre></div>
-<pre><code>      [,1] [,2] [,3] [,4] [,5]
- [1,]    1    2    3    4    5
- [2,]    6    7    8    9   10
- [3,]    1    2    3    4    5
- [4,]    6    7    8    9   10
- [5,]    1    2    3    4    5
- [6,]    6    7    8    9   10
- [7,]    1    2    3    4    5
- [8,]    6    7    8    9   10
- [9,]    1    2    3    4    5
-[10,]    6    7    8    9   10
-[11,]    1    2    3    4    5
-[12,]    6    7    8    9   10
-[13,]    1    2    3    4    5
-[14,]    6    7    8    9   10
-[15,]    1    2    3    4    5
-[16,]    6    7    8    9   10
-[17,]    1    2    3    4    5
-[18,]    6    7    8    9   10
-[19,]    1    2    3    4    5
-[20,]    6    7    8    9   10</code></pre>
-<p>Se puede indexar elementos de matrices en múltiples modos:</p>
-<div class="sourceCode" id="cb252"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">mi_matriz</span><span class="op">[</span><span class="fl">1</span>,<span class="op">]</span> <span class="co"># las filas van seguidas de una coma. Primero filas y luego columnas[row,colum]</span></span></code></pre></div>
-<pre><code>[1] 1 2 3 4 5</code></pre>
-<div class="sourceCode" id="cb254"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">mi_matriz</span><span class="op">[</span>,<span class="fl">5</span><span class="op">]</span> <span class="co"># columnas detrás de la coma</span></span></code></pre></div>
-<pre><code> [1]  5 10  5 10  5 10  5 10  5 10  5 10  5 10  5 10  5 10  5 10</code></pre>
-<div class="sourceCode" id="cb256"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">mi_matriz</span><span class="op">[</span><span class="fl">3</span>,<span class="fl">3</span><span class="op">]</span></span></code></pre></div>
-<pre><code>[1] 3</code></pre>
-<p>Se pueden crear nuevos vectores a partir de secciones de matrices:</p>
-<div class="sourceCode" id="cb258"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">val</span> <span class="op">&lt;-</span> <span class="va">mi_matriz</span><span class="op">[</span><span class="fl">3</span>,<span class="fl">3</span><span class="op">]</span></span>
-<span><span class="va">val</span> <span class="op">&lt;-</span> <span class="va">mi_matriz</span><span class="op">[</span>,<span class="fl">3</span><span class="op">]</span></span></code></pre></div>
-<p>Hay algunas funciones útiles que se puede aprender para conocer más a fondo la matriz:</p>
-<div class="sourceCode" id="cb259"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">mi_matriz</span><span class="op">)</span> <span class="co"># La suma de los elementos de la matriz</span></span></code></pre></div>
-<pre><code>[1] 550</code></pre>
-<div class="sourceCode" id="cb261"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="va">mi_matriz</span><span class="op">)</span> <span class="co"># El número de filas de la matriz</span></span></code></pre></div>
-<pre><code>[1] 20</code></pre>
-<div class="sourceCode" id="cb263"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html">ncol</a></span><span class="op">(</span><span class="va">mi_matriz</span><span class="op">)</span> <span class="co"># El número de columnas de la matriz </span></span></code></pre></div>
-<pre><code>[1] 5</code></pre>
-<p><strong><code>R</code></strong> tiene un conjunto de tipos de datos suficientemente diversificado para ser adecuado en la mayor cantidad de análisis. Los tipos que se encuentran con mayor frecuencia son lógicos (con los modos VERDADERO y FALSO), de caracteres (cadenas de caracteres) y numéricos. Las funciones con el prefijo <code>is.type.of.data()</code> o la función <code><a href="https://rdrr.io/r/base/class.html">class()</a></code> verifican a qué tipo de datos pertenece el objeto especificado como argumento.</p>
-<div class="sourceCode" id="cb265"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">x1</span> <span class="op">&lt;-</span> <span class="fl">1</span><span class="op">:</span><span class="fl">3</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/logical.html">is.logical</a></span><span class="op">(</span><span class="va">x1</span><span class="op">)</span></span></code></pre></div>
-<pre><code>[1] FALSE</code></pre>
-<div class="sourceCode" id="cb267"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="va">x1</span><span class="op">)</span></span></code></pre></div>
-<pre><code>[1] "integer"</code></pre>
-<p>Para combinar objetos que no comparten la misma estructura, como cadenas de caracteres y vectores, es necesario utilizar una <strong>lista</strong>. Este es un tipo más general de estructura de vectores y matrices:</p>
-<div class="sourceCode" id="cb269"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">lista1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="va">x</span>,<span class="va">y</span><span class="op">)</span>  </span>
-<span><span class="va">lista1</span></span></code></pre></div>
-<pre><code>[[1]]
-     [,1] [,2] [,3] [,4]
-[1,]    1    5    9   13
-[2,]    2    6   10   14
-[3,]    3    7   11   15
-[4,]    4    8   12   16
-
-[[2]]
-     [,1] [,2]
-[1,]    2    7
-[2,]    3   11
-[3,]    5   13</code></pre>
-<p>Una de las posibles formas de acceder a la información de una lista es mediante corchetes dobles:</p>
-<div class="sourceCode" id="cb271"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">lista1</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span></span></code></pre></div>
-<pre><code>     [,1] [,2] [,3] [,4]
-[1,]    1    5    9   13
-[2,]    2    6   10   14
-[3,]    3    7   11   15
-[4,]    4    8   12   16</code></pre>
-<div class="sourceCode" id="cb273"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">lista1</span><span class="op">[[</span><span class="fl">2</span><span class="op">]</span><span class="op">]</span></span></code></pre></div>
-<pre><code>     [,1] [,2]
-[1,]    2    7
-[2,]    3   11
-[3,]    5   13</code></pre>
-<p>Es posible, en la fase de creación de una lista, asignar un nombre a cada uno de sus componentes. Si los componentes de una lista tienen un nombre, se puede acceder a ellos, y posteriormente a los elementos que los componen, mediante el símbolo <code>$</code>.</p>
-<div class="sourceCode" id="cb275"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">lista2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>comp1 <span class="op">=</span> <span class="va">x</span>, comp2 <span class="op">=</span> <span class="va">y</span><span class="op">)</span></span>
-<span><span class="va">lista2</span></span></code></pre></div>
-<pre><code>$comp1
-     [,1] [,2] [,3] [,4]
-[1,]    1    5    9   13
-[2,]    2    6   10   14
-[3,]    3    7   11   15
-[4,]    4    8   12   16
-
-$comp2
-     [,1] [,2]
-[1,]    2    7
-[2,]    3   11
-[3,]    5   13</code></pre>
-<div class="sourceCode" id="cb277"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">lista2</span><span class="op">$</span><span class="va">comp2</span></span></code></pre></div>
-<pre><code>     [,1] [,2]
-[1,]    2    7
-[2,]    3   11
-[3,]    5   13</code></pre>
-<div class="sourceCode" id="cb279"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">lista2</span><span class="op">$</span><span class="va">comp2</span><span class="op">[</span><span class="fl">3</span><span class="op">]</span></span></code></pre></div>
-<pre><code>[1] 5</code></pre>
-<p>Devuelve el valor <em>NULL</em> si no se han asignado. Además de <em>NULL</em>, <em>TRUE</em> y <em>FALSE</em>, <strong><code>R</code></strong> tiene otros valores reservados.</p>
-<p>Probablemente, el más relevante es <em>NA</em>, que indica un valor faltante. No es raro encontrar valores <em>NaN</em> (número indefinido) e <em>Inf</em> (infinito).</p>
-</div>
-<div id="filtrado-subsetting" class="section level3" number="9.4.4">
-<h3>
-<span class="header-section-number">9.4.4</span> Filtrado (Subsetting)<a class="anchor" aria-label="anchor" href="#filtrado-subsetting"><i class="fas fa-link"></i></a>
-</h3>
-<p>La forma más básica de hacer un filtro (<em>subsetting</em>) es extraer un grupo de elementos de un vector, por ejemplo:</p>
-<div class="sourceCode" id="cb281"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">mi_vector</span> <span class="op">&lt;-</span> <span class="fl">1</span><span class="op">:</span><span class="fl">10</span></span>
-<span><span class="va">mi_vector</span><span class="op">[</span><span class="fl">3</span><span class="op">:</span><span class="fl">5</span><span class="op">]</span> <span class="co"># extraer elementos 3 a 5</span></span></code></pre></div>
-<pre><code>[1] 3 4 5</code></pre>
-<div class="sourceCode" id="cb283"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">mi_vector</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">2</span>,<span class="fl">9</span><span class="op">)</span><span class="op">]</span> <span class="co"># extraer ciertos elementos</span></span></code></pre></div>
-<pre><code>[1] 1 2 9</code></pre>
-<div class="sourceCode" id="cb285"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">new_vector</span> <span class="op">&lt;-</span> <span class="va">mi_vector</span><span class="op">[</span><span class="fl">3</span><span class="op">:</span><span class="fl">5</span><span class="op">]</span> <span class="co"># asignar valores a un nuevo vector</span></span>
-<span><span class="va">new_vector</span></span></code></pre></div>
-<pre><code>[1] 3 4 5</code></pre>
-<p>También se puede usar la función <code><a href="https://rdrr.io/r/base/c.html">c()</a></code> para quitar algunos <code>subsets</code> (subsecciones) de la matriz:</p>
-<div class="sourceCode" id="cb287"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">mi_matriz</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">3</span>,<span class="fl">5</span><span class="op">)</span>,<span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2</span>,<span class="fl">4</span><span class="op">)</span><span class="op">]</span></span></code></pre></div>
-<pre><code>     [,1] [,2]
-[1,]    2    4
-[2,]    7    9
-[3,]    2    4
-[4,]    2    4</code></pre>
-<p>Nótese la diferencia entre [[]] y [] en las listas:</p>
-<div class="sourceCode" id="cb289"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">nueva_lista</span> <span class="op">&lt;-</span> <span class="va">lista1</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span> <span class="co"># devuelve la lista</span></span>
-<span><span class="va">nuevo_valor</span> <span class="op">&lt;-</span>  <span class="va">lista1</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span> <span class="co"># devuelve un objeto que estaba en la lista</span></span>
-<span></span>
-<span><span class="va">nueva_lista</span></span></code></pre></div>
-<pre><code>[[1]]
-     [,1] [,2] [,3] [,4]
-[1,]    1    5    9   13
-[2,]    2    6   10   14
-[3,]    3    7   11   15
-[4,]    4    8   12   16</code></pre>
-<div class="sourceCode" id="cb291"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">nuevo_valor</span></span></code></pre></div>
-<pre><code>     [,1] [,2] [,3] [,4]
-[1,]    1    5    9   13
-[2,]    2    6   10   14
-[3,]    3    7   11   15
-[4,]    4    8   12   16</code></pre>
-<p>Se debe usar <code>[]</code> para el <code>subset</code> de una lista:</p>
-<div class="sourceCode" id="cb293"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">nueva_lista</span> <span class="op">&lt;-</span> <span class="va">lista1</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">2</span><span class="op">]</span></span></code></pre></div>
-</div>
-<div id="cargar-datos-en-r" class="section level3" number="9.4.5">
-<h3>
-<span class="header-section-number">9.4.5</span> Cargar datos en R<a class="anchor" aria-label="anchor" href="#cargar-datos-en-r"><i class="fas fa-link"></i></a>
-</h3>
-<p>Cuando la intención es hacer una investigación utilizando datos secundarios, lo primero que se debe realizar (una vez diseñadas las preguntas de investigación y la/s hipótesis), es seleccionar los datos con los que se desea trabajar. En esta ocasión, se presenta cómo abrir una base de datos en <strong><code>R</code></strong>.</p>
-<div id="data-frames" class="section level4" number="9.4.5.1">
-<h4>
-<span class="header-section-number">9.4.5.1</span> Data Frames<a class="anchor" aria-label="anchor" href="#data-frames"><i class="fas fa-link"></i></a>
-</h4>
-<p>Como ejemplo, se construyen algunos datos…</p>
-<div class="sourceCode" id="cb294"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">numero_estudiante</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">10</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">notas</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"A"</span>,<span class="st">"B"</span>,<span class="st">"C"</span>,<span class="st">"A"</span>,<span class="st">"C"</span>,<span class="st">"F"</span>,<span class="st">"D"</span>,<span class="st">"B"</span>,<span class="st">"B"</span>,<span class="st">"A"</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">clase</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="fl">0</span>,times <span class="op">=</span> <span class="fl">5</span><span class="op">)</span>,<span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="fl">1</span>,times <span class="op">=</span> <span class="fl">5</span><span class="op">)</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">comida_gratis</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="cn">TRUE</span>,times <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span></code></pre></div>
-<p>Ahora se pueden unir los vectores que se crearon antes para hacer un <em>data frame</em>, que es uno de los tipos de <em>data</em> más comunes en <strong><code>R</code></strong>. Los <code>data.frames</code> sirven para contener muchos tipos de valores (sean textuales o numéricos) y además sus columnas son fáciles de indexar por nombre utilizando el operador <code>$</code>. Es lo más cercano a una base de datos tradicional, con observaciones (filas) y variables (columnas).</p>
-<p>Para evitar que las notas (en formato de texto) se conviertan en factores de variables, es decir, que se transformen en una variable categórica de <strong><code>R</code></strong>, se debe implementar el argumento <code>stringsAsFactors = FALSE</code>.</p>
-<div class="sourceCode" id="cb295"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">mis_datos</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span><span class="va">numero_estudiante</span>,</span>
-<span>                      <span class="va">notas</span>,</span>
-<span>                      <span class="va">clase</span>,</span>
-<span>                      <span class="va">comida_gratis</span>,</span>
-<span>                      stringsAsFactors <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
-<p>También es posible designar el nombre de las columnas:</p>
-<div class="sourceCode" id="cb296"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/colnames.html">colnames</a></span><span class="op">(</span><span class="va">mis_datos</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"numero_estudiante"</span>, <span class="st">"notas"</span>,<span class="st">"clase"</span>,<span class="st">"comida_gratis"</span><span class="op">)</span></span></code></pre></div>
-<p>Al revisar cómo queda el <code>data.frame</code>:</p>
-<div class="sourceCode" id="cb297"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">mis_datos</span></span></code></pre></div>
-<div class="inline-table"><table class="huxtable" style="border-collapse: collapse; border: 0px; margin-bottom: 2em; margin-top: 2em; ; margin-left: auto; margin-right: auto;  " id="tab:dataframe4">
-<caption style="caption-side: top; text-align: center;">
-<span id="tab:dataframe4">Tabla 9.1: </span> </caption>
-<col>
-<col>
-<col>
-<col>
-<tr>
-<th style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: bold;">numero_estudiante</th>
-<th style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: bold;">notas</th>
-<th style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: bold;">clase</th>
-<th style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0.4pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: bold;">comida_gratis</th>
-</tr>
-<tr>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">1</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">A</td>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">0</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">TRUE</td>
-</tr>
-<tr>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">2</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">B</td>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">TRUE</td>
-</tr>
-<tr>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">3</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">C</td>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">0</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">TRUE</td>
-</tr>
-<tr>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">4</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">A</td>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">TRUE</td>
-</tr>
-<tr>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">5</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">C</td>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">0</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">TRUE</td>
-</tr>
-<tr>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">6</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">F</td>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">1</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">TRUE</td>
-</tr>
-<tr>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">7</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">D</td>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">1</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">TRUE</td>
-</tr>
-<tr>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">8</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">B</td>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">1</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">TRUE</td>
-</tr>
-<tr>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">9</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">B</td>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">1</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">TRUE</td>
-</tr>
-<tr>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">10</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">A</td>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">1</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">TRUE</td>
-</tr>
-</table></div>
-<p>La indexación funciona de la misma manera para las matrices, pero con un pequeño cambio:</p>
-<div class="sourceCode" id="cb298"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">mis_datos</span><span class="op">[</span>,<span class="fl">1</span><span class="op">]</span></span></code></pre></div>
-<pre><code> [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
-<div class="sourceCode" id="cb300"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">mis_datos</span><span class="op">[</span><span class="fl">2</span>,<span class="fl">4</span><span class="op">]</span></span></code></pre></div>
-<pre><code>[1] TRUE</code></pre>
-<div class="sourceCode" id="cb302"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">mis_datos</span><span class="op">$</span><span class="va">numero_estudiante</span> <span class="co"># $ Indexación de columnas</span></span></code></pre></div>
-<pre><code> [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
-<div class="sourceCode" id="cb304"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">mis_datos</span><span class="op">$</span><span class="va">notas</span><span class="op">[</span><span class="fl">3</span><span class="op">]</span> <span class="co"># Tratar $ Indexación de columnas como vectores</span></span></code></pre></div>
-<pre><code>[1] "C"</code></pre>
-</div>
-<div id="subsetting-inteligente" class="section level4" number="9.4.5.2">
-<h4>
-<span class="header-section-number">9.4.5.2</span> Subsetting inteligente<a class="anchor" aria-label="anchor" href="#subsetting-inteligente"><i class="fas fa-link"></i></a>
-</h4>
-<p>La función <code><a href="https://rdrr.io/r/base/which.html">which()</a></code> permite identificar observaciones que cumplen ciertos criterios, que el usuario dispone. Usando el operador <code>$</code>, se habilita a acceder a una variable del <code>data.frame</code>, según su nombre:</p>
-<div class="sourceCode" id="cb306"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/which.html">which</a></span><span class="op">(</span><span class="va">mis_datos</span><span class="op">$</span><span class="va">notas</span> <span class="op">==</span> <span class="st">"A"</span><span class="op">)</span></span></code></pre></div>
-<pre><code>[1]  1  4 10</code></pre>
-<p>De esta forma, se puede crear un dataset que sólo incluya a los estudiantes que obtuvieron ‘A’ o ‘B’ como notas, guardando los índices de sus notas, utilizando para extraerlos de los datos totales:</p>
-<div class="sourceCode" id="cb308"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">A_estudiantes</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/which.html">which</a></span><span class="op">(</span><span class="va">mis_datos</span><span class="op">$</span><span class="va">notas</span> <span class="op">==</span> <span class="st">"A"</span><span class="op">)</span></span>
-<span><span class="va">B_estudiantes</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/which.html">which</a></span><span class="op">(</span><span class="va">mis_datos</span><span class="op">$</span><span class="va">notas</span> <span class="op">==</span> <span class="st">"B"</span><span class="op">)</span></span>
-<span><span class="va">estudiantes_dataset_reducido</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">A_estudiantes</span>, <span class="va">B_estudiantes</span><span class="op">)</span></span></code></pre></div>
-<p>Luego se selecciona el vector para indexar únicamente algunas filas: para ello, se puede extraerlas y guardarlas como objetos. Nota: si se indexa por [fila, columna] y queda un campo vacío, se toma la fila o columna entera.</p>
-<div class="sourceCode" id="cb309"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">datos_reducidos</span> <span class="op">&lt;-</span> <span class="va">mis_datos</span><span class="op">[</span><span class="va">estudiantes_dataset_reducido</span>,<span class="op">]</span></span>
-<span><span class="va">datos_reducidos</span></span></code></pre></div>
-<div class="inline-table"><table class="huxtable" style="border-collapse: collapse; border: 0px; margin-bottom: 2em; margin-top: 2em; ; margin-left: auto; margin-right: auto;  " id="tab:which3">
-<caption style="caption-side: top; text-align: center;">
-<span id="tab:which3">Tabla 9.2: </span> </caption>
-<col>
-<col>
-<col>
-<col>
-<tr>
-<th style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: bold;">numero_estudiante</th>
-<th style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: bold;">notas</th>
-<th style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: bold;">clase</th>
-<th style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0.4pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: bold;">comida_gratis</th>
-</tr>
-<tr>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">1</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">A</td>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">0</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">TRUE</td>
-</tr>
-<tr>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">4</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">A</td>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">TRUE</td>
-</tr>
-<tr>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">10</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">A</td>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">1</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">TRUE</td>
-</tr>
-<tr>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">2</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">B</td>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">TRUE</td>
-</tr>
-<tr>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">8</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">B</td>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">1</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">TRUE</td>
-</tr>
-<tr>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">9</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">B</td>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">1</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">TRUE</td>
-</tr>
-</table></div>
-<p>Otra manera sencilla de aplicar un filtro es a través de la función <code><a href="https://rdrr.io/r/base/subset.html">subset()</a></code>:</p>
-<div class="sourceCode" id="cb310"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">seleccion_data2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/subset.html">subset</a></span><span class="op">(</span><span class="va">mis_datos</span>, <span class="va">notas</span> <span class="op">==</span> <span class="st">"A"</span> <span class="op">|</span> <span class="va">notas</span> <span class="op">==</span> <span class="st">"B"</span><span class="op">)</span></span>
-<span><span class="va">seleccion_data2</span></span></code></pre></div>
-<div class="inline-table"><table class="huxtable" style="border-collapse: collapse; border: 0px; margin-bottom: 2em; margin-top: 2em; ; margin-left: auto; margin-right: auto;  " id="tab:subset5">
-<caption style="caption-side: top; text-align: center;">
-<span id="tab:subset5">Tabla 9.3: </span> </caption>
-<col>
-<col>
-<col>
-<col>
-<tr>
-<th style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: bold;">numero_estudiante</th>
-<th style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: bold;">notas</th>
-<th style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: bold;">clase</th>
-<th style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0.4pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: bold;">comida_gratis</th>
-</tr>
-<tr>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">1</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">A</td>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">0</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">TRUE</td>
-</tr>
-<tr>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">2</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">B</td>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">TRUE</td>
-</tr>
-<tr>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">4</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">A</td>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">0</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">TRUE</td>
-</tr>
-<tr>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">8</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">B</td>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">1</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">TRUE</td>
-</tr>
-<tr>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">9</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">B</td>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">1</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">TRUE</td>
-</tr>
-<tr>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">10</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">A</td>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">1</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">TRUE</td>
-</tr>
-</table></div>
-</div>
-<div id="carga-de-datos-en-listas" class="section level4" number="9.4.5.3">
-<h4>
-<span class="header-section-number">9.4.5.3</span> Carga de datos en listas<a class="anchor" aria-label="anchor" href="#carga-de-datos-en-listas"><i class="fas fa-link"></i></a>
-</h4>
-<p>Para crear una lista vacía, se utiliza la función <code><a href="https://rdrr.io/r/base/vector.html">vector()</a></code>:</p>
-<div class="sourceCode" id="cb311"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">mi_lista</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/vector.html">vector</a></span><span class="op">(</span>mode <span class="op">=</span> <span class="st">"list"</span>, length <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span></code></pre></div>
-<p>También se puede crear una lista a partir de objetos. Cada entrada puede ser llamada una lista, igual que se hace con un <code>data.frame</code>:</p>
-<div class="sourceCode" id="cb312"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">mi_lista</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>num <span class="op">=</span> <span class="fl">10</span>,</span>
-<span>                animal <span class="op">=</span> <span class="st">"vaca"</span>,</span>
-<span>                vec <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">10</span><span class="op">)</span>,</span>
-<span>                dat <span class="op">=</span> <span class="va">mis_datos</span><span class="op">)</span></span></code></pre></div>
-<p>Otra opción es crear una lista vacía y luego llenarla usando el operador <code>$</code>:</p>
-<div class="sourceCode" id="cb313"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">mi_lista</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<p>Una vez creada, se llena de datos:</p>
-<div class="sourceCode" id="cb314"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">mi_lista</span><span class="op">$</span><span class="va">num</span> <span class="op">&lt;-</span> <span class="fl">10</span></span>
-<span><span class="va">mi_lista</span><span class="op">$</span><span class="va">dat</span> <span class="op">&lt;-</span> <span class="va">mis_datos</span></span>
-<span><span class="va">mi_lista</span><span class="op">$</span><span class="va">cancion_favo</span> <span class="op">&lt;-</span> <span class="st">"Malamente"</span></span></code></pre></div>
-<p>Además, se pueden pegar listas al final de otras listas, usando la función <code><a href="https://rdrr.io/r/base/append.html">append()</a></code>:</p>
-<div class="sourceCode" id="cb315"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">mi_lista</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/append.html">append</a></span><span class="op">(</span><span class="va">mi_lista</span>, <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="fl">27</span>,<span class="fl">14</span>,<span class="st">"perro"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<p>Se observa el contenido de la lista:</p>
-<div class="sourceCode" id="cb316"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="va">mi_lista</span><span class="op">)</span></span></code></pre></div>
-<pre><code>$num
-[1] 10
-
-$dat
-   numero_estudiante notas clase comida_gratis
-1                  1     A     0          TRUE
-2                  2     B     0          TRUE
-3                  3     C     0          TRUE
-4                  4     A     0          TRUE
-5                  5     C     0          TRUE
-6                  6     F     1          TRUE
-7                  7     D     1          TRUE
-8                  8     B     1          TRUE
-9                  9     B     1          TRUE
-10                10     A     1          TRUE
-
-$cancion_favo
-[1] "Malamente"
-
-[[4]]
-[[4]][[1]]
-[1] 27
-
-[[4]][[2]]
-[1] 14
-
-[[4]][[3]]
-[1] "perro"</code></pre>
-</div>
-<div id="importar-datos-desde-excel" class="section level4" number="9.4.5.4">
-<h4>
-<span class="header-section-number">9.4.5.4</span> Importar datos desde Excel<a class="anchor" aria-label="anchor" href="#importar-datos-desde-excel"><i class="fas fa-link"></i></a>
-</h4>
-<p>Existen numerosas fuentes de las que obtener datos secundarios. En la sección anterior, se realizó un breve recorrido sobre datos primarios. Estos últimos, son aquellos que genera el usuario. Por ejemplo, se puede realizar una encuesta y, en base a los resultados obtenidos, generar una base de datos que nos sirva de punto de partida para luego, incurrir en el análisis.</p>
-<p>Para ello, se deben seguir los siguientes pasos: utilizar una base de datos como archivo de Excel y moverlo a la carpeta del primer proyecto que se crea en la sesión anterior, para luego incorporarla a la sub-carpeta llamada “datos”.</p>
-<p>Un tipo de formato muy conocido es el de <strong>Excel</strong>, cuyas extensiones pueden ser <code>.xls</code> y <code>.xlsx</code>, siendo la primera más antiüa que la segunda.</p>
-<p>El objetivo es visualizar estos datos en la ventana del entorno de <code>RStudio</code>. Para ello, se necesita un paquete que ayude a leer estos datos, el cual se obtiene siguiendo los siguientes pasos:</p>
-<ol style="list-style-type: decimal">
-<li>ingresar a la carpeta del proyecto sobre el que se está trabajando:</li>
-</ol>
-<ul>
-<li>clicar sobre “primer_proyecto.Rproj” (en lugar del nombre “primer proyecto, hay que insertar el nombre del proyecto en particular, que en este caso, se llama”primer_proyecto”. La extensión del archivo debe ser .Rproj, que es la que tienen todos los proyectos en <strong><code>R</code></strong>).</li>
-</ul>
-<ol start="2" style="list-style-type: decimal">
-<li>Ir a la consola y ejecutar el siguiente comando:</li>
-</ol>
-<div class="sourceCode" id="cb318"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"readxl"</span><span class="op">)</span></span></code></pre></div>
-<p>Este paquete permite trabajar con archivos de <strong>Excel</strong> específicamente. En caso de tener otro tipo de archivo, debe usar la función o paquete indicado.</p>
-<ol start="3" style="list-style-type: decimal">
-<li>Abrir la librería del paquete recientemente instalado, ejecutando el siguiente comando, nuevamente en la consola:</li>
-</ol>
-<div class="sourceCode" id="cb319"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://readxl.tidyverse.org">readxl</a></span><span class="op">)</span></span></code></pre></div>
-<p>Nótese que para abrir la librería no se precisan comillas entre los paréntesis, a diferencia de durante su instalación (detallada en el paso 2).</p>
-<ol start="4" style="list-style-type: decimal">
-<li>Colocar la ruta en donde se encuentra mi base de datos. En este caso, el directorio donde se encuentra mi base de datos es: “/Users/sofiajaime/Documents/rprojects/primer_proyecto/datos/estaciones_tren.xlsx”. Hay que tener en cuenta que esta ruta es específica de cada usuario, en su ordenador local.</li>
-</ol>
-<p>Es posible obtener esta ruta/path fácilmente yendo a la carpeta donde este se encuentra, clicando en el botón derecho sobre la misma y en la opción “Propiedades” en el caso de un PC o bien en “Obtener información” o “Get info” si es con iOS.</p>
-<p>Luego, simplemente hay que denominar al objeto “encuesta”, en este caso. Seguido, colocar una función <code>read_excel</code> y entre paréntesis y comillas, pegar la ruta <strong>propia</strong> que dará acceso al archivo seleccionado. La línea de código es la siguiente:</p>
-<div class="sourceCode" id="cb320"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">encuesta</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readxl.tidyverse.org/reference/read_excel.html">read_excel</a></span><span class="op">(</span><span class="st">"bases/estaciones_tren.xls"</span><span class="op">)</span></span></code></pre></div>
-<ol start="5" style="list-style-type: decimal">
-<li>Si se han realizado los pasos anteriores correctamente, aparecerá la base de datos en el entorno o <em>environment</em> de <code>RStudio</code>. Allí es posible ver cuántas observaciones y cuántas variables reconoce el programa dentro de la base. Al clicar sobre la misma se abrirá un archivo de <strong><code>R</code></strong> con los datos de la base especificada, que sirve para visualizar de manera más sencilla toda la información que contiene.</li>
-</ol>
-<p>Para comprobar que el trabajo se haya realizado bien, se puede “llamar” al objeto “encuesta” de la siguiente manera, mostrando solo los primeros 6 casos:</p>
-<div class="sourceCode" id="cb321"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">encuesta</span><span class="op">)</span></span></code></pre></div>
-<div class="inline-table"><table class="huxtable" style="border-collapse: collapse; border: 0px; margin-bottom: 2em; margin-top: 2em; ; margin-left: auto; margin-right: auto;  " id="tab:excel4">
-<caption style="caption-side: top; text-align: center;">
-<span id="tab:excel4">Tabla 9.4: </span> </caption>
-<col>
-<col>
-<col>
-<col>
-<col>
-<col>
-<tr>
-<th style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: bold;">mes</th>
-<th style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: bold;">linea</th>
-<th style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: bold;">ramal</th>
-<th style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: bold;">estacion</th>
-<th style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: bold;">latitud</th>
-<th style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0.4pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: bold;">longitud</th>
-</tr>
-<tr>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">2018-12-01</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">Urquiza</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">Lemos</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">Tropezón</td>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">-3.46e+07</td>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">-5.86e+07</td>
-</tr>
-<tr>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">2018-12-01</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">Urquiza</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">Lemos</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">Teniente Agneta</td>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">-3.45e+05</td>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">-5.87e+07</td>
-</tr>
-<tr>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">2018-12-01</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">Urquiza</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">Lemos</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">Sargento Cabral</td>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">-3.45e+07</td>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">-5.87e+07</td>
-</tr>
-<tr>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">2018-12-01</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">Urquiza</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">Lemos</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">Sargento Barrufaldi</td>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">-3.46e+07</td>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">-5.87e+07</td>
-</tr>
-<tr>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">2018-12-01</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">Urquiza</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">Lemos</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">Rubén Darío</td>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">-3.46e+07</td>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">-5.86e+07</td>
-</tr>
-<tr>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">2018-12-01</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">Urquiza</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">Lemos</td>
-<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">Pedro Arata</td>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">-3.46e+07</td>
-<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">-5.85e+07</td>
-</tr>
-</table></div>
-<p><strong>Sobre algunos errores comunes</strong>: a veces, se confunden en detalles que, en <strong><code>R</code></strong>, hacen la diferencia. Algunos comunes son:</p>
-<ul>
-<li><p><em>Seleccionar las barras incorrectas (/ ó ) según la computadora</em>: en la ruta que da acceso a los documentos que se quieren utilizar, hay muchas barras. Es necesario colocar las correctas según la computadora en la que se esté trabajando, y además, que todas ellas estén en la misma dirección. Si se utilizan estas barras: /, deben estas todas en la misma dirección en la línea de código que se esté escribiendo, porque si hay inconsistencias (utilizando ambas de manera mezclada) <strong><code>R</code></strong> no podrá leer el archivo deseado.</p></li>
-<li><p><em>Ruta errónea</em>: se debe comprobar que cada ruta es fácil de encontrar, tal como se especifica en el paso 4 que se encuentra más arriba.</p></li>
-<li><p><em>Símbolos incorrectos, excedentes o faltantes</em>: un símbolo de más o uno ausente pueden hacer que <strong><code>R</code></strong> no entienda lo que se le “ordena”. Por ello, verificar que todos los símbolos estén correctamente escritos, en el lugar que deben estar, es muy importante.</p></li>
-</ul>
-</div>
-</div>
-</div>
-<div id="recursos" class="section level2" number="9.5">
-<h2>
-<span class="header-section-number">9.5</span> Otros recursos de consulta<a class="anchor" aria-label="anchor" href="#recursos"><i class="fas fa-link"></i></a>
-</h2>
-<p>En esta sección se recopilan algunos manuales online en español que permiten ampliar los conocimientos para introducirse en el mundo de <strong><code>R</code></strong>.</p>
-<ul>
-<li><p><a href="https://es.r4ds.hadley.nz/" target="_blank">Wickham, H., &amp; Grolemund, G. (2016). R para Ciencias de datos</a></p></li>
-<li><p><a href="https://bitsandbricks.github.io/ciencia_de_datos_gente_sociable/" target="_blank">Vazquez Brust, A. (2021). Ciencia de Datos para Gente Sociable</a></p></li>
-<li><p><a href="https://bookdown.org/gboccardo/manual-ED-UCH/" target="_blank">Boccardo Bosoni, G. y Ruiz Bruzzone, F. (2019). RStudio para Estadística Descriptiva en Ciencias Sociales</a></p></li>
-<li><p><a href="https://guidowe.github.io/Curso-R-Flacso/" target="_blank">Tiscornia, P. y Weksler, G. (sin año). Introducción a R para Ciencias Sociales. Aplicación practica en la EPH</a></p></li>
-</ul>
-</div>
-</div>
-
-
-
-
-  <div class="chapter-nav">
-<div class="prev"><a href="tiempo.html"><span class="header-section-number">8</span> Tiempo, espacio y clases sociales</a></div>
-<div class="next"><a href="referencias.html">Referencias</a></div>
-</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
-    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
-      <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#anexo"><span class="header-section-number">9</span> Introducción a R y RStudio</a></li>
-<li>
-<a class="nav-link" href="#introR"><span class="header-section-number">9.1</span> Introducción</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#el-entorno-de-r"><span class="header-section-number">9.1.1</span> El entorno de R</a></li>
-<li><a class="nav-link" href="#aplicar-estad%C3%ADstica-en-r"><span class="header-section-number">9.1.2</span> Aplicar estadística en R</a></li>
-<li><a class="nav-link" href="#descargar-e-instalar-r"><span class="header-section-number">9.1.3</span> Descargar e instalar R</a></li>
-<li><a class="nav-link" href="#rstudio"><span class="header-section-number">9.1.4</span> RStudio</a></li>
-<li><a class="nav-link" href="#descargar-e-instalar-rstudio"><span class="header-section-number">9.1.5</span> Descargar e instalar RStudio</a></li>
-<li><a class="nav-link" href="#partes-de-rstudio"><span class="header-section-number">9.1.6</span> Partes de RStudio</a></li>
-</ul>
-</li>
-<li>
-<a class="nav-link" href="#workflow"><span class="header-section-number">9.2</span> Workflow</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#proyectos-r-studio"><span class="header-section-number">9.2.1</span> Proyectos R Studio</a></li>
-<li><a class="nav-link" href="#organizaci%C3%B3n"><span class="header-section-number">9.2.2</span> Organización</a></li>
-<li><a class="nav-link" href="#utilidad"><span class="header-section-number">9.2.3</span> Utilidad</a></li>
-<li><a class="nav-link" href="#crear-un-proyecto-de-rstudio"><span class="header-section-number">9.2.4</span> Crear un Proyecto de RStudio</a></li>
-<li><a class="nav-link" href="#crear-un-archivo-de-r"><span class="header-section-number">9.2.5</span> Crear un archivo de R</a></li>
-</ul>
-</li>
-<li>
-<a class="nav-link" href="#rmarkdown"><span class="header-section-number">9.3</span> RMarkdown</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#agregar-texto"><span class="header-section-number">9.3.1</span> Agregar texto</a></li>
-<li><a class="nav-link" href="#listas"><span class="header-section-number">9.3.2</span> Listas</a></li>
-<li><a class="nav-link" href="#editar-texto"><span class="header-section-number">9.3.3</span> Editar texto</a></li>
-<li><a class="nav-link" href="#insertar-im%C3%A1genes"><span class="header-section-number">9.3.4</span> Insertar imágenes</a></li>
-<li><a class="nav-link" href="#enlaces"><span class="header-section-number">9.3.5</span> Enlaces</a></li>
-<li><a class="nav-link" href="#tips-para-escribir-c%C3%B3digo-en-r"><span class="header-section-number">9.3.6</span> Tips para escribir código en R</a></li>
-</ul>
-</li>
-<li>
-<a class="nav-link" href="#primerospasos"><span class="header-section-number">9.4</span> Primeros pasos en R</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#funciones-y-comandos-elementales"><span class="header-section-number">9.4.1</span> Funciones y comandos elementales</a></li>
-<li><a class="nav-link" href="#valores-y-vectores"><span class="header-section-number">9.4.2</span> Valores y vectores</a></li>
-<li><a class="nav-link" href="#matrices-y-listas"><span class="header-section-number">9.4.3</span> Matrices y listas</a></li>
-<li><a class="nav-link" href="#filtrado-subsetting"><span class="header-section-number">9.4.4</span> Filtrado (Subsetting)</a></li>
-<li><a class="nav-link" href="#cargar-datos-en-r"><span class="header-section-number">9.4.5</span> Cargar datos en R</a></li>
-</ul>
-</li>
-<li><a class="nav-link" href="#recursos"><span class="header-section-number">9.5</span> Otros recursos de consulta</a></li>
-</ul>
-
-      <div class="book-extra">
-        <ul class="list-unstyled">
-<li><a id="book-source" href="https://github.com/nsacco/clases-arg/blob/master/caps/09U.Rmd">View source <i class="fab fa-github"></i></a></li>
-          <li><a id="book-edit" href="https://github.com/nsacco/clases-arg/edit/master/caps/09U.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
-        </ul>
-</div>
-    </nav>
-</div>
-
-</div>
-</div> <!-- .container -->
-
-<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
-
-  <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Libro de Cocina para el Análisis de las Clases Sociales en Argentina</strong>" was written by Nicolás Sacco, José Rodríguez de la Fuente, Sofia Jaime. It was last built on 2023-04-21.</p>
+          </div>
+        </div>
+      </div>
+<a href="espacial.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="introR.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
   </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/nsacco/clases-arg/caps/09U.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["docs.pdf", "docs.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section",
+"scroll_highlight": true
+}
+});
+});
+</script>
 
-  <div class="col-12 col-md-6 mt-3">
-    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
-  </div>
-
-</div></div>
-</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
@@ -1422,22 +480,7 @@ $cancion_favo
     script.src = src;
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
-</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
-for (let popover of popovers) {
-  const div = document.createElement('div');
-  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
-  div.innerHTML = popover.getAttribute('data-content');
-
-  var has_math = div.querySelector("span.math");
-  if (has_math) {
-    document.body.appendChild(div);
-    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
-    MathJax.Hub.Queue(function() {
-      popover.setAttribute('data-content', div.innerHTML);
-      document.body.removeChild(div);
-    })
-  }
-}
 </script>
 </body>
+
 </html>

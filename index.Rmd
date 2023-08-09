@@ -1,21 +1,20 @@
 ---
 title: "Libro de Cocina para el Análisis de las Clases Sociales en Argentina"
-author: 
-  - Nicolás Sacco
-  - José Rodríguez de la Fuente 
-  - Sofia Jaime
+author:
+- Nicolás Sacco
+- José Rodríguez de la Fuente
+- Sofia Jaime
 date: "`r Sys.Date()`"
-
-bibliography: [bib/Biblio.bib, bib/bib_jose.bib, bib/packages.bib]
-#biblio-style: apalike
-csl: bib/apa-6th-edition.csl
+bibliography:
+- bib/Biblio.bib
+- bib/bib_jose.bib
+- bib/packages.bib
+csl: "bib/apa-6th-edition.csl"
 link-citations: yes
-
 github-repo: nsacco/libroESA
-description: "Libro de Cocina para el Análisis de las Clases Sociales en Argentina"
+description: Libro de Cocina para el Análisis de las Clases Sociales en Argentina
 site: bookdown::bookdown_site
-#knit: "bookdown::render_book"
-always_allow_html: true
+always_allow_html: yes
 ---
 
 ```{r gset, echo = FALSE, include = FALSE}
