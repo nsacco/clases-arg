@@ -224,12 +224,21 @@ Uno de los aspectos a considerar por parte del INDEC, para quienes se inclinan p
 
 Tanto para el caso del 2001 como el 2010, sólo hace falta hacer 'click' en "Descargar Diccionario" para bajarse la base de microdatos, tal como se muestra en las imágenes y trabajarla de forma local, con REDATAM o, mediante su transformación, con su software de preferencia.
 
-```{r, echo = F, warning = F, message = F, fig.cap = 'Descargar diccionario', fig.width = 0.2, fig.height = 0.5, fig.asp=0.50, out.width = "80%", fig.align = "center"}
+```{r, echo = F, warning = F, message = F, fig.cap = 'Descargar diccionario', fig.width = 0.2, fig.height = 0.5, fig.asp=0.50, out.width = "80%", fig.align = "center", eval = knitr::is_html_output()}
 knitr::include_graphics("imagenes/dic2001.png")
 ```
 
-```{r, echo = F, warning = F, message = F, fig.cap = 'Descargar diccionario2', fig.width = 0.2, fig.height = 0.5, fig.asp=0.50, out.width = "80%", fig.align = "center"}
+```{r, echo = F, warning = F, message = F, fig.cap = 'Descargar diccionario', fig.width = 0.2, fig.height = 0.5, fig.asp=0.50, out.width = "80%", fig.align = "center", eval = !knitr::is_html_output()}
+knitr::include_graphics("imagenes_byn/dic2001.jpg")
+```
+
+
+```{r, echo = F, warning = F, message = F, fig.cap = 'Descargar diccionario2', fig.width = 0.2, fig.height = 0.5, fig.asp=0.50, out.width = "80%", fig.align = "center", eval = knitr::is_html_output()}
 knitr::include_graphics("imagenes/dic2010.png")
+```
+
+```{r, echo = F, warning = F, message = F, fig.cap = 'Descargar diccionario2', fig.width = 0.2, fig.height = 0.5, fig.asp=0.50, out.width = "80%", fig.align = "center", eval = !knitr::is_html_output()}
+knitr::include_graphics("imagenes_byn/dic2010.jpg")
 ```
 
 #### Transformación del diccionario original

@@ -1021,11 +1021,11 @@ eph_ind_215 <- eph_ind_215 %>%
   													cso_agg == 10 | cso_agg == 11 ~ 6))
 
 eph_ind_215$clase6_factor <- factor(eph_ind_215$clase6, labels = c("Clase alta",
-																																	 "Clase media - autónoma",
-																																	 "Clase media - asalariada",
-																																	 "Clase obrera - autónoma",
-																																	 "Clase obrera - asalariada",
-																																	 "Clase obrera - trabajadores marginales"))  
+																																	 "Clase media autónoma",
+																																	 "Clase media asalariada",
+																																	 "Clase obrera autónoma",
+																																	 "Clase obrera asalariada",
+																																	 "Clase obrera trabajadores marginales"))  
 
 eph_ind_215 <- eph_ind_215 %>% 
 	mutate(clase3 = car::recode(eph_ind_215$clase6, "1=1; 2:3=2; 4:6=3")) 

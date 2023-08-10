@@ -44,7 +44,7 @@ knitr::include_graphics("imagenes/R_logo.svg.png")
 
 - Algunas técnicas estadísticas están incluidas en el entorno básico de **`R`** y otras se pueden obtener en forma de bibliotecas, llamadas **paquetes** (`packages`).
 
-```{r fig.cap= "Logos de algunos paquetes de R", fig.align='center', out.width = '60%', echo=FALSE}
+```{r fig.cap= "Logos de algunos paquetes de R", fig.align='center', out.width = '60%', echo=FALSE, eval = knitr::is_html_output()}
 knitr::include_graphics("imagenes/R_packages.png")
 ```
 
@@ -52,7 +52,7 @@ knitr::include_graphics("imagenes/R_packages.png")
 
 Para descargar **`R`** es posible ingresar a <https://cran.r-project.org/>{target="_blank"}. Luego, se debe seleccionar el sistema operativo de cada computadora donde se lo desea instalar y, a consiguiente, comenzará la instalación.
 
-```{r fig.cap= "R", fig.align='center', out.width = '80%', echo=FALSE}
+```{r fig.cap= "R", fig.align='center', out.width = '80%', echo=FALSE, eval = knitr::is_html_output()}
 knitr::include_graphics("imagenes/R_desc.png")
 ```
 
@@ -73,7 +73,7 @@ Se debe ingresar al siguiente enlace: <https://www.rstudio.com/products/rstudio/
 knitr::include_graphics("imagenes/RStudio_logo.png")
 ```
 
-```{r fig.cap= "Descarga de RStudio", fig.align='center', out.width = '80%', echo=FALSE}
+```{r fig.cap= "Descarga de RStudio", fig.align='center', out.width = '80%', echo=FALSE, eval = knitr::is_html_output()}
 knitr::include_graphics("imagenes/RStudio_desc.png")
 ```
 
@@ -91,8 +91,12 @@ Las secciones que conforman `RStudio` son cuatro:
 
 Cuando uno abre `RStudio`, de forma predeterminada, se ve de la siguiente manera:
 
-```{r fig.cap= "RStudio Escritorio", fig.align='center', out.width = '80%', echo=FALSE}
+```{r fig.cap= "RStudio Escritorio", fig.align='center', out.width = '80%', echo=FALSE, eval = knitr::is_html_output()}
 knitr::include_graphics("imagenes/rstudio_entorno.png")
+```
+
+```{r fig.cap= "RStudio Escritorio", fig.align='center', out.width = '80%', echo=FALSE, eval = !knitr::is_html_output()}
+knitr::include_graphics("imagenes_byn/rstudio_entorno.png")
 ```
 
 * Básicamente, la interfaz se compone de diferentes paneles. Sobre el lado izquierdo hay un panel grande y en el lado derecho hay dos paneles más pequeños. Al comenzar a trabajar en `RStudio`, habrá un cuarto panel que se activa al abrir un nuevo documento.
@@ -105,13 +109,13 @@ knitr::include_graphics("imagenes/rstudio_entorno.png")
 
 * En la parte inferior derecha hay un panel que tiene varias pestañas. El primero permite ver la estructura de los archivos, por lo que es parecido a una ventana estándar que se usa para navegar en cualquier sistema operativo.
 
-```{r fig.cap= "panel Derecho Inferior de RStudio", fig.align='center', out.width = '60%', echo=FALSE}
+```{r fig.cap= "panel Derecho Inferior de RStudio", fig.align='center', out.width = '60%', echo=FALSE, eval = knitr::is_html_output()}
 knitr::include_graphics("imagenes/pan_der_inf.png")
 ```
 
 * Hay una pestaña que enumera los paquetes que se han instalado. 
 
-```{r fig.cap= "Paquetes de RStudio", fig.align='center', out.width = '60%', echo=FALSE}
+```{r fig.cap= "Paquetes de RStudio", fig.align='center', out.width = '60%', echo=FALSE, eval = knitr::is_html_output()}
 knitr::include_graphics("imagenes/paquetes.png")
 ```
 
@@ -129,8 +133,13 @@ knitr::include_graphics("imagenes/paquetes.png")
 
 Se obtendrá:
 
-```{r fig.cap= "R", fig.align='center', out.width = '60%', echo=FALSE}
+```{r fig.cap= "R", fig.align='center', out.width = '60%', echo=FALSE, eval = knitr::is_html_output()}
 knitr::include_graphics("imagenes/ayuda.png")
+```
+
+
+```{r fig.cap= "R", fig.align='center', out.width = '60%', echo=FALSE, eval = !knitr::is_html_output()}
+knitr::include_graphics("imagenes_byn/ayuda.jpg")
 ```
 
 * Entonces, si hace falta ayuda, aparecerá en dicha pestaña. Hay que tener en cuenta que es posible modificar la configuración de estos paneles. Los pasos para hacerlo son:

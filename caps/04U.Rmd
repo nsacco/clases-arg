@@ -411,8 +411,12 @@ eph_ind_215 <- get_microdata(year = 2015, trimester = 2, type = "individual")
 
 Como la codificación de la variable ocupación a partir de la **CIUO** se encuentra en un archivo aparte, debemos acceder al sitio de INDEC para descargarlo.
 
-```{r fig.cap= "Ejemplo clasificación de Actividades Profesionales, Científicas y Técnicas - CAES 1.0 [@INDEC2011d]", fig.align='center', out.width = '80%', echo=FALSE}
+```{r fig.cap= "Ejemplo clasificación de Actividades Profesionales, Científicas y Técnicas - CAES 1.0 [@INDEC2011d]", fig.align='center', out.width = '80%', echo=FALSE, eval = knitr::is_html_output()}
 knitr::include_graphics("imagenes/indec_ciuo.png")
+```
+
+```{r fig.cap= "Ejemplo clasificación de Actividades Profesionales, Científicas y Técnicas - CAES 1.0 [@INDEC2011d]", fig.align='center', out.width = '80%', echo=FALSE, eval = !knitr::is_html_output()}
+knitr::include_graphics("imagenes_byn/indec_ciuo.jpg")
 ```
 
 Luego de descargado el archivo, descomprimiremos el ```.rar``` y utilizaremos el archivo `eph_ciuo_215.dbf`. A continuación abriremos dicho archivo y "pegaremos" la variable **PP04D_CIUO** en la base **eph_ind_215**. Utilizaremos las variables **CODUSU** (identificador de vivienda), **NRO_HOGAR** (identificador del hogar) y **COMPONENTE** (identificador de miembro del hogar) como ID para emparejar ambas bases. 

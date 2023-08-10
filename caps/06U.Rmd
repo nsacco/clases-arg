@@ -160,7 +160,7 @@ eph_ind_215 %>%
 
 Como puede observarse, las posiciones de clase son explicativas de la desigualdad de ingresos. A mayor posición de clase, mayores ingresos percibidos. A su vez, existen fronteras, en términos de ingresos, entre la clase media y obrera, así como entre los estratos autónomos y asalariados. Sin embargo, la media es una medida que no da una caracterización completa respecto a la distribución de los valores. Para ello comúnmente se utilizan las medidas de posición y de dispersión como forma de conocer cuán homogéneas o heterogéneas son las distribuciones de los datos, en este caso, de los ingresos. El diagramas de caja (o en inglés *boxplot*), nos permite a partir de una salida gráfica, dar cuenta de una serie de estas medidas. Con ayuda del paquete `ggplot2` y la función *geom_boxplot* presentamos el siguiente gráfico. Para facilitar la visualización, seleccionamos únicamente los casos con ingresos hasta `$40.000`.  
 
-```{r, message=FALSE, warning=FALSE, fig.cap= "Ingresos totales individuales por clase social", fig.width= 6, fig.asp= 0.8, echo=TRUE}
+```{r, message=FALSE, warning=FALSE, fig.cap= "Ingresos totales individuales por clase social", fig.width= 6, fig.asp= 0.8, echo=TRUE, eval = knitr::is_html_output()}
 
 eph_ind_215 %>%
   filter(!is.na(clase6_factor), P47T <= 40000) %>% 
@@ -178,7 +178,7 @@ eph_ind_215 %>%
 ```
 
 
-```{r, message=FALSE, warning=FALSE, fig.cap= "Ingresos totales individuales por clase social", fig.width= 6, fig.asp= 0.8, include=FALSE}
+```{r, message=FALSE, warning=FALSE, fig.cap= "Ingresos totales individuales por clase social", fig.width= 6, fig.asp= 0.8, include=FALSE, eval = !knitr::is_html_output()}
 
 eph_ind_215 %>%
   filter(!is.na(clase6_factor), P47T <= 40000) %>% 
@@ -194,7 +194,7 @@ eph_ind_215 %>%
   scale_x_discrete(labels = function(x) str_wrap(x, width = 20)) +
   scale_y_continuous(breaks=seq(0, 50000, 5000))
 
-ggsave(filename = "imagenes/boxplot.jpg", dpi = 300, type = "cairo", width = 8, height = 6)
+# ggsave(filename = "imagenes/boxplot.jpg", dpi = 300, type = "cairo", width = 8, height = 6)
 ```
 
 Varios son los elementos del gráfico que debemos destacar. En primer lugar, las cajas dan cuenta del rango inter-cuartil (1ro y 3ro), mientras que las lineas representan a las medianas de ingresos, es decir, el valor que parte a la distribución por la mitad. De esta forma, los resultados se muestran similares a los arribados en la tabla anterior, aunque las clases medias y la clase alta muestran cierta heterogeneidad en los ingresos percibidos. Finalmente, los límites de las lineas verticales representan los valores máximos y mínimos, mientras que los puntos identifican a los casos atípicos. 
@@ -221,7 +221,7 @@ eph_ind_215$region_f <- factor(eph_ind_215$REGION, labels = c("GBA", "NOA", "NEA
 
 eph_ind_215$sexo_f <- factor(eph_ind_215$CH04, labels = c("Varón", "Mujer"))
 
-eph_ind_215$clase6_factor <- relevel(eph_ind_215$clase6_factor, ref = "Clase obrera - trabajadores marginales")
+eph_ind_215$clase6_factor <- relevel(eph_ind_215$clase6_factor, ref = "Clase obrera trabajadores marginales")
 
 ```
 

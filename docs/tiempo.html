@@ -128,7 +128,7 @@
 <p>El estudio del cambio de la estructura de clases a través del tiempo fue una de las principales preocupaciones de los primeros trabajos sobre la temática realizados en Argentina. En este sentido, Gino Germani, pionero no sólo de la institucionalización de la sociología en el país sino en el estudio de la estructura social, en su principal obra, <em>Estructura social de la Argentina</em> <span class="citation">(<a href="referencias.html#ref-Germani1955">1955</a>)</span>, aborda los cambios producidos en las clases sociales a partir de la información censal disponible desde el censo de 1895.</p>
 <!--A continuación presentamos una tabla de una actualización de dicho trabajo en el que presenta un análisis de largo plazo, desde 1895 hasta 1960 [@Germani1971].-->
 <div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:unnamed-chunk-115"></span>
+<span style="display:block;" id="fig:unnamed-chunk-118"></span>
 <p class="caption">
 Gráfico 8.1: Evolución de la estratificación social. 1869-1960. <span class="citation">Germani (<a href="referencias.html#ref-Germani1971">1971</a>)</span>
 </p>
@@ -137,7 +137,7 @@ Gráfico 8.1: Evolución de la estratificación social. 1869-1960. <span class="
 <p>Dicho trabajo fue continuado por Susana Torrado en su libro <em>Estructura social de la Argentina, 1945-1983</em> <span class="citation">(<a href="referencias.html#ref-Torrado1992">1992</a>)</span>, aunque aplicando el esquema de clases construido por la autora. Luego, fueron incorporados los censos de 1980 a 2010 por Sacco <span class="citation">(<a href="referencias.html#ref-Sacco2019">2019</a>)</span>, recontruyendo el esquema de clases de Torrado.</p>
 <!--A continuación presentamos una tabla similar, en el que se muestra la evolución de la estructura de clases desde 1947 hasta 1991, recurriendo también a información censal [@Torrado2007].-->
 <div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:unnamed-chunk-116"></span>
+<span style="display:block;" id="fig:unnamed-chunk-119"></span>
 <p class="caption">
 Gráfico 8.2: Evolución de la estructura de clases. Total país 1947-1991. <span class="citation">Torrado (<a href="referencias.html#ref-Torrado2007">2007</a>)</span>
 </p>
@@ -146,7 +146,7 @@ Gráfico 8.2: Evolución de la estructura de clases. Total país 1947-1991. <spa
 <p>En otros trabajos se ha optado por el estudio de los cambios producidos en la estructura de clases pero en el mediano plazo. Para ello se ha recurrido fundamentalmente a la <strong>EPH</strong>, dado su carácter de relevamiento continuo y el tipo de variables socio-ocupacionales que contiene. De este modo podemos citar los trabajos de <span class="citation">Benza (<a href="referencias.html#ref-Benza2016">2016</a>)</span>, <span class="citation">Chávez Molina &amp; Sacco (<a href="referencias.html#ref-ChavezMolina2015">2015</a>)</span>, <span class="citation">Pla et al. (<a href="referencias.html#ref-Pla.etal2018">2018</a>)</span>, <span class="citation">Sacco (<a href="referencias.html#ref-Sacco2019">2019</a>)</span> o <span class="citation">Chávez Molina &amp; Rodríguez de la Fuente (<a href="referencias.html#ref-ChavezMolina.RodriguezdelaFuente2021">2021</a>)</span>.</p>
 <!--Pasar esto y similares a inline code sobre para el output en html: A continuación, a modo de ejemplo, presentamos la evolución de la estructura de clases argentina entre 2011 y 2019 en gráficos de barras [@ChavezMolina.RodriguezdelaFuente2021].-->
 <div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:unnamed-chunk-117"></span>
+<span style="display:block;" id="fig:unnamed-chunk-120"></span>
 <p class="caption">
 Gráfico 8.3: Evolución de la estructura de clases. Total país 2011-2019. <span class="citation">Chávez Molina &amp; Rodríguez de la Fuente (<a href="referencias.html#ref-ChavezMolina.RodriguezdelaFuente2021">2021</a>)</span>
 </p>
@@ -231,12 +231,40 @@ Weights: PONDERA
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_x_continuous</a></span><span class="op">(</span>breaks <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2011</span><span class="op">:</span><span class="fl">2015</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_y_continuous</a></span><span class="op">(</span>breaks<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">100</span>, <span class="fl">10</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:unnamed-chunk-123"></span>
+<span style="display:block;" id="fig:unnamed-chunk-126"></span>
 <p class="caption">
 Gráfico 8.4: Ejemplo de gráfico de columnas con la variable clase social
 </p>
-<img src="docs_files/figure-html/unnamed-chunk-123-1.png" alt="Ejemplo de gráfico de columnas con la variable clase social" width="672">
+<img src="docs_files/figure-html/unnamed-chunk-126-1.png" alt="Ejemplo de gráfico de columnas con la variable clase social" width="672">
 </div>
+<div class="sourceCode" id="cb138"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">eph_1115_ocup</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">clase6_factor</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">ANO4</span>, <span class="va">clase6_factor</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">tally</a></span><span class="op">(</span>wt<span class="op">=</span><span class="va">PONDERA</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">ANO4</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>percent <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="op">(</span><span class="va">n</span><span class="op">/</span><span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">n</span><span class="op">)</span><span class="op">)</span><span class="op">*</span><span class="fl">100</span>, digits <span class="op">=</span> <span class="fl">2</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">ANO4</span>, y <span class="op">=</span> <span class="va">percent</span>, fill <span class="op">=</span> <span class="va">clase6_factor</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_text.html">geom_text</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>label <span class="op">=</span> <span class="va">percent</span><span class="op">)</span>, position <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/position_stack.html">position_stack</a></span><span class="op">(</span><span class="fl">.5</span><span class="op">)</span>, size <span class="op">=</span> <span class="fl">3</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_grey.html">scale_fill_grey</a></span><span class="op">(</span>labels <span class="op">=</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="fu"><a href="https://stringr.tidyverse.org/reference/str_wrap.html">str_wrap</a></span><span class="op">(</span><span class="va">x</span>, width <span class="op">=</span> <span class="fl">25</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Evolución de la estructura de clases sociales"</span>,</span>
+<span>       subtitle <span class="op">=</span> <span class="st">"Población ocupada. Argentina urbana 2011-2015."</span>,</span>
+<span>       caption <span class="op">=</span> <span class="st">"Fuente: Elaboración propia en base a EPH-INDEC 2011-2015."</span>,</span>
+<span>       fill <span class="op">=</span> <span class="st">"Clase social"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>legend.title <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">10</span>, face <span class="op">=</span> <span class="st">"bold"</span><span class="op">)</span>,</span>
+<span>        legend.text <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">10</span><span class="op">)</span>,</span>
+<span>        axis.title.x <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>        axis.title.y <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>        axis.text.y <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">10</span><span class="op">)</span>,</span>
+<span>        axis.text.x <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">10</span><span class="op">)</span>,</span>
+<span>        plot.title <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">12</span>, face <span class="op">=</span> <span class="st">"bold"</span><span class="op">)</span>,</span>
+<span>        plot.subtitle <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">11</span><span class="op">)</span>,</span>
+<span>        plot.caption <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">10</span>, hjust <span class="op">=</span> <span class="fl">1</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_x_continuous</a></span><span class="op">(</span>breaks <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2011</span><span class="op">:</span><span class="fl">2015</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_y_continuous</a></span><span class="op">(</span>breaks<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">100</span>, <span class="fl">10</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># ggsave(filename = "imagenes/barras.jpg", dpi = 300, type = "cairo", width = 8, height = 6)</span></span></code></pre></div>
 </div>
 </div>
 <div id="espacial" class="section level2" number="8.2">
@@ -247,7 +275,7 @@ Gráfico 8.4: Ejemplo de gráfico de columnas con la variable clase social
 <p>Claro está que no siempre contamos con las fuentes de información óptimas para abordar dicha heterogeneidades geográficas. Por ejemplo, con la <strong>EPH</strong>, fuente que venimos utilizando en este libro, podemos tener una desagregación espacial para el país por aglomerados, provincias o regiones, pero siempre considerando a la población urbana encuestada. Algo similar sucede con otras encuestas de hogares como la <a href="https://www.argentina.gob.ar/ciencia/pisac/bases-de-datos" target="_blank">ENES-PISAC</a>.</p>
 <p>Por el contrario, la información censal nos permite acceder a un nivel de desagregación geo-estadísticas de mayor precisión, tales como las fracciones y los radios censales. De esta forma, el mosaico de heterogeneidades sociales que podemos representar se vuelve más complejo a través de este tipo de fuente de datos.</p>
 <div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:unnamed-chunk-125"></span>
+<span style="display:block;" id="fig:unnamed-chunk-128"></span>
 <p class="caption">
 Gráfico 8.5: Ejemplo de unidades geo-estadísticas del INDEC. 1) Provincias; 2) Departametnos; 3) Fracciones censales; 4) Radios censales. Fuente: elaboración propia en base a Cartografía y códigos geográficos del Sistema Estadístico Nacional
 </p>
@@ -259,16 +287,16 @@ Gráfico 8.5: Ejemplo de unidades geo-estadísticas del INDEC. 1) Provincias; 2)
 </h3>
 <p>Por limitaciones de las fuentes de información, en los estudios de estructuras de clases, cuando se cruzan los datos construidos con información espacial se suelen hacer comparaciones entre unidades de mayor nivel, tales como los países o las provincias y regiones dentro de las naciones. Por ejemplo, el análisis de Solís, Chávez Molina y Cobos <span class="citation">(<a href="referencias.html#ref-Solis.etal2019">2019</a>)</span> se compara la estructura de clases reciente en 9 países latinoamericanos. Para ello se recurrió a información específica proveniente de encuestas de hogares de cada uno de los países seleccionados, que luego fue armonizada para poder ser comparable.</p>
 <div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:unnamed-chunk-126"></span>
+<span style="display:block;" id="fig:unnamed-chunk-130"></span>
 <p class="caption">
 Gráfico 8.6: Estructura de clases en países de América Latina. Población entre 15 y 64 años. 2011-2015. Solís, Chávez Molina y Cobos <span class="citation">(<a href="referencias.html#ref-Solis.etal2019">2019</a>, pp 861)</span>
 </p>
 <img src="imagenes/tabla_solis.png" alt="Estructura de clases en países de América Latina. Población entre 15 y 64 años. 2011-2015. Solís, Chávez Molina y Cobos [-@Solis.etal2019, pp 861]" width="100%">
 </div>
-<p>En Argentina, al igual que para el caso del análisis en el tiempo, los trabajos de Germani, Torrado también abordaron el análisis de la dinámica del cambio en la estructura de clases en agregados geográficos subnacionales.</p>
+<p>En Argentina, al igual que para el caso del análisis en el tiempo, los trabajos de Germani y Torrado también abordaron el análisis de la dinámica del cambio en la estructura de clases en agregados geográficos subnacionales.</p>
 <!--El siguiente ejemplo de gráfico de barras [@Germani1955, pp 212], muestra, a partir del Censo Nacional de 1947, la distribución de las clases populares y medias por provincia.-->
 <div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:unnamed-chunk-127"></span>
+<span style="display:block;" id="fig:unnamed-chunk-131"></span>
 <p class="caption">
 Gráfico 8.7: Estructura de clases en las distintas jurisdicciones del país. Gráfico extraído de <span class="citation">Germani et al. (<a href="referencias.html#ref-Germani.etal2010">2010</a>)</span>
 </p>
@@ -277,7 +305,7 @@ Gráfico 8.7: Estructura de clases en las distintas jurisdicciones del país. Gr
 <p>Posteriormente, bajo la asesoría general de Susana Torrado, desde Consejo Nacional de Inversiones <span class="citation">(<a href="referencias.html#ref-CFI1988">CFI, 1988</a>)</span>, se elaboraron informes para cada una de las provincias y el total país, en donde se caracterizaba la estratificación social y las condiciones de vida de la población, teniendo como fuente de datos el Censo Nacional de Población y Vivienda de 1980. Gran parte de dicho análisis fue retomado luego y publicado en el libro <em>Estructura social de la Argentina, 1945-1983</em> <span class="citation">(<a href="referencias.html#ref-Torrado1992">Torrado, 1992</a>)</span>.</p>
 <!--A continuación reproducimos una de las tablas en donde se analiza el tamaño de las clases sociales por regiones del país.-->
 <div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:unnamed-chunk-128"></span>
+<span style="display:block;" id="fig:unnamed-chunk-132"></span>
 <p class="caption">
 Gráfico 8.8: Indicadores de la estructura social por regiones. 980. Torrado <span class="citation">(<a href="referencias.html#ref-Torrado1992">Torrado, 1992</a>, pp 386)</span>
 </p>
@@ -287,7 +315,7 @@ Gráfico 8.8: Indicadores de la estructura social por regiones. 980. Torrado <sp
 <p>Por ejemplo, Mike Savage y otros <span class="citation">(<a href="referencias.html#ref-Savage.etal2013">2013</a>)</span> llevaron a cabo junto a la BBC una encuesta de representación nacional (<em>BBC’s 2011 Great British Class Survey</em>), a través de la cual, a partir de la técnica de clases latentes, presentaron un nuevo abordaje en el estudio de las clases sociales conformado a partir de 7 clases. En ese trabajos, los autores recurren a una serie de mapas para demostrar cómo dichas clases se distribuyen al interior de Gran Bretaña.</p>
 <!--Por ejemplo, a continuación mostramos la distribución de la *clase trabajadora tradicional*.-->
 <div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:unnamed-chunk-129"></span>
+<span style="display:block;" id="fig:unnamed-chunk-133"></span>
 <p class="caption">
 Gráfico 8.9: Distribución espacial de la clase trabajadora tradicional. Savage et al. <span class="citation">(<a href="referencias.html#ref-Savage.etal2013">2013</a>, pp 241)</span>
 </p>
@@ -300,7 +328,7 @@ Gráfico 8.9: Distribución espacial de la clase trabajadora tradicional. Savage
 </h3>
 <p>Ahora veremos como llevar a cabo un análisis de clase según información espacial. Cómo dijimos anteriormente, la profundidad del tipo de análisis que podamos realizar va a depender del tipo de fuente con la que trabajemos. En este caso, vamos a aprovechar el pool de bases de <strong>EPH</strong> que hemos pegado para los años 2011 a 2015.</p>
 <p>En forma simple vamos a indagar como se distribuyen las clases sociales al interior de cada una de las regiones identificadas por <strong>INDEC</strong>. En primer lugar, construyamos una tabla (no mostrada) de doble entrada que nos permita mostrar dicha información.</p>
-<div class="sourceCode" id="cb138"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb139"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># 1) Creo una variable factor con los nombres de las regiones (region_f)</span></span>
 <span><span class="va">eph_1115_ocup</span><span class="op">$</span><span class="va">region_f</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">eph_1115_ocup</span><span class="op">$</span><span class="va">REGION</span>, labels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"GBA"</span>, <span class="st">"NOA"</span>, <span class="st">"NEA"</span>, <span class="st">"Cuyo"</span>,</span>
 <span>                                                                  <span class="st">"Pampeana"</span>, <span class="st">"Patagonia"</span><span class="op">)</span><span class="op">)</span></span>
@@ -317,7 +345,7 @@ Gráfico 8.9: Distribución espacial de la clase trabajadora tradicional. Savage
 <!--knitr::kable(tabla_regiones)-->
 <p>Finalmente presentamos un ejemplo de representación de la tabla anteriormente construida en un mapa temático. <strong><code>R</code></strong> posee varias librerías para manipular información de tipo geográfica. En este caso utilizaremos el paquete <code>sf</code>. Lo que haremos es representar en mapas en miniatura de Argentina, el porcentaje de individuos pertenecientes a cada clase social por región.</p>
 <p>A los fines de este ejemplo, trabajaremos con la cartografía por departamentos que proporciona INDEC (<a href="https://www.indec.gob.ar/indec/web/Institucional-Indec-Codgeo" class="uri">https://www.indec.gob.ar/indec/web/Institucional-Indec-Codgeo</a>). Si bien no es la finalidad de este libro introducir el uso de herramientas SIG<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content='&lt;p&gt;Recomendamos el manual &lt;a href="https://bitsandbricks.github.io/ciencia_de_datos_gente_sociable/"&gt;Ciencia de datos para gente sociable&lt;/a&gt;, específicamente su capítulo 6, para quienes quieran profundizar en el tema&lt;/p&gt;'><sup>14</sup></a>, a continuación presentamos el procedimiento “paso a paso” para la creación del mapa temático.</p>
-<div class="sourceCode" id="cb139"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb140"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># 1) Cargamos el archivo .shp y lo guardamos en el objetivo espacial "argentina"</span></span>
 <span><span class="va">argentina</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_read.html">st_read</a></span><span class="op">(</span><span class="st">"cartografia/argentina_n.shp"</span><span class="op">)</span></span></code></pre></div>
 <pre><code>Reading layer `argentina_n' from data source 
@@ -328,7 +356,7 @@ Geometry type: POLYGON
 Dimension:     XY
 Bounding box:  xmin: -74 ymin: -90 xmax: -25 ymax: -22
 Geodetic CRS:  WGS 84</code></pre>
-<div class="sourceCode" id="cb141"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb142"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># 2) Filtramos al territorio antártico ya que no contamos con información en la EPH y se dificulta la visualización del mapa</span></span>
 <span><span class="va">argentina</span> <span class="op">&lt;-</span> <span class="va">argentina</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="op">!</span><span class="va">link</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"94028"</span><span class="op">)</span><span class="op">)</span></span>
@@ -369,7 +397,7 @@ Geodetic CRS:  WGS 84</code></pre>
 <span><span class="co"># 7) Unimos el objeto "argentina" con la tabla larga que contiene los porcentajes por clase y región, tomando como variable identificadora REGION</span></span>
 <span><span class="va">mapa</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/merge.html">merge</a></span><span class="op">(</span><span class="va">argentina</span>, <span class="va">tabla_larga</span>, by<span class="op">=</span><span class="st">"region_f"</span>, all.x <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
 <p>Puntualmente, el comando <code>geom_sf</code> del <code>ggplot2</code> nos permitirá superponer capas con información georreferenciada, como en este caso los departamentos del país. A su vez, el comando <code>facet_wrap</code> del mismo paquete nos permite representar un gráfico (en este caso un mapa) para la variable que seleccionemos (clase social).</p>
-<div class="sourceCode" id="cb142"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb143"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsf.html">geom_sf</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">mapa</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>group <span class="op">=</span> <span class="va">region_f</span>, fill <span class="op">=</span> <span class="va">percent</span><span class="op">)</span>, color <span class="op">=</span> <span class="cn">NA</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/pkg/ggthemes/man/theme_map.html">theme_map</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
@@ -389,11 +417,11 @@ Geodetic CRS:  WGS 84</code></pre>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_viridis.html">scale_fill_viridis_c</a></span><span class="op">(</span>direction <span class="op">=</span> <span class="op">-</span><span class="fl">1</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html">facet_wrap</a></span><span class="op">(</span><span class="op">~</span><span class="va">clase6_factor</span>, ncol <span class="op">=</span> <span class="fl">7</span>, labeller <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labeller.html">labeller</a></span><span class="op">(</span>clase6_factor <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labellers.html">label_wrap_gen</a></span><span class="op">(</span><span class="fl">15</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:unnamed-chunk-132"></span>
+<span style="display:block;" id="fig:unnamed-chunk-136"></span>
 <p class="caption">
 Gráfico 8.10: Ejemplo de mapa temático utilizando la variable clase social
 </p>
-<img src="docs_files/figure-html/unnamed-chunk-132-1.png" alt="Ejemplo de mapa temático utilizando la variable clase social" width="672">
+<img src="docs_files/figure-html/unnamed-chunk-136-1.png" alt="Ejemplo de mapa temático utilizando la variable clase social" width="672">
 </div>
 
 </div>
@@ -439,7 +467,7 @@ Gráfico 8.10: Ejemplo de mapa temático utilizando la variable clase social
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Libro de Cocina para el Análisis de las Clases Sociales en Argentina</strong>" was written by Nicolás Sacco, José Rodríguez de la Fuente, Sofia Jaime. It was last built on 2023-08-09.</p>
+    <p>"<strong>Libro de Cocina para el Análisis de las Clases Sociales en Argentina</strong>" was written by Nicolás Sacco, José Rodríguez de la Fuente, Sofia Jaime. It was last built on 2023-08-10.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

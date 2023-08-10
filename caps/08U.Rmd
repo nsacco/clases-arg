@@ -289,8 +289,6 @@ tabla_anios <- eph_1115_ocup %>%
   mutate(percent = round((n/sum(n))*100, digits = 2)) %>% 
   select(clase6_factor, ANO4, percent) %>% 
   spread(ANO4, value = percent)
-
-
 ```
 
 <!--knitr::kable(tabla_anios). Arreglar tabla para salida HTML-->
@@ -299,7 +297,7 @@ Es necesario aclarar que hay muchas formas de construir una tabla de doble entra
 
 Otra opción de presentación es la elaboración de un gráfico de barras. Para ello recurriremos al paquete `ggplot2` y a la función `geom_col`. En este caso, al principio, repetiremos parte de la secuencia de pasos utilizada para el armado de la tabla, hasta la generación de la variable `percent`. Luego llamando a la librería `ggplot2`, definiremos la estética (aes) indicando el eje `x` (años), el eje `y` (porcentajes) y la variable que determinará el color de las barras (`fill`), es decir, la clase social. Posteriormente llamaremos a la función `geom_col()` y luego a `geom_text` para identificar con números los porcentajes en las barras. El resto de las opciones mejoran la salida gráfica configurando diversos aspectos.
 
-```{r, message=FALSE, warning=FALSE, echo=TRUE, fig.cap="Ejemplo de gráfico de columnas con la variable clase social"}
+```{r, message=FALSE, warning=FALSE, echo=TRUE, fig.cap="Ejemplo de gráfico de columnas con la variable clase social", eval = knitr::is_html_output()}
 eph_1115_ocup %>%
   filter(!is.na(clase6_factor)) %>% 
   group_by(ANO4, clase6_factor) %>% 
@@ -327,7 +325,7 @@ eph_1115_ocup %>%
   scale_y_continuous(breaks=seq(0, 100, 10))
 ```
 
-```{r, message=FALSE, warning=FALSE, include=FALSE, fig.cap="Ejemplo de gráfico de columnas con la variable clase social"}
+```{r, message=FALSE, warning=FALSE, fig.cap="Ejemplo de gráfico de columnas con la variable clase social", eval = !knitr::is_html_output()}
 eph_1115_ocup %>%
   filter(!is.na(clase6_factor)) %>% 
   group_by(ANO4, clase6_factor) %>% 
@@ -354,7 +352,7 @@ eph_1115_ocup %>%
   scale_x_continuous(breaks = c(2011:2015)) +
   scale_y_continuous(breaks=seq(0, 100, 10))
 
-ggsave(filename = "imagenes/barras.jpg", dpi = 300, type = "cairo", width = 8, height = 6)
+# ggsave(filename = "imagenes/barras.jpg", dpi = 300, type = "cairo", width = 8, height = 6)
 ```
 
 ## La dimensión espacial {#espacial}
@@ -369,6 +367,11 @@ Por el contrario, la información censal nos permite acceder a un nivel de desag
 knitr::include_graphics("imagenes/formosa_radios.png")
 ```
 
+
+```{r fig.cap= "Ejemplo de unidades geo-estadísticas del INDEC. 1) Provincias; 2) Departametnos; 3) Fracciones censales; 4) Radios censales. Fuente: elaboración propia en base a Cartografía y códigos geográficos del Sistema Estadístico Nacional", fig.align='center', out.width = '100%', echo=FALSE, eval = !knitr::is_html_output()}
+knitr::include_graphics("imagenes_byn/formosa_radios.jpg")
+```
+
 ### Algunos ejemplos de la bibliografía
 
 Por limitaciones de las fuentes de información, en los estudios de estructuras de clases, cuando se cruzan los datos construidos con información espacial se suelen hacer comparaciones entre unidades de mayor nivel, tales como los países o las provincias y regiones dentro de las naciones. Por ejemplo, el análisis de Solís, Chávez Molina y Cobos [-@Solis.etal2019] se compara la estructura de clases reciente en 9 países latinoamericanos. Para ello se recurrió a información específica proveniente de encuestas de hogares de cada uno de los países seleccionados, que luego fue armonizada para poder ser comparable.
@@ -377,7 +380,7 @@ Por limitaciones de las fuentes de información, en los estudios de estructuras 
 knitr::include_graphics("imagenes/tabla_solis.png")
 ```
 
-En Argentina, al igual que para el caso del análisis en el tiempo, los trabajos de Germani, Torrado también abordaron el análisis de la dinámica del cambio en la estructura de clases en agregados geográficos subnacionales. 
+En Argentina, al igual que para el caso del análisis en el tiempo, los trabajos de Germani y Torrado también abordaron el análisis de la dinámica del cambio en la estructura de clases en agregados geográficos subnacionales. 
 
 <!--El siguiente ejemplo de gráfico de barras [@Germani1955, pp 212], muestra, a partir del Censo Nacional de 1947, la distribución de las clases populares y medias por provincia.-->
 
@@ -482,7 +485,7 @@ mapa <- merge(argentina, tabla_larga, by="region_f", all.x = TRUE)
 Puntualmente, el comando `geom_sf` del `ggplot2` nos permitirá superponer capas con información georreferenciada, como en este caso los departamentos del país. A su vez, el comando `facet_wrap` del mismo paquete nos permite representar un gráfico (en este caso un mapa) para la variable que seleccionemos (clase social).
 
 
-```{r message=FALSE, warning=FALSE, tidy=FALSE, fig.cap= "Ejemplo de mapa temático utilizando la variable clase social"}
+```{r message=FALSE, warning=FALSE, tidy=FALSE, fig.cap= "Ejemplo de mapa temático utilizando la variable clase social", eval = knitr::is_html_output()}
 ggplot() +
   geom_sf(data = mapa, aes(group = region_f, fill = percent), color = NA) +
   theme_map() +
@@ -504,7 +507,7 @@ ggplot() +
 ```
 
 
-```{r message=FALSE, warning=FALSE, tidy=FALSE, include=FALSE, fig.cap= "Ejemplo de mapa temático utilizando la variable clase social"}
+```{r message=FALSE, warning=FALSE, tidy=FALSE, include=FALSE, fig.cap= "Ejemplo de mapa temático utilizando la variable clase social", eval = !knitr::is_html_output()}
 library(colorblindr)
 library(colorspace)
 
@@ -533,6 +536,6 @@ byn <- ggplot() +
 gg_des <- edit_colors(byn, desaturate)
 cowplot::ggdraw(gg_des)
 
-ggsave(filename = "imagenes/mapa.jpg", dpi = 300, type = "cairo", width = 8, height = 6)
+# ggsave(filename = "imagenes/mapa.jpg", dpi = 300, type = "cairo", width = 8, height = 6)
 
 ```
