@@ -9,7 +9,7 @@
 <meta name="author" content="José Rodríguez de la Fuente">
 <meta name="author" content="Sofia Jaime">
 <meta name="description" content="La mayor parte de los ejercicios expuestos a lo largo de este Manual utilizan una o más funciones de R para resolver un problema específico. Se destaca que no se describen las funciones en...">
-<meta name="generator" content="bookdown 0.34 with bs4_book()">
+<meta name="generator" content="bookdown 0.33 with bs4_book()">
 <meta property="og:title" content="Capítulo 9 Introducción a R y RStudio | Libro de Cocina para el Análisis de las Clases Sociales en Argentina">
 <meta property="og:type" content="book">
 <meta property="og:description" content="La mayor parte de los ejercicios expuestos a lo largo de este Manual utilizan una o más funciones de R para resolver un problema específico. Se destaca que no se describen las funciones en...">
@@ -18,12 +18,11 @@
 <meta name="twitter:description" content="La mayor parte de los ejercicios expuestos a lo largo de este Manual utilizan una o más funciones de R para resolver un problema específico. Se destaca que no se describen las funciones en...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.5.0/transition.js"></script><script src="libs/bs3compat-0.5.0/tabs.js"></script><script src="libs/bs3compat-0.5.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.2/transition.js"></script><script src="libs/bs3compat-0.4.2/tabs.js"></script><script src="libs/bs3compat-0.4.2/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/kePrint-0.0.1/kePrint.js"></script><link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 <link href="libs/vembedr-0.1.5/css/vembedr.css" rel="stylesheet">
 <link href="libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
-<script src="libs/pagedtable-1.1/js/pagedtable.js"></script><link href="libs/tabwid-1.1.3/tabwid.css" rel="stylesheet">
-<script src="libs/tabwid-1.1.3/tabwid.js"></script><!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-247494419-1"></script><script>
+<script src="libs/pagedtable-1.1/js/pagedtable.js"></script><!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-247494419-1"></script><script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
@@ -247,12 +246,12 @@ Gráfico 9.8: Paquetes de RStudio
 <li>La otra es una pestaña de ayuda, ya que en <strong><code>R</code></strong>, si uno desea ayuda sobre cualquier cosa, se la puede obtener escribiendo un signo de interrogación y luego el nombre del objeto sobre el que desea ayuda:</li>
 </ul>
 <div class="sourceCode" id="cb144"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">`?`</span><span class="op">(</span><span class="va">mean</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="op">?</span><span class="va">mean</span></span></code></pre></div>
 <ul>
 <li>Se puede ver que, al ejecutar ese comando, se obtiene un archivo de ayuda sobre la media. También es posible obtener uno sobre la mediana, y así sucesivamente.</li>
 </ul>
 <div class="sourceCode" id="cb145"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">`?`</span><span class="op">(</span><span class="va">median</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="op">?</span><span class="va">median</span></span></code></pre></div>
 <p>Se obtendrá:</p>
 <div class="figure" style="text-align: center">
 <span style="display:block;" id="fig:unnamed-chunk-149"></span>
@@ -381,7 +380,10 @@ guardarla en la carpeta de “imágenes”.</p></li>
 </h3>
 <p>La cantidad de símbolos de numeral (#) indica el nivel del título o subtítulo que se desea editar. Es necesario dejar un espacio entre el numeral y el texto que se escribe para obtener los títulos en negrita y sin el símbolo. Se debe utilizar el primer nivel de títulos en cada documento <code>R Markdown</code>. Se prueban los niveles diferentes en un documento de <code>R Markdown</code> de la siguiente manera:</p>
 <div class="sourceCode" id="cb147"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># Título nivel 1 Título nivel 2 Título nivel 3 Título nivel 4</span></span></code></pre></div>
+<code class="sourceCode R"><span> <span class="co"># Título nivel 1</span></span>
+<span> <span class="co">## Título nivel 2</span></span>
+<span> <span class="co">### Título nivel 3</span></span>
+<span> <span class="co">#### Título nivel 4</span></span></code></pre></div>
 <p><strong>Recordatorio: </strong> Clicar Control + S constantemente para guardar los cambios efectuados en el documento, a medida que se trabaja sobre él.</p>
 </div>
 <div id="listas" class="section level3" number="9.3.2">
@@ -457,7 +459,7 @@ en una lista. Espaciar entre el símbolo y el contenido de la lista. Además hay
 <div class="sourceCode" id="cb153"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/help.html">help</a></span><span class="op">(</span><span class="va">solve</span><span class="op">)</span></span></code></pre></div>
 <div class="sourceCode" id="cb154"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">`?`</span><span class="op">(</span><span class="va">solve</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="op">?</span><span class="va">solve</span></span></code></pre></div>
 <ul>
 <li><p>Las mayúsculas y minúsculas importan. <strong><code>R</code></strong> es un lenguaje de expresiones que es sensible a las mismas y responde de manera diferente a cada una.</p></li>
 <li><p>Las órdenes elementales consisten en expresiones o en asignaciones. Las órdenes se separan con un punto y coma, (‘;’), o cambiando de línea.</p></li>
@@ -484,13 +486,13 @@ en una lista. Espaciar entre el símbolo y el contenido de la lista. Además hay
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/rm.html">rm</a></span><span class="op">(</span><span class="va">cosa</span><span class="op">)</span></span></code></pre></div>
 <p>Al iniciar una nueva sesión de trabajo, se recomienda retirar los objetos existentes en el área de trabajo. Un comando útil para este propósito es:</p>
 <div class="sourceCode" id="cb158"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/rm.html">rm</a></span><span class="op">(</span>list <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/ls.html">ls</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/rm.html">rm</a></span> <span class="op">(</span>list <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/ls.html">ls</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> </span></code></pre></div>
 <p>Se puede almacenar el espacio de trabajo con la función:</p>
 <div class="sourceCode" id="cb159"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/save.html">save.image</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/save.html">save.image</a></span> <span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p>Esto guarda todos los objetos contenidos en el espacio de trabajo en un archivo binario “.Rdata”. La opción predeterminada se puede cambiar especificando en la llamada a <code><a href="https://rdrr.io/r/base/save.html">save.image()</a></code> el nombre, por ejemplo, “myfile.Rdata”, que desea darle al archivo.</p>
 <div class="sourceCode" id="cb160"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/save.html">save.image</a></span><span class="op">(</span>archive <span class="op">=</span> <span class="st">"myfile.Rdata"</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/save.html">save.image</a></span> <span class="op">(</span>archive <span class="op">=</span> <span class="st">"myfile.Rdata"</span><span class="op">)</span></span></code></pre></div>
 <p>El espacio de trabajo original se puede restaurar con la ayuda de la función:</p>
 <div class="sourceCode" id="cb161"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/load.html">load</a></span><span class="op">(</span><span class="st">".RData"</span><span class="op">)</span></span></code></pre></div>
@@ -548,7 +550,7 @@ en una lista. Espaciar entre el símbolo y el contenido de la lista. Además hay
 <pre><code>[1] 0.84</code></pre>
 <p>Una asignación evalúa una expresión guardando el resultado en un objeto con un nombre. La asignación se realiza mediante el símbolo <code>&lt;-</code> o el símbolo <code>=</code>. También se puede asignar de izquierda a derecha con el símbolo <code>-&gt;</code>. El resultado de una asignación no se muestra automáticamente. El usuario puede verlo recordando el nombre del objeto. Los objetos creados a través de una asignación se pueden reutilizar en expresiones y asignaciones posteriores, como se muestra en los siguientes ejemplos:</p>
 <div class="sourceCode" id="cb187"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/MathFun.html">sqrt</a></span><span class="op">(</span><span class="fl">2</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/MathFun.html">sqrt</a></span><span class="op">(</span><span class="fl">2</span><span class="op">)</span> </span>
 <span><span class="va">x</span></span></code></pre></div>
 <pre><code>[1] 1.4</code></pre>
 <div class="sourceCode" id="cb189"><pre class="downlit sourceCode r">
@@ -557,14 +559,14 @@ en una lista. Espaciar entre el símbolo y el contenido de la lista. Además hay
 <div class="sourceCode" id="cb191"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">y</span> <span class="op">&lt;-</span> <span class="va">x</span><span class="op">^</span><span class="fl">3</span></span></code></pre></div>
 <div class="sourceCode" id="cb192"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fl">10</span></span>
+<code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fl">10</span> </span>
 <span><span class="va">x</span> <span class="op">&gt;</span> <span class="fl">10</span></span></code></pre></div>
 <pre><code>[1] FALSE</code></pre>
 <div class="sourceCode" id="cb194"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;=</span> <span class="fl">10</span></span></code></pre></div>
 <pre><code>[1] TRUE</code></pre>
 <div class="sourceCode" id="cb196"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">tf</span> <span class="op">&lt;-</span> <span class="va">x</span> <span class="op">&gt;</span> <span class="fl">10</span></span>
+<code class="sourceCode R"><span><span class="va">tf</span> <span class="op">&lt;-</span> <span class="va">x</span> <span class="op">&gt;</span> <span class="fl">10</span>  </span>
 <span><span class="va">tf</span></span></code></pre></div>
 <pre><code>[1] FALSE</code></pre>
 </div>
@@ -574,9 +576,9 @@ en una lista. Espaciar entre el símbolo y el contenido de la lista. Además hay
 </h3>
 <p>Para asignarle un valor a una variable, no es necesario utilizar espacios ni símbolos, excepto <code>#</code> <code>.</code> o <code>_</code> en el nombre de la variable:</p>
 <div class="sourceCode" id="cb198"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">mi_valor</span> <span class="op">&lt;-</span> <span class="fl">30</span>  <span class="co"># número</span></span>
-<span><span class="va">un_valor</span> <span class="op">&lt;-</span> <span class="st">"vaca"</span>  <span class="co"># caracteres</span></span>
-<span><span class="va">el_valor</span> <span class="op">&lt;-</span> <span class="cn">FALSE</span>  <span class="co"># booleano</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">mi_valor</span> <span class="op">&lt;-</span> <span class="fl">30</span> <span class="co"># número</span></span>
+<span><span class="va">un_valor</span> <span class="op">&lt;-</span> <span class="st">"vaca"</span> <span class="co"># caracteres</span></span>
+<span><span class="va">el_valor</span> <span class="op">&lt;-</span> <span class="cn">FALSE</span> <span class="co"># booleano</span></span></code></pre></div>
 <p>Para crear un vector, se usa la función <code><a href="https://rdrr.io/r/base/c.html">c()</a></code>:</p>
 <div class="sourceCode" id="cb199"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">3</span>, <span class="fl">5</span>, <span class="fl">7</span>, <span class="fl">11</span><span class="op">)</span></span>
@@ -584,16 +586,16 @@ en una lista. Espaciar entre el símbolo y el contenido de la lista. Además hay
 <pre><code>[1]  2  3  5  7 11</code></pre>
 <p>El vector puede contener texto o valores numéricos:</p>
 <div class="sourceCode" id="cb201"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">mi_vector</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">6</span>, <span class="fl">12</span>, <span class="fl">80</span>, <span class="fl">120</span><span class="op">)</span></span>
-<span><span class="va">mi_vector</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"María"</span>, <span class="st">"Esteban"</span>, <span class="st">"Juan"</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">mi_vector</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">6</span>,<span class="fl">12</span>,<span class="fl">80</span>,<span class="fl">120</span><span class="op">)</span></span>
+<span><span class="va">mi_vector</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"María"</span>,<span class="st">"Esteban"</span>,<span class="st">"Juan"</span><span class="op">)</span></span></code></pre></div>
 <p>Si el vector contiene muchos elementos, puede ser más conveniente usar la función <code><a href="https://rdrr.io/r/base/scan.html">scan()</a></code>, que permite ingresarlos uno por uno a través de la consola:</p>
 <div class="sourceCode" id="cb202"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/scan.html">scan</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="fl">1</span><span class="op">:</span><span class="fl">1</span></span>
-<span><span class="fl">2</span><span class="op">:</span><span class="fl">6</span></span>
-<span><span class="fl">3</span><span class="op">:</span><span class="fl">3</span></span>
-<span><span class="fl">4</span><span class="op">:</span><span class="fl">4</span></span>
-<span><span class="fl">5</span><span class="op">:</span><span class="fl">2</span></span></code></pre></div>
+<span><span class="fl">1</span><span class="op">:</span> <span class="fl">1</span></span>
+<span><span class="fl">2</span><span class="op">:</span> <span class="fl">6</span></span>
+<span><span class="fl">3</span><span class="op">:</span> <span class="fl">3</span></span>
+<span><span class="fl">4</span><span class="op">:</span> <span class="fl">4</span></span>
+<span><span class="fl">5</span><span class="op">:</span> <span class="fl">2</span></span></code></pre></div>
 <p>Para crear una secuencia de números, puede usar el comando <code>a:b</code>:</p>
 <div class="sourceCode" id="cb203"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">xx</span> <span class="op">&lt;-</span> <span class="fl">1</span><span class="op">:</span><span class="fl">10</span></span>
@@ -601,7 +603,7 @@ en una lista. Espaciar entre el símbolo y el contenido de la lista. Además hay
 <span><span class="va">xx</span></span></code></pre></div>
 <pre><code> [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
 <div class="sourceCode" id="cb205"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">xx</span> <span class="op">&lt;-</span> <span class="fl">100</span><span class="op">:</span><span class="fl">1</span></span>
+<code class="sourceCode R"><span><span class="va">xx</span> <span class="op">&lt;-</span> <span class="fl">100</span><span class="op">:</span><span class="fl">1</span> </span>
 <span><span class="va">xx</span></span></code></pre></div>
 <pre><code>  [1] 100  99  98  97  96  95  94  93  92  91  90  89  88  87  86  85  84  83
  [19]  82  81  80  79  78  77  76  75  74  73  72  71  70  69  68  67  66  65
@@ -617,17 +619,17 @@ en una lista. Espaciar entre el símbolo y el contenido de la lista. Además hay
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span></span></code></pre></div>
 <pre><code>[1] 2 2 2</code></pre>
 <div class="sourceCode" id="cb211"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">a</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span>, <span class="fl">4</span>, <span class="fl">5</span>, <span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">5</span><span class="op">)</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="va">a</span> <span class="op">&lt;-</span>  <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span>, <span class="fl">4</span>, <span class="fl">5</span>, <span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">5</span><span class="op">)</span><span class="op">)</span> </span>
 <span><span class="va">a</span></span></code></pre></div>
 <pre><code> [1] 2 2 2 4 5 1 1 1 1 1</code></pre>
 <p>Las operaciones aritméticas y lógicas básicas que se aplican a los escalares se pueden aplicar a los vectores:</p>
 <div class="sourceCode" id="cb213"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fl">1</span><span class="op">:</span><span class="fl">10</span></span>
-<span><span class="va">x</span> <span class="op">*</span> <span class="fl">2</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fl">1</span><span class="op">:</span><span class="fl">10</span> </span>
+<span><span class="va">x</span><span class="op">*</span><span class="fl">2</span></span></code></pre></div>
 <pre><code> [1]  2  4  6  8 10 12 14 16 18 20</code></pre>
 <p>Los elementos de un vector se pueden extraer utilizando corchetes [] e indicando la posición del elemento a extraer entre corchetes:</p>
 <div class="sourceCode" id="cb215"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">xx</span><span class="op">[</span><span class="fl">7</span><span class="op">]</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">xx</span><span class="op">[</span><span class="fl">7</span><span class="op">]</span> </span></code></pre></div>
 <pre><code>[1] 94</code></pre>
 <p>Incluso se pueden extraer más elementos al mismo tiempo:</p>
 <div class="sourceCode" id="cb217"><pre class="downlit sourceCode r">
@@ -638,12 +640,12 @@ en una lista. Espaciar entre el símbolo y el contenido de la lista. Además hay
 <pre><code>[1] 16 15 14 13 12 11 10</code></pre>
 <p>También se pueden guardar en nuevos vectores:</p>
 <div class="sourceCode" id="cb221"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">yy</span> <span class="op">&lt;-</span> <span class="va">xx</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">4</span>, <span class="fl">8</span>, <span class="fl">16</span>, <span class="fl">32</span>, <span class="fl">64</span><span class="op">)</span><span class="op">]</span></span>
+<code class="sourceCode R"><span><span class="va">yy</span> <span class="op">&lt;-</span> <span class="va">xx</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">4</span>, <span class="fl">8</span>, <span class="fl">16</span>, <span class="fl">32</span>, <span class="fl">64</span><span class="op">)</span><span class="op">]</span> </span>
 <span><span class="va">yy</span></span></code></pre></div>
 <pre><code>[1] 100  99  97  93  85  69  37</code></pre>
 <p>Si los indicadores entre corchetes van precedidos de un signo negativo, los elementos correspondientes se eliminan del vector:</p>
 <div class="sourceCode" id="cb223"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">4</span>, <span class="fl">8</span>, <span class="fl">16</span>, <span class="fl">32</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">4</span>, <span class="fl">8</span>, <span class="fl">16</span>, <span class="fl">32</span><span class="op">)</span> </span>
 <span><span class="va">x</span></span></code></pre></div>
 <pre><code>[1]  1  2  4  8 16 32</code></pre>
 <div class="sourceCode" id="cb225"><pre class="downlit sourceCode r">
@@ -665,15 +667,15 @@ en una lista. Espaciar entre el símbolo y el contenido de la lista. Además hay
 <p>Una variable indexada (<em>array</em>) es una colección de datos, por ejemplo numéricos, indexada por varios índices. <strong><code>R</code></strong> permite crear y manipular variables indexadas en general y en particular, matrices.</p>
 <p>Las matrices se crean utilizando la función <code><a href="https://rdrr.io/r/base/matrix.html">matrix()</a></code>. En su forma más simple, el uso de la función implica especificar un vector que contiene los elementos de la matriz y el número de filas o columnas de la matriz.</p>
 <div class="sourceCode" id="cb231"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">3</span>, <span class="fl">5</span>, <span class="fl">7</span>, <span class="fl">11</span>, <span class="fl">13</span><span class="op">)</span>, nrow <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">3</span>, <span class="fl">5</span>, <span class="fl">7</span>, <span class="fl">11</span>, <span class="fl">13</span><span class="op">)</span>, nrow <span class="op">=</span> <span class="fl">3</span><span class="op">)</span> </span>
 <span><span class="va">x</span></span></code></pre></div>
 <pre><code>     [,1] [,2]
 [1,]    2    7
 [2,]    3   11
 [3,]    5   13</code></pre>
 <div class="sourceCode" id="cb233"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">y</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">3</span>, <span class="fl">5</span>, <span class="fl">7</span>, <span class="fl">11</span>, <span class="fl">13</span><span class="op">)</span>, ncol <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
-<span><span class="va">y</span></span></code></pre></div>
+<code class="sourceCode R"><span> <span class="va">y</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">3</span>, <span class="fl">5</span>, <span class="fl">7</span>, <span class="fl">11</span>, <span class="fl">13</span><span class="op">)</span>, ncol <span class="op">=</span> <span class="fl">2</span><span class="op">)</span> </span>
+<span> <span class="va">y</span></span></code></pre></div>
 <pre><code>     [,1] [,2]
 [1,]    2    7
 [2,]    3   11
@@ -717,7 +719,7 @@ en una lista. Espaciar entre el símbolo y el contenido de la lista. Además hay
 <p>El argumento <code>byrow = TRUE</code> especifica que el contenido debe adquirirse por fila y no por columna.</p>
 <p>La función <code><a href="https://rdrr.io/r/base/dim.html">dim()</a></code> devuelve el tamaño (número de filas y número de columnas) de la matriz indicada como argumento:</p>
 <div class="sourceCode" id="cb239"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/dim.html">dim</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/dim.html">dim</a></span> <span class="op">(</span><span class="va">x</span><span class="op">)</span></span></code></pre></div>
 <pre><code>[1] 3 2</code></pre>
 <p>En cuanto a los vectores, los elementos de una matriz se pueden extraer utilizando corchetes <code>[]</code>. Para extraer un elemento de una matriz, se debe especificar su posición de fila y columna:</p>
 <div class="sourceCode" id="cb241"><pre class="downlit sourceCode r">
@@ -735,8 +737,8 @@ en una lista. Espaciar entre el símbolo y el contenido de la lista. Además hay
 <pre><code>[1]  5 13</code></pre>
 <p>Se pueden extraer subconjuntos de filas y/o columnas:</p>
 <div class="sourceCode" id="cb249"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">16</span>, ncol <span class="op">=</span> <span class="fl">4</span><span class="op">)</span></span>
-<span><span class="va">x</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">16</span>, ncol <span class="op">=</span> <span class="fl">4</span><span class="op">)</span> </span>
+<span>    <span class="va">x</span></span></code></pre></div>
 <pre><code>     [,1] [,2] [,3] [,4]
 [1,]    1    5    9   13
 [2,]    2    6   10   14
@@ -773,27 +775,27 @@ en una lista. Espaciar entre el símbolo y el contenido de la lista. Además hay
 [20,]    6    7    8    9   10</code></pre>
 <p>Se puede indexar elementos de matrices en múltiples modos:</p>
 <div class="sourceCode" id="cb253"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">mi_matriz</span><span class="op">[</span><span class="fl">1</span>, <span class="op">]</span>  <span class="co"># las filas van seguidas de una coma. Primero filas y luego columnas[row,colum]</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">mi_matriz</span><span class="op">[</span><span class="fl">1</span>,<span class="op">]</span> <span class="co"># las filas van seguidas de una coma. Primero filas y luego columnas[row,colum]</span></span></code></pre></div>
 <pre><code>[1] 1 2 3 4 5</code></pre>
 <div class="sourceCode" id="cb255"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">mi_matriz</span><span class="op">[</span>, <span class="fl">5</span><span class="op">]</span>  <span class="co"># columnas detrás de la coma</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">mi_matriz</span><span class="op">[</span>,<span class="fl">5</span><span class="op">]</span> <span class="co"># columnas detrás de la coma</span></span></code></pre></div>
 <pre><code> [1]  5 10  5 10  5 10  5 10  5 10  5 10  5 10  5 10  5 10  5 10</code></pre>
 <div class="sourceCode" id="cb257"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">mi_matriz</span><span class="op">[</span><span class="fl">3</span>, <span class="fl">3</span><span class="op">]</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">mi_matriz</span><span class="op">[</span><span class="fl">3</span>,<span class="fl">3</span><span class="op">]</span></span></code></pre></div>
 <pre><code>[1] 3</code></pre>
 <p>Se pueden crear nuevos vectores a partir de secciones de matrices:</p>
 <div class="sourceCode" id="cb259"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">val</span> <span class="op">&lt;-</span> <span class="va">mi_matriz</span><span class="op">[</span><span class="fl">3</span>, <span class="fl">3</span><span class="op">]</span></span>
-<span><span class="va">val</span> <span class="op">&lt;-</span> <span class="va">mi_matriz</span><span class="op">[</span>, <span class="fl">3</span><span class="op">]</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">val</span> <span class="op">&lt;-</span> <span class="va">mi_matriz</span><span class="op">[</span><span class="fl">3</span>,<span class="fl">3</span><span class="op">]</span></span>
+<span><span class="va">val</span> <span class="op">&lt;-</span> <span class="va">mi_matriz</span><span class="op">[</span>,<span class="fl">3</span><span class="op">]</span></span></code></pre></div>
 <p>Hay algunas funciones útiles que se puede aprender para conocer más a fondo la matriz:</p>
 <div class="sourceCode" id="cb260"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">mi_matriz</span><span class="op">)</span>  <span class="co"># La suma de los elementos de la matriz</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">mi_matriz</span><span class="op">)</span> <span class="co"># La suma de los elementos de la matriz</span></span></code></pre></div>
 <pre><code>[1] 550</code></pre>
 <div class="sourceCode" id="cb262"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="va">mi_matriz</span><span class="op">)</span>  <span class="co"># El número de filas de la matriz</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="va">mi_matriz</span><span class="op">)</span> <span class="co"># El número de filas de la matriz</span></span></code></pre></div>
 <pre><code>[1] 20</code></pre>
 <div class="sourceCode" id="cb264"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html">ncol</a></span><span class="op">(</span><span class="va">mi_matriz</span><span class="op">)</span>  <span class="co"># El número de columnas de la matriz </span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html">ncol</a></span><span class="op">(</span><span class="va">mi_matriz</span><span class="op">)</span> <span class="co"># El número de columnas de la matriz </span></span></code></pre></div>
 <pre><code>[1] 5</code></pre>
 <p><strong><code>R</code></strong> tiene un conjunto de tipos de datos suficientemente diversificado para ser adecuado en la mayor cantidad de análisis. Los tipos que se encuentran con mayor frecuencia son lógicos (con los modos VERDADERO y FALSO), de caracteres (cadenas de caracteres) y numéricos. Las funciones con el prefijo <code>is.type.of.data()</code> o la función <code><a href="https://rdrr.io/r/base/class.html">class()</a></code> verifican a qué tipo de datos pertenece el objeto especificado como argumento.</p>
 <div class="sourceCode" id="cb266"><pre class="downlit sourceCode r">
@@ -805,7 +807,7 @@ en una lista. Espaciar entre el símbolo y el contenido de la lista. Además hay
 <pre><code>[1] "integer"</code></pre>
 <p>Para combinar objetos que no comparten la misma estructura, como cadenas de caracteres y vectores, es necesario utilizar una <strong>lista</strong>. Este es un tipo más general de estructura de vectores y matrices:</p>
 <div class="sourceCode" id="cb270"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">lista1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="va">lista1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="va">x</span>,<span class="va">y</span><span class="op">)</span>  </span>
 <span><span class="va">lista1</span></span></code></pre></div>
 <pre><code>[[1]]
      [,1] [,2] [,3] [,4]
@@ -868,18 +870,18 @@ $comp2
 <p>La forma más básica de hacer un filtro (<em>subsetting</em>) es extraer un grupo de elementos de un vector, por ejemplo:</p>
 <div class="sourceCode" id="cb282"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">mi_vector</span> <span class="op">&lt;-</span> <span class="fl">1</span><span class="op">:</span><span class="fl">10</span></span>
-<span><span class="va">mi_vector</span><span class="op">[</span><span class="fl">3</span><span class="op">:</span><span class="fl">5</span><span class="op">]</span>  <span class="co"># extraer elementos 3 a 5</span></span></code></pre></div>
+<span><span class="va">mi_vector</span><span class="op">[</span><span class="fl">3</span><span class="op">:</span><span class="fl">5</span><span class="op">]</span> <span class="co"># extraer elementos 3 a 5</span></span></code></pre></div>
 <pre><code>[1] 3 4 5</code></pre>
 <div class="sourceCode" id="cb284"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">mi_vector</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">9</span><span class="op">)</span><span class="op">]</span>  <span class="co"># extraer ciertos elementos</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">mi_vector</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">2</span>,<span class="fl">9</span><span class="op">)</span><span class="op">]</span> <span class="co"># extraer ciertos elementos</span></span></code></pre></div>
 <pre><code>[1] 1 2 9</code></pre>
 <div class="sourceCode" id="cb286"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">new_vector</span> <span class="op">&lt;-</span> <span class="va">mi_vector</span><span class="op">[</span><span class="fl">3</span><span class="op">:</span><span class="fl">5</span><span class="op">]</span>  <span class="co"># asignar valores a un nuevo vector</span></span>
+<code class="sourceCode R"><span><span class="va">new_vector</span> <span class="op">&lt;-</span> <span class="va">mi_vector</span><span class="op">[</span><span class="fl">3</span><span class="op">:</span><span class="fl">5</span><span class="op">]</span> <span class="co"># asignar valores a un nuevo vector</span></span>
 <span><span class="va">new_vector</span></span></code></pre></div>
 <pre><code>[1] 3 4 5</code></pre>
 <p>También se puede usar la función <code><a href="https://rdrr.io/r/base/c.html">c()</a></code> para quitar algunos <code>subsets</code> (subsecciones) de la matriz:</p>
 <div class="sourceCode" id="cb288"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">mi_matriz</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">3</span>, <span class="fl">5</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">4</span><span class="op">)</span><span class="op">]</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">mi_matriz</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">3</span>,<span class="fl">5</span><span class="op">)</span>,<span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2</span>,<span class="fl">4</span><span class="op">)</span><span class="op">]</span></span></code></pre></div>
 <pre><code>     [,1] [,2]
 [1,]    2    4
 [2,]    7    9
@@ -887,8 +889,8 @@ $comp2
 [4,]    2    4</code></pre>
 <p>Nótese la diferencia entre [[]] y [] en las listas:</p>
 <div class="sourceCode" id="cb290"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">nueva_lista</span> <span class="op">&lt;-</span> <span class="va">lista1</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span>  <span class="co"># devuelve la lista</span></span>
-<span><span class="va">nuevo_valor</span> <span class="op">&lt;-</span> <span class="va">lista1</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span>  <span class="co"># devuelve un objeto que estaba en la lista</span></span>
+<code class="sourceCode R"><span><span class="va">nueva_lista</span> <span class="op">&lt;-</span> <span class="va">lista1</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span> <span class="co"># devuelve la lista</span></span>
+<span><span class="va">nuevo_valor</span> <span class="op">&lt;-</span>  <span class="va">lista1</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span> <span class="co"># devuelve un objeto que estaba en la lista</span></span>
 <span></span>
 <span><span class="va">nueva_lista</span></span></code></pre></div>
 <pre><code>[[1]]
@@ -921,18 +923,22 @@ $comp2
 <div class="sourceCode" id="cb295"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">numero_estudiante</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">10</span><span class="op">)</span></span>
 <span></span>
-<span><span class="va">notas</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span>, <span class="st">"A"</span>, <span class="st">"C"</span>, <span class="st">"F"</span>, <span class="st">"D"</span>, <span class="st">"B"</span>, <span class="st">"B"</span>, <span class="st">"A"</span><span class="op">)</span></span>
+<span><span class="va">notas</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"A"</span>,<span class="st">"B"</span>,<span class="st">"C"</span>,<span class="st">"A"</span>,<span class="st">"C"</span>,<span class="st">"F"</span>,<span class="st">"D"</span>,<span class="st">"B"</span>,<span class="st">"B"</span>,<span class="st">"A"</span><span class="op">)</span></span>
 <span></span>
-<span><span class="va">clase</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="fl">0</span>, times <span class="op">=</span> <span class="fl">5</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="fl">1</span>, times <span class="op">=</span> <span class="fl">5</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">clase</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="fl">0</span>,times <span class="op">=</span> <span class="fl">5</span><span class="op">)</span>,<span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="fl">1</span>,times <span class="op">=</span> <span class="fl">5</span><span class="op">)</span><span class="op">)</span></span>
 <span></span>
-<span><span class="va">comida_gratis</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="cn">TRUE</span>, times <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span></code></pre></div>
+<span><span class="va">comida_gratis</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="cn">TRUE</span>,times <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span></code></pre></div>
 <p>Ahora se pueden unir los vectores que se crearon antes para hacer un <em>data frame</em>, que es uno de los tipos de <em>data</em> más comunes en <strong><code>R</code></strong>. Los <code>data.frames</code> sirven para contener muchos tipos de valores (sean textuales o numéricos) y además sus columnas son fáciles de indexar por nombre utilizando el operador <code>$</code>. Es lo más cercano a una base de datos tradicional, con observaciones (filas) y variables (columnas).</p>
 <p>Para evitar que las notas (en formato de texto) se conviertan en factores de variables, es decir, que se transformen en una variable categórica de <strong><code>R</code></strong>, se debe implementar el argumento <code>stringsAsFactors = FALSE</code>.</p>
 <div class="sourceCode" id="cb296"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">mis_datos</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span><span class="va">numero_estudiante</span>, <span class="va">notas</span>, <span class="va">clase</span>, <span class="va">comida_gratis</span>, stringsAsFactors <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">mis_datos</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span><span class="va">numero_estudiante</span>,</span>
+<span>                      <span class="va">notas</span>,</span>
+<span>                      <span class="va">clase</span>,</span>
+<span>                      <span class="va">comida_gratis</span>,</span>
+<span>                      stringsAsFactors <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
 <p>También es posible designar el nombre de las columnas:</p>
 <div class="sourceCode" id="cb297"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/colnames.html">colnames</a></span><span class="op">(</span><span class="va">mis_datos</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"numero_estudiante"</span>, <span class="st">"notas"</span>, <span class="st">"clase"</span>, <span class="st">"comida_gratis"</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/colnames.html">colnames</a></span><span class="op">(</span><span class="va">mis_datos</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"numero_estudiante"</span>, <span class="st">"notas"</span>,<span class="st">"clase"</span>,<span class="st">"comida_gratis"</span><span class="op">)</span></span></code></pre></div>
 <p>Al revisar cómo queda el <code>data.frame</code>:</p>
 <div class="sourceCode" id="cb298"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">mis_datos</span></span></code></pre></div>
@@ -1012,16 +1018,16 @@ $comp2
 </table></div>
 <p>La indexación funciona de la misma manera para las matrices, pero con un pequeño cambio:</p>
 <div class="sourceCode" id="cb299"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">mis_datos</span><span class="op">[</span>, <span class="fl">1</span><span class="op">]</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">mis_datos</span><span class="op">[</span>,<span class="fl">1</span><span class="op">]</span></span></code></pre></div>
 <pre><code> [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
 <div class="sourceCode" id="cb301"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">mis_datos</span><span class="op">[</span><span class="fl">2</span>, <span class="fl">4</span><span class="op">]</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">mis_datos</span><span class="op">[</span><span class="fl">2</span>,<span class="fl">4</span><span class="op">]</span></span></code></pre></div>
 <pre><code>[1] TRUE</code></pre>
 <div class="sourceCode" id="cb303"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">mis_datos</span><span class="op">$</span><span class="va">numero_estudiante</span>  <span class="co"># $ Indexación de columnas</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">mis_datos</span><span class="op">$</span><span class="va">numero_estudiante</span> <span class="co"># $ Indexación de columnas</span></span></code></pre></div>
 <pre><code> [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
 <div class="sourceCode" id="cb305"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">mis_datos</span><span class="op">$</span><span class="va">notas</span><span class="op">[</span><span class="fl">3</span><span class="op">]</span>  <span class="co"># Tratar $ Indexación de columnas como vectores</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">mis_datos</span><span class="op">$</span><span class="va">notas</span><span class="op">[</span><span class="fl">3</span><span class="op">]</span> <span class="co"># Tratar $ Indexación de columnas como vectores</span></span></code></pre></div>
 <pre><code>[1] "C"</code></pre>
 </div>
 <div id="subsetting-inteligente" class="section level4" number="9.4.5.2">
@@ -1039,7 +1045,7 @@ $comp2
 <span><span class="va">estudiantes_dataset_reducido</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">A_estudiantes</span>, <span class="va">B_estudiantes</span><span class="op">)</span></span></code></pre></div>
 <p>Luego se selecciona el vector para indexar únicamente algunas filas: para ello, se puede extraerlas y guardarlas como objetos. Nota: si se indexa por [fila, columna] y queda un campo vacío, se toma la fila o columna entera.</p>
 <div class="sourceCode" id="cb310"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">datos_reducidos</span> <span class="op">&lt;-</span> <span class="va">mis_datos</span><span class="op">[</span><span class="va">estudiantes_dataset_reducido</span>, <span class="op">]</span></span>
+<code class="sourceCode R"><span><span class="va">datos_reducidos</span> <span class="op">&lt;-</span> <span class="va">mis_datos</span><span class="op">[</span><span class="va">estudiantes_dataset_reducido</span>,<span class="op">]</span></span>
 <span><span class="va">datos_reducidos</span></span></code></pre></div>
 <div class="inline-table"><table class="huxtable" style="border-collapse: collapse; border: 0px; margin-bottom: 2em; margin-top: 2em; ; margin-left: auto; margin-right: auto;  " id="tab:which3">
 <caption style="caption-side: top; text-align: center;">
@@ -1155,7 +1161,10 @@ $comp2
 <code class="sourceCode R"><span><span class="va">mi_lista</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/vector.html">vector</a></span><span class="op">(</span>mode <span class="op">=</span> <span class="st">"list"</span>, length <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span></code></pre></div>
 <p>También se puede crear una lista a partir de objetos. Cada entrada puede ser llamada una lista, igual que se hace con un <code>data.frame</code>:</p>
 <div class="sourceCode" id="cb313"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">mi_lista</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>num <span class="op">=</span> <span class="fl">10</span>, animal <span class="op">=</span> <span class="st">"vaca"</span>, vec <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">10</span><span class="op">)</span>, dat <span class="op">=</span> <span class="va">mis_datos</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">mi_lista</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>num <span class="op">=</span> <span class="fl">10</span>,</span>
+<span>                animal <span class="op">=</span> <span class="st">"vaca"</span>,</span>
+<span>                vec <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">10</span><span class="op">)</span>,</span>
+<span>                dat <span class="op">=</span> <span class="va">mis_datos</span><span class="op">)</span></span></code></pre></div>
 <p>Otra opción es crear una lista vacía y luego llenarla usando el operador <code>$</code>:</p>
 <div class="sourceCode" id="cb314"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">mi_lista</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
@@ -1166,7 +1175,7 @@ $comp2
 <span><span class="va">mi_lista</span><span class="op">$</span><span class="va">cancion_favo</span> <span class="op">&lt;-</span> <span class="st">"Malamente"</span></span></code></pre></div>
 <p>Además, se pueden pegar listas al final de otras listas, usando la función <code><a href="https://rdrr.io/r/base/append.html">append()</a></code>:</p>
 <div class="sourceCode" id="cb316"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">mi_lista</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/append.html">append</a></span><span class="op">(</span><span class="va">mi_lista</span>, <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="fl">27</span>, <span class="fl">14</span>, <span class="st">"perro"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">mi_lista</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/append.html">append</a></span><span class="op">(</span><span class="va">mi_lista</span>, <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="fl">27</span>,<span class="fl">14</span>,<span class="st">"perro"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p>Se observa el contenido de la lista:</p>
 <div class="sourceCode" id="cb317"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="va">mi_lista</span><span class="op">)</span></span></code></pre></div>

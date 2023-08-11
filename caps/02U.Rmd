@@ -2,7 +2,7 @@
 
 # Encuestas de hogares {#fuentes}  
 
-Este capítulo introduce las características generales de la **Encuesta Permanente de Hogares** (EPH), elaborada por el [Instituto Nacional de Estadísticas y Censos(INDEC)](www.indec.gob.ar){target="_blank"}, en tanto herramienta central para el estudio de la estructura de clases en Argentina. Asimismo, se revisan otras encuestas de hogares alternativas para el estudio de la desigualdad social.
+Este capítulo introduce las características generales de la **Encuesta Permanente de Hogares** (EPH), elaborada por el [Instituto Nacional de Estadísticas y Censos (INDEC)](https://www.indec.gob.ar){target="_blank"}, en tanto herramienta central para el estudio de la estructura de clases en Argentina. Asimismo, se revisan otras encuestas de hogares alternativas para el estudio de la desigualdad social.
 
 Se abordan las siguientes preguntas:
 
@@ -191,7 +191,7 @@ eph_hog_414 %>%
 
 #### Bases 1974-2002
 
-Finalmente probaremos descargar la base más antigua que se encuentra disponible en la página web del INDEC. Nos referimos a los microdatos de la base usuaria de individuos del año 1974 para el Gran Buenos Aires ([link de descarga](https://www.indec.gob.ar/dbindec/eph/bases/_usuarias/Bu01374.zip){target="_blank"}). 
+Finalmente probaremos descargar la base más antigua que se encuentra disponible en la página web del INDEC. Nos referimos a los microdatos de la base usuaria de individuos del año 1974 para el Gran Buenos Aires ([link de descarga](https://www.indec.gob.ar/indec/web/Institucional-Indec-bases_EPH_puntual){target="_blank"}). 
 
 Como hemos señalado, las bases anteriores a 2003 se encuentran únicamente en formato ```.dbf```. Para poder importarlas en `R` necesitaremos instalar y llamar a la librería __```foreign```__.
 
@@ -455,7 +455,7 @@ Una de las principales características que deben cumplir las encuestas de hogar
 
 En este último apartado, presentaremos otras encuestas de hogares que pueden utilizarse para el estudio de las clases sociales y su vinculación con otras problemáticas sociales en la Argentina. Tienen como desventaja que, en su mayoría, no son de tipo continuas, y por ende, su relevamiento permite el abordaje de un momento determinado. Sin embargo, a diferencia de la EPH, nos permitirán el análisis de la estructura de clases y su relación con múltiples aspectos de la realidad social. El listado no es exhaustivo pero reúne a las principales fuentes de información disponibles:
 
-- **Encuesta Nacional sobre la Estructura Social (ENES)**: es una encuesta de hogares y personas cuyo cuestionario modularizado permitió recabar información sobre distintas cuestiones vinculadas al estudio de las clases sociales: vivienda y hábitat, acceso a bienes, servicios y ayudas de otros, trabajo / trabajo doméstico, movilidad social y autopercepción de clase. La misma fue elaborada por el Programa de Investigación sobre la Sociedad Argentina Contemporánea (PISAC), es abierta a todo público y es parte de una serie de otros relevamientos que se realizarán. Puede encontrarse en  [http://pisac.mincyt.gob.ar/datos.php](http://pisac.mincyt.gob.ar/datos.php){target="_blank"}.  
+- **Encuesta Nacional sobre la Estructura Social (ENES)**: es una encuesta de hogares y personas cuyo cuestionario modularizado permitió recabar información sobre distintas cuestiones vinculadas al estudio de las clases sociales: vivienda y hábitat, acceso a bienes, servicios y ayudas de otros, trabajo / trabajo doméstico, movilidad social y autopercepción de clase. La misma fue elaborada por el Programa de Investigación sobre la Sociedad Argentina Contemporánea (PISAC), es abierta a todo público y es parte de una serie de otros relevamientos que se realizarán. Puede encontrarse en  [https://www.argentina.gob.ar/ciencia/pisac/bases-de-datos](https://www.argentina.gob.ar/ciencia/pisac/bases-de-datos){target="_blank"}.  
 
 - **Encuesta Anual de Hogares Urbanos (EAHU)**: fue un programa nacional del INDEC (entre 2010 y 2014), que se basó en una extensión de la EPH durante los terceros trimestres abarcando aglomerados de más de 2000 habitantes. Mantiene las mismas variables relevadas en la EPH. Puede encontrarse en [https://www.indec.gob.ar/indec/web/Institucional-Indec-BasesDeDatos](https://www.indec.gob.ar/indec/web/Institucional-Indec-BasesDeDatos){target="_blank"}.
 

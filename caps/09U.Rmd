@@ -92,7 +92,7 @@ Las secciones que conforman `RStudio` son cuatro:
 Cuando uno abre `RStudio`, de forma predeterminada, se ve de la siguiente manera:
 
 ```{r fig.cap= "RStudio Escritorio", fig.align='center', out.width = '80%', echo=FALSE, eval = knitr::is_html_output()}
-knitr::include_graphics("imagenes/rstudio_entorno.jpg")
+knitr::include_graphics("imagenes/rstudio_entorno.png")
 ```
 
 ```{r fig.cap= "RStudio Escritorio", fig.align='center', out.width = '80%', echo=FALSE, eval = !knitr::is_html_output()}
