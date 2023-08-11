@@ -92,11 +92,11 @@ Las secciones que conforman `RStudio` son cuatro:
 Cuando uno abre `RStudio`, de forma predeterminada, se ve de la siguiente manera:
 
 ```{r fig.cap= "RStudio Escritorio", fig.align='center', out.width = '80%', echo=FALSE, eval = knitr::is_html_output()}
-knitr::include_graphics("imagenes/rstudio_entorno.png")
+knitr::include_graphics("imagenes/rstudio_entorno.jpg")
 ```
 
 ```{r fig.cap= "RStudio Escritorio", fig.align='center', out.width = '80%', echo=FALSE, eval = !knitr::is_html_output()}
-knitr::include_graphics("imagenes_byn/rstudio_entorno.png")
+knitr::include_graphics("imagenes_byn/rstudio_entorno.jpg")
 ```
 
 * Básicamente, la interfaz se compone de diferentes paneles. Sobre el lado izquierdo hay un panel grande y en el lado derecho hay dos paneles más pequeños. Al comenzar a trabajar en `RStudio`, habrá un cuarto panel que se activa al abrir un nuevo documento.
