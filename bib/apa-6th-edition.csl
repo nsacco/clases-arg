@@ -31,7 +31,7 @@
     <category citation-format="author-date"/>
     <category field="psychology"/>
     <category field="generic-base"/>
-    <updated>2016-09-28T13:09:49+00:00</updated>
+    <updated>2023-08-14T21:00:27+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="en">
@@ -109,7 +109,6 @@
   </macro>
   <macro name="container-contributors">
     <choose>
-      <!-- book is here to catch software with container titles -->
       <if type="book broadcast chapter entry entry-dictionary entry-encyclopedia graphic map personal_communication report speech" match="any">
         <text macro="container-contributors-booklike"/>
       </if>
@@ -150,7 +149,6 @@
   </macro>
   <macro name="secondary-contributors">
     <choose>
-      <!-- book is here to catch software with container titles -->
       <if type="book broadcast chapter entry entry-dictionary entry-encyclopedia graphic map report" match="any">
         <text macro="secondary-contributors-booklike"/>
       </if>
@@ -185,7 +183,6 @@
         <choose>
           <if variable="original-author composer" match="any">
             <group delimiter="; ">
-              <!-- Replace prefix with performer label as that becomes available -->
               <names variable="author" prefix="Recorded by ">
                 <label form="verb" text-case="title"/>
                 <name and="symbol" initialize-with=". " delimiter=", "/>
@@ -347,7 +344,6 @@
                   <text variable="title" form="short" text-case="title" quotes="true"/>
                 </substitute>
               </names>
-              <!-- This should be localized -->
               <text value="personal communication"/>
             </group>
           </if>
@@ -439,7 +435,6 @@
     </choose>
   </macro>
   <macro name="patent-number">
-    <!-- authority: U.S. ; genre: patent ; number: 123,445 -->
     <group delimiter=" ">
       <text variable="authority"/>
       <choose>
@@ -447,7 +442,6 @@
           <text variable="genre" text-case="capitalize-first"/>
         </if>
         <else>
-          <!-- This should be localized -->
           <text value="patent" text-case="capitalize-first"/>
         </else>
       </choose>
@@ -465,34 +459,25 @@
       </else-if>
       <else-if variable="URL">
         <group delimiter=" ">
-          <text term="retrieved" text-case="capitalize-first"/>
-          <choose>
-            <if type="post post-weblog webpage" match="any">
-              <date variable="accessed" form="text" suffix=","/>
-            </if>
-          </choose>
-          <text term="from"/>
+          <text value="tomado de" text-case="capitalize-first"/>
           <choose>
             <if type="report">
               <choose>
                 <if variable="author editor translator" match="any">
-                  <!-- This should be localized -->
                   <text variable="publisher" suffix=" website:"/>
                 </if>
               </choose>
             </if>
             <else-if type="post post-weblog webpage" match="any">
-              <!-- This should be localized -->
               <text variable="container-title" suffix=" website:"/>
             </else-if>
           </choose>
-          <text variable="URL"/>
+          <text variable="URL" form="short" suffix="."/>
         </group>
       </else-if>
       <else-if variable="archive">
         <choose>
           <if type="article article-journal article-magazine article-newspaper dataset paper-conference report speech thesis" match="any">
-            <!-- This section is for electronic database locations. Physical archives for these and other item types are called in 'publisher' macro -->
             <choose>
               <if variable="archive-place" match="none">
                 <group delimiter=" ">
@@ -524,7 +509,6 @@
       <else-if variable="title">
         <choose>
           <if variable="version" type="book" match="all">
-            <!---This is a hack until we have a software type -->
             <text variable="title"/>
           </if>
           <else-if variable="reviewed-author reviewed-title" type="review review-book" match="any">
@@ -557,12 +541,9 @@
       </else-if>
     </choose>
   </macro>
-  <!-- APA has four descriptive sections following the title: -->
-  <!-- (description), [format], container, event -->
   <macro name="description">
     <group prefix="(" suffix=")">
       <choose>
-        <!-- book is here to catch software with container titles -->
         <if type="book report" match="any">
           <choose>
             <if variable="container-title">
@@ -581,7 +562,6 @@
             <group delimiter=", ">
               <text variable="genre" text-case="capitalize-first"/>
               <choose>
-                <!-- In APA journals, the university of a thesis is always cited, even if another locator is given -->
                 <if variable="DOI URL archive" match="any">
                   <text variable="publisher"/>
                 </if>
@@ -630,7 +610,6 @@
           <group delimiter=", ">
             <choose>
               <if variable="genre">
-                <!-- Delimiting by , rather than "of" to avoid incorrect grammar -->
                 <group delimiter=", ">
                   <text variable="genre" text-case="capitalize-first"/>
                   <choose>
@@ -638,14 +617,12 @@
                       <text variable="reviewed-title" font-style="italic"/>
                     </if>
                     <else>
-                      <!-- Assume `title` is title of reviewed work -->
                       <text variable="title" font-style="italic"/>
                     </else>
                   </choose>
                 </group>
               </if>
               <else>
-                <!-- This should be localized -->
                 <group delimiter=" ">
                   <text value="Review of"/>
                   <choose>
@@ -653,7 +630,6 @@
                       <text variable="reviewed-title" font-style="italic"/>
                     </if>
                     <else>
-                      <!-- Assume `title` is title of reviewed work -->
                       <text variable="title" font-style="italic"/>
                     </else>
                   </choose>
@@ -679,14 +655,12 @@
           <if variable="reviewed-title" match="none">
             <choose>
               <if variable="genre">
-                <!-- Delimiting by , rather than "of" to avoid incorrect grammar -->
                 <group delimiter=", ">
                   <text variable="genre" text-case="capitalize-first"/>
                   <text variable="title" form="short" text-case="title" font-style="italic"/>
                 </group>
               </if>
               <else>
-                <!-- This should be localized -->
                 <group delimiter=" ">
                   <text value="Review of"/>
                   <text variable="title" form="short" text-case="title" font-style="italic"/>
@@ -702,7 +676,6 @@
       <else-if type="speech thesis" match="any">
         <text variable="medium" text-case="capitalize-first"/>
       </else-if>
-      <!-- book is here to catch software with container titles -->
       <else-if type="book report" match="any">
         <choose>
           <if variable="container-title" match="none">
@@ -748,7 +721,6 @@
             </group>
           </if>
           <else-if type="dataset">
-            <!-- This should be localized -->
             <text value="Data set"/>
           </else-if>
         </choose>
@@ -761,7 +733,6 @@
         <group delimiter="; ">
           <group delimiter=" ">
             <text variable="genre" text-case="title"/>
-            <!-- Replace with term="number" if that becomes available -->
             <text term="issue" form="short" text-case="capitalize-first"/>
             <text variable="number"/>
           </group>
@@ -814,13 +785,11 @@
           </if>
         </choose>
         <group delimiter=" ">
-          <!-- Replace "archive" with "archive_collection" as that becomes available -->
           <text variable="archive"/>
           <text variable="archive_location" prefix="(" suffix=")"/>
         </group>
       </group>
       <group delimiter=", ">
-        <!-- Move "archive" here when "archive_collection" becomes available -->
         <text variable="archive-place"/>
       </group>
     </group>
@@ -873,7 +842,6 @@
           <choose>
             <if variable="event">
               <choose>
-                <!-- Only print publisher info if published in a proceedings -->
                 <if variable="collection-editor editor issue page volume" match="any">
                   <group delimiter=": ">
                     <text variable="publisher-place"/>
@@ -896,30 +864,43 @@
   </macro>
   <macro name="event">
     <choose>
-      <if variable="event" type="speech paper-conference" match="any">
+      <if variable="event event-title" match="any">
         <choose>
-          <!-- Don't print event info if published in a proceedings -->
-          <if variable="collection-editor editor issue page volume" match="none">
-            <group delimiter=" ">
-              <text variable="genre" text-case="capitalize-first"/>
-              <group delimiter=" ">
-                <choose>
-                  <if variable="genre">
-                    <text term="presented at"/>
-                  </if>
-                  <else>
-                    <text term="presented at" text-case="capitalize-first"/>
-                  </else>
-                </choose>
-                <group delimiter=", ">
-                  <text variable="event"/>
-                  <text variable="event-place"/>
+          <if variable="event" type="speech paper-conference" match="any">
+            <choose>
+              <if variable="collection-editor editor issue page volume" match="none">
+                <group delimiter=" ">
+                  <text variable="genre" text-case="capitalize-first"/>
+                  <group delimiter=" ">
+                    <choose>
+                      <if variable="genre">
+                        <text term="presented at"/>
+                      </if>
+                      <else>
+                        <text term="presented at" text-case="capitalize-first"/>
+                      </else>
+                    </choose>
+                    <group delimiter=", ">
+                      <text macro="event-title"/>
+                      <text variable="event-place"/>
+                    </group>
+                  </group>
                 </group>
-              </group>
-            </group>
+              </if>
+            </choose>
           </if>
         </choose>
       </if>
+    </choose>
+  </macro>
+  <macro name="event-title">
+    <choose>
+      <if variable="event-title">
+        <text variable="event-title"/>
+      </if>
+      <else>
+        <text variable="event"/>
+      </else>
     </choose>
   </macro>
   <macro name="issued">
@@ -953,7 +934,6 @@
                 </if>
               </choose>
             </else-if>
-            <!-- Only year: article-journal chapter entry entry-dictionary entry-encyclopedia dataset figure graphic motion_picture manuscript map musical_score paper-conference [published] patent report review review-book song thesis -->
           </choose>
         </group>
       </else-if>
@@ -991,7 +971,6 @@
         <if type="personal_communication">
           <choose>
             <if variable="archive DOI publisher URL" match="none">
-              <!-- These variables indicate that the letter is retrievable by the reader. If not, then use the APA in-text-only personal communication format -->
               <date variable="issued" form="text"/>
             </if>
             <else>
@@ -1072,7 +1051,6 @@
     </choose>
   </macro>
   <macro name="original-published">
-    <!--This should be localized -->
     <choose>
       <if type="bill legal_case legislation" match="any"/>
       <else-if type="interview motion_picture song" match="any">
@@ -1173,7 +1151,7 @@
         <else>
           <group>
             <text term="volume" form="short" plural="true" text-case="capitalize-first" suffix=" "/>
-            <number variable="number-of-volumes" form="numeric" prefix="1&#8211;"/>
+            <number variable="number-of-volumes" form="numeric" prefix="1–"/>
           </group>
         </else>
       </choose>
@@ -1204,7 +1182,6 @@
           <text macro="locators"/>
         </group>
         <choose>
-          <!--for advance online publication-->
           <if variable="issued">
             <choose>
               <if variable="page issue" match="none">
@@ -1222,7 +1199,6 @@
               <text macro="locators"/>
             </group>
             <choose>
-              <!--for advance online publication-->
               <if variable="issued">
                 <choose>
                   <if variable="page issue" match="none">
@@ -1234,7 +1210,6 @@
           </if>
         </choose>
       </else-if>
-      <!-- book is here to catch software with container titles -->
       <else-if type="book" variable="container-title" match="all">
         <group delimiter=" ">
           <text term="in" text-case="capitalize-first" suffix=" "/>
@@ -1292,7 +1267,6 @@
       </else-if>
       <else-if type="book">
         <choose>
-          <!-- book and software should not cite collection-title, only container-title -->
           <if variable="container-title">
             <text macro="container-booklike"/>
           </if>
@@ -1310,7 +1284,7 @@
     <choose>
       <if variable="container-title collection-title" match="any">
         <group delimiter=" ">
-          <text term="in" text-case="capitalize-first"/>
+          <text value="en" text-case="capitalize-first"/>
           <group delimiter=", ">
             <text macro="container-contributors"/>
             <choose>
@@ -1332,7 +1306,6 @@
                       </if>
                     </choose>
                   </group>
-                  <!-- Replace with volume-title as that becomes available -->
                   <group delimiter=": ">
                     <text macro="container-title"/>
                     <choose>
@@ -1347,7 +1320,6 @@
                 </group>
               </if>
               <else>
-                <!-- Replace with volume-title as that becomes available -->
                 <group delimiter=": ">
                   <text macro="container-title"/>
                   <choose>
@@ -1393,16 +1365,12 @@
       </else-if>
     </choose>
   </macro>
-  <!-- After 'source', APA also prints publication history (original publication, reprint info, retraction info) -->
   <macro name="publication-history">
     <choose>
       <if type="patent" match="none">
         <group prefix="(" suffix=")">
           <choose>
             <if variable="references">
-              <!-- This provides the option for more elaborate description
-                   of publication history, such as full "reprinted" references
-                   (example 26) or retracted references -->
               <text variable="references"/>
             </if>
             <else>
@@ -1443,7 +1411,6 @@
                 <text variable="volume"/>
                 <text variable="container-title"/>
                 <group delimiter=" ">
-                  <!--change to label variable="section" as that becomes available -->
                   <text term="section" form="symbol"/>
                   <text variable="section"/>
                 </group>
@@ -1453,7 +1420,6 @@
                 <group delimiter=" ">
                   <choose>
                     <if is-numeric="number">
-                      <!-- Replace with term="number" if that becomes available -->
                       <text term="issue" form="short" text-case="capitalize-first"/>
                     </if>
                   </choose>
@@ -1466,7 +1432,6 @@
             <text variable="authority"/>
             <choose>
               <if variable="container-title" match="any">
-                <!--Only print year for cases published in reporters-->
                 <date variable="issued" form="numeric" date-parts="year"/>
               </if>
               <else>
@@ -1481,10 +1446,8 @@
           <group delimiter=", ">
             <choose>
               <if variable="number">
-                <!--There's a public law number-->
                 <text variable="number" prefix="Pub. L. No. "/>
                 <group delimiter=" ">
-                  <!--change to label variable="section" as that becomes available -->
                   <text term="section" form="symbol"/>
                   <text variable="section"/>
                 </group>
@@ -1498,7 +1461,6 @@
                 <group delimiter=" ">
                   <text variable="volume"/>
                   <text variable="container-title"/>
-                  <!--change to label variable="section" as that becomes available -->
                   <text term="section" form="symbol"/>
                   <text variable="section"/>
                 </group>
@@ -1564,3 +1526,5 @@
     </layout>
   </bibliography>
 </style>
+
+

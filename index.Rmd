@@ -10,6 +10,7 @@ bibliography:
 - bib/bib_jose.bib
 - bib/packages.bib
 csl: "bib/apa-6th-edition.csl"
+
 link-citations: yes
 github-repo: nsacco/libroESA
 description: Libro de Cocina para el Análisis de las Clases Sociales en Argentina
@@ -22,6 +23,8 @@ library(knitr)
 library(ggplot2)
 library(grDevices)
 library(flextable)
+
+knit_theme$set("bw")
 
 knitr::opts_chunk$set(dev = "ragg_png")
 

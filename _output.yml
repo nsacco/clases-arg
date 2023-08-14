@@ -1,7 +1,8 @@
 bookdown::word_document2:
   fig_caption: yes
-  reference_docx: "plantilla_eduntref.docx"
+#  reference_docx: "plantilla_eduntref.docx"
   toc: yes
+  split_bib: yes
   pandoc_args: [
       "-M", "toc-title=Contenidos"
     ]
@@ -36,6 +37,7 @@ bookdown::html_document2:
   fig_caption: TRUE
 
 bookdown::bs4_book:
+  split_bib: true
   theme:
     primary: "#E95420"
     secondary: "#AEA79F"
