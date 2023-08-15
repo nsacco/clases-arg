@@ -21,15 +21,15 @@ Al completar este capítulo se espera que los lectores puedan:
 
 Para una mayor comprensión del capítulo recomendamos la lectura de los siguientes textos: 
 
-- Kerbo, H. R. [-@Kerbo2003]. Estratificación social y desigualdad: El conflicto de clases en perspectiva histórica y comparada. Madrid: McGraw-Hill Interamericana de España. **(Capítulo 6)** 
+- Kerbo, H. R. [-@Kerbo2003]. Estratificación social y desigualdad: El conflicto de clases en perspectiva histórica y comparada (Capítulo 6). Madrid: McGraw-Hill Interamericana de España .
 
 - Dalle, P., Jorrat, J. R., y Riveiro, M. [-@Dalle.etal2018]. Movilidad social intergeneracional. En A. Salvia y J. I. Piovani (Eds.), La Argentina en el siglo XXI. Cómo somos, vivimos y convivimos en una sociedad desigual. Encuesta Nacional sobre la Estructura Social. Buenos Aires: Siglo Veintiuno Editores.
 
-- Solís, P., y Boado, M. [-@Solis.Boado2016]. Y sin embargo se mueve. Estratificación y movilidad intergeneracional de clase en América Latina. México: Centro de Estudios Espinosa Yglesias. **(Capítulo 1)**  
+- Solís, P., y Boado, M. [-@Solis.Boado2016]. Y sin embargo se mueve. Estratificación y movilidad intergeneracional de clase en América Latina (Capítulo 1). México: Centro de Estudios Espinosa Yglesias. 
 
 - Pla, J., y Rodríguez de la Fuente, J. J. [-@Pla.RodriguezdelaFuente2016]. Tendencias de movilidad social en la Argentina de las dos últimas décadas: 1995-2010. Papers. Revista de Sociologia, 101(4), 473-502.  
 
-- Dalle, P. [-@Dalle2016]. Movilidad social desde las clases populares: Un estudio sociológico en el Área Metropolitana de Buenos Aires 1960-2013. Buenos Aires: IIGG-CLACSO. **(Capítulo 6 - ejemplo del uso de regresión logística)**  
+- Dalle, P. [-@Dalle2016]. Movilidad social desde las clases populares: Un estudio sociológico en el Área Metropolitana de Buenos Aires 1960-2013 (Capítulo 6). Buenos Aires: IIGG-CLACSO. 
 
 <!-- Clifford, P., y Heath, A. F. [-@Clifford.Heath1993]. The political consequences of social mobility. Journal of the Royal Statistical Society: Series A (Statistics in Society), 156(1), 51-61. Wiley Online Library. **(Ejemplo de diagonal reference model**) -->
 

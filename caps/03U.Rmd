@@ -19,15 +19,15 @@ Al completar este capítulo se espera que les lectores puedan:
 
 Para una mayor comprensión del capítulo recomendamos la lectura de los siguientes documentos:
 
-- De Grande, P. (2016)(https://estudiosdemograficosyurbanos.colmex.mx/index.php/edu/article/view/15/pdf){target="_blank"}: "El formato Redatam". *Estudios demográficos y urbanos*, Vol. 31, Núm. 3 (93), pp. 811-832.
+-   De Grande, P. [(2016)](https://estudiosdemograficosyurbanos.colmex.mx/index.php/edu/article/view/15/pdf){target="_blank"}: "El formato Redatam". *Estudios demográficos y urbanos*, Vol. 31, Núm. 3 (93), pp. 811-832.
 
-- [Observatorio Latinoamericano de Censos de Población](https://observatoriocensal.org/){target="_blank"}.
+-   Observatorio Latinoamericano de Censos de Población [(OLAC)](https://observatoriocensal.org/){target="_blank"}.
 
-- Robert McCaa, Albert Esteve, Steven Ruggles y Matthew Sobek (2004)[https://estudiosdemograficosyurbanos.colmex.mx/index.php/edu/article/view/1229/2203]{target="_blank"}: "La integración de los microdatos censales de América Latina: el proyecto IPUMS-América Latina", *Estudios Demográficos y Urbanos*, 20(1), 37-70.
+-   Robert McCaa, Albert Esteve, Steven Ruggles y Matthew Sobek [(2004)](https://estudiosdemograficosyurbanos.colmex.mx/index.php/edu/article/view/1229/2203){target="_blank"}: "La integración de los microdatos censales de América Latina: el proyecto IPUMS-América Latina", *Estudios Demográficos y Urbanos*, 20(1), 37-70.
 
-- Sacco, N. (2017)[https://estudiosdemograficosyurbanos.colmex.mx/index.php/edu/article/view/1648]{target="_blank"}: "¿Cierran los números con la gente adentro?". *Estudios Demográficos y Urbanos*, 32(96), 631-667. doi: 10.24201/edu.v32i3.1648.
+-   Sacco, N.[(2017)](https://estudiosdemograficosyurbanos.colmex.mx/index.php/edu/article/view/1648){target="_blank"}: "¿Cierran los números con la gente adentro?". *Estudios Demográficos y Urbanos*, 32(96), 631-667. doi: 10.24201/edu.v32i3.1648.
 
-- Torrado, S. (1992):'Para leer "Estructura social de la Argentina"' en Jorrat, J. R. & Sautu, R. (Eds.) *Después de Germani: Exploraciones sobre estructura social de la Argentina*, Paidós.
+-   Torrado, S. (1992):'Para leer "Estructura social de la Argentina"' en Jorrat, J. R. & Sautu, R. (Eds.) *Después de Germani: Exploraciones sobre estructura social de la Argentina*, Paidós.
 
 ## Clases sociales y censos de población {#clases3}
 
@@ -186,9 +186,7 @@ Más allá de los tabulados disponibles y publicaciones con resultados discrimin
 
 Mientras que en las primeras tres se trata de recursos disponibles en internet, la ante-última demanda diferentes tipos de procedimiento para dar trámite a la solicitud de datos, que pueden implicar la presencia física en el INDEC e incluso el cobro de haberes por el servicio. Asimismo, mientras que la mayoría de estas modalidades de difusión y liberación de datos censales son definidas y gestionadas por el INDEC, la opción de utilizar los datos disponibles en IPUMS-I requiere aceptar una serie de condiciones dispuestas por la Universidad de Minnesota (registración, cita, etc.). Se describe a continuación cada caso en particular.
 
-### Procesamiento de datos en línea[^u-2]
-
-[^u-2]: Nota: parte de esta sección fue tomada de del sitio web de OLAC.
+### Procesamiento de datos en línea[^03u-1]
 
 Las herramientas de procesamiento de datos censales en línea han significado un gran avance para los usuarios interesados en producir rápidamente un conjunto de tabulados básicos de interés. Esta estrategia consiste en la posibilidad de acceder remotamente a las bases datos y a un conjunto de variables censales, definir qué variables se quieren utilizar en el análisis descriptivo y su desagregación territorial, y la posterior descarga de los tabulados en distintos formatos.
 
@@ -232,7 +230,6 @@ knitr::include_graphics("imagenes/dic2001.png")
 knitr::include_graphics("imagenes_byn/dic2001.jpg")
 ```
 
-
 ```{r, echo = F, warning = F, message = F, fig.cap = 'Descargar diccionario2', fig.width = 0.2, fig.height = 0.5, fig.asp=0.50, out.width = "80%", fig.align = "center", eval = knitr::is_html_output()}
 knitr::include_graphics("imagenes/dic2010.png")
 ```
@@ -249,7 +246,7 @@ En su blog [Discontinuos](https://idiscontinuos.wordpress.com/2015/03/21/convirt
 
 ### IPUMS-I
 
-Sólo cinco años después de la creación del CELADE, este organismo comenzó la Operación de Muestras de Censos (OMUECE), la más ambiciosa muestra internacional de censos del siglo XX. Gracias ello el archivo de microdatos censales de América Latina es uno los más completos de cualquier región del mundo (para más información ver artículos de McCaa y Jaspers-Faijer (2000) y McCaa, Esteve, Ruggles y Sobek (2004). Este proyecto fue el antecedente directo de las bases disponibles hoy en el IPUMS-I. Este espacio ofrece una colección, inventario, preservación de datos y documentación referida a muestras de censos en el mundo, con información armonizada, es decir, comparable entre países, de manera gratuita. Tiene una documentación bastante exhaustiva y facilita de esta forma la investigación comparativa. Una de las desventajas del proyecto IPUMS es que no posee mecanismos de validación con el INDEC y a veces resultan más confiables datos de los INDEC que IPUMS en algunas variables.
+Sólo cinco años después de la creación del CELADE, este organismo comenzó la Operación de Muestras de Censos (OMUECE), la más ambiciosa muestra internacional de censos del siglo XX. Gracias ello el archivo de microdatos censales de América Latina es uno los más completos de cualquier región del mundo (para más información ver artículo de McCaa, Esteve, Ruggles y Sobek) [@-McCaaetal2005]. Este proyecto fue el antecedente directo de las bases disponibles hoy en el IPUMS-I. Este espacio ofrece una colección, inventario, preservación de datos y documentación referida a muestras de censos en el mundo, con información armonizada, es decir, comparable entre países, de manera gratuita. Tiene una documentación bastante exhaustiva y facilita de esta forma la investigación comparativa. Una de las desventajas del proyecto IPUMS es que no posee mecanismos de validación con el INDEC y a veces resultan más confiables datos de los INDEC que IPUMS en algunas variables.
 
 ```{r, echo = F, warning = F, message = F, eval = knitr::is_html_output()}
 library("vembedr")
@@ -286,3 +283,5 @@ Como en casi todo en Argentina, hay también opciones no oficiales, que pueden s
 ### Disponibilidad en detalle para el estudio de clases sociales
 
 En definitiva y para ir cerrando este capítulo, para aquellos que utilizan datos censales y están interesados en el estudio de clases sociales durante el periodo 1960-2010, la disponibilidad de información se limita a: - Para 1960: tabulados publicados en papel. - Para 1970: tabulados publicados en papel y muestra de microdatos en IPUMS-I. - Para 1980: tabulados publicados en papel y muestra de microdatos en IPUMS-I. - Para 1991: tabulados publicados en papel, muestra de microdatos en IPUMS-I y una base no "oficial" sin información de metadatos. - Para 2001: tabulados publicados en papel, bases oficiales casi completas (diccionario) [no están todas las variables relevadas, en particular, la ocupación] y una base no "oficial" sin información de metadatos, con la variable ocupación incluida. - Para 2010: tabulados publicados en papel, bases oficiales completas (diccionarios) del cuestionario ampliado y básico.
+
+[^03u-1]: Nota: parte de esta sección fue tomada de del sitio web de OLAC.

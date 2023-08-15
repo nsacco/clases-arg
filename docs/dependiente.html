@@ -125,11 +125,11 @@
 </ol>
 <p>Para una mayor comprensión del capítulo recomendamos la lectura de los siguientes textos:</p>
 <ul>
-<li><p>Kerbo, H. R. <span class="citation">(<a href="#ref-Kerbo2003">2003</a>)</span>. Estratificación social y desigualdad: El conflicto de clases en perspectiva histórica y comparada. Madrid: McGraw-Hill Interamericana de España. <strong>(Capítulo 6)</strong></p></li>
+<li><p>Kerbo, H. R. <span class="citation">(<a href="#ref-Kerbo2003">2003</a>)</span>. Estratificación social y desigualdad: El conflicto de clases en perspectiva histórica y comparada (Capítulo 6). Madrid: McGraw-Hill Interamericana de España .</p></li>
 <li><p>Dalle, P., Jorrat, J. R., y Riveiro, M. <span class="citation">(<a href="#ref-Dalle.etal2018">2018</a>)</span>. Movilidad social intergeneracional. En A. Salvia y J. I. Piovani (Eds.), La Argentina en el siglo XXI. Cómo somos, vivimos y convivimos en una sociedad desigual. Encuesta Nacional sobre la Estructura Social. Buenos Aires: Siglo Veintiuno Editores.</p></li>
-<li><p>Solís, P., y Boado, M. <span class="citation">(<a href="#ref-Solis.Boado2016">2016</a>)</span>. Y sin embargo se mueve. Estratificación y movilidad intergeneracional de clase en América Latina. México: Centro de Estudios Espinosa Yglesias. <strong>(Capítulo 1)</strong></p></li>
+<li><p>Solís, P., y Boado, M. <span class="citation">(<a href="#ref-Solis.Boado2016">2016</a>)</span>. Y sin embargo se mueve. Estratificación y movilidad intergeneracional de clase en América Latina (Capítulo 1). México: Centro de Estudios Espinosa Yglesias.</p></li>
 <li><p>Pla, J., y Rodríguez de la Fuente, J. J. <span class="citation">(<a href="#ref-Pla.RodriguezdelaFuente2016">2016</a>)</span>. Tendencias de movilidad social en la Argentina de las dos últimas décadas: 1995-2010. Papers. Revista de Sociologia, 101(4), 473-502.</p></li>
-<li><p>Dalle, P. <span class="citation">(<a href="#ref-Dalle2016">2016</a>)</span>. Movilidad social desde las clases populares: Un estudio sociológico en el Área Metropolitana de Buenos Aires 1960-2013. Buenos Aires: IIGG-CLACSO. <strong>(Capítulo 6 - ejemplo del uso de regresión logística)</strong></p></li>
+<li><p>Dalle, P. <span class="citation">(<a href="#ref-Dalle2016">2016</a>)</span>. Movilidad social desde las clases populares: Un estudio sociológico en el Área Metropolitana de Buenos Aires 1960-2013 (Capítulo 6). Buenos Aires: IIGG-CLACSO.</p></li>
 </ul>
 <!-- Clifford, P., y Heath, A. F. [-@Clifford.Heath1993]. The political consequences of social mobility. Journal of the Royal Statistical Society: Series A (Statistics in Society), 156(1), 51-61. Wiley Online Library. **(Ejemplo de diagonal reference model**) --><div id="movilidad1" class="section level2" number="7.1">
 <h2>
@@ -237,70 +237,70 @@ Gráfico 7.3: Modelo básico de logro de estatus <span class="citation">(<a href
 </h3>
 <p>Para el análisis de la movilidad social que realizaremos en las dos secciones posteriores necesitaremos recodificar una serie de variables para su correcto tratamiento. Empecemos por la principal, la clase social del/la encuestado/o. En este caso nos basaremos en el esquema EGP, que se encuentra codificado en la variable <code>egp11</code> —Tabla <a href="dependiente.html#tab:egpmov">7.1</a>—. Al tenerlo en su versión desagregada de 11 clases, necesitaremos reagruparlo de tal forma que queden 5 clases. A continuación mostramos nuestra propuesta de agrupación y las líneas de comando necesarias para hacerlo:</p>
 <div class="tabwid">
-<style>.cl-2dac344c{table-layout:auto;width:100%;}.cl-2da12994{font-family:'Helvetica';font-size:10pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-2da7841a{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-2da79a72{background-color:transparent;vertical-align: middle;border-bottom: 1pt solid rgba(0, 0, 0, 1.00);border-top: 1pt solid rgba(0, 0, 0, 1.00);border-left: 1pt solid rgba(0, 0, 0, 1.00);border-right: 1pt solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-2da79a7c{background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style>
-<div class="inline-table"><table data-quarto-disable-processing="true" class="cl-2dac344c">
+<style>.cl-63aa6084{table-layout:auto;width:100%;}.cl-639effa0{font-family:'Helvetica';font-size:10pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-63a58f5a{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-63a5a5bc{background-color:transparent;vertical-align: middle;border-bottom: 1pt solid rgba(0, 0, 0, 1.00);border-top: 1pt solid rgba(0, 0, 0, 1.00);border-left: 1pt solid rgba(0, 0, 0, 1.00);border-right: 1pt solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-63a5a5d0{background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style>
+<div class="inline-table"><table data-quarto-disable-processing="true" class="cl-63aa6084">
 <caption style="display:table-caption;margin:0pt;text-align:center;border-bottom: 0.00pt solid transparent;border-top: 0.00pt solid transparent;border-left: 0.00pt solid transparent;border-right: 0.00pt solid transparent;padding-top:3pt;padding-bottom:3pt;padding-left:3pt;padding-right:3pt;line-height: 1;background-color:transparent;">
 <span id="tab:egpmov">Tabla 7.1: </span><span>Esquema EGP recodificado</span>
 </caption>
 
 <tbody>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-2da79a72"><p class="cl-2da7841a"><span class="cl-2da12994">Código</span></p></td>
-<td class="cl-2da79a72"><p class="cl-2da7841a"><span class="cl-2da12994">Esquema 11 clases</span></p></td>
-<td class="cl-2da79a72"><p class="cl-2da7841a"><span class="cl-2da12994">Esquema 5 clases</span></p></td>
+<td class="cl-63a5a5bc"><p class="cl-63a58f5a"><span class="cl-639effa0">Código</span></p></td>
+<td class="cl-63a5a5bc"><p class="cl-63a58f5a"><span class="cl-639effa0">Esquema 11 clases</span></p></td>
+<td class="cl-63a5a5bc"><p class="cl-63a58f5a"><span class="cl-639effa0">Esquema 5 clases</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-2da79a72"><p class="cl-2da7841a"><span class="cl-2da12994">1</span></p></td>
-<td class="cl-2da79a72"><p class="cl-2da7841a"><span class="cl-2da12994">I. Clase de servicios, alta</span></p></td>
-<td rowspan="2" class="cl-2da79a72"><p class="cl-2da7841a"><span class="cl-2da12994">Clase de servicios</span></p></td>
+<td class="cl-63a5a5bc"><p class="cl-63a58f5a"><span class="cl-639effa0">1</span></p></td>
+<td class="cl-63a5a5bc"><p class="cl-63a58f5a"><span class="cl-639effa0">I. Clase de servicios, alta</span></p></td>
+<td rowspan="2" class="cl-63a5a5bc"><p class="cl-63a58f5a"><span class="cl-639effa0">Clase de servicios</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-2da79a72"><p class="cl-2da7841a"><span class="cl-2da12994">2</span></p></td>
-<td class="cl-2da79a72"><p class="cl-2da7841a"><span class="cl-2da12994">II. Clase de servicios, baja</span></p></td>
+<td class="cl-63a5a5bc"><p class="cl-63a58f5a"><span class="cl-639effa0">2</span></p></td>
+<td class="cl-63a5a5bc"><p class="cl-63a58f5a"><span class="cl-639effa0">II. Clase de servicios, baja</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-2da79a72"><p class="cl-2da7841a"><span class="cl-2da12994">3</span></p></td>
-<td class="cl-2da79a72"><p class="cl-2da7841a"><span class="cl-2da12994">IIIa. Trabajadores no manuales de rutina, alta</span></p></td>
-<td rowspan="2" class="cl-2da79a72"><p class="cl-2da7841a"><span class="cl-2da12994">Trabajadores rutinarios</span></p></td>
+<td class="cl-63a5a5bc"><p class="cl-63a58f5a"><span class="cl-639effa0">3</span></p></td>
+<td class="cl-63a5a5bc"><p class="cl-63a58f5a"><span class="cl-639effa0">IIIa. Trabajadores no manuales de rutina, alta</span></p></td>
+<td rowspan="2" class="cl-63a5a5bc"><p class="cl-63a58f5a"><span class="cl-639effa0">Trabajadores rutinarios</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-2da79a72"><p class="cl-2da7841a"><span class="cl-2da12994">4</span></p></td>
-<td class="cl-2da79a72"><p class="cl-2da7841a"><span class="cl-2da12994">IIIb. Trabajadores no manuales de servicios y comercio, baja</span></p></td>
+<td class="cl-63a5a5bc"><p class="cl-63a58f5a"><span class="cl-639effa0">4</span></p></td>
+<td class="cl-63a5a5bc"><p class="cl-63a58f5a"><span class="cl-639effa0">IIIb. Trabajadores no manuales de servicios y comercio, baja</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-2da79a72"><p class="cl-2da7841a"><span class="cl-2da12994">5</span></p></td>
-<td class="cl-2da79a72"><p class="cl-2da7841a"><span class="cl-2da12994">IVa. Autónomos con empleados</span></p></td>
-<td rowspan="2" class="cl-2da79a72"><p class="cl-2da7841a"><span class="cl-2da12994">Pequeña Burguesía</span></p></td>
+<td class="cl-63a5a5bc"><p class="cl-63a58f5a"><span class="cl-639effa0">5</span></p></td>
+<td class="cl-63a5a5bc"><p class="cl-63a58f5a"><span class="cl-639effa0">IVa. Autónomos con empleados</span></p></td>
+<td rowspan="2" class="cl-63a5a5bc"><p class="cl-63a58f5a"><span class="cl-639effa0">Pequeña Burguesía</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-2da79a72"><p class="cl-2da7841a"><span class="cl-2da12994">6</span></p></td>
-<td class="cl-2da79a72"><p class="cl-2da7841a"><span class="cl-2da12994">IVb. Autónomos sin empleados</span></p></td>
+<td class="cl-63a5a5bc"><p class="cl-63a58f5a"><span class="cl-639effa0">6</span></p></td>
+<td class="cl-63a5a5bc"><p class="cl-63a58f5a"><span class="cl-639effa0">IVb. Autónomos sin empleados</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-2da79a72"><p class="cl-2da7841a"><span class="cl-2da12994">7</span></p></td>
-<td class="cl-2da79a72"><p class="cl-2da7841a"><span class="cl-2da12994">V. Supervisores de trabajadores manuales</span></p></td>
-<td rowspan="2" class="cl-2da79a72"><p class="cl-2da7841a"><span class="cl-2da12994">Clase trabajadora calificada</span></p></td>
+<td class="cl-63a5a5bc"><p class="cl-63a58f5a"><span class="cl-639effa0">7</span></p></td>
+<td class="cl-63a5a5bc"><p class="cl-63a58f5a"><span class="cl-639effa0">V. Supervisores de trabajadores manuales</span></p></td>
+<td rowspan="2" class="cl-63a5a5bc"><p class="cl-63a58f5a"><span class="cl-639effa0">Clase trabajadora calificada</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-2da79a72"><p class="cl-2da7841a"><span class="cl-2da12994">8</span></p></td>
-<td class="cl-2da79a72"><p class="cl-2da7841a"><span class="cl-2da12994">VI. Trabajadores manuales calificados</span></p></td>
+<td class="cl-63a5a5bc"><p class="cl-63a58f5a"><span class="cl-639effa0">8</span></p></td>
+<td class="cl-63a5a5bc"><p class="cl-63a58f5a"><span class="cl-639effa0">VI. Trabajadores manuales calificados</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-2da79a72"><p class="cl-2da7841a"><span class="cl-2da12994">9</span></p></td>
-<td class="cl-2da79a72"><p class="cl-2da7841a"><span class="cl-2da12994">VIIa. Trabajadores manuales no calificados</span></p></td>
-<td rowspan="2" class="cl-2da79a72"><p class="cl-2da7841a"><span class="cl-2da12994">Clase trabajadora no calificada</span></p></td>
+<td class="cl-63a5a5bc"><p class="cl-63a58f5a"><span class="cl-639effa0">9</span></p></td>
+<td class="cl-63a5a5bc"><p class="cl-63a58f5a"><span class="cl-639effa0">VIIa. Trabajadores manuales no calificados</span></p></td>
+<td rowspan="2" class="cl-63a5a5bc"><p class="cl-63a58f5a"><span class="cl-639effa0">Clase trabajadora no calificada</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-2da79a72"><p class="cl-2da7841a"><span class="cl-2da12994">10</span></p></td>
-<td class="cl-2da79a72"><p class="cl-2da7841a"><span class="cl-2da12994">VIIb. Trabajadores agropecuarios</span></p></td>
+<td class="cl-63a5a5bc"><p class="cl-63a58f5a"><span class="cl-639effa0">10</span></p></td>
+<td class="cl-63a5a5bc"><p class="cl-63a58f5a"><span class="cl-639effa0">VIIb. Trabajadores agropecuarios</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-2da79a72"><p class="cl-2da7841a"><span class="cl-2da12994">11</span></p></td>
-<td class="cl-2da79a72"><p class="cl-2da7841a"><span class="cl-2da12994">IVc. Autónomos agropecuarios</span></p></td>
-<td class="cl-2da79a72"><p class="cl-2da7841a"><span class="cl-2da12994">Pequeña Burguesía</span></p></td>
+<td class="cl-63a5a5bc"><p class="cl-63a58f5a"><span class="cl-639effa0">11</span></p></td>
+<td class="cl-63a5a5bc"><p class="cl-63a58f5a"><span class="cl-639effa0">IVc. Autónomos agropecuarios</span></p></td>
+<td class="cl-63a5a5bc"><p class="cl-63a58f5a"><span class="cl-639effa0">Pequeña Burguesía</span></p></td>
 </tr>
 </tbody>
-<tfoot><tr style="overflow-wrap:break-word;"><td colspan="3" class="cl-2da79a7c"><p class="cl-2da7841a"><span class="cl-2da12994">Fuente: elaboración propia en base Erikson y Goldthorpe (1992)</span></p></td></tr></tfoot>
+<tfoot><tr style="overflow-wrap:break-word;"><td colspan="3" class="cl-63a5a5d0"><p class="cl-63a58f5a"><span class="cl-639effa0">Fuente: elaboración propia en base Erikson y Goldthorpe (1992)</span></p></td></tr></tfoot>
 </table></div>
 </div>
 <div class="sourceCode" id="cb104"><pre class="downlit sourceCode r">

@@ -16,6 +16,9 @@ github-repo: nsacco/libroESA
 description: Libro de Cocina para el Análisis de las Clases Sociales en Argentina
 site: bookdown::bookdown_site
 always_allow_html: yes
+
+
+
 ---
 
 ```{r gset, echo = FALSE, include = FALSE}

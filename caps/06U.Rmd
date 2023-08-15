@@ -27,15 +27,15 @@ Para una mayor comprensión del capítulo recomendamos la lectura de los siguien
 
 - Torrado, S. [-@Torrado1995]. Vivir apurado para morirse joven: Reflexiones sobre la transferencia intergeneracional de la pobreza. Revista Sociedad, 7.
 
-- Maceira, V. [-@Maceira2018]. Clases y diferenciación social. En J. I. Piovani y A. Salvia (Eds.), La Argentina en el siglo XXI. Cómo somos, vivimos y convivimos en una sociedad desigual. Encuesta Nacional sobre la Estructura Social. Buenos Aires: Siglo Veintiuno Editores. (**Revisa varios aspectos: autopercepción de clase, condiciones laborales, movilidad social, demografía del hogar**)  
+- Maceira, V. [-@Maceira2018]. Clases y diferenciación social. En J. I. Piovani y A. Salvia (Eds.), La Argentina en el siglo XXI. Cómo somos, vivimos y convivimos en una sociedad desigual. Encuesta Nacional sobre la Estructura Social. Buenos Aires: Siglo Veintiuno Editores. (Revisa varios aspectos: autopercepción de clase, condiciones laborales, movilidad social, demografía del hogar)  
 
-- Pla, J., Rodríguez de la Fuente, J., y Sacco, N. [-@Pla.etal2018]. Clases sociales y condiciones de vida en el Gran Buenos Aires (2003-2013). Revista Colombiana de Sociología, 41(2), 189-231. (**Análisis de ingresos condiciones laborales y habitacionales**)
+- Pla, J., Rodríguez de la Fuente, J., y Sacco, N. [-@Pla.etal2018]. Clases sociales y condiciones de vida en el Gran Buenos Aires (2003-2013). Revista Colombiana de Sociología, 41(2), 189-231. (Análisis de ingresos condiciones laborales y habitacionales)
 
-- Sacco, N., y Borges, G. [-@Sacco2018]. ¿Converge la fecundidad en Brasil y Argentina? Un enfoque desde las desigualdades. Revista Brasileira de Estudos de População, 35(1), 1-29. (**Análisis demográfico**)  
+- Sacco, N., y Borges, G. [-@Sacco2018]. ¿Converge la fecundidad en Brasil y Argentina? Un enfoque desde las desigualdades. Revista Brasileira de Estudos de População, 35(1), 1-29. (Análisis demográfico)  
 
-- Solís, P., Chávez Molina, E., y Cobos, D. [-@Solis.etal2019]. Class Structure, Labor Market Heterogeneity, and Living Conditions in Latin America. Latin American Research Review, 54(4). (**Análisis comparativo en Latinoamérica sobre ingresos y condiciones laborales**)   
+- Solís, P., Chávez Molina, E., y Cobos, D. [-@Solis.etal2019]. Class Structure, Labor Market Heterogeneity, and Living Conditions in Latin America. Latin American Research Review, 54(4). (Análisis comparativo en Latinoamérica sobre ingresos y condiciones laborales)
 
-- Elbert, R. [-@Elbert2020]. Posición de clase objetiva y auto-identificación de clase. En P. Dalle, R. Sautu, P. Boniolo, y R. Elbert, El análisis de clases sociales. Pensando la movilidad social, la residencia, los lazos sociales, la identidad y la agencia. Buenos Aires: CLACSO - IIGG. (**Autopercepción de clase**)
+- Elbert, R. [-@Elbert2020]. Posición de clase objetiva y auto-identificación de clase. En P. Dalle, R. Sautu, P. Boniolo, y R. Elbert, El análisis de clases sociales. Pensando la movilidad social, la residencia, los lazos sociales, la identidad y la agencia. Buenos Aires: CLACSO - IIGG. (Autopercepción de clase)
 
 ## La estructura de clases ¿el huevo o la gallina? {#huevo} 
 

@@ -434,7 +434,7 @@ tabla_regiones <- eph_1115_ocup %>%
 
 Finalmente presentamos un ejemplo de representación de la tabla anteriormente construida en un mapa temático. **`R`** posee varias librerías para manipular información de tipo geográfica. En este caso utilizaremos el paquete `sf`. Lo que haremos es representar en mapas en miniatura de Argentina, el porcentaje de individuos pertenecientes a cada clase social por región.
 
-A los fines de este ejemplo, trabajaremos con la cartografía por departamentos que proporciona INDEC (<https://www.indec.gob.ar/indec/web/Institucional-Indec-Codgeo>). Si bien no es la finalidad de este libro introducir el uso de herramientas SIG^[Recomendamos el manual [Ciencia de datos para gente sociable](https://bitsandbricks.github.io/ciencia_de_datos_gente_sociable/), específicamente su capítulo 6, para quienes quieran profundizar en el tema], a continuación presentamos el procedimiento "paso a paso" para la creación del mapa temático. 
+A los fines de este ejemplo, trabajaremos con la cartografía por departamentos que proporciona [INDEC](https://www.indec.gob.ar/indec/web/Institucional-Indec-Codgeo). Si bien no es la finalidad de este libro introducir el uso de herramientas SIG^[Recomendamos el manual [Ciencia de datos para gente sociable](https://bitsandbricks.github.io/ciencia_de_datos_gente_sociable/), específicamente su capítulo 6, para quienes quieran profundizar en el tema], a continuación presentamos el procedimiento "paso a paso" para la creación del mapa temático. 
 
 ```{r, message=FALSE, warning=FALSE, out.width = '80%', echo=TRUE}
 # 1) Cargamos el archivo .shp y lo guardamos en el objetivo espacial "argentina"

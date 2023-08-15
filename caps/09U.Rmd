@@ -307,7 +307,7 @@ Texto ~subscript~
 
 
 ```{r eval=FALSE, message=FALSE, warning=FALSE, echo=TRUE}
-![Figura 1: Mi mascota hermosa: Nina](imagenes/nina.jpeg)
+![Figura 1: Mi mascota hermosa: Nina](imagenes/nina.jpeg){width=60%}
 ```
 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.18)  9 AUG 2023 15:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.18)  15 AUG 2023 16:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -866,17 +866,17 @@ Package longtable Warning: Column widths have changed
 (longtable)                in table 7 on input line 2024.
 
 [30] [31] [32] [33]
-<imagenes/dic2001.png, id=596, 979.66pt x 569.12625pt>
-File: imagenes/dic2001.png Graphic file (type png)
-<use imagenes/dic2001.png>
-Package pdftex.def Info: imagenes/dic2001.png  used on input line 2147.
+<imagenes_byn/dic2001.jpg, id=591, 1959.32pt x 1138.2525pt>
+File: imagenes_byn/dic2001.jpg Graphic file (type jpg)
+<use imagenes_byn/dic2001.jpg>
+Package pdftex.def Info: imagenes_byn/dic2001.jpg  used on input line 2147.
 (pdftex.def)             Requested size: 375.80249pt x 218.31969pt.
-<imagenes/dic2010.png, id=598, 1037.8775pt x 748.7975pt>
-File: imagenes/dic2010.png Graphic file (type png)
-<use imagenes/dic2010.png>
-Package pdftex.def Info: imagenes/dic2010.png  used on input line 2156.
+<imagenes_byn/dic2010.jpg, id=592, 2075.755pt x 1497.595pt>
+File: imagenes_byn/dic2010.jpg Graphic file (type jpg)
+<use imagenes_byn/dic2010.jpg>
+Package pdftex.def Info: imagenes_byn/dic2010.jpg  used on input line 2156.
 (pdftex.def)             Requested size: 375.80525pt x 271.13222pt.
-[34 <./imagenes/dic2001.png>] [35 <./imagenes/dic2010.png>] [36] [37]
+[34 <./imagenes_byn/dic2001.jpg>] [35 <./imagenes_byn/dic2010.jpg>] [36] [37]
 
 LaTeX Warning: Reference `tab:vars1' on page 38 undefined on input line 2285.
 
@@ -949,10 +949,10 @@ Type  H <return>  for immediate help.
 l.2647 ...�n disponible según la ``Clasificació
                                                   n Industrial Internacional... 
 Here is how much of TeX's memory you used:
- 21172 strings out of 478031
- 388290 string characters out of 5839125
+ 21177 strings out of 478031
+ 388500 string characters out of 5839125
  1886330 words of memory out of 5000000
- 40355 multiletter control sequences out of 15000+600000
+ 40359 multiletter control sequences out of 15000+600000
  593883 words of font info for 207 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  66i,10n,67p,2047b,1061s stack positions out of 10000i,1000n,20000p,200000b,200000s
