@@ -19,13 +19,13 @@ Al completar este capítulo se espera que les lectores puedan:
 
 Para una mayor comprensión del capítulo recomendamos la lectura de los siguientes documentos:
 
-- De Grande, P. (2016): "El formato Redatam". *Estudios demográficos y urbanos*, Vol. 31, Núm. 3 (93), pp. 811-832. [Link](https://estudiosdemograficosyurbanos.colmex.mx/index.php/edu/article/view/15/pdf){target="_blank"}.
+- De Grande, P. (2016)(https://estudiosdemograficosyurbanos.colmex.mx/index.php/edu/article/view/15/pdf){target="_blank"}: "El formato Redatam". *Estudios demográficos y urbanos*, Vol. 31, Núm. 3 (93), pp. 811-832.
 
-- Observatorio Latinoamericano de Censos de Población [OLAC](https://observatoriocensal.org/){target="_blank"}.
+- [Observatorio Latinoamericano de Censos de Población](https://observatoriocensal.org/){target="_blank"}.
 
-- Robert McCaa, Albert Esteve, Steven Ruggles y Matthew Sobek (2004): "La integración de los microdatos censales de América Latina: el proyecto IPUMS-América Latina", *Estudios Demográficos y Urbanos*, 20(1), 37-70.
+- Robert McCaa, Albert Esteve, Steven Ruggles y Matthew Sobek (2004)[https://estudiosdemograficosyurbanos.colmex.mx/index.php/edu/article/view/1229/2203]{target="_blank"}: "La integración de los microdatos censales de América Latina: el proyecto IPUMS-América Latina", *Estudios Demográficos y Urbanos*, 20(1), 37-70.
 
-- Sacco, N. (2017): "¿Cierran los números con la gente adentro?". *Estudios Demográficos y Urbanos*, 32(96), 631-667. doi: 10.24201/edu.v32i3.1648.
+- Sacco, N. (2017)[https://estudiosdemograficosyurbanos.colmex.mx/index.php/edu/article/view/1648]{target="_blank"}: "¿Cierran los números con la gente adentro?". *Estudios Demográficos y Urbanos*, 32(96), 631-667. doi: 10.24201/edu.v32i3.1648.
 
 - Torrado, S. (1992):'Para leer "Estructura social de la Argentina"' en Jorrat, J. R. & Sautu, R. (Eds.) *Después de Germani: Exploraciones sobre estructura social de la Argentina*, Paidós.
 
@@ -39,7 +39,7 @@ La disponibilidad de otras fuentes adicionales a los censos para el estudio de l
 
 ### Antecedentes
 
-Como se abordó en el [capítulo 2](#analisis1), la clase social, como marco teórico, representa un enfoque complementario de la estratificación social al incorporar las relaciones sociales de propiedad y control sobre factores productivos al análisis de las desigualdades de recursos económicos, políticos y sociales [@Kerbo2003]. A pesar de su elaboración relativamente lejana en el tiempo, la aplicación de esta conceptualización en distintas investigaciones, por ejemplo las de Torrado [-@Torrado1992], mostró una significativa capacidad interpretativa, sobre todo si se tienen en cuenta los problemas y limitaciones que posee el estudio de la desigualdad social en relación a la alta dependencia de la información empírica disponible, casi siempre incompatible para ser utilizada por marcos teóricos y metodológicos ajenos a los cuales fue construida.
+Como se abordó en el [Capítulo 2](#analisis1), la clase social, como marco teórico, representa un enfoque complementario de la estratificación social al incorporar las relaciones sociales de propiedad y control sobre factores productivos al análisis de las desigualdades de recursos económicos, políticos y sociales [@Kerbo2003]. A pesar de su elaboración relativamente lejana en el tiempo, la aplicación de esta conceptualización en distintas investigaciones, por ejemplo las de Torrado [-@Torrado1992], mostró una significativa capacidad interpretativa, sobre todo si se tienen en cuenta los problemas y limitaciones que posee el estudio de la desigualdad social en relación a la alta dependencia de la información empírica disponible, casi siempre incompatible para ser utilizada por marcos teóricos y metodológicos ajenos a los cuales fue construida.
 
 Esta orientación ---predominante--- que utilizó censos de población para el estudio de clases en Argentina se ubica dentro de lo que Crompton [-@Crompton2008] denominó "enfoque ocupacional-agregado" de la estratificación social. Pensado para el particular contexto latinoamericano de disponibilidad de información, en este sentido, se diferencia con respecto a otros desarrollos teóricos más recientes, por ejemplo, de Wright [-@Wright1997; -@Wright2005] o Goldthorpe [-@Goldthorpe1995], donde, por la carencia presupuestaria fundamentamente, gran parte del esfuerzo conceptual estuvo dirigido a resolver el problema del dato a utilizar, es decir, en cómo desplegar la teoría con fuentes secundarias y no en base a datos *ad-hoc* (primarios) para una teoría específica.
 
@@ -61,7 +61,7 @@ En otro orden de razones, los datos censales utilizados pueden dar continuidad a
 
 ## Censos de población modernos. Características principales {#censos}
 
-Los censos de población modernos, aquellos llevados a cabo en 1960, 1970, 1980, 1991, 2001, de acuerdo a la definición de Guisti [-@Giusti2007] ---siguiendo esta caracterización, podemos también agregar el de 2010--- constituyen, casi de forma similar a la EPH, un programa nacional de producción sistemática y permanente de indicadores sociales, económicos y demográficos que lleva a cabo el INDEC, y que fundamentalmente, permite conocer las características sociodemográficas y socioeconómicas de la población de acuerdo a estándares internacionales. Para más información sobre estos aspectos de los censos, se recomienda visitar el sitio web del Observatorio Latinoamericano de Censos de Población [OLAC](https://observatoriocensal.org/){target="_blank"}.
+Los censos de población modernos, aquellos llevados a cabo en 1960, 1970, 1980, 1991, 2001, de acuerdo a la definición de Guisti [-@Giusti2007] ---siguiendo esta caracterización, podemos también agregar el de 2010--- constituyen, casi de forma similar a la EPH, un programa nacional de producción sistemática y permanente de indicadores sociales, económicos y demográficos que lleva a cabo el INDEC, y que fundamentalmente, permite conocer las características sociodemográficas y socioeconómicas de la población de acuerdo a estándares internacionales. Para más información sobre estos aspectos de los censos, se recomienda visitar el sitio web del Observatorio Latinoamericano de Censos de Población [(OLAC)](https://observatoriocensal.org/){target="_blank"}.
 
 ### Las características económicas en los censos de población
 

@@ -23,13 +23,13 @@ Al completar este capítulo se espera que les lectores puedan:
 
 Para una mayor comprensión del capítulo recomendamos la lectura de los siguientes documentos:
 
-- INDEC. [-@INDEC2020]. Encuesta Permanente de Hogares. Diseño de registro y estructura para las bases preliminares Hogar y Personas. INDEC. [Link de descarga](https://www.indec.gob.ar/ftp/cuadros/menusuperior/eph/EPH_registro_1t20.pdf).
+- INDEC. [-@INDEC2020]. Encuesta Permanente de Hogares. Diseño de registro y estructura para las bases preliminares Hogar y Personas.<!--INDEC.{https://www.indec.gob.ar/ftp/cuadros/menusuperior/eph/EPH_registro_1t20.pdf)}-->
 
-- INDEC. [-@INDEC2003]. La nueva Encuesta Permanente de Hogares de Argentina: 2003. [Link de descarga](https://www.indec.gob.ar/ftp/cuadros/sociedad/metodologia_eph_continua.pdf).
+- INDEC. [-@INDEC2003]. La nueva Encuesta Permanente de Hogares de Argentina: 2003<!--{https://www.indec.gob.ar/ftp/cuadros/sociedad/metodologia_eph_continua.pdf)}-->
 
-- Kozlowski, D., Tiscornia, P., Weksler, G., Rosati, G., y Shokida, N. [-@kozlowski2020]. eph: Argentina’s permanent household survey data and manipulation utilities (manual). [Link de descarga](https://cloud.r-project.org/web/packages/eph/eph.pdf).  
+- Kozlowski, D., Tiscornia, P., Weksler, G., Rosati, G., y Shokida, N. [-@kozlowski2020]. eph: Argentina’s permanent household survey data and manipulation utilities (manual).<!--{https://cloud.r-project.org/web/packages/eph/eph.pdf)}-->
 
-- Minoldo, S., y Born, D. [-@Minoldo.Born2019]. Claroscuros: 9 años de datos bajo sospecha (EPH en Argentina entre 2007 y 2015). [Link de descarga](https://issuu.com/cieseditora/docs/claroscuros_minoldo-born).
+- Minoldo, S., y Born, D. [-@Minoldo.Born2019]. Claroscuros: 9 años de datos bajo sospecha (EPH en Argentina entre 2007 y 2015).<!--{https://issuu.com/cieseditora/docs/claroscuros_minoldo-born)}-->
 
 ## La Encuesta Permanente de Hogares. Características principales {#eph1}
 
@@ -122,7 +122,7 @@ embed_youtube("90exzR1GoDY")
 
 #### Bases 2016-2020
 
-Dependiendo del período que necesitemos analizar, encontraremos que las bases a descargar se encuentran en distintos formatos de archivo. Como ejemplo, podemos comenzar por una primera prueba descargando la base correspondiente al tercer trimestre de 2019 en formato `.txt` ([link de descarga](https://www.indec.gob.ar/ftp/cuadros/menusuperior/eph/EPH_usu_3_Trim_2019_txt.zip){target="_blank"}). El archivo `.zip` que descarguemos contendrá un archivo `.txt` referido a la base de individuos (Usu_individual_T319.txt) y otro referido a la base de hogares (Usu_hogar_T319.txt).
+Dependiendo del período que necesitemos analizar, encontraremos que las bases a descargar se encuentran en distintos formatos de archivo. Como ejemplo, podemos comenzar por una primera prueba descargando la base correspondiente al tercer trimestre de 2019 en formato `.txt` desde el sitio web del INDEC(https://www.indec.gob.ar/ftp/cuadros/menusuperior/eph/EPH_usu_3_Trim_2019_txt.zip){target="_blank"}). El archivo `.zip` que descarguemos contendrá un archivo `.txt` referido a la base de individuos (Usu_individual_T319.txt) y otro referido a la base de hogares (Usu_hogar_T319.txt).
 
 Como buena práctica en la organización de la información que vamos utilizando, es recomendable alojar los archivos (en este caso las bases que descarguemos) en la carpeta del proyecto con el que estemos trabajando en __`RStudio`__ (en este caso, le hemos puesto el nombre "bases"). En este caso utilizaremos el comando ```read.csv2```, ya que nos permite importar archivos de texto plano delimitados. Señalamos que el delimitador es `;` y que el archivo cuenta en su línea superior con los nombres de las variables ```(header = TRUE)```:
 
@@ -191,7 +191,7 @@ eph_hog_414 %>%
 
 #### Bases 1974-2002
 
-Finalmente probaremos descargar la base más antigua que se encuentra disponible en la página web del INDEC. Nos referimos a los microdatos de la base usuaria de individuos del año 1974 para el Gran Buenos Aires ([link de descarga](https://www.indec.gob.ar/indec/web/Institucional-Indec-bases_EPH_puntual){target="_blank"}). 
+Finalmente probaremos descargar la base más antigua que se encuentra disponible en la página web del INDEC. Nos referimos a los microdatos de la base usuaria de individuos del año 1974 para el Gran Buenos Aires <!--([link de descarga](https://www.indec.gob.ar/indec/web/Institucional-Indec-bases_EPH_puntual){target="_blank"}).-->
 
 Como hemos señalado, las bases anteriores a 2003 se encuentran únicamente en formato ```.dbf```. Para poder importarlas en `R` necesitaremos instalar y llamar a la librería __```foreign```__.
 

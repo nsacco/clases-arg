@@ -19,22 +19,22 @@ Al completar el capítulo se espera que los lectores puedan:
 
 Para una mayor comprensión del capítulo se recomienda la lectura de las siguientes publicaciones: 
 
-- Chávez Molina, E., Bernasconi, F., &amp; Rodríguez de la Fuente, J. [-@ChavezMolina.etal2020]. "Propuesta de correspondencias entre CNO y CIUO. Sintaxis para SPSS, Stata y R. Herramientas Para La Investigación Social." Serie: Cuadernos de Métodos y Técnicas de La Investigación Social ¿Cómo Se Hace?, 6. [Link de descarga](http://iigg.sociales.uba.ar/2020/09/30/his-6-propuesta-de-correspondencias-entre-cno-y-ciuo-sintaxis-para-spss-stata-y-r/?fbclid=IwAR3RvLDs7H8wYHDqUooZMEI74HIDS6MXT3YbEjstG44yt0DB9tFj0VwlT9A)  
+- Chávez Molina, E., Bernasconi, F., &amp; Rodríguez de la Fuente, J. [-@ChavezMolina.etal2020]. "Propuesta de correspondencias entre CNO y CIUO. Sintaxis para SPSS, Stata y R. Herramientas Para La Investigación Social." Serie: Cuadernos de Métodos y Técnicas de La Investigación Social ¿Cómo Se Hace?, 6. <!--[Link de descarga](http://iigg.sociales.uba.ar/2020/09/30/his-6-propuesta-de-correspondencias-entre-cno-y-ciuo-sintaxis-para-spss-stata-y-r/?fbclid=IwAR3RvLDs7H8wYHDqUooZMEI74HIDS6MXT3YbEjstG44yt0DB9tFj0VwlT9A)-->
 
-- INDEC. [-@INDEC2000a]. Utilización de clasificadores de ocupación en las bases de datos de la encuesta permanente de hogares. [Link de descarga](https://www.indec.gob.ar/dbindec/EPH_Clasif_Ocup_hasta_CNO_2001.doc)  
+- INDEC. [-@INDEC2000a]. Utilización de clasificadores de ocupación en las bases de datos de la encuesta permanente de hogares. <!--[Link de descarga](https://www.indec.gob.ar/dbindec/EPH_Clasif_Ocup_hasta_CNO_2001.doc)-->
 
-- INDEC. [-@INDEC2018]. Clasificador Nacional de Ocupaciones. Definiciones conceptuales. [Link de descarga](https://www.indec.gob.ar/ftp/cuadros/menusuperior/clasificadores/definiciones_conceptuales_cno.pdf)  
+- INDEC. [-@INDEC2018]. Clasificador Nacional de Ocupaciones. Definiciones conceptuales. <!--[Link de descarga](https://www.indec.gob.ar/ftp/cuadros/menusuperior/clasificadores/definiciones_conceptuales_cno.pdf)-->
 
-- Sacco, N., &amp; Riveiro, M. [-@Sacco2016b]. "La Clasificación de Ocupaciones en el Sistema Estadístico Nacional". _Estudios Del Trabajo_, 51, 28. [Link de descarga](https://aset.org.ar/ojs/revista/article/view/24)  
+- Sacco, N., &amp; Riveiro, M. [-@Sacco2016b]. "La Clasificación de Ocupaciones en el Sistema Estadístico Nacional". _Estudios Del Trabajo_, 51, 28. <!--[Link de descarga](https://aset.org.ar/ojs/revista/article/view/24)-->
 
-- INDEC. [-@INDEC2018a]. CNO. Clasificador Nacional de Ocupaciones. Versión 2017. [Link de descarga](https://www.indec.gob.ar/ftp/cuadros/menusuperior/clasificadores/CNO_2017.pdf)
+- INDEC. [-@INDEC2018a]. CNO. Clasificador Nacional de Ocupaciones. Versión 2017. <!--[Link de descarga](https://www.indec.gob.ar/ftp/cuadros/menusuperior/clasificadores/CNO_2017.pdf)-->
 
-- INDEC. [-@INDEC2018b]. CNO. Correspondencias entre el CNO-17 y la CIUO-08. [Link de descarga](https://www.indec.gob.ar/ftp/cuadros/menusuperior/clasificadores/correspondencias_cno2017_ciuo2008.pdf) 
+- INDEC. [-@INDEC2018b]. CNO. Correspondencias entre el CNO-17 y la CIUO-08. <!--[Link de descarga](https://www.indec.gob.ar/ftp/cuadros/menusuperior/clasificadores/correspondencias_cno2017_ciuo2008.pdf)-->
  
-- OIT. [-@OIT2008]. Clasificación Internacional Uniforme de Ocupaciones (CIUO-08) – Marco conceptual. OIT. [Link de descarga](https://www.ilo.org/public/spanish/bureau/stat/isco/docs/annex1.pdf) 
+- OIT. [-@OIT2008]. Clasificación Internacional Uniforme de Ocupaciones (CIUO-08) – Marco conceptual. OIT. <!--[Link de descarga](https://www.ilo.org/public/spanish/bureau/stat/isco/docs/annex1.pdf)-->
 
 - OIT. [-@OIT2008a]. Resolución sobre la actualización de la Clasificación Internacional Uniforme
-de Ocupaciones. OIT. [Link de descarga](https://www.ilo.org/public/spanish/bureau/stat/isco/docs/resol08.pdf)
+de Ocupaciones. OIT. <!--[Link de descarga](https://www.ilo.org/public/spanish/bureau/stat/isco/docs/resol08.pdf)-->
 
 - Torrado, S. [-@Torrado1993a]. El nuevo ‘Clasificador Nacional de Ocupaciones del INDEC: Una fractura irreparable en el sistema estadístico nacional. _Estudios del Trabajo_, 5, 85–120.
 
